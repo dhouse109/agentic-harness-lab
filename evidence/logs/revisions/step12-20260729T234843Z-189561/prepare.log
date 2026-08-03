@@ -1,0 +1,8 @@
+[INFO] Step 12 helper version: 1.0.1
+[OK] Preflight passed: revisioned suggestion bundle, reviewer permissions, accounts, and three target usages are ready.
+[OK] Created three pending reviewer fixtures: A=node:21, B=node:22, C=node:23.
+[INFO] Complete the three review actions through Drupal as editor_dana, then run Step 12 audit.
+[INFO] Case A: 1 revision(s) · pending → pending · latest reviewer agent_bot · origin phase0_fixture · target revision 1.
+[INFO] Case B: 1 revision(s) · pending → pending · latest reviewer agent_bot · origin phase0_fixture · target revision 2.
+[INFO] Case C: 1 revision(s) · pending → pending · latest reviewer agent_bot · origin phase0_fixture · target revision 3.
+[OK] Step 12 pending audit passed.

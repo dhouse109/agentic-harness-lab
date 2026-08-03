@@ -1,0 +1,57 @@
+dhouse109@109-hpe-d3:~/projects/agentic-harness-lab/drupal$ ddev composer show guzzlehttp/guzzle
+ddev composer why guzzlehttp/guzzle
+ddev composer why-not guzzlehttp/guzzle 7.15.2
+name     : guzzlehttp/guzzle
+descrip. : Guzzle is a PHP HTTP client library
+keywords : client, curl, framework, http, http client, psr-18, psr-7, rest, web service
+versions : * 7.14.2
+released : 2026-07-14, 2 weeks ago
+type     : library
+license  : MIT License (MIT) (OSI approved) https://spdx.org/licenses/MIT.html#licenseText
+homepage :
+source   : [git] https://github.com/guzzle/guzzle.git fa88c57803501ad0770f5cddb1e60525d49da9a1
+dist     : [zip] https://api.github.com/repos/guzzle/guzzle/zipball/fa88c57803501ad0770f5cddb1e60525d49da9a1 fa88c57803501ad0770f5cddb1e60525d49da9a1
+path     : /var/www/html/vendor/guzzlehttp/guzzle
+names    : guzzlehttp/guzzle, psr/http-client-implementation
+
+support
+issues : https://github.com/guzzle/guzzle/issues
+source : https://github.com/guzzle/guzzle/tree/7.14.2
+
+autoload
+files
+psr-4
+GuzzleHttp\ => src/
+
+requires
+ext-json *
+guzzlehttp/promises ^2.5.1
+guzzlehttp/psr7 ^2.12.5
+php ^7.2.5 || ^8.0
+psr/http-client ^1.0
+symfony/deprecation-contracts ^2.5 || ^3.0
+symfony/polyfill-php80 ^1.25
+
+requires (dev)
+bamarni/composer-bin-plugin ^1.8.2
+ext-curl *
+guzzle/client-integration-tests 3.0.3
+guzzlehttp/test-server ^0.6
+php-http/message-factory ^1.1
+phpunit/phpunit ^8.5.52 || ^9.6.34
+psr/log ^1.1 || ^2.0 || ^3.0
+
+suggests
+ext-curl Required for CURL handler support
+ext-intl Required for Internationalized Domain Name (IDN) support
+psr/log Required for using the Log middleware
+
+provides
+psr/http-client-implementation 1.0
+drupal/core 11.4.4 requires guzzlehttp/guzzle (^7.10)
+drush/drush 13.7.6 requires guzzlehttp/guzzle (^7.0)
+guzzlehttp/guzzle          7.15.2 requires         guzzlehttp/psr7 (^2.13)
+drupal/recommended-project -      does not require guzzlehttp/psr7 (but 2.12.5 is installed)
+Not finding what you were looking for? Try calling `composer update "guzzlehttp/guzzle:7.15.2" --dry-run` to get another view on the problem.
+Composer [why-not guzzlehttp/guzzle 7.15.2] failed, composer command failed: exit status 1. stderr=
+dhouse109@109-hpe-d3:~/projects/agentic-harness-lab/drupal$

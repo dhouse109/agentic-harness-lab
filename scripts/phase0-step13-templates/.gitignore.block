@@ -1,0 +1,40 @@
+# BEGIN PHASE0-STEP13 MANAGED IGNORE RULES
+# Private local baselines and large recording assets.
+/db/
+/recordings/
+
+# Local credentials and environment overrides.
+.env
+.env.*
+!.env.example
+**/.secrets/
+**/*credentials*
+**/*password*
+/drupal/.ddev/.env*
+
+# Provider/runtime caches and Python environments.
+.cache/
+**/.cache/
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Drupal generated dependencies and runtime files.
+/drupal/vendor/
+/drupal/web/core/
+/drupal/web/modules/contrib/
+/drupal/web/themes/contrib/
+/drupal/web/sites/*/files/
+/drupal/web/sites/*/settings.local.php
+
+# IDE and operating-system files.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Retain Composer/uv lockfiles, Drupal config export, source, fixtures, tests,
+# and sanitized evidence. Review evidence before staging.
+# END PHASE0-STEP13 MANAGED IGNORE RULES

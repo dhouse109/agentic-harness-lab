@@ -1,0 +1,13 @@
+test_id	result	account	method	path	expected	actual	description
+N01	PASS	agent_bot	PATCH	/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6	403	403	agent_bot cannot change Article image alt text
+N02	PASS	agent_bot	PATCH	/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6	403	403	agent_bot cannot replace the target image-field item
+N03	PASS	agent_bot	PATCH	/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396	403	403	agent_bot cannot approve its own suggestion
+N04	PASS	agent_bot	PATCH	/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396	403	403	agent_bot cannot reject its own suggestion
+N05	PASS	agent_bot	PATCH	/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396	403	403	agent_bot cannot edit its own proposed alt text
+N06	PASS	anonymous	POST	/jsonapi/node/alt_text_suggestion	401,403	401	anonymous cannot create an alt_text_suggestion
+N07	PASS	anonymous	GET	/admin/review-queue	403	403	anonymous cannot open the administrative review queue
+N08	PASS	editor_dana	GET	/admin/config/ai/providers	403	403	editor_dana cannot administer AI-provider configuration
+N09	PASS	editor_dana	GET	/admin/modules	403	403	editor_dana cannot administer module configuration
+P01	PASS	agent_bot	GET	/jsonapi/node/article?page[limit]=1	200	200	agent_bot reads the allowed Article collection
+P02	PASS	agent_bot	GET	/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6?include=field_image	200	200	agent_bot reads page and image context for an allowed target usage
+P03	PASS	agent_bot	POST	/jsonapi/node/alt_text_suggestion	201	201	agent_bot creates a pending alt_text_suggestion

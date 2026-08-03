@@ -1,0 +1,154 @@
+{
+  "run_id": "step11-20260729T224635Z-90861",
+  "generated_at_utc": "2026-07-29T22:47:36Z",
+  "test_count": 12,
+  "passed": 11,
+  "failed": 1,
+  "result": "FAIL",
+  "tests": [
+    {
+      "test_id": "N01",
+      "description": "agent_bot cannot change Article image alt text",
+      "account": "agent_bot",
+      "method": "PATCH",
+      "path": "/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "expected_http_status": [
+        403
+      ],
+      "actual_http_status": 403,
+      "result": "PASS"
+    },
+    {
+      "test_id": "N02",
+      "description": "agent_bot cannot replace the target image-field item",
+      "account": "agent_bot",
+      "method": "PATCH",
+      "path": "/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "expected_http_status": [
+        403
+      ],
+      "actual_http_status": 403,
+      "result": "PASS"
+    },
+    {
+      "test_id": "N03",
+      "description": "agent_bot cannot approve its own suggestion",
+      "account": "agent_bot",
+      "method": "PATCH",
+      "path": "/jsonapi/node/alt_text_suggestion/852d0f65-5af3-4f78-a6aa-075e5cd72e9c",
+      "expected_http_status": [
+        403
+      ],
+      "actual_http_status": 403,
+      "result": "PASS"
+    },
+    {
+      "test_id": "N04",
+      "description": "agent_bot cannot reject its own suggestion",
+      "account": "agent_bot",
+      "method": "PATCH",
+      "path": "/jsonapi/node/alt_text_suggestion/852d0f65-5af3-4f78-a6aa-075e5cd72e9c",
+      "expected_http_status": [
+        403
+      ],
+      "actual_http_status": 403,
+      "result": "PASS"
+    },
+    {
+      "test_id": "N05",
+      "description": "agent_bot cannot edit its own proposed alt text",
+      "account": "agent_bot",
+      "method": "PATCH",
+      "path": "/jsonapi/node/alt_text_suggestion/852d0f65-5af3-4f78-a6aa-075e5cd72e9c",
+      "expected_http_status": [
+        403
+      ],
+      "actual_http_status": 403,
+      "result": "PASS"
+    },
+    {
+      "test_id": "N06",
+      "description": "anonymous cannot create an alt_text_suggestion",
+      "account": "anonymous",
+      "method": "POST",
+      "path": "/jsonapi/node/alt_text_suggestion",
+      "expected_http_status": [
+        403
+      ],
+      "actual_http_status": 401,
+      "result": "FAIL"
+    },
+    {
+      "test_id": "N07",
+      "description": "anonymous cannot open the administrative review queue",
+      "account": "anonymous",
+      "method": "GET",
+      "path": "/admin/review-queue",
+      "expected_http_status": [
+        403
+      ],
+      "actual_http_status": 403,
+      "result": "PASS"
+    },
+    {
+      "test_id": "N08",
+      "description": "editor_dana cannot administer AI-provider configuration",
+      "account": "editor_dana",
+      "method": "GET",
+      "path": "/admin/config/ai/providers",
+      "expected_http_status": [
+        403
+      ],
+      "actual_http_status": 403,
+      "result": "PASS"
+    },
+    {
+      "test_id": "N09",
+      "description": "editor_dana cannot administer module configuration",
+      "account": "editor_dana",
+      "method": "GET",
+      "path": "/admin/modules",
+      "expected_http_status": [
+        403
+      ],
+      "actual_http_status": 403,
+      "result": "PASS"
+    },
+    {
+      "test_id": "P01",
+      "description": "agent_bot reads the allowed Article collection",
+      "account": "agent_bot",
+      "method": "GET",
+      "path": "/jsonapi/node/article?page[limit]=1",
+      "expected_http_status": [
+        200
+      ],
+      "actual_http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "test_id": "P02",
+      "description": "agent_bot reads page and image context for an allowed target usage",
+      "account": "agent_bot",
+      "method": "GET",
+      "path": "/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6?include=field_image",
+      "expected_http_status": [
+        200
+      ],
+      "actual_http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "test_id": "P03",
+      "description": "agent_bot creates a pending alt_text_suggestion",
+      "account": "agent_bot",
+      "method": "POST",
+      "path": "/jsonapi/node/alt_text_suggestion",
+      "expected_http_status": [
+        201
+      ],
+      "actual_http_status": 201,
+      "result": "PASS"
+    }
+  ]
+}

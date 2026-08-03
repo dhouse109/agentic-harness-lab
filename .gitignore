@@ -1,0 +1,63 @@
+# DDEV-generated state
+.ddev/.global_commands/
+.ddev/.homeadditions/
+
+# Composer dependencies
+**/vendor/
+
+# Drupal generated/private files
+**/web/sites/*/files/
+**/web/sites/*/private/
+**/web/sites/*/settings.local.php
+
+# Environment and secrets
+.ddev/.env
+.ddev/.env.*
+.env
+.env.*
+!.env.example
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
+# BEGIN PHASE0-STEP13 MANAGED IGNORE RULES
+# Private local baselines and large recording assets.
+/db/
+/recordings/
+
+# Local credentials and environment overrides.
+.env
+.env.*
+!.env.example
+**/.secrets/
+**/*credentials*
+**/*password*
+/drupal/.ddev/.env*
+
+# Provider/runtime caches and Python environments.
+.cache/
+**/.cache/
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Drupal generated dependencies and runtime files.
+/drupal/vendor/
+/drupal/web/core/
+/drupal/web/modules/contrib/
+/drupal/web/themes/contrib/
+/drupal/web/sites/*/files/
+/drupal/web/sites/*/settings.local.php
+
+# IDE and operating-system files.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Retain Composer/uv lockfiles, Drupal config export, source, fixtures, tests,
+# and sanitized evidence. Review evidence before staging.
+# END PHASE0-STEP13 MANAGED IGNORE RULES

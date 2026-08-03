@@ -1,0 +1,6 @@
+Evidence HTML: /home/dhouse109/projects/agentic-harness-lab/evidence/logs/revisions/step12-20260729T234843Z-189561/revision-evidence.html
+Evidence Markdown: /home/dhouse109/projects/agentic-harness-lab/evidence/logs/revisions/step12-20260729T234843Z-189561/revision-evidence.md
+Screenshot checklist: /home/dhouse109/projects/agentic-harness-lab/evidence/logs/revisions/step12-20260729T234843Z-189561/SCREENSHOT-CHECKLIST.md
+Case A edit: https://harness.ddev.site/node/21/edit
+Case B edit: https://harness.ddev.site/node/22/edit
+Case C edit: https://harness.ddev.site/node/23/edit

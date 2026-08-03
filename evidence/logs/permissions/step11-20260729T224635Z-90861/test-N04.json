@@ -1,0 +1,66 @@
+{
+  "test_id": "N04",
+  "description": "agent_bot cannot reject its own suggestion",
+  "timestamp_utc": "2026-07-29T22:47:35Z",
+  "account": "agent_bot",
+  "method": "PATCH",
+  "path": "/jsonapi/node/alt_text_suggestion/852d0f65-5af3-4f78-a6aa-075e5cd72e9c",
+  "expected_http_status": [
+    403
+  ],
+  "actual_http_status": 403,
+  "curl_exit_code": 0,
+  "semantic_validation_passed": true,
+  "result": "PASS",
+  "request_body": {
+    "data": {
+      "type": "node--alt_text_suggestion",
+      "id": "852d0f65-5af3-4f78-a6aa-075e5cd72e9c",
+      "attributes": {
+        "field_review_status": "rejected"
+      }
+    }
+  },
+  "response_headers": [
+    "HTTP/2 403 ",
+    "cache-control: must-revalidate, no-cache, private",
+    "content-language: en",
+    "content-type: application/vnd.api+json",
+    "date: Wed, 29 Jul 2026 22:47:35 GMT",
+    "expires: Sun, 19 Nov 1978 05:00:00 GMT",
+    "server: nginx",
+    "x-content-type-options: nosniff",
+    "x-frame-options: SAMEORIGIN",
+    "x-generator: Drupal 11 (https://www.drupal.org)",
+    "content-length: 457",
+    ""
+  ],
+  "response_body_format": "json",
+  "response_body": {
+    "jsonapi": {
+      "version": "1.1",
+      "meta": {
+        "links": {
+          "self": {
+            "href": "https://jsonapi.org/format/1.1/"
+          }
+        }
+      }
+    },
+    "errors": [
+      {
+        "title": "Forbidden",
+        "status": "403",
+        "detail": "The 'edit any alt_text_suggestion content' permission is required.",
+        "links": {
+          "via": {
+            "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/852d0f65-5af3-4f78-a6aa-075e5cd72e9c"
+          },
+          "info": {
+            "href": "https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.4"
+          }
+        }
+      }
+    ]
+  }
+}

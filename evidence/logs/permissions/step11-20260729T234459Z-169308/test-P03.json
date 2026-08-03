@@ -1,0 +1,204 @@
+{
+  "test_id": "P03",
+  "description": "agent_bot creates a pending alt_text_suggestion",
+  "timestamp_utc": "2026-07-29T23:45:59Z",
+  "account": "agent_bot",
+  "method": "POST",
+  "path": "/jsonapi/node/alt_text_suggestion",
+  "expected_http_status": [
+    201
+  ],
+  "actual_http_status": 201,
+  "curl_exit_code": 0,
+  "semantic_validation_passed": true,
+  "result": "PASS",
+  "request_body": {
+    "data": {
+      "type": "node--alt_text_suggestion",
+      "attributes": {
+        "title": "Step 11 permission probe step11-20260729T234459Z-169308",
+        "field_target_revision": 1,
+        "field_target_field": "field_image",
+        "field_target_delta": 0,
+        "field_proposed_alt": "Large numeral 01 identifying the emergency preparedness checklist demonstration image.",
+        "field_review_status": "pending",
+        "field_source_framework": "phase0_fixture",
+        "field_run_id": "step11-20260729T234459Z-169308",
+        "field_evidence_hash": "step11-permission-probe"
+      },
+      "relationships": {
+        "field_target_node": {
+          "data": {
+            "type": "node--article",
+            "id": "344eb273-ac74-5be8-85fb-6c2efd1f93a6"
+          }
+        },
+        "field_target_file": {
+          "data": {
+            "type": "file--file",
+            "id": "07af2dce-7bfd-5de6-b291-e090669eda25"
+          }
+        }
+      }
+    }
+  },
+  "response_headers": [
+    "HTTP/2 201 ",
+    "cache-control: must-revalidate, no-cache, private",
+    "content-language: en",
+    "content-type: application/vnd.api+json",
+    "date: Wed, 29 Jul 2026 23:45:59 GMT",
+    "expires: Sun, 19 Nov 1978 05:00:00 GMT",
+    "location: <SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396?resourceVersion=id%3A21",
+    "server: nginx",
+    "x-content-type-options: nosniff",
+    "x-frame-options: SAMEORIGIN",
+    "x-generator: Drupal 11 (https://www.drupal.org)",
+    "content-length: 3808",
+    ""
+  ],
+  "response_body_format": "json",
+  "response_body": {
+    "jsonapi": {
+      "version": "1.1",
+      "meta": {
+        "links": {
+          "self": {
+            "href": "https://jsonapi.org/format/1.1/"
+          }
+        }
+      }
+    },
+    "data": {
+      "type": "node--alt_text_suggestion",
+      "id": "6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396",
+      "links": {
+        "self": {
+          "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396?resourceVersion=id%3A21"
+        },
+        "working-copy": {
+          "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396?resourceVersion=rel%3Aworking-copy"
+        }
+      },
+      "attributes": {
+        "drupal_internal__nid": 21,
+        "drupal_internal__vid": 21,
+        "langcode": "en",
+        "revision_timestamp": "2026-07-29T23:45:58+00:00",
+        "status": true,
+        "title": "Step 11 permission probe step11-20260729T234459Z-169308",
+        "created": "2026-07-29T23:45:58+00:00",
+        "changed": "2026-07-29T23:45:58+00:00",
+        "promote": false,
+        "sticky": false,
+        "default_langcode": true,
+        "revision_translation_affected": true,
+        "path": {
+          "alias": null,
+          "pid": null,
+          "langcode": "en"
+        },
+        "field_evidence_hash": "step11-permission-probe",
+        "field_proposed_alt": "Large numeral 01 identifying the emergency preparedness checklist demonstration image.",
+        "field_review_status": "pending",
+        "field_run_id": "step11-20260729T234459Z-169308",
+        "field_source_framework": "phase0_fixture",
+        "field_target_delta": 0,
+        "field_target_field": "field_image",
+        "field_target_revision": 1
+      },
+      "relationships": {
+        "node_type": {
+          "data": {
+            "type": "node_type--node_type",
+            "id": "e9f18269-07f7-41e5-9cd8-d7c0c83edc1a",
+            "meta": {
+              "drupal_internal__target_id": "alt_text_suggestion"
+            }
+          },
+          "links": {
+            "related": {
+              "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396/node_type?resourceVersion=id%3A21"
+            },
+            "self": {
+              "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396/relationships/node_type?resourceVersion=id%3A21"
+            }
+          }
+        },
+        "revision_uid": {
+          "data": {
+            "type": "user--user",
+            "id": "215831ed-9ff3-4159-b30e-3d257816a165",
+            "meta": {
+              "drupal_internal__target_id": 3
+            }
+          },
+          "links": {
+            "related": {
+              "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396/revision_uid?resourceVersion=id%3A21"
+            },
+            "self": {
+              "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396/relationships/revision_uid?resourceVersion=id%3A21"
+            }
+          }
+        },
+        "uid": {
+          "data": {
+            "type": "user--user",
+            "id": "215831ed-9ff3-4159-b30e-3d257816a165",
+            "meta": {
+              "drupal_internal__target_id": 3
+            }
+          },
+          "links": {
+            "related": {
+              "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396/uid?resourceVersion=id%3A21"
+            },
+            "self": {
+              "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396/relationships/uid?resourceVersion=id%3A21"
+            }
+          }
+        },
+        "field_target_file": {
+          "data": {
+            "type": "file--file",
+            "id": "07af2dce-7bfd-5de6-b291-e090669eda25",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396/field_target_file?resourceVersion=id%3A21"
+            },
+            "self": {
+              "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396/relationships/field_target_file?resourceVersion=id%3A21"
+            }
+          }
+        },
+        "field_target_node": {
+          "data": {
+            "type": "node--article",
+            "id": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+            "meta": {
+              "drupal_internal__target_id": 1
+            }
+          },
+          "links": {
+            "related": {
+              "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396/field_target_node?resourceVersion=id%3A21"
+            },
+            "self": {
+              "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion/6e00ee70-7a3f-4f6b-8dcd-ccfd08a16396/relationships/field_target_node?resourceVersion=id%3A21"
+            }
+          }
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "<SITE_URL>/jsonapi/node/alt_text_suggestion"
+      }
+    }
+  }
+}

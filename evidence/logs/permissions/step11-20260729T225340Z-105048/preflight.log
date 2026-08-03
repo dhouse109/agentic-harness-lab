@@ -1,0 +1,146 @@
+Starting harness...
+[33mCustom configuration detected in project 'harness':
+  • Environment: /home/dhouse109/projects/agentic-harness-lab/drupal/.ddev/.env.web
+
+Custom configuration is updated on restart. Run 'ddev restart' if changes don't take effect.
+Add '#ddev-silent-no-warn' comment to files if you don't want to see these warnings.[0m
+Building project images.... Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Building 
+ Image ddev/ddev-webserver:v1.25.3-harness-built Building 
+. Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Built 
+ Image ddev/ddev-webserver:v1.25.3-harness-built Built 
+
+[32mProject images built in 3s.[0m
+ Container ddev-harness-db Recreate 
+ Container ddev-harness-web Recreate 
+ Container ddev-harness-web Recreated 
+ Container ddev-harness-db Recreated 
+ Container ddev-harness-db Starting 
+ Container ddev-harness-web Starting 
+ Container ddev-harness-db Started 
+ Container ddev-harness-web Started 
+Waiting for containers to become ready: [web db]... ready in 4.0s
+ddev-router already running, pushing new config...
+[32mSuccessfully started harness[0m
+[32mYour project can be reached at https://harness.ddev.site
+See 'ddev describe' for alternate URLs.[0m
+Running Phase 0 Step 7 in 'audit' mode...
+
+=== Phase 0 Step 7 audit ===
+Role content_editor permissions:
+  - access administration pages
+  - access content
+  - access content overview
+  - access contextual links
+  - access navigation
+  - edit any alt_text_suggestion content
+  - view alt_text_suggestion revisions
+  - view the administration theme
+User editor_dana: status=active; optional roles=content_editor
+Role agent_service permissions:
+  - access content
+  - create alt_text_suggestion content
+  - view own unpublished content
+User agent_bot: status=active; optional roles=agent_service
+[OK] Agent service has none of the explicitly forbidden permissions.
+JSON:API mode: create/read/update/delete enabled
+[OK] Audit passed.
+ [success] Cache rebuild complete.
+
+Audit complete.
+Running Phase 0 Step 8 in 'audit' mode...
+[INFO] Step 8 script version: 3.0.0
+
+=== Phase 0 Step 8 audit ===
+[OK] Prerequisite content type exists: Article.
+[OK] Article Body field is attached.
+[OK] Article field_image is ready; cardinality=2; alt required=no.
+Content type: Alt text suggestion; revisions by default=yes
+[OK] Suggestion nodes default to published for this dummy-data lab.
+[OK] field_target_node: entity_reference; required=yes
+[OK] field_target_revision: integer; required=yes
+[OK] field_target_field: string; required=yes
+[OK] field_target_delta: integer; required=yes
+[OK] field_target_file: entity_reference; required=yes
+[OK] field_proposed_alt: string_long; required=yes
+[OK] field_review_status: list_string; required=yes
+[OK] field_source_framework: list_string; required=yes
+[OK] field_run_id: string; required=yes
+[OK] field_evidence_hash: string; required=no
+[OK] Reviewer form display contains all Step 8 fields.
+Review queue path: /admin/review-queue
+Review queue access permission: access content overview
+[OK] View check: path
+[OK] View check: permission access
+[OK] View check: bundle filter
+[OK] View check: pending default filter
+[OK] View check: source framework exposed filter
+[OK] View check: table style
+[OK] Audit passed.
+Rebuilding Drupal caches and routes...
+ [success] Cache rebuild complete.
+
+Step 8 audit complete.
+[INFO] Phase 0 Step 10 runner version: 1.0.2
+[33mCustom configuration detected in project 'harness':
+  • Environment: /home/dhouse109/projects/agentic-harness-lab/drupal/.ddev/.env.web
+
+Custom configuration is updated on restart. Run 'ddev restart' if changes don't take effect.
+Add '#ddev-silent-no-warn' comment to files if you don't want to see these warnings.[0m
+. Image ddev/ddev-webserver:v1.25.3-harness-built Building 
+ Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Building 
+. Image ddev/ddev-webserver:v1.25.3-harness-built Built 
+ Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Built 
+
+ Container ddev-harness-db Recreate 
+ Container ddev-harness-web Recreate 
+ Container ddev-harness-web Recreated 
+ Container ddev-harness-db Recreated 
+ Container ddev-harness-db Starting 
+ Container ddev-harness-web Starting 
+ Container ddev-harness-web Started 
+ Container ddev-harness-db Started 
+.ddev/db_snapshots/seeded-clean-mariadb_11.8.zst: OK
+../db/seeded-clean.sql.gz: OK
+../db/seeded-clean-files.tar.gz: OK
+../db/seeded-clean-manifest.json: OK
+../db/seeded-clean-metadata.txt: OK
+[OK] Stored snapshot, SQL export, files archive, manifest, and metadata checksums are valid.
+[OK] Stored Step 10 baseline artifacts are complete.
+[INFO] Auditing current Drupal state against the stored baseline...
+Running Phase 0 Step 9 in 'audit' mode...
+[INFO] Step 9 script version: 1.0.0
+[INFO] Seed Articles: 20 / 20
+[INFO] Generated PNG files: 30 / 30
+[INFO] Target usages: 12 / 12
+[INFO] Coverage: 9 missing, 3 poor, 8 fully acceptable Articles
+[INFO] Target 01: node 1 rev 1 · field_image[0] · file 1 · missing
+[INFO] Target 02: node 2 rev 2 · field_image[1] · file 3 · missing
+[INFO] Target 03: node 3 rev 3 · field_image[0] · file 4 · missing
+[INFO] Target 04: node 4 rev 4 · field_image[0] · file 5 · missing
+[INFO] Target 05: node 5 rev 5 · field_image[0] · file 7 · missing
+[INFO] Target 06: node 6 rev 6 · field_image[1] · file 9 · missing
+[INFO] Target 07: node 7 rev 7 · field_image[0] · file 10 · missing
+[INFO] Target 08: node 8 rev 8 · field_image[1] · file 12 · missing
+[INFO] Target 09: node 9 rev 9 · field_image[0] · file 13 · missing
+[INFO] Target 10: node 10 rev 10 · field_image[1] · file 15 · poor
+[INFO] Target 11: node 11 rev 11 · field_image[0] · file 16 · poor
+[INFO] Target 12: node 12 rev 12 · field_image[1] · file 18 · poor
+[OK] Step 9 audit passed. The deterministic 12-target manifest is valid.
+
+Step 9 audit complete.
+[INFO] Step 10 helper version: 1.0.2
+[OK] Drupal baseline is clean: Article 01 alt is empty and suggestion count is 0.
+[OK] Current 12-target manifest matches the baseline byte-for-byte.
+[OK] Step 10 audit passed. Current Drupal state is seeded-clean.
+
+Useful commands:
+  bash scripts/run-phase0-step10.sh audit
+  bash scripts/run-phase0-step10.sh reset
+  bash scripts/run-phase0-step10.sh test-reset
+
+Private baseline artifacts:
+  /home/dhouse109/projects/agentic-harness-lab/db/seeded-clean.sql.gz
+  /home/dhouse109/projects/agentic-harness-lab/db/seeded-clean-files.tar.gz
+  /home/dhouse109/projects/agentic-harness-lab/db/seeded-clean-manifest.json
+  /home/dhouse109/projects/agentic-harness-lab/db/seeded-clean-metadata.txt
+  /home/dhouse109/projects/agentic-harness-lab/db/seeded-clean-checksums.sha256

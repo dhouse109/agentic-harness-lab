@@ -1,0 +1,19 @@
+dhouse109@109-hpe-d3:~/projects/agentic-harness-lab/drupal$ ddev composer update \
+  guzzlehttp/guzzle \
+  guzzlehttp/psr7 \
+  --with-all-dependencies \
+  --dry-run
+Loading composer repositories with package information
+Updating dependencies
+Lock file operations: 0 installs, 2 updates, 0 removals
+  - Upgrading guzzlehttp/guzzle (7.14.2 => 7.15.2)
+  - Upgrading guzzlehttp/psr7 (2.12.5 => 2.13.0)
+Installing dependencies from lock file (including require-dev)
+Package operations: 0 installs, 2 updates, 0 removals
+  - Upgrading guzzlehttp/psr7 (2.12.5 => 2.13.0)
+  - Upgrading guzzlehttp/guzzle (7.14.2 => 7.15.2)
+51 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+Found 3 security vulnerability advisories affecting 1 package.
+Run "composer audit" for a full list of advisories.
+dhouse109@109-hpe-d3:~/projects/agentic-harness-lab/drupal$

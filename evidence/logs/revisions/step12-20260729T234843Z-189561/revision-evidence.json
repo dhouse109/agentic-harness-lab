@@ -1,0 +1,229 @@
+{
+    "schema_version": 1,
+    "step12_helper_version": "1.0.1",
+    "fixture_run_id": "phase0-step12-revision-inspectability",
+    "suggestion_count": 3,
+    "cases": [
+        {
+            "case_id": "A",
+            "title": "Step 12 A — Approve unchanged",
+            "action": "Approve unchanged",
+            "review_instruction": "Set Review status to Approved. Do not change Proposed alt text.",
+            "node_id": 21,
+            "node_uuid": "38c9bd2e-410a-5f2f-90b3-ffdb4efacc24",
+            "owner": {
+                "uid": 3,
+                "name": "agent_bot"
+            },
+            "source_framework": "phase0_fixture",
+            "target": {
+                "article_number": 1,
+                "node_id": 1,
+                "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+                "node_title": "Phase 0 01 — Emergency Preparedness Checklist",
+                "content_revision": 1,
+                "field_name": "field_image",
+                "delta": 0,
+                "file_id": 1,
+                "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25"
+            },
+            "expected": {
+                "initial_alt": "Navy demonstration placard labeled Article 1 for emergency preparedness.",
+                "status": "approved",
+                "alt": "Navy demonstration placard labeled Article 1 for emergency preparedness."
+            },
+            "revision_count": 3,
+            "revisions": [
+                {
+                    "revision_id": 21,
+                    "revision_user": {
+                        "uid": 3,
+                        "name": "agent_bot"
+                    },
+                    "timestamp_unix": 1785368847,
+                    "timestamp_utc": "2026-07-29T23:47:27+00:00",
+                    "revision_log": "Step 12 case A created by agent_bot for pending human review.",
+                    "proposed_alt": "Navy demonstration placard labeled Article 1 for emergency preparedness.",
+                    "review_status": "pending",
+                    "source_framework": "phase0_fixture",
+                    "run_id": "phase0-step12-revision-inspectability",
+                    "target_revision": 1
+                },
+                {
+                    "revision_id": 24,
+                    "revision_user": {
+                        "uid": 1,
+                        "name": "admin"
+                    },
+                    "timestamp_unix": 1785790154,
+                    "timestamp_utc": "2026-08-03T20:49:14+00:00",
+                    "revision_log": "Case A: Approved suggestion unchanged.",
+                    "proposed_alt": "Navy demonstration placard labeled Article 1 for emergency preparedness.",
+                    "review_status": "approved",
+                    "source_framework": "phase0_fixture",
+                    "run_id": "phase0-step12-revision-inspectability",
+                    "target_revision": 1
+                },
+                {
+                    "revision_id": 25,
+                    "revision_user": {
+                        "uid": 2,
+                        "name": "editor_dana"
+                    },
+                    "timestamp_unix": 1785790327,
+                    "timestamp_utc": "2026-08-03T20:52:07+00:00",
+                    "revision_log": "",
+                    "proposed_alt": "Navy demonstration placard labeled Article 1 for emergency preparedness.",
+                    "review_status": "approved",
+                    "source_framework": "phase0_fixture",
+                    "run_id": "phase0-step12-revision-inspectability",
+                    "target_revision": 1
+                }
+            ],
+            "paths": {
+                "view": "/node/21",
+                "edit": "/node/21/edit",
+                "history": "/node/21/revisions",
+                "initial_revision": "/node/21/revisions/21/view"
+            }
+        },
+        {
+            "case_id": "B",
+            "title": "Step 12 B — Reject",
+            "action": "Reject",
+            "review_instruction": "Set Review status to Rejected. Do not change Proposed alt text.",
+            "node_id": 22,
+            "node_uuid": "bb2c4569-9f00-5114-b8cb-88cb9d87d376",
+            "owner": {
+                "uid": 3,
+                "name": "agent_bot"
+            },
+            "source_framework": "phase0_fixture",
+            "target": {
+                "article_number": 2,
+                "node_id": 2,
+                "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+                "node_title": "Phase 0 02 — Community Grant Application Guide",
+                "content_revision": 2,
+                "field_name": "field_image",
+                "delta": 1,
+                "file_id": 3,
+                "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4"
+            },
+            "expected": {
+                "initial_alt": "Teal demonstration placard labeled Article 2 for community grants supporting context.",
+                "status": "rejected",
+                "alt": "Teal demonstration placard labeled Article 2 for community grants supporting context."
+            },
+            "revision_count": 2,
+            "revisions": [
+                {
+                    "revision_id": 22,
+                    "revision_user": {
+                        "uid": 3,
+                        "name": "agent_bot"
+                    },
+                    "timestamp_unix": 1785368907,
+                    "timestamp_utc": "2026-07-29T23:48:27+00:00",
+                    "revision_log": "Step 12 case B created by agent_bot for pending human review.",
+                    "proposed_alt": "Teal demonstration placard labeled Article 2 for community grants supporting context.",
+                    "review_status": "pending",
+                    "source_framework": "phase0_fixture",
+                    "run_id": "phase0-step12-revision-inspectability",
+                    "target_revision": 2
+                },
+                {
+                    "revision_id": 27,
+                    "revision_user": {
+                        "uid": 2,
+                        "name": "editor_dana"
+                    },
+                    "timestamp_unix": 1785790409,
+                    "timestamp_utc": "2026-08-03T20:53:29+00:00",
+                    "revision_log": "Case B: Rejected suggestion.",
+                    "proposed_alt": "Teal demonstration placard labeled Article 2 for community grants supporting context.",
+                    "review_status": "rejected",
+                    "source_framework": "phase0_fixture",
+                    "run_id": "phase0-step12-revision-inspectability",
+                    "target_revision": 2
+                }
+            ],
+            "paths": {
+                "view": "/node/22",
+                "edit": "/node/22/edit",
+                "history": "/node/22/revisions",
+                "initial_revision": "/node/22/revisions/22/view"
+            }
+        },
+        {
+            "case_id": "C",
+            "title": "Step 12 C — Edit and approve",
+            "action": "Edit and approve",
+            "review_instruction": "Replace Proposed alt text with the exact expected text, set Review status to Approved, and save.",
+            "node_id": 23,
+            "node_uuid": "0876598b-0d12-5ca1-91bb-f1a89198be83",
+            "owner": {
+                "uid": 3,
+                "name": "agent_bot"
+            },
+            "source_framework": "phase0_fixture",
+            "target": {
+                "article_number": 3,
+                "node_id": 3,
+                "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+                "node_title": "Phase 0 03 — Public Meeting Accessibility Notice",
+                "content_revision": 3,
+                "field_name": "field_image",
+                "delta": 0,
+                "file_id": 4,
+                "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3"
+            },
+            "expected": {
+                "initial_alt": "Public meeting image for Article 3.",
+                "status": "approved",
+                "alt": "Maroon demonstration placard labeled Article 3 for accessible public meetings."
+            },
+            "revision_count": 2,
+            "revisions": [
+                {
+                    "revision_id": 23,
+                    "revision_user": {
+                        "uid": 3,
+                        "name": "agent_bot"
+                    },
+                    "timestamp_unix": 1785368967,
+                    "timestamp_utc": "2026-07-29T23:49:27+00:00",
+                    "revision_log": "Step 12 case C created by agent_bot for pending human review.",
+                    "proposed_alt": "Public meeting image for Article 3.",
+                    "review_status": "pending",
+                    "source_framework": "phase0_fixture",
+                    "run_id": "phase0-step12-revision-inspectability",
+                    "target_revision": 3
+                },
+                {
+                    "revision_id": 26,
+                    "revision_user": {
+                        "uid": 2,
+                        "name": "editor_dana"
+                    },
+                    "timestamp_unix": 1785790403,
+                    "timestamp_utc": "2026-08-03T20:53:23+00:00",
+                    "revision_log": "Case C: Edited proposed alt text and approved suggestion.",
+                    "proposed_alt": "Maroon demonstration placard labeled Article 3 for accessible public meetings.",
+                    "review_status": "approved",
+                    "source_framework": "phase0_fixture",
+                    "run_id": "phase0-step12-revision-inspectability",
+                    "target_revision": 3
+                }
+            ],
+            "paths": {
+                "view": "/node/23",
+                "edit": "/node/23/edit",
+                "history": "/node/23/revisions",
+                "initial_revision": "/node/23/revisions/23/view"
+            }
+        }
+    ],
+    "audit_state": "reviewed",
+    "generated_at": "2026-08-03T21:13:07+00:00"
+}

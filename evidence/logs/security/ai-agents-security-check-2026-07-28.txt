@@ -1,0 +1,71 @@
+Security check: 2026-07-28T17:33:32-04:00
+
+name     : drupal/ai_agents
+descrip. : Allows AI agents to be used on Drupal websites to do changes and lookup things.
+keywords : Drupal
+versions : * 1.3.2
+type     : drupal-module
+license  : GNU General Public License v2.0 or later (GPL-2.0-or-later) (OSI approved) https://spdx.org/licenses/GPL-2.0-or-later.html#licenseText
+homepage : https://www.drupal.org/project/ai_agents
+source   : [git] https://git.drupalcode.org/project/ai_agents.git 1.3.2
+dist     : [zip] https://ftp.drupal.org/files/projects/ai_agents-1.3.2.zip 1.3.2
+path     : /var/www/html/web/modules/contrib/ai_agents
+names    : drupal/ai_agents
+
+support
+source : https://git.drupalcode.org/project/ai_agents
+
+requires
+drupal/ai ^1.4.0
+drupal/core ^10.2 || ^11
+drupal/modeler_api ^1.0.3
+
+requires (dev)
+drupal/webform ^6.0
+
+suggests
+drupal/bpmn_io Allows editing of AI agents with BPMN diagrams.
+drupal/simple_crawler Allows the AI Form integrations to crawl websites.
+drupal/unstructured Makes the AI Form integrations work better by allowing many file contexts.
+
+
+In Application.php line 271:
+                                                                                                                       
+  pm:security has been removed. Please use `composer audit` command. See https://www.drupal.org/project/project_compo  
+  ser/issues/3301876.                                                                                                  
+                                                                                                                       
+
+[31mFailed to run drush pm:security --no-dev: exit status 1[0m
+
+Found 3 security vulnerability advisories affecting 1 package:
++-------------------+----------------------------------------------------------------------------------+
+| Package           | guzzlehttp/guzzle                                                                |
+| Severity          | medium                                                                           |
+| Advisory ID       | PKSA-fy2t-3c5f-827y                                                              |
+| CVE               | NO CVE                                                                           |
+| Title             | Guzzle: URI fragments disclosed in redirect Referer headers                      |
+| URL               | https://github.com/advisories/GHSA-h95v-h523-3mw8                                |
+| Affected versions | <7.15.1                                                                          |
+| Reported at       | 2026-07-20T23:28:36+00:00                                                        |
++-------------------+----------------------------------------------------------------------------------+
++-------------------+----------------------------------------------------------------------------------+
+| Package           | guzzlehttp/guzzle                                                                |
+| Severity          | medium                                                                           |
+| Advisory ID       | PKSA-qxvb-2bpp-dnk6                                                              |
+| CVE               | NO CVE                                                                           |
+| Title             | Guzzle: Host-only cookie scope is not preserved                                  |
+| URL               | https://github.com/advisories/GHSA-wm3w-8rrp-j577                                |
+| Affected versions | <7.15.1                                                                          |
+| Reported at       | 2026-07-20T23:27:49+00:00                                                        |
++-------------------+----------------------------------------------------------------------------------+
++-------------------+----------------------------------------------------------------------------------+
+| Package           | guzzlehttp/guzzle                                                                |
+| Severity          | medium                                                                           |
+| Advisory ID       | PKSA-bbs6-q5q9-f3t4                                                              |
+| CVE               | NO CVE                                                                           |
+| Title             | Guzzle: Unbounded response cookies risk denial of service                        |
+| URL               | https://github.com/advisories/GHSA-f283-ghqc-fg79                                |
+| Affected versions | <7.15.1                                                                          |
+| Reported at       | 2026-07-20T23:27:02+00:00                                                        |
++-------------------+----------------------------------------------------------------------------------+
+[31mComposer [audit --no-dev] failed, composer command failed: exit status 1. stderr=[0m

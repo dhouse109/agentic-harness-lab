@@ -1,0 +1,167 @@
+{
+  "test_id": "P01",
+  "description": "agent_bot reads the allowed Article collection",
+  "timestamp_utc": "2026-07-29T22:47:33Z",
+  "account": "agent_bot",
+  "method": "GET",
+  "path": "/jsonapi/node/article?page[limit]=1",
+  "expected_http_status": [
+    200
+  ],
+  "actual_http_status": 200,
+  "curl_exit_code": 0,
+  "semantic_validation_passed": true,
+  "result": "PASS",
+  "request_body": null,
+  "response_headers": [
+    "HTTP/2 200 ",
+    "cache-control: must-revalidate, no-cache, private",
+    "content-language: en",
+    "content-type: application/vnd.api+json",
+    "date: Wed, 29 Jul 2026 22:47:33 GMT",
+    "expires: Sun, 19 Nov 1978 05:00:00 GMT",
+    "server: nginx",
+    "x-content-type-options: nosniff",
+    "x-drupal-cache: UNCACHEABLE (request policy)",
+    "x-drupal-dynamic-cache: MISS",
+    "x-frame-options: SAMEORIGIN",
+    "x-generator: Drupal 11 (https://www.drupal.org)",
+    "content-length: 4279",
+    ""
+  ],
+  "response_body_format": "json",
+  "response_body": {
+    "jsonapi": {
+      "version": "1.1",
+      "meta": {
+        "links": {
+          "self": {
+            "href": "https://jsonapi.org/format/1.1/"
+          }
+        }
+      }
+    },
+    "data": [
+      {
+        "type": "node--article",
+        "id": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "links": {
+          "self": {
+            "href": "<SITE_URL>/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6?resourceVersion=id%3A1"
+          },
+          "working-copy": {
+            "href": "<SITE_URL>/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6?resourceVersion=rel%3Aworking-copy"
+          }
+        },
+        "attributes": {
+          "drupal_internal__nid": 1,
+          "drupal_internal__vid": 1,
+          "langcode": "en",
+          "revision_timestamp": "2026-07-29T20:42:07+00:00",
+          "status": true,
+          "title": "Phase 0 01 — Emergency Preparedness Checklist",
+          "created": "2026-07-01T00:01:00+00:00",
+          "changed": "2026-07-01T00:01:00+00:00",
+          "promote": false,
+          "sticky": false,
+          "default_langcode": true,
+          "revision_translation_affected": true,
+          "path": {
+            "alias": null,
+            "pid": null,
+            "langcode": "en"
+          },
+          "body": {
+            "value": "This is fictional demonstration content for the Drupal GovCon 2026 agentic-harness lab. It contains no real agency, program, resident, client, or operational data.\n\nThis article explains how residents can assemble supplies, identify evacuation routes, and prepare household contact plans. Its generated illustration uses a solid navy background, a large visible Article 1 identifier, a short topic label, and a primary or supporting-image label. The page and image are intentionally simple so context assembly, target provenance, validation, review, and recovery can be compared reproducibly across frameworks.",
+            "format": "plain_text",
+            "processed": "<p>This is fictional demonstration content for the Drupal GovCon 2026 agentic-harness lab. It contains no real agency, program, resident, client, or operational data.</p>\n<p>This article explains how residents can assemble supplies, identify evacuation routes, and prepare household contact plans. Its generated illustration uses a solid navy background, a large visible Article 1 identifier, a short topic label, and a primary or supporting-image label. The page and image are intentionally simple so context assembly, target provenance, validation, review, and recovery can be compared reproducibly across frameworks.</p>\n"
+          }
+        },
+        "relationships": {
+          "node_type": {
+            "data": {
+              "type": "node_type--node_type",
+              "id": "d03a0112-1f88-4208-9cec-52d18edc6773",
+              "meta": {
+                "drupal_internal__target_id": "article"
+              }
+            },
+            "links": {
+              "related": {
+                "href": "<SITE_URL>/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6/node_type?resourceVersion=id%3A1"
+              },
+              "self": {
+                "href": "<SITE_URL>/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6/relationships/node_type?resourceVersion=id%3A1"
+              }
+            }
+          },
+          "revision_uid": {
+            "data": {
+              "type": "user--user",
+              "id": "ac71ffd5-8cfc-4cd9-8524-c0c122f92858",
+              "meta": {
+                "drupal_internal__target_id": 2
+              }
+            },
+            "links": {
+              "related": {
+                "href": "<SITE_URL>/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6/revision_uid?resourceVersion=id%3A1"
+              },
+              "self": {
+                "href": "<SITE_URL>/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6/relationships/revision_uid?resourceVersion=id%3A1"
+              }
+            }
+          },
+          "uid": {
+            "data": {
+              "type": "user--user",
+              "id": "ac71ffd5-8cfc-4cd9-8524-c0c122f92858",
+              "meta": {
+                "drupal_internal__target_id": 2
+              }
+            },
+            "links": {
+              "related": {
+                "href": "<SITE_URL>/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6/uid?resourceVersion=id%3A1"
+              },
+              "self": {
+                "href": "<SITE_URL>/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6/relationships/uid?resourceVersion=id%3A1"
+              }
+            }
+          },
+          "field_image": {
+            "data": [
+              {
+                "type": "file--file",
+                "id": "07af2dce-7bfd-5de6-b291-e090669eda25",
+                "meta": {
+                  "alt": "",
+                  "title": "",
+                  "width": 1200,
+                  "height": 675,
+                  "drupal_internal__target_id": 1
+                }
+              }
+            ],
+            "links": {
+              "related": {
+                "href": "<SITE_URL>/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6/field_image?resourceVersion=id%3A1"
+              },
+              "self": {
+                "href": "<SITE_URL>/jsonapi/node/article/344eb273-ac74-5be8-85fb-6c2efd1f93a6/relationships/field_image?resourceVersion=id%3A1"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "links": {
+      "next": {
+        "href": "<SITE_URL>/jsonapi/node/article?page%5Boffset%5D=1&page%5Blimit%5D=1"
+      },
+      "self": {
+        "href": "<SITE_URL>/jsonapi/node/article?page%5Blimit%5D=1"
+      }
+    }
+  }
+}

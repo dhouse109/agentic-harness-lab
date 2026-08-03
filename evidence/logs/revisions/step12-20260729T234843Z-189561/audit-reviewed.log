@@ -1,0 +1,5 @@
+[INFO] Step 12 helper version: 1.0.1
+[INFO] Case A: 3 revision(s) · pending → approved · latest reviewer editor_dana · origin phase0_fixture · target revision 1.
+[INFO] Case B: 2 revision(s) · pending → rejected · latest reviewer editor_dana · origin phase0_fixture · target revision 2.
+[INFO] Case C: 2 revision(s) · pending → approved · latest reviewer editor_dana · origin phase0_fixture · target revision 3.
+[OK] Step 12 reviewed audit passed.
