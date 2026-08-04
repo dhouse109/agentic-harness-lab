@@ -1,0 +1,14 @@
+[project]
+name = "agentic-harness-langchain-preflight"
+version = "0.1.0"
+description = "Phase 0 environment preflight for LangChain and LangGraph"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "langchain",
+  "langchain-openai",
+  "langgraph",
+  "langgraph-checkpoint-sqlite",
+  "python-dotenv",
+  "requests",
+]

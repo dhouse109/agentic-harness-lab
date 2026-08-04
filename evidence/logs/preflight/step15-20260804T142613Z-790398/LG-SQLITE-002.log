@@ -1,0 +1,1 @@
+{"db_relative_path": ".preflight-state/checkpoints.sqlite", "db_sha256_on_reload": "be7c9a1069ee9a615bd48700548bf28d8ffc81b5b683f42e3f7a51312d990ebd", "reloaded_state": {"counter": 1, "trace": ["persist_one_step"]}, "status": "pass", "test_id": "LG-SQLITE-002", "thread_id": "phase0-step15-fixed-thread"}

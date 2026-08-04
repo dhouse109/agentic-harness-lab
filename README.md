@@ -37,12 +37,13 @@ export, schemas, fixtures, seed/reset scripts, test scripts, and sanitized evide
 
 ## Current phase
 
-Phase 0 Steps 13 and 14 are complete. The experiment contract is frozen at version 1.0, while the
-exact model and image representation remain the explicitly controlled Step 16 decision. The next
-step is separate LangChain/LangGraph and CrewAI environment preflight.
+Phase 0 Steps 13–15 are complete. The experiment contract is frozen at version 1.0, and
+separate Python 3.12 environments now pass the LangGraph, CrewAI, model-connectivity, and SQLite
+restart preflights. The candidate model is not frozen. Step 16 must still prove image-plus-page-
+context capability and record the final model and representation decision.
 
-Verify the freeze with:
+Verify Step 15 with:
 
 ```bash
-bash scripts/run-phase0-step14.sh audit
+bash scripts/run-phase0-step15.sh audit
 ```

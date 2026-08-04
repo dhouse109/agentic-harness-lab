@@ -1,0 +1,5 @@
+run_id=step15-20260804T142613Z-790398
+started_at_utc=2026-08-04T14:26:14Z
+candidate_model=gpt-4.1-mini-2025-04-14
+candidate_status=not frozen; pending Step 16
+uv 0.11.33 (x86_64-unknown-linux-gnu)

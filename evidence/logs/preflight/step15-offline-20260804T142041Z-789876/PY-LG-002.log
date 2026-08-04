@@ -1,0 +1,1 @@
+{"packages": {"langchain": "1.3.14", "langchain-openai": "1.4.1", "langgraph": "1.2.10", "langgraph-checkpoint-sqlite": "3.1.1"}, "status": "pass", "test_id": "PY-LG-002"}

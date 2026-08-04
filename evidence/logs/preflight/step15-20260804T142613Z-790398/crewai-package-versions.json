@@ -1,0 +1,1 @@
+{"environment": "crewai", "packages": {"crewai": "1.15.10", "crewai-tools": "1.15.10", "python-dotenv": "1.2.2", "requests": "2.34.2"}, "python": "3.12.13"}

@@ -61,3 +61,10 @@ Thumbs.db
 # Retain Composer/uv lockfiles, Drupal config export, source, fixtures, tests,
 # and sanitized evidence. Review evidence before staging.
 # END PHASE0-STEP13 MANAGED IGNORE RULES
+
+# BEGIN PHASE0 STEP15 PYTHON RUNTIME
+/langchain/.venv/
+/langchain/.preflight-state/
+/crewai/.venv/
+/crewai/.preflight-state/
+# END PHASE0 STEP15 PYTHON RUNTIME

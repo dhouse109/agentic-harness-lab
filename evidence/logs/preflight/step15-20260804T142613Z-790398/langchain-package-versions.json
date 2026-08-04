@@ -1,0 +1,1 @@
+{"environment": "langchain", "packages": {"langchain": "1.3.14", "langchain-openai": "1.4.1", "langgraph": "1.2.10", "langgraph-checkpoint-sqlite": "3.1.1", "python-dotenv": "1.2.2", "requests": "2.34.2"}, "python": "3.12.13"}

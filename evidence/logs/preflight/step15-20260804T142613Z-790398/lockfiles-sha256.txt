@@ -1,0 +1,2 @@
+e9e1590d38ee1e73b341994fb5e851101ffa341b7501d43252fedd52a972794b  /home/dhouse109/projects/agentic-harness-lab/langchain/uv.lock
+855e5edff2cb86eb64ea9856d239b19010e7d3b1f80c40e370ed81d66b8e4e7c  /home/dhouse109/projects/agentic-harness-lab/crewai/uv.lock

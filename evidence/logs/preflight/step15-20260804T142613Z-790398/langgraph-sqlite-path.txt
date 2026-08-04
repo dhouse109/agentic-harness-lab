@@ -1,0 +1,2 @@
+Relative SQLite path: langchain/.preflight-state/checkpoints.sqlite
+The SQLite database is runtime-only and is not retained in Git.

@@ -1,0 +1,12 @@
+[project]
+name = "agentic-harness-crewai-preflight"
+version = "0.1.0"
+description = "Phase 0 environment preflight for CrewAI"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "crewai",
+  "crewai-tools",
+  "python-dotenv",
+  "requests",
+]
