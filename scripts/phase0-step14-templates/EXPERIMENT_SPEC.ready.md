@@ -1,6 +1,6 @@
 # Experiment Specification
 
-**Contract status:** frozen — version 1.0  
+**Contract status:** ready to freeze — version 1.0  
 **Model status:** candidate — pending Step 16 vision and tool-path preflight  
 **Allowed deferred model fields:** exact model ID, confirmed structured-output mechanism, confirmed tool-calling mechanism, and image-input representation
 

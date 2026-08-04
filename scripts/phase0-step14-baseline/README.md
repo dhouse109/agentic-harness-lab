@@ -37,12 +37,11 @@ export, schemas, fixtures, seed/reset scripts, test scripts, and sanitized evide
 
 ## Current phase
 
-Phase 0 Steps 13 and 14 are complete. The experiment contract is frozen at version 1.0, while the
-exact model and image representation remain the explicitly controlled Step 16 decision. The next
-step is separate LangChain/LangGraph and CrewAI environment preflight.
+Phase 0 establishes the sandbox, evidence practices, Python environments, model capability, and
+first non-AI Drupal tool before the one-image Gate 0.5 vertical slices.
 
-Verify the freeze with:
+Start with:
 
 ```bash
-bash scripts/run-phase0-step14.sh audit
+bash scripts/run-phase0-step13.sh audit
 ```

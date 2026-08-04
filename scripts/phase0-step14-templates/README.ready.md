@@ -37,12 +37,12 @@ export, schemas, fixtures, seed/reset scripts, test scripts, and sanitized evide
 
 ## Current phase
 
-Phase 0 Steps 13 and 14 are complete. The experiment contract is frozen at version 1.0, while the
-exact model and image representation remain the explicitly controlled Step 16 decision. The next
-step is separate LangChain/LangGraph and CrewAI environment preflight.
+Phase 0 Step 13 is complete. The Step 14 experiment contract and schemas are installed and ready
+for audit and freeze. Do not implement framework-owned orchestration until the freeze succeeds.
 
-Verify the freeze with:
+Run:
 
 ```bash
 bash scripts/run-phase0-step14.sh audit
+bash scripts/run-phase0-step14.sh freeze confirm
 ```

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "target.schema.json",
+  "title": "Exact Drupal image-field target",
+  "description": "Identity for one exact image-field usage. A file alone is not a target.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "sequence",
+    "node_uuid",
+    "revision_id",
+    "field_name",
+    "delta",
+    "file_uuid",
+    "target_state",
+    "existing_alt"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12
+    },
+    "node_uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "revision_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "field_name": {
+      "const": "field_image"
+    },
+    "delta": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "file_uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "target_state": {
+      "enum": [
+        "missing",
+        "poor"
+      ]
+    },
+    "existing_alt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "recommendation.schema.json",
+  "title": "Validated alt-text recommendation",
+  "description": "Final recommendation assembled by the harness. Comparative evidence excludes phase0_fixture.",
+  "$defs": {
+    "model_output": {
+      "title": "Model-produced fields only",
+      "type": "object",
+      "required": [
+        "proposed_alt_text"
+      ],
+      "properties": {
+        "proposed_alt_text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 250
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "schema_version",
+    "target",
+    "proposed_alt_text",
+    "source_framework",
+    "run_id",
+    "evidence_hash",
+    "validator_version"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "target": {
+      "$ref": "target.schema.json"
+    },
+    "proposed_alt_text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250
+    },
+    "source_framework": {
+      "enum": [
+        "drupal_ai",
+        "langgraph",
+        "crewai"
+      ]
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^(drupal_ai|langgraph|crewai)-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"
+    },
+    "evidence_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    },
+    "validator_version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "source_framework": {
+            "const": "drupal_ai"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "run_id": {
+            "pattern": "^drupal_ai-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "source_framework": {
+            "const": "langgraph"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "run_id": {
+            "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "source_framework": {
+            "const": "crewai"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "run_id": {
+            "pattern": "^crewai-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

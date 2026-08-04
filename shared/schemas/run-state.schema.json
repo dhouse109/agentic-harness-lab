@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "run-state.schema.json",
+  "title": "Framework-owned persisted run state",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "source_framework",
+    "status",
+    "target_sequence",
+    "next_target_index",
+    "completed_targets",
+    "recommendations",
+    "failure_injection",
+    "duplicate_count",
+    "started_at",
+    "updated_at"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^(drupal_ai|langgraph|crewai)-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"
+    },
+    "source_framework": {
+      "enum": [
+        "drupal_ai",
+        "langgraph",
+        "crewai"
+      ]
+    },
+    "status": {
+      "enum": [
+        "initialized",
+        "running",
+        "interrupted",
+        "resuming",
+        "completed",
+        "failed"
+      ]
+    },
+    "target_sequence": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "target.schema.json"
+      }
+    },
+    "next_target_index": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 12
+    },
+    "completed_targets": {
+      "type": "array",
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "target.schema.json"
+      }
+    },
+    "recommendations": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": [
+          "target",
+          "node_id",
+          "uuid",
+          "revision_id"
+        ],
+        "properties": {
+          "target": {
+            "$ref": "target.schema.json"
+          },
+          "node_id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "uuid": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "revision_id": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "validation_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "sequence",
+          "passed",
+          "validator_version"
+        ],
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12
+          },
+          "passed": {
+            "type": "boolean"
+          },
+          "validator_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "failure_injection": {
+      "type": "object",
+      "required": [
+        "enabled",
+        "after_item",
+        "triggered",
+        "triggered_at"
+      ],
+      "properties": {
+        "enabled": {
+          "const": true
+        },
+        "after_item": {
+          "const": 6
+        },
+        "triggered": {
+          "type": "boolean"
+        },
+        "triggered_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false
+    },
+    "duplicate_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "interrupted_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "resume_timestamps": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "completed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

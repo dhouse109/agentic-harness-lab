@@ -15,8 +15,8 @@ production readiness.
 - [x] `seeded-clean` database and generated-file reset proven.
 - [x] Positive and negative permission suite retained.
 - [x] Approve, reject, and edit-and-approve revision evidence retained.
-- [x] Step 13 repository and evidence scaffold audited.
-- [x] Step 14 experiment specification written and frozen.
+- [ ] Step 13 repository and evidence scaffold audited.
+- [ ] Step 14 experiment specification written and frozen.
 - [ ] Step 15 separate LangChain/LangGraph and CrewAI environments pass preflight.
 - [ ] Step 16 image-plus-page-context capability passes or a fallback is recorded.
 - [ ] Step 17 non-AI `find_images_needing_review()` returns exactly 12 targets.
