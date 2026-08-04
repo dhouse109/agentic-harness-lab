@@ -1,0 +1,9 @@
+name: Agentic Harness Tools
+type: module
+description: 'Deterministic, permission-scoped substrate tools for the Drupal GovCon agentic-harness lab.'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - drupal:file
+  - drupal:node
+  - drupal:basic_auth

@@ -130,7 +130,7 @@ remain framework-owned behavior.
 | Exact model ID | `gpt-4.1-mini-2025-04-14` — frozen snapshot |
 | Temperature | `0.0` — frozen |
 | Structured-output mechanism | Drupal `ChatInput::setChatStructuredJsonSchema(strict=true)`; LangChain `ChatOpenAI.with_structured_output(method=json_schema, strict=true)`; CrewAI `LLM` response-format pathway recorded in Step 16 evidence |
-| Tool-calling mechanism | Drupal `ChatInput::setChatTools(ToolsInput)`; LangChain `ChatOpenAI.bind_tools(strict=true)`; CrewAI `LLM.call(tools=...)` — harmless calculator probe in every path |
+| Tool-calling mechanism | Drupal `ChatInput::setChatTools(ToolsInput)` detected a normalized call to installed `ai_agent:html_to_markdown` without executing the plugin; LangChain `ChatOpenAI.bind_tools(strict=true)` and CrewAI `LLM.call(tools=..., available_functions=...)` each executed deterministic `calculate_probe` and returned `140` |
 | Image-input representation | Inline identical PNG bytes (same SHA-256): Base64 data URL with `detail=auto` in Python wrappers; Drupal AI `ImageFile` over the same bytes, normalized by the OpenAI provider |
 | Model status | frozen for experiment; Step 16 direct capability pass at `evidence/logs/preflight/vision/step16-20260804T164330Z-832871` |
 

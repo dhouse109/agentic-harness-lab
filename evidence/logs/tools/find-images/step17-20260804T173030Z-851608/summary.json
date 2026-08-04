@@ -1,0 +1,128 @@
+{
+  "claims": {
+    "does_not_prove": [
+      "alt-text recommendation quality",
+      "framework orchestration",
+      "framework superiority",
+      "Gate 0.5 completion",
+      "production readiness"
+    ],
+    "proves": [
+      "the permission-scoped Drupal route discovered exactly 12 current image-field usages",
+      "the discovered targets matched the Step 9 manifest in deterministic order",
+      "the operation ran without model credentials or a model call",
+      "the source Article state and suggestion count were unchanged"
+    ]
+  },
+  "controls": {
+    "envelope_schema": "shared/schemas/tool-result.schema.json",
+    "expected_missing_count": 9,
+    "expected_poor_count": 3,
+    "expected_total_count": 12,
+    "model_call_allowed": false,
+    "source_mutation_allowed": false,
+    "target_schema": "shared/schemas/target.schema.json"
+  },
+  "expected_tests": [
+    "S17-AUTH-001",
+    "S17-AUTH-002",
+    "S17-AUTH-003",
+    "S17-COUNT-001",
+    "S17-STATE-001",
+    "S17-SCHEMA-001",
+    "S17-SCHEMA-002",
+    "S17-ORDER-001",
+    "S17-IDENTITY-001",
+    "S17-DUPLICATE-001",
+    "S17-REPEAT-001",
+    "S17-NOAI-001",
+    "S17-MUTATION-001"
+  ],
+  "failed": 0,
+  "mode": "model-free",
+  "passed": 13,
+  "run_id": "step17-20260804T173030Z-851608",
+  "status": "pass",
+  "tests": [
+    {
+      "detail": "agent HTTP 200",
+      "evidence": "authorization.json",
+      "status": "pass",
+      "test_id": "S17-AUTH-001"
+    },
+    {
+      "detail": "anonymous HTTP 401",
+      "evidence": "authorization.json",
+      "status": "pass",
+      "test_id": "S17-AUTH-002"
+    },
+    {
+      "detail": "editor HTTP 403",
+      "evidence": "authorization.json",
+      "status": "pass",
+      "test_id": "S17-AUTH-003"
+    },
+    {
+      "detail": "target count 12",
+      "evidence": "response.json",
+      "status": "pass",
+      "test_id": "S17-COUNT-001"
+    },
+    {
+      "detail": "missing=9, poor=3",
+      "evidence": "response.json",
+      "status": "pass",
+      "test_id": "S17-STATE-001"
+    },
+    {
+      "detail": "all targets match target.schema.json constraints",
+      "evidence": "target-schema-validation.json",
+      "status": "pass",
+      "test_id": "S17-SCHEMA-001"
+    },
+    {
+      "detail": "strict frozen envelope constraints passed",
+      "evidence": "envelope-schema-validation.json",
+      "status": "pass",
+      "test_id": "S17-SCHEMA-002"
+    },
+    {
+      "detail": "discovery exactly matches normalized Step 9 manifest",
+      "evidence": "step9-manifest.json",
+      "status": "pass",
+      "test_id": "S17-ORDER-001"
+    },
+    {
+      "detail": "validated_count=12",
+      "evidence": "identity-validation.json",
+      "status": "pass",
+      "test_id": "S17-IDENTITY-001"
+    },
+    {
+      "detail": "unique identities=12",
+      "evidence": "response.json",
+      "status": "pass",
+      "test_id": "S17-DUPLICATE-001"
+    },
+    {
+      "detail": "first=1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728, second=1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+      "evidence": "repeatability.json",
+      "status": "pass",
+      "test_id": "S17-REPEAT-001"
+    },
+    {
+      "detail": "model variables absent and no model call performed",
+      "evidence": "environment.json",
+      "status": "pass",
+      "test_id": "S17-NOAI-001"
+    },
+    {
+      "detail": "source hash and suggestion count unchanged",
+      "evidence": "mutation-before.json, mutation-after.json",
+      "status": "pass",
+      "test_id": "S17-MUTATION-001"
+    }
+  ],
+  "tool_name": "find_images_needing_review",
+  "total": 13
+}

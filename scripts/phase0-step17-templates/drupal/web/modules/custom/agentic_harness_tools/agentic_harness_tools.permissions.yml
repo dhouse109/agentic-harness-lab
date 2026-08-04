@@ -1,0 +1,4 @@
+use agentic harness discovery tools:
+  title: 'Use agentic harness discovery tools'
+  description: 'Call deterministic, read-only discovery operations used by the agentic-harness lab.'
+  restrict access: true

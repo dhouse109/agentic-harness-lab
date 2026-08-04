@@ -1,0 +1,6 @@
+{
+  "detail": "strict frozen envelope constraints passed",
+  "schema": "shared/schemas/tool-result.schema.json",
+  "status": "pass",
+  "validator": "strict contract-specific validator in scripts/step17_evidence.py"
+}

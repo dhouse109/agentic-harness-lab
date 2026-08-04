@@ -1,0 +1,7 @@
+{
+  "agent": 200,
+  "anonymous": 401,
+  "authorization_headers_retained": false,
+  "credentials_retained": false,
+  "editor": 403
+}

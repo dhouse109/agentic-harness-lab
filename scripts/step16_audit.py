@@ -78,6 +78,31 @@ def main() -> int:
         fail("Latest Step 16 run is not a 9/9 direct pass")
     if passing != EXPECTED_TESTS:
         fail(f"Unexpected Step 16 passing test set: {sorted(passing)}")
+    drupal_tool = load_json(run_dir / "TOOL-DR-001.json")
+    if (
+        drupal_tool.get("status") != "pass"
+        or drupal_tool.get("tool_plugin_id") != "ai_agent:html_to_markdown"
+        or drupal_tool.get("tool_call_detected") is not True
+    ):
+        fail("Drupal Step 16 tool evidence does not record ai_agent:html_to_markdown call detection")
+    langchain_tool = load_json(run_dir / "TOOL-LG-001.json")
+    if (
+        langchain_tool.get("status") != "pass"
+        or langchain_tool.get("tool_name") != "calculate_probe"
+        or str(langchain_tool.get("tool_result")) != "140"
+        or langchain_tool.get("tool_function_executed") is not True
+    ):
+        fail("LangChain Step 16 tool evidence does not record calculate_probe execution to 140")
+    crewai_tool = load_json(run_dir / "TOOL-CR-001.json")
+    if (
+        crewai_tool.get("status") != "pass"
+        or crewai_tool.get("tool_name") != "calculate_probe"
+        or str(crewai_tool.get("tool_result")) != "140"
+        or crewai_tool.get("tool_function_executed") is not True
+    ):
+        fail("CrewAI Step 16 tool evidence does not record calculate_probe execution to 140")
+    ok("Step 16 tool evidence matches the exact observed Drupal, LangChain, and CrewAI probes.")
+
     controls = summary.get("controls", {})
     if controls.get("model_id") != "gpt-4.1-mini-2025-04-14":
         fail("Step 16 did not use the approved dated candidate model")

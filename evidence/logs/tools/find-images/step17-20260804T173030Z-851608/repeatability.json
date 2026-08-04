@@ -1,0 +1,6 @@
+{
+  "canonical_scope": "data.targets only; dynamic timestamp and correlation_id excluded",
+  "first_targets_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "second_targets_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "status": "pass"
+}

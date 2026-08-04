@@ -1,0 +1,6 @@
+{
+  "schema": "shared/schemas/target.schema.json",
+  "status": "pass",
+  "validated_count": 12,
+  "validator": "strict contract-specific validator in scripts/step17_evidence.py"
+}

@@ -1,0 +1,11 @@
+{
+  "captured_at_utc": "2026-08-04T17:31:43Z",
+  "crewai_candidate_model_present": false,
+  "model_call_performed": false,
+  "openai_api_key_present": false,
+  "openai_candidate_model_present": false,
+  "operation": "find_images_needing_review",
+  "python": "3.12.3",
+  "run_id": "step17-20260804T173030Z-851608",
+  "site_url_origin": "https://<local-ddev-host>"
+}

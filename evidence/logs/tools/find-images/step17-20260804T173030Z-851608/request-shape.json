@@ -1,0 +1,9 @@
+{
+  "method": "GET",
+  "path": "/api/agentic-harness/v1/images-needing-review",
+  "authentication": "Drupal HTTP Basic via runtime-only agent_bot credential",
+  "correlation_id": "step17-20260804T173030Z-851608",
+  "authorization_header_retained": false,
+  "password_retained": false,
+  "model_call": false
+}

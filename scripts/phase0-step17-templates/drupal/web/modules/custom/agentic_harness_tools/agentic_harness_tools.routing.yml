@@ -1,0 +1,10 @@
+agentic_harness_tools.find_images_needing_review:
+  path: '/api/agentic-harness/v1/images-needing-review'
+  defaults:
+    _controller: '\Drupal\agentic_harness_tools\Controller\ToolController::findImagesNeedingReview'
+  requirements:
+    _permission: 'use agentic harness discovery tools'
+  options:
+    _auth: ['basic_auth']
+    no_cache: true
+  methods: [GET]

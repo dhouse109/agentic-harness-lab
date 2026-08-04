@@ -24,8 +24,9 @@ Freeze the following experiment controls:
   over the same bytes by the Drupal provider wrapper
 - Structured-output contract: strict JSON Schema where the wrapper exposes it; the exact observed
   wrapper mechanism is recorded in the Step 16 evidence
-- Tool capability: the pinned Drupal AI, LangChain, and CrewAI provider wrappers each completed the
-  harmless calculator probe
+- Tool capability: Drupal AI detected a normalized call to the installed, non-mutating
+  `ai_agent:html_to_markdown` FunctionCall plugin without executing it; LangChain and CrewAI each
+  exposed and executed deterministic `calculate_probe`, returning `140`
 - Fixture: the first deterministic Step 9 target, with identical image SHA-256 and page-context hash
   across all three pathways
 

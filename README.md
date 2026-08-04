@@ -37,15 +37,18 @@ export, schemas, fixtures, seed/reset scripts, test scripts, and sanitized evide
 
 ## Current phase
 
-Phase 0 Steps 13–15 are complete, and Step 16 is complete. The experiment model is frozen at
-`gpt-4.1-mini-2025-04-14` with temperature `0.0`; the same synthetic PNG bytes and page-context hash passed the
-Drupal AI, LangChain, and CrewAI capability paths. Step 17 is next: implement the first non-AI
-`find_images_needing_review()` tool and prove that it returns exactly 12 field usages.
+Phase 0 is complete. The frozen model and image representation passed Step 16, and the model-free,
+permission-scoped Drupal `find_images_needing_review()` route returned the same 12 exact image-field
+usages as the Step 9 manifest without changing Article state or creating suggestions.
 
-Verify Step 16 with:
+Gate 0.5 is next:
+
+> One image, one recommendation, one human decision, three implementations.
+
+Verify Step 17 with:
 
 ```bash
-bash scripts/run-phase0-step16.sh audit
+bash scripts/run-phase0-step17.sh audit
 ```
 
-Passing evidence: `evidence/logs/preflight/vision/step16-20260804T164330Z-832871`
+Passing evidence: `evidence/logs/tools/find-images/step17-20260804T173030Z-851608`

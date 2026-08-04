@@ -1,0 +1,14 @@
+test_id	status	evidence	detail
+S17-AUTH-001	pass	authorization.json	agent HTTP 200
+S17-AUTH-002	pass	authorization.json	anonymous HTTP 401
+S17-AUTH-003	pass	authorization.json	editor HTTP 403
+S17-COUNT-001	pass	response.json	target count 12
+S17-STATE-001	pass	response.json	missing=9, poor=3
+S17-SCHEMA-001	pass	target-schema-validation.json	all targets match target.schema.json constraints
+S17-SCHEMA-002	pass	envelope-schema-validation.json	strict frozen envelope constraints passed
+S17-ORDER-001	pass	step9-manifest.json	discovery exactly matches normalized Step 9 manifest
+S17-IDENTITY-001	pass	identity-validation.json	validated_count=12
+S17-DUPLICATE-001	pass	response.json	unique identities=12
+S17-REPEAT-001	pass	repeatability.json	first=1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728, second=1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728
+S17-NOAI-001	pass	environment.json	model variables absent and no model call performed
+S17-MUTATION-001	pass	mutation-before.json, mutation-after.json	source hash and suggestion count unchanged

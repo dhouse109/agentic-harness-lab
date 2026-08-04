@@ -1,0 +1,111 @@
+[INFO] Phase 0 Step 10 runner version: 1.0.3
+[33mCustom configuration detected in project 'harness':
+  • Environment: /home/dhouse109/projects/agentic-harness-lab/drupal/.ddev/.env.web
+
+Custom configuration is updated on restart. Run 'ddev restart' if changes don't take effect.
+Add '#ddev-silent-no-warn' comment to files if you don't want to see these warnings.[0m
+. Image ddev/ddev-webserver:v1.25.3-harness-built Building 
+ Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Building 
+. Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Built 
+ Image ddev/ddev-webserver:v1.25.3-harness-built Built 
+
+ Container ddev-harness-db Recreate 
+ Container ddev-harness-web Recreate 
+ Container ddev-harness-web Recreated 
+ Container ddev-harness-db Recreated 
+ Container ddev-harness-db Starting 
+ Container ddev-harness-web Starting 
+ Container ddev-harness-web Started 
+ Container ddev-harness-db Started 
+.ddev/db_snapshots/seeded-clean-mariadb_11.8.zst: OK
+../db/seeded-clean.sql.gz: OK
+../db/seeded-clean-files.tar.gz: OK
+../db/seeded-clean-manifest.json: OK
+../db/seeded-clean-metadata.txt: OK
+[OK] Stored snapshot, SQL export, files archive, manifest, and metadata checksums are valid.
+[OK] Stored Step 10 baseline artifacts are complete.
+[INFO] Restoring DDEV snapshot 'seeded-clean'...
+[32mStopping db container for snapshot restore of 'seeded-clean-mariadb_11.8.zst'...[0m
+[32mWith large snapshots this may take a long time.
+This may time out after 600 seconds 
+but you can increase it by changing default_container_timeout.[0m
+[33mCustom configuration detected in project 'harness':
+  • Environment: /home/dhouse109/projects/agentic-harness-lab/drupal/.ddev/.env.web
+
+Custom configuration is updated on restart. Run 'ddev restart' if changes don't take effect.
+Add '#ddev-silent-no-warn' comment to files if you don't want to see these warnings.[0m
+Building project images.... Image ddev/ddev-webserver:v1.25.3-harness-built Building 
+ Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Building 
+. Image ddev/ddev-webserver:v1.25.3-harness-built Built 
+ Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Built 
+
+[32mProject images built in 3s.[0m
+ Container ddev-harness-db Creating 
+ Container ddev-harness-web Recreate 
+ Container ddev-harness-db Created 
+ Container ddev-harness-web Recreated 
+ Container ddev-harness-web Starting 
+ Container ddev-harness-db Starting 
+ Container ddev-harness-web Started 
+ Container ddev-harness-db Started 
+Waiting for containers to become ready: [web db]... ready in 4.0s
+ddev-router already running, pushing new config...
+Waiting up to 600s for snapshot restore to complete...
+You can also follow the restore progress in another terminal window with `ddev logs -s db -f harness`
+[32m
+Database snapshot seeded-clean was restored in 16s[0m
+[OK] Deterministic Step 9 public files restored.
+[INFO] Rebuilding Drupal caches...
+ [success] Cache rebuild complete.
+[INFO] Verifying restored Drupal state...
+Running Phase 0 Step 9 in 'audit' mode...
+[INFO] Step 9 script version: 1.0.0
+[INFO] Seed Articles: 20 / 20
+[INFO] Generated PNG files: 30 / 30
+[INFO] Target usages: 12 / 12
+[INFO] Coverage: 9 missing, 3 poor, 8 fully acceptable Articles
+[INFO] Target 01: node 1 rev 1 · field_image[0] · file 1 · missing
+[INFO] Target 02: node 2 rev 2 · field_image[1] · file 3 · missing
+[INFO] Target 03: node 3 rev 3 · field_image[0] · file 4 · missing
+[INFO] Target 04: node 4 rev 4 · field_image[0] · file 5 · missing
+[INFO] Target 05: node 5 rev 5 · field_image[0] · file 7 · missing
+[INFO] Target 06: node 6 rev 6 · field_image[1] · file 9 · missing
+[INFO] Target 07: node 7 rev 7 · field_image[0] · file 10 · missing
+[INFO] Target 08: node 8 rev 8 · field_image[1] · file 12 · missing
+[INFO] Target 09: node 9 rev 9 · field_image[0] · file 13 · missing
+[INFO] Target 10: node 10 rev 10 · field_image[1] · file 15 · poor
+[INFO] Target 11: node 11 rev 11 · field_image[0] · file 16 · poor
+[INFO] Target 12: node 12 rev 12 · field_image[1] · file 18 · poor
+[OK] Step 9 audit passed. The deterministic 12-target manifest is valid.
+
+Step 9 audit complete.
+[INFO] Step 10 helper version: 1.0.3
+[OK] Drupal baseline is clean: Article 01 alt is empty and suggestion count is 0.
+[OK] Current 12-target manifest matches the baseline byte-for-byte.
+[OK] Step 10 reset completed. Database and seed files match seeded-clean.
+
+Useful commands:
+  bash scripts/run-phase0-step10.sh audit
+  bash scripts/run-phase0-step10.sh reset
+  bash scripts/run-phase0-step10.sh test-reset
+
+Private baseline artifacts:
+  /home/dhouse109/projects/agentic-harness-lab/db/seeded-clean.sql.gz
+  /home/dhouse109/projects/agentic-harness-lab/db/seeded-clean-files.tar.gz
+  /home/dhouse109/projects/agentic-harness-lab/db/seeded-clean-manifest.json
+  /home/dhouse109/projects/agentic-harness-lab/db/seeded-clean-metadata.txt
+  /home/dhouse109/projects/agentic-harness-lab/db/seeded-clean-checksums.sha256
++------------+-------------------------+-----------+
+| Collection | Config                  | Operation |
++------------+-------------------------+-----------+
+|            | core.extension          | Update    |
+|            | user.role.agent_service | Update    |
++------------+-------------------------+-----------+
+
+ // Import the listed configuration changes?: yes.                              
+
+ [notice] Synchronized extensions: installed agentic_harness_tools.
+ [notice] Synchronized configuration: update user.role.agent_service.
+ [notice] Finalizing configuration synchronization.
+ [success] The configuration was imported successfully.
+ [success] Cache rebuild complete.

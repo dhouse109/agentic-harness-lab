@@ -19,7 +19,7 @@ production readiness.
 - [x] Step 14 experiment specification written and frozen.
 - [x] Step 15 separate LangChain/LangGraph and CrewAI environments pass preflight.
 - [x] Step 16 image-plus-page-context capability passes or a fallback is recorded.
-- [ ] Step 17 non-AI `find_images_needing_review()` returns exactly 12 targets.
+- [x] Step 17 non-AI `find_images_needing_review()` returns exactly 12 targets.
 
 ## Gate 0.5
 

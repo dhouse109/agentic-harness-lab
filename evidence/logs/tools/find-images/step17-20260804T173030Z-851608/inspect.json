@@ -1,0 +1,13 @@
+{
+    "helper_version": "1.0.0",
+    "test_id": "S17-INSPECT-001",
+    "status": "pass",
+    "route_name": "agentic_harness_tools.find_images_needing_review",
+    "route_path": "/api/agentic-harness/v1/images-needing-review",
+    "permission": "use agentic harness discovery tools",
+    "agent_role": "agent_service",
+    "agent_username": "agent_bot",
+    "editor_username": "editor_dana",
+    "editor_permission_denied": true,
+    "model_dependency": false
+}

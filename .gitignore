@@ -76,3 +76,9 @@ Thumbs.db
 /.phase0-step16-backups/
 /.phase0-step16-package-backups/
 # END PHASE0 STEP16 RUNTIME
+
+# BEGIN PHASE0 STEP17 RUNTIME
+/drupal/.phase0-step17-runtime/
+/.phase0-step17-backups/
+/.phase0-step17-package-backups/
+# END PHASE0 STEP17 RUNTIME

@@ -1,0 +1,6 @@
+services:
+  agentic_harness_tools.image_review_finder:
+    class: Drupal\agentic_harness_tools\Service\ImageReviewFinder
+    arguments:
+      - '@entity_type.manager'
+      - '@current_user'

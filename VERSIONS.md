@@ -4,8 +4,7 @@ Record exact installed versions. Do not substitute “latest.”
 
 | Component | Exact version / commit | Evidence command or file | Frozen? | Notes |
 |---|---|---|---|---|
-| Ubuntu | Ubuntu 24.04.4 LTS
-unknown | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | WSL2 host distribution |
+| Ubuntu | Ubuntu 24.04.4 LTS | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | WSL2 host distribution |
 | Docker | client=29.6.2 server=29.6.2 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | Client/server captured locally |
 | DDEV | ddev version v1.25.3 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | Local Drupal runtime |
 | PHP | 8.3.31 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | DDEV web container |

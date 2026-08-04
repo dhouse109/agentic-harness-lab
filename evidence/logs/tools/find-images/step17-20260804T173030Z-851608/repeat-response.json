@@ -1,0 +1,145 @@
+{
+  "correlation_id": "step17-20260804T173030Z-851608-repeat",
+  "data": {
+    "targets": [
+      {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      },
+      {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4",
+        "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+        "revision_id": 2,
+        "schema_version": 1,
+        "sequence": 2,
+        "target_state": "missing"
+      },
+      {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3",
+        "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+        "revision_id": 3,
+        "schema_version": 1,
+        "sequence": 3,
+        "target_state": "missing"
+      },
+      {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "4c2bacbf-1a18-5b91-95b6-04be3911e035",
+        "node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+        "revision_id": 4,
+        "schema_version": 1,
+        "sequence": 4,
+        "target_state": "missing"
+      },
+      {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "a5b69415-6c44-5263-adb0-ac7270f6c19f",
+        "node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+        "revision_id": 5,
+        "schema_version": 1,
+        "sequence": 5,
+        "target_state": "missing"
+      },
+      {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+        "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+        "revision_id": 6,
+        "schema_version": 1,
+        "sequence": 6,
+        "target_state": "missing"
+      },
+      {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "e7f2552b-adcc-5864-9331-4da0dfe829e0",
+        "node_uuid": "36ab6f42-32b8-57ae-919f-aad69ff1de69",
+        "revision_id": 7,
+        "schema_version": 1,
+        "sequence": 7,
+        "target_state": "missing"
+      },
+      {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "55375469-e22b-5b16-b667-46347039f610",
+        "node_uuid": "4a58d6c1-64d1-5d01-b6e2-518b7622aac6",
+        "revision_id": 8,
+        "schema_version": 1,
+        "sequence": 8,
+        "target_state": "missing"
+      },
+      {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "0edde8a1-266b-5fc2-b61c-71ac41ae35cf",
+        "node_uuid": "3fb5d79e-a5e7-5d92-84d0-797018ec34b4",
+        "revision_id": 9,
+        "schema_version": 1,
+        "sequence": 9,
+        "target_state": "missing"
+      },
+      {
+        "delta": 1,
+        "existing_alt": "image.jpg",
+        "field_name": "field_image",
+        "file_uuid": "86301d0c-54cf-5389-be0e-7f070abf6a61",
+        "node_uuid": "e574f0bf-40dc-539a-93c3-0750b1bbfd94",
+        "revision_id": 10,
+        "schema_version": 1,
+        "sequence": 10,
+        "target_state": "poor"
+      },
+      {
+        "delta": 0,
+        "existing_alt": "photo",
+        "field_name": "field_image",
+        "file_uuid": "96c76d54-cd3b-55b2-9fa5-ea817732ff8c",
+        "node_uuid": "dcbc6fff-fd8f-51ec-9b28-5ccaf043de3c",
+        "revision_id": 11,
+        "schema_version": 1,
+        "sequence": 11,
+        "target_state": "poor"
+      },
+      {
+        "delta": 1,
+        "existing_alt": "phase0-article-12-image-2.png",
+        "field_name": "field_image",
+        "file_uuid": "891be849-b0d8-5d3a-961c-05921b70e274",
+        "node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+        "revision_id": 12,
+        "schema_version": 1,
+        "sequence": 12,
+        "target_state": "poor"
+      }
+    ],
+    "total_count": 12
+  },
+  "error": null,
+  "ok": true,
+  "schema_version": 1,
+  "timestamp": "2026-08-04T17:31:46Z",
+  "tool_name": "find_images_needing_review"
+}
