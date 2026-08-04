@@ -1,0 +1,21 @@
+{
+  "base64_retained": false,
+  "comparison_representation": "base64_data_url",
+  "context_sha256": "6bf065ec2c990a0cf18253e98a76ace152c9863b19385f02a3f9c461bfabd077",
+  "framework": "drupal_ai",
+  "helper_version": "1.0.2",
+  "image_byte_length": 4490,
+  "image_detail": "auto/provider default",
+  "image_representation": "ImageFile(binary PNG) normalized by Drupal AI/OpenAI provider to provider-native image input",
+  "image_sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+  "model_id": "gpt-4.1-mini-2025-04-14",
+  "output": {
+    "context_alignment": "The image aligns well with the page context as a minimalistic primary image marking Phase 0 and emergency preparedness, consistent with the demonstration's simple visual style and labeling.",
+    "image_purpose": "To serve as a simple, abstract primary visual identifier for the emergency preparedness checklist article, highlighting the Phase 0 status and emergency preparedness topic.",
+    "proposed_alt_text": "A navy blue background with a large white pixelated number 1 in the center. Text labels read 'PHASE 0 - PRIMARY IMAGE' at top left, 'EMERGENCY PREPAREDNESS' at bottom left, and 'SLOT 1' at bottom right."
+  },
+  "status": "pass",
+  "structured_output_mechanism": "ChatInput::setChatStructuredJsonSchema(strict=true)",
+  "temperature": 0,
+  "test_id": "VISION-DR-001"
+}

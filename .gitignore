@@ -68,3 +68,11 @@ Thumbs.db
 /crewai/.venv/
 /crewai/.preflight-state/
 # END PHASE0 STEP15 PYTHON RUNTIME
+
+# BEGIN PHASE0 STEP16 RUNTIME
+/drupal/.phase0-step16-runtime/
+/langchain/.phase0-step16-runtime/
+/crewai/.phase0-step16-runtime/
+/.phase0-step16-backups/
+/.phase0-step16-package-backups/
+# END PHASE0 STEP16 RUNTIME

@@ -1,0 +1,14 @@
+{
+  "adapter_model": "gpt-4.1-mini-2025-04-14",
+  "framework": "crewai",
+  "model_id": "gpt-4.1-mini-2025-04-14",
+  "status": "pass",
+  "temperature": 0.0,
+  "test_id": "TOOL-CR-001",
+  "tool_call_count": 1,
+  "tool_call_detected": true,
+  "tool_function_executed": true,
+  "tool_mechanism": "CrewAI LLM.call(tools=..., available_functions=...)",
+  "tool_name": "calculate_probe",
+  "tool_result": "140"
+}

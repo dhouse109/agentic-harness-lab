@@ -4,15 +4,16 @@ Record exact installed versions. Do not substitute “latest.”
 
 | Component | Exact version / commit | Evidence command or file | Frozen? | Notes |
 |---|---|---|---|---|
-| Ubuntu | TODO | `lsb_release -a` | yes | WSL2 |
-| Docker | TODO | `docker version` | yes | Docker CE in WSL2 |
-| DDEV | TODO | `ddev version` | yes | |
-| PHP | TODO | `ddev php -v` | yes | |
-| Drupal core | TODO | `ddev drush status` | yes | Major 11 required |
-| Drupal AI | TODO | Composer lock / versions file | yes | |
-| Drupal AI Agents | TODO | Composer lock / versions file | yes | Patched supported release required |
-| OpenAI provider | TODO | Composer lock / versions file | yes | |
-| Drush | TODO | Composer lock / `ddev drush --version` | yes | |
+| Ubuntu | Ubuntu 24.04.4 LTS
+unknown | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | WSL2 host distribution |
+| Docker | client=29.6.2 server=29.6.2 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | Client/server captured locally |
+| DDEV | ddev version v1.25.3 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | Local Drupal runtime |
+| PHP | 8.3.31 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | DDEV web container |
+| Drupal core | 11.4.4 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | Composer lock and local command |
+| Drupal AI | 1.4.5 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | Pinned Composer release |
+| Drupal AI Agents | 1.3.2 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | Pinned patched supported release |
+| OpenAI provider | 1.2.3 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | Pinned Composer release used in Step 16 |
+| Drush | 13.7.6.0 | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871/environment.json` | yes | Pinned Composer release |
 | Python | 3.12 (3.12.13 LangChain; 3.12.13 CrewAI) | `evidence/logs/preflight/step15-20260804T142613Z-790398` / project `uv.lock` | yes | Separate Python 3.12 uv environments |
 | uv | 0.11.33 | `evidence/logs/preflight/step15-20260804T142613Z-790398` / project `uv.lock` | yes | Resolved by Step 15 lockfile |
 | LangChain | 1.3.14 | `evidence/logs/preflight/step15-20260804T142613Z-790398` / project `uv.lock` | yes | Resolved by Step 15 lockfile |
@@ -20,7 +21,7 @@ Record exact installed versions. Do not substitute “latest.”
 | LangGraph SQLite checkpointer | 3.1.1 | `evidence/logs/preflight/step15-20260804T142613Z-790398` / project `uv.lock` | yes | Resolved by Step 15 lockfile |
 | CrewAI | 1.15.10 | `evidence/logs/preflight/step15-20260804T142613Z-790398` / project `uv.lock` | yes | Resolved by Step 15 lockfile |
 | CrewAI Tools | 1.15.10 | `evidence/logs/preflight/step15-20260804T142613Z-790398` / `crewai/uv.lock` | yes | Resolved by Step 15 lockfile |
-| Candidate/frozen model | gpt-4.1-mini-2025-04-14 — candidate only | `evidence/logs/preflight/step15-20260804T142613Z-790398` | no | Text-only pings passed; freeze only after Step 16 |
+| Candidate/frozen model | gpt-4.1-mini-2025-04-14 — frozen | `evidence/logs/preflight/vision/step16-20260804T164330Z-832871` / ADR-0002 | yes | Direct image, strict structured-output, and tool-capability spike passed |
 
 ## Captured version evidence
 

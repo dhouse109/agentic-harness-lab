@@ -22,3 +22,17 @@ Safe statement to test and retain:
 > lifecycle management. The demonstration uses a patched supported release.
 
 Do not use the advisory by itself to rank the frameworks’ overall security or verification quality.
+
+## Step 16 verified capability sources
+
+Retrieved 2026-08-04. These official sources support the capability design; local Step 16 evidence
+is still required to establish behavior in this repository.
+
+| ID | Source title | Official? | URL | Version / branch | Capability supported | Caveat | Status |
+|---|---|---:|---|---|---|---|---|
+| SRC-S16-001 | GPT-4.1 mini model documentation | yes | https://platform.openai.com/docs/models/gpt-4.1-mini | `gpt-4.1-mini-2025-04-14` | Image input, function calling, structured outputs, snapshot pinning | Documentation does not prove wrapper behavior | verified source |
+| SRC-S16-002 | Drupal AI provider testing | yes | https://project.pages.drupalcode.org/ai/1.4.x/developers/testing_an_ai_provider/ | AI 1.4.x | Vision, structured-data, and tool-use provider tests | Pair with pinned provider and local evidence | verified source |
+| SRC-S16-003 | Drupal AI chat API | yes | https://project.pages.drupalcode.org/ai/developers/call_chat/ | provider API | `ChatInput`, `ChatMessage`, normalized output, image attachments | Wrapper specifics are version-sensitive | verified source |
+| SRC-S16-004 | LangChain ChatOpenAI integration | yes | https://docs.langchain.com/oss/python/integrations/chat/openai | pinned lockfile | Image input, strict tool binding, native structured output | Pair with local locked version | verified source |
+| SRC-S16-005 | CrewAI documentation | yes | https://docs.crewai.com/ | pinned lockfile | CrewAI LLM, agents, tools, and structured outputs | Exact low-level wrapper shape must be proven locally | verified source |
+

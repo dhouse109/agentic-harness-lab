@@ -1,7 +1,7 @@
 # Shared Semantic Prompt Contract
 
-**Contract version:** 1.0  
-**Status:** frozen with `EXPERIMENT_SPEC.md`; exact model transport remains the controlled Step 16 decision
+**Contract version:** 1.1  
+**Status:** frozen with `EXPERIMENT_SPEC.md`; model transport and inline-image representation were frozen by ADR-0002
 
 This file records the semantic instructions that must remain equivalent across Drupal AI,
 LangChain/LangGraph, and CrewAI. Framework APIs may require different wrappers, message roles, or
@@ -57,13 +57,14 @@ IMAGE CONTEXT
 - Filename: {{filename}}
 - MIME type: {{mime_type}}
 - Dimensions: {{width_or_unknown}} x {{height_or_unknown}}
-- Image input: supplied using the single Step 16-approved representation
+- Image input: identical PNG bytes, represented as a Base64-encoded PNG data URL with detail=auto or the Drupal AI ImageFile equivalent over the same bytes
 
 Produce the model-output object only.
 ```
 
-The image itself is attached or encoded using the one representation selected in Step 16. The
-semantic facts above remain identical regardless of transport.
+The image itself uses the Step 16-frozen inline representation: identical PNG bytes and SHA-256,
+serialized as a Base64-encoded PNG data URL in the Python wrappers and as Drupal AI `ImageFile`
+over the same bytes. The semantic facts remain identical regardless of wrapper syntax.
 
 ## 4. Structured output
 
@@ -142,8 +143,8 @@ Complete this table before comparative runs. `none` is a valid entry only after 
 
 | Framework | File or code path | Wrapper/API difference | Semantic effect | Approved by | Date |
 |---|---|---|---|---|---|
-| Drupal AI | pending implementation | pending | must be none | pending | pending |
-| LangChain / LangGraph | pending implementation | pending | must be none | pending | pending |
-| CrewAI | pending implementation | pending | must be none | pending | pending |
+| Drupal AI | `drupal/scripts/phase0-step16.php` | `ImageFile`, `setChatStructuredJsonSchema`, `setChatTools` | none; wrapper-only | Step 16 audit | 2026-08-04 |
+| LangChain / LangGraph | `langchain/preflight/step16_capability.py` | Base64 `image_url`, `with_structured_output`, `bind_tools` | none; wrapper-only | Step 16 audit | 2026-08-04 |
+| CrewAI | `crewai/preflight/step16_capability.py` | Base64 `image_url`, `LLM` response format, `LLM.call(tools=...)` | none; wrapper-only | Step 16 audit | 2026-08-04 |
 
 Any material semantic effect requires an ADR and may invalidate prior comparison evidence.

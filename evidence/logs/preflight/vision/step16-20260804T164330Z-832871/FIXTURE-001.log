@@ -1,0 +1,32 @@
+{
+    "helper_version": "1.0.2",
+    "test_id": "FIXTURE-001",
+    "status": "pass",
+    "fixture": {
+        "sequence": 1,
+        "node_id": 1,
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "field_name": "field_image",
+        "delta": 0,
+        "file_id": 1,
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "existing_alt": "",
+        "article_title": "Phase 0 01 — Emergency Preparedness Checklist",
+        "article_body_plain": "This is fictional demonstration content for the Drupal GovCon 2026 agentic-harness lab. It contains no real agency, program, resident, client, or operational data. This article explains how residents can assemble supplies, identify evacuation routes, and prepare household contact plans. Its generated illustration uses a solid navy background, a large visible Article 1 identifier, a short topic label, and a primary or supporting-image label. The page and image are intentionally simple so context assembly, target provenance, validation, review, and recovery can be compared reproducibly across frameworks.",
+        "filename": "phase0-article-01-image-1.png",
+        "mime_type": "image/png",
+        "width": 1200,
+        "height": 675,
+        "image_byte_length": 4490,
+        "image_sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+        "context_sha256": "6bf065ec2c990a0cf18253e98a76ace152c9863b19385f02a3f9c461bfabd077",
+        "source_sha256": "a15b28b80cbf2f778bdb99c709ae365033d6c3a8e3061d65f7901b256c2b5a13",
+        "suggestion_count": 0,
+        "synthetic_fixture": true,
+        "runtime_image_relative": "fixture.png",
+        "runtime_fixture_relative": "fixture.json"
+    },
+    "image_representation_candidate": "base64_data_url",
+    "base64_retained": false
+}

@@ -1,0 +1,24 @@
+{
+    "helper_version": "1.0.2",
+    "test_id": "INSPECT-DR-001",
+    "status": "pass",
+    "provider_class": "Drupal\\ai\\Plugin\\ProviderProxy",
+    "chat_input_class": "Drupal\\ai\\OperationType\\Chat\\ChatInput",
+    "chat_message_class": "Drupal\\ai\\OperationType\\Chat\\ChatMessage",
+    "image_file_class": "Drupal\\ai\\OperationType\\GenericType\\ImageFile",
+    "supports_structured_schema_method": true,
+    "supports_tool_input_method": true,
+    "tool_probe_plugin_id": "ai_agent:html_to_markdown",
+    "tool_probe_normalized": {
+        "class": "Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsFunctionInput",
+        "getName": "ai_agent_html_to_markdown"
+    },
+    "enabled_modules": [
+        "ai",
+        "ai_agents",
+        "ai_provider_openai",
+        "key",
+        "jsonapi",
+        "basic_auth"
+    ]
+}

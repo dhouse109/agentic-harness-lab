@@ -1,0 +1,19 @@
+{
+  "base64_retained": false,
+  "context_sha256": "6bf065ec2c990a0cf18253e98a76ace152c9863b19385f02a3f9c461bfabd077",
+  "framework": "langchain",
+  "image_byte_length": 4490,
+  "image_detail": "auto",
+  "image_representation": "base64_data_url",
+  "image_sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+  "model_id": "gpt-4.1-mini-2025-04-14",
+  "output": {
+    "context_alignment": "The image aligns well with the page context by visually representing the article identifier and topic label for the emergency preparedness checklist in a simple, clear design.",
+    "image_purpose": "To visually identify the article as Phase 0, Article 1, supporting the emergency preparedness checklist content.",
+    "proposed_alt_text": "A large white number 1 composed of smaller squares on a solid navy background with labels indicating Phase 0, Emergency Preparedness, and Slot 1."
+  },
+  "status": "pass",
+  "structured_output_mechanism": "ChatOpenAI.with_structured_output(method=json_schema, strict=true)",
+  "temperature": 0.0,
+  "test_id": "VISION-LG-001"
+}

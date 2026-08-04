@@ -1,0 +1,26 @@
+{
+  "framework": "drupal_ai",
+  "helper_version": "1.0.2",
+  "model_id": "gpt-4.1-mini-2025-04-14",
+  "normalized_text_characters": 0,
+  "status": "pass",
+  "temperature": 0,
+  "test_id": "TOOL-DR-001",
+  "tool_call_detected": true,
+  "tool_expected_operation": "Convert deterministic synthetic HTML to Markdown; plugin execution is not performed by this capability check.",
+  "tool_mechanism": "ChatInput::setChatTools(ToolsInput) with Drupal FunctionCall plugin",
+  "tool_payload_present": true,
+  "tool_plugin_id": "ai_agent:html_to_markdown",
+  "tool_summary": [
+    {
+      "class": "Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsFunctionOutput",
+      "getArguments": [
+        {
+          "class": "Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsPropertyResult",
+          "getName": "content"
+        }
+      ],
+      "getName": "ai_agent_html_to_markdown"
+    }
+  ]
+}

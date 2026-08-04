@@ -1,0 +1,113 @@
+{
+  "claims": {
+    "does_not_prove": [
+      "alt-text quality",
+      "framework superiority",
+      "production readiness",
+      "Step 17 target discovery"
+    ],
+    "proves": [
+      "candidate model received the same synthetic image bytes and page context through all three pinned pathways",
+      "all three pathways produced schema-valid structured output",
+      "all three pathways exposed a harmless tool-call pathway",
+      "the Drupal source Article and suggestion count were unchanged"
+    ]
+  },
+  "control_error": null,
+  "controls": {
+    "context_sha256": "6bf065ec2c990a0cf18253e98a76ace152c9863b19385f02a3f9c461bfabd077",
+    "image_detail": "auto or provider default equivalent",
+    "image_representation": "inline PNG bytes; Python wrappers use Base64 data URL and Drupal AI uses ImageFile over the identical bytes",
+    "image_sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+    "mechanisms": {
+      "TOOL-CR-001": {
+        "tool_mechanism": "CrewAI LLM.call(tools=..., available_functions=...)"
+      },
+      "TOOL-DR-001": {
+        "tool_mechanism": "ChatInput::setChatTools(ToolsInput) with Drupal FunctionCall plugin"
+      },
+      "TOOL-LG-001": {
+        "tool_mechanism": "ChatOpenAI.bind_tools(strict=true, forced tool choice)"
+      },
+      "VISION-CR-001": {
+        "image_representation": "base64_data_url",
+        "structured_output_mechanism": "CrewAI LLM(response_format=Pydantic model)"
+      },
+      "VISION-DR-001": {
+        "image_representation": "ImageFile(binary PNG) normalized by Drupal AI/OpenAI provider to provider-native image input",
+        "structured_output_mechanism": "ChatInput::setChatStructuredJsonSchema(strict=true)"
+      },
+      "VISION-LG-001": {
+        "image_representation": "base64_data_url",
+        "structured_output_mechanism": "ChatOpenAI.with_structured_output(method=json_schema, strict=true)"
+      }
+    },
+    "model_id": "gpt-4.1-mini-2025-04-14"
+  },
+  "failed": 0,
+  "finished_at_utc": "2026-08-04T16:45:08Z",
+  "missing_tests": [],
+  "mode": "direct",
+  "passed": 9,
+  "run_id": "step16-20260804T164330Z-832871",
+  "started_at_utc": "2026-08-04T16:43:30Z",
+  "status": "pass",
+  "tests": [
+    {
+      "evidence": "INSPECT-DR-001.json",
+      "exit_code": 0,
+      "status": "pass",
+      "test_id": "INSPECT-DR-001"
+    },
+    {
+      "evidence": "FIXTURE-001.json",
+      "exit_code": 0,
+      "status": "pass",
+      "test_id": "FIXTURE-001"
+    },
+    {
+      "evidence": "VISION-DR-001.json",
+      "exit_code": 0,
+      "status": "pass",
+      "test_id": "VISION-DR-001"
+    },
+    {
+      "evidence": "TOOL-DR-001.json",
+      "exit_code": 0,
+      "status": "pass",
+      "test_id": "TOOL-DR-001"
+    },
+    {
+      "evidence": "VISION-LG-001.json",
+      "exit_code": 0,
+      "status": "pass",
+      "test_id": "VISION-LG-001"
+    },
+    {
+      "evidence": "TOOL-LG-001.json",
+      "exit_code": 0,
+      "status": "pass",
+      "test_id": "TOOL-LG-001"
+    },
+    {
+      "evidence": "VISION-CR-001.json",
+      "exit_code": 0,
+      "status": "pass",
+      "test_id": "VISION-CR-001"
+    },
+    {
+      "evidence": "TOOL-CR-001.json",
+      "exit_code": 0,
+      "status": "pass",
+      "test_id": "TOOL-CR-001"
+    },
+    {
+      "evidence": "MUTATION-001.json",
+      "exit_code": 0,
+      "status": "pass",
+      "test_id": "MUTATION-001"
+    }
+  ],
+  "total": 9,
+  "unexpected_tests": []
+}

@@ -1,8 +1,8 @@
 # Experiment Specification
 
-**Contract status:** frozen — version 1.0  
-**Model status:** candidate — pending Step 16 vision and tool-path preflight  
-**Allowed deferred model fields:** exact model ID, confirmed structured-output mechanism, confirmed tool-calling mechanism, and image-input representation
+**Contract status:** frozen — version 1.1  
+**Model status:** frozen for experiment after Step 16  
+**Step 16 decision:** direct image-plus-page-context capability passed; evidence `evidence/logs/preflight/vision/step16-20260804T164330Z-832871`
 
 Do not implement framework-owned agent orchestration until this contract passes the Step 14 audit
 and is frozen. After freeze, material changes require an ADR.
@@ -127,12 +127,12 @@ remain framework-owned behavior.
 | Setting | Frozen or deferred value |
 |---|---|
 | Provider | OpenAI |
-| Exact model ID | `PENDING_STEP_16` — select only after image-plus-page-context preflight |
-| Temperature | `0.0` candidate; Step 16 must confirm support and identical use in all three paths |
-| Structured-output mechanism | `PENDING_STEP_16` — prefer native strict JSON Schema support; document any deterministic fallback |
-| Tool-calling mechanism | `PENDING_STEP_16` — record the exact provider/framework binding used by each path |
-| Image-input representation | `PENDING_STEP_16` — one representation must be selected and reused in all three paths |
-| Model status | candidate — pending Step 16 vision and tool-path preflight |
+| Exact model ID | `gpt-4.1-mini-2025-04-14` — frozen snapshot |
+| Temperature | `0.0` — frozen |
+| Structured-output mechanism | Drupal `ChatInput::setChatStructuredJsonSchema(strict=true)`; LangChain `ChatOpenAI.with_structured_output(method=json_schema, strict=true)`; CrewAI `LLM` response-format pathway recorded in Step 16 evidence |
+| Tool-calling mechanism | Drupal `ChatInput::setChatTools(ToolsInput)`; LangChain `ChatOpenAI.bind_tools(strict=true)`; CrewAI `LLM.call(tools=...)` — harmless calculator probe in every path |
+| Image-input representation | Inline identical PNG bytes (same SHA-256): Base64 data URL with `detail=auto` in Python wrappers; Drupal AI `ImageFile` over the same bytes, normalized by the OpenAI provider |
+| Model status | frozen for experiment; Step 16 direct capability pass at `evidence/logs/preflight/vision/step16-20260804T164330Z-832871` |
 
 ### Model-freeze protocol
 
@@ -144,6 +144,13 @@ context and return schema-conforming output through every required provider path
 - update this table through that ADR
 - use the identical model and generation settings in every comparison run
 - do not switch models between framework runs
+
+### Step 16 freeze result
+
+The direct capability spike passed through the pinned Drupal AI, LangChain, and CrewAI pathways using
+one model snapshot, temperature `0.0`, the same synthetic PNG bytes, and the same page-context hash.
+The full Base64 value and all credentials remained runtime-only. See `evidence/logs/preflight/vision/step16-20260804T164330Z-832871` and
+`docs/decisions/ADR-0002-freeze-model-after-vision-preflight.md`.
 
 A model-selection change after Step 16 is a material experiment change.
 

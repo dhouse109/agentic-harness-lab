@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "vision-spike-output.schema.json",
+  "title": "Phase 0 Step 16 vision capability output",
+  "description": "Small structured result used only to verify image-plus-page-context capability.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "image_purpose",
+    "proposed_alt_text",
+    "context_alignment"
+  ],
+  "properties": {
+    "image_purpose": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "proposed_alt_text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250
+    },
+    "context_alignment": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    }
+  }
+}
