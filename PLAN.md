@@ -1,11 +1,20 @@
 # Implementation Plan
 
-## Governing milestone
+## Current status
+
+> Phase 0 is complete. Gate 0.5 is complete and certified. Gate 1 is next.
+
+See `docs/CURRENT-STATUS.md` for the authoritative fresh-session status snapshot and reading order.
+
+## Governing program milestone
 
 > One image, one recommendation, one human decision, three implementations.
 
-Phase 0 exits into Gate 0.5. It does not yet prove complete framework-specific recovery or
-production readiness.
+This remains the comparative program objective. Under the current execution plan, Gate 0.5 exits
+when the framework-neutral shared substrate is certified and frozen. Framework-specific execution
+begins after that handoff, starting with Drupal AI in Gate 1.
+
+The completed substrate does not prove framework-specific recovery or production readiness.
 
 ## Phase 0 status
 
@@ -21,19 +30,12 @@ production readiness.
 - [x] Step 16 image-plus-page-context capability passes or a fallback is recorded.
 - [x] Step 17 non-AI `find_images_needing_review()` returns exactly 12 targets.
 
-## Gate 0.5
+**Phase 0 status:** complete.
 
-Each implementation must independently:
+## Gate 0.5 — shared substrate certification
 
-1. Retrieve one exact image-field usage.
-2. Obtain permitted image and page context.
-3. Invoke the frozen model.
-4. Produce a schema-valid recommendation.
-5. Write the recommendation to the shared Drupal review queue.
-6. Preserve implementation origin and run ID.
-7. Allow `editor_dana` to record a decision.
-
-### Shared substrate certification
+Gate 0.5 established the deterministic, permission-aware Drupal boundary that every framework
+implementation must use. It certified:
 
 - [x] Canonical target 1 frozen and independently auditable.
 - [x] Permission-scoped image context operation certified.
@@ -44,27 +46,46 @@ Each implementation must independently:
 - [x] Source Article non-mutation and final zero-suggestion reset certified.
 - [x] Frozen substrate manifest and framework handoff generated.
 
-### Framework vertical slices
+**Gate 0.5 status:** complete and certified.
 
-- [ ] Drupal AI: real framework model call and one reviewed recommendation.
-- [ ] LangGraph: real framework model call and one reviewed recommendation.
-- [ ] CrewAI: real framework model call and one reviewed recommendation.
+Certification baseline:
 
-**Gate 0.5 status:** in progress. The common substrate is ready; no framework slice is certified by
-the substrate preflight.
+```text
+fb23e41f6fc8f8e070babbf9a0f593edb94f8c5c
+Certify Gate 0.5 shared substrate
+```
 
-**Next action:** implement the Drupal AI one-image vertical slice against the frozen handoff.
+The frozen manifest records the framework implementations as not certified by the substrate
+preflight. That is an intentional proof boundary, not an unfinished Gate 0.5 checklist.
 
-## Full implementation milestones
+## Gate 1 — Drupal AI full implementation
 
-1. Foundation and frozen experiment contract.
-2. Shared Drupal substrate and deterministic tools.
-3. One-image vertical slices in all three implementations.
-4. Batch processing and framework-owned state.
-5. Human-review continuation behavior.
-6. Shared failure injection and recovery evidence.
-7. Comparison matrix, clips, screenshots, and claim review.
-8. Deck, notes, rehearsal, and fallback package.
+Gate 1 is the next active phase. Drupal AI must use the frozen shared operations and constants while
+owning its model invocation, prompt orchestration, state, sequencing, evidence, and lifecycle
+behavior.
+
+The implementation progresses from one canonical target to the deterministic 12-target batch. Gate
+1 must prove a real Drupal AI model call, schema-valid output, shared-validator acceptance,
+recommendation submission and review routing, repeatable evidence, and batch execution without
+manual per-target steps.
+
+**First package:**
+
+```text
+gate-1-step01-drupal-ai-batch-contract-v1.0.0
+```
+
+This first package freezes the Gate 1 batch contract and evidence requirements. It does not repeat
+or recertify Gate 0.5.
+
+## Subsequent implementation milestones
+
+1. Gate 1 — Drupal AI full implementation and batch evidence.
+2. LangGraph full implementation with framework-owned checkpointing and continuation evidence.
+3. CrewAI full implementation with framework-owned persistence and continuation evidence.
+4. Shared failure injection and recovery comparison.
+5. Comparison matrix, clips, screenshots, and claim review.
+6. Deck, notes, rehearsal, and fallback package.
 
 ## Explicit conference-scope exclusions
 
