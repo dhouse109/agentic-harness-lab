@@ -1,0 +1,1 @@
+{"schema_version":1,"tool_name":"submit_recommendation","ok":false,"timestamp":"2026-08-04T20:49:25Z","correlation_id":"gate05-step03-20260804T204600Z-969127-stale-file","data":null,"error":{"code":"TARGET_STALE","message":"The target no longer matches the current authorized field usage.","retryable":false}}

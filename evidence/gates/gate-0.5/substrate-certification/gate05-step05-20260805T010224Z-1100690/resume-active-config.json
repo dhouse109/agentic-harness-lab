@@ -1,0 +1,185 @@
+{
+    "content_type": {
+        "bundle": "alt_text_suggestion",
+        "new_revision": true
+    },
+    "fields": {
+        "field_evidence_hash": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": false,
+            "storage_settings": {
+                "case_sensitive": true,
+                "is_ascii": true,
+                "max_length": 128
+            },
+            "type": "string"
+        },
+        "field_proposed_alt": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": true,
+            "storage_settings": {
+                "case_sensitive": false
+            },
+            "type": "string_long"
+        },
+        "field_review_status": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": true,
+            "storage_settings": {
+                "allowed_values": {
+                    "approved": "Approved",
+                    "pending": "Pending",
+                    "rejected": "Rejected"
+                }
+            },
+            "type": "list_string"
+        },
+        "field_run_id": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": true,
+            "storage_settings": {
+                "case_sensitive": true,
+                "is_ascii": true,
+                "max_length": 128
+            },
+            "type": "string"
+        },
+        "field_source_framework": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": true,
+            "storage_settings": {
+                "allowed_values": {
+                    "crewai": "CrewAI",
+                    "drupal_ai": "Drupal AI",
+                    "langgraph": "LangGraph",
+                    "phase0_fixture": "Phase 0 test fixture"
+                }
+            },
+            "type": "list_string"
+        },
+        "field_target_delta": {
+            "cardinality": 1,
+            "field_settings": {
+                "max": null,
+                "min": 0
+            },
+            "required": true,
+            "storage_settings": {
+                "size": "normal",
+                "unsigned": true
+            },
+            "type": "integer"
+        },
+        "field_target_field": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": true,
+            "storage_settings": {
+                "case_sensitive": false,
+                "is_ascii": true,
+                "max_length": 64
+            },
+            "type": "string"
+        },
+        "field_target_file": {
+            "cardinality": 1,
+            "field_settings": {
+                "handler": "default:file",
+                "handler_settings": []
+            },
+            "required": true,
+            "storage_settings": {
+                "target_type": "file"
+            },
+            "type": "entity_reference"
+        },
+        "field_target_node": {
+            "cardinality": 1,
+            "field_settings": {
+                "handler": "default:node",
+                "handler_settings": {
+                    "auto_create": false,
+                    "auto_create_bundle": "",
+                    "sort": {
+                        "direction": "ASC",
+                        "field": "_none"
+                    },
+                    "target_bundles": {
+                        "article": "article"
+                    }
+                }
+            },
+            "required": true,
+            "storage_settings": {
+                "target_type": "node"
+            },
+            "type": "entity_reference"
+        },
+        "field_target_revision": {
+            "cardinality": 1,
+            "field_settings": {
+                "max": null,
+                "min": 1
+            },
+            "required": true,
+            "storage_settings": {
+                "size": "normal",
+                "unsigned": true
+            },
+            "type": "integer"
+        }
+    },
+    "form_widgets": {
+        "field_evidence_hash": "string_textfield",
+        "field_proposed_alt": "string_textarea",
+        "field_review_status": "options_select",
+        "field_run_id": "string_textfield",
+        "field_source_framework": "options_select",
+        "field_target_delta": "number",
+        "field_target_field": "string_textfield",
+        "field_target_file": "entity_reference_autocomplete",
+        "field_target_node": "entity_reference_autocomplete",
+        "field_target_revision": "number"
+    },
+    "review_queue": {
+        "path": "admin/review-queue",
+        "view_id": "alt_text_review_queue"
+    },
+    "roles": {
+        "agent_service": [
+            "access content",
+            "create alt_text_suggestion content",
+            "use agentic harness discovery tools",
+            "view own unpublished content"
+        ],
+        "content_editor": [
+            "access administration pages",
+            "access content",
+            "access content overview",
+            "access contextual links",
+            "access navigation",
+            "edit any alt_text_suggestion content",
+            "view alt_text_suggestion revisions",
+            "view the administration theme"
+        ]
+    },
+    "schema_version": 1,
+    "status": "pass",
+    "view_formatters": {
+        "field_evidence_hash": "string",
+        "field_proposed_alt": "basic_string",
+        "field_review_status": "list_default",
+        "field_run_id": "string",
+        "field_source_framework": "list_default",
+        "field_target_delta": "number_integer",
+        "field_target_field": "string",
+        "field_target_file": "entity_reference_label",
+        "field_target_node": "entity_reference_label",
+        "field_target_revision": "number_integer"
+    }
+}

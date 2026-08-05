@@ -1,0 +1,1 @@
+{"schema_version":1,"tool_name":"submit_recommendation","ok":false,"timestamp":"2026-08-04T20:49:28Z","correlation_id":"gate05-step03-20260804T204600Z-969127-conflict","data":null,"error":{"code":"IDEMPOTENCY_CONFLICT","message":"The same run and target identity already exists with different submission data.","retryable":false}}

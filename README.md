@@ -29,6 +29,30 @@ See `CLAIMS_REGISTER.md`, `SOURCES.md`, and `evidence/README.md`.
 model calls, orchestration, persistence, interruption, recovery, and sequencing remain inside the
 three implementation directories. See `shared/README.md`.
 
+## Certified shared tool surface
+
+The Gate 0.5 shared substrate now exposes four deterministic operations:
+
+```text
+find_images_needing_review()
+get_image_context(target)
+submit_recommendation(recommendation)
+get_recommendation_status(recommendation_id)
+```
+
+The substrate has proven exact target identity, permission-scoped context retrieval, deterministic
+validation, recommendation-only mutation, idempotent submission, a real revisioned human decision,
+read-only status observation, and seeded-clean restoration.
+
+The hash-addressed handoff is stored at:
+
+```text
+shared/contracts/GATE05-SUBSTRATE-FREEZE.json
+shared/contracts/GATE05-SUBSTRATE-FREEZE.sha256
+```
+
+Material changes to the frozen substrate require an ADR and a new Step 05 certification run.
+
 ## Private and public reproduction paths
 
 Private local material includes database exports, DDEV snapshots, credentials, and raw recordings.
@@ -37,18 +61,18 @@ export, schemas, fixtures, seed/reset scripts, test scripts, and sanitized evide
 
 ## Current phase
 
-Phase 0 is complete. The frozen model and image representation passed Step 16, and the model-free,
-permission-scoped Drupal `find_images_needing_review()` route returned the same 12 exact image-field
-usages as the Step 9 manifest without changing Article state or creating suggestions.
+Phase 0 is complete and the Gate 0.5 **shared substrate** is certified. Overall Gate 0.5 remains in
+progress: Drupal AI, LangGraph, and CrewAI must still complete their own model-backed one-image
+vertical slices using the frozen shared boundary.
 
-Gate 0.5 is next:
+Next implementation:
 
-> One image, one recommendation, one human decision, three implementations.
-
-Verify Step 17 with:
-
-```bash
-bash scripts/run-phase0-step17.sh audit
+```text
+Drupal AI vertical slice
 ```
 
-Passing evidence: `evidence/logs/tools/find-images/step17-20260804T173030Z-851608`
+Audit the shared substrate with:
+
+```bash
+bash scripts/run-gate05-step05.sh audit
+```

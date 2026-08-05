@@ -1,0 +1,27 @@
+{
+  "correlation_id": "gate05-step05-20260805T010224Z-1100690-submit",
+  "data": {
+    "node_id": 21,
+    "revision_id": 21,
+    "run_id": "drupal_ai-20260805T010426Z-173cd5",
+    "source_framework": "drupal_ai",
+    "status": "pending",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    "uuid": "681f826a-471b-4164-b0df-4f2ebe87cf4e"
+  },
+  "error": null,
+  "ok": true,
+  "schema_version": 1,
+  "timestamp": "2026-08-05T01:04:26Z",
+  "tool_name": "submit_recommendation"
+}

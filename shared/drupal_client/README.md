@@ -17,6 +17,16 @@ It must not own:
 - Drupal AI agent orchestration
 - framework retry, recovery, sequencing, or persistence behavior
 
-Step 17 adds `find_images_needing_review()`, a deterministic read-only operation. The three later
-implementations may call this client, but each framework must still own its context assembly, model
-invocation, state, verification, human-continuation, and recovery behavior.
+Implemented deterministic operations:
+
+- `find_images_needing_review()` — returns the frozen ordered 12-target sequence
+- `get_image_context(target)` — verifies one exact field usage and returns only permitted Article
+  and image facts, including the runtime-only Step 16-approved image representation
+- `submit_recommendation(recommendation)` — validates provenance, target freshness, alt-text rules,
+  and idempotency before creating one unpublished recommendation in `pending` review state
+- `get_recommendation_status(recommendation_id)` — returns only the current recommendation
+  revision, review status, and permitted reviewer metadata; it never performs a review action
+
+The three framework implementations may use this client for transport. Each framework still owns
+its context assembly for the model, model invocation, orchestration, state, verification,
+human-continuation behavior, and recovery.

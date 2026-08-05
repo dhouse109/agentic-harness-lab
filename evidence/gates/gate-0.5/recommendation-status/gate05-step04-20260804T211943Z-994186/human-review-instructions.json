@@ -1,0 +1,13 @@
+{
+  "credential_file": "drupal/.secrets/phase0-step7-accounts.txt",
+  "credentials_retained_in_evidence": false,
+  "pending_revision_id": 21,
+  "proposed_alt_text_must_remain_unchanged": true,
+  "recommendation_node_id": 21,
+  "recommendation_uuid": "253392b9-d202-48ee-9709-949c0fb57d62",
+  "required_action": "approved",
+  "review_url": "https://harness.ddev.site/node/21/edit",
+  "reviewer_username": "editor_dana",
+  "save_count_required": 1,
+  "status": "human_action_required"
+}

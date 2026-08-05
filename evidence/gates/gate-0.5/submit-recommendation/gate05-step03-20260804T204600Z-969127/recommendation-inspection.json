@@ -1,0 +1,23 @@
+{
+    "node_id": 21,
+    "uuid": "44f34994-9553-4128-9e3c-b68dcaeb2414",
+    "revision_id": 21,
+    "published": false,
+    "owner_username": "agent_bot",
+    "title": "Alt text recommendation: drupal_ai target 1 (drupal_ai-20260804T204710Z-047c42)",
+    "review_status": "pending",
+    "source_framework": "drupal_ai",
+    "run_id": "drupal_ai-20260804T204710Z-047c42",
+    "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+    "proposed_alt_text": "A blue geometric illustration accompanying the seeded Article 01 content.",
+    "revision_log": "submit_recommendation validator=gate05-validator-1.0.0 evidence=sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+    "target": {
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "field_name": "field_image",
+        "delta": 0,
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25"
+    },
+    "identity_count": 1,
+    "total_suggestion_count": 1
+}

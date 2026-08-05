@@ -1,0 +1,1 @@
+{"schema_version":1,"tool_name":"get_image_context","ok":false,"timestamp":"2026-08-04T19:17:58Z","correlation_id":"gate05-step02-20260804T191625Z-920936-stale-file","data":null,"error":{"code":"TARGET_STALE","message":"The target no longer matches the current authorized field usage.","retryable":false}}

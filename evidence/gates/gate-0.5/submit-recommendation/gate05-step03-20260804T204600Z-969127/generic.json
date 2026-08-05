@@ -1,0 +1,1 @@
+{"schema_version":1,"tool_name":"submit_recommendation","ok":false,"timestamp":"2026-08-04T20:49:26Z","correlation_id":"gate05-step03-20260804T204600Z-969127-generic","data":null,"error":{"code":"ALT_TEXT_GENERIC","message":"proposed_alt_text is a generic placeholder.","retryable":false}}

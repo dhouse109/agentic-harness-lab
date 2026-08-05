@@ -1,0 +1,12 @@
+{
+  "captured_at_utc": "2026-08-04T20:47:11Z",
+  "controlled_preflight": true,
+  "crewai_candidate_model_present": false,
+  "framework_execution_claimed": false,
+  "model_call_performed": false,
+  "openai_api_key_present": false,
+  "openai_candidate_model_present": false,
+  "operation": "submit_recommendation",
+  "python": "3.12.3",
+  "run_id": "gate05-step03-20260804T204600Z-969127"
+}

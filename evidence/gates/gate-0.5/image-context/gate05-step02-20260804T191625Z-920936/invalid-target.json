@@ -1,0 +1,1 @@
+{"schema_version":1,"tool_name":"get_image_context","ok":false,"timestamp":"2026-08-04T19:17:57Z","correlation_id":"gate05-step02-20260804T191625Z-920936-invalid","data":null,"error":{"code":"INVALID_TARGET","message":"Target keys do not match target.schema.json.","retryable":false}}

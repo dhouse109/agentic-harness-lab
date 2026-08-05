@@ -4,3 +4,33 @@ services:
     arguments:
       - '@entity_type.manager'
       - '@current_user'
+
+  agentic_harness_tools.image_context_provider:
+    class: Drupal\agentic_harness_tools\Service\ImageContextProvider
+    arguments:
+      - '@entity_type.manager'
+      - '@current_user'
+      - '@file_system'
+      - '@image.factory'
+      - '@agentic_harness_tools.image_review_finder'
+
+  agentic_harness_tools.recommendation_validator:
+    class: Drupal\agentic_harness_tools\Service\RecommendationValidator
+    arguments:
+      - '@entity_type.manager'
+      - '@current_user'
+      - '@agentic_harness_tools.image_review_finder'
+
+  agentic_harness_tools.recommendation_submitter:
+    class: Drupal\agentic_harness_tools\Service\RecommendationSubmitter
+    arguments:
+      - '@entity_type.manager'
+      - '@current_user'
+      - '@agentic_harness_tools.recommendation_validator'
+      - '@lock'
+
+  agentic_harness_tools.recommendation_status_provider:
+    class: Drupal\agentic_harness_tools\Service\RecommendationStatusProvider
+    arguments:
+      - '@entity_type.manager'
+      - '@current_user'

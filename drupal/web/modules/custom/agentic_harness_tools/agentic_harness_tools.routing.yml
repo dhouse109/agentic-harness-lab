@@ -8,3 +8,36 @@ agentic_harness_tools.find_images_needing_review:
     _auth: ['basic_auth']
     no_cache: true
   methods: [GET]
+
+agentic_harness_tools.get_image_context:
+  path: '/api/agentic-harness/v1/image-context'
+  defaults:
+    _controller: '\Drupal\agentic_harness_tools\Controller\ToolController::getImageContext'
+  requirements:
+    _permission: 'use agentic harness discovery tools'
+  options:
+    _auth: ['basic_auth']
+    no_cache: true
+  methods: [POST]
+
+agentic_harness_tools.submit_recommendation:
+  path: '/api/agentic-harness/v1/recommendations'
+  defaults:
+    _controller: '\Drupal\agentic_harness_tools\Controller\ToolController::submitRecommendation'
+  requirements:
+    _permission: 'create alt_text_suggestion content'
+  options:
+    _auth: ['basic_auth']
+    no_cache: true
+  methods: [POST]
+
+agentic_harness_tools.get_recommendation_status:
+  path: '/api/agentic-harness/v1/recommendations/{recommendation_id}/status'
+  defaults:
+    _controller: '\Drupal\agentic_harness_tools\Controller\ToolController::getRecommendationStatus'
+  requirements:
+    _permission: 'use agentic harness discovery tools'
+  options:
+    _auth: ['basic_auth']
+    no_cache: true
+  methods: [GET]

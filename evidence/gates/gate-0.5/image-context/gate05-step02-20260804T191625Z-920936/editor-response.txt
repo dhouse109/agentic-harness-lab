@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="--color--primary-hue:202;--color--primary-saturation:79%;--color--primary-lightness:50">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/core/themes/olivero/favicon.ico" type="image/vnd.microsoft.icon" />
+<link href="/core/modules/navigation/assets/fonts/inter-var.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous" />
+<link href="/core/themes/olivero/fonts/metropolis/Metropolis-Regular.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous" />
+<link href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous" />
+<link href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous" />
+<link href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" rel="preload" as="font" type="font/woff2" crossorigin="anonymous" />
+
+    <title>Access denied | Agentic Harness Lab</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EJ5ggZMRoAqT_H4lYXUtaBYsm1zKPX1Zp-hUgxMoE28.css?delta=0&amp;language=en&amp;theme=olivero&amp;include=eJxtjlEOhDAIBS_U2iNtqBJDRGgA3e3tt8kmqx_-zpB5ABWg18pagdOsEviJA7gsdjTg6SKZSTYfJ4Zl1r2poIRPAietEKSSc6hyBcv1iFBJlyo0Kiajd7GkTCealt929uhjYf3jW7gZ7WD9STmOD5e7bPpGwyXXnivrvCXvHriXCo5fMnlc8A" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_oB7hzsxuhKJCylYt4tIPbael_Qdjze1mM6kY8_sTBKI.css?delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxtjlEOhDAIBS_U2iNtqBJDRGgA3e3tt8kmqx_-zpB5ABWg18pagdOsEviJA7gsdjTg6SKZSTYfJ4Zl1r2poIRPAietEKSSc6hyBcv1iFBJlyo0Kiajd7GkTCealt929uhjYf3jW7gZ7WD9STmOD5e7bPpGwyXXnivrvCXvHriXCo5fMnlc8A" />
+
+    <script src="/sites/default/files/js/js_fULy3yP_k9v44ZPqxZZmAJnvcZlwCzt4xXrYeZqF1oo.js?scope=header&amp;delta=0&amp;language=en&amp;theme=olivero&amp;include=eJxFjVEKhDAMBS_U2iPJU0sJGxOJUdbbb1jR_s7M44EKaGysEzjNKl6_foDLYscGHjrJTPLZI7H6SMxOZ_2LJDipwUmlUExMwneWlKM0LfdR3v2KVXtxL_NmtMKuH7BlO5c"></script>
+
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tj9exn" />
+</noscript>
+  </head>
+  <body class="user-logged-in path-api">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+<div class="admin-toolbar-control-bar" data-drupal-admin-styles="">
+  <div class="admin-toolbar-control-bar__content">
+    
+  
+  
+      
+<button  data-drupal-selector="admin-toolbar-mobile-trigger" aria-expanded="false" aria-controls="admin-toolbar" type="button" data-component-id="navigation:toolbar-button" data-index-text="e" data-icon-text="Ex" class="toolbar-button toolbar-button--icon--burger toolbar-button--small-offset admin-toolbar-control-bar__burger">
+
+      <svg
+   fill="none" viewBox="0 0 18 14" class="toolbar-button__icon" width="20" height="20" aria-hidden="true"
+>
+  <path stroke="#55565B" stroke-width="2" d="M0 1h18M0 7h18M0 13h18"/>
+</svg>
+
+  
+              <span class="toolbar-button__label" data-toolbar-text>Expand sidebar</span>
+      
+  
+</button>
+  </div>
+</div>
+
+<aside class="admin-toolbar" id="admin-toolbar" data-drupal-admin-styles role="presentation">
+    <div class="admin-toolbar__displace-placeholder"></div>
+
+    <nav class="admin-toolbar__scroll-wrapper" aria-labelledby="admin-toolbar__scroll-wrapper-603229556">
+    <h2 id="admin-toolbar__scroll-wrapper-603229556" class="visually-hidden">Administrative sidebar</h2>
+            <div id="menu-builder" class="admin-toolbar__content">
+            <div class="admin-toolbar__header">
+                  <a class="admin-toolbar__logo" href="/">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" role="presentation" aria-hidden="true" focusable="false">
+  <rect fill="#347efe" width="32" height="32" rx="8"/>
+  <path fill="#fff" d="M19,10.3C17.67,9,16.38,7.68,16,6.23,15.62,7.67,14.33,9,13,10.3c-2,2-4.31,4.31-4.31,7.74a7.32,7.32,0,0,0,14.64,0C23.32,14.61,21,12.32,19,10.3Zm-7.22,9.44c-.45,0-2.11-2.87,1-5.91l2,2.22a.18.18,0,0,1,0,.25h0A19.3,19.3,0,0,0,12,19.6C11.92,19.75,11.83,19.74,11.79,19.74ZM16,23.51A2.52,2.52,0,0,1,13.48,21a2.56,2.56,0,0,1,.63-1.66c.45-.56,1.89-2.12,1.89-2.12s1.41,1.59,1.89,2.11A2.5,2.5,0,0,1,18.52,21,2.52,2.52,0,0,1,16,23.51Zm4.82-4.09c-.06.12-.18.32-.35.33s-.32-.14-.55-.47c-.48-.71-4.67-5.09-5.46-5.94s-.09-1.27.18-1.55L16,10.44a35.72,35.72,0,0,1,4.25,4.8A4.5,4.5,0,0,1,20.82,19.42Z"/>
+</svg>
+                        <span class="visually-hidden">Home page</span>
+          </a>
+                
+
+  
+      
+<button  data-toolbar-back-control tabindex="-1" data-component-id="navigation:toolbar-button" data-index-text="b" data-icon-text="Ba" class="toolbar-button toolbar-button--icon--arrow-left admin-toolbar__back-button">
+
+      <svg
+   viewBox="0 0 16 16" class="toolbar-button__icon" width="20" height="20" aria-hidden="true"
+>
+  <path d="M14.2501 7.99994c0 .19892-.079.38968-.2197.53033-.1406.14066-.3314.21967-.5303.21967H4.3126l3.22 3.21936c.1409.1409.22005.332.22005.5313 0 .1992-.07915.3903-.22005.5312-.14089.1409-.33199.2201-.53125.2201-.19925 0-.39035-.0792-.53125-.2201l-4.5-4.49998c-.06992-.06968-.12539-.15247-.16325-.24364-.03785-.09116-.05734-.1889-.05734-.28761 0-.09871.01949-.19645.05734-.28762.03786-.09116.09333-.17395.16325-.24363l4.5-4.5c.06977-.06977.15259-.12511.24374-.16286.09115-.03776.18885-.05719.28751-.05719.09867 0 .19636.01943.28751.05719.09116.03775.17398.09309.24374.16286.06977.06976.12511.15259.16286.24374.03776.09115.05719.18885.05719.28751s-.01943.19636-.05719.28751c-.03775.09115-.09309.17397-.16286.24374l-3.22 3.21812h9.1875c.1989 0 .3897.07902.5303.21967.1407.14066.2197.33142.2197.53033Z"/>
+</svg>
+
+  
+              <span class="toolbar-button__label" data-toolbar-text>Back</span>
+      
+  
+</button>
+                
+
+  
+
+<button  aria-controls="admin-toolbar" type="button" data-component-id="navigation:toolbar-button" class="toolbar-button toolbar-button--icon--cross admin-toolbar__close-button">
+
+      <svg
+   role="img" fill="none" viewbox="0 0 20 20" viewBox="0 0 24 24" class="toolbar-button__icon" width="20" height="20" aria-hidden="true"
+>
+  <path fill="#55565B" d="M16.2883 14.9617c.1761.1762.275.415.275.6641 0 .2491-.0989.4879-.275.6641-.1761.1761-.415.275-.6641.275-.2491 0-.4879-.0989-.664-.275L10 11.3281l-4.96172 4.9602c-.17612.1761-.41499.2751-.66406.2751-.24908 0-.48795-.099-.66407-.2751-.17612-.1761-.27506-.415-.27506-.6641 0-.249.09894-.4879.27506-.664L8.67187 10 3.71172 5.0383c-.17613-.17612-.27507-.41499-.27507-.66407 0-.24907.09894-.48794.27507-.66406.17612-.17612.41499-.27506.66406-.27506.24907 0 .48794.09894.66406.27506L10 8.67189l4.9617-4.9625c.1761-.17612.415-.27506.6641-.27506.249 0 .4879.09894.664.27506.1762.17612.2751.41499.2751.66406 0 .24907-.0989.48794-.2751.66407L11.3281 10l4.9602 4.9617Z">
+  </path>
+</svg>
+
+  
+      <span data-toolbar-action class="visually-hidden">Collapse sidebar</span>
+          
+  
+</button>
+      </div>
+
+      
+      <div class="toolbar-block">
+  
+      <h3 class="visually-hidden focusable">Content</h3>
+    
+      <ul class="toolbar-block__list">
+    
+    
+              
+              
+                      <li id="navigation-link--navigationcontent-1734183499" class="toolbar-block__list-item">
+          
+  
+
+      
+<a  href="/admin/content" data-drupal-tooltip="Content" data-drupal-tooltip-class="admin-toolbar__tooltip" data-component-id="navigation:toolbar-button" data-index-text="c" data-icon-text="Co" class="toolbar-button toolbar-button--icon--navigation-content toolbar-button--collapsible">
+
+      <svg
+   width="20" height="20" viewBox="0 0 24 24" fill="none" class="toolbar-button__icon" aria-hidden="true"
+>
+  <path d="M20.25 3.75H3.75C3.35218 3.75 2.97064 3.90804 2.68934 4.18934C2.40804 4.47064 2.25 4.85218 2.25 5.25V18.75C2.25 19.1478 2.40804 19.5294 2.68934 19.8107C2.97064 20.092 3.35218 20.25 3.75 20.25H20.25C20.6478 20.25 21.0294 20.092 21.3107 19.8107C21.592 19.5294 21.75 19.1478 21.75 18.75V5.25C21.75 4.85218 21.592 4.47064 21.3107 4.18934C21.0294 3.90804 20.6478 3.75 20.25 3.75ZM20.25 18.75H3.75V5.25H20.25V18.75ZM17.25 9C17.25 9.19891 17.171 9.38968 17.0303 9.53033C16.8897 9.67098 16.6989 9.75 16.5 9.75H7.5C7.30109 9.75 7.11032 9.67098 6.96967 9.53033C6.82902 9.38968 6.75 9.19891 6.75 9C6.75 8.80109 6.82902 8.61032 6.96967 8.46967C7.11032 8.32902 7.30109 8.25 7.5 8.25H16.5C16.6989 8.25 16.8897 8.32902 17.0303 8.46967C17.171 8.61032 17.25 8.80109 17.25 9ZM17.25 12C17.25 12.1989 17.171 12.3897 17.0303 12.5303C16.8897 12.671 16.6989 12.75 16.5 12.75H7.5C7.30109 12.75 7.11032 12.671 6.96967 12.5303C6.82902 12.3897 6.75 12.1989 6.75 12C6.75 11.8011 6.82902 11.6103 6.96967 11.4697C7.11032 11.329 7.30109 11.25 7.5 11.25H16.5C16.6989 11.25 16.8897 11.329 17.0303 11.4697C17.171 11.6103 17.25 11.8011 17.25 12ZM17.25 15C17.25 15.1989 17.171 15.3897 17.0303 15.5303C16.8897 15.671 16.6989 15.75 16.5 15.75H7.5C7.30109 15.75 7.11032 15.671 6.96967 15.5303C6.82902 15.3897 6.75 15.1989 6.75 15C6.75 14.8011 6.82902 14.6103 6.96967 14.4697C7.11032 14.329 7.30109 14.25 7.5 14.25H16.5C16.6989 14.25 16.8897 14.329 17.0303 14.4697C17.171 14.6103 17.25 14.8011 17.25 15Z" fill="currentColor"/>
+</svg>
+
+  
+              <span class="toolbar-button__label" data-toolbar-text>Content</span>
+      
+  
+</a>
+        </li>
+      
+      
+</ul>
+
+
+  </div>
+
+    </div>
+
+        <div id="menu-footer" class="admin-toolbar__footer">
+      <div class="toolbar-block">
+  
+      <h3 class="visually-hidden focusable">User</h3>
+    
+      <ul class="toolbar-block__list">
+    
+    
+              
+              
+                      <li id="navigation-link--navigationuser-linksuserwrapper-1610302915" class="toolbar-block__list-item toolbar-popover" data-toolbar-popover>
+          
+  
+  
+      
+<button  aria-expanded="false" aria-controls="navigation-link--navigationuser-linksuserwrapper-1610302915" data-toolbar-popover-control data-has-safe-triangle data-component-id="navigation:toolbar-button" data-index-text="e" data-icon-text="ed" class="toolbar-button toolbar-button--icon--navigation-user-links-user-wrapper toolbar-button--expand--side toolbar-button--collapsible toolbar-popover__control">
+
+      <svg
+   width="20" height="20" viewBox="0 0 20 20" fill="none" class="toolbar-button__icon" aria-hidden="true"
+>
+  <path d="M10 1.875C8.39303 1.875 6.82214 2.35152 5.486 3.24431C4.14985 4.1371 3.10844 5.40605 2.49348 6.8907C1.87852 8.37535 1.71762 10.009 2.03112 11.5851C2.34463 13.1612 3.11846 14.6089 4.25476 15.7452C5.39106 16.8815 6.8388 17.6554 8.4149 17.9689C9.99099 18.2824 11.6247 18.1215 13.1093 17.5065C14.594 16.8916 15.8629 15.8502 16.7557 14.514C17.6485 13.1779 18.125 11.607 18.125 10C18.1227 7.84581 17.266 5.78051 15.7427 4.25727C14.2195 2.73403 12.1542 1.87727 10 1.875ZM5.7875 15.4297C6.23964 14.7226 6.86251 14.1406 7.59869 13.7375C8.33488 13.3345 9.16069 13.1232 10 13.1232C10.8393 13.1232 11.6651 13.3345 12.4013 13.7375C13.1375 14.1406 13.7604 14.7226 14.2125 15.4297C13.0081 16.3664 11.5258 16.8749 10 16.8749C8.4742 16.8749 6.99193 16.3664 5.7875 15.4297ZM7.5 9.375C7.5 8.88055 7.64663 8.3972 7.92133 7.98607C8.19603 7.57495 8.58648 7.25452 9.04329 7.0653C9.50011 6.87608 10.0028 6.82657 10.4877 6.92304C10.9727 7.0195 11.4181 7.2576 11.7678 7.60723C12.1174 7.95686 12.3555 8.40232 12.452 8.88727C12.5484 9.37223 12.4989 9.87489 12.3097 10.3317C12.1205 10.7885 11.8001 11.179 11.3889 11.4537C10.9778 11.7284 10.4945 11.875 10 11.875C9.33696 11.875 8.70108 11.6116 8.23224 11.1428C7.7634 10.6739 7.5 10.038 7.5 9.375ZM15.1375 14.5633C14.4404 13.5532 13.4603 12.7717 12.3203 12.3172C12.9327 11.8349 13.3795 11.1737 13.5987 10.4257C13.8179 9.67766 13.7985 8.87992 13.5433 8.1434C13.2881 7.40687 12.8097 6.76819 12.1746 6.31616C11.5396 5.86414 10.7795 5.62123 10 5.62123C9.22052 5.62123 8.4604 5.86414 7.82536 6.31616C7.19033 6.76819 6.71193 7.40687 6.45671 8.1434C6.20149 8.87992 6.18212 9.67766 6.40131 10.4257C6.62049 11.1737 7.06734 11.8349 7.67969 12.3172C6.5397 12.7717 5.55956 13.5532 4.8625 14.5633C3.9817 13.5728 3.406 12.3488 3.20473 11.0387C3.00346 9.72856 3.1852 8.3882 3.72806 7.17898C4.27093 5.96977 5.15178 4.94326 6.26454 4.22308C7.3773 3.50289 8.67452 3.11972 10 3.11972C11.3255 3.11972 12.6227 3.50289 13.7355 4.22308C14.8482 4.94326 15.7291 5.96977 16.2719 7.17898C16.8148 8.3882 16.9966 9.72856 16.7953 11.0387C16.594 12.3488 16.0183 13.5728 15.1375 14.5633Z" fill="currentColor"/>
+</svg>
+
+  
+      <span data-toolbar-action class="visually-hidden">Extend</span>
+              <span class="toolbar-button__label" data-toolbar-text>editor_dana</span>
+      
+      <svg
+   viewBox="0 0 256 256" class="toolbar-button__chevron" width="16" height="16" aria-hidden="true"
+>
+  <path d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z"/>
+</svg>
+
+  
+</button>
+          <div class="toolbar-popover__wrapper" data-toolbar-popover-wrapper inert>
+                          
+  
+  
+      
+<a  href="/user" data-component-id="navigation:toolbar-button" data-index-text="e" data-icon-text="ed" class="toolbar-button toolbar-button--large toolbar-button--dark toolbar-popover__header">
+
+  
+              <span class="toolbar-button__label" data-toolbar-text>editor_dana</span>
+      
+  
+</a>
+                        <ul class="toolbar-menu toolbar-popover__menu">
+                
+    
+              
+              
+              <li class="toolbar-menu__item toolbar-menu__item--level-1">
+                  
+
+  
+      
+<a  href="/user" data-component-id="navigation:toolbar-button" data-index-text="v" data-icon-text="Vi" class="toolbar-button">
+
+  
+              <span class="toolbar-button__label" data-toolbar-text>View profile</span>
+      
+  
+</a>
+              </li>
+      
+    
+              
+              
+              <li class="toolbar-menu__item toolbar-menu__item--level-1">
+                  
+
+  
+      
+<a  href="/user/edit" data-component-id="navigation:toolbar-button" data-index-text="e" data-icon-text="Ed" class="toolbar-button">
+
+  
+              <span class="toolbar-button__label" data-toolbar-text>Edit profile</span>
+      
+  
+</a>
+              </li>
+      
+    
+              
+              
+              <li class="toolbar-menu__item toolbar-menu__item--level-1">
+                  
+
+  
+      
+<a  href="/user/logout?token=z3xykYm4_2tgB4o61DTDHPlwQUE3dxyTDjFAtKc8EIg" data-component-id="navigation:toolbar-button" data-index-text="l" data-icon-text="Lo" class="toolbar-button">
+
+  
+              <span class="toolbar-button__label" data-toolbar-text>Log out</span>
+      
+  
+</a>
+              </li>
+      
+            </ul>
+          </div>
+        </li>
+      
+      
+</ul>
+
+
+  </div>
+
+      <button aria-controls="admin-toolbar" class="admin-toolbar__expand-button" type="button">
+        <svg
+   viewBox="0 0 256 256" class="admin-toolbar__expand-button-chevron" width="16" height="16" aria-hidden="true"
+>
+  <path d="M184.49,136.49l-80,80a12,12,0,0,1-17-17L159,128,87.51,56.49a12,12,0,1,1,17-17l80,80A12,12,0,0,1,184.49,136.49Z"/>
+</svg>
+
+        <span class="visually-hidden" data-toolbar-text>Collapse sidebar</span>
+      </button>
+    </div>
+  </nav>
+</aside>
+<div class="admin-toolbar-overlay" admin-toolbar-trigger data-drupal-admin-styles></div>
+<script>
+  if (localStorage.getItem('Drupal.navigation.sidebarExpanded') !== 'false' && (window.matchMedia('(min-width: 1024px)').matches)) {
+    document.documentElement.setAttribute('data-admin-toolbar', 'expanded');
+  }
+</script>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper" class="page-wrapper">
+  <div id="page">
+
+          <header id="header" class="site-header" data-drupal-selector="site-header">
+
+                <div class="site-header__fixable" data-drupal-selector="site-header-fixable">
+          <div class="site-header__initial">
+            <button class="sticky-header-toggle" data-drupal-selector="sticky-header-toggle" role="switch" aria-controls="site-header__inner" aria-label="Sticky header" aria-checked="false">
+              <span class="sticky-header-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
+
+                    <div id="site-header__inner" class="site-header__inner" data-drupal-selector="site-header-inner">
+            <div class="container site-header__inner__container">
+
+              
+
+
+<div id="block-olivero-site-branding" class="contextual-region site-branding block block-system block-system-branding-block">
+  
+    <div data-contextual-id="block:block=olivero_site_branding:langcode=en" data-contextual-token="Eap3zSYzcdDkQMxEyj8uOsNvCOfZ3ux9tc07vyiQXYI" data-drupal-ajax-container=""></div>
+    <div class="site-branding__inner">
+              <div class="site-branding__text">
+                  <div class="site-branding__name">
+            <a href="/" rel="home" title="Home">Agentic Harness Lab</a>
+          </div>
+                      </div>
+      </div>
+</div>
+
+<div class="header-nav-overlay" data-drupal-selector="header-nav-overlay"></div>
+
+
+                              <div class="mobile-buttons" data-drupal-selector="mobile-buttons">
+                  <button class="mobile-nav-button" data-drupal-selector="mobile-nav-button" aria-label="Main Menu" aria-controls="header-nav" aria-expanded="false">
+                    <span class="mobile-nav-button__label">Menu</span>
+                    <span class="mobile-nav-button__icon"></span>
+                  </button>
+                </div>
+
+                <div id="header-nav" class="header-nav" data-drupal-selector="header-nav">
+                  
+<nav  id="block-olivero-main-menu" class="contextual-region primary-nav block block-menu navigation menu--main" aria-labelledby="block-olivero-main-menu-menu" role="navigation">
+            
+  <h2 class="visually-hidden block__title" id="block-olivero-main-menu-menu">Main navigation</h2>
+  <div data-contextual-id="block:block=olivero_main_menu:langcode=en|menu:menu=main:langcode=en" data-contextual-token="Y68oEbATMpC5G7NAVZG8rbnDWzbFfEERHdepiv7kxcg" data-drupal-ajax-container=""></div>
+        
+
+
+          
+        
+    <ul  class="menu primary-nav__menu primary-nav__menu--level-1" data-drupal-selector="primary-nav-menu--level-1">
+            
+                          
+        
+        
+        <li class="primary-nav__menu-item primary-nav__menu-item--link primary-nav__menu-item--level-1">
+                              
+                      <a href="/" class="primary-nav__menu-link primary-nav__menu-link--link primary-nav__menu-link--level-1" data-drupal-selector="primary-nav-menu-link-has-children" data-drupal-link-system-path="&lt;front&gt;">            <span class="primary-nav__menu-link-inner primary-nav__menu-link-inner--level-1">Home</span>
+          </a>
+
+            
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+
+                  
+
+  <div class="region region--secondary-menu">
+    <nav  id="block-olivero-account-menu" class="contextual-region block block-menu navigation menu--account secondary-nav" aria-labelledby="block-olivero-account-menu-menu" role="navigation">
+            
+  <span class="visually-hidden" id="block-olivero-account-menu-menu">User account menu</span>
+  <div data-contextual-id="block:block=olivero_account_menu:langcode=en|menu:menu=account:langcode=en" data-contextual-token="MHfXKkaucKGdHHL6k7t2sIAhkTe8bxr5JAuiw6M6NIU" data-drupal-ajax-container=""></div>
+        
+
+
+          <ul class="menu secondary-nav__menu secondary-nav__menu--level-1">
+            
+                          
+        
+        
+        <li class="secondary-nav__menu-item secondary-nav__menu-item--link secondary-nav__menu-item--level-1">
+          <a href="/user" class="secondary-nav__menu-link secondary-nav__menu-link--link secondary-nav__menu-link--level-1" data-drupal-link-system-path="user">My account</a>
+
+                  </li>
+      
+                          
+        
+        
+        <li class="secondary-nav__menu-item secondary-nav__menu-item--link secondary-nav__menu-item--level-1">
+          <a href="/user/logout?token=z3xykYm4_2tgB4o61DTDHPlwQUE3dxyTDjFAtKc8EIg" class="secondary-nav__menu-link secondary-nav__menu-link--link secondary-nav__menu-link--level-1" data-drupal-link-system-path="user/logout">Log out</a>
+
+                  </li>
+          </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+                </div>
+                          </div>
+          </div>
+        </div>
+      </header>
+    
+    <div id="main-wrapper" class="layout-main-wrapper layout-container">
+      <div id="main" class="layout-main">
+        <div class="main-content">
+          <a id="main-content" tabindex="-1"></a>
+          
+          <div class="main-content__container container">
+            
+
+  <div class="region region--highlighted grid-full layout--pass--content-medium">
+    <div data-drupal-messages-fallback class="hidden messages-list"></div>
+
+  </div>
+
+            
+
+  <div class="region region--breadcrumb grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-breadcrumbs" class="contextual-region block block-system block-system-breadcrumb-block">
+  
+    <div data-contextual-id="block:block=olivero_breadcrumbs:langcode=en" data-contextual-token="LjGPtudg4-ffO3J9C6-HFJ6sfk8UIg1XfjO14h-mdOM" data-drupal-ajax-container=""></div>
+      <div class="block__content">
+        <nav class="breadcrumb" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <div class="breadcrumb__content">
+      <ol class="breadcrumb__list">
+                  <li class="breadcrumb__item">
+                          <a href="/" class="breadcrumb__link">Home</a>
+                      </li>
+              </ol>
+    </div>
+  </nav>
+
+    </div>
+  </div>
+
+  </div>
+
+
+                          <main>
+                
+
+  <div class="region region--content-above grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-page-title" class="contextual-region block block-core block-page-title-block">
+  
+  
+
+  <h1 class="title page-title">Access denied</h1>
+
+
+  <div data-contextual-id="block:block=olivero_page_title:langcode=en" data-contextual-token="I51Txy3N9NreO_hkk_wqN6c82K9Tbs8IHNRPkPHVX64" data-drupal-ajax-container=""></div>
+</div>
+
+  </div>
+
+                
+
+  <div class="region region--content grid-full layout--pass--content-medium" id="content">
+    
+
+<div id="block-olivero-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="block__content">
+      You are not authorized to access this page.
+    </div>
+  </div>
+
+  </div>
+
+              </main>
+                        
+          </div>
+        </div>
+        <div class="social-bar">
+          
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        
+        
+
+  <div class="region region--footer-bottom grid-full layout--pass--content-medium">
+    
+
+<div id="block-olivero-powered" class="contextual-region block block-system block-system-powered-by-block">
+  
+    <div data-contextual-id="block:block=olivero_powered:langcode=en" data-contextual-token="4qO3nb8YGqBhDSv84qEOsIyj5gp95KyQGG77NjAp_pg" data-drupal-ajax-container=""></div>
+    
+  <span>
+    Powered by    <a href="https://www.drupal.org">Drupal</a>
+    <span class="drupal-logo" role="img" aria-label="Drupal Logo">
+      <svg width="14" height="19" viewBox="0 0 42.15 55.08" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.75 11.73C25.87 7.86 22.18 4.16 21.08 0 20 4.16 16.28 7.86 12.4 11.73 6.59 17.54 0 24.12 0 34a21.08 21.08 0 1042.15 0c0-9.88-6.59-16.46-12.4-22.27zM10.84 35.92a14.13 14.13 0 00-1.65 2.62.54.54 0 01-.36.3h-.18c-.47 0-1-.92-1-.92-.14-.22-.27-.45-.4-.69l-.09-.19C5.94 34.25 7 30.28 7 30.28a17.42 17.42 0 012.52-5.41 31.53 31.53 0 012.28-3l1 1 4.72 4.82a.54.54 0 010 .72l-4.93 5.47zm10.48 13.81a7.29 7.29 0 01-5.4-12.14c1.54-1.83 3.42-3.63 5.46-6 2.42 2.58 4 4.35 5.55 6.29a3.08 3.08 0 01.32.48 7.15 7.15 0 011.3 4.12 7.23 7.23 0 01-7.23 7.25zM35 38.14a.84.84 0 01-.67.58h-.14a1.22 1.22 0 01-.68-.55 37.77 37.77 0 00-4.28-5.31l-1.93-2-6.41-6.65a54 54 0 01-3.84-3.94 1.3 1.3 0 00-.1-.15 3.84 3.84 0 01-.51-1v-.19a3.4 3.4 0 011-3c1.24-1.24 2.49-2.49 3.67-3.79 1.3 1.44 2.69 2.82 4.06 4.19a57.6 57.6 0 017.55 8.58A16 16 0 0135.65 34a14.55 14.55 0 01-.65 4.14z"/>
+</svg>
+    </span>
+  </span>
+</div>
+
+  </div>
+
+      </div>
+    </footer>
+
+    <div class="overlay" data-drupal-selector="overlay"></div>
+
+  </div>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"api\/agentic-harness\/v1\/image-context","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"contextual":{"theme":"olivero"},"user":{"uid":"2","permissionsHash":"96b5e4d35874987a4f490543aadb6ff273927c82ba78d795bc9371e1da83ff37"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
+<script src="/sites/default/files/js/js_DxD5FKfKSDkYPlpgxJZ6MjnzDpAcFQhIiU5eLOOYIjM.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=olivero&amp;include=eJxFjVEKhDAMBS_U2iPJU0sJGxOJUdbbb1jR_s7M44EKaGysEzjNKl6_foDLYscGHjrJTPLZI7H6SMxOZ_2LJDipwUmlUExMwneWlKM0LfdR3v2KVXtxL_NmtMKuH7BlO5c"></script>
+
+  </body>
+</html>

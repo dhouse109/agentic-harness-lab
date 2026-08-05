@@ -1,0 +1,1 @@
+{"schema_version":1,"tool_name":"get_recommendation_status","ok":false,"timestamp":"2026-08-04T21:21:26Z","correlation_id":"gate05-step04-20260804T211943Z-994186-unknown","data":null,"error":{"code":"RECOMMENDATION_NOT_FOUND","message":"The recommendation identifier does not resolve to an available recommendation.","retryable":false}}

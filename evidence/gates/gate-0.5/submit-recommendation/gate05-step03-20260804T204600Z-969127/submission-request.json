@@ -1,0 +1,19 @@
+{
+  "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+  "proposed_alt_text": "A blue geometric illustration accompanying the seeded Article 01 content.",
+  "run_id": "drupal_ai-20260804T204710Z-047c42",
+  "schema_version": 1,
+  "source_framework": "drupal_ai",
+  "target": {
+    "delta": 0,
+    "existing_alt": "",
+    "field_name": "field_image",
+    "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+    "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+    "revision_id": 1,
+    "schema_version": 1,
+    "sequence": 1,
+    "target_state": "missing"
+  },
+  "validator_version": "gate05-validator-1.0.0"
+}

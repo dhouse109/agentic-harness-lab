@@ -1,0 +1,9 @@
+{
+  "agent_bot_status_access": 200,
+  "anonymous_status_access": 401,
+  "authorization_headers_retained": false,
+  "credentials_retained": false,
+  "editor_dana_status_access": 403,
+  "editor_review_access_via_drupal_form": true,
+  "status_route_permission": "use agentic harness discovery tools"
+}

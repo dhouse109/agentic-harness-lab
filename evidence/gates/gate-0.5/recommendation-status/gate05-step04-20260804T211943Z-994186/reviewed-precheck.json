@@ -1,0 +1,15 @@
+{
+  "human_decision": "approved",
+  "initial_revision_id": 21,
+  "proposed_alt_edited": false,
+  "reviewed_at": "2026-08-04T23:59:08Z",
+  "reviewed_recommendation_state_sha256": "d48ba1e41d5a677dec319eb251feda4673843916f08dfc81388e42750801d5e5",
+  "reviewed_revision_id": 22,
+  "reviewer_username": "editor_dana",
+  "revision_count": 2,
+  "run_id": "gate05-step04-20260804T211943Z-994186",
+  "source_article_unchanged": true,
+  "status": "pass",
+  "status_operation_read_only": true,
+  "status_reads_match": true
+}

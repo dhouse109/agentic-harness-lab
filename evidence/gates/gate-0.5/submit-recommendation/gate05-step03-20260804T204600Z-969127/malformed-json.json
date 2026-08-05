@@ -1,0 +1,1 @@
+{"schema_version":1,"tool_name":"submit_recommendation","ok":false,"timestamp":"2026-08-04T20:49:24Z","correlation_id":"gate05-step03-20260804T204600Z-969127-malformed","data":null,"error":{"code":"MALFORMED_JSON","message":"The request body must contain valid JSON.","retryable":false}}

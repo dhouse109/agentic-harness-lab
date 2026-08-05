@@ -1,0 +1,10 @@
+{
+  "captured_at_utc": "2026-08-04T19:17:54Z",
+  "crewai_candidate_model_present": false,
+  "model_call_performed": false,
+  "openai_api_key_present": false,
+  "openai_candidate_model_present": false,
+  "operation": "get_image_context",
+  "python": "3.12.3",
+  "run_id": "gate05-step02-20260804T191625Z-920936"
+}

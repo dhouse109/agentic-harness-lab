@@ -33,6 +33,28 @@ Each implementation must independently:
 6. Preserve implementation origin and run ID.
 7. Allow `editor_dana` to record a decision.
 
+### Shared substrate certification
+
+- [x] Canonical target 1 frozen and independently auditable.
+- [x] Permission-scoped image context operation certified.
+- [x] Deterministic recommendation validation and idempotent submission certified.
+- [x] Real `editor_dana` approval preserved as Drupal revision evidence.
+- [x] Read-only recommendation status operation certified.
+- [x] All four operations exercised together in one reset-bounded path.
+- [x] Source Article non-mutation and final zero-suggestion reset certified.
+- [x] Frozen substrate manifest and framework handoff generated.
+
+### Framework vertical slices
+
+- [ ] Drupal AI: real framework model call and one reviewed recommendation.
+- [ ] LangGraph: real framework model call and one reviewed recommendation.
+- [ ] CrewAI: real framework model call and one reviewed recommendation.
+
+**Gate 0.5 status:** in progress. The common substrate is ready; no framework slice is certified by
+the substrate preflight.
+
+**Next action:** implement the Drupal AI one-image vertical slice against the frozen handoff.
+
 ## Full implementation milestones
 
 1. Foundation and frozen experiment contract.

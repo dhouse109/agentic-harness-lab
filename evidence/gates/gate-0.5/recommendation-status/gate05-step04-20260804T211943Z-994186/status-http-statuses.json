@@ -1,0 +1,10 @@
+{
+  "anonymous": 401,
+  "editor": 403,
+  "invalid_id": 422,
+  "positive_nid": 200,
+  "positive_repeat": 200,
+  "positive_uuid": 200,
+  "unknown_uuid": 404,
+  "wrong_bundle": 404
+}

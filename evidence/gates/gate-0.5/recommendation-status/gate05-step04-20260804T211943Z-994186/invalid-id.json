@@ -1,0 +1,1 @@
+{"schema_version":1,"tool_name":"get_recommendation_status","ok":false,"timestamp":"2026-08-04T21:21:25Z","correlation_id":"gate05-step04-20260804T211943Z-994186-invalid","data":null,"error":{"code":"INVALID_RECOMMENDATION_ID","message":"The recommendation identifier must be a positive node ID or UUID.","retryable":false}}

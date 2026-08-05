@@ -1,0 +1,12 @@
+{
+  "branch": "main",
+  "expected_base_commit": "177e6a7baaaebded35a11c3140026aadcb71c503",
+  "expected_base_is_ancestor": true,
+  "head": "177e6a7baaaebded35a11c3140026aadcb71c503",
+  "latest_commit": [
+    "177e6a7baaaebded35a11c3140026aadcb71c503",
+    "2026-08-04T13:39:13-04:00",
+    "Complete Phase 0 target discovery tool"
+  ],
+  "origin": "https://github.com/dhouse109/agentic-harness-lab.git"
+}

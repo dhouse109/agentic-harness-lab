@@ -1,0 +1,19 @@
+{
+  "anonymous": 401,
+  "duplicate_current_alt": 422,
+  "editor": 403,
+  "empty_alt": 422,
+  "filename_echo": 422,
+  "generic": 422,
+  "idempotency_conflict": 409,
+  "invalid_recommendation": 422,
+  "malformed_json": 400,
+  "positive": 200,
+  "preamble": 422,
+  "replay": 200,
+  "run_id_mismatch": 422,
+  "stale_file": 409,
+  "stale_revision": 409,
+  "too_long": 422,
+  "unsupported_source": 422
+}

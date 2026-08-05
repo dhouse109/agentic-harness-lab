@@ -1,0 +1,1 @@
+{"schema_version":1,"tool_name":"submit_recommendation","ok":false,"timestamp":"2026-08-04T20:49:24Z","correlation_id":"gate05-step03-20260804T204600Z-969127-invalid","data":null,"error":{"code":"INVALID_RECOMMENDATION","message":"Recommendation keys do not match recommendation.schema.json.","retryable":false}}

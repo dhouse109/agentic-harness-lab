@@ -1,0 +1,11 @@
+[OK] Step 17 Drupal route, helper, shared client, and evidence validator are installed.
+[OK] Step 16 records now match the retained Drupal, LangChain, and CrewAI evidence.
+[OK] Frozen contract hash manifest verifies after the evidence-alignment correction.
+[OK] Drupal route is enabled, agent-scoped, and denied to editor_dana.
+[OK] Latest Step 17 evidence contains all thirteen passing controls.
+[OK] Discovery result is exactly 12 targets: 9 missing and 3 poor.
+[OK] Step 17 evidence contains no recognized credential or Authorization-header pattern.
+[OK] Step 17 ran without model variables and without source mutation.
+[OK] Step 17 runtime and backup material is ignored by Git.
+[OK] Step 17 is finalized in the plan, README, claims register, sources, and ADR.
+[OK] Step 17 audit passed in finalized state.

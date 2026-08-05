@@ -1,0 +1,15 @@
+{
+  "correlation_id": "gate05-step04-20260804T211943Z-994186-approved-nid",
+  "data": {
+    "reviewed_at": "2026-08-04T23:59:08Z",
+    "reviewer_username": "editor_dana",
+    "revision_id": 22,
+    "status": "approved",
+    "uuid": "253392b9-d202-48ee-9709-949c0fb57d62"
+  },
+  "error": null,
+  "ok": true,
+  "schema_version": 1,
+  "timestamp": "2026-08-05T00:00:44Z",
+  "tool_name": "get_recommendation_status"
+}

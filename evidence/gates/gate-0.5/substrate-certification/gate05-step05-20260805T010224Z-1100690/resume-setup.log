@@ -1,0 +1,311 @@
+[INFO] Confirming the complete retained Gate 0.5 substrate lineage...
+{
+  "canonical_target_sequence": 1,
+  "contract_hashes_match": true,
+  "next_step": "Gate 0.5 Step 02 \u2014 deterministic get_image_context(target)",
+  "run_id": "gate05-step01-20260804T183655Z-888009",
+  "status": "pass",
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}
+{
+  "canonical_target_sequence": 1,
+  "context_evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+  "historical_implementation_hashes_used_as_current_gate": false,
+  "image_sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+  "operation": "get_image_context",
+  "raw_image_retained": false,
+  "retained_evidence_integrity": true,
+  "status": "pass",
+  "step01_run_id": "gate05-step01-20260804T183655Z-888009",
+  "step02_run_id": "gate05-step02-20260804T191625Z-920936"
+}
+{
+  "article_source_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "canonical_target_sequence": 1,
+  "controlled_preflight": true,
+  "final_suggestion_count": 0,
+  "framework_execution_claimed": false,
+  "historical_implementation_hashes_used_as_current_gate": false,
+  "idempotent_replay_same_identity": true,
+  "operation": "submit_recommendation",
+  "retained_evidence_integrity": true,
+  "run_id": "gate05-step03-20260804T204600Z-969127",
+  "status": "pass"
+}
+{
+  "article_source_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+  "canonical_target_sequence": 1,
+  "controlled_preflight": true,
+  "final_suggestion_count": 0,
+  "framework_execution_claimed": false,
+  "human_decision": "approved",
+  "implementation_hashes_match": true,
+  "initial_revision_id": 21,
+  "next_step": "Gate 0.5 Step 05 \u2014 end-to-end shared substrate certification and framework handoff",
+  "operations": [
+    "submit_recommendation",
+    "get_recommendation_status"
+  ],
+  "reviewed_revision_id": 22,
+  "reviewer_username": "editor_dana",
+  "run_id": "gate05-step04-20260804T211943Z-994186",
+  "source_article_unchanged": true,
+  "status": "pass",
+  "status_operation_read_only": true
+}
+[INFO] Starting DDEV and rebuilding Drupal's container...
+Starting harness...
+[33mCustom configuration detected in project 'harness':
+  • Environment: /home/dhouse109/projects/agentic-harness-lab/drupal/.ddev/.env.web
+
+Custom configuration is updated on restart. Run 'ddev restart' if changes don't take effect.
+Add '#ddev-silent-no-warn' comment to files if you don't want to see these warnings.[0m
+Building project images.... Image ddev/ddev-webserver:v1.25.3-harness-built Building 
+ Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Building 
+. Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Built 
+ Image ddev/ddev-webserver:v1.25.3-harness-built Built 
+
+[32mProject images built in 3s.[0m
+ Container ddev-harness-db Recreate 
+ Container ddev-harness-web Recreate 
+ Container ddev-harness-web Recreated 
+ Container ddev-harness-db Recreated 
+ Container ddev-harness-web Starting 
+ Container ddev-harness-db Starting 
+ Container ddev-harness-db Started 
+ Container ddev-harness-web Started 
+Waiting for containers to become ready: [web db]... ready in 4.5s
+ddev-router already running, pushing new config...
+[32mSuccessfully started harness[0m
+[32mYour project can be reached at https://harness.ddev.site
+See 'ddev describe' for alternate URLs.[0m
+No syntax errors detected in web/modules/custom/agentic_harness_tools/src/Controller/ToolController.php
+No syntax errors detected in web/modules/custom/agentic_harness_tools/src/Service/ImageReviewFinder.php
+No syntax errors detected in web/modules/custom/agentic_harness_tools/src/Service/ImageContextProvider.php
+No syntax errors detected in web/modules/custom/agentic_harness_tools/src/Service/RecommendationValidator.php
+No syntax errors detected in web/modules/custom/agentic_harness_tools/src/Service/RecommendationSubmitter.php
+No syntax errors detected in web/modules/custom/agentic_harness_tools/src/Service/RecommendationStatusProvider.php
+No syntax errors detected in scripts/gate05-step05-config.php
+ [success] Cache rebuild complete.
+{
+    "status": "pass",
+    "routes": {
+        "find_images_needing_review": {
+            "path": "/api/agentic-harness/v1/images-needing-review",
+            "methods": [
+                "GET"
+            ],
+            "permission": "use agentic harness discovery tools"
+        },
+        "get_image_context": {
+            "path": "/api/agentic-harness/v1/image-context",
+            "methods": [
+                "POST"
+            ],
+            "permission": "use agentic harness discovery tools"
+        },
+        "submit_recommendation": {
+            "path": "/api/agentic-harness/v1/recommendations",
+            "methods": [
+                "POST"
+            ],
+            "permission": "create alt_text_suggestion content"
+        },
+        "get_recommendation_status": {
+            "path": "/api/agentic-harness/v1/recommendations/{recommendation_id}/status",
+            "methods": [
+                "GET"
+            ],
+            "permission": "use agentic harness discovery tools"
+        }
+    },
+    "agent_bot_principals": true,
+    "editor_dana_review_only": true,
+    "basic_auth_only": true,
+    "all_routes_no_cache": true
+}{
+    "content_type": {
+        "bundle": "alt_text_suggestion",
+        "new_revision": true
+    },
+    "fields": {
+        "field_evidence_hash": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": false,
+            "storage_settings": {
+                "case_sensitive": true,
+                "is_ascii": true,
+                "max_length": 128
+            },
+            "type": "string"
+        },
+        "field_proposed_alt": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": true,
+            "storage_settings": {
+                "case_sensitive": false
+            },
+            "type": "string_long"
+        },
+        "field_review_status": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": true,
+            "storage_settings": {
+                "allowed_values": {
+                    "approved": "Approved",
+                    "pending": "Pending",
+                    "rejected": "Rejected"
+                }
+            },
+            "type": "list_string"
+        },
+        "field_run_id": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": true,
+            "storage_settings": {
+                "case_sensitive": true,
+                "is_ascii": true,
+                "max_length": 128
+            },
+            "type": "string"
+        },
+        "field_source_framework": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": true,
+            "storage_settings": {
+                "allowed_values": {
+                    "crewai": "CrewAI",
+                    "drupal_ai": "Drupal AI",
+                    "langgraph": "LangGraph",
+                    "phase0_fixture": "Phase 0 test fixture"
+                }
+            },
+            "type": "list_string"
+        },
+        "field_target_delta": {
+            "cardinality": 1,
+            "field_settings": {
+                "max": null,
+                "min": 0
+            },
+            "required": true,
+            "storage_settings": {
+                "size": "normal",
+                "unsigned": true
+            },
+            "type": "integer"
+        },
+        "field_target_field": {
+            "cardinality": 1,
+            "field_settings": [],
+            "required": true,
+            "storage_settings": {
+                "case_sensitive": false,
+                "is_ascii": true,
+                "max_length": 64
+            },
+            "type": "string"
+        },
+        "field_target_file": {
+            "cardinality": 1,
+            "field_settings": {
+                "handler": "default:file",
+                "handler_settings": []
+            },
+            "required": true,
+            "storage_settings": {
+                "target_type": "file"
+            },
+            "type": "entity_reference"
+        },
+        "field_target_node": {
+            "cardinality": 1,
+            "field_settings": {
+                "handler": "default:node",
+                "handler_settings": {
+                    "auto_create": false,
+                    "auto_create_bundle": "",
+                    "sort": {
+                        "direction": "ASC",
+                        "field": "_none"
+                    },
+                    "target_bundles": {
+                        "article": "article"
+                    }
+                }
+            },
+            "required": true,
+            "storage_settings": {
+                "target_type": "node"
+            },
+            "type": "entity_reference"
+        },
+        "field_target_revision": {
+            "cardinality": 1,
+            "field_settings": {
+                "max": null,
+                "min": 1
+            },
+            "required": true,
+            "storage_settings": {
+                "size": "normal",
+                "unsigned": true
+            },
+            "type": "integer"
+        }
+    },
+    "form_widgets": {
+        "field_evidence_hash": "string_textfield",
+        "field_proposed_alt": "string_textarea",
+        "field_review_status": "options_select",
+        "field_run_id": "string_textfield",
+        "field_source_framework": "options_select",
+        "field_target_delta": "number",
+        "field_target_field": "string_textfield",
+        "field_target_file": "entity_reference_autocomplete",
+        "field_target_node": "entity_reference_autocomplete",
+        "field_target_revision": "number"
+    },
+    "review_queue": {
+        "path": "admin/review-queue",
+        "view_id": "alt_text_review_queue"
+    },
+    "roles": {
+        "agent_service": [
+            "access content",
+            "create alt_text_suggestion content",
+            "use agentic harness discovery tools",
+            "view own unpublished content"
+        ],
+        "content_editor": [
+            "access administration pages",
+            "access content",
+            "access content overview",
+            "access contextual links",
+            "access navigation",
+            "edit any alt_text_suggestion content",
+            "view alt_text_suggestion revisions",
+            "view the administration theme"
+        ]
+    },
+    "schema_version": 1,
+    "status": "pass",
+    "view_formatters": {
+        "field_evidence_hash": "string",
+        "field_proposed_alt": "basic_string",
+        "field_review_status": "list_default",
+        "field_run_id": "string",
+        "field_source_framework": "list_default",
+        "field_target_delta": "number_integer",
+        "field_target_field": "string",
+        "field_target_file": "entity_reference_label",
+        "field_target_node": "entity_reference_label",
+        "field_target_revision": "number_integer"
+    }
+}
+[OK] Gate 0.5 Step 05 setup passed.

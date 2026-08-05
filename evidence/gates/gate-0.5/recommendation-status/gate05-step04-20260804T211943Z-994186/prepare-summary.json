@@ -1,0 +1,44 @@
+{
+  "article_source_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+  "canonical_target_sequence": 1,
+  "controlled_preflight": true,
+  "framework_execution_claimed": false,
+  "human_review_required": true,
+  "idempotent_submission_replay": true,
+  "model_call_performed": false,
+  "next_action": "editor_dana must set Review status to Approved in Drupal without changing Proposed alt text, then run certify.",
+  "operation": "get_recommendation_status",
+  "package": "gate-0.5-step04-recommendation-status-human-review",
+  "package_version": "1.0.0",
+  "pending_recommendation_state_sha256": "beb17d3502eada0b2143ed3f4ecadf0277c4832ad9cca237c3fdff1b50304990",
+  "pending_status": {
+    "reviewed_at": null,
+    "reviewer_username": null,
+    "revision_id": 21,
+    "status": "pending",
+    "uuid": "253392b9-d202-48ee-9709-949c0fb57d62"
+  },
+  "recommendation": {
+    "node_id": 21,
+    "revision_id": 21,
+    "run_id": "drupal_ai-20260804T212019Z-95d907",
+    "source_framework": "drupal_ai",
+    "status": "pending",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    "uuid": "253392b9-d202-48ee-9709-949c0fb57d62"
+  },
+  "run_id": "gate05-step04-20260804T211943Z-994186",
+  "schema_version": 1,
+  "source_article_unchanged": true,
+  "status": "awaiting_human_review"
+}

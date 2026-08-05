@@ -1,0 +1,21 @@
+Running Phase 0 Step 9 in 'audit' mode...
+[INFO] Step 9 script version: 1.0.0
+[INFO] Seed Articles: 20 / 20
+[INFO] Generated PNG files: 30 / 30
+[INFO] Target usages: 12 / 12
+[INFO] Coverage: 9 missing, 3 poor, 8 fully acceptable Articles
+[INFO] Target 01: node 1 rev 1 · field_image[0] · file 1 · missing
+[INFO] Target 02: node 2 rev 2 · field_image[1] · file 3 · missing
+[INFO] Target 03: node 3 rev 3 · field_image[0] · file 4 · missing
+[INFO] Target 04: node 4 rev 4 · field_image[0] · file 5 · missing
+[INFO] Target 05: node 5 rev 5 · field_image[0] · file 7 · missing
+[INFO] Target 06: node 6 rev 6 · field_image[1] · file 9 · missing
+[INFO] Target 07: node 7 rev 7 · field_image[0] · file 10 · missing
+[INFO] Target 08: node 8 rev 8 · field_image[1] · file 12 · missing
+[INFO] Target 09: node 9 rev 9 · field_image[0] · file 13 · missing
+[INFO] Target 10: node 10 rev 10 · field_image[1] · file 15 · poor
+[INFO] Target 11: node 11 rev 11 · field_image[0] · file 16 · poor
+[INFO] Target 12: node 12 rev 12 · field_image[1] · file 18 · poor
+[OK] Step 9 audit passed. The deterministic 12-target manifest is valid.
+
+Step 9 audit complete.

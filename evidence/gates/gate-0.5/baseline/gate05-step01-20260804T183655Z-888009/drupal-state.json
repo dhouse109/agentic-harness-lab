@@ -1,0 +1,10 @@
+{
+    "article_count": 20,
+    "suggestion_count": 0,
+    "agentic_harness_tools_enabled": true,
+    "agent_service_has_discovery_permission": true,
+    "editor_has_discovery_permission": false,
+    "model_call_performed": false,
+    "recommendation_created": false,
+    "source_article_mutated": false
+}
