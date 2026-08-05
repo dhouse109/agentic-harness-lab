@@ -9,6 +9,7 @@
 - **Gate 0.5:** complete and certified.
 - **Next phase:** Gate 1 — Drupal AI full implementation.
 - **Next package:** `gate-1-step01-drupal-ai-batch-contract-v1.0.0`.
+- **Execution environment:** Codex running locally inside WSL2, governed by `AGENTS.md`.
 
 Gate 0.5 completed when the framework-neutral Drupal substrate passed its standalone certification,
 was frozen, and was handed off for framework-specific implementation. The certification baseline is
@@ -50,6 +51,29 @@ shared/contracts/GATE05-SUBSTRATE-FREEZE.sha256
 docs/handoffs/GATE-0.5-FRAMEWORK-HANDOFF.md
 ```
 
+## Gate 1 local execution handoff
+
+Gate 1 will use Codex locally in WSL2. Codex creates delivery packages outside the repository,
+previews them, stops for package-boundary approval, executes approved packages, audits retained
+evidence, and stops again before commit.
+
+The governing files are:
+
+```text
+AGENTS.md
+docs/CODEX-GATE-1-RUNBOOK.md
+docs/prompts/CODEX-GATE-1-STEP01.md
+```
+
+The external delivery-package root is:
+
+```text
+~/projects/agentic-harness-lab-packages/
+```
+
+Package 1.01 should be generated locally by Codex after this handoff is merged. Do not commit the
+extracted package or reuse a package generated against a different repository baseline.
+
 ## Important interpretation
 
 The freeze manifest and handoff correctly record that Drupal AI, LangGraph, and CrewAI were **not
@@ -70,12 +94,15 @@ and retained evidence control when assessing what is complete and what comes nex
 
 A new planning or implementation session should read these files in order:
 
-1. `docs/CURRENT-STATUS.md`
-2. `PLAN.md`
-3. `README.md`
-4. `docs/gates/GATE-0.5-STEP05-SUBSTRATE-CERTIFICATION-AND-HANDOFF.md`
-5. `docs/handoffs/GATE-0.5-FRAMEWORK-HANDOFF.md`
-6. `shared/contracts/GATE05-SUBSTRATE-FREEZE.json`
+1. `AGENTS.md`
+2. `docs/CURRENT-STATUS.md`
+3. `PLAN.md`
+4. `README.md`
+5. `docs/CODEX-GATE-1-RUNBOOK.md`
+6. `docs/gates/GATE-0.5-STEP05-SUBSTRATE-CERTIFICATION-AND-HANDOFF.md`
+7. `docs/handoffs/GATE-0.5-FRAMEWORK-HANDOFF.md`
+8. `shared/contracts/GATE05-SUBSTRATE-FREEZE.json`
+9. `docs/prompts/CODEX-GATE-1-STEP01.md` when beginning Package 1.01
 
 Do not add a Gate 0.5 reconciliation package before Gate 1 unless an audit fails or the frozen
 substrate is intentionally changed. The next planned work is the first Gate 1 package.
