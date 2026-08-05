@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "drupal-ai-model-output.schema.json",
+  "title": "Raw structured Drupal AI model output",
+  "description": "The complete model-produced object before recommendation assembly or deterministic validation. It contains no target metadata, validator result, Drupal submission result, recommendation status, human decision, or hidden reasoning.",
+  "type": "object",
+  "required": ["proposed_alt_text"],
+  "properties": {
+    "proposed_alt_text": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 250
+    }
+  },
+  "additionalProperties": false
+}

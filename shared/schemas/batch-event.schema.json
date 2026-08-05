@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "batch-event.schema.json",
+  "title": "Sanitized framework batch event",
+  "type": "object",
+  "required": ["schema_version", "event_index", "event_type", "run_id", "source_framework", "occurred_at", "sequence", "correlation_id"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "event_index": {"type": "integer", "minimum": 1},
+    "event_type": {
+      "enum": [
+        "run_initialized", "run_started", "target_started", "context_collected",
+        "model_invocation_started", "model_output_received", "validation_completed",
+        "recommendation_submitted", "status_observed", "target_completed",
+        "failure_injected", "run_resumed", "run_completed", "run_failed"
+      ]
+    },
+    "run_id": {"type": "string", "pattern": "^drupal_ai-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"},
+    "source_framework": {"const": "drupal_ai"},
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "sequence": {"type": ["integer", "null"], "minimum": 1, "maximum": 12},
+    "correlation_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "target": {"oneOf": [{"$ref": "target.schema.json"}, {"type": "null"}]},
+    "outcome": {"enum": ["started", "passed", "failed", "persisted", "interrupted", "resumed", "completed"]},
+    "error_code": {"type": ["string", "null"], "maxLength": 64}
+  },
+  "additionalProperties": false
+}

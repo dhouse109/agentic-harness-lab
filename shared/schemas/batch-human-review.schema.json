@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "batch-human-review.schema.json",
+  "title": "Human review decision evidence",
+  "type": "object",
+  "required": ["schema_version", "run_id", "framework_origin", "decisions"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "pattern": "^drupal_ai-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"},
+    "framework_origin": {"const": "drupal_ai"},
+    "decisions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["recommendation_uuid", "prior_revision_id", "decision_revision_id", "reviewer", "decision", "reviewed_at", "source_article_unchanged"],
+        "properties": {
+          "recommendation_uuid": {"type": "string", "format": "uuid"},
+          "prior_revision_id": {"type": "integer", "minimum": 1},
+          "decision_revision_id": {"type": "integer", "minimum": 1},
+          "reviewer": {"const": "editor_dana"},
+          "decision": {"enum": ["approved", "rejected", "edited_and_approved"]},
+          "prior_text_sha256": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+          "decided_text_sha256": {"type": "string", "pattern": "^sha256:[a-f0-9]{64}$"},
+          "reviewed_at": {"type": "string", "format": "date-time"},
+          "source_article_unchanged": {"const": true}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

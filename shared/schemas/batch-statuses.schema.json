@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "batch-statuses.schema.json",
+  "title": "Read-only recommendation-status evidence",
+  "type": "object",
+  "required": ["schema_version", "run_id", "framework_origin", "observations"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "pattern": "^drupal_ai-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"},
+    "framework_origin": {"const": "drupal_ai"},
+    "observations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["recommendation_uuid", "revision_id", "status", "observed_at"],
+        "properties": {
+          "recommendation_uuid": {"type": "string", "format": "uuid"},
+          "revision_id": {"type": "integer", "minimum": 1},
+          "status": {"enum": ["pending", "approved", "rejected"]},
+          "observed_at": {"type": "string", "format": "date-time"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

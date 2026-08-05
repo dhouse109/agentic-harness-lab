@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "batch-summary.schema.json",
+  "title": "Drupal AI batch result summary",
+  "type": "object",
+  "required": ["schema_version", "status", "run_id", "source_framework", "provider", "model", "temperature", "target_count", "completed_count", "failed_count", "duplicate_count", "validator_version", "review_destination", "source_article_unchanged", "automatic_publication_performed", "failure_seam_observed", "resume_sequence", "started_at", "completed_at", "human_review_completed"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "status": {"enum": ["pass", "fail"]},
+    "run_id": {"type": "string", "pattern": "^drupal_ai-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"},
+    "source_framework": {"const": "drupal_ai"},
+    "provider": {"const": "OpenAI"},
+    "model": {"const": "gpt-4.1-mini-2025-04-14"},
+    "temperature": {"const": 0.0},
+    "target_count": {"const": 12},
+    "completed_count": {"type": "integer", "minimum": 0, "maximum": 12},
+    "failed_count": {"type": "integer", "minimum": 0, "maximum": 12},
+    "duplicate_count": {"type": "integer", "minimum": 0},
+    "validator_version": {"const": "gate05-validator-1.0.0"},
+    "review_destination": {"const": "alt_text_suggestion"},
+    "source_article_unchanged": {"type": "boolean"},
+    "automatic_publication_performed": {"const": false},
+    "failure_seam_observed": {"type": "boolean"},
+    "resume_sequence": {"type": ["integer", "null"], "minimum": 7, "maximum": 7},
+    "started_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "human_review_completed": {"type": "boolean"}
+  },
+  "additionalProperties": false
+}
