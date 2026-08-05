@@ -22,6 +22,28 @@ For a new planning or implementation session, read `docs/CURRENT-STATUS.md` firs
 authoritative status snapshot and explains the boundary between the completed shared-substrate gate
 and the framework-owned work that follows.
 
+## Local Codex execution
+
+Gate 1 is designed to run through Codex locally inside WSL2 while preserving one-package-at-a-time
+preview, audit, evidence, and commit controls.
+
+Read:
+
+```text
+AGENTS.md
+docs/CODEX-GATE-1-RUNBOOK.md
+docs/prompts/CODEX-GATE-1-STEP01.md
+```
+
+Delivery packages are generated outside Git under:
+
+```text
+~/projects/agentic-harness-lab-packages/
+```
+
+Do not commit extracted packages or package archives. Commit only their intended installed repository
+changes and sanitized retained evidence.
+
 ## Shared task
 
 Find Drupal image-field usages with missing or inadequate alt text, assemble permitted image and
