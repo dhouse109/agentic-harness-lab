@@ -15,12 +15,54 @@ and lifecycle and recovery.
 
 - **Phase 0:** complete.
 - **Gate 0.5:** complete and certified.
-- **Next phase:** Gate 1 — Drupal AI full implementation.
-- **Next package:** `gate-1-step01-drupal-ai-batch-contract-v1.0.0`.
+- **Gate 1:** active.
+- **Step 1.01:** complete.
+- **Next package:** `gate-1-step02-drupal-ai-runtime-probe-v1.0.0`.
+
+Accepted Gate 0.5 certification evidence is
+`evidence/gates/gate-0.5/substrate-certification/gate05-step05-20260805T184155Z-50124/`.
+The frozen substrate digest is
+`99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a`.
+
+Accepted Step 1.01 evidence run: `gate1-step01-20260805T205448Z-103220`
+Accepted Gate 1 contract digest: `360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6`
+
+The v1.0.0 evidence run `gate1-step01-20260805T200619Z-87483` is preserved unchanged and superseded
+for publication only because later checks exposed terminal schema blank lines and a main-only audit
+restriction. Contract semantics remain unchanged.
 
 For a new planning or implementation session, read `docs/CURRENT-STATUS.md` first. It is the
 authoritative status snapshot and explains the boundary between the completed shared-substrate gate
 and the framework-owned work that follows.
+
+## Gate 1 contract
+
+Step 1.01 freezes the Drupal AI batch boundary in:
+
+```text
+shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json
+shared/schemas/drupal-ai-run-state.schema.json
+shared/schemas/drupal-ai-model-output.schema.json
+```
+
+The shared run-state schema is a comparison contract only. The Drupal AI implementation owns its
+runtime state and persistence location; shared runtime storage is prohibited. Raw structured model
+output remains distinct from recommendation assembly, deterministic validation, submission,
+status observation, and human review evidence.
+
+The repository-native Gate 1 package sequence is:
+
+1. Step 1.01 — batch contract
+2. Step 1.02 — pinned Drupal AI runtime probe
+3. Step 1.03 — thin Drupal AI tool adapters
+4. Step 1.04 — canonical vertical slice
+5. Step 1.05 — 12-target batch runner
+6. Step 1.06 — batch evidence and human review
+7. Step 1.07 — certification, freeze, and handoff
+
+This sequence and the machine-readable Gate 1 contract govern later package generation. The Step
+1.02 runtime-path decision is expected to use `ADR-0006`, subject to confirming it remains the next
+available number.
 
 ## Local Codex execution
 

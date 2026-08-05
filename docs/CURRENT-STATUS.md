@@ -7,13 +7,27 @@
 
 - **Phase 0:** complete.
 - **Gate 0.5:** complete and certified.
-- **Next phase:** Gate 1 — Drupal AI full implementation.
-- **Next package:** `gate-1-step01-drupal-ai-batch-contract-v1.0.0`.
+- **Gate 1:** active.
+- **Completed package:** `gate-1-step01-drupal-ai-batch-contract-v1.0.1`.
+- **Step 1.01 execution:** complete.
+- **Next package:** `gate-1-step02-drupal-ai-runtime-probe-v1.0.0`.
 - **Execution environment:** Codex running locally inside WSL2, governed by `AGENTS.md`.
 
 Gate 0.5 completed when the framework-neutral Drupal substrate passed its standalone certification,
 was frozen, and was handed off for framework-specific implementation. The certification baseline is
 commit `fb23e41f6fc8f8e070babbf9a0f593edb94f8c5c` (`Certify Gate 0.5 shared substrate`).
+
+Step 1.01 freezes the Drupal AI batch execution contract, canonical run-state and raw model-output
+schemas, lifecycle-separated evidence requirements, and the repository-native Gate 1 package
+sequence. It does not call a model, mutate Drupal, alter dependencies, recertify Gate 0.5, or begin
+Step 1.02.
+
+Accepted Step 1.01 evidence run: `gate1-step01-20260805T205448Z-103220`
+Accepted Gate 1 contract digest: `360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6`
+
+The v1.0.0 evidence run `gate1-step01-20260805T200619Z-87483` remains immutable. It is superseded
+for publication only because later checks found terminal schema blank lines and a main-only installed
+audit restriction. The v1.0.1 repair does not change contract semantics.
 
 ## What Gate 0.5 proved
 
@@ -40,7 +54,13 @@ Primary retained evidence:
 
 ```text
 evidence/gates/gate-0.5/substrate-certification/
-  gate05-step05-20260805T010224Z-1100690/
+  gate05-step05-20260805T184155Z-50124/
+```
+
+Frozen substrate digest:
+
+```text
+99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a
 ```
 
 Frozen handoff artifacts:
@@ -71,8 +91,9 @@ The external delivery-package root is:
 ~/projects/agentic-harness-lab-packages/
 ```
 
-Package 1.01 should be generated locally by Codex after this handoff is merged. Do not commit the
-extracted package or reuse a package generated against a different repository baseline.
+Package 1.01 is complete. The next package is
+`gate-1-step02-drupal-ai-runtime-probe-v1.0.0`. Do not commit extracted packages or reuse a package
+generated against a different repository baseline.
 
 ## Important interpretation
 
@@ -90,6 +111,34 @@ boundary was narrowed so the independently certified shared substrate became the
 the framework implementations became subsequent work. This repository's current status documents
 and retained evidence control when assessing what is complete and what comes next.
 
+## Gate 1 package sequence
+
+The repository-native sequence is:
+
+1. Step 1.01 — batch contract
+2. Step 1.02 — pinned Drupal AI runtime probe
+3. Step 1.03 — thin Drupal AI tool adapters
+4. Step 1.04 — canonical vertical slice
+5. Step 1.05 — 12-target batch runner
+6. Step 1.06 — batch evidence and human review
+7. Step 1.07 — certification, freeze, and handoff
+
+This sequence and `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json` govern later package
+generation. Because ADR-0004 and ADR-0005 exist, the Step 1.02 runtime-path decision is currently
+expected to use `ADR-0006`; no existing ADR may be recreated or overwritten.
+
+## Canonical Step 1.01 schemas
+
+```text
+shared/schemas/drupal-ai-run-state.schema.json
+shared/schemas/drupal-ai-model-output.schema.json
+```
+
+The run-state schema defines framework-owned comparison state without selecting or authorizing a
+shared runtime storage location. The model-output schema describes raw structured model output only;
+recommendation assembly, deterministic validation, submission, status, and human review remain
+separate evidence stages.
+
 ## Fresh-session reading order
 
 A new planning or implementation session should read these files in order:
@@ -98,11 +147,13 @@ A new planning or implementation session should read these files in order:
 2. `docs/CURRENT-STATUS.md`
 3. `PLAN.md`
 4. `README.md`
-5. `docs/CODEX-GATE-1-RUNBOOK.md`
-6. `docs/gates/GATE-0.5-STEP05-SUBSTRATE-CERTIFICATION-AND-HANDOFF.md`
-7. `docs/handoffs/GATE-0.5-FRAMEWORK-HANDOFF.md`
-8. `shared/contracts/GATE05-SUBSTRATE-FREEZE.json`
-9. `docs/prompts/CODEX-GATE-1-STEP01.md` when beginning Package 1.01
+5. `EXPERIMENT_SPEC.md`
+6. `docs/CODEX-GATE-1-RUNBOOK.md`
+7. `docs/gates/GATE-0.5-STEP05-SUBSTRATE-CERTIFICATION-AND-HANDOFF.md`
+8. `docs/handoffs/GATE-0.5-FRAMEWORK-HANDOFF.md`
+9. `shared/contracts/GATE05-SUBSTRATE-FREEZE.json`
+10. `docs/gates/GATE-1-STEP01-DRUPAL-AI-BATCH-CONTRACT.md`
+11. `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json`
 
 Do not add a Gate 0.5 reconciliation package before Gate 1 unless an audit fails or the frozen
-substrate is intentionally changed. The next planned work is the first Gate 1 package.
+substrate is intentionally changed. Do not generate Step 1.02 until Step 1.01 is committed.

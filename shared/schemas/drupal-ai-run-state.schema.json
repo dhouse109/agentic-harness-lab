@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "drupal-ai-run-state.schema.json",
+  "title": "Canonical Drupal AI framework-owned run state",
+  "description": "Comparison contract for state owned and persisted by the Drupal AI implementation. This schema does not select a storage implementation or authorize framework state in shared runtime storage.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "framework_origin",
+    "status",
+    "target_sequence_hash",
+    "next_target_index",
+    "completed_target_identities",
+    "recommendation_ids",
+    "validation_results",
+    "started_at",
+    "updated_at",
+    "completed_at",
+    "interrupted_at",
+    "resumed_at",
+    "failure_injection_armed",
+    "failure_injection_fired",
+    "prompt_version",
+    "model_id"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "pattern": "^drupal_ai-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"},
+    "framework_origin": {"const": "drupal_ai"},
+    "status": {"enum": ["initialized", "running", "interrupted", "resuming", "completed", "failed"]},
+    "target_sequence_hash": {"const": "sha256:1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"},
+    "next_target_index": {"type": "integer", "minimum": 0, "maximum": 12},
+    "completed_target_identities": {
+      "type": "array",
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": {"$ref": "target.schema.json"}
+    },
+    "recommendation_ids": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["sequence", "node_id", "uuid", "revision_id"],
+        "properties": {
+          "sequence": {"type": "integer", "minimum": 1, "maximum": 12},
+          "node_id": {"type": "integer", "minimum": 1},
+          "uuid": {"type": "string", "format": "uuid"},
+          "revision_id": {"type": "integer", "minimum": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "validation_results": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {"$ref": "batch-validation.schema.json#/$defs/result"}
+    },
+    "started_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "interrupted_at": {"type": ["string", "null"], "format": "date-time"},
+    "resumed_at": {"type": ["string", "null"], "format": "date-time"},
+    "failure_injection_armed": {"type": "boolean"},
+    "failure_injection_fired": {"type": "boolean"},
+    "prompt_version": {"const": "drupal-ai-alt-text-v1.0.0"},
+    "model_id": {"const": "gpt-4.1-mini-2025-04-14"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "completed"}}, "required": ["status"]},
+      "then": {"properties": {"completed_at": {"type": "string", "format": "date-time"}, "next_target_index": {"const": 12}}}
+    },
+    {
+      "if": {"properties": {"failure_injection_fired": {"const": true}}, "required": ["failure_injection_fired"]},
+      "then": {"properties": {"failure_injection_armed": {"const": true}, "interrupted_at": {"type": "string", "format": "date-time"}}}
+    }
+  ],
+  "additionalProperties": false
+}

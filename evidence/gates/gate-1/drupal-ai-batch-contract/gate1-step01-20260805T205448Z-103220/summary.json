@@ -1,0 +1,27 @@
+{
+  "accepted_step01_publication_baseline": true,
+  "completed_at": "2026-08-05T20:54:53.374155Z",
+  "contract_audit": "pass",
+  "contract_semantics_changed": false,
+  "contract_sha256": "360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6",
+  "dependency_change": false,
+  "drupal_state_mutated": false,
+  "gate05_recertified": false,
+  "model_call_performed": false,
+  "next_boundary": "human commit approval",
+  "next_package": "gate-1-step02-drupal-ai-runtime-probe-v1.0.0",
+  "package": "gate-1-step01-drupal-ai-batch-contract",
+  "package_version": "1.0.1",
+  "predecessor_audit": "pass",
+  "predecessor_run_id": "gate05-step05-20260805T184155Z-50124",
+  "run_id": "gate1-step01-20260805T205448Z-103220",
+  "schema_version": 1,
+  "status": "pass",
+  "step02_started": false,
+  "superseded_run_id": "gate1-step01-20260805T200619Z-87483",
+  "superseded_run_preserved": true,
+  "supersession_reasons": [
+    "terminal blank-line errors in newly created schemas",
+    "main-only installed audit mode blocked publication-branch validation"
+  ]
+}

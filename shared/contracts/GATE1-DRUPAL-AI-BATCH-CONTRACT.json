@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "contract": "gate1-drupal-ai-batch",
+  "contract_version": "1.0.1",
+  "status": "frozen",
+  "predecessor": {
+    "branch": "main",
+    "commit": "3016819f738a7db39fef0a6ccbb9cff0c8ec5fa0",
+    "gate05_run_id": "gate05-step05-20260805T184155Z-50124",
+    "gate05_evidence_path": "evidence/gates/gate-0.5/substrate-certification/gate05-step05-20260805T184155Z-50124",
+    "gate05_freeze_manifest": "shared/contracts/GATE05-SUBSTRATE-FREEZE.json",
+    "gate05_freeze_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+    "gate05_status": "certified",
+    "gate05_complete": true
+  },
+  "scope": {
+    "framework": "drupal_ai",
+    "target_count": 12,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+    "step01_contract_only": true,
+    "model_call_performed_by_step01": false,
+    "drupal_state_mutated_by_step01": false,
+    "dependency_change": false,
+    "gate05_recertification": false,
+    "frozen_substrate_change": false,
+    "step02_implementation_included": false
+  },
+  "publication_repair": {
+    "package_version": "1.0.1",
+    "superseded_package_version": "1.0.0",
+    "superseded_run_id": "gate1-step01-20260805T200619Z-87483",
+    "superseded_run_preserved": true,
+    "supersession_reasons": [
+      "terminal blank-line errors in newly created schemas",
+      "main-only installed audit mode blocked publication-branch validation"
+    ],
+    "contract_semantics_changed": false,
+    "accepted_publication_baseline_set_by_passing_runner": true
+  },
+  "canonical_schemas": {
+    "framework_owned_run_state": "shared/schemas/drupal-ai-run-state.schema.json",
+    "raw_structured_model_output": "shared/schemas/drupal-ai-model-output.schema.json"
+  },
+  "state_ownership": {
+    "owner": "drupal_ai",
+    "comparison_contract_location": "shared/schemas/drupal-ai-run-state.schema.json",
+    "runtime_storage_owner": "drupal_ai",
+    "runtime_storage_location": "deferred_to_step_1_02",
+    "shared_runtime_storage_prohibited": true
+  },
+  "frozen_constants": {
+    "provider": "OpenAI",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "temperature": 0.0,
+    "source_framework": "drupal_ai",
+    "prompt_version": "drupal-ai-alt-text-v1.0.0",
+    "validator_version": "gate05-validator-1.0.0",
+    "review_destination": "alt_text_suggestion",
+    "reviewer": "editor_dana",
+    "source_article_mutation": "prohibited",
+    "automatic_publication": "prohibited",
+    "failure_after_sequence": 6,
+    "failure_before_sequence": 7,
+    "resume_at_sequence": 7,
+    "expected_duplicate_count": 0
+  },
+  "shared_operations": [
+    {"name": "find_images_needing_review", "method": "GET", "path": "/api/agentic-harness/v1/images-needing-review", "permission": "use agentic harness discovery tools", "model_free": true},
+    {"name": "get_image_context", "method": "POST", "path": "/api/agentic-harness/v1/image-context", "permission": "use agentic harness discovery tools", "model_free": true},
+    {"name": "submit_recommendation", "method": "POST", "path": "/api/agentic-harness/v1/recommendations", "permission": "create alt_text_suggestion content", "model_free": true},
+    {"name": "get_recommendation_status", "method": "GET", "path": "/api/agentic-harness/v1/recommendations/{recommendation_id}/status", "permission": "use agentic harness discovery tools", "model_free": true}
+  ],
+  "framework_owned": [
+    "context assembly",
+    "model invocation",
+    "structured-output integration",
+    "prompt orchestration",
+    "tool selection and binding",
+    "state and memory",
+    "checkpointing",
+    "human-interrupt behavior",
+    "recovery logic",
+    "workflow sequencing"
+  ],
+  "lifecycle_stages": [
+    {"stage": "raw_structured_model_output", "schema": "shared/schemas/drupal-ai-model-output.schema.json", "collection_schema": "shared/schemas/batch-model-outputs.schema.json"},
+    {"stage": "assembled_recommendation", "schema": "shared/schemas/recommendation.schema.json", "collection_schema": "shared/schemas/batch-recommendations.schema.json"},
+    {"stage": "deterministic_validator_result", "schema": "shared/schemas/batch-validation.schema.json"},
+    {"stage": "submitted_recommendation", "schema": "shared/schemas/batch-submissions.schema.json"},
+    {"stage": "recommendation_status", "schema": "shared/schemas/batch-statuses.schema.json"},
+    {"stage": "human_review_decision", "schema": "shared/schemas/batch-human-review.schema.json"}
+  ],
+  "lifecycle_stage_combination_prohibited": true,
+  "hidden_reasoning_capture_prohibited": true,
+  "batch_sequence": [
+    "discover the frozen 12-target sequence through find_images_needing_review",
+    "persist framework-owned run state before target processing",
+    "for each target in sequence, retrieve permitted context and reverify exact target identity",
+    "invoke the frozen model through the pinned Drupal AI runtime with strict structured output",
+    "retain raw structured output separately from recommendation assembly",
+    "assemble and deterministically validate the recommendation",
+    "submit one pending recommendation through submit_recommendation",
+    "persist completion state before advancing to the next target",
+    "inject termination after target 6 is fully persisted and before target 7 begins",
+    "resume the same run at target 7 without duplicating targets 1 through 6",
+    "complete targets 7 through 12 and retain sanitized lifecycle-separated evidence",
+    "observe status separately and retain a distinct human review decision"
+  ],
+  "idempotency_identity": ["source_framework", "run_id", "node_uuid", "revision_id", "field_name", "delta", "file_uuid"],
+  "package_sequence": [
+    {"step": "1.01", "name": "batch contract", "package": "gate-1-step01-drupal-ai-batch-contract-v1.0.1"},
+    {"step": "1.02", "name": "pinned Drupal AI runtime probe", "package": "gate-1-step02-drupal-ai-runtime-probe-v1.0.0", "decision_adr": "next_available_expected_ADR-0006"},
+    {"step": "1.03", "name": "thin Drupal AI tool adapters"},
+    {"step": "1.04", "name": "canonical vertical slice"},
+    {"step": "1.05", "name": "12-target batch runner"},
+    {"step": "1.06", "name": "batch evidence and human review"},
+    {"step": "1.07", "name": "certification, freeze, and handoff"}
+  ],
+  "adr_policy": {
+    "existing": ["ADR-0004", "ADR-0005"],
+    "runtime_path_decision": "next_available",
+    "currently_expected": "ADR-0006",
+    "overwrite_existing_adr": false
+  },
+  "evidence": {
+    "root": "evidence/results/drupal_ai/<run-id>",
+    "required_files": {
+      "run.json": "shared/schemas/drupal-ai-run-state.schema.json",
+      "targets.json": "shared/schemas/batch-target-sequence.schema.json",
+      "events.jsonl": "shared/schemas/batch-event.schema.json",
+      "tool-traces.json": "shared/schemas/batch-tool-traces.schema.json",
+      "model-outputs.json": "shared/schemas/batch-model-outputs.schema.json",
+      "recommendations.json": "shared/schemas/batch-recommendations.schema.json",
+      "validation.json": "shared/schemas/batch-validation.schema.json",
+      "submissions.json": "shared/schemas/batch-submissions.schema.json",
+      "statuses.json": "shared/schemas/batch-statuses.schema.json",
+      "human-review.json": "shared/schemas/batch-human-review.schema.json",
+      "recovery.json": "shared/schemas/batch-recovery.schema.json",
+      "summary.json": "shared/schemas/batch-summary.schema.json",
+      "summary.md": null
+    },
+    "allowed": ["exact versions and hashes", "sanitized fixture and context facts", "raw structured model output", "sanitized semantic-operation traces", "validator outcomes", "recommendation and revision identifiers", "framework-owned state transitions", "reviewer decision and revision lineage", "sanitized errors"],
+    "prohibited": ["API keys", "Basic Auth passwords", "authorization headers", "raw Base64 image data", "full data URLs", "private database exports", "hidden model reasoning", "unrelated private configuration or user data"]
+  },
+  "contract_inputs": {
+    "shared/schemas/target.schema.json": "2bcb867c3b58a5f4bb20b29274434c153ad043e8c0dba3ce3d1e496a44a32469",
+    "shared/schemas/image-context.schema.json": "b2e27b533551759d181c58330ebedcb26ca92c1a596dbb4aaf48a48422dffaee",
+    "shared/schemas/recommendation.schema.json": "7b1cf9800d5c8d8df4cd0a718c721dd43013afa256f7814a365d4696e2cfe2bd",
+    "shared/schemas/tool-result.schema.json": "ce04e938eb4e34e861c000b86fffeed4adc5e5c66167c52ebf5380b8cd3cd91b",
+    "shared/schemas/run-state.schema.json": "ee5face3d81138cfa2d5de2e03d8fb2aded881743e2e0334129342bf95f3010b",
+    "shared/prompts/PROMPTS.md": "875ff406e3425cddbf2257d1280d8161c1f30de62046cdf25e94fae7bff279c8",
+    "shared/schemas/drupal-ai-run-state.schema.json": "8a7d3c21020f6883f0cf26cabc1fa3738e79accd25d77bcc9d9e8d8ae87f63b3",
+    "shared/schemas/drupal-ai-model-output.schema.json": "2a964f35de72643a1c5e95e4377abbcada12a58931e21db5c09a6ba24801056c",
+    "shared/schemas/batch-target-sequence.schema.json": "79075694777a9a048dd344beb4500d9548a9349825c1c97d3348e943879c57dc",
+    "shared/schemas/batch-event.schema.json": "6c282c812cdbb1038cb0a92aeacc029cdf7683e2f093413d81329bf3cd406ccc",
+    "shared/schemas/batch-tool-traces.schema.json": "6bb844d9c046ad45a8f7711be07a2b1f29f4adf90280432e8977d6fb1b99f4d9",
+    "shared/schemas/batch-model-outputs.schema.json": "ce035491a2b407f5765fceae55ff406ebfa28c9bd53ead983372f02627fbe0f9",
+    "shared/schemas/batch-recommendations.schema.json": "53071df5a9d8c326e8598035b6b6742d5f1127d79cc93ca405807b864c95c159",
+    "shared/schemas/batch-validation.schema.json": "46a37841d57ef96d09ed0a435de4c2a34cd2711c1dd7070d576de7956927d5cd",
+    "shared/schemas/batch-submissions.schema.json": "af9db6dba2da1a1d95f782f7ea0cb879af6d90ee80d94369c203f70fa8317d76",
+    "shared/schemas/batch-statuses.schema.json": "259fe56d36dc78993dafd4d51fb7696cc8de7c49a1558a137332cade3793c3cf",
+    "shared/schemas/batch-human-review.schema.json": "0972636d984b3cdf24579457336c94306f0337af6885104d031e5a0a088d330e",
+    "shared/schemas/batch-recovery.schema.json": "72ee62c6416ff06c112c14e733365a1b999570f2b2f31a672b230a99113d6bb4",
+    "shared/schemas/batch-summary.schema.json": "7f7b403f1ecf346af72c7f09ac9376a5aa8492223fe93bfa394e16dc6994c2e8"
+  },
+  "acceptance": {
+    "gate05_audit_passes": true,
+    "contract_digest_matches": true,
+    "all_contract_input_hashes_match": true,
+    "all_schemas_are_draft_2020_12_valid": true,
+    "schema_examples_pass_and_negative_controls_fail": true,
+    "lifecycle_stages_remain_distinct": true,
+    "framework_state_runtime_location_deferred": true,
+    "existing_frozen_substrate_unchanged": true,
+    "repository_dependencies_unchanged": true,
+    "model_call_performed": false,
+    "drupal_state_mutated": false,
+    "secret_hygiene_passes": true
+  },
+  "change_control": "Any later change to a frozen constant, shared operation semantic, idempotency identity, target ordering, evidence contract, prompt-fairness boundary, failure point, source-mutation rule, model, temperature, or pinned dependency requires an ADR and invalidated-evidence review."
+}
