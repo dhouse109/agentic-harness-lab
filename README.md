@@ -11,6 +11,17 @@ The purpose is not to prove a predetermined winner. The lab collects version-pin
 evidence about six harness organs: context, tools, state and memory, verification, human review,
 and lifecycle and recovery.
 
+## Current status
+
+- **Phase 0:** complete.
+- **Gate 0.5:** complete and certified.
+- **Next phase:** Gate 1 — Drupal AI full implementation.
+- **Next package:** `gate-1-step01-drupal-ai-batch-contract-v1.0.0`.
+
+For a new planning or implementation session, read `docs/CURRENT-STATUS.md` first. It is the
+authoritative status snapshot and explains the boundary between the completed shared-substrate gate
+and the framework-owned work that follows.
+
 ## Shared task
 
 Find Drupal image-field usages with missing or inadequate alt text, assemble permitted image and
@@ -31,7 +42,7 @@ three implementation directories. See `shared/README.md`.
 
 ## Certified shared tool surface
 
-The Gate 0.5 shared substrate now exposes four deterministic operations:
+Gate 0.5 certified these four deterministic shared operations:
 
 ```text
 find_images_needing_review()
@@ -40,7 +51,7 @@ submit_recommendation(recommendation)
 get_recommendation_status(recommendation_id)
 ```
 
-The substrate has proven exact target identity, permission-scoped context retrieval, deterministic
+The substrate proved exact target identity, permission-scoped context retrieval, deterministic
 validation, recommendation-only mutation, idempotent submission, a real revisioned human decision,
 read-only status observation, and seeded-clean restoration.
 
@@ -53,26 +64,26 @@ shared/contracts/GATE05-SUBSTRATE-FREEZE.sha256
 
 Material changes to the frozen substrate require an ADR and a new Step 05 certification run.
 
+The freeze manifest correctly records that Drupal AI, LangGraph, and CrewAI were not certified by
+the controlled substrate preflight. That statement defines the proof boundary; it does not leave
+Gate 0.5 open. Framework-owned execution starts after the handoff, beginning with Drupal AI in Gate
+1.
+
 ## Private and public reproduction paths
 
 Private local material includes database exports, DDEV snapshots, credentials, and raw recordings.
 The intended public reproduction path is source code, Composer and uv lockfiles, Drupal config
 export, schemas, fixtures, seed/reset scripts, test scripts, and sanitized evidence.
 
-## Current phase
-
-Phase 0 is complete and the Gate 0.5 **shared substrate** is certified. Overall Gate 0.5 remains in
-progress: Drupal AI, LangGraph, and CrewAI must still complete their own model-backed one-image
-vertical slices using the frozen shared boundary.
-
-Next implementation:
-
-```text
-Drupal AI vertical slice
-```
-
-Audit the shared substrate with:
+## Audit the completed Gate 0.5 substrate
 
 ```bash
 bash scripts/run-gate05-step05.sh audit
+```
+
+Certification baseline:
+
+```text
+fb23e41f6fc8f8e070babbf9a0f593edb94f8c5c
+Certify Gate 0.5 shared substrate
 ```
