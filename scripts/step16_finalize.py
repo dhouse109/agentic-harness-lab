@@ -268,6 +268,7 @@ def write_manifest(root: Path) -> None:
         "shared/prompts/STEP16_VISION_PROMPT.md",
         "docs/decisions/ADR-0001-freeze-experiment-contract.md",
         "docs/decisions/ADR-0002-freeze-model-after-vision-preflight.md",
+        "docs/decisions/ADR-0005-repair-get-image-context-tool-result-schema.md",
     ]
     lines = []
     for rel in paths:

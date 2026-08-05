@@ -1,0 +1,10 @@
+{
+    "helper_version": "1.0.0",
+    "mode": "snapshot",
+    "status": "pass",
+    "article_count": 20,
+    "article_source_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+    "suggestion_count": 1,
+    "recommendation_state_sha256": "4a81a61916ad4a18baf895202027f1926cad0eb6a411beaacfd7269a9951a922",
+    "combined_state_sha256": "1e325a44870a53368d81cc4ccaed2e4c4d55cce81e6529d761d266926807e8f4"
+}

@@ -164,16 +164,7 @@
       "then": {
         "properties": {
           "data": {
-            "type": "object",
-            "required": [
-              "context"
-            ],
-            "properties": {
-              "context": {
-                "$ref": "image-context.schema.json"
-              }
-            },
-            "additionalProperties": false
+            "$ref": "image-context.schema.json"
           }
         }
       }

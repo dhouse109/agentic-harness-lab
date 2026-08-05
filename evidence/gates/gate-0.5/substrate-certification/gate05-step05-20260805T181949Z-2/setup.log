@@ -1,0 +1,42 @@
+[INFO] Confirming the complete retained Gate 0.5 substrate lineage...
+{
+  "approved_transition": "shared/schemas/tool-result.schema.json",
+  "baseline_sha256": "ce29b82eaf9e3ddba9cf92b28f76a522a3438c743aa0955611bad2f16fd569d8",
+  "other_step01_contract_hashes_changed": [],
+  "repaired_sha256": "ce04e938eb4e34e861c000b86fffeed4adc5e5c66167c52ebf5380b8cd3cd91b",
+  "status": "pass"
+}
+{
+  "canonical_target_sequence": 1,
+  "contract_hashes_match": true,
+  "next_step": "Gate 0.5 Step 02 \u2014 deterministic get_image_context(target)",
+  "run_id": "tmp.wyk8jhYh4k",
+  "status": "pass",
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}
+{
+  "canonical_target_sequence": 1,
+  "context_evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+  "historical_implementation_hashes_used_as_current_gate": false,
+  "image_sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+  "operation": "get_image_context",
+  "raw_image_retained": false,
+  "retained_evidence_integrity": true,
+  "status": "pass",
+  "step01_run_id": "gate05-step01-20260804T183655Z-888009",
+  "step02_run_id": "gate05-step02-20260804T191625Z-920936"
+}
+{
+  "article_source_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "canonical_target_sequence": 1,
+  "controlled_preflight": true,
+  "final_suggestion_count": 0,
+  "framework_execution_claimed": false,
+  "historical_implementation_hashes_used_as_current_gate": false,
+  "idempotent_replay_same_identity": true,
+  "operation": "submit_recommendation",
+  "retained_evidence_integrity": true,
+  "run_id": "gate05-step03-20260804T204600Z-969127",
+  "status": "pass"
+}
+[ERROR] Step 04 implementation files changed after the passing run.

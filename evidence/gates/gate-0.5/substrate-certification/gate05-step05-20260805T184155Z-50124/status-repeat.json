@@ -1,0 +1,15 @@
+{
+  "correlation_id": "gate05-step05-20260805T184155Z-50124-status-repeat",
+  "data": {
+    "reviewed_at": null,
+    "reviewer_username": null,
+    "revision_id": 21,
+    "status": "pending",
+    "uuid": "4cbd09cf-448e-4138-a605-920d784c2848"
+  },
+  "error": null,
+  "ok": true,
+  "schema_version": 1,
+  "timestamp": "2026-08-05T18:43:58Z",
+  "tool_name": "get_recommendation_status"
+}

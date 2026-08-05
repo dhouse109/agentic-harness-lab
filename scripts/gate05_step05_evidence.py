@@ -13,9 +13,20 @@ import sys
 from pathlib import Path
 from typing import Any
 
-PACKAGE_VERSION = "1.0.5"
+PACKAGE_NAME = "gate-0.5-step05-boundary-reconciliation"
+PACKAGE_VERSION = "1.1.0"
 FREEZE_MANIFEST = "shared/contracts/GATE05-SUBSTRATE-FREEZE.json"
 FREEZE_DIGEST = "shared/contracts/GATE05-SUBSTRATE-FREEZE.sha256"
+SUPERSEDED_RUN_ID = "gate05-step05-20260805T174126Z-18681"
+SUPERSEDED_RUN_PATH = (
+    "evidence/gates/gate-0.5/substrate-certification/" + SUPERSEDED_RUN_ID
+)
+SUPERSEDED_SUMMARY_SHA256 = (
+    "2e95515afb1d7be16585d61167dd24a18e36eb89cdf69728deb696730372b94e"
+)
+SUPERSEDED_FREEZE_SHA256 = (
+    "2fc14e961f9393be0e4cf06d8f9d5a97438515b2f9a275e1b1193c4cdd534768"
+)
 
 REQUIRED_FREEZE_FILES = [
     "EXPERIMENT_SPEC.md",
@@ -50,11 +61,14 @@ REQUIRED_FREEZE_FILES = [
 ]
 
 CERTIFICATION_FILES = [
+    "docs/decisions/ADR-0004-gate-0.5-exit-boundary.md",
+    "docs/decisions/ADR-0005-repair-get-image-context-tool-result-schema.md",
     "docs/gates/GATE-0.5-STEP05-SUBSTRATE-CERTIFICATION-AND-HANDOFF.md",
     "docs/handoffs/GATE-0.5-FRAMEWORK-HANDOFF.md",
     "shared/contracts/README.md",
     "drupal/scripts/gate05-step05-config.php",
     "scripts/gate05_step05_evidence.py",
+    "scripts/gate05_schema_regression.py",
     "scripts/run-gate05-step05.sh",
 ]
 
@@ -432,8 +446,38 @@ def prior_evidence(repo: Path) -> dict[str, Any]:
     return result
 
 
+def superseded_reconciliation(repo: Path) -> dict[str, Any]:
+    run_dir = repo / SUPERSEDED_RUN_PATH
+    summary_path = run_dir / "summary.json"
+    if not run_dir.is_dir() or not summary_path.is_file():
+        raise EvidenceError("The superseded v1.0.0 reconciliation run is missing.")
+    summary_sha256 = sha256_bytes(summary_path.read_bytes())
+    if summary_sha256 != SUPERSEDED_SUMMARY_SHA256:
+        raise EvidenceError("The superseded v1.0.0 reconciliation summary changed.")
+    summary = load_json(summary_path)
+    if (
+        summary.get("status") != "pass"
+        or summary.get("run_id") != SUPERSEDED_RUN_ID
+        or summary.get("freeze_manifest_sha256") != SUPERSEDED_FREEZE_SHA256
+    ):
+        raise EvidenceError("The superseded v1.0.0 reconciliation lineage is invalid.")
+    return {
+        "run_id": SUPERSEDED_RUN_ID,
+        "path": SUPERSEDED_RUN_PATH,
+        "status": "superseded_not_accepted_as_final_certification",
+        "reason": (
+            "Independent JSON Schema validation exposed the frozen "
+            "get_image_context tool-result shape defect."
+        ),
+        "summary_sha256": summary_sha256,
+        "freeze_manifest_sha256": SUPERSEDED_FREEZE_SHA256,
+        "retained_files_modified": False,
+    }
+
+
 def evaluate(repo: Path, run_dir: Path) -> None:
     lineage = prior_evidence(repo)
+    superseded = superseded_reconciliation(repo)
     canonical = load_json(
         repo / lineage["step01"]["path"] / "canonical-target.json"
     )
@@ -682,7 +726,7 @@ def evaluate(repo: Path, run_dir: Path) -> None:
             raise EvidenceError(f"Controlled preflight environment failed: {key}")
     if (
         environment.get("controlled_preflight") is not True
-        or environment.get("gate_0_5_complete") is not False
+        or environment.get("gate_0_5_complete") is not True
         or environment.get("shared_substrate_certification") is not True
     ):
         raise EvidenceError("Step 05 scope labels are invalid.")
@@ -698,7 +742,7 @@ def evaluate(repo: Path, run_dir: Path) -> None:
         "status": "certified",
         "git_base_commit": git_head(repo),
         "shared_substrate_certified": True,
-        "gate_0_5_complete": False,
+        "gate_0_5_complete": True,
         "controlled_preflight": True,
         "framework_execution_claimed": False,
         "model_call_performed": False,
@@ -778,6 +822,16 @@ def evaluate(repo: Path, run_dir: Path) -> None:
             "manifest, and update all framework wrappers."
         ),
         "evidence_lineage": lineage,
+        "reconciliation_lineage": {
+            "exit_boundary_adr": (
+                "docs/decisions/ADR-0004-gate-0.5-exit-boundary.md"
+            ),
+            "schema_repair_adr": (
+                "docs/decisions/"
+                "ADR-0005-repair-get-image-context-tool-result-schema.md"
+            ),
+            "superseded_run": superseded,
+        },
         "step05_evidence": {
             "path": run_dir.relative_to(repo).as_posix(),
             "run_id": run_dir.name,
@@ -815,12 +869,12 @@ def evaluate(repo: Path, run_dir: Path) -> None:
 
     summary = {
         "schema_version": 1,
-        "package": "gate-0.5-step05-substrate-certification-handoff",
+        "package": PACKAGE_NAME,
         "package_version": PACKAGE_VERSION,
         "run_id": run_dir.name,
         "status": "pass",
         "shared_substrate_certified": True,
-        "gate_0_5_complete": False,
+        "gate_0_5_complete": True,
         "controlled_preflight": True,
         "framework_execution_claimed": False,
         "model_call_performed": False,
@@ -846,17 +900,18 @@ def evaluate(repo: Path, run_dir: Path) -> None:
         "final_suggestion_count": 0,
         "final_reset_clean": True,
         "prior_evidence": lineage,
+        "superseded_certification": superseded,
         "active_runtime_config_sha256": active_config_sha256,
         "freeze_manifest": FREEZE_MANIFEST,
         "freeze_manifest_sha256": manifest_sha,
         "frozen_files": frozen_hashes,
         "certification_files": certification_hashes,
         "framework_vertical_slices": {
-            "drupal_ai": "not certified",
-            "langgraph": "not certified",
-            "crewai": "not certified",
+            "drupal_ai": {"certified": False},
+            "langgraph": {"certified": False},
+            "crewai": {"certified": False},
         },
-        "next_step": "Drupal AI Gate 0.5 one-image vertical slice",
+        "next_step": "gate-1-step01-drupal-ai-batch-contract-v1.0.0",
     }
     write_json(run_dir / "summary.json", summary)
 
@@ -866,7 +921,8 @@ def evaluate(repo: Path, run_dir: Path) -> None:
 - **Status:** PASS
 - **Run ID:** `{run_dir.name}`
 - **Shared substrate:** certified
-- **Overall Gate 0.5:** in progress
+- **Overall Gate 0.5:** complete
+- **Controlled preflight:** yes
 - **Operations exercised:** all four
 - **Canonical target:** sequence 1
 - **Source Article changed:** no
@@ -881,6 +937,13 @@ def evaluate(repo: Path, run_dir: Path) -> None:
 - LangGraph: not certified
 - CrewAI: not certified
 
+## Reconciliation lineage
+
+- ADR-0004 preserves the Gate 0.5 exit-boundary decision.
+- ADR-0005 repairs only the incorrect `get_image_context` tool-result schema branch.
+- `{SUPERSEDED_RUN_ID}` is preserved unchanged and marked superseded/not accepted as the final
+  certification boundary after independent schema validation exposed the frozen-contract defect.
+
 ## Frozen handoff
 
 - `{FREEZE_MANIFEST}`
@@ -889,7 +952,7 @@ def evaluate(repo: Path, run_dir: Path) -> None:
 
 ## Next step
 
-Implement the Drupal AI one-image vertical slice against the frozen substrate.
+Install `gate-1-step01-drupal-ai-batch-contract-v1.0.0`.
 """,
         encoding="utf-8",
     )
@@ -900,11 +963,12 @@ Implement the Drupal AI one-image vertical slice against the frozen substrate.
 
 def audit(repo: Path, run_dir: Path, active_config_path: Path) -> None:
     summary = load_json(run_dir / "summary.json")
+    superseded = superseded_reconciliation(repo)
     if (
         not isinstance(summary, dict)
         or summary.get("status") != "pass"
         or summary.get("shared_substrate_certified") is not True
-        or summary.get("gate_0_5_complete") is not False
+        or summary.get("gate_0_5_complete") is not True
         or summary.get("controlled_preflight") is not True
         or summary.get("framework_execution_claimed") is not False
         or summary.get("model_call_performed") is not False
@@ -916,6 +980,7 @@ def audit(repo: Path, run_dir: Path, active_config_path: Path) -> None:
         ]
         or summary.get("final_suggestion_count") != 0
         or summary.get("final_reset_clean") is not True
+        or summary.get("superseded_certification") != superseded
     ):
         raise EvidenceError("Latest Step 05 summary controls failed.")
 
@@ -1023,8 +1088,21 @@ def audit(repo: Path, run_dir: Path, active_config_path: Path) -> None:
     ):
         raise EvidenceError("Freeze manifest active configuration is invalid.")
 
-    if manifest.get("gate_0_5_complete") is not False:
-        raise EvidenceError("Freeze manifest overclaims overall Gate 0.5.")
+    if manifest.get("gate_0_5_complete") is not True:
+        raise EvidenceError("Freeze manifest Gate 0.5 exit boundary is invalid.")
+    reconciliation_lineage = manifest.get("reconciliation_lineage")
+    if (
+        not isinstance(reconciliation_lineage, dict)
+        or reconciliation_lineage.get("superseded_run") != superseded
+        or reconciliation_lineage.get("exit_boundary_adr")
+        != "docs/decisions/ADR-0004-gate-0.5-exit-boundary.md"
+        or reconciliation_lineage.get("schema_repair_adr")
+        != (
+            "docs/decisions/"
+            "ADR-0005-repair-get-image-context-tool-result-schema.md"
+        )
+    ):
+        raise EvidenceError("Gate 0.5 reconciliation lineage is invalid.")
     slices = manifest.get("framework_vertical_slices")
     if (
         not isinstance(slices, dict)
@@ -1044,7 +1122,7 @@ def audit(repo: Path, run_dir: Path, active_config_path: Path) -> None:
         "status": "pass",
         "run_id": run_dir.name,
         "shared_substrate_certified": True,
-        "gate_0_5_complete": False,
+        "gate_0_5_complete": True,
         "operations_exercised": summary["operations_exercised"],
         "canonical_target_sequence": 1,
         "source_article_unchanged": True,
