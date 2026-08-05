@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-RUNNER_VERSION="1.0.5"
+RUNNER_VERSION="1.1.0"
 MODE="${1:-help}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LAB_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -14,6 +14,12 @@ STEP02_LATEST="$LAB_ROOT/evidence/gates/gate-0.5/image-context/GATE05-STEP02-LAT
 STEP03_LATEST="$LAB_ROOT/evidence/gates/gate-0.5/submit-recommendation/GATE05-STEP03-LATEST.txt"
 STEP04_LATEST="$LAB_ROOT/evidence/gates/gate-0.5/recommendation-status/GATE05-STEP04-LATEST.txt"
 STEP04_PENDING="$LAB_ROOT/evidence/gates/gate-0.5/recommendation-status/GATE05-STEP04-PENDING.txt"
+SCHEMA_REGRESSION="$LAB_ROOT/scripts/gate05_schema_regression.py"
+SCHEMA_PYTHON="$LAB_ROOT/crewai/.venv/bin/python"
+HISTORICAL_STEP05_RUN="gate05-step05-20260805T010224Z-1100690"
+SUPERSEDED_STEP05_RUN="gate05-step05-20260805T174126Z-18681"
+BASELINE_TOOL_RESULT_SCHEMA_SHA256="ce29b82eaf9e3ddba9cf92b28f76a522a3438c743aa0955611bad2f16fd569d8"
+REPAIRED_TOOL_RESULT_SCHEMA_SHA256="ce04e938eb4e34e861c000b86fffeed4adc5e5c66167c52ebf5380b8cd3cd91b"
 CREDENTIALS_FILE="$DRUPAL_ROOT/.secrets/phase0-step7-accounts.txt"
 TEMP_DIR=""
 RESET_REQUIRED=0
@@ -115,6 +121,170 @@ resolve_step04_dir() {
     'Gate 0.5 Step 04'
 }
 
+audit_step01_with_approved_schema_repair() {
+  local step01_dir="$1" audit_dir
+  audit_dir="$(mktemp -d)"
+  chmod 700 "$audit_dir"
+  cp -a "$step01_dir/." "$audit_dir/"
+
+  python3 - \
+    "$LAB_ROOT" \
+    "$step01_dir/summary.json" \
+    "$audit_dir/summary.json" \
+    "$audit_dir/contract-sha256.txt" \
+    "$BASELINE_TOOL_RESULT_SCHEMA_SHA256" \
+    "$REPAIRED_TOOL_RESULT_SCHEMA_SHA256" <<'PY'
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+repo = Path(sys.argv[1])
+source_summary_path = Path(sys.argv[2])
+audit_summary_path = Path(sys.argv[3])
+audit_manifest_path = Path(sys.argv[4])
+baseline_hash = sys.argv[5]
+repaired_hash = sys.argv[6]
+schema_relative = "shared/schemas/tool-result.schema.json"
+
+summary = json.loads(source_summary_path.read_text(encoding="utf-8"))
+expected = summary.get("contract_files")
+if not isinstance(expected, dict) or expected.get(schema_relative) != baseline_hash:
+    raise SystemExit("[ERROR] Step 01 does not carry the approved baseline schema hash.")
+
+current = {}
+for relative in expected:
+    path = repo / relative
+    if not path.is_file():
+        raise SystemExit(f"[ERROR] Missing Step 01 contract file: {relative}")
+    current[relative] = hashlib.sha256(path.read_bytes()).hexdigest()
+
+unexpected = {
+    relative: {"baseline": expected_hash, "current": current[relative]}
+    for relative, expected_hash in expected.items()
+    if relative != schema_relative and current[relative] != expected_hash
+}
+if unexpected:
+    raise SystemExit(
+        "[ERROR] Step 01 contract drift exceeds the approved schema repair: "
+        + ", ".join(sorted(unexpected))
+    )
+if current.get(schema_relative) != repaired_hash:
+    raise SystemExit("[ERROR] Current tool-result schema is not the approved repaired hash.")
+
+audit_summary = dict(summary)
+audit_summary["contract_files"] = dict(expected)
+audit_summary["contract_files"][schema_relative] = repaired_hash
+audit_summary_path.write_text(
+    json.dumps(audit_summary, indent=2, sort_keys=True) + "\n",
+    encoding="utf-8",
+)
+
+lines = []
+for line in audit_manifest_path.read_text(encoding="utf-8").splitlines():
+    digest, relative = line.split(maxsplit=1)
+    if relative == schema_relative:
+        digest = repaired_hash
+    lines.append(f"{digest}  {relative}")
+audit_manifest_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+print(json.dumps({
+    "status": "pass",
+    "approved_transition": schema_relative,
+    "baseline_sha256": baseline_hash,
+    "repaired_sha256": repaired_hash,
+    "other_step01_contract_hashes_changed": [],
+}, indent=2, sort_keys=True))
+PY
+
+  python3 "$LAB_ROOT/scripts/gate05_step01_evidence.py" audit \
+    --repo "$LAB_ROOT" \
+    --run-dir "$audit_dir"
+  rm -rf "$audit_dir"
+}
+
+audit_step04_with_approved_schema_repair() {
+  local step04_dir="$1" audit_dir
+  audit_dir="$(mktemp -d)"
+  chmod 700 "$audit_dir"
+  cp -a "$step04_dir/." "$audit_dir/"
+
+  python3 - \
+    "$LAB_ROOT" \
+    "$step04_dir/summary.json" \
+    "$audit_dir/summary.json" \
+    "$audit_dir/implementation-sha256.txt" \
+    "$BASELINE_TOOL_RESULT_SCHEMA_SHA256" \
+    "$REPAIRED_TOOL_RESULT_SCHEMA_SHA256" <<'PY'
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+repo = Path(sys.argv[1])
+source_summary_path = Path(sys.argv[2])
+audit_summary_path = Path(sys.argv[3])
+audit_manifest_path = Path(sys.argv[4])
+baseline_hash = sys.argv[5]
+repaired_hash = sys.argv[6]
+schema_relative = "shared/schemas/tool-result.schema.json"
+
+summary = json.loads(source_summary_path.read_text(encoding="utf-8"))
+expected = summary.get("implementation_files")
+if not isinstance(expected, dict) or expected.get(schema_relative) != baseline_hash:
+    raise SystemExit("[ERROR] Step 04 does not carry the approved baseline schema hash.")
+
+current = {}
+for relative in expected:
+    path = repo / relative
+    if not path.is_file():
+        raise SystemExit(f"[ERROR] Missing Step 04 implementation file: {relative}")
+    current[relative] = hashlib.sha256(path.read_bytes()).hexdigest()
+
+unexpected = {
+    relative: {"baseline": expected_hash, "current": current[relative]}
+    for relative, expected_hash in expected.items()
+    if relative != schema_relative and current[relative] != expected_hash
+}
+if unexpected:
+    raise SystemExit(
+        "[ERROR] Step 04 implementation drift exceeds the approved schema repair: "
+        + ", ".join(sorted(unexpected))
+    )
+if current.get(schema_relative) != repaired_hash:
+    raise SystemExit("[ERROR] Current tool-result schema is not the approved repaired hash.")
+
+audit_summary = dict(summary)
+audit_summary["implementation_files"] = dict(expected)
+audit_summary["implementation_files"][schema_relative] = repaired_hash
+audit_summary_path.write_text(
+    json.dumps(audit_summary, indent=2, sort_keys=True) + "\n",
+    encoding="utf-8",
+)
+
+lines = []
+for line in audit_manifest_path.read_text(encoding="utf-8").splitlines():
+    digest, relative = line.split(maxsplit=1)
+    if relative == schema_relative:
+        digest = repaired_hash
+    lines.append(f"{digest}  {relative}")
+audit_manifest_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+print(json.dumps({
+    "status": "pass",
+    "approved_transition": schema_relative,
+    "baseline_sha256": baseline_hash,
+    "repaired_sha256": repaired_hash,
+    "other_step04_implementation_hashes_changed": [],
+}, indent=2, sort_keys=True))
+PY
+
+  python3 "$LAB_ROOT/scripts/gate05_step04_evidence.py" audit \
+    --repo "$LAB_ROOT" \
+    --run-dir "$audit_dir"
+  rm -rf "$audit_dir"
+}
+
 check_prior_evidence() {
   [[ ! -s "$STEP04_PENDING" ]] || \
     fail "A Step 04 run is still awaiting human review. Certify or abandon it first."
@@ -123,9 +293,7 @@ check_prior_evidence() {
   step01_dir="$(resolve_step01_dir)"
   step04_dir="$(resolve_step04_dir)"
 
-  python3 "$LAB_ROOT/scripts/gate05_step01_evidence.py" audit \
-    --repo "$LAB_ROOT" \
-    --run-dir "$step01_dir"
+  audit_step01_with_approved_schema_repair "$step01_dir"
 
   python3 "$LAB_ROOT/scripts/gate05_step03_evidence.py" audit-prior-step02 \
     --repo "$LAB_ROOT"
@@ -133,9 +301,7 @@ check_prior_evidence() {
   python3 "$LAB_ROOT/scripts/gate05_step04_evidence.py" audit-prior-step03 \
     --repo "$LAB_ROOT"
 
-  python3 "$LAB_ROOT/scripts/gate05_step04_evidence.py" audit \
-    --repo "$LAB_ROOT" \
-    --run-dir "$step04_dir"
+  audit_step04_with_approved_schema_repair "$step04_dir"
 }
 
 check_prerequisites() {
@@ -146,6 +312,10 @@ check_prerequisites() {
   [[ -f "$CREDENTIALS_FILE" ]] || fail "Missing local account credential file."
   [[ -x "$LAB_ROOT/scripts/gate05_step05_evidence.py" ]] || \
     fail "Missing Step 05 evidence helper."
+  [[ -x "$SCHEMA_REGRESSION" ]] || \
+    fail "Missing Step 05 JSON Schema regression helper."
+  [[ -x "$SCHEMA_PYTHON" ]] || \
+    fail "Missing locked CrewAI Python environment for JSON Schema validation."
   [[ -f "$DRUPAL_ROOT/scripts/gate05-step04.php" ]] || \
     fail "Missing Step 04 snapshot and inspection helper."
   [[ -x "$LAB_ROOT/shared/drupal_client/client.py" ]] || \
@@ -156,6 +326,14 @@ check_prerequisites() {
   resolve_step02_dir >/dev/null
   resolve_step03_dir >/dev/null
   resolve_step04_dir >/dev/null
+}
+
+audit_retained_success_schemas() {
+  "$SCHEMA_PYTHON" "$SCHEMA_REGRESSION" \
+    --repo "$LAB_ROOT" \
+    --evidence-root "$LOG_ROOT" \
+    --require-run "$HISTORICAL_STEP05_RUN" \
+    --require-run "$SUPERSEDED_STEP05_RUN"
 }
 
 preview() {
@@ -170,8 +348,12 @@ It will:
   - prove read-only and recommendation-only mutation boundaries
   - restore the exact seeded-clean baseline
   - generate a hash-addressed shared substrate freeze manifest
-  - mark overall Gate 0.5 as still in progress
-  - hand off next to the Drupal AI vertical slice
+  - validate retained success envelopes for all four operations against the
+    Draft 2020-12 tool-result schema using locked jsonschema 4.26.0
+  - require get_image_context to validate with image-context fields directly under data
+  - mark Gate 0.5 complete at the certified shared-substrate handoff
+  - keep Drupal AI, LangGraph, and CrewAI explicitly uncertified
+  - hand off next to gate-1-step01-drupal-ai-batch-contract-v1.0.0
 EOF
 }
 
@@ -279,6 +461,9 @@ setup() {
   info "Confirming the complete retained Gate 0.5 substrate lineage..."
   check_prior_evidence
 
+  info "Validating all retained Step 05 success envelopes against the frozen schemas..."
+  audit_retained_success_schemas
+
   info "Starting DDEV and rebuilding Drupal's container..."
   (
     cd "$DRUPAL_ROOT"
@@ -320,7 +505,7 @@ value = {
     "python": platform.python_version(),
     "controlled_preflight": True,
     "shared_substrate_certification": True,
-    "gate_0_5_complete": False,
+    "gate_0_5_complete": True,
     "framework_execution_claimed": False,
     "model_call_performed": False,
     "openai_api_key_present": bool(os.environ.get("OPENAI_API_KEY")),
@@ -602,11 +787,15 @@ PY
     --run-dir "$run_dir" \
     --active-config "$TEMP_DIR/active-config-audit.json"
 
+  info "Revalidating all retained Step 05 success envelopes, including this run..."
+  audit_retained_success_schemas
+
   pass "Gate 0.5 Step 05 shared substrate certification passed."
   pass "Evidence: $run_rel"
   pass "Freeze: shared/contracts/GATE05-SUBSTRATE-FREEZE.json"
-  printf '\nOverall Gate 0.5 remains in progress. Next: Drupal AI vertical slice.\n'
-  printf 'Do not commit yet. Paste the complete terminal output into the program-lead chat.\n'
+  printf '\nGate 0.5 is complete at the certified shared-substrate handoff.\n'
+  printf 'Next package: gate-1-step01-drupal-ai-batch-contract-v1.0.0\n'
+  printf 'Inspect retained evidence and do not commit until approved.\n'
 }
 
 resolve_last_run() {
@@ -679,11 +868,15 @@ PY
     --run-dir "$run_dir" \
     --active-config "$run_dir/resume-active-config.json"
 
+  info "Revalidating all retained Step 05 success envelopes, including this run..."
+  audit_retained_success_schemas
+
   pass "Gate 0.5 Step 05 shared substrate certification passed."
   pass "Evidence: $run_rel"
   pass "Freeze: shared/contracts/GATE05-SUBSTRATE-FREEZE.json"
-  printf '\nOverall Gate 0.5 remains in progress. Next: Drupal AI vertical slice.\n'
-  printf 'Do not commit yet. Paste the complete terminal output into the program-lead chat.\n'
+  printf '\nGate 0.5 is complete at the certified shared-substrate handoff.\n'
+  printf 'Next package: gate-1-step01-drupal-ai-batch-contract-v1.0.0\n'
+  printf 'Inspect retained evidence and do not commit until approved.\n'
 }
 
 resolve_latest_run() {
@@ -707,6 +900,7 @@ audit_latest() {
     --repo "$LAB_ROOT" \
     --run-dir "$LAB_ROOT/$relative" \
     --active-config "$audit_config"
+  audit_retained_success_schemas
   rm -f "$audit_config"
   pass "Gate 0.5 Step 05 audit passed."
   pass "Evidence: $relative"

@@ -29,11 +29,11 @@ Use one row per framework and organ. Every conclusion must link to a claim ID an
 
 | Control | Frozen value or evidence |
 |---|---|
-| Shared task | TODO — link `EXPERIMENT_SPEC.md` |
+| Shared task | Frozen in `EXPERIMENT_SPEC.md` version 1.1 |
 | Dataset | 20 Articles / 12 deterministic target usages |
 | Reset | `seeded-clean` before each comparison run |
-| Model and settings | TODO — freeze after Step 16 |
-| Output schema | TODO — `shared/schemas/` |
-| Validators | TODO — `shared/validators/` |
+| Model and settings | OpenAI `gpt-4.1-mini-2025-04-14`, temperature `0.0`; frozen by Step 16 and ADR-0002 |
+| Output schema | `shared/schemas/recommendation.schema.json` |
+| Validators | `gate05-validator-1.0.0`; frozen shared deterministic validation semantics |
 | Review destination | Drupal `alt_text_suggestion` queue |
-| Failure trigger | TODO — shared trigger and target item N |
+| Failure trigger | After target 6 is fully persisted and before target 7 begins |

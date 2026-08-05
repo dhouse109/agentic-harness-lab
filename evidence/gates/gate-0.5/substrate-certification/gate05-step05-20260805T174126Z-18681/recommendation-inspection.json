@@ -1,0 +1,58 @@
+{
+    "helper_version": "1.0.0",
+    "mode": "inspect",
+    "status": "pass",
+    "node_id": 21,
+    "uuid": "c2144434-6931-4811-b0f6-eeb62d15f026",
+    "title": "Alt text recommendation: drupal_ai target 1 (drupal_ai-20260805T174329Z-62ef37)",
+    "owner_username": "agent_bot",
+    "published": false,
+    "revision_count": 1,
+    "current_revision_id": 21,
+    "current_review_status": "pending",
+    "current_proposed_alt_text": "A blue geometric illustration accompanying the seeded Article 01 content.",
+    "current_source_framework": "drupal_ai",
+    "current_run_id": "drupal_ai-20260805T174329Z-62ef37",
+    "current_evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+    "current_target": {
+        "node_id": 1,
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "field_name": "field_image",
+        "delta": 0,
+        "file_id": 1,
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25"
+    },
+    "access": {
+        "agent_can_view": true,
+        "agent_can_update": false,
+        "editor_can_update": true
+    },
+    "revisions": [
+        {
+            "revision_id": 21,
+            "revision_user": {
+                "uid": 3,
+                "name": "agent_bot"
+            },
+            "timestamp_unix": 1785951809,
+            "timestamp_utc": "2026-08-05T17:43:29Z",
+            "revision_log": "submit_recommendation validator=gate05-validator-1.0.0 evidence=sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+            "published": false,
+            "proposed_alt_text": "A blue geometric illustration accompanying the seeded Article 01 content.",
+            "review_status": "pending",
+            "source_framework": "drupal_ai",
+            "run_id": "drupal_ai-20260805T174329Z-62ef37",
+            "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+            "target": {
+                "node_id": 1,
+                "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+                "revision_id": 1,
+                "field_name": "field_image",
+                "delta": 0,
+                "file_id": 1,
+                "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25"
+            }
+        }
+    ]
+}

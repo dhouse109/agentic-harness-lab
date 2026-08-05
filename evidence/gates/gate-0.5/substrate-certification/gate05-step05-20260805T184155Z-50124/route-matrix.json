@@ -1,0 +1,37 @@
+{
+    "status": "pass",
+    "routes": {
+        "find_images_needing_review": {
+            "path": "/api/agentic-harness/v1/images-needing-review",
+            "methods": [
+                "GET"
+            ],
+            "permission": "use agentic harness discovery tools"
+        },
+        "get_image_context": {
+            "path": "/api/agentic-harness/v1/image-context",
+            "methods": [
+                "POST"
+            ],
+            "permission": "use agentic harness discovery tools"
+        },
+        "submit_recommendation": {
+            "path": "/api/agentic-harness/v1/recommendations",
+            "methods": [
+                "POST"
+            ],
+            "permission": "create alt_text_suggestion content"
+        },
+        "get_recommendation_status": {
+            "path": "/api/agentic-harness/v1/recommendations/{recommendation_id}/status",
+            "methods": [
+                "GET"
+            ],
+            "permission": "use agentic harness discovery tools"
+        }
+    },
+    "agent_bot_principals": true,
+    "editor_dana_review_only": true,
+    "basic_auth_only": true,
+    "all_routes_no_cache": true
+}

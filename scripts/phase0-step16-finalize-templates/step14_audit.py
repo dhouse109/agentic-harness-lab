@@ -46,6 +46,10 @@ def main() -> int:
     require(root / "shared/prompts/PROMPTS.md", ["Contract version:** 1.1", "Base64-encoded PNG"])
     require(root / "docs/decisions/ADR-0001-freeze-experiment-contract.md", ["- **Status:** Accepted"])
     require(root / "docs/decisions/ADR-0002-freeze-model-after-vision-preflight.md", ["- **Status:** Accepted"])
+    require(
+        root / "docs/decisions/ADR-0005-repair-get-image-context-tool-result-schema.md",
+        ["- **Status:** Accepted", "data` property", "image-context.schema.json"],
+    )
     schemas = [
         "target.schema.json",
         "image-context.schema.json",
@@ -62,6 +66,25 @@ def main() -> int:
             fail(f"Invalid schema {path}: {exc}")
         if value.get("$schema") != "https://json-schema.org/draft/2020-12/schema":
             fail(f"Schema does not declare draft 2020-12: {path}")
+    tool_result = json.loads(
+        (root / "shared/schemas/tool-result.schema.json").read_text(encoding="utf-8")
+    )
+    context_branches = [
+        branch
+        for branch in tool_result.get("allOf", [])
+        if branch.get("if", {}).get("properties", {}).get("tool_name", {}).get("const")
+        == "get_image_context"
+    ]
+    if len(context_branches) != 1:
+        fail("tool-result schema must have exactly one get_image_context branch")
+    context_data = (
+        context_branches[0]
+        .get("then", {})
+        .get("properties", {})
+        .get("data")
+    )
+    if context_data != {"$ref": "image-context.schema.json"}:
+        fail("get_image_context data must directly reference image-context.schema.json")
     manifest = root / "docs/decisions/step14-contract-sha256.txt"
     if not manifest.is_file() or manifest.stat().st_size == 0:
         fail("Frozen contract manifest is missing")
