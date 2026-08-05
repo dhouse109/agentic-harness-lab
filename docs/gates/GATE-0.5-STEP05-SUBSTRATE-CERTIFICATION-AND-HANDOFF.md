@@ -2,8 +2,11 @@
 
 ## Decision
 
-This step certifies and freezes the framework-neutral substrate. It does **not** certify Drupal AI,
-LangGraph, CrewAI, or overall Gate 0.5.
+This step certifies and freezes the framework-neutral substrate and completes Gate 0.5 under the
+current execution plan.
+
+It does **not** certify Drupal AI, LangGraph, or CrewAI framework behavior. Those implementations
+begin after the handoff, starting with Drupal AI in Gate 1.
 
 ## Runtime proof
 
@@ -27,7 +30,7 @@ origin. Evidence must state that no Drupal AI framework execution or model call 
 
 ## Lineage proof
 
-The Step 05 audit must preserve the independent evidence chain:
+The Step 05 audit preserves the independent evidence chain:
 
 ```text
 Step 01 → canonical target and frozen contracts
@@ -55,12 +58,22 @@ The manifest records:
 - hashes of the frozen schemas, Drupal tool implementation, client, queue configuration, and reset
   substrate
 - the strict shared-versus-framework-owned boundary
-- the three framework slices as not yet certified
+- the three framework implementations as not certified by this substrate preflight
 
-Any material change requires an ADR and a new Step 05 run.
+That last item is an intentional proof-boundary statement. It does not mean Gate 0.5 remains open.
+
+Any material change requires an ADR and a new Step 05 certification run.
 
 ## Exit
 
-After the standalone audit passes, the next work is the Drupal AI one-image vertical slice. Overall
-Gate 0.5 remains open until Drupal AI, LangGraph, and CrewAI each use the frozen model and substrate
-to produce one real reviewed recommendation.
+After the standalone audit passes, Gate 0.5 is complete and the frozen substrate is accepted as the
+foundation for framework-owned implementation work.
+
+The next phase is Gate 1, beginning with:
+
+```text
+gate-1-step01-drupal-ai-batch-contract-v1.0.0
+```
+
+Gate 1 must not repeat or recertify Gate 0.5 unless the audit fails or the frozen substrate is
+intentionally changed.
