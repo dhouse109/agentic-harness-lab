@@ -2,14 +2,19 @@
 
 ## Status at handoff
 
-The common Drupal substrate is certified. No framework implementation is certified by this
-handoff.
+Gate 0.5 is complete. The common Drupal substrate is certified and frozen for framework-owned
+implementation work.
+
+The handoff itself does not claim that any framework behavior has been executed or certified:
 
 ```text
-Drupal AI   — not certified
-LangGraph   — not certified
-CrewAI      — not certified
+Drupal AI   — not certified by substrate preflight
+LangGraph   — not certified by substrate preflight
+CrewAI      — not certified by substrate preflight
 ```
+
+These are proof-boundary statements, not open Gate 0.5 checklist items. Drupal AI implementation
+begins next in Gate 1; LangGraph and CrewAI follow in subsequent implementation phases.
 
 ## Frozen constants
 
@@ -33,7 +38,7 @@ shared/contracts/GATE05-SUBSTRATE-FREEZE.json
 
 ## Shared operation sequence
 
-Each framework slice independently performs:
+Each framework implementation independently performs:
 
 ```text
 find_images_needing_review()
@@ -73,7 +78,7 @@ The framework must not bypass the shared Drupal operations with a private write 
 
 Moving one of these into a common helper would erase part of the comparison.
 
-## Required evidence for each one-image slice
+## Required evidence for each framework implementation
 
 Retain, without credentials, raw Base64, or chain of thought:
 
@@ -101,12 +106,16 @@ Retain, without credentials, raw Base64, or chain of thought:
 - Do not add richer context, retries, thresholds, or hidden tools to one implementation.
 - Do not present the controlled substrate preflight as a framework result.
 
-## Implementation order
+## Implementation order after Gate 0.5
 
-1. Drupal AI
-2. LangGraph
-3. CrewAI
+1. Gate 1 — Drupal AI full implementation, progressing from the canonical target to the 12-target
+   batch.
+2. LangGraph full implementation.
+3. CrewAI full implementation.
+4. Shared failure and recovery comparison.
 
-After all three slices pass, overall Gate 0.5 can be evaluated against:
+The next package is:
 
-> One image, one recommendation, one human decision, three implementations.
+```text
+gate-1-step01-drupal-ai-batch-contract-v1.0.0
+```
