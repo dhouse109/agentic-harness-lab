@@ -1,0 +1,3 @@
+[INFO] Audit branch: main
+[PASS] Gate 1 Step 1.02 audit passed.
+[PASS] Evidence: evidence/gates/gate-1/drupal-ai-runtime-probe/gate1-step02-20260806T010227Z-189538

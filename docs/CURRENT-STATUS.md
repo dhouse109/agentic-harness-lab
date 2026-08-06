@@ -8,9 +8,9 @@
 - **Phase 0:** complete.
 - **Gate 0.5:** complete and certified.
 - **Gate 1:** active.
-- **Completed packages:** Step 1.01 batch contract and Step 1.02 Drupal AI runtime probe.
-- **Step 1.02 execution:** complete.
-- **Next package:** `gate-1-step03-drupal-ai-tool-adapters-v1.0.0`.
+- **Completed packages:** Step 1.01 batch contract, Step 1.02 Drupal AI runtime probe, and Step 1.03 Drupal AI tool adapters.
+- **Step 1.03 execution:** complete.
+- **Next package:** `gate-1-step04-drupal-ai-canonical-vertical-slice-v1.0.0`.
 - **Execution environment:** Codex running locally inside WSL2, governed by `AGENTS.md`.
 
 Gate 0.5 completed when the framework-neutral Drupal substrate passed its standalone certification,
@@ -26,6 +26,9 @@ Accepted Step 1.01 evidence run: `gate1-step01-20260805T205448Z-103220`
 Accepted Gate 1 contract digest: `360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6`
 Accepted Step 1.02 evidence run: `gate1-step02-20260806T010227Z-189538`
 Accepted ADR-0006 SHA-256: `223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b`
+Accepted Step 1.03 evidence run: `gate1-step03-20260806T050827Z-494925`
+
+Step 1.03 directly exercises exactly four model-free Drupal AI FunctionCall adapters: `discover_targets`, `get_image_context`, `submit_recommendation`, and `get_recommendation_status`. It does not execute an AI Agent and makes no model or provider call. Its predecessor-compatible Article-source SHA-256 is `f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17`; the original Step 1.03 hash discrepancy was definition drift only, with no Drupal source drift.
 
 The v1.0.0 evidence run `gate1-step01-20260805T200619Z-87483` remains immutable. It is superseded
 for publication only because later checks found terminal schema blank lines and a main-only installed
@@ -93,8 +96,8 @@ The external delivery-package root is:
 ~/projects/agentic-harness-lab-packages/
 ```
 
-Packages 1.01 and 1.02 are complete. The next package is
-`gate-1-step03-drupal-ai-tool-adapters-v1.0.0`. Do not commit extracted packages or reuse a package
+Packages 1.01 through 1.03 are complete. The next package is
+`gate-1-step04-drupal-ai-canonical-vertical-slice-v1.0.0`. Do not commit extracted packages or reuse a package
 generated against a different repository baseline.
 
 ## Important interpretation

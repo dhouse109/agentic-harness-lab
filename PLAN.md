@@ -2,7 +2,7 @@
 
 ## Current status
 
-> Phase 0 and Gate 0.5 are complete. Gate 1 Steps 1.01 and 1.02 are complete; Step 1.03 is next.
+> Phase 0 and Gate 0.5 are complete. Gate 1 Steps 1.01 through 1.03 are complete; Step 1.04 is next.
 
 See `docs/CURRENT-STATUS.md` for the authoritative fresh-session status snapshot and reading order.
 
@@ -93,16 +93,25 @@ gate-1-step01-drupal-ai-batch-contract-v1.0.1
 gate-1-step02-drupal-ai-runtime-probe-v1.0.0
 ```
 
-**Next package:**
+**Completed package:**
 
 ```text
 gate-1-step03-drupal-ai-tool-adapters-v1.0.0
+```
+
+**Next package:**
+
+```text
+gate-1-step04-drupal-ai-canonical-vertical-slice-v1.0.0
 ```
 
 Accepted Step 1.01 evidence run: `gate1-step01-20260805T205448Z-103220`
 Accepted Gate 1 contract digest: `360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6`
 Accepted Step 1.02 evidence run: `gate1-step02-20260806T010227Z-189538`
 Accepted ADR-0006 SHA-256: `223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b`
+Accepted Step 1.03 evidence run: `gate1-step03-20260806T050827Z-494925`
+
+Step 1.03 directly exercises exactly four model-free Drupal AI FunctionCall adapters: `discover_targets`, `get_image_context`, `submit_recommendation`, and `get_recommendation_status`. It does not execute an AI Agent and makes no model or provider call. Its predecessor-compatible Article-source SHA-256 is `f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17`; the original Step 1.03 hash discrepancy was definition drift only, with no Drupal source drift.
 
 Step 1.01 freezes the machine-readable execution contract, canonical Drupal AI run-state and raw
 model-output schemas, lifecycle-separated evidence schemas, and the repository-native package
@@ -116,7 +125,7 @@ audit restriction. The v1.0.1 repair changes formatting and audit policy only, n
 
 - [x] Step 1.01 — batch contract
 - [x] Step 1.02 — pinned Drupal AI runtime probe
-- [ ] Step 1.03 — thin Drupal AI tool adapters
+- [x] Step 1.03 — thin Drupal AI tool adapters
 - [ ] Step 1.04 — canonical vertical slice
 - [ ] Step 1.05 — 12-target batch runner
 - [ ] Step 1.06 — batch evidence and human review
