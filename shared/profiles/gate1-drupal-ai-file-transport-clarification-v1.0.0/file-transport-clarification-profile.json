@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "profile": "gate1-drupal-ai-file-transport-clarification",
+  "profile_version": "1.0.0",
+  "qualifies_adr": "ADR-0007",
+  "decision": "ADR-0008",
+  "authoritative_identity_fields": [
+    "file_uuid",
+    "filename",
+    "mime_type",
+    "byte_length",
+    "sha256"
+  ],
+  "uri_role": "internal_transport_locator",
+  "uri_authorized_context_field": false,
+  "uri_retained": false,
+  "local_stream_wrapper_required": true,
+  "approved_local_stream_wrapper_schemes": [
+    "public",
+    "private"
+  ],
+  "remote_uri_prohibited": true,
+  "exact_uuid_resolution_required": true,
+  "exactly_one_file_entity_required": true,
+  "entity_identity_reverification_required": [
+    "file_uuid",
+    "filename",
+    "mime_type"
+  ],
+  "file_system_resolution_required": true,
+  "readable_local_path_required": true,
+  "byte_reverification_required": true,
+  "model_supplied_identity_prohibited": true,
+  "model_supplied_uri_path_or_file_selection_prohibited": true,
+  "source_mutation_prohibited": true,
+  "fail_closed_on": [
+    "uuid_mismatch",
+    "filename_mismatch",
+    "mime_type_mismatch",
+    "byte_length_mismatch",
+    "sha256_mismatch",
+    "file_resolution_failure",
+    "file_readability_failure",
+    "zero_or_multiple_file_entities",
+    "stream_wrapper_mismatch"
+  ],
+  "uri_change_identity_failure": false,
+  "uri_change_allowed_only_when": [
+    "same_authorized_file_uuid_resolves",
+    "filename_exact",
+    "mime_type_exact",
+    "byte_length_exact",
+    "sha256_exact",
+    "permitted_local_drupal_locator"
+  ],
+  "prohibited_evidence_artifacts": [
+    "uri",
+    "resolved_path",
+    "file_entity",
+    "raw_bytes",
+    "base64",
+    "data_url"
+  ],
+  "canonical_slice_profile_modified": false,
+  "step_1_04_implementation_included": false,
+  "step_1_05_included": false
+}
