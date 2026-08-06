@@ -1,0 +1,2605 @@
+{
+    "schema_version": 1,
+    "probe_version": "1.0.0",
+    "status": "pass",
+    "versions": {
+        "drupal/ai": "1.4.5",
+        "drupal/ai_agents": "1.3.2",
+        "drupal/ai_provider_openai": "1.2.3",
+        "drupal/core-recommended": "11.4.4"
+    },
+    "chosen_runtime": {
+        "service_id": "plugin.manager.ai_agents",
+        "service_class": "Drupal\\ai_agents\\PluginManager\\AiAgentManager",
+        "plugin_definition_id": "content_type_agent_triage",
+        "plugin_definition_custom_type": "config",
+        "config_entity_type": "ai_agent",
+        "config_entity_class": "Drupal\\ai_agents\\Entity\\AiAgent",
+        "instance_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+        "interfaces": [
+            "Drupal\\Component\\Plugin\\ConfigurableInterface",
+            "Drupal\\Core\\Plugin\\PluginFormInterface",
+            "Drupal\\ai_agents\\PluginInterfaces\\AiAgentInterface",
+            "Drupal\\ai_agents\\PluginInterfaces\\ConfigAiAgentInterface"
+        ],
+        "callable_entry_point": "determineSolvability",
+        "final_output_method": "solve",
+        "methods_verified": [
+            "determineSolvability",
+            "solve",
+            "getChatHistory",
+            "getToolResults",
+            "toArray",
+            "fromArray",
+            "overrideFunctions"
+        ]
+    },
+    "plugin_definition": {
+        "id": "content_type_agent_triage",
+        "custom_type": "config",
+        "class": null,
+        "provider": null,
+        "definition_keys": [
+            "id",
+            "label",
+            "custom_type"
+        ]
+    },
+    "config_entity": {
+        "entity_type_id": "ai_agent",
+        "class": "Drupal\\ai_agents\\Entity\\AiAgent",
+        "config_prefix": "ai_agents.ai_agent",
+        "id_key": "id",
+        "label_key": "label",
+        "loaded_id": "content_type_agent_triage",
+        "load_path": "entity_type.manager->getStorage('ai_agent')->load(plugin_id)",
+        "wrapped_by": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper"
+    },
+    "service_definitions": {
+        "plugin.manager.ai_agents": {
+            "class": "Drupal\\ai_agents\\PluginManager\\AiAgentManager",
+            "parent": "default_plugin_manager",
+            "arguments": [
+                "@entity_type.manager",
+                "@current_user",
+                "@plugin.manager.ai.function_calls",
+                "@ai_agents.agent_helper",
+                "@token",
+                "@event_dispatcher",
+                "@ai.provider",
+                "@ai_agents.artifact_helper",
+                "@uuid",
+                "@ai_agents.override_applier",
+                "@ai.guardrail_helper",
+                "@logger.channel.ai_agents"
+            ],
+            "factory": null
+        },
+        "ai.provider": {
+            "class": "Drupal\\ai\\AiProviderPluginManager",
+            "parent": "default_plugin_manager",
+            "arguments": [
+                "@service_container",
+                "@messenger",
+                "@uuid",
+                "@ai.hostname_filter_service"
+            ],
+            "factory": null
+        },
+        "plugin.manager.ai.function_calls": {
+            "class": "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager",
+            "parent": "default_plugin_manager",
+            "arguments": [],
+            "factory": null
+        },
+        "ai_agents.private_temp_status_storage": {
+            "class": "Drupal\\ai_agents\\Service\\AgentStatus\\Storages\\PrivateTempStatusStorage",
+            "parent": null,
+            "arguments": [
+                "@tempstore.private",
+                "@session_manager"
+            ],
+            "factory": null
+        },
+        "ai_agents.artifact_storage": {
+            "class": "Drupal\\ai_agents\\Artifact\\InMemoryArtifactStorage",
+            "parent": null,
+            "arguments": [],
+            "factory": null
+        }
+    },
+    "reflection_surface": {
+        "Drupal\\ai_agents\\PluginManager\\AiAgentManager": {
+            "constructor": {
+                "declaring_class": "Drupal\\ai_agents\\PluginManager\\AiAgentManager",
+                "visibility": "public",
+                "static": false,
+                "signature": "__construct(Traversable $namespaces, Drupal\\Core\\Cache\\CacheBackendInterface $cache_backend, Drupal\\Core\\Extension\\ModuleHandlerInterface $module_handler, Drupal\\Core\\Entity\\EntityTypeManagerInterface $entityTypeManager, Drupal\\Core\\Session\\AccountProxyInterface $currentUser, Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager $functionCallPluginManager, Drupal\\ai_agents\\Service\\AgentHelper $agentHelper, Drupal\\Core\\Utility\\Token $token, Symfony\\Component\\EventDispatcher\\EventDispatcherInterface $eventDispatcher, Drupal\\ai\\AiProviderPluginManager $aiProviderPluginManager, Drupal\\ai_agents\\Service\\ArtifactHelper $artifactHelper, Drupal\\Component\\Uuid\\UuidInterface $uuid, Drupal\\ai_agents\\Service\\AiAgentOverrideApplierInterface $overrideApplier, Drupal\\ai\\Guardrail\\AiGuardrailHelper $aiGuardrailHelper, Drupal\\Core\\Logger\\LoggerChannelInterface $logger)",
+                "parameters": [
+                    {
+                        "name": "namespaces",
+                        "type": "Traversable",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "cache_backend",
+                        "type": "Drupal\\Core\\Cache\\CacheBackendInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "module_handler",
+                        "type": "Drupal\\Core\\Extension\\ModuleHandlerInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "entityTypeManager",
+                        "type": "Drupal\\Core\\Entity\\EntityTypeManagerInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "currentUser",
+                        "type": "Drupal\\Core\\Session\\AccountProxyInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "functionCallPluginManager",
+                        "type": "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "agentHelper",
+                        "type": "Drupal\\ai_agents\\Service\\AgentHelper",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "token",
+                        "type": "Drupal\\Core\\Utility\\Token",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "eventDispatcher",
+                        "type": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "aiProviderPluginManager",
+                        "type": "Drupal\\ai\\AiProviderPluginManager",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "artifactHelper",
+                        "type": "Drupal\\ai_agents\\Service\\ArtifactHelper",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "uuid",
+                        "type": "Drupal\\Component\\Uuid\\UuidInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "overrideApplier",
+                        "type": "Drupal\\ai_agents\\Service\\AiAgentOverrideApplierInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "aiGuardrailHelper",
+                        "type": "Drupal\\ai\\Guardrail\\AiGuardrailHelper",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "logger",
+                        "type": "Drupal\\Core\\Logger\\LoggerChannelInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    }
+                ],
+                "return_type_declared": false,
+                "return_type": null
+            },
+            "public_method_names": [
+                "__construct",
+                "clearCachedDefinitions",
+                "createInstance",
+                "getAgentsByTool",
+                "getCacheContexts",
+                "getCacheMaxAge",
+                "getCacheTags",
+                "getDefinition",
+                "getDefinitions",
+                "getInstance",
+                "hasDefinition",
+                "processDefinition",
+                "setCacheBackend",
+                "useCaches"
+            ],
+            "relevant_method_signatures": {
+                "__construct": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginManager\\AiAgentManager",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "__construct(Traversable $namespaces, Drupal\\Core\\Cache\\CacheBackendInterface $cache_backend, Drupal\\Core\\Extension\\ModuleHandlerInterface $module_handler, Drupal\\Core\\Entity\\EntityTypeManagerInterface $entityTypeManager, Drupal\\Core\\Session\\AccountProxyInterface $currentUser, Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager $functionCallPluginManager, Drupal\\ai_agents\\Service\\AgentHelper $agentHelper, Drupal\\Core\\Utility\\Token $token, Symfony\\Component\\EventDispatcher\\EventDispatcherInterface $eventDispatcher, Drupal\\ai\\AiProviderPluginManager $aiProviderPluginManager, Drupal\\ai_agents\\Service\\ArtifactHelper $artifactHelper, Drupal\\Component\\Uuid\\UuidInterface $uuid, Drupal\\ai_agents\\Service\\AiAgentOverrideApplierInterface $overrideApplier, Drupal\\ai\\Guardrail\\AiGuardrailHelper $aiGuardrailHelper, Drupal\\Core\\Logger\\LoggerChannelInterface $logger)",
+                    "parameters": [
+                        {
+                            "name": "namespaces",
+                            "type": "Traversable",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "cache_backend",
+                            "type": "Drupal\\Core\\Cache\\CacheBackendInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "module_handler",
+                            "type": "Drupal\\Core\\Extension\\ModuleHandlerInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "entityTypeManager",
+                            "type": "Drupal\\Core\\Entity\\EntityTypeManagerInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "currentUser",
+                            "type": "Drupal\\Core\\Session\\AccountProxyInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "functionCallPluginManager",
+                            "type": "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "agentHelper",
+                            "type": "Drupal\\ai_agents\\Service\\AgentHelper",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "token",
+                            "type": "Drupal\\Core\\Utility\\Token",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "eventDispatcher",
+                            "type": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "aiProviderPluginManager",
+                            "type": "Drupal\\ai\\AiProviderPluginManager",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "artifactHelper",
+                            "type": "Drupal\\ai_agents\\Service\\ArtifactHelper",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "uuid",
+                            "type": "Drupal\\Component\\Uuid\\UuidInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "overrideApplier",
+                            "type": "Drupal\\ai_agents\\Service\\AiAgentOverrideApplierInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "aiGuardrailHelper",
+                            "type": "Drupal\\ai\\Guardrail\\AiGuardrailHelper",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "logger",
+                            "type": "Drupal\\Core\\Logger\\LoggerChannelInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "createInstance": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginManager\\AiAgentManager",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "createInstance($plugin_id, array $configuration = array (\n)): Drupal\\ai_agents\\PluginInterfaces\\AiAgentInterface",
+                    "parameters": [
+                        {
+                            "name": "plugin_id",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "configuration",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": true,
+                            "has_default": true
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "Drupal\\ai_agents\\PluginInterfaces\\AiAgentInterface"
+                },
+                "getDefinition": {
+                    "declaring_class": "Drupal\\Core\\Plugin\\DefaultPluginManager",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getDefinition($plugin_id, $exception_on_invalid = true)",
+                    "parameters": [
+                        {
+                            "name": "plugin_id",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "exception_on_invalid",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": true,
+                            "has_default": true
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                }
+            }
+        },
+        "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper": {
+            "constructor": {
+                "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                "visibility": "public",
+                "static": false,
+                "signature": "__construct(Drupal\\ai_agents\\AiAgentInterface $aiAgent, Drupal\\Core\\Session\\AccountInterface $currentUser, Drupal\\Core\\Entity\\EntityTypeManagerInterface $entityTypeManager, Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager $functionCallPluginManager, Drupal\\ai_agents\\Service\\AgentHelper $agentHelper, Drupal\\Core\\Utility\\Token $token, Symfony\\Component\\EventDispatcher\\EventDispatcherInterface $eventDispatcher, Drupal\\ai\\AiProviderPluginManager $aiProviderPluginManager, Drupal\\ai_agents\\Service\\ArtifactHelper $artifactHelper, Drupal\\Component\\Uuid\\UuidInterface $uuid, Drupal\\ai\\Guardrail\\AiGuardrailHelper $aiGuardrailHelper, Drupal\\Core\\Logger\\LoggerChannelInterface $logger)",
+                "parameters": [
+                    {
+                        "name": "aiAgent",
+                        "type": "Drupal\\ai_agents\\AiAgentInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "currentUser",
+                        "type": "Drupal\\Core\\Session\\AccountInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "entityTypeManager",
+                        "type": "Drupal\\Core\\Entity\\EntityTypeManagerInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "functionCallPluginManager",
+                        "type": "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "agentHelper",
+                        "type": "Drupal\\ai_agents\\Service\\AgentHelper",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "token",
+                        "type": "Drupal\\Core\\Utility\\Token",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "eventDispatcher",
+                        "type": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "aiProviderPluginManager",
+                        "type": "Drupal\\ai\\AiProviderPluginManager",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "artifactHelper",
+                        "type": "Drupal\\ai_agents\\Service\\ArtifactHelper",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "uuid",
+                        "type": "Drupal\\Component\\Uuid\\UuidInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "aiGuardrailHelper",
+                        "type": "Drupal\\ai\\Guardrail\\AiGuardrailHelper",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "logger",
+                        "type": "Drupal\\Core\\Logger\\LoggerChannelInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    }
+                ],
+                "return_type_declared": false,
+                "return_type": null
+            },
+            "public_method_names": [
+                "__construct",
+                "agentsCapabilities",
+                "agentsNames",
+                "allRequiredToolsRan",
+                "answerQuestion",
+                "applyTokens",
+                "approveSolution",
+                "askQuestion",
+                "buildConfigurationForm",
+                "changeUserPermissions",
+                "createContextMessage",
+                "defaultConfiguration",
+                "determineSolvability",
+                "executeTool",
+                "fromArray",
+                "getAiAgentEntity",
+                "getAiConfiguration",
+                "getAiProvider",
+                "getCallerAgentRunnerId",
+                "getChatHistory",
+                "getChatInput",
+                "getConfiguration",
+                "getCreateDirectly",
+                "getData",
+                "getDefaultInformationTools",
+                "getDetailedProgressTracking",
+                "getExtraTags",
+                "getFunctions",
+                "getId",
+                "getModelName",
+                "getModuleName",
+                "getProgressThreadId",
+                "getRunnerId",
+                "getStructuredOutput",
+                "getSystemPrompt",
+                "getTask",
+                "getTokenContexts",
+                "getToolResults",
+                "getToolResultsByClassName",
+                "getToolResultsByPluginId",
+                "hasAccess",
+                "inform",
+                "isAvailable",
+                "isFinished",
+                "overrideFunctions",
+                "resetFunctions",
+                "resetUserPermissions",
+                "rollback",
+                "setAiAgentEntity",
+                "setAiConfiguration",
+                "setAiProvider",
+                "setCallerAgentRunnerId",
+                "setChatHistory",
+                "setChatInput",
+                "setChatMessages",
+                "setConfiguration",
+                "setCreateDirectly",
+                "setData",
+                "setDetailedProgressTracking",
+                "setLooped",
+                "setModelName",
+                "setProgressThreadId",
+                "setProgressTracking",
+                "setRunnerId",
+                "setTask",
+                "setTokenContexts",
+                "setUserInterface",
+                "solve",
+                "submitConfigurationForm",
+                "toArray",
+                "toolShouldReturnDirectly",
+                "toolShouldUseArtifacts",
+                "validateConfigurationForm",
+                "validateTool"
+            ],
+            "relevant_method_signatures": {
+                "__construct": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "__construct(Drupal\\ai_agents\\AiAgentInterface $aiAgent, Drupal\\Core\\Session\\AccountInterface $currentUser, Drupal\\Core\\Entity\\EntityTypeManagerInterface $entityTypeManager, Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager $functionCallPluginManager, Drupal\\ai_agents\\Service\\AgentHelper $agentHelper, Drupal\\Core\\Utility\\Token $token, Symfony\\Component\\EventDispatcher\\EventDispatcherInterface $eventDispatcher, Drupal\\ai\\AiProviderPluginManager $aiProviderPluginManager, Drupal\\ai_agents\\Service\\ArtifactHelper $artifactHelper, Drupal\\Component\\Uuid\\UuidInterface $uuid, Drupal\\ai\\Guardrail\\AiGuardrailHelper $aiGuardrailHelper, Drupal\\Core\\Logger\\LoggerChannelInterface $logger)",
+                    "parameters": [
+                        {
+                            "name": "aiAgent",
+                            "type": "Drupal\\ai_agents\\AiAgentInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "currentUser",
+                            "type": "Drupal\\Core\\Session\\AccountInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "entityTypeManager",
+                            "type": "Drupal\\Core\\Entity\\EntityTypeManagerInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "functionCallPluginManager",
+                            "type": "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "agentHelper",
+                            "type": "Drupal\\ai_agents\\Service\\AgentHelper",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "token",
+                            "type": "Drupal\\Core\\Utility\\Token",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "eventDispatcher",
+                            "type": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "aiProviderPluginManager",
+                            "type": "Drupal\\ai\\AiProviderPluginManager",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "artifactHelper",
+                            "type": "Drupal\\ai_agents\\Service\\ArtifactHelper",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "uuid",
+                            "type": "Drupal\\Component\\Uuid\\UuidInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "aiGuardrailHelper",
+                            "type": "Drupal\\ai\\Guardrail\\AiGuardrailHelper",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "logger",
+                            "type": "Drupal\\Core\\Logger\\LoggerChannelInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "setTask": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setTask($task)",
+                    "parameters": [
+                        {
+                            "name": "task",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "setAiProvider": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setAiProvider($provider)",
+                    "parameters": [
+                        {
+                            "name": "provider",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "setModelName": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setModelName($modelName)",
+                    "parameters": [
+                        {
+                            "name": "modelName",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "setAiConfiguration": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setAiConfiguration($configuration)",
+                    "parameters": [
+                        {
+                            "name": "configuration",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "overrideFunctions": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "overrideFunctions(array $functions): void",
+                    "parameters": [
+                        {
+                            "name": "functions",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "void"
+                },
+                "getFunctions": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getFunctions()",
+                    "parameters": [],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "determineSolvability": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "determineSolvability()",
+                    "parameters": [],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "solve": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "solve()",
+                    "parameters": [],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "getChatHistory": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getChatHistory(): array",
+                    "parameters": [],
+                    "return_type_declared": true,
+                    "return_type": "array"
+                },
+                "getToolResults": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getToolResults(bool $recursive = false): array",
+                    "parameters": [
+                        {
+                            "name": "recursive",
+                            "type": "bool",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": true,
+                            "has_default": true
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "array"
+                },
+                "getStructuredOutput": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getStructuredOutput(): Drupal\\ai_agents\\Output\\StructuredResultDataInterface",
+                    "parameters": [],
+                    "return_type_declared": true,
+                    "return_type": "Drupal\\ai_agents\\Output\\StructuredResultDataInterface"
+                },
+                "toArray": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "toArray(): array",
+                    "parameters": [],
+                    "return_type_declared": true,
+                    "return_type": "array"
+                },
+                "fromArray": {
+                    "declaring_class": "Drupal\\ai_agents\\PluginBase\\AiAgentEntityWrapper",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "fromArray(array $data): void",
+                    "parameters": [
+                        {
+                            "name": "data",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "void"
+                }
+            }
+        },
+        "Drupal\\ai_agents\\Task\\Task": {
+            "constructor": {
+                "declaring_class": "Drupal\\ai_agents\\Task\\Task",
+                "visibility": "public",
+                "static": false,
+                "signature": "__construct($description)",
+                "parameters": [
+                    {
+                        "name": "description",
+                        "type": null,
+                        "allows_null": true,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    }
+                ],
+                "return_type_declared": false,
+                "return_type": null
+            },
+            "public_method_names": [
+                "__construct",
+                "getAuthor",
+                "getAuthorsUsername",
+                "getCommentCount",
+                "getComments",
+                "getDescription",
+                "getFiles",
+                "getTitle",
+                "setAuthor",
+                "setComments",
+                "setDescription",
+                "setFiles",
+                "setTitle"
+            ],
+            "relevant_method_signatures": {
+                "__construct": {
+                    "declaring_class": "Drupal\\ai_agents\\Task\\Task",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "__construct($description)",
+                    "parameters": [
+                        {
+                            "name": "description",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "setDescription": {
+                    "declaring_class": "Drupal\\ai_agents\\Task\\Task",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setDescription(string $description)",
+                    "parameters": [
+                        {
+                            "name": "description",
+                            "type": "string",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "setComments": {
+                    "declaring_class": "Drupal\\ai_agents\\Task\\Task",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setComments(array $comments)",
+                    "parameters": [
+                        {
+                            "name": "comments",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "setFiles": {
+                    "declaring_class": "Drupal\\ai_agents\\Task\\Task",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setFiles(array $files)",
+                    "parameters": [
+                        {
+                            "name": "files",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                }
+            }
+        },
+        "Drupal\\ai\\AiProviderPluginManager": {
+            "constructor": {
+                "declaring_class": "Drupal\\ai\\AiProviderPluginManager",
+                "visibility": "public",
+                "static": false,
+                "signature": "__construct(Traversable $namespaces, Drupal\\Core\\Cache\\CacheBackendInterface $cache_backend, Drupal\\Core\\Extension\\ModuleHandlerInterface $module_handler, Symfony\\Component\\DependencyInjection\\ContainerInterface $container, Drupal\\Core\\Messenger\\MessengerInterface $messenger, Drupal\\Component\\Uuid\\UuidInterface $uuid, Drupal\\ai\\Service\\HostnameFilter $hostname_filter)",
+                "parameters": [
+                    {
+                        "name": "namespaces",
+                        "type": "Traversable",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "cache_backend",
+                        "type": "Drupal\\Core\\Cache\\CacheBackendInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "module_handler",
+                        "type": "Drupal\\Core\\Extension\\ModuleHandlerInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "container",
+                        "type": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "messenger",
+                        "type": "Drupal\\Core\\Messenger\\MessengerInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "uuid",
+                        "type": "Drupal\\Component\\Uuid\\UuidInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "hostname_filter",
+                        "type": "Drupal\\ai\\Service\\HostnameFilter",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    }
+                ],
+                "return_type_declared": false,
+                "return_type": null
+            },
+            "public_method_names": [
+                "__construct",
+                "clearCachedDefinitions",
+                "createInstance",
+                "defaultIfNone",
+                "getCacheContexts",
+                "getCacheMaxAge",
+                "getCacheTags",
+                "getDefaultProviderForOperationType",
+                "getDefinition",
+                "getDefinitions",
+                "getInstance",
+                "getModelNameFromSimpleOption",
+                "getOperationType",
+                "getOperationTypes",
+                "getProvidersForOperationType",
+                "getSetProvider",
+                "getSimpleDefaultProviderOptions",
+                "getSimpleProviderModelOptions",
+                "hasDefinition",
+                "hasProvidersForOperationType",
+                "loadProviderFromSimpleOption",
+                "operationTypeHasDefault",
+                "processDefinition",
+                "providerDisabled",
+                "setCacheBackend",
+                "setStringTranslation",
+                "useCaches"
+            ],
+            "relevant_method_signatures": {
+                "__construct": {
+                    "declaring_class": "Drupal\\ai\\AiProviderPluginManager",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "__construct(Traversable $namespaces, Drupal\\Core\\Cache\\CacheBackendInterface $cache_backend, Drupal\\Core\\Extension\\ModuleHandlerInterface $module_handler, Symfony\\Component\\DependencyInjection\\ContainerInterface $container, Drupal\\Core\\Messenger\\MessengerInterface $messenger, Drupal\\Component\\Uuid\\UuidInterface $uuid, Drupal\\ai\\Service\\HostnameFilter $hostname_filter)",
+                    "parameters": [
+                        {
+                            "name": "namespaces",
+                            "type": "Traversable",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "cache_backend",
+                            "type": "Drupal\\Core\\Cache\\CacheBackendInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "module_handler",
+                            "type": "Drupal\\Core\\Extension\\ModuleHandlerInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "container",
+                            "type": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "messenger",
+                            "type": "Drupal\\Core\\Messenger\\MessengerInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "uuid",
+                            "type": "Drupal\\Component\\Uuid\\UuidInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "hostname_filter",
+                            "type": "Drupal\\ai\\Service\\HostnameFilter",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "createInstance": {
+                    "declaring_class": "Drupal\\ai\\AiProviderPluginManager",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "createInstance($plugin_id, array $configuration = array (\n)): Drupal\\ai\\Plugin\\ProviderProxy",
+                    "parameters": [
+                        {
+                            "name": "plugin_id",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "configuration",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": true,
+                            "has_default": true
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "Drupal\\ai\\Plugin\\ProviderProxy"
+                },
+                "getDefaultProviderForOperationType": {
+                    "declaring_class": "Drupal\\ai\\AiProviderPluginManager",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getDefaultProviderForOperationType(string $operation_type): ?array",
+                    "parameters": [
+                        {
+                            "name": "operation_type",
+                            "type": "string",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "?array"
+                }
+            }
+        },
+        "Drupal\\ai\\Plugin\\ProviderProxy": {
+            "constructor": {
+                "declaring_class": "Drupal\\ai\\Plugin\\ProviderProxy",
+                "visibility": "public",
+                "static": false,
+                "signature": "__construct(Drupal\\ai\\Base\\AiProviderClientBase $plugin, Symfony\\Component\\EventDispatcher\\EventDispatcherInterface $event_dispatcher, Drupal\\Core\\Logger\\LoggerChannelFactoryInterface $logger_factory, Drupal\\Component\\Uuid\\UuidInterface $uuid, Drupal\\Core\\Cache\\CacheBackendInterface $cache_backend, Drupal\\ai\\Service\\HostnameFilter $hostname_filter_service)",
+                "parameters": [
+                    {
+                        "name": "plugin",
+                        "type": "Drupal\\ai\\Base\\AiProviderClientBase",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "event_dispatcher",
+                        "type": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "logger_factory",
+                        "type": "Drupal\\Core\\Logger\\LoggerChannelFactoryInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "uuid",
+                        "type": "Drupal\\Component\\Uuid\\UuidInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "cache_backend",
+                        "type": "Drupal\\Core\\Cache\\CacheBackendInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "hostname_filter_service",
+                        "type": "Drupal\\ai\\Service\\HostnameFilter",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    }
+                ],
+                "return_type_declared": false,
+                "return_type": null
+            },
+            "public_method_names": [
+                "__call",
+                "__construct",
+                "__get",
+                "__set",
+                "cacheApiDefinition",
+                "getModuleDataName",
+                "getOperationTypeTriggerMethods",
+                "getPlugin",
+                "getRequestParentId",
+                "resetConfiguredModels",
+                "setRequestParentId"
+            ],
+            "relevant_method_signatures": {
+                "__construct": {
+                    "declaring_class": "Drupal\\ai\\Plugin\\ProviderProxy",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "__construct(Drupal\\ai\\Base\\AiProviderClientBase $plugin, Symfony\\Component\\EventDispatcher\\EventDispatcherInterface $event_dispatcher, Drupal\\Core\\Logger\\LoggerChannelFactoryInterface $logger_factory, Drupal\\Component\\Uuid\\UuidInterface $uuid, Drupal\\Core\\Cache\\CacheBackendInterface $cache_backend, Drupal\\ai\\Service\\HostnameFilter $hostname_filter_service)",
+                    "parameters": [
+                        {
+                            "name": "plugin",
+                            "type": "Drupal\\ai\\Base\\AiProviderClientBase",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "event_dispatcher",
+                            "type": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "logger_factory",
+                            "type": "Drupal\\Core\\Logger\\LoggerChannelFactoryInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "uuid",
+                            "type": "Drupal\\Component\\Uuid\\UuidInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "cache_backend",
+                            "type": "Drupal\\Core\\Cache\\CacheBackendInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "hostname_filter_service",
+                            "type": "Drupal\\ai\\Service\\HostnameFilter",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "__call": {
+                    "declaring_class": "Drupal\\ai\\Plugin\\ProviderProxy",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "__call($name, $arguments)",
+                    "parameters": [
+                        {
+                            "name": "name",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "arguments",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                }
+            }
+        },
+        "Drupal\\ai_provider_openai\\Plugin\\AiProvider\\OpenAiProvider": {
+            "constructor": {
+                "declaring_class": "Drupal\\ai\\Base\\AiProviderClientBase",
+                "visibility": "public",
+                "static": false,
+                "signature": "__construct(string $plugin_id, mixed $plugin_definition, Psr\\Http\\Client\\ClientInterface $http_client, Drupal\\Core\\Config\\ConfigFactoryInterface $config_factory, Drupal\\Core\\Logger\\LoggerChannelFactoryInterface $logger_factory, Drupal\\Core\\Cache\\CacheBackendInterface $cache_backend, Drupal\\key\\KeyRepositoryInterface $key_repository, Drupal\\Core\\Extension\\ModuleHandlerInterface $module_handler, Symfony\\Component\\EventDispatcher\\EventDispatcherInterface $event_dispatcher, Drupal\\Core\\File\\FileSystemInterface $file_system)",
+                "parameters": [
+                    {
+                        "name": "plugin_id",
+                        "type": "string",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "plugin_definition",
+                        "type": "mixed",
+                        "allows_null": true,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "http_client",
+                        "type": "Psr\\Http\\Client\\ClientInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "config_factory",
+                        "type": "Drupal\\Core\\Config\\ConfigFactoryInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "logger_factory",
+                        "type": "Drupal\\Core\\Logger\\LoggerChannelFactoryInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "cache_backend",
+                        "type": "Drupal\\Core\\Cache\\CacheBackendInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "key_repository",
+                        "type": "Drupal\\key\\KeyRepositoryInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "module_handler",
+                        "type": "Drupal\\Core\\Extension\\ModuleHandlerInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "event_dispatcher",
+                        "type": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "file_system",
+                        "type": "Drupal\\Core\\File\\FileSystemInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    }
+                ],
+                "return_type_declared": false,
+                "return_type": null
+            },
+            "public_method_names": [
+                "__construct",
+                "chat",
+                "create",
+                "disableModeration",
+                "embeddings",
+                "embeddingsVectorSize",
+                "enableModeration",
+                "getApiDefinition",
+                "getAuthenticationExample",
+                "getAvailableConfiguration",
+                "getChatSystemRole",
+                "getClient",
+                "getConfig",
+                "getConfiguration",
+                "getConfiguredModels",
+                "getDebugData",
+                "getDefaultConfigurationValues",
+                "getEndpoint",
+                "getInputExample",
+                "getMaxInputTokens",
+                "getMaxOutputTokens",
+                "getModelInfo",
+                "getModelSettings",
+                "getModels",
+                "getModelsConfig",
+                "getPluginDefinition",
+                "getPluginId",
+                "getSetupData",
+                "getSupportedCapabilities",
+                "getSupportedOperationTypes",
+                "getTags",
+                "hasAuthentication",
+                "hasPredefinedModels",
+                "isStreamedOutput",
+                "isUsable",
+                "loadModelConfig",
+                "loadModelsForm",
+                "maxEmbeddingsInput",
+                "modelSupportsCapabilities",
+                "moderation",
+                "moderationEndpoints",
+                "normalizeConfiguration",
+                "postSetup",
+                "removeTag",
+                "resetTags",
+                "setAuthentication",
+                "setChatSystemRole",
+                "setConfiguration",
+                "setDebugData",
+                "setTag",
+                "speechToText",
+                "streamedOutput",
+                "supportsCapability",
+                "textToImage",
+                "textToSpeech",
+                "validateModelsForm"
+            ],
+            "relevant_method_signatures": {
+                "__construct": {
+                    "declaring_class": "Drupal\\ai\\Base\\AiProviderClientBase",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "__construct(string $plugin_id, mixed $plugin_definition, Psr\\Http\\Client\\ClientInterface $http_client, Drupal\\Core\\Config\\ConfigFactoryInterface $config_factory, Drupal\\Core\\Logger\\LoggerChannelFactoryInterface $logger_factory, Drupal\\Core\\Cache\\CacheBackendInterface $cache_backend, Drupal\\key\\KeyRepositoryInterface $key_repository, Drupal\\Core\\Extension\\ModuleHandlerInterface $module_handler, Symfony\\Component\\EventDispatcher\\EventDispatcherInterface $event_dispatcher, Drupal\\Core\\File\\FileSystemInterface $file_system)",
+                    "parameters": [
+                        {
+                            "name": "plugin_id",
+                            "type": "string",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "plugin_definition",
+                            "type": "mixed",
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "http_client",
+                            "type": "Psr\\Http\\Client\\ClientInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "config_factory",
+                            "type": "Drupal\\Core\\Config\\ConfigFactoryInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "logger_factory",
+                            "type": "Drupal\\Core\\Logger\\LoggerChannelFactoryInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "cache_backend",
+                            "type": "Drupal\\Core\\Cache\\CacheBackendInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "key_repository",
+                            "type": "Drupal\\key\\KeyRepositoryInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "module_handler",
+                            "type": "Drupal\\Core\\Extension\\ModuleHandlerInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "event_dispatcher",
+                            "type": "Symfony\\Component\\EventDispatcher\\EventDispatcherInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "file_system",
+                            "type": "Drupal\\Core\\File\\FileSystemInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "setConfiguration": {
+                    "declaring_class": "Drupal\\ai\\Base\\AiProviderClientBase",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setConfiguration(array $configuration): void",
+                    "parameters": [
+                        {
+                            "name": "configuration",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "void"
+                },
+                "getConfiguration": {
+                    "declaring_class": "Drupal\\ai\\Base\\AiProviderClientBase",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getConfiguration(): array",
+                    "parameters": [],
+                    "return_type_declared": true,
+                    "return_type": "array"
+                },
+                "getAvailableConfiguration": {
+                    "declaring_class": "Drupal\\ai\\Base\\AiProviderClientBase",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getAvailableConfiguration(string $operation_type, string $model_id): array",
+                    "parameters": [
+                        {
+                            "name": "operation_type",
+                            "type": "string",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "model_id",
+                            "type": "string",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "array"
+                },
+                "getConfiguredModels": {
+                    "declaring_class": "Drupal\\ai_provider_openai\\Plugin\\AiProvider\\OpenAiProvider",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getConfiguredModels(?string $operation_type = NULL, array $capabilities = array (\n)): array",
+                    "parameters": [
+                        {
+                            "name": "operation_type",
+                            "type": "?string",
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": true,
+                            "has_default": true
+                        },
+                        {
+                            "name": "capabilities",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": true,
+                            "has_default": true
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "array"
+                }
+            }
+        },
+        "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager": {
+            "constructor": {
+                "declaring_class": "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager",
+                "visibility": "public",
+                "static": false,
+                "signature": "__construct(Traversable $namespaces, Drupal\\Core\\Cache\\CacheBackendInterface $cache_backend, Drupal\\Core\\Extension\\ModuleHandlerInterface $module_handler)",
+                "parameters": [
+                    {
+                        "name": "namespaces",
+                        "type": "Traversable",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "cache_backend",
+                        "type": "Drupal\\Core\\Cache\\CacheBackendInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "module_handler",
+                        "type": "Drupal\\Core\\Extension\\ModuleHandlerInterface",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    }
+                ],
+                "return_type_declared": false,
+                "return_type": null
+            },
+            "public_method_names": [
+                "__construct",
+                "clearCachedDefinitions",
+                "convertToolResponseToObject",
+                "convertToolsResponseToObjects",
+                "createInstance",
+                "functionExists",
+                "getCacheContexts",
+                "getCacheMaxAge",
+                "getCacheTags",
+                "getDefinition",
+                "getDefinitions",
+                "getExecutableDefinitions",
+                "getFunctionCallFromClass",
+                "getFunctionCallFromFunctionName",
+                "getInstance",
+                "getStructuredExecutableDefinitions",
+                "hasDefinition",
+                "processDefinition",
+                "setCacheBackend",
+                "useCaches"
+            ],
+            "relevant_method_signatures": {
+                "__construct": {
+                    "declaring_class": "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "__construct(Traversable $namespaces, Drupal\\Core\\Cache\\CacheBackendInterface $cache_backend, Drupal\\Core\\Extension\\ModuleHandlerInterface $module_handler)",
+                    "parameters": [
+                        {
+                            "name": "namespaces",
+                            "type": "Traversable",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "cache_backend",
+                            "type": "Drupal\\Core\\Cache\\CacheBackendInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "module_handler",
+                            "type": "Drupal\\Core\\Extension\\ModuleHandlerInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "createInstance": {
+                    "declaring_class": "Drupal\\Component\\Plugin\\PluginManagerBase",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "createInstance($plugin_id, array $configuration = array (\n))",
+                    "parameters": [
+                        {
+                            "name": "plugin_id",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "configuration",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": true,
+                            "has_default": true
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                }
+            }
+        },
+        "Drupal\\ai\\Base\\FunctionCallBase": {
+            "constructor": {
+                "declaring_class": "Drupal\\ai\\Base\\FunctionCallBase",
+                "visibility": "public",
+                "static": false,
+                "signature": "__construct(array $configuration, $plugin_id, $plugin_definition, Drupal\\ai\\Utility\\ContextDefinitionNormalizer $context_definition_normalizer, ?Drupal\\ai\\PluginManager\\AiDataTypeConverterPluginManager $data_type_converter_manager = NULL)",
+                "parameters": [
+                    {
+                        "name": "configuration",
+                        "type": "array",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "plugin_id",
+                        "type": null,
+                        "allows_null": true,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "plugin_definition",
+                        "type": null,
+                        "allows_null": true,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "context_definition_normalizer",
+                        "type": "Drupal\\ai\\Utility\\ContextDefinitionNormalizer",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    },
+                    {
+                        "name": "data_type_converter_manager",
+                        "type": "?Drupal\\ai\\PluginManager\\AiDataTypeConverterPluginManager",
+                        "allows_null": true,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": true,
+                        "has_default": true
+                    }
+                ],
+                "return_type_declared": false,
+                "return_type": null
+            },
+            "public_method_names": [
+                "__construct",
+                "__sleep",
+                "__wakeup",
+                "create",
+                "createInstanceAutowired",
+                "getBaseId",
+                "getCacheContexts",
+                "getCacheMaxAge",
+                "getCacheTags",
+                "getContext",
+                "getContextDefinition",
+                "getContextDefinitions",
+                "getContextMapping",
+                "getContextValue",
+                "getContextValues",
+                "getContexts",
+                "getDerivativeId",
+                "getFunctionName",
+                "getPluginDefinition",
+                "getPluginId",
+                "getReadableOutput",
+                "getStructuredOutput",
+                "getToolsId",
+                "isConfigurable",
+                "messenger",
+                "normalize",
+                "populateChildValue",
+                "populateValues",
+                "setContext",
+                "setContextDefinitionOverride",
+                "setContextMapping",
+                "setContextValue",
+                "setMessenger",
+                "setOutput",
+                "setStringTranslation",
+                "setStructuredOutput",
+                "setToolsId",
+                "validateContexts"
+            ],
+            "relevant_method_signatures": {
+                "__construct": {
+                    "declaring_class": "Drupal\\ai\\Base\\FunctionCallBase",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "__construct(array $configuration, $plugin_id, $plugin_definition, Drupal\\ai\\Utility\\ContextDefinitionNormalizer $context_definition_normalizer, ?Drupal\\ai\\PluginManager\\AiDataTypeConverterPluginManager $data_type_converter_manager = NULL)",
+                    "parameters": [
+                        {
+                            "name": "configuration",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "plugin_id",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "plugin_definition",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "context_definition_normalizer",
+                            "type": "Drupal\\ai\\Utility\\ContextDefinitionNormalizer",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "data_type_converter_manager",
+                            "type": "?Drupal\\ai\\PluginManager\\AiDataTypeConverterPluginManager",
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": true,
+                            "has_default": true
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "create": {
+                    "declaring_class": "Drupal\\ai\\Base\\FunctionCallBase",
+                    "visibility": "public",
+                    "static": true,
+                    "signature": "create(Symfony\\Component\\DependencyInjection\\ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): Drupal\\ai\\Service\\FunctionCalling\\FunctionCallInterface|static",
+                    "parameters": [
+                        {
+                            "name": "container",
+                            "type": "Symfony\\Component\\DependencyInjection\\ContainerInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "configuration",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "plugin_id",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        },
+                        {
+                            "name": "plugin_definition",
+                            "type": null,
+                            "allows_null": true,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallInterface|static"
+                },
+                "populateValues": {
+                    "declaring_class": "Drupal\\ai\\Base\\FunctionCallBase",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "populateValues(Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsFunctionOutput $output)",
+                    "parameters": [
+                        {
+                            "name": "output",
+                            "type": "Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsFunctionOutput",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "normalize": {
+                    "declaring_class": "Drupal\\ai\\Base\\FunctionCallBase",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "normalize(): Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsFunctionInput",
+                    "parameters": [],
+                    "return_type_declared": true,
+                    "return_type": "Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsFunctionInput"
+                },
+                "getReadableOutput": {
+                    "declaring_class": "Drupal\\ai\\Base\\FunctionCallBase",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getReadableOutput(): string",
+                    "parameters": [],
+                    "return_type_declared": true,
+                    "return_type": "string"
+                },
+                "getStructuredOutput": {
+                    "declaring_class": "Drupal\\ai\\Base\\FunctionCallBase",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getStructuredOutput(): array",
+                    "parameters": [],
+                    "return_type_declared": true,
+                    "return_type": "array"
+                }
+            }
+        },
+        "Drupal\\ai\\Service\\FunctionCalling\\ExecutableFunctionCallInterface": {
+            "constructor": null,
+            "public_method_names": [
+                "execute",
+                "getContext",
+                "getContextDefinition",
+                "getContextDefinitions",
+                "getContextMapping",
+                "getContextValue",
+                "getContextValues",
+                "getContexts",
+                "getFunctionName",
+                "getPluginDefinition",
+                "getPluginId",
+                "getReadableOutput",
+                "getToolsId",
+                "normalize",
+                "populateValues",
+                "setContext",
+                "setContextMapping",
+                "setContextValue",
+                "setOutput",
+                "setToolsId",
+                "validateContexts"
+            ],
+            "relevant_method_signatures": {
+                "execute": {
+                    "declaring_class": "Drupal\\Core\\Executable\\ExecutableInterface",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "execute()",
+                    "parameters": [],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "getReadableOutput": {
+                    "declaring_class": "Drupal\\ai\\Service\\FunctionCalling\\ExecutableFunctionCallInterface",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getReadableOutput(): string",
+                    "parameters": [],
+                    "return_type_declared": true,
+                    "return_type": "string"
+                },
+                "setOutput": {
+                    "declaring_class": "Drupal\\ai\\Service\\FunctionCalling\\ExecutableFunctionCallInterface",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setOutput(string $output): void",
+                    "parameters": [
+                        {
+                            "name": "output",
+                            "type": "string",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "void"
+                }
+            }
+        },
+        "Drupal\\ai\\OperationType\\Chat\\ChatInput": {
+            "constructor": {
+                "declaring_class": "Drupal\\ai\\OperationType\\Chat\\ChatInput",
+                "visibility": "public",
+                "static": false,
+                "signature": "__construct(array $messages)",
+                "parameters": [
+                    {
+                        "name": "messages",
+                        "type": "array",
+                        "allows_null": false,
+                        "by_reference": false,
+                        "variadic": false,
+                        "optional": false,
+                        "has_default": false
+                    }
+                ],
+                "return_type_declared": false,
+                "return_type": null
+            },
+            "public_method_names": [
+                "__construct",
+                "__toString",
+                "addGuardrailResult",
+                "addGuardrailSet",
+                "fromArray",
+                "getAllGuardrailResults",
+                "getChatStrictSchema",
+                "getChatStructuredJsonSchema",
+                "getChatTools",
+                "getDebugData",
+                "getGuardrailSet",
+                "getGuardrailSets",
+                "getGuardrailsResults",
+                "getHostnameFilter",
+                "getMessages",
+                "getSystemPrompt",
+                "isStreamedOutput",
+                "setChatStrictSchema",
+                "setChatStructuredJsonSchema",
+                "setChatTools",
+                "setDebugData",
+                "setDebugDataValue",
+                "setGuardrailSet",
+                "setGuardrailSets",
+                "setHostnameFilter",
+                "setMessages",
+                "setStreamedOutput",
+                "setSystemPrompt",
+                "toArray",
+                "toString"
+            ],
+            "relevant_method_signatures": {
+                "__construct": {
+                    "declaring_class": "Drupal\\ai\\OperationType\\Chat\\ChatInput",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "__construct(array $messages)",
+                    "parameters": [
+                        {
+                            "name": "messages",
+                            "type": "array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": false,
+                    "return_type": null
+                },
+                "setChatStructuredJsonSchema": {
+                    "declaring_class": "Drupal\\ai\\OperationType\\Chat\\ChatInput",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setChatStructuredJsonSchema(Drupal\\ai\\Dto\\StructuredOutputSchema|array $schema): void",
+                    "parameters": [
+                        {
+                            "name": "schema",
+                            "type": "Drupal\\ai\\Dto\\StructuredOutputSchema|array",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "void"
+                },
+                "getChatStructuredJsonSchema": {
+                    "declaring_class": "Drupal\\ai\\OperationType\\Chat\\ChatInput",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getChatStructuredJsonSchema(): array",
+                    "parameters": [],
+                    "return_type_declared": true,
+                    "return_type": "array"
+                },
+                "setChatTools": {
+                    "declaring_class": "Drupal\\ai\\OperationType\\Chat\\ChatInput",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "setChatTools(Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsInputInterface $tools): void",
+                    "parameters": [
+                        {
+                            "name": "tools",
+                            "type": "Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsInputInterface",
+                            "allows_null": false,
+                            "by_reference": false,
+                            "variadic": false,
+                            "optional": false,
+                            "has_default": false
+                        }
+                    ],
+                    "return_type_declared": true,
+                    "return_type": "void"
+                },
+                "getChatTools": {
+                    "declaring_class": "Drupal\\ai\\OperationType\\Chat\\ChatInput",
+                    "visibility": "public",
+                    "static": false,
+                    "signature": "getChatTools(): ?Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsInputInterface",
+                    "parameters": [],
+                    "return_type_declared": true,
+                    "return_type": "?Drupal\\ai\\OperationType\\Chat\\Tools\\ToolsInputInterface"
+                }
+            }
+        }
+    },
+    "context_surface": {
+        "task_class": "Drupal\\ai_agents\\Task\\Task",
+        "methods": [
+            "setDescription",
+            "setComments",
+            "setFiles"
+        ],
+        "account_boundary": "agent_bot",
+        "unrelated_drupal_data_allowed": false
+    },
+    "tool_surface": {
+        "manager_service": "plugin.manager.ai.function_calls",
+        "manager_class": "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager",
+        "attribute_class": "Drupal\\ai\\Attribute\\FunctionCall",
+        "base_class": "Drupal\\ai\\Base\\FunctionCallBase",
+        "interface": "Drupal\\ai\\Service\\FunctionCalling\\ExecutableFunctionCallInterface",
+        "selected_functions": {
+            "get_content_type_info": {
+                "name": "get_content_type_info",
+                "description": "This method gets all the base data for an content type, if its sticky, published by default etc.",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "node_type": {
+                            "name": "node_type",
+                            "type": "string",
+                            "description": "Node Type The data name of the node type to get more information about.",
+                            "enum": [
+                                "article"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "node_type"
+                    ]
+                }
+            }
+        },
+        "required_tools_pending": [
+            "get_content_type_info"
+        ],
+        "selection_allowlist": true,
+        "per_run_narrowing": "overrideFunctions",
+        "parameter_actions": [
+            "only_allow",
+            "force_value"
+        ],
+        "hidden_forced_parameter_supported": true,
+        "provider_level_hard_tool_choice_supported": false
+    },
+    "future_adapters": [
+        "discover_targets",
+        "get_image_context",
+        "submit_recommendation",
+        "get_recommendation_status"
+    ],
+    "provider": {
+        "manager_service": "ai.provider",
+        "manager_class": "Drupal\\ai\\AiProviderPluginManager",
+        "proxy_class": "Drupal\\ai\\Plugin\\ProviderProxy",
+        "plugin_id": "openai",
+        "plugin_class": "Drupal\\ai_provider_openai\\Plugin\\AiProvider\\OpenAiProvider",
+        "configured_key_reference_present": true,
+        "configured_key_value_retained": false,
+        "pinned_model_id": "gpt-4.1-mini-2025-04-14",
+        "agent_model_id": "gpt-4.1-mini-2025-04-14",
+        "pinned_model_bound_to_agent": true,
+        "model_catalog_query_performed": false,
+        "explicit_configuration": {
+            "temperature": 0
+        },
+        "temperature_configuration_supported": true,
+        "active_chat_with_tools_default": {
+            "provider_id": "openai",
+            "model_id": "gpt-5.2"
+        },
+        "default_path_accepted": false
+    },
+    "structured_output": {
+        "chat_input_method": "setChatStructuredJsonSchema",
+        "normalized_schema": {
+            "name": "drupal_ai_model_output",
+            "description": "Raw Drupal AI model output.",
+            "strict": true,
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "proposed_alt_text": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 250
+                    }
+                },
+                "required": [
+                    "proposed_alt_text"
+                ],
+                "additionalProperties": false
+            }
+        },
+        "raw_output_method": "solve",
+        "agent_getStructuredOutput_is_raw_model_output": false
+    },
+    "trace_surface": {
+        "agent_methods": [
+            "getChatHistory",
+            "getToolResults"
+        ],
+        "events": [
+            "ai_agents.request",
+            "ai_agents.response",
+            "ai_agents.tool_pre_executed",
+            "ai_agents.tool_finished_executed",
+            "ai_agents.finished_execution",
+            "ai.pre_generate_response"
+        ],
+        "provider_error_event": "Drupal\\ai\\Event\\AiExceptionEvent",
+        "provider_exception_returned_by_determineSolvability": false
+    },
+    "state_surface": {
+        "factory_service": "keyvalue",
+        "factory_class": "Drupal\\Core\\KeyValueStore\\KeyValueFactory",
+        "collection": "agentic_harness_drupal_ai.run_state",
+        "storage_class": "Drupal\\Core\\KeyValueStore\\DatabaseStorage",
+        "collection_opened": false,
+        "write_performed": false,
+        "wrapper_serializable_keys": [
+            "agent_results",
+            "ai_configuration",
+            "caller_agent_runner_id",
+            "chat_history",
+            "context_tools",
+            "create_directly",
+            "functions_override",
+            "looped",
+            "looped_enabled",
+            "model_name",
+            "progress_thread_id",
+            "progress_tracking",
+            "progress_tracking_items",
+            "provider_id",
+            "question",
+            "runner_id",
+            "tokens",
+            "tool_results"
+        ],
+        "restore_method": "fromArray",
+        "private_status_storage_class": "Drupal\\ai_agents\\Service\\AgentStatus\\Storages\\PrivateTempStatusStorage",
+        "private_status_storage_accepted": false,
+        "artifact_storage_class": "Drupal\\ai_agents\\Artifact\\InMemoryArtifactStorage",
+        "artifact_storage_accepted": false,
+        "shared_runtime_storage": false
+    },
+    "inspected_source_sha256": {
+        "web/modules/contrib/ai/ai.services.yml": "3695836345bd61ee39a00e366443f691d2e1711501e2cd14d7acd888c5a334b7",
+        "web/modules/contrib/ai_agents/ai_agents.services.yml": "9b8b85e2352066b9e71b394012dc636918fbafd173394aa69b0292342240700e",
+        "web/modules/contrib/ai_agents/src/PluginManager/AiAgentManager.php": "527dc18ff9b3345c54af7c2182daf7f408a96ba8a6360c0b7b2e3e35156675d5",
+        "web/modules/contrib/ai_agents/src/PluginBase/AiAgentEntityWrapper.php": "93e460b5661811e9c5b53b4c4586025fe8b499c52e0dd3dbb490de12a1560d3f",
+        "web/modules/contrib/ai_agents/src/PluginInterfaces/AiAgentInterface.php": "f597f77734460de8104e18c9e7878295251bc56b1b948dd553121b84c9a7faae",
+        "web/modules/contrib/ai_agents/src/PluginInterfaces/ConfigAiAgentInterface.php": "3a375546b3fb1adeb8e9162978ca644949ffa1ffc109854712a88125e8862106",
+        "web/modules/contrib/ai_agents/src/Entity/AiAgent.php": "08ead203e9055e54737283a570f1ebb18fc619be9e90e7c7b846d94d09a0b960",
+        "web/modules/contrib/ai_agents/src/Task/Task.php": "1adad9250c0213ab4729ebc5ba0e959e02729fec23415783e0cdc3ce060461f1",
+        "web/modules/contrib/ai/src/AiProviderPluginManager.php": "84f699d96a5074606fd0ef73184529b9ead5c51f8670f9d8874cade69c31eacb",
+        "web/modules/contrib/ai/src/Attribute/FunctionCall.php": "2bf408811ed68b0ba7d06eaef24ed095b6cd8263726f684eee52200263c10b73",
+        "web/modules/contrib/ai/src/Base/FunctionCallBase.php": "b5cb444a801ce03115e6f5b631b8bab55058d2c9a2748fa807b3ca5e4e1c1b26",
+        "web/modules/contrib/ai/src/Plugin/ProviderProxy.php": "8ea3717b5a6acc59001f08797033376ccf1ed59cf69a904da9be7937c74dfdb3",
+        "web/modules/contrib/ai/src/OperationType/Chat/ChatInput.php": "b4e18489f76b35b67c04b94e6c546fb91e0959d8dd6ea04241aa0a334784e4db",
+        "web/modules/contrib/ai_provider_openai/src/Plugin/AiProvider/OpenAiProvider.php": "b06622c6766daef8c5e0381161574115bce47a085776422a6a31646a1f060eab",
+        "web/core/lib/Drupal/Core/KeyValueStore/KeyValueFactoryInterface.php": "23dc193168d137f192bb210433c1496196953c8cf34ee9c15558573d3256870c",
+        "web/core/lib/Drupal/Core/KeyValueStore/DatabaseStorage.php": "b1282123d86f393c8296d38eca812113c8f1847a4c1b4f2a596b135a9090c32c"
+    },
+    "rejected_paths": {
+        "direct_provider_chat": "bypasses AI Agents execution and lifecycle",
+        "agent_helper_runAiProvider": "lower-level provider helper, not config-agent execution",
+        "ai_agents_explorer": "UI and private-session path",
+        "existing_domain_agents": "wrong domain and tool surface",
+        "direct_openai_sdk": "bypasses pinned Drupal AI stack",
+        "private_shared_operation_write_path": "violates frozen shared boundary",
+        "private_temp_status_storage": "session-bound, expirable, and skipped in CLI",
+        "in_memory_artifact_storage": "not restart-persistent",
+        "shared_runtime_state": "prohibited by Step 1.01"
+    },
+    "limitations": [
+        "top_level_wrapper_configuration_must_also_be_set_on_provider_proxy",
+        "required_tool_usage_is_loop_enforced_not_provider_hard_choice",
+        "provider_exception_detail_requires_event_capture",
+        "runtime_only_image_delivery_via_Task_setFiles_requires_Step_1_04_proof"
+    ],
+    "provider_pre_request_events_observed": 0,
+    "agent_request_events_observed": 0,
+    "model_call_performed": false,
+    "network_call_performed": false,
+    "drupal_write_performed": false,
+    "raw_image_retained": false,
+    "secret_retained": false,
+    "framework_implementation_claimed": false
+}

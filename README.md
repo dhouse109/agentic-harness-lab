@@ -17,7 +17,8 @@ and lifecycle and recovery.
 - **Gate 0.5:** complete and certified.
 - **Gate 1:** active.
 - **Step 1.01:** complete.
-- **Next package:** `gate-1-step02-drupal-ai-runtime-probe-v1.0.0`.
+- **Step 1.02:** complete.
+- **Next package:** `gate-1-step03-drupal-ai-tool-adapters-v1.0.0`.
 
 Accepted Gate 0.5 certification evidence is
 `evidence/gates/gate-0.5/substrate-certification/gate05-step05-20260805T184155Z-50124/`.
@@ -26,6 +27,8 @@ The frozen substrate digest is
 
 Accepted Step 1.01 evidence run: `gate1-step01-20260805T205448Z-103220`
 Accepted Gate 1 contract digest: `360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6`
+Accepted Step 1.02 evidence run: `gate1-step02-20260806T010227Z-189538`
+Accepted ADR-0006 SHA-256: `223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b`
 
 The v1.0.0 evidence run `gate1-step01-20260805T200619Z-87483` is preserved unchanged and superseded
 for publication only because later checks exposed terminal schema blank lines and a main-only audit
@@ -60,9 +63,7 @@ The repository-native Gate 1 package sequence is:
 6. Step 1.06 — batch evidence and human review
 7. Step 1.07 — certification, freeze, and handoff
 
-This sequence and the machine-readable Gate 1 contract govern later package generation. The Step
-1.02 runtime-path decision is expected to use `ADR-0006`, subject to confirming it remains the next
-available number.
+This sequence and the machine-readable Gate 1 contract govern later package generation. The Step 1.02 runtime-path decision is recorded in `ADR-0006`.
 
 ## Local Codex execution
 

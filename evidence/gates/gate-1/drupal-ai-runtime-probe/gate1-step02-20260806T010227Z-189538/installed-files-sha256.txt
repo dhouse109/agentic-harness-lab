@@ -1,0 +1,6 @@
+cbea80ad6f88b2965b8cee092e0c2f96227610bd6447bab93b9a6368e6cdcb6c  docs/gates/GATE-1-STEP02-DRUPAL-AI-RUNTIME-PROBE.md
+223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b  docs/decisions/ADR-0006-drupal-ai-programmatic-runtime-path.md
+ad06ff6ef78c325f00c3d98237e1794de8fd70b2513903e33112b4df5a6f84a9  drupal/scripts/gate1-step02-runtime-probe.php
+3aad27511b11bec9acfad8ec010b5eb7ee326705cc6d000e700311a573f858c3  scripts/gate1_step02_audit.py
+a363ca414ca69147ffc1ba22c78e22632eff05af6225d5486347c6172e6c507e  scripts/gate1_step02_finalize.py
+0cd05dde903c0e6f41534c9b1da62b801aa761e1e1ce61e71b05ad4264e40c72  scripts/run-gate1-step02.sh
