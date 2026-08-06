@@ -1,0 +1,106 @@
+{
+  "canonical_targets": [
+    {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    }
+  ],
+  "human_review": [
+    {
+      "decision": "approved",
+      "decision_revision_id": 22,
+      "prior_revision_id": 21,
+      "recommendation_uuid": "05b6ef6e-be24-4a18-815c-7f38848781ed",
+      "reviewed_at": "2026-08-06T21:47:50Z",
+      "reviewer": "editor_dana",
+      "source_article_unchanged": true
+    }
+  ],
+  "model_outputs": [
+    {
+      "proposed_alt_text": "Solid navy background with a large white number 1 composed of square blocks in the center, labeled 'PHASE 0 - PRIMARY IMAGE' at top left, 'EMERGENCY PREPAREDNESS' at bottom left, and 'SLOT 1' at bottom right."
+    }
+  ],
+  "recommendations": [
+    {
+      "evidence_hash": "sha256:9e87572f0a0e2497106e64879e0343b6ce5c9bbc91670c83a05c653d737e2aea",
+      "proposed_alt_text": "Solid navy background with a large white number 1 composed of square blocks in the center, labeled 'PHASE 0 - PRIMARY IMAGE' at top left, 'EMERGENCY PREPAREDNESS' at bottom left, and 'SLOT 1' at bottom right.",
+      "run_id": "drupal_ai-20260806T213954Z-2633b",
+      "schema_version": 1,
+      "source_framework": "drupal_ai",
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      },
+      "validator_version": "gate05-validator-1.0.0"
+    }
+  ],
+  "statuses": [
+    {
+      "observed_at": "2026-08-06T21:43:28Z",
+      "recommendation_uuid": "05b6ef6e-be24-4a18-815c-7f38848781ed",
+      "revision_id": 21,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-06T21:48:16Z",
+      "recommendation_uuid": "05b6ef6e-be24-4a18-815c-7f38848781ed",
+      "revision_id": 22,
+      "status": "approved"
+    }
+  ],
+  "submissions": [
+    {
+      "idempotent_replay_same_identity": true,
+      "initial_status": "pending",
+      "node_id": 21,
+      "revision_id": 21,
+      "sequence": 1,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      },
+      "uuid": "05b6ef6e-be24-4a18-815c-7f38848781ed"
+    }
+  ],
+  "validation_results": [
+    {
+      "deterministic_validation_passed": true,
+      "errors": [],
+      "sequence": 1,
+      "structured_output_schema_valid": true,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      }
+    }
+  ]
+}

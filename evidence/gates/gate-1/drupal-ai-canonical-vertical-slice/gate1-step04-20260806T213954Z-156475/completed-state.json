@@ -1,0 +1,50 @@
+{
+  "aborted_at": null,
+  "canonical_target": {
+    "delta": 0,
+    "existing_alt": "",
+    "field_name": "field_image",
+    "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+    "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+    "revision_id": 1,
+    "schema_version": 1,
+    "sequence": 1,
+    "target_state": "missing"
+  },
+  "completed_at": "2026-08-06T21:48:16Z",
+  "failed_at": null,
+  "framework_origin": "drupal_ai",
+  "human_review_paused_at": "2026-08-06T21:43:28Z",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "model_call_count": 1,
+  "prompt_version": "drupal-ai-alt-text-v1.0.0",
+  "provider": "openai",
+  "recommendation_identity": {
+    "node_id": 21,
+    "revision_id": 21,
+    "run_id": "drupal_ai-20260806T213954Z-2633b",
+    "target_sequence": 1,
+    "uuid": "05b6ef6e-be24-4a18-815c-7f38848781ed"
+  },
+  "resumed_at": "2026-08-06T21:48:16Z",
+  "run_id": "drupal_ai-20260806T213954Z-2633b",
+  "schema_version": 1,
+  "started_at": "2026-08-06T21:43:23Z",
+  "status": "completed",
+  "target_sequence_hash": "sha256:1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "temperature": 0,
+  "updated_at": "2026-08-06T21:48:16Z",
+  "wrapper_checkpoint": {
+    "ai_configuration": {
+      "temperature": 0
+    },
+    "base64_or_data_url_present": false,
+    "chat_history_empty": true,
+    "credential_or_authorization_present": false,
+    "files_or_images_present": false,
+    "from_array_restored": true,
+    "model_name": "gpt-4.1-mini-2025-04-14",
+    "provider_id": "openai",
+    "stage": "pre_task_pre_image_pre_provider"
+  }
+}
