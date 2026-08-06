@@ -1,0 +1,1 @@
+{"batch_cardinality": 12, "batch_root_excluded": true, "canonical_sequence": 1, "post_image_wrapper_serialization_prohibited": true, "slice_cardinality": 1, "status": "pass", "step_1_05_absent": true, "zero_or_two_slice_targets_rejected": true}

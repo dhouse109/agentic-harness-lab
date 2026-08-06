@@ -1,0 +1,7 @@
+7a50db44fe626d10012a03f1bfa942f3592552f44397d57cb11af47a02f506bf  ./docs/decisions/ADR-0007-canonical-slice-evidence-image-and-state-boundary.md
+2ebad3f85c97c74b6886b9ccce6f8012ad5f9304a7620e124303b675fbdbace7  ./docs/gates/GATE-1-STEP04-BOUNDARY-RECONCILIATION.md
+60f3721795359cc15178682103e9c540c8f0b51a79de7a46273e7dfe6980665d  ./shared/profiles/gate1-drupal-ai-canonical-slice-v1.0.0/canonical-slice-evidence.schema.json
+fa7fabde016eef008c0be6bd7a166faa0e611a51dc9527d8e42dc45df0b0a306  ./shared/profiles/gate1-drupal-ai-canonical-slice-v1.0.0/canonical-slice-profile.json
+e3a6e997fd74c2d383b4794f34f52e9a59c7200eea0c23009cce1e3dc33ab430  ./shared/profiles/gate1-drupal-ai-canonical-slice-v1.0.0/canonical-slice-run-state.schema.json
+1e0f776acd0286f5939380b89d17ba72ffb36109923bcdc22598478e91b40deb  ./scripts/gate1_step04_boundary_reconciliation_audit.py
+b4ee3f9e5f4534a7bfbcc990f46ab9994a9f3fcb0fbbe532f8bda8e1ce8b685a  ./scripts/run-gate1-step04-boundary-reconciliation.sh

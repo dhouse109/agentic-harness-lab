@@ -1,0 +1,15 @@
+{
+  "api_credit_used": false,
+  "automatic_retries": 0,
+  "drupal_mutation": false,
+  "model_call_performed": false,
+  "network_call_performed": false,
+  "one_provider_request_maximum": 1,
+  "provider_request_count": 0,
+  "schema_version": 1,
+  "status": "pass",
+  "status_documents_changed": false,
+  "step04_implementation_started": false,
+  "step05_started": false,
+  "wrapper_checkpoint": "pre_image_safe_and_restorable"
+}
