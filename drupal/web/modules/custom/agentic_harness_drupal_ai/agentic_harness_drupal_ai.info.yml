@@ -1,0 +1,9 @@
+name: Agentic Harness Drupal AI
+type: module
+description: 'Thin Drupal AI FunctionCall adapters for the certified agentic-harness operations.'
+package: Custom
+core_version_requirement: ^11
+dependencies:
+  - ai:ai
+  - ai_agents:ai_agents
+  - agentic_harness_tools:agentic_harness_tools

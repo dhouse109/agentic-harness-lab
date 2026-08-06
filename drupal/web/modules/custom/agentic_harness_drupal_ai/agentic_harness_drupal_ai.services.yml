@@ -1,0 +1,11 @@
+services:
+  logger.channel.agentic_harness_drupal_ai:
+    parent: logger.channel_base
+    arguments: ['agentic_harness_drupal_ai']
+
+  agentic_harness_drupal_ai.tool_result_runner:
+    class: Drupal\agentic_harness_drupal_ai\Service\ToolResultRunner
+    arguments:
+      - '@uuid'
+      - '@datetime.time'
+      - '@logger.channel.agentic_harness_drupal_ai'

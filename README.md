@@ -18,7 +18,8 @@ and lifecycle and recovery.
 - **Gate 1:** active.
 - **Step 1.01:** complete.
 - **Step 1.02:** complete.
-- **Next package:** `gate-1-step03-drupal-ai-tool-adapters-v1.0.0`.
+- **Step 1.03:** complete.
+- **Next package:** `gate-1-step04-drupal-ai-canonical-vertical-slice-v1.0.0`.
 
 Accepted Gate 0.5 certification evidence is
 `evidence/gates/gate-0.5/substrate-certification/gate05-step05-20260805T184155Z-50124/`.
@@ -29,6 +30,9 @@ Accepted Step 1.01 evidence run: `gate1-step01-20260805T205448Z-103220`
 Accepted Gate 1 contract digest: `360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6`
 Accepted Step 1.02 evidence run: `gate1-step02-20260806T010227Z-189538`
 Accepted ADR-0006 SHA-256: `223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b`
+Accepted Step 1.03 evidence run: `gate1-step03-20260806T050827Z-494925`
+
+Step 1.03 directly exercises exactly four model-free Drupal AI FunctionCall adapters: `discover_targets`, `get_image_context`, `submit_recommendation`, and `get_recommendation_status`. It does not execute an AI Agent and makes no model or provider call. Its predecessor-compatible Article-source SHA-256 is `f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17`; the original Step 1.03 hash discrepancy was definition drift only, with no Drupal source drift.
 
 The v1.0.0 evidence run `gate1-step01-20260805T200619Z-87483` is preserved unchanged and superseded
 for publication only because later checks exposed terminal schema blank lines and a main-only audit

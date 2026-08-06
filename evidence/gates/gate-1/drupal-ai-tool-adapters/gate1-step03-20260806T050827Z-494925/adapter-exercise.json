@@ -1,0 +1,1224 @@
+{
+  "accounts": {
+    "administrative_account_substituted": false,
+    "denied_accounts": [
+      "anonymous",
+      "editor_dana"
+    ],
+    "success_account": "agent_bot"
+  },
+  "agent_request_events_observed": 0,
+  "ai_agent_configuration_created": false,
+  "api_credit_used": false,
+  "delegation_services": {
+    "discover_targets": "Drupal\\agentic_harness_tools\\Service\\ImageReviewFinder",
+    "get_image_context": "Drupal\\agentic_harness_tools\\Service\\ImageContextProvider",
+    "get_recommendation_status": "Drupal\\agentic_harness_tools\\Service\\RecommendationStatusProvider",
+    "submit_recommendation": "Drupal\\agentic_harness_tools\\Service\\RecommendationSubmitter"
+  },
+  "discover_targets": {
+    "correlation_id": "step03-discover",
+    "data": {
+      "targets": [
+        {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+          "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+          "revision_id": 1,
+          "schema_version": 1,
+          "sequence": 1,
+          "target_state": "missing"
+        },
+        {
+          "delta": 1,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4",
+          "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+          "revision_id": 2,
+          "schema_version": 1,
+          "sequence": 2,
+          "target_state": "missing"
+        },
+        {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3",
+          "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+          "revision_id": 3,
+          "schema_version": 1,
+          "sequence": 3,
+          "target_state": "missing"
+        },
+        {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "4c2bacbf-1a18-5b91-95b6-04be3911e035",
+          "node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+          "revision_id": 4,
+          "schema_version": 1,
+          "sequence": 4,
+          "target_state": "missing"
+        },
+        {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "a5b69415-6c44-5263-adb0-ac7270f6c19f",
+          "node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+          "revision_id": 5,
+          "schema_version": 1,
+          "sequence": 5,
+          "target_state": "missing"
+        },
+        {
+          "delta": 1,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+          "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+          "revision_id": 6,
+          "schema_version": 1,
+          "sequence": 6,
+          "target_state": "missing"
+        },
+        {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "e7f2552b-adcc-5864-9331-4da0dfe829e0",
+          "node_uuid": "36ab6f42-32b8-57ae-919f-aad69ff1de69",
+          "revision_id": 7,
+          "schema_version": 1,
+          "sequence": 7,
+          "target_state": "missing"
+        },
+        {
+          "delta": 1,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "55375469-e22b-5b16-b667-46347039f610",
+          "node_uuid": "4a58d6c1-64d1-5d01-b6e2-518b7622aac6",
+          "revision_id": 8,
+          "schema_version": 1,
+          "sequence": 8,
+          "target_state": "missing"
+        },
+        {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "0edde8a1-266b-5fc2-b61c-71ac41ae35cf",
+          "node_uuid": "3fb5d79e-a5e7-5d92-84d0-797018ec34b4",
+          "revision_id": 9,
+          "schema_version": 1,
+          "sequence": 9,
+          "target_state": "missing"
+        },
+        {
+          "delta": 1,
+          "existing_alt": "image.jpg",
+          "field_name": "field_image",
+          "file_uuid": "86301d0c-54cf-5389-be0e-7f070abf6a61",
+          "node_uuid": "e574f0bf-40dc-539a-93c3-0750b1bbfd94",
+          "revision_id": 10,
+          "schema_version": 1,
+          "sequence": 10,
+          "target_state": "poor"
+        },
+        {
+          "delta": 0,
+          "existing_alt": "photo",
+          "field_name": "field_image",
+          "file_uuid": "96c76d54-cd3b-55b2-9fa5-ea817732ff8c",
+          "node_uuid": "dcbc6fff-fd8f-51ec-9b28-5ccaf043de3c",
+          "revision_id": 11,
+          "schema_version": 1,
+          "sequence": 11,
+          "target_state": "poor"
+        },
+        {
+          "delta": 1,
+          "existing_alt": "phase0-article-12-image-2.png",
+          "field_name": "field_image",
+          "file_uuid": "891be849-b0d8-5d3a-961c-05921b70e274",
+          "node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+          "revision_id": 12,
+          "schema_version": 1,
+          "sequence": 12,
+          "target_state": "poor"
+        }
+      ],
+      "total_count": 12
+    },
+    "error": null,
+    "ok": true,
+    "schema_version": 1,
+    "timestamp": "2026-08-06T05:10:21Z",
+    "tool_name": "find_images_needing_review"
+  },
+  "fixture_recommendation": {
+    "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+    "proposed_alt_text": "Red and blue geometric shapes arranged on a pale background.",
+    "run_id": "drupal_ai-20260806T030000Z-step03",
+    "schema_version": 1,
+    "source_framework": "drupal_ai",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    "validator_version": "gate05-validator-1.0.0"
+  },
+  "get_image_context": {
+    "direct_data_shape": true,
+    "image_context_schema_valid": true,
+    "raw_representation_retained": false,
+    "sanitized_data": {
+      "article": {
+        "body_plain": "This is fictional demonstration content for the Drupal GovCon 2026 agentic-harness lab. It contains no real agency, program, resident, client, or operational data. This article explains how residents can assemble supplies, identify evacuation routes, and prepare household contact plans. Its generated illustration uses a solid navy background, a large visible Article 1 identifier, a short topic label, and a primary or supporting-image label. The page and image are intentionally simple so context assembly, target provenance, validation, review, and recovery can be compared reproducibly across frameworks.",
+        "content_language": "en",
+        "revision_id": 1,
+        "title": "Phase 0 01 \u2014 Emergency Preparedness Checklist"
+      },
+      "collected_at": "2026-08-06T05:10:21Z",
+      "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+      "existing_alt": "",
+      "image": {
+        "byte_length": 4490,
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "filename": "phase0-article-01-image-1.png",
+        "height": 675,
+        "mime_type": "image/png",
+        "representation": {
+          "kind": "data_url",
+          "value_retained": false,
+          "value_sha256": "05c56d8ca0052910ef6b52d3a0555a67b698fe89bc3273cf605d0492bff6335d"
+        },
+        "sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+        "width": 1200
+      },
+      "schema_version": 1,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      }
+    },
+    "tool_result_schema_valid": true
+  },
+  "idempotent_replay": {
+    "correlation_id": "step03-submit-replay",
+    "data": {
+      "node_id": 21,
+      "revision_id": 21,
+      "run_id": "drupal_ai-20260806T030000Z-step03",
+      "source_framework": "drupal_ai",
+      "status": "pending",
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      },
+      "uuid": "dd6e4698-49bd-449c-a448-29de0f9aa9c7"
+    },
+    "error": null,
+    "ok": true,
+    "schema_version": 1,
+    "timestamp": "2026-08-06T05:10:21Z",
+    "tool_name": "submit_recommendation"
+  },
+  "model_call_performed": false,
+  "negative_controls": {
+    "invalid_status_identifier": {
+      "correlation_id": "step03-negative-invalid-status",
+      "data": null,
+      "error": {
+        "code": "INVALID_RECOMMENDATION_ID",
+        "message": "The recommendation identifier must be a positive node ID or UUID.",
+        "retryable": false
+      },
+      "ok": false,
+      "schema_version": 1,
+      "timestamp": "2026-08-06T05:10:21Z",
+      "tool_name": "get_recommendation_status"
+    },
+    "malformed_recommendation": {
+      "correlation_id": "step03-negative-malformed-recommendation",
+      "data": null,
+      "error": {
+        "code": "INVALID_RECOMMENDATION",
+        "message": "Recommendation keys do not match recommendation.schema.json.",
+        "retryable": false
+      },
+      "ok": false,
+      "schema_version": 1,
+      "timestamp": "2026-08-06T05:10:21Z",
+      "tool_name": "submit_recommendation"
+    },
+    "malformed_target": {
+      "correlation_id": "step03-negative-malformed-target",
+      "data": null,
+      "error": {
+        "code": "INVALID_TARGET",
+        "message": "Target keys do not match target.schema.json.",
+        "retryable": false
+      },
+      "ok": false,
+      "schema_version": 1,
+      "timestamp": "2026-08-06T05:10:21Z",
+      "tool_name": "get_image_context"
+    },
+    "stale_target_identity": {
+      "correlation_id": "step03-negative-stale-target",
+      "data": null,
+      "error": {
+        "code": "TARGET_STALE",
+        "message": "The target no longer matches the current authorized field usage.",
+        "retryable": false
+      },
+      "ok": false,
+      "schema_version": 1,
+      "timestamp": "2026-08-06T05:10:21Z",
+      "tool_name": "get_image_context"
+    },
+    "unexpected_recommendation_property": {
+      "correlation_id": "step03-negative-unexpected-recommendation",
+      "data": null,
+      "error": {
+        "code": "INVALID_RECOMMENDATION",
+        "message": "Recommendation keys do not match recommendation.schema.json.",
+        "retryable": false
+      },
+      "ok": false,
+      "schema_version": 1,
+      "timestamp": "2026-08-06T05:10:21Z",
+      "tool_name": "submit_recommendation"
+    },
+    "unexpected_target_property": {
+      "correlation_id": "step03-negative-unexpected-target",
+      "data": null,
+      "error": {
+        "code": "INVALID_TARGET",
+        "message": "Target keys do not match target.schema.json.",
+        "retryable": false
+      },
+      "ok": false,
+      "schema_version": 1,
+      "timestamp": "2026-08-06T05:10:21Z",
+      "tool_name": "get_image_context"
+    }
+  },
+  "network_call_performed": false,
+  "normalized_inputs": {
+    "discover_targets": null,
+    "get_image_context": {
+      "properties": {
+        "target": {
+          "description": "Target Exactly one object conforming to target.schema.json.",
+          "name": "target",
+          "type": "object"
+        }
+      },
+      "required": [
+        "target"
+      ],
+      "type": "object"
+    },
+    "get_recommendation_status": {
+      "properties": {
+        "recommendation_id": {
+          "description": "Recommendation identifier Exactly one positive node ID or UUID.",
+          "name": "recommendation_id",
+          "pattern": "^(?:[1-9][0-9]{0,18}|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12})$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "recommendation_id"
+      ],
+      "type": "object"
+    },
+    "submit_recommendation": {
+      "properties": {
+        "recommendation": {
+          "description": "Recommendation Exactly one object conforming to recommendation.schema.json.",
+          "name": "recommendation",
+          "type": "object"
+        }
+      },
+      "required": [
+        "recommendation"
+      ],
+      "type": "object"
+    }
+  },
+  "permission_denials": {
+    "anonymous": {
+      "discover_targets": {
+        "correlation_id": "step03-denial-anonymous-discover_targets",
+        "data": null,
+        "error": {
+          "code": "ACCESS_DENIED",
+          "message": "The calling account is not authorized to use this adapter.",
+          "retryable": false
+        },
+        "ok": false,
+        "schema_version": 1,
+        "timestamp": "2026-08-06T05:10:21Z",
+        "tool_name": "find_images_needing_review"
+      },
+      "get_image_context": {
+        "correlation_id": "step03-denial-anonymous-get_image_context",
+        "data": null,
+        "error": {
+          "code": "ACCESS_DENIED",
+          "message": "The calling account is not authorized to use this adapter.",
+          "retryable": false
+        },
+        "ok": false,
+        "schema_version": 1,
+        "timestamp": "2026-08-06T05:10:21Z",
+        "tool_name": "get_image_context"
+      },
+      "get_recommendation_status": {
+        "correlation_id": "step03-denial-anonymous-get_recommendation_status",
+        "data": null,
+        "error": {
+          "code": "ACCESS_DENIED",
+          "message": "The calling account is not authorized to use this adapter.",
+          "retryable": false
+        },
+        "ok": false,
+        "schema_version": 1,
+        "timestamp": "2026-08-06T05:10:21Z",
+        "tool_name": "get_recommendation_status"
+      },
+      "submit_recommendation": {
+        "correlation_id": "step03-denial-anonymous-submit_recommendation",
+        "data": null,
+        "error": {
+          "code": "ACCESS_DENIED",
+          "message": "The calling account is not authorized to use this adapter.",
+          "retryable": false
+        },
+        "ok": false,
+        "schema_version": 1,
+        "timestamp": "2026-08-06T05:10:21Z",
+        "tool_name": "submit_recommendation"
+      }
+    },
+    "editor_dana": {
+      "discover_targets": {
+        "correlation_id": "step03-denial-editor_dana-discover_targets",
+        "data": null,
+        "error": {
+          "code": "ACCESS_DENIED",
+          "message": "The calling account is not authorized to use this adapter.",
+          "retryable": false
+        },
+        "ok": false,
+        "schema_version": 1,
+        "timestamp": "2026-08-06T05:10:21Z",
+        "tool_name": "find_images_needing_review"
+      },
+      "get_image_context": {
+        "correlation_id": "step03-denial-editor_dana-get_image_context",
+        "data": null,
+        "error": {
+          "code": "ACCESS_DENIED",
+          "message": "The calling account is not authorized to use this adapter.",
+          "retryable": false
+        },
+        "ok": false,
+        "schema_version": 1,
+        "timestamp": "2026-08-06T05:10:21Z",
+        "tool_name": "get_image_context"
+      },
+      "get_recommendation_status": {
+        "correlation_id": "step03-denial-editor_dana-get_recommendation_status",
+        "data": null,
+        "error": {
+          "code": "ACCESS_DENIED",
+          "message": "The calling account is not authorized to use this adapter.",
+          "retryable": false
+        },
+        "ok": false,
+        "schema_version": 1,
+        "timestamp": "2026-08-06T05:10:21Z",
+        "tool_name": "get_recommendation_status"
+      },
+      "submit_recommendation": {
+        "correlation_id": "step03-denial-editor_dana-submit_recommendation",
+        "data": null,
+        "error": {
+          "code": "ACCESS_DENIED",
+          "message": "The calling account is not authorized to use this adapter.",
+          "retryable": false
+        },
+        "ok": false,
+        "schema_version": 1,
+        "timestamp": "2026-08-06T05:10:21Z",
+        "tool_name": "submit_recommendation"
+      }
+    }
+  },
+  "plugin_discovery": {
+    "discover_targets": {
+      "definition_class": "Drupal\\agentic_harness_drupal_ai\\Plugin\\AiFunctionCall\\DiscoverTargets",
+      "function_name": "discover_targets",
+      "group": "discover_targets",
+      "instance_class": "Drupal\\agentic_harness_drupal_ai\\Plugin\\AiFunctionCall\\DiscoverTargets"
+    },
+    "get_image_context": {
+      "definition_class": "Drupal\\agentic_harness_drupal_ai\\Plugin\\AiFunctionCall\\GetImageContext",
+      "function_name": "get_image_context",
+      "group": "get_image_context",
+      "instance_class": "Drupal\\agentic_harness_drupal_ai\\Plugin\\AiFunctionCall\\GetImageContext"
+    },
+    "get_recommendation_status": {
+      "definition_class": "Drupal\\agentic_harness_drupal_ai\\Plugin\\AiFunctionCall\\GetRecommendationStatus",
+      "function_name": "get_recommendation_status",
+      "group": "get_recommendation_status",
+      "instance_class": "Drupal\\agentic_harness_drupal_ai\\Plugin\\AiFunctionCall\\GetRecommendationStatus"
+    },
+    "submit_recommendation": {
+      "definition_class": "Drupal\\agentic_harness_drupal_ai\\Plugin\\AiFunctionCall\\SubmitRecommendation",
+      "function_name": "submit_recommendation",
+      "group": "submit_recommendation",
+      "instance_class": "Drupal\\agentic_harness_drupal_ai\\Plugin\\AiFunctionCall\\SubmitRecommendation"
+    }
+  },
+  "plugin_manager": "Drupal\\ai\\Service\\FunctionCalling\\FunctionCallPluginManager",
+  "provider_pre_request_events_observed": 0,
+  "raw_image_retained": false,
+  "recommendation_count_during_fixture": 1,
+  "runtime_state_storage_opened": false,
+  "schema_version": 1,
+  "secret_retained": false,
+  "source_article_unchanged": true,
+  "state_after_submission": {
+    "article_count": 20,
+    "article_source_hash_reconciliation": {
+      "actual_source_drift": false,
+      "canonicalization": "recursively ksort associative arrays; preserve list order",
+      "classification": "hash_definition_drift_only",
+      "gate05_certification": {
+        "article_properties": [
+          "node_uuid",
+          "revision_id",
+          "title",
+          "status",
+          "body",
+          "images"
+        ],
+        "body_properties": [
+          "value",
+          "summary",
+          "format"
+        ],
+        "canonical_payload_bytes": 19726,
+        "entities": "all article nodes",
+        "image_or_file_metadata": "field delta and file UUID; no numeric file ID, URI, MIME, dimensions, or bytes",
+        "image_properties": [
+          "delta",
+          "file_uuid",
+          "alt",
+          "title"
+        ],
+        "node_id_included": false,
+        "node_uuid_included": true,
+        "null_empty_treatment": "empty body -> empty value/summary and null format; missing file -> null UUID; missing alt/title -> empty string",
+        "revision_id_included": true,
+        "sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+        "source": "drupal/scripts/gate05-step04.php::gate05_step04_snapshot/gate05_step04_canonicalize"
+      },
+      "gate05_step03_projection": {
+        "article_properties": [
+          "node_uuid",
+          "revision_id",
+          "title",
+          "status",
+          "images"
+        ],
+        "canonical_payload_bytes": 6915,
+        "entities": "all article nodes",
+        "image_or_file_metadata": "field delta and file UUID; no numeric file ID, URI, MIME, dimensions, or bytes",
+        "image_properties": [
+          "delta",
+          "file_uuid",
+          "alt",
+          "title"
+        ],
+        "node_id_included": false,
+        "node_uuid_included": true,
+        "null_empty_treatment": "missing file entity -> null file_uuid; missing alt/title -> empty string",
+        "revision_id_included": true,
+        "sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+        "source": "drupal/scripts/gate05-step03.php snapshot mode/gate05_step03_canonicalize"
+      },
+      "json_encoding_flags": [
+        "JSON_UNESCAPED_SLASHES",
+        "JSON_UNESCAPED_UNICODE",
+        "JSON_THROW_ON_ERROR"
+      ],
+      "original_step03_extended": {
+        "article_properties": [
+          "nid",
+          "uuid",
+          "revision_id",
+          "title",
+          "body",
+          "images"
+        ],
+        "canonical_payload_bytes": 19058,
+        "entities": "all article nodes",
+        "image_or_file_metadata": "numeric file target ID, field delta, and file UUID; no URI, MIME, dimensions, or bytes",
+        "image_properties": [
+          "delta",
+          "target_id",
+          "file_uuid",
+          "alt",
+          "title"
+        ],
+        "node_id_included": true,
+        "node_uuid_included": true,
+        "null_empty_treatment": "missing body/alt/title -> empty string; missing target_id -> 0; missing file -> null UUID",
+        "revision_id_included": true,
+        "sha256": "ecef88e5f60714319e46ec2061e7022f9e5a984b4e96f39c97917c6e927ecf66",
+        "source": "drupal/scripts/gate1-step03-adapter-exercise.php::gate1_step03_state/gate1_step03_sort/gate1_step03_hash (original projection retained under a distinct diagnostic name)"
+      },
+      "predecessor_step02": {
+        "article_properties": [
+          "node_uuid",
+          "revision_id",
+          "title",
+          "status",
+          "images"
+        ],
+        "canonical_payload_bytes": 6915,
+        "entities": "all article nodes",
+        "image_or_file_metadata": "field delta and file UUID; no numeric file ID, URI, MIME, dimensions, or bytes",
+        "image_properties": [
+          "delta",
+          "file_uuid",
+          "alt",
+          "title"
+        ],
+        "node_id_included": false,
+        "node_uuid_included": true,
+        "null_empty_treatment": "missing file entity -> null file_uuid; missing alt/title -> empty string",
+        "revision_id_included": true,
+        "sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+        "source": "drupal/scripts/gate1-step02-runtime-probe.php::gate1_step02_snapshot/gate1_step02_sort/gate1_step02_sha256"
+      },
+      "record_order": "node query sorted by nid ASC; image values preserve field delta order",
+      "safe_record_facts": [
+        {
+          "gate05_certification_record_sha256": "d55a808ee4d219ea00fdb368d4dacecbd4599c4fda31763d1a56ee326523b03a",
+          "image_count": 1,
+          "node_uuid_sha256": "b11de99e595cef3c12b9b7431da3ee9f33d9814d1a1c9926987969d5f2efba67",
+          "position": 1,
+          "predecessor_record_sha256": "c8190640884a4b2db9524f6a2005b8fc6e16133e5d8c0acc0ae1108f99ea41b9",
+          "revision_id": 1,
+          "step03_extended_record_sha256": "e5b04ab05bb301a6cab973bf209318298e124743cd440d5e75f428b10a23a3b9"
+        },
+        {
+          "gate05_certification_record_sha256": "9fb649fccfb32f153c58406f2ba9f7fe106d62964e5d4aa1f18799d2f8cf4a56",
+          "image_count": 2,
+          "node_uuid_sha256": "c8518d88dccc070b094219ee2c51e0918c4756704d09aedac37d9787f4faee30",
+          "position": 2,
+          "predecessor_record_sha256": "8de3289b06426c560d7c5046282539c15ec3081811f862874995a6e661b8b635",
+          "revision_id": 2,
+          "step03_extended_record_sha256": "2f6a18c19ef74c6f29b8de09068780a22154130cdfd64bc9130e4d3fcfe1eaf5"
+        },
+        {
+          "gate05_certification_record_sha256": "835d9bde79e714a9e7ec88e5e239ac2bf47885cbdc05e2ad4b16ebca8e90d823",
+          "image_count": 1,
+          "node_uuid_sha256": "8890975e64dd3b9277df02953380b55a04b8bc54a2a34e3edda554202d094c6f",
+          "position": 3,
+          "predecessor_record_sha256": "a7f72edde5bcab3d613abc63eb7c1d7443e70d32f36ae8b309263ded12d80fd6",
+          "revision_id": 3,
+          "step03_extended_record_sha256": "9a18e53f5f9ebb40811c0e459de10d23c12fbd8321fac71d4f89228668192d5c"
+        },
+        {
+          "gate05_certification_record_sha256": "c84028e6b9621dee8356100cd607ab2b7c0bfe3f6b82714ea5eccae1c1560315",
+          "image_count": 2,
+          "node_uuid_sha256": "ff211daecc06abf68e44546a5148000249642b6e181b1099ae35ea856eed3e4b",
+          "position": 4,
+          "predecessor_record_sha256": "3d238966bfcc2fd6a35fcd2305a0cc01655bfbc4addf43684f075f5763476569",
+          "revision_id": 4,
+          "step03_extended_record_sha256": "998e5f8b18bdce6cc20c7d820d9dd5f8cfebf0f8db486c43b05057aa75d3fd3c"
+        },
+        {
+          "gate05_certification_record_sha256": "6912e54ee316831a37e617935f06e0a0b575a4d3a50680ad2d0a213a19e0aa1a",
+          "image_count": 1,
+          "node_uuid_sha256": "ce821736d7a6b96899f87fd7a3339aa3b088514eb73d0660b2e9b62a15c0a423",
+          "position": 5,
+          "predecessor_record_sha256": "cadab7630defeb4ff725f338f9ce52b17891aca6526556073c2b985b5ee38ee0",
+          "revision_id": 5,
+          "step03_extended_record_sha256": "baf0a77fe68f57df85c129f906540ac8a1cd5839e7480da24fe5a8daee0da5fa"
+        },
+        {
+          "gate05_certification_record_sha256": "6b92d2021181cccb00ac4a7835d044c8c4a0064d3f51d8f7b39318efe628c3d7",
+          "image_count": 2,
+          "node_uuid_sha256": "fd9235b24091f08f4ea58504786792de62b807141ddd95958839c5dcc1b47287",
+          "position": 6,
+          "predecessor_record_sha256": "1e8183f3ac1d9597745ebcc7eb74aa0e5f436dedc5c6af49cfb572877e03679e",
+          "revision_id": 6,
+          "step03_extended_record_sha256": "c25629fb4859992bcf58fb91ddb4ccaae5f14c80ec21fb03a602edb615b27eca"
+        },
+        {
+          "gate05_certification_record_sha256": "9940926adc121c68bdfb8797f363a367f2ae15d51a5cd2ac96d5785eceebc8c7",
+          "image_count": 1,
+          "node_uuid_sha256": "bc2f24aa1dc091a7c4578d601b6d73cee7e5c08bdff0f1228090bc19794c465e",
+          "position": 7,
+          "predecessor_record_sha256": "055776280ac3ed41fbf96c391e0bd448ec6ce74cecdd8c63853bc205ce29838a",
+          "revision_id": 7,
+          "step03_extended_record_sha256": "f7c41755751e7c06afe641d39ba2824e4667145a81d38d48eeda33204bf931dc"
+        },
+        {
+          "gate05_certification_record_sha256": "b9b464b5741b99b744c0ec6c6b4e0513edddaa280f5de1e28ee2515030e90043",
+          "image_count": 2,
+          "node_uuid_sha256": "ca1daea5ec40adb3a56fafcd833cd49cf2e30c308d783aa65943ea1a9ee2baa6",
+          "position": 8,
+          "predecessor_record_sha256": "039d852c3f9832ab9c7afb1bede21e806dbeb53ab7fac8f059ef7c1db123a4a2",
+          "revision_id": 8,
+          "step03_extended_record_sha256": "3542377527af5a91b1282bad76dac096938cfe28166589652063024b43238344"
+        },
+        {
+          "gate05_certification_record_sha256": "d53d0c0c647aed1de90171250cdc73e46e5299bd2e02c70a3698a8e0522fd1d1",
+          "image_count": 1,
+          "node_uuid_sha256": "ffd36a0410eec3fcc5f831e018f1b5eb197ebd3c5e3e4fa6fbcfcb234f70d95c",
+          "position": 9,
+          "predecessor_record_sha256": "16ca3f450502c02b7a0ab2f6f22f323bceb79f6af7af62d998bfe2e97cc74d13",
+          "revision_id": 9,
+          "step03_extended_record_sha256": "964d695c702b721f8e4ff0942003925a5d8b9d2e920883d88e0a05dba3bac564"
+        },
+        {
+          "gate05_certification_record_sha256": "27821b337bb587eaf057b6967160bef0d86fe21fa659323c686826db3acd27ba",
+          "image_count": 2,
+          "node_uuid_sha256": "4d669a6c1d662840354ba5b070c20a9859ad306a52fb7f75ca2e7e13f7ff2922",
+          "position": 10,
+          "predecessor_record_sha256": "1ad139c51766ef70a32f0e18b8404019fa7eb4e5bb8065e87a8dc9b0067c9533",
+          "revision_id": 10,
+          "step03_extended_record_sha256": "99ac201259ff3acda0a0620c213095bcbb991fc1ed1fc49eff685079103c9b91"
+        },
+        {
+          "gate05_certification_record_sha256": "571447c6ebfd889fdb966d2eadbc0fca29262ee7662b4482c6af2a989fb7ed87",
+          "image_count": 1,
+          "node_uuid_sha256": "19d6b2d694910c91e9ec0759ee37053670c71da233c881ce8ce8d295809303c6",
+          "position": 11,
+          "predecessor_record_sha256": "8e68a19859ac60d2093a26332b714f740d1f54a03599509e435d42e86704d435",
+          "revision_id": 11,
+          "step03_extended_record_sha256": "8631b5376d2d1bc83b3243d9d63d59664fa7e3661d6c307cbe9db37ad7f255c2"
+        },
+        {
+          "gate05_certification_record_sha256": "7cc698ca43684d1b82b511a578d175bdf2e6b06e3b4ab87f637e60d15041463a",
+          "image_count": 2,
+          "node_uuid_sha256": "801870ae818a6ea09d9cfd2fb69e8642bad2d000f54de082b90f82a960225f2d",
+          "position": 12,
+          "predecessor_record_sha256": "1b5a08552426a8534d128c57540f084589640e124e859ede7e7fddec05a62d56",
+          "revision_id": 12,
+          "step03_extended_record_sha256": "93ad4d7a4996f1f1ddee0c0bc689b16d55d0a8caa21ab767f5270023a877f4e4"
+        },
+        {
+          "gate05_certification_record_sha256": "f52163711624bb3e4be05e90d0348e2a98eac81cf052722b5fcc377957646179",
+          "image_count": 1,
+          "node_uuid_sha256": "9fb6ea26c1e5d15e3b0ebd06447f5803f2021918a8febedf5557fee7a3e449d5",
+          "position": 13,
+          "predecessor_record_sha256": "0c0b8336dcd5e23d39f2faae8918be094bf3f76e2d976f052c471bca7f9e157b",
+          "revision_id": 13,
+          "step03_extended_record_sha256": "f54ce6ebe3f989884516b6fdd665af40cc1047d8b2d521b7a97695509c6b6591"
+        },
+        {
+          "gate05_certification_record_sha256": "abdad82885ee697dceea642b4fd6412826b6f2eadf1c160ea2eaffc523e8c442",
+          "image_count": 2,
+          "node_uuid_sha256": "641b16cf962b9b4d32c8c60f4e27f5560352712ba68fff49238e36197ab17bc6",
+          "position": 14,
+          "predecessor_record_sha256": "84b28c733ac5ba338290141eeaa9aed554d98b88022658a3ccc97372fc67733d",
+          "revision_id": 14,
+          "step03_extended_record_sha256": "909bcfe184156e794e7ad60e912665819eb33811a758afcce0f2624bb1e8a7fa"
+        },
+        {
+          "gate05_certification_record_sha256": "094cc0d3d3711d4bc06896edf3388f0b4538ece4035af73b287938947213782c",
+          "image_count": 1,
+          "node_uuid_sha256": "80c778abffb3bd4a234c3d089763e2bfe248162c44ff2d2dc8c5e844f351d697",
+          "position": 15,
+          "predecessor_record_sha256": "1cf8bb1fea982c7ffa93e80a35e4ef187f6678bb858c669acc6735510b183e5e",
+          "revision_id": 15,
+          "step03_extended_record_sha256": "cd09d9adc0998ab6eacb4f0bcee557f38b0fbcba5a95c230898a4c88e5174e39"
+        },
+        {
+          "gate05_certification_record_sha256": "e4c9eccc68a79903540c027408eebe364e90973d215b457d4eeb46a15093d788",
+          "image_count": 2,
+          "node_uuid_sha256": "8102d032c25d67d5cd02f8214c716536658724d0599e9ff05ebac9034577f856",
+          "position": 16,
+          "predecessor_record_sha256": "0ae9bde8975c59bcc8db2513f3378cfcab73a5de04157a8bafef50a1938c5a55",
+          "revision_id": 16,
+          "step03_extended_record_sha256": "3ac85d68ed0722c1686f3e61f2723c0db4e689f3d1dc2537074b681e8bb63725"
+        },
+        {
+          "gate05_certification_record_sha256": "3e133e6e14001d14a4e544631be8efeff6fd7bf8aab09a3f7cd67bbe6074284a",
+          "image_count": 1,
+          "node_uuid_sha256": "4648d669d447c717aa2a0673b41cd0f342de630b3ac2e460ba761ff32f6ff8be",
+          "position": 17,
+          "predecessor_record_sha256": "151e09922e86cbabee297f56d97f7e0b643560bb101f7b89c6c753586bdc9780",
+          "revision_id": 17,
+          "step03_extended_record_sha256": "cd755d5c4d4d9e4630a18c6901eaaa6c802cd2d426d9b996d7329612465614da"
+        },
+        {
+          "gate05_certification_record_sha256": "49978d2113fb6035828551ea27d620cbaa0cc07d1bf8745806d0a261fe1097e2",
+          "image_count": 2,
+          "node_uuid_sha256": "fcc046c8719387e31d3685aa5a7a562ed6fff0aa98d5f08266253025cac139d6",
+          "position": 18,
+          "predecessor_record_sha256": "5b83ba8d58580f057d93541e1819c2d8403242c42e9e03eba7e781f5454a2924",
+          "revision_id": 18,
+          "step03_extended_record_sha256": "22a2603d2ec49c51581242020e3ca90f59ed6685f90e6d800102e9171d20ee97"
+        },
+        {
+          "gate05_certification_record_sha256": "16fd1e332db3fcbbc76a16b8f3c2968b4fadb6e5b4f5a0c8545f2fb30c585bbc",
+          "image_count": 1,
+          "node_uuid_sha256": "21ef2723083bb06882e62ccd09a4c3877ca58139447d66777c69a28b3a329c10",
+          "position": 19,
+          "predecessor_record_sha256": "6bd41facd12f889e3a5fe3482d80dac32d643b119de2ca9471ef927dc9d0021c",
+          "revision_id": 19,
+          "step03_extended_record_sha256": "920392173b5f9e97efb2eabffdc629e56f2eb99c5af71c4b93f1e326b316aba3"
+        },
+        {
+          "gate05_certification_record_sha256": "58bd21cb28d26010ca9b89554d5cf64c7748d41dea9d5541e29d922e708cb275",
+          "image_count": 2,
+          "node_uuid_sha256": "e122967b3c7d8a0e8547656e70289f12a538ef06f5f509d82ffd0d97a85b34a1",
+          "position": 20,
+          "predecessor_record_sha256": "0983add6aa27be01fbb9834963bb77626306ce40fcecf452a66a0f03df5f3920",
+          "revision_id": 20,
+          "step03_extended_record_sha256": "a4bd6a71166b4217e148ea9ac386f520965a8a18063615292eedfa39de54a2db"
+        }
+      ],
+      "structural_differences": [
+        "original Step 1.03 added nid, scalar body value, and image target_id",
+        "original Step 1.03 renamed node_uuid to uuid",
+        "original Step 1.03 omitted status",
+        "Gate 0.5 certification additionally includes structured body value, summary, and format"
+      ]
+    },
+    "article_source_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+    "canonical_target_identity_sha256": "db66f90dbcf6308b97491d9a6ae24b9deb9a14e5b6a55ca355fc6fadb090b3e3",
+    "canonical_target_sequence": 1,
+    "gate05_certification_article_source_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+    "model_call_performed": false,
+    "module_enabled": true,
+    "network_call_performed": false,
+    "raw_image_retained": false,
+    "secret_retained": false,
+    "seeded_clean": false,
+    "status": "pass",
+    "step03_extended_article_source_sha256": "ecef88e5f60714319e46ec2061e7022f9e5a984b4e96f39c97917c6e927ecf66",
+    "suggestion_count": 1,
+    "target_count": 12,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+  },
+  "state_before_submission": {
+    "article_count": 20,
+    "article_source_hash_reconciliation": {
+      "actual_source_drift": false,
+      "canonicalization": "recursively ksort associative arrays; preserve list order",
+      "classification": "hash_definition_drift_only",
+      "gate05_certification": {
+        "article_properties": [
+          "node_uuid",
+          "revision_id",
+          "title",
+          "status",
+          "body",
+          "images"
+        ],
+        "body_properties": [
+          "value",
+          "summary",
+          "format"
+        ],
+        "canonical_payload_bytes": 19726,
+        "entities": "all article nodes",
+        "image_or_file_metadata": "field delta and file UUID; no numeric file ID, URI, MIME, dimensions, or bytes",
+        "image_properties": [
+          "delta",
+          "file_uuid",
+          "alt",
+          "title"
+        ],
+        "node_id_included": false,
+        "node_uuid_included": true,
+        "null_empty_treatment": "empty body -> empty value/summary and null format; missing file -> null UUID; missing alt/title -> empty string",
+        "revision_id_included": true,
+        "sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+        "source": "drupal/scripts/gate05-step04.php::gate05_step04_snapshot/gate05_step04_canonicalize"
+      },
+      "gate05_step03_projection": {
+        "article_properties": [
+          "node_uuid",
+          "revision_id",
+          "title",
+          "status",
+          "images"
+        ],
+        "canonical_payload_bytes": 6915,
+        "entities": "all article nodes",
+        "image_or_file_metadata": "field delta and file UUID; no numeric file ID, URI, MIME, dimensions, or bytes",
+        "image_properties": [
+          "delta",
+          "file_uuid",
+          "alt",
+          "title"
+        ],
+        "node_id_included": false,
+        "node_uuid_included": true,
+        "null_empty_treatment": "missing file entity -> null file_uuid; missing alt/title -> empty string",
+        "revision_id_included": true,
+        "sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+        "source": "drupal/scripts/gate05-step03.php snapshot mode/gate05_step03_canonicalize"
+      },
+      "json_encoding_flags": [
+        "JSON_UNESCAPED_SLASHES",
+        "JSON_UNESCAPED_UNICODE",
+        "JSON_THROW_ON_ERROR"
+      ],
+      "original_step03_extended": {
+        "article_properties": [
+          "nid",
+          "uuid",
+          "revision_id",
+          "title",
+          "body",
+          "images"
+        ],
+        "canonical_payload_bytes": 19058,
+        "entities": "all article nodes",
+        "image_or_file_metadata": "numeric file target ID, field delta, and file UUID; no URI, MIME, dimensions, or bytes",
+        "image_properties": [
+          "delta",
+          "target_id",
+          "file_uuid",
+          "alt",
+          "title"
+        ],
+        "node_id_included": true,
+        "node_uuid_included": true,
+        "null_empty_treatment": "missing body/alt/title -> empty string; missing target_id -> 0; missing file -> null UUID",
+        "revision_id_included": true,
+        "sha256": "ecef88e5f60714319e46ec2061e7022f9e5a984b4e96f39c97917c6e927ecf66",
+        "source": "drupal/scripts/gate1-step03-adapter-exercise.php::gate1_step03_state/gate1_step03_sort/gate1_step03_hash (original projection retained under a distinct diagnostic name)"
+      },
+      "predecessor_step02": {
+        "article_properties": [
+          "node_uuid",
+          "revision_id",
+          "title",
+          "status",
+          "images"
+        ],
+        "canonical_payload_bytes": 6915,
+        "entities": "all article nodes",
+        "image_or_file_metadata": "field delta and file UUID; no numeric file ID, URI, MIME, dimensions, or bytes",
+        "image_properties": [
+          "delta",
+          "file_uuid",
+          "alt",
+          "title"
+        ],
+        "node_id_included": false,
+        "node_uuid_included": true,
+        "null_empty_treatment": "missing file entity -> null file_uuid; missing alt/title -> empty string",
+        "revision_id_included": true,
+        "sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+        "source": "drupal/scripts/gate1-step02-runtime-probe.php::gate1_step02_snapshot/gate1_step02_sort/gate1_step02_sha256"
+      },
+      "record_order": "node query sorted by nid ASC; image values preserve field delta order",
+      "safe_record_facts": [
+        {
+          "gate05_certification_record_sha256": "d55a808ee4d219ea00fdb368d4dacecbd4599c4fda31763d1a56ee326523b03a",
+          "image_count": 1,
+          "node_uuid_sha256": "b11de99e595cef3c12b9b7431da3ee9f33d9814d1a1c9926987969d5f2efba67",
+          "position": 1,
+          "predecessor_record_sha256": "c8190640884a4b2db9524f6a2005b8fc6e16133e5d8c0acc0ae1108f99ea41b9",
+          "revision_id": 1,
+          "step03_extended_record_sha256": "e5b04ab05bb301a6cab973bf209318298e124743cd440d5e75f428b10a23a3b9"
+        },
+        {
+          "gate05_certification_record_sha256": "9fb649fccfb32f153c58406f2ba9f7fe106d62964e5d4aa1f18799d2f8cf4a56",
+          "image_count": 2,
+          "node_uuid_sha256": "c8518d88dccc070b094219ee2c51e0918c4756704d09aedac37d9787f4faee30",
+          "position": 2,
+          "predecessor_record_sha256": "8de3289b06426c560d7c5046282539c15ec3081811f862874995a6e661b8b635",
+          "revision_id": 2,
+          "step03_extended_record_sha256": "2f6a18c19ef74c6f29b8de09068780a22154130cdfd64bc9130e4d3fcfe1eaf5"
+        },
+        {
+          "gate05_certification_record_sha256": "835d9bde79e714a9e7ec88e5e239ac2bf47885cbdc05e2ad4b16ebca8e90d823",
+          "image_count": 1,
+          "node_uuid_sha256": "8890975e64dd3b9277df02953380b55a04b8bc54a2a34e3edda554202d094c6f",
+          "position": 3,
+          "predecessor_record_sha256": "a7f72edde5bcab3d613abc63eb7c1d7443e70d32f36ae8b309263ded12d80fd6",
+          "revision_id": 3,
+          "step03_extended_record_sha256": "9a18e53f5f9ebb40811c0e459de10d23c12fbd8321fac71d4f89228668192d5c"
+        },
+        {
+          "gate05_certification_record_sha256": "c84028e6b9621dee8356100cd607ab2b7c0bfe3f6b82714ea5eccae1c1560315",
+          "image_count": 2,
+          "node_uuid_sha256": "ff211daecc06abf68e44546a5148000249642b6e181b1099ae35ea856eed3e4b",
+          "position": 4,
+          "predecessor_record_sha256": "3d238966bfcc2fd6a35fcd2305a0cc01655bfbc4addf43684f075f5763476569",
+          "revision_id": 4,
+          "step03_extended_record_sha256": "998e5f8b18bdce6cc20c7d820d9dd5f8cfebf0f8db486c43b05057aa75d3fd3c"
+        },
+        {
+          "gate05_certification_record_sha256": "6912e54ee316831a37e617935f06e0a0b575a4d3a50680ad2d0a213a19e0aa1a",
+          "image_count": 1,
+          "node_uuid_sha256": "ce821736d7a6b96899f87fd7a3339aa3b088514eb73d0660b2e9b62a15c0a423",
+          "position": 5,
+          "predecessor_record_sha256": "cadab7630defeb4ff725f338f9ce52b17891aca6526556073c2b985b5ee38ee0",
+          "revision_id": 5,
+          "step03_extended_record_sha256": "baf0a77fe68f57df85c129f906540ac8a1cd5839e7480da24fe5a8daee0da5fa"
+        },
+        {
+          "gate05_certification_record_sha256": "6b92d2021181cccb00ac4a7835d044c8c4a0064d3f51d8f7b39318efe628c3d7",
+          "image_count": 2,
+          "node_uuid_sha256": "fd9235b24091f08f4ea58504786792de62b807141ddd95958839c5dcc1b47287",
+          "position": 6,
+          "predecessor_record_sha256": "1e8183f3ac1d9597745ebcc7eb74aa0e5f436dedc5c6af49cfb572877e03679e",
+          "revision_id": 6,
+          "step03_extended_record_sha256": "c25629fb4859992bcf58fb91ddb4ccaae5f14c80ec21fb03a602edb615b27eca"
+        },
+        {
+          "gate05_certification_record_sha256": "9940926adc121c68bdfb8797f363a367f2ae15d51a5cd2ac96d5785eceebc8c7",
+          "image_count": 1,
+          "node_uuid_sha256": "bc2f24aa1dc091a7c4578d601b6d73cee7e5c08bdff0f1228090bc19794c465e",
+          "position": 7,
+          "predecessor_record_sha256": "055776280ac3ed41fbf96c391e0bd448ec6ce74cecdd8c63853bc205ce29838a",
+          "revision_id": 7,
+          "step03_extended_record_sha256": "f7c41755751e7c06afe641d39ba2824e4667145a81d38d48eeda33204bf931dc"
+        },
+        {
+          "gate05_certification_record_sha256": "b9b464b5741b99b744c0ec6c6b4e0513edddaa280f5de1e28ee2515030e90043",
+          "image_count": 2,
+          "node_uuid_sha256": "ca1daea5ec40adb3a56fafcd833cd49cf2e30c308d783aa65943ea1a9ee2baa6",
+          "position": 8,
+          "predecessor_record_sha256": "039d852c3f9832ab9c7afb1bede21e806dbeb53ab7fac8f059ef7c1db123a4a2",
+          "revision_id": 8,
+          "step03_extended_record_sha256": "3542377527af5a91b1282bad76dac096938cfe28166589652063024b43238344"
+        },
+        {
+          "gate05_certification_record_sha256": "d53d0c0c647aed1de90171250cdc73e46e5299bd2e02c70a3698a8e0522fd1d1",
+          "image_count": 1,
+          "node_uuid_sha256": "ffd36a0410eec3fcc5f831e018f1b5eb197ebd3c5e3e4fa6fbcfcb234f70d95c",
+          "position": 9,
+          "predecessor_record_sha256": "16ca3f450502c02b7a0ab2f6f22f323bceb79f6af7af62d998bfe2e97cc74d13",
+          "revision_id": 9,
+          "step03_extended_record_sha256": "964d695c702b721f8e4ff0942003925a5d8b9d2e920883d88e0a05dba3bac564"
+        },
+        {
+          "gate05_certification_record_sha256": "27821b337bb587eaf057b6967160bef0d86fe21fa659323c686826db3acd27ba",
+          "image_count": 2,
+          "node_uuid_sha256": "4d669a6c1d662840354ba5b070c20a9859ad306a52fb7f75ca2e7e13f7ff2922",
+          "position": 10,
+          "predecessor_record_sha256": "1ad139c51766ef70a32f0e18b8404019fa7eb4e5bb8065e87a8dc9b0067c9533",
+          "revision_id": 10,
+          "step03_extended_record_sha256": "99ac201259ff3acda0a0620c213095bcbb991fc1ed1fc49eff685079103c9b91"
+        },
+        {
+          "gate05_certification_record_sha256": "571447c6ebfd889fdb966d2eadbc0fca29262ee7662b4482c6af2a989fb7ed87",
+          "image_count": 1,
+          "node_uuid_sha256": "19d6b2d694910c91e9ec0759ee37053670c71da233c881ce8ce8d295809303c6",
+          "position": 11,
+          "predecessor_record_sha256": "8e68a19859ac60d2093a26332b714f740d1f54a03599509e435d42e86704d435",
+          "revision_id": 11,
+          "step03_extended_record_sha256": "8631b5376d2d1bc83b3243d9d63d59664fa7e3661d6c307cbe9db37ad7f255c2"
+        },
+        {
+          "gate05_certification_record_sha256": "7cc698ca43684d1b82b511a578d175bdf2e6b06e3b4ab87f637e60d15041463a",
+          "image_count": 2,
+          "node_uuid_sha256": "801870ae818a6ea09d9cfd2fb69e8642bad2d000f54de082b90f82a960225f2d",
+          "position": 12,
+          "predecessor_record_sha256": "1b5a08552426a8534d128c57540f084589640e124e859ede7e7fddec05a62d56",
+          "revision_id": 12,
+          "step03_extended_record_sha256": "93ad4d7a4996f1f1ddee0c0bc689b16d55d0a8caa21ab767f5270023a877f4e4"
+        },
+        {
+          "gate05_certification_record_sha256": "f52163711624bb3e4be05e90d0348e2a98eac81cf052722b5fcc377957646179",
+          "image_count": 1,
+          "node_uuid_sha256": "9fb6ea26c1e5d15e3b0ebd06447f5803f2021918a8febedf5557fee7a3e449d5",
+          "position": 13,
+          "predecessor_record_sha256": "0c0b8336dcd5e23d39f2faae8918be094bf3f76e2d976f052c471bca7f9e157b",
+          "revision_id": 13,
+          "step03_extended_record_sha256": "f54ce6ebe3f989884516b6fdd665af40cc1047d8b2d521b7a97695509c6b6591"
+        },
+        {
+          "gate05_certification_record_sha256": "abdad82885ee697dceea642b4fd6412826b6f2eadf1c160ea2eaffc523e8c442",
+          "image_count": 2,
+          "node_uuid_sha256": "641b16cf962b9b4d32c8c60f4e27f5560352712ba68fff49238e36197ab17bc6",
+          "position": 14,
+          "predecessor_record_sha256": "84b28c733ac5ba338290141eeaa9aed554d98b88022658a3ccc97372fc67733d",
+          "revision_id": 14,
+          "step03_extended_record_sha256": "909bcfe184156e794e7ad60e912665819eb33811a758afcce0f2624bb1e8a7fa"
+        },
+        {
+          "gate05_certification_record_sha256": "094cc0d3d3711d4bc06896edf3388f0b4538ece4035af73b287938947213782c",
+          "image_count": 1,
+          "node_uuid_sha256": "80c778abffb3bd4a234c3d089763e2bfe248162c44ff2d2dc8c5e844f351d697",
+          "position": 15,
+          "predecessor_record_sha256": "1cf8bb1fea982c7ffa93e80a35e4ef187f6678bb858c669acc6735510b183e5e",
+          "revision_id": 15,
+          "step03_extended_record_sha256": "cd09d9adc0998ab6eacb4f0bcee557f38b0fbcba5a95c230898a4c88e5174e39"
+        },
+        {
+          "gate05_certification_record_sha256": "e4c9eccc68a79903540c027408eebe364e90973d215b457d4eeb46a15093d788",
+          "image_count": 2,
+          "node_uuid_sha256": "8102d032c25d67d5cd02f8214c716536658724d0599e9ff05ebac9034577f856",
+          "position": 16,
+          "predecessor_record_sha256": "0ae9bde8975c59bcc8db2513f3378cfcab73a5de04157a8bafef50a1938c5a55",
+          "revision_id": 16,
+          "step03_extended_record_sha256": "3ac85d68ed0722c1686f3e61f2723c0db4e689f3d1dc2537074b681e8bb63725"
+        },
+        {
+          "gate05_certification_record_sha256": "3e133e6e14001d14a4e544631be8efeff6fd7bf8aab09a3f7cd67bbe6074284a",
+          "image_count": 1,
+          "node_uuid_sha256": "4648d669d447c717aa2a0673b41cd0f342de630b3ac2e460ba761ff32f6ff8be",
+          "position": 17,
+          "predecessor_record_sha256": "151e09922e86cbabee297f56d97f7e0b643560bb101f7b89c6c753586bdc9780",
+          "revision_id": 17,
+          "step03_extended_record_sha256": "cd755d5c4d4d9e4630a18c6901eaaa6c802cd2d426d9b996d7329612465614da"
+        },
+        {
+          "gate05_certification_record_sha256": "49978d2113fb6035828551ea27d620cbaa0cc07d1bf8745806d0a261fe1097e2",
+          "image_count": 2,
+          "node_uuid_sha256": "fcc046c8719387e31d3685aa5a7a562ed6fff0aa98d5f08266253025cac139d6",
+          "position": 18,
+          "predecessor_record_sha256": "5b83ba8d58580f057d93541e1819c2d8403242c42e9e03eba7e781f5454a2924",
+          "revision_id": 18,
+          "step03_extended_record_sha256": "22a2603d2ec49c51581242020e3ca90f59ed6685f90e6d800102e9171d20ee97"
+        },
+        {
+          "gate05_certification_record_sha256": "16fd1e332db3fcbbc76a16b8f3c2968b4fadb6e5b4f5a0c8545f2fb30c585bbc",
+          "image_count": 1,
+          "node_uuid_sha256": "21ef2723083bb06882e62ccd09a4c3877ca58139447d66777c69a28b3a329c10",
+          "position": 19,
+          "predecessor_record_sha256": "6bd41facd12f889e3a5fe3482d80dac32d643b119de2ca9471ef927dc9d0021c",
+          "revision_id": 19,
+          "step03_extended_record_sha256": "920392173b5f9e97efb2eabffdc629e56f2eb99c5af71c4b93f1e326b316aba3"
+        },
+        {
+          "gate05_certification_record_sha256": "58bd21cb28d26010ca9b89554d5cf64c7748d41dea9d5541e29d922e708cb275",
+          "image_count": 2,
+          "node_uuid_sha256": "e122967b3c7d8a0e8547656e70289f12a538ef06f5f509d82ffd0d97a85b34a1",
+          "position": 20,
+          "predecessor_record_sha256": "0983add6aa27be01fbb9834963bb77626306ce40fcecf452a66a0f03df5f3920",
+          "revision_id": 20,
+          "step03_extended_record_sha256": "a4bd6a71166b4217e148ea9ac386f520965a8a18063615292eedfa39de54a2db"
+        }
+      ],
+      "structural_differences": [
+        "original Step 1.03 added nid, scalar body value, and image target_id",
+        "original Step 1.03 renamed node_uuid to uuid",
+        "original Step 1.03 omitted status",
+        "Gate 0.5 certification additionally includes structured body value, summary, and format"
+      ]
+    },
+    "article_source_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+    "canonical_target_identity_sha256": "db66f90dbcf6308b97491d9a6ae24b9deb9a14e5b6a55ca355fc6fadb090b3e3",
+    "canonical_target_sequence": 1,
+    "gate05_certification_article_source_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+    "model_call_performed": false,
+    "module_enabled": true,
+    "network_call_performed": false,
+    "raw_image_retained": false,
+    "secret_retained": false,
+    "seeded_clean": true,
+    "status": "pass",
+    "step03_extended_article_source_sha256": "ecef88e5f60714319e46ec2061e7022f9e5a984b4e96f39c97917c6e927ecf66",
+    "suggestion_count": 0,
+    "target_count": 12,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+  },
+  "status": "pass",
+  "status_observation": {
+    "correlation_id": "step03-status",
+    "data": {
+      "reviewed_at": null,
+      "reviewer_username": null,
+      "revision_id": 21,
+      "status": "pending",
+      "uuid": "dd6e4698-49bd-449c-a448-29de0f9aa9c7"
+    },
+    "error": null,
+    "ok": true,
+    "schema_version": 1,
+    "timestamp": "2026-08-06T05:10:21Z",
+    "tool_name": "get_recommendation_status"
+  },
+  "submission": {
+    "correlation_id": "step03-submit",
+    "data": {
+      "node_id": 21,
+      "revision_id": 21,
+      "run_id": "drupal_ai-20260806T030000Z-step03",
+      "source_framework": "drupal_ai",
+      "status": "pending",
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      },
+      "uuid": "dd6e4698-49bd-449c-a448-29de0f9aa9c7"
+    },
+    "error": null,
+    "ok": true,
+    "schema_version": 1,
+    "timestamp": "2026-08-06T05:10:21Z",
+    "tool_name": "submit_recommendation"
+  },
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "unknown_exception": {
+    "detail_marker_exposed": false,
+    "envelope": {
+      "correlation_id": "step03-unknown-exception",
+      "data": null,
+      "error": {
+        "code": "CONTEXT_FAILED",
+        "message": "The deterministic context operation failed. Review Drupal logs for the local diagnostic.",
+        "retryable": true
+      },
+      "ok": false,
+      "schema_version": 1,
+      "timestamp": "2026-08-06T05:10:21Z",
+      "tool_name": "get_image_context"
+    }
+  }
+}
