@@ -20,6 +20,7 @@ EXPECTED_JSONSCHEMA_VERSION = "4.26.0"
 EXPECTED_COMMIT = "3016819f738a7db39fef0a6ccbb9cff0c8ec5fa0"
 EXPECTED_GATE05_RUN = "gate05-step05-20260805T184155Z-50124"
 EXPECTED_GATE05_SHA256 = "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a"
+EXPECTED_STEP01_RUN = "gate1-step01-20260805T205448Z-103220"
 EXPECTED_SUPERSEDED_RUN = "gate1-step01-20260805T200619Z-87483"
 EXPECTED_SUPERSEDED_MANIFEST_SHA256 = "b25ede2a20b8c94a2986806362df6b5b2b5b574c3a80953d175578985bdc9b06"
 CONTRACT_RELATIVE = "shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json"
@@ -91,6 +92,128 @@ def resolve(repo: Path, overlay: Path | None, relative: str) -> Path:
         if candidate.is_file():
             return candidate
     return repo / relative
+
+
+def package_sequence(contract: dict[str, Any]) -> list[tuple[str, str]]:
+    """Return the frozen Gate 1 step/name sequence from the machine contract."""
+    raw_sequence = contract.get("package_sequence", [])
+    sequence: list[tuple[str, str]] = []
+    for item in raw_sequence:
+        if not isinstance(item, dict) or not isinstance(item.get("step"), str) or not isinstance(item.get("name"), str):
+            raise AuditError("Invalid repository-native Gate 1 package sequence entry")
+        sequence.append((item["step"], item["name"]))
+    if not sequence or len({step for step, _ in sequence}) != len(sequence):
+        raise AuditError("Repository-native Gate 1 package sequence is empty or ambiguous")
+    return sequence
+
+
+def next_package_steps(document: str, label: str, allowed_steps: set[str]) -> set[str]:
+    """Extract Gate 1 steps explicitly named as the next package."""
+    pattern = re.compile(
+        r"next\s+package(?:\s+after\s+commit)?(?:\s+is)?.{0,100}?"
+        r"(gate-1-step(?P<number>[0-9]{2})-[a-z0-9-]+-v[0-9]+\.[0-9]+\.[0-9]+)",
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    steps = {f"1.{match.group('number')}" for match in pattern.finditer(document)}
+    plain_pattern = re.compile(r"\bStep (1\.[0-9]{2})\s+(?:is\s+)?(?:the\s+)?next\b", flags=re.IGNORECASE)
+    steps.update(match.group(1) for match in plain_pattern.finditer(document))
+    unknown = sorted(steps - allowed_steps)
+    if unknown:
+        raise AuditError(f"{label} names a next package outside the frozen Gate 1 sequence: {unknown}")
+    if len(steps) > 1:
+        raise AuditError(f"{label} names contradictory Gate 1 next packages: {sorted(steps)}")
+    return steps
+
+
+def document_marks_step_complete(document: str, step: str) -> bool:
+    """Recognize explicit same-line completion wording for one Gate 1 step."""
+    token = re.escape(f"Step {step}")
+    bare = re.escape(step)
+    patterns = (
+        rf"(?im)^.*\bcomplete(?:d)?\b[^\n]*{token}[^\n]*$",
+        rf"(?im)^.*{token}[^\n]*\bcomplete(?:d)?\b[^\n]*$",
+        rf"(?im)^.*\bpackages?\b[^\n]*{bare}[^\n]*\bcomplete(?:d)?\b[^\n]*$",
+    )
+    return any(re.search(pattern, document) for pattern in patterns)
+
+
+def validate_completed_document_progression(
+    contract: dict[str, Any],
+    plan_document: str,
+    readme_document: str,
+    status_document: str,
+    accepted_run: str,
+    accepted_digest: str,
+) -> dict[str, Any]:
+    """Validate Step 1.01 completion while allowing only forward Gate 1 progression."""
+    sequence = package_sequence(contract)
+    allowed_steps = {step for step, _ in sequence}
+    checklist_pattern = re.compile(r"^- \[([ xX])\] Step (1\.[0-9]{2}) — (.+)$", flags=re.MULTILINE)
+    checklist = [(match.group(2), match.group(3), match.group(1).lower() == "x") for match in checklist_pattern.finditer(plan_document)]
+    expected_checklist = [(step, name) for step, name in sequence]
+    if [(step, name) for step, name, _ in checklist] != expected_checklist:
+        raise AuditError("PLAN.md Gate 1 checklist differs from the frozen machine-readable package sequence")
+
+    completed_flags = [completed for _, _, completed in checklist]
+    first_incomplete = next((index for index, completed in enumerate(completed_flags) if not completed), len(completed_flags))
+    if any(completed_flags[first_incomplete:]):
+        raise AuditError("PLAN.md completed-step markers form an impossible Gate 1 sequence")
+    if not completed_flags[0]:
+        raise AuditError("PLAN.md does not record Step 1.01 as complete")
+
+    stale_patterns = (
+        r"Step 1\.01[^\n]{0,100}not yet run",
+        r"Step 1\.01[^\n]{0,100}remains active",
+        r"Package 1\.01[^\n]{0,100}active",
+        r"Active package[^\n]{0,160}gate-1-step01",
+        r"pending successful v1\.0\.1 runner",
+    )
+    for label, document in (
+        ("PLAN.md", plan_document),
+        ("README.md", readme_document),
+        ("docs/CURRENT-STATUS.md", status_document),
+    ):
+        if accepted_run not in document:
+            raise AuditError(f"Accepted Step 1.01 run missing from {label}")
+        if accepted_digest not in document:
+            raise AuditError(f"Accepted Step 1.01 contract digest missing from {label}")
+        for pattern in stale_patterns:
+            if re.search(pattern, document, flags=re.IGNORECASE):
+                raise AuditError(f"{label} retains stale Step 1.01 active, pending, or not-yet-run prose")
+
+    completed_steps = [step for step, _, completed in checklist if completed]
+    incomplete_steps = [step for step, _, completed in checklist if not completed]
+    for label, document in (("README.md", readme_document), ("docs/CURRENT-STATUS.md", status_document)):
+        for step in completed_steps:
+            if not document_marks_step_complete(document, step):
+                raise AuditError(f"{label} disagrees with PLAN.md about completed {step}")
+        for step in incomplete_steps:
+            if document_marks_step_complete(document, step):
+                raise AuditError(f"{label} marks incomplete {step} as complete")
+
+    next_steps = {
+        label: next_package_steps(document, label, allowed_steps)
+        for label, document in (
+            ("PLAN.md", plan_document),
+            ("README.md", readme_document),
+            ("docs/CURRENT-STATUS.md", status_document),
+        )
+    }
+    expected_next = None if first_incomplete == len(sequence) else sequence[first_incomplete][0]
+    if expected_next is None:
+        if any(next_steps.values()):
+            raise AuditError("A next Gate 1 package is named after all frozen Gate 1 steps are complete")
+    else:
+        for label, steps in next_steps.items():
+            if steps != {expected_next}:
+                raise AuditError(f"{label} does not name frozen progression step {expected_next} as next")
+
+    return {
+        "completed_steps": completed_steps,
+        "next_step": expected_next,
+        "sequence_source": CONTRACT_RELATIVE,
+        "sequence_length": len(sequence),
+    }
 
 
 def validate_instance(validator: jsonschema.Draft202012Validator, value: Any, label: str) -> None:
@@ -516,7 +639,12 @@ def main() -> int:
     ):
         if required not in combined:
             raise AuditError(f"Required Gate 1 documentation control missing: {required}")
-    next_package = "gate-1-step02-drupal-ai-runtime-probe-v1.0.0"
+    document_progression: dict[str, Any] = {
+        "completed_steps": [],
+        "next_step": "1.01",
+        "sequence_source": CONTRACT_RELATIVE,
+        "sequence_length": len(package_sequence(contract)),
+    }
     if args.document_state == "active":
         if "Step 1.01 execution:** not yet run" not in status_document or "Active package:** `gate-1-step01-drupal-ai-batch-contract-v1.0.1`" not in status_document:
             raise AuditError("CURRENT-STATUS.md is not in the required pre-run active state")
@@ -525,16 +653,17 @@ def main() -> int:
     else:
         latest_step01 = (repo / "evidence/gates/gate-1/drupal-ai-batch-contract/GATE1-STEP01-LATEST.txt").read_text(encoding="utf-8").strip()
         accepted_run = Path(latest_step01).name
+        if accepted_run != EXPECTED_STEP01_RUN:
+            raise AuditError("Accepted Step 1.01 evidence pointer changed")
         accepted_digest = expected_contract_sha
-        if "Step 1.01 execution:** complete" not in status_document or next_package not in status_document:
-            raise AuditError("CURRENT-STATUS.md was not advanced by the passing runner")
-        if "Package 1.01 is the active package and has not yet run" in status_document or "Step 1.01 remains active" in status_document:
-            raise AuditError("CURRENT-STATUS.md retains stale pre-run prose")
-        if "- [x] Step 1.01 — batch contract" not in plan_document or next_package not in plan_document or next_package not in readme_document:
-            raise AuditError("PLAN.md or README.md was not advanced by the passing runner")
-        for name, document in (("PLAN.md", plan_document), ("README.md", readme_document), ("docs/CURRENT-STATUS.md", status_document)):
-            if accepted_run not in document or accepted_digest not in document:
-                raise AuditError(f"Accepted Step 1.01 run or digest missing from {name}")
+        document_progression = validate_completed_document_progression(
+            contract,
+            plan_document,
+            readme_document,
+            status_document,
+            accepted_run,
+            accepted_digest,
+        )
 
     audit_paths = [contract_path, contract_sha_path]
     audit_paths.extend(resolve(repo, overlay, f"shared/schemas/{name}") for name in NEW_SCHEMA_NAMES)
@@ -560,12 +689,14 @@ def main() -> int:
         "superseded_run_preserved": True,
         "contract_semantics_changed": False,
         "document_state": args.document_state,
+        "document_progression": document_progression,
         "jsonschema_version": EXPECTED_JSONSCHEMA_VERSION,
         "model_call_performed": False,
         "drupal_state_mutated": False,
         "dependency_change": False,
         "gate05_recertified": False,
-        "step02_started": False,
+        "step02_started_by_step01_package": False,
+        "step02_started_scope": "historical Step 1.01 package action; not repository current state",
         "secret_hygiene": "pass",
     }, indent=2, sort_keys=True))
     return 0

@@ -1,0 +1,59 @@
+{
+  "accepted_evidence_changed": false,
+  "adr0006_sha256": "223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b",
+  "api_credit_used": false,
+  "article_count_before_after": [
+    20,
+    20
+  ],
+  "canonical_target_sequence": 1,
+  "completed_at": "2026-08-06T02:35:42.353076Z",
+  "contract_or_schema_changed": false,
+  "dependency_changed": false,
+  "drupal_content_or_configuration_changed": false,
+  "gate05_freeze_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+  "gate05_run_id": "gate05-step05-20260805T184155Z-50124",
+  "known_predecessor_failure": "CURRENT-STATUS.md was not advanced by the passing runner",
+  "known_predecessor_failure_reproduced": true,
+  "model_call_performed": false,
+  "negative_regression_fixtures": [
+    "step_1_01_incomplete",
+    "accepted_run_missing",
+    "accepted_digest_missing",
+    "stale_not_yet_run",
+    "status_regressed_to_step_1_01",
+    "unknown_next_package",
+    "impossible_completed_sequence",
+    "status_documents_disagree",
+    "strict_active_missing_control"
+  ],
+  "network_call_performed": false,
+  "next_package": "gate-1-step03-drupal-ai-tool-adapters-v1.0.0",
+  "package": "gate-1-step01-audit-progression-compatibility",
+  "package_version": "1.0.0",
+  "positive_progression_fixtures": [
+    "strict_active_pre_run",
+    "step_1_02_next",
+    "current_repository_state",
+    "step_1_03_next_current",
+    "step_1_04_next",
+    "step_1_07_next"
+  ],
+  "predecessor_commit": "9b303ec3aefd8d92526905ca929a647948030b5a",
+  "recommendation_count_before_after": [
+    0,
+    0
+  ],
+  "run_id": "gate1-step01-audit-compatibility-20260806T023356Z-250843",
+  "schema_version": 1,
+  "seeded_clean_before_after": true,
+  "source_hash_unchanged": true,
+  "status": "pass",
+  "status_documents_changed": false,
+  "step01_contract_sha256": "360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6",
+  "step01_run_id": "gate1-step01-20260805T205448Z-103220",
+  "step02_run_id": "gate1-step02-20260806T010227Z-189538",
+  "step03_started": false,
+  "target_count": 12,
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}
