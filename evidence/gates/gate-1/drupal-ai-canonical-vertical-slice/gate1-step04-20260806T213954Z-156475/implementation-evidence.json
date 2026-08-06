@@ -1,0 +1,81 @@
+{
+  "agent_configuration": {
+    "id": "agentic_harness_alt_text_canonical_slice",
+    "label": "Agentic Harness Alt Text Canonical Slice",
+    "max_loops": 1,
+    "structured_output_enabled": true,
+    "structured_output_schema_sha256": "42ec690a104afcd128a7ffe80b5ed87e44ed524ddb0d416ff950c41f71bb6aa7",
+    "system_prompt_sha256": "0a82c7e744ac7313e1e7772ef1c3b71f4732d5a5e8e46cc87e0a61cedeb92816",
+    "template_id": "content_type_agent_triage",
+    "tool_count": 0,
+    "tool_settings_count": 0,
+    "tool_usage_limits_count": 0
+  },
+  "agent_request_count_resume": 0,
+  "authorized_context": {
+    "article_body_sha256": "72271dd875a2ad54f0b438dbb8768081e98528ebeb49fffd6e34babc1d51cd0f",
+    "article_revision_id": 1,
+    "article_title_sha256": "3fe36ce1711cfdea21ed5cf2440bcd6bfa3ff728245a189a397619b7f1b8bd14",
+    "collected_at": "2026-08-06T21:43:23Z",
+    "content_language": "en",
+    "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+    "existing_alt_present": false,
+    "image": {
+      "byte_length": 4490,
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "filename": "phase0-article-01-image-1.png",
+      "height": 675,
+      "mime_type": "image/png",
+      "representation_kind": "data_url",
+      "representation_value_retained": false,
+      "sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+      "width": 1200
+    },
+    "target_sequence": 1
+  },
+  "file_resolution": {
+    "approved_local_stream_wrapper": true,
+    "file_entity_retained": false,
+    "identity_fields_verified": [
+      "file_uuid",
+      "filename",
+      "mime_type",
+      "byte_length",
+      "sha256"
+    ],
+    "model_supplied_locator_rejected": true,
+    "raw_bytes_retained": false,
+    "remote_uri_rejected": true,
+    "resolved_path_retained": false,
+    "status": "pass",
+    "uri_retained": false
+  },
+  "post_image_wrapper_serialization_performed": false,
+  "provider_boundary": {
+    "agent_request_event_count": 1,
+    "automatic_retries": 0,
+    "maximum_provider_requests": 1,
+    "model_callable_tool_count": 0,
+    "provider_request_count": 1,
+    "required_tool_loop": false
+  },
+  "provider_request_count_resume": 0,
+  "raw_image_retained": false,
+  "schema_version": 1,
+  "source_article_sha256_at_resume": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "source_article_sha256_before": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "step_1_05_started": false,
+  "wrapper_checkpoint": {
+    "ai_configuration": {
+      "temperature": 0
+    },
+    "base64_or_data_url_present": false,
+    "chat_history_empty": true,
+    "credential_or_authorization_present": false,
+    "files_or_images_present": false,
+    "from_array_restored": true,
+    "model_name": "gpt-4.1-mini-2025-04-14",
+    "provider_id": "openai",
+    "stage": "pre_task_pre_image_pre_provider"
+  }
+}

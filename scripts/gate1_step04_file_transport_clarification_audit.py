@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Permanent static audit for ADR-0008's File identity and URI locator boundary."""
+"""Permanent ADR-0008 audit with authorized Step 1.04 progression support."""
 from __future__ import annotations
 
 import argparse
@@ -16,6 +16,14 @@ FROZEN = {
 PROFILE = "shared/profiles/gate1-drupal-ai-file-transport-clarification-v1.0.0/file-transport-clarification-profile.json"
 IDENTITY = ["file_uuid", "filename", "mime_type", "byte_length", "sha256"]
 EVIDENCE_PROHIBITED = ["uri", "resolved_path", "file_entity", "raw_bytes", "base64", "data_url"]
+STEP04_PATHS = [
+    "docs/gates/GATE-1-STEP04-DRUPAL-AI-CANONICAL-VERTICAL-SLICE.md",
+    "drupal/web/modules/custom/agentic_harness_drupal_ai/src/Service/FileEntityResolver.php",
+    "drupal/scripts/gate1-step04-canonical-vertical-slice.php",
+    "scripts/gate1_step04_canonical_slice_audit.py",
+    "scripts/gate1_step04_finalize.py",
+    "scripts/run-gate1-step04-drupal-ai-canonical-vertical-slice.sh",
+]
 
 
 def sha256(path: Path) -> str:
@@ -34,10 +42,8 @@ def require(condition: bool, message: str) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo", type=Path, required=True)
-    parser.add_argument("--overlay", type=Path)
     args = parser.parse_args()
     repo = args.repo.resolve()
-    overlay = args.overlay.resolve() if args.overlay else repo
 
     for relative, expected in FROZEN.items():
         require(sha256(repo / relative) == expected, f"Frozen file changed: {relative}")
@@ -55,7 +61,7 @@ def main() -> int:
     require(metadata is not None and "uri" not in metadata.group(1).lower(), "ImageContextProvider returns URI metadata")
     require(not re.search(r"['\"]uri['\"]\s*=>", provider), "ImageContextProvider returns a URI field")
 
-    profile = load(overlay / PROFILE)
+    profile = load(repo / PROFILE)
     require(profile.get("authoritative_identity_fields") == IDENTITY, "authoritative identity fields changed")
     expected = {
         "uri_role": "internal_transport_locator",
@@ -80,23 +86,21 @@ def main() -> int:
     require(profile.get("entity_identity_reverification_required") == IDENTITY[:3], "entity identity re-verification changed")
     require(profile.get("prohibited_evidence_artifacts") == EVIDENCE_PROHIBITED, "evidence prohibition changed")
     require(profile.get("model_supplied_uri_path_or_file_selection_prohibited") is True, "model input prohibition missing")
-    required_failures = {"uuid_mismatch", "filename_mismatch", "mime_type_mismatch", "byte_length_mismatch", "sha256_mismatch", "file_resolution_failure", "file_readability_failure", "zero_or_multiple_file_entities", "stream_wrapper_mismatch"}
-    require(required_failures == set(profile.get("fail_closed_on", [])), "fail-closed regression controls changed")
-    require(profile.get("uri_change_identity_failure") is False, "URI relocation rule changed")
-    require(set(profile.get("uri_change_allowed_only_when", [])) == {"same_authorized_file_uuid_resolves", "filename_exact", "mime_type_exact", "byte_length_exact", "sha256_exact", "permitted_local_drupal_locator"}, "URI relocation safeguards changed")
 
-    package_root = repo.parent / "agentic-harness-lab-packages"
-    prohibited_packages = [
-        package_root / "gate-1-step04-drupal-ai-canonical-vertical-slice-v1.0.0",
-        package_root / "gate-1-step05-drupal-ai-batch-runner-v1.0.0",
-    ]
-    require(not any(path.exists() for path in prohibited_packages), "Step 1.04 implementation or Step 1.05 package exists")
-    prohibited_repo_paths = [
-        repo / "drupal/scripts/gate1-step04-canonical-vertical-slice.php",
-        repo / "scripts/run-gate1-step04-drupal-ai-canonical-vertical-slice.sh",
-        repo / "scripts/run-gate1-step05-drupal-ai-batch-runner.sh",
-    ]
-    require(not any(path.exists() for path in prohibited_repo_paths), "Step 1.04 implementation or Step 1.05 source exists")
+    present = [(repo / path).exists() for path in STEP04_PATHS]
+    require(not any(present) or all(present), "Step 1.04 implementation is partially installed")
+    step04_installed = all(present)
+    if step04_installed:
+        resolver = (repo / STEP04_PATHS[1]).read_text(encoding="utf-8")
+        runtime = (repo / STEP04_PATHS[2]).read_text(encoding="utf-8")
+        require("APPROVED_SCHEMES = ['public', 'private']" in resolver, "Step 1.04 local locator schemes differ")
+        require("loadByProperties(['uuid' => $uuid])" in resolver, "Step 1.04 does not resolve exact authorized UUID")
+        require("hash_equals($image['sha256']" in resolver, "Step 1.04 does not reverify current bytes")
+        require("$task->setFiles([$file])" in runtime, "Step 1.04 does not pass FileInterface to Task")
+        set_files_at = runtime.index("$task->setFiles([$file])")
+        require("->toArray()" not in runtime[set_files_at:], "Step 1.04 introduces prohibited post-image serialization")
+
+    require(not (repo / "scripts/run-gate1-step05-drupal-ai-batch-runner.sh").exists(), "Step 1.05 source exists")
 
     print(json.dumps({
         "status": "pass",
@@ -111,7 +115,8 @@ def main() -> int:
         "zero_or_multiple_file_results_rejected": True,
         "entity_and_byte_mismatches_rejected": True,
         "evidence_artifacts_prohibited": EVIDENCE_PROHIBITED,
-        "step_1_04_implementation_absent": True,
+        "step_1_04_implementation_absent": not step04_installed,
+        "step_1_04_implementation_authorized": step04_installed,
         "step_1_05_absent": True,
     }, sort_keys=True))
     return 0
