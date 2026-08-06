@@ -1,0 +1,2 @@
+[INFO] Step 1.01 audit is status-state-sensitive and passed before the Step 1.02 transition.
+[PASS] Gate 1 Step 1.01 audit passed. Accepted evidence and the retained pre-transition log were reverified.

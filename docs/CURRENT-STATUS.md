@@ -8,9 +8,9 @@
 - **Phase 0:** complete.
 - **Gate 0.5:** complete and certified.
 - **Gate 1:** active.
-- **Completed package:** `gate-1-step01-drupal-ai-batch-contract-v1.0.1`.
-- **Step 1.01 execution:** complete.
-- **Next package:** `gate-1-step02-drupal-ai-runtime-probe-v1.0.0`.
+- **Completed packages:** Step 1.01 batch contract and Step 1.02 Drupal AI runtime probe.
+- **Step 1.02 execution:** complete.
+- **Next package:** `gate-1-step03-drupal-ai-tool-adapters-v1.0.0`.
 - **Execution environment:** Codex running locally inside WSL2, governed by `AGENTS.md`.
 
 Gate 0.5 completed when the framework-neutral Drupal substrate passed its standalone certification,
@@ -24,6 +24,8 @@ Step 1.02.
 
 Accepted Step 1.01 evidence run: `gate1-step01-20260805T205448Z-103220`
 Accepted Gate 1 contract digest: `360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6`
+Accepted Step 1.02 evidence run: `gate1-step02-20260806T010227Z-189538`
+Accepted ADR-0006 SHA-256: `223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b`
 
 The v1.0.0 evidence run `gate1-step01-20260805T200619Z-87483` remains immutable. It is superseded
 for publication only because later checks found terminal schema blank lines and a main-only installed
@@ -91,8 +93,8 @@ The external delivery-package root is:
 ~/projects/agentic-harness-lab-packages/
 ```
 
-Package 1.01 is complete. The next package is
-`gate-1-step02-drupal-ai-runtime-probe-v1.0.0`. Do not commit extracted packages or reuse a package
+Packages 1.01 and 1.02 are complete. The next package is
+`gate-1-step03-drupal-ai-tool-adapters-v1.0.0`. Do not commit extracted packages or reuse a package
 generated against a different repository baseline.
 
 ## Important interpretation
@@ -124,8 +126,8 @@ The repository-native sequence is:
 7. Step 1.07 — certification, freeze, and handoff
 
 This sequence and `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json` govern later package
-generation. Because ADR-0004 and ADR-0005 exist, the Step 1.02 runtime-path decision is currently
-expected to use `ADR-0006`; no existing ADR may be recreated or overwritten.
+generation. The Step 1.02 runtime-path decision is recorded in `ADR-0006`; ADR-0004 and ADR-0005 remain
+unchanged.
 
 ## Canonical Step 1.01 schemas
 
@@ -156,4 +158,4 @@ A new planning or implementation session should read these files in order:
 11. `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json`
 
 Do not add a Gate 0.5 reconciliation package before Gate 1 unless an audit fails or the frozen
-substrate is intentionally changed. Do not generate Step 1.02 until Step 1.01 is committed.
+substrate is intentionally changed. Do not generate Step 1.03 until Step 1.02 is committed.
