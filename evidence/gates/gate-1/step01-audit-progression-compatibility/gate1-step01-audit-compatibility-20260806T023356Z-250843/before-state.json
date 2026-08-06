@@ -1,0 +1,16 @@
+{
+    "schema_version": 1,
+    "probe_version": "1.0.0",
+    "status": "pass",
+    "article_count": 20,
+    "suggestion_count": 0,
+    "target_count": 12,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+    "canonical_target_sequence": 1,
+    "canonical_target_identity_sha256": "db66f90dbcf6308b97491d9a6ae24b9deb9a14e5b6a55ca355fc6fadb090b3e3",
+    "article_source_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+    "seeded_clean": true,
+    "model_call_performed": false,
+    "raw_image_retained": false,
+    "secret_retained": false
+}
