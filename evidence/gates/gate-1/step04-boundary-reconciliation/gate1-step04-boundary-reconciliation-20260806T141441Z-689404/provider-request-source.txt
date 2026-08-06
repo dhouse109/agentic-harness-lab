@@ -1,0 +1,7 @@
+446:  public function determineSolvability() {
+604:      $input->setChatTools(new ToolsInput($functions['normalized']));
+635:      $return = $this->aiProvider->chat($input, $this->modelName, $tags);
+696:    elseif (!empty($this->allRequiredToolsRan())) {
+698:      $required_tools = $this->allRequiredToolsRan();
+794:  public function solve() {
+1144:  public function allRequiredToolsRan(): array {

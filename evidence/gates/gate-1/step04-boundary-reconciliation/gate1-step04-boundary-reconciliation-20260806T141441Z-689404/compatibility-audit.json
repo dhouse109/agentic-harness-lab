@@ -1,0 +1,35 @@
+{
+  "accepted_step01_digest": "360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6",
+  "accepted_step01_run": "gate1-step01-20260805T205448Z-103220",
+  "ambiguous_step02_started_field_removed": true,
+  "negative_count": 9,
+  "negative_regression_fixtures": [
+    "step_1_01_incomplete",
+    "accepted_run_missing",
+    "accepted_digest_missing",
+    "stale_not_yet_run",
+    "status_regressed_to_step_1_01",
+    "unknown_next_package",
+    "impossible_completed_sequence",
+    "status_documents_disagree",
+    "strict_active_missing_control"
+  ],
+  "positive_count": 6,
+  "positive_progression_fixtures": [
+    "strict_active_pre_run",
+    "step_1_02_next",
+    "current_repository_state",
+    "step_1_03_next_current",
+    "step_1_04_next",
+    "step_1_07_next"
+  ],
+  "predecessor_defect": {
+    "commit": "9b303ec3aefd8d92526905ca929a647948030b5a",
+    "exit_code": 1,
+    "message": "CURRENT-STATUS.md was not advanced by the passing runner"
+  },
+  "scoped_historical_step02_field_present": true,
+  "sequence_source": "shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json",
+  "status": "pass",
+  "temporary_overlays_only": true
+}

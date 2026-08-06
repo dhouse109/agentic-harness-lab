@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate1-drupal-ai-canonical-slice-evidence.schema.json",
+  "title": "Gate 1 Drupal AI canonical-slice lifecycle evidence",
+  "type": "object",
+  "required": ["canonical_targets", "model_outputs", "recommendations", "validation_results", "submissions", "statuses", "human_review"],
+  "properties": {
+    "canonical_targets": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"$ref": "../../schemas/target.schema.json"}},
+    "model_outputs": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"$ref": "../../schemas/drupal-ai-model-output.schema.json"}},
+    "recommendations": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"$ref": "../../schemas/recommendation.schema.json"}},
+    "validation_results": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"$ref": "../../schemas/batch-validation.schema.json#/$defs/result"}},
+    "submissions": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"$ref": "../../schemas/batch-submissions.schema.json#/properties/submissions/items"}},
+    "statuses": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "../../schemas/batch-statuses.schema.json#/properties/observations/items"}},
+    "human_review": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"$ref": "../../schemas/batch-human-review.schema.json#/properties/decisions/items"}}
+  },
+  "allOf": [
+    {"properties": {"canonical_targets": {"contains": {"properties": {"sequence": {"const": 1}}, "required": ["sequence"]}}}},
+    {"properties": {"statuses": {"contains": {"properties": {"status": {"const": "pending"}}, "required": ["status"]}}}},
+    {"properties": {"statuses": {"contains": {"properties": {"status": {"const": "approved"}}, "required": ["status"]}}}}
+  ],
+  "additionalProperties": false
+}
