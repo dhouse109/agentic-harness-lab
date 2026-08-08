@@ -66,9 +66,24 @@ allowed_exact = {
     "scripts/gate1_step04_finalize.py",
     "scripts/run-gate1-step04-drupal-ai-canonical-vertical-slice.sh",
 }
+# STEP 1.05 PROGRESSION: audit mode accepts only the exact next-step source/evidence paths.
 if mode == "audit":
-    allowed_exact |= {"PLAN.md", "README.md", "docs/CURRENT-STATUS.md"}
-allowed_prefixes = ("evidence/gates/gate-1/drupal-ai-canonical-vertical-slice/",)
+    allowed_exact |= {
+        "PLAN.md", "README.md", "docs/CURRENT-STATUS.md",
+        "scripts/gate1_step04_boundary_reconciliation_audit.py",
+        "docs/gates/GATE-1-STEP05-DRUPAL-AI-BATCH-RUNNER.md",
+        "drupal/scripts/gate1-step05-drupal-ai-batch-runner.php",
+        "scripts/gate1_step05_batch_runner_audit.py",
+        "scripts/gate1_step05_finalize.py",
+        "scripts/run-gate1-step05-drupal-ai-batch-runner.sh",
+        # STEP 1.05 PACING COMPATIBILITY: exact successor ADR, no wildcard.
+        "docs/decisions/ADR-0009-drupal-ai-moderation-rate-aware-pacing.md",
+    }
+allowed_prefixes = (
+    "evidence/gates/gate-1/drupal-ai-canonical-vertical-slice/",
+    "evidence/gates/gate-1/drupal-ai-batch-runner/",
+    "evidence/results/drupal_ai/",
+)
 output = subprocess.run(
     ["git", "-C", str(repo), "status", "--porcelain=v1", "--untracked-files=all"],
     check=True, capture_output=True, text=True,

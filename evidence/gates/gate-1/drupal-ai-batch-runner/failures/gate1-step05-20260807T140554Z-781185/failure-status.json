@@ -1,0 +1,11 @@
+{
+    "schema_version": 1,
+    "status": "failed",
+    "run_id": "drupal_ai-20260807T140554Z-beb81",
+    "next_target_index": 3,
+    "completed_target_count": 3,
+    "recommendation_count": 3,
+    "pending_status_count": 3,
+    "failure_injection_fired": false,
+    "provider_request_count": 0
+}

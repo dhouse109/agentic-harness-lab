@@ -8,9 +8,9 @@
 - **Phase 0:** complete.
 - **Gate 0.5:** complete and certified.
 - **Gate 1:** active.
-- **Completed packages:** Step 1.01 batch contract, Step 1.02 Drupal AI runtime probe, Step 1.03 Drupal AI tool adapters, and Step 1.04 canonical vertical slice.
-- **Step 1.04 execution:** complete.
-- **Next package:** `gate-1-step05-drupal-ai-batch-runner-v1.0.0`.
+- **Completed packages:** Step 1.01 batch contract, Step 1.02 Drupal AI runtime probe, Step 1.03 Drupal AI tool adapters, Step 1.04 canonical vertical slice, and Step 1.05 12-target batch runner.
+- **Step 1.05 execution:** complete; 12 recommendations are pending Step 1.06 human review.
+- **Next package:** `gate-1-step06-drupal-ai-batch-evidence-and-human-review-v1.0.0`.
 - **Execution environment:** package-driven local execution inside WSL2, governed by `AGENTS.md`.
 
 Gate 0.5 completed when the framework-neutral Drupal substrate passed its standalone certification,
@@ -28,6 +28,8 @@ Accepted Step 1.02 evidence run: `gate1-step02-20260806T010227Z-189538`
 Accepted ADR-0006 SHA-256: `223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b`
 Accepted Step 1.03 evidence run: `gate1-step03-20260806T050827Z-494925`
 Accepted Step 1.04 evidence run: `gate1-step04-20260806T213954Z-156475`
+Accepted Step 1.05 evidence run: `gate1-step05-20260808T020222Z-2121689`
+Accepted Drupal AI batch run: `drupal_ai-20260808T020222Z-205fd9`
 
 Step 1.03 directly exercises exactly four model-free Drupal AI FunctionCall adapters: `discover_targets`, `get_image_context`, `submit_recommendation`, and `get_recommendation_status`. It does not execute an AI Agent and makes no model or provider call. Its predecessor-compatible Article-source SHA-256 is `f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17`; the original Step 1.03 hash discrepancy was definition drift only, with no Drupal source drift.
 
@@ -97,8 +99,8 @@ The external delivery-package root is:
 ~/projects/agentic-harness-lab-packages/
 ```
 
-Packages 1.01 through 1.04 are complete. The next package is
-`gate-1-step05-drupal-ai-batch-runner-v1.0.0`. Do not commit extracted packages or reuse a package
+Packages 1.01 through 1.05 are complete. The next package is
+`gate-1-step06-drupal-ai-batch-evidence-and-human-review-v1.0.0`. Do not commit extracted packages or reuse a package
 generated against a different repository baseline.
 
 ## Important interpretation

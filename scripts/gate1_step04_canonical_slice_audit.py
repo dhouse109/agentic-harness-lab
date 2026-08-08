@@ -34,6 +34,23 @@ PAYLOAD = [
     "scripts/run-gate1-step04-drupal-ai-canonical-vertical-slice.sh",
 ]
 
+# STEP 1.05 PROGRESSION: exact next-step source and historical manifest exceptions.
+STEP05_PATHS = [
+    "docs/gates/GATE-1-STEP05-DRUPAL-AI-BATCH-RUNNER.md",
+    "drupal/scripts/gate1-step05-drupal-ai-batch-runner.php",
+    "scripts/gate1_step05_batch_runner_audit.py",
+    "scripts/gate1_step05_finalize.py",
+    "scripts/run-gate1-step05-drupal-ai-batch-runner.sh",
+]
+STEP05_HISTORICAL_PROGRESSION_PATHS = {
+    "PLAN.md",
+    "README.md",
+    "docs/CURRENT-STATUS.md",
+    "scripts/gate1_step04_file_transport_clarification_audit.py",
+    "scripts/gate1_step04_canonical_slice_audit.py",
+    "scripts/run-gate1-step04-drupal-ai-canonical-vertical-slice.sh",
+}
+
 
 def sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -140,8 +157,15 @@ def audit_source(repo: Path, overlay: Path) -> dict[str, Any]:
 
     set_files_at = runtime.index("$task->setFiles([$file])")
     require("->toArray()" not in runtime[set_files_at:], "Post-image wrapper serialization is present")
-    require("evidence/results/drupal_ai" not in runner, "Step 1.04 runner writes to batch evidence root")
-    require("run-gate1-step05" not in runner, "Step 1.05 source is present in Step 1.04 runner")
+    require(
+        'EVIDENCE_ROOT="$REPO/evidence/gates/gate-1/drupal-ai-canonical-vertical-slice"' in runner,
+        "Step 1.04 canonical evidence root changed",
+    )
+    require(
+        'EVIDENCE_ROOT="$REPO/evidence/results/drupal_ai"' not in runner,
+        "Step 1.04 runner writes to batch evidence root",
+    )
+    require("bash scripts/run-gate1-step05" not in runner, "Step 1.04 runner launches Step 1.05")
     for command in ("preflight", "start", "status", "resume", "restore", "audit"):
         require(f"  {command})" in runner, f"Runner command missing: {command}")
     require("STEP04_PATHS" in clarification and "step_1_04_implementation_authorized" in clarification,
@@ -154,7 +178,16 @@ def audit_source(repo: Path, overlay: Path) -> dict[str, Any]:
     ):
         require(re.search(pattern, joined, re.I) is None, f"Prohibited retained source pattern: {pattern}")
 
-    require(not (repo / "scripts/run-gate1-step05-drupal-ai-batch-runner.sh").exists(), "Step 1.05 source exists")
+    present05 = [(repo / path).is_file() for path in STEP05_PATHS]
+    require(not any(present05) or all(present05), "Step 1.05 implementation is partially installed")
+    step05_installed = all(present05)
+    if step05_installed:
+        runtime05 = (repo / STEP05_PATHS[1]).read_text(encoding="utf-8")
+        runner05 = (repo / STEP05_PATHS[4]).read_text(encoding="utf-8")
+        require("GATE1_STEP05_FAILURE_AFTER_SEQUENCE = 6" in runtime05, "Step 1.05 failure seam differs")
+        require("GATE1_STEP05_RESUME_SEQUENCE = 7" in runtime05, "Step 1.05 resume seam differs")
+        require("evidence/results/drupal_ai" in runner05, "Step 1.05 batch evidence root differs")
+        require(not (repo / "scripts/run-gate1-step06-drupal-ai-batch-evidence-and-human-review.sh").exists(), "Step 1.06 source exists")
     return {
         "status": "pass",
         "baseline": EXPECTED_BASELINE,
@@ -170,13 +203,24 @@ def audit_source(repo: Path, overlay: Path) -> dict[str, Any]:
         "file_identity_fields": ["file_uuid", "filename", "mime_type", "byte_length", "sha256"],
         "local_stream_wrappers": ["public", "private"],
         "human_review_required": True,
-        "step_1_05_absent": True,
+        "step_1_05_absent": not step05_installed,
+        "step_1_05_authorized": step05_installed,
     }
 
 
 def audit_checksums(repo: Path, run_dir: Path) -> None:
-    subprocess.run(["sha256sum", "-c", str(run_dir / "installed-files-sha256.txt")], cwd=repo, check=True,
-                   stdout=subprocess.DEVNULL)
+    step05_complete = all((repo / path).is_file() for path in STEP05_PATHS)
+    manifest = run_dir / "installed-files-sha256.txt"
+    for line in manifest.read_text(encoding="utf-8").splitlines():
+        expected, relative = line.split(maxsplit=1)
+        path = repo / relative.removeprefix("./")
+        require(path.is_file(), f"Historical installed file missing: {relative}")
+        if sha(path) == expected:
+            continue
+        require(
+            step05_complete and relative.removeprefix("./") in STEP05_HISTORICAL_PROGRESSION_PATHS,
+            f"Historical installed-file checksum changed outside authorized Step 1.05 progression: {relative}",
+        )
     subprocess.run(["sha256sum", "-c", "package-files-sha256.txt"], cwd=run_dir, check=True,
                    stdout=subprocess.DEVNULL)
 

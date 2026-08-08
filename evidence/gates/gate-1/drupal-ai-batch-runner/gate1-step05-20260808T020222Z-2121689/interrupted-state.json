@@ -1,0 +1,16 @@
+{
+    "schema_version": 1,
+    "article_count": 20,
+    "suggestion_count": 6,
+    "target_count": 12,
+    "canonical_target_sequence": 1,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+    "article_source_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+    "runtime_state_present": true,
+    "runtime_artifacts_present": true,
+    "runtime_status": "interrupted",
+    "next_target_index": 6,
+    "temporary_agent_config_present": true,
+    "seeded_clean": false,
+    "batch_completed_pending_review": false
+}

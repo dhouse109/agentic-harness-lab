@@ -25,6 +25,15 @@ STEP04_PATHS = [
     "scripts/run-gate1-step04-drupal-ai-canonical-vertical-slice.sh",
 ]
 
+# STEP 1.05 PROGRESSION: authorize the exact batch-runner source only.
+STEP05_PATHS = [
+    "docs/gates/GATE-1-STEP05-DRUPAL-AI-BATCH-RUNNER.md",
+    "drupal/scripts/gate1-step05-drupal-ai-batch-runner.php",
+    "scripts/gate1_step05_batch_runner_audit.py",
+    "scripts/gate1_step05_finalize.py",
+    "scripts/run-gate1-step05-drupal-ai-batch-runner.sh",
+]
+
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -100,7 +109,16 @@ def main() -> int:
         set_files_at = runtime.index("$task->setFiles([$file])")
         require("->toArray()" not in runtime[set_files_at:], "Step 1.04 introduces prohibited post-image serialization")
 
-    require(not (repo / "scripts/run-gate1-step05-drupal-ai-batch-runner.sh").exists(), "Step 1.05 source exists")
+    present05 = [(repo / path).is_file() for path in STEP05_PATHS]
+    require(not any(present05) or all(present05), "Step 1.05 implementation is partially installed")
+    step05_installed = all(present05)
+    if step05_installed:
+        runtime05 = (repo / STEP05_PATHS[1]).read_text(encoding="utf-8")
+        require("$task->setFiles([$file])" in runtime05, "Step 1.05 does not pass FileInterface to Task")
+        set_files_at05 = runtime05.index("$task->setFiles([$file])")
+        require("->toArray()" not in runtime05[set_files_at05:], "Step 1.05 introduces prohibited post-image serialization")
+        require("GATE1_STEP05_TARGET_COUNT = 12" in runtime05, "Step 1.05 target cardinality differs")
+        require(not (repo / "scripts/run-gate1-step06-drupal-ai-batch-evidence-and-human-review.sh").exists(), "Step 1.06 source exists")
 
     print(json.dumps({
         "status": "pass",
@@ -117,7 +135,8 @@ def main() -> int:
         "evidence_artifacts_prohibited": EVIDENCE_PROHIBITED,
         "step_1_04_implementation_absent": not step04_installed,
         "step_1_04_implementation_authorized": step04_installed,
-        "step_1_05_absent": True,
+        "step_1_05_absent": not step05_installed,
+        "step_1_05_authorized": step05_installed,
     }, sort_keys=True))
     return 0
 

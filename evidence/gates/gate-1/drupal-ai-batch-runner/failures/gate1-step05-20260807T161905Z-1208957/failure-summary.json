@@ -1,0 +1,15 @@
+{
+  "completed_target_count": 2,
+  "failure_injection_fired": false,
+  "model_output_diagnostic": null,
+  "next_target_index": 2,
+  "pending_status_count": 2,
+  "raw_model_output_retained": false,
+  "recommendation_count": 2,
+  "result_evidence_promoted": false,
+  "run_id": "drupal_ai-20260807T161905Z-12727d",
+  "runtime_status": "failed",
+  "schema_version": 1,
+  "status": "failed_start_diagnostic",
+  "step_1_06_started": false
+}

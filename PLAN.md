@@ -2,7 +2,7 @@
 
 ## Current status
 
-> Phase 0 and Gate 0.5 are complete. Gate 1 Steps 1.01 through 1.04 are complete; Step 1.05 is next.
+> Phase 0 and Gate 0.5 are complete. Gate 1 Steps 1.01 through 1.05 are complete; Step 1.06 is next.
 
 See `docs/CURRENT-STATUS.md` for the authoritative fresh-session status snapshot and reading order.
 
@@ -105,10 +105,16 @@ gate-1-step03-drupal-ai-tool-adapters-v1.0.0
 gate-1-step04-drupal-ai-canonical-vertical-slice-v1.0.0
 ```
 
-**Next package:**
+**Completed package:**
 
 ```text
 gate-1-step05-drupal-ai-batch-runner-v1.0.0
+```
+
+**Next package:**
+
+```text
+gate-1-step06-drupal-ai-batch-evidence-and-human-review-v1.0.0
 ```
 
 Accepted Step 1.01 evidence run: `gate1-step01-20260805T205448Z-103220`
@@ -117,6 +123,8 @@ Accepted Step 1.02 evidence run: `gate1-step02-20260806T010227Z-189538`
 Accepted ADR-0006 SHA-256: `223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b`
 Accepted Step 1.03 evidence run: `gate1-step03-20260806T050827Z-494925`
 Accepted Step 1.04 evidence run: `gate1-step04-20260806T213954Z-156475`
+Accepted Step 1.05 evidence run: `gate1-step05-20260808T020222Z-2121689`
+Accepted Drupal AI batch run: `drupal_ai-20260808T020222Z-205fd9`
 
 Step 1.03 directly exercises exactly four model-free Drupal AI FunctionCall adapters: `discover_targets`, `get_image_context`, `submit_recommendation`, and `get_recommendation_status`. It does not execute an AI Agent and makes no model or provider call. Its predecessor-compatible Article-source SHA-256 is `f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17`; the original Step 1.03 hash discrepancy was definition drift only, with no Drupal source drift.
 
@@ -134,7 +142,7 @@ audit restriction. The v1.0.1 repair changes formatting and audit policy only, n
 - [x] Step 1.02 — pinned Drupal AI runtime probe
 - [x] Step 1.03 — thin Drupal AI tool adapters
 - [x] Step 1.04 — canonical vertical slice
-- [ ] Step 1.05 — 12-target batch runner
+- [x] Step 1.05 — 12-target batch runner
 - [ ] Step 1.06 — batch evidence and human review
 - [ ] Step 1.07 — certification, freeze, and handoff
 

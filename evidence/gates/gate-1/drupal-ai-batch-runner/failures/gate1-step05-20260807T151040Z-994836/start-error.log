@@ -1,0 +1,2 @@
+[ERROR] RuntimeException: AI Agent solve() output was not a structured JSON object; diagnostic={"raw_output_retained":false,"sequence":3,"solve_json_error":"Syntax error","solve_json_type":"null","source":"solve_json"}
+[31mFailed to run drush --quiet php:script scripts/gate1-step05-drupal-ai-batch-runner.php -- start drupal_ai-20260807T151040Z-f2e14: exit status 1[0m

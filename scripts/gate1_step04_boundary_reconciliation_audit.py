@@ -13,6 +13,14 @@ FREEZE = {
     "docs/decisions/ADR-0006-drupal-ai-programmatic-runtime-path.md": "223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b",
 }
 PROFILE = "shared/profiles/gate1-drupal-ai-canonical-slice-v1.0.0"
+# STEP 1.05 PROGRESSION: authorize the exact next-step source while preserving ADR-0007.
+STEP05_PATHS = [
+    "docs/gates/GATE-1-STEP05-DRUPAL-AI-BATCH-RUNNER.md",
+    "drupal/scripts/gate1-step05-drupal-ai-batch-runner.php",
+    "scripts/gate1_step05_batch_runner_audit.py",
+    "scripts/gate1_step05_finalize.py",
+    "scripts/run-gate1-step05-drupal-ai-batch-runner.sh",
+]
 
 def load(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -28,8 +36,13 @@ def verify_manifest(manifest_dir: Path, name: str, content_root: Path) -> None:
     for line in manifest.read_text(encoding="utf-8").splitlines():
         digest, relative = line.split(maxsplit=1)
         path = (content_root / relative.removeprefix("./")).resolve()
-        if content_root.resolve() not in path.parents or not path.is_file() or sha(path) != digest:
+        if content_root.resolve() not in path.parents or not path.is_file():
             raise SystemExit(f"[ERROR] Evidence manifest mismatch: {name}: {relative}")
+        if sha(path) != digest:
+            normalized = relative.removeprefix("./")
+            step05_complete = all((content_root / rel).is_file() for rel in STEP05_PATHS)
+            if normalized != "scripts/gate1_step04_boundary_reconciliation_audit.py" or not step05_complete:
+                raise SystemExit(f"[ERROR] Evidence manifest mismatch: {name}: {relative}")
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -72,7 +85,20 @@ def main() -> int:
     package_root = repo.parent / "agentic-harness-lab-packages"
     if (package_root / "gate-1-step04-drupal-ai-canonical-vertical-slice-v1.0.0").exists() or (package_root / "gate-1-step05-drupal-ai-batch-runner-v1.0.0").exists():
         raise SystemExit("[ERROR] Package workspace contains prohibited later package")
-    result={"status": "pass", "batch_cardinality": 12, "slice_cardinality": 1, "zero_or_two_slice_targets_rejected": True, "canonical_sequence": 1, "batch_root_excluded": True, "post_image_wrapper_serialization_prohibited": True, "step_1_05_absent": True}
+    present = [(overlay / path).is_file() for path in STEP05_PATHS]
+    if any(present) and not all(present):
+        raise SystemExit("[ERROR] Step 1.05 implementation is partially installed")
+    step05_installed = all(present)
+    if step05_installed:
+        runtime = (overlay / STEP05_PATHS[1]).read_text(encoding="utf-8")
+        runner = (overlay / STEP05_PATHS[4]).read_text(encoding="utf-8")
+        if "GATE1_STEP05_FAILURE_AFTER_SEQUENCE = 6" not in runtime or "GATE1_STEP05_RESUME_SEQUENCE = 7" not in runtime:
+            raise SystemExit("[ERROR] Step 1.05 deterministic failure seam differs")
+        if "evidence/results/drupal_ai" not in runner:
+            raise SystemExit("[ERROR] Step 1.05 runner does not use the frozen batch evidence root")
+        if (overlay / "scripts/run-gate1-step06-drupal-ai-batch-evidence-and-human-review.sh").exists():
+            raise SystemExit("[ERROR] Step 1.06 source exists")
+    result={"status": "pass", "batch_cardinality": 12, "slice_cardinality": 1, "zero_or_two_slice_targets_rejected": True, "canonical_sequence": 1, "batch_root_excluded": True, "post_image_wrapper_serialization_prohibited": True, "step_1_05_absent": not step05_installed, "step_1_05_authorized": step05_installed}
     if args.run_dir:
         summary=load(args.run_dir/"summary.json")
         if summary.get("status") != "pass" or summary.get("provider_request_count") != 0 or summary.get("one_provider_request_maximum") != 1:

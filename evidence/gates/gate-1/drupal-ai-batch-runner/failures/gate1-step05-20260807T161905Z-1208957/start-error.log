@@ -1,0 +1,2 @@
+[ERROR] RuntimeException: Sanitized provider response metadata was not captured at sequence 3.
+[31mFailed to run drush --quiet php:script scripts/gate1-step05-drupal-ai-batch-runner.php -- start drupal_ai-20260807T161905Z-12727d: exit status 1[0m
