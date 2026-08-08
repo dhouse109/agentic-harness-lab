@@ -1,0 +1,19 @@
+[33mCustom configuration detected in project 'harness':
+  • Environment: /home/dhouse109/projects/agentic-harness-lab/drupal/.ddev/.env.web
+
+Custom configuration is updated on restart. Run 'ddev restart' if changes don't take effect.
+Add '#ddev-silent-no-warn' comment to files if you don't want to see these warnings.[0m
+. Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Building 
+ Image ddev/ddev-webserver:v1.25.3-harness-built Building 
+. Image ddev/ddev-dbserver-mariadb-11.8:v1.25.3-harness-built Built 
+ Image ddev/ddev-webserver:v1.25.3-harness-built Built 
+
+ Container ddev-harness-db Recreate 
+ Container ddev-harness-web Recreate 
+ Container ddev-harness-web Recreated 
+ Container ddev-harness-db Recreated 
+ Container ddev-harness-db Starting 
+ Container ddev-harness-web Starting 
+ Container ddev-harness-db Started 
+ Container ddev-harness-web Started 
+[PASS] Step 1.01 audit progression compatibility repair audit passed.

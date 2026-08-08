@@ -1,0 +1,22 @@
+{
+  "automatic_publication_performed": false,
+  "completed_at": "2026-08-08T02:31:45Z",
+  "completed_count": 12,
+  "duplicate_count": 0,
+  "failed_count": 0,
+  "failure_seam_observed": true,
+  "human_review_completed": false,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "provider": "OpenAI",
+  "resume_sequence": 7,
+  "review_destination": "alt_text_suggestion",
+  "run_id": "drupal_ai-20260808T020222Z-205fd9",
+  "schema_version": 1,
+  "source_article_unchanged": true,
+  "source_framework": "drupal_ai",
+  "started_at": "2026-08-08T02:09:00Z",
+  "status": "pass",
+  "target_count": 12,
+  "temperature": 0.0,
+  "validator_version": "gate05-validator-1.0.0"
+}

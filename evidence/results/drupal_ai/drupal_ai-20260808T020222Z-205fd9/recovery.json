@@ -1,0 +1,28 @@
+{
+  "completed_after_resume": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "completed_before_failure": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "duplicate_count": 0,
+  "failure_after_sequence": 6,
+  "failure_before_sequence": 7,
+  "interrupted_at": "2026-08-08T02:14:40Z",
+  "resumed_at": "2026-08-08T02:25:03Z",
+  "resumed_at_sequence": 7,
+  "resumed_with_run_id": "drupal_ai-20260808T020222Z-205fd9",
+  "run_id": "drupal_ai-20260808T020222Z-205fd9",
+  "schema_version": 1,
+  "source_framework": "drupal_ai"
+}

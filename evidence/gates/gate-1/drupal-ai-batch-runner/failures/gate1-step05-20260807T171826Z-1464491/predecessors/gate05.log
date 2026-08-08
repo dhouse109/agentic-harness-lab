@@ -1,0 +1,115 @@
+{
+  "approved_transition": "shared/schemas/tool-result.schema.json",
+  "baseline_sha256": "ce29b82eaf9e3ddba9cf92b28f76a522a3438c743aa0955611bad2f16fd569d8",
+  "other_step01_contract_hashes_changed": [],
+  "repaired_sha256": "ce04e938eb4e34e861c000b86fffeed4adc5e5c66167c52ebf5380b8cd3cd91b",
+  "status": "pass"
+}
+{
+  "canonical_target_sequence": 1,
+  "contract_hashes_match": true,
+  "next_step": "Gate 0.5 Step 02 \u2014 deterministic get_image_context(target)",
+  "run_id": "tmp.e1gheLD3NI",
+  "status": "pass",
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}
+{
+  "canonical_target_sequence": 1,
+  "context_evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+  "historical_implementation_hashes_used_as_current_gate": false,
+  "image_sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+  "operation": "get_image_context",
+  "raw_image_retained": false,
+  "retained_evidence_integrity": true,
+  "status": "pass",
+  "step01_run_id": "gate05-step01-20260804T183655Z-888009",
+  "step02_run_id": "gate05-step02-20260804T191625Z-920936"
+}
+{
+  "article_source_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "canonical_target_sequence": 1,
+  "controlled_preflight": true,
+  "final_suggestion_count": 0,
+  "framework_execution_claimed": false,
+  "historical_implementation_hashes_used_as_current_gate": false,
+  "idempotent_replay_same_identity": true,
+  "operation": "submit_recommendation",
+  "retained_evidence_integrity": true,
+  "run_id": "gate05-step03-20260804T204600Z-969127",
+  "status": "pass"
+}
+{
+  "approved_transition": "shared/schemas/tool-result.schema.json",
+  "baseline_sha256": "ce29b82eaf9e3ddba9cf92b28f76a522a3438c743aa0955611bad2f16fd569d8",
+  "other_step04_implementation_hashes_changed": [],
+  "repaired_sha256": "ce04e938eb4e34e861c000b86fffeed4adc5e5c66167c52ebf5380b8cd3cd91b",
+  "status": "pass"
+}
+{
+  "article_source_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+  "canonical_target_sequence": 1,
+  "controlled_preflight": true,
+  "final_suggestion_count": 0,
+  "framework_execution_claimed": false,
+  "human_decision": "approved",
+  "implementation_hashes_match": true,
+  "initial_revision_id": 21,
+  "next_step": "Gate 0.5 Step 05 \u2014 end-to-end shared substrate certification and framework handoff",
+  "operations": [
+    "submit_recommendation",
+    "get_recommendation_status"
+  ],
+  "reviewed_revision_id": 22,
+  "reviewer_username": "editor_dana",
+  "run_id": "tmp.XQ3uwmDN1C",
+  "source_article_unchanged": true,
+  "status": "pass",
+  "status_operation_read_only": true
+}
+{
+  "active_runtime_config_matches": true,
+  "active_runtime_config_sha256": "7e904a35dca9ace45650bc95827e900a8ce4a853fe5391da9628c08efe7b836f",
+  "canonical_target_sequence": 1,
+  "final_suggestion_count": 0,
+  "framework_vertical_slices": {
+    "crewai": {
+      "certified": false
+    },
+    "drupal_ai": {
+      "certified": false
+    },
+    "langgraph": {
+      "certified": false
+    }
+  },
+  "freeze_manifest_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+  "frozen_files_match": true,
+  "gate_0_5_complete": true,
+  "next_step": "gate-1-step01-drupal-ai-batch-contract-v1.0.0",
+  "operations_exercised": [
+    "find_images_needing_review",
+    "get_image_context",
+    "submit_recommendation",
+    "get_recommendation_status"
+  ],
+  "run_id": "gate05-step05-20260805T184155Z-50124",
+  "shared_substrate_certified": true,
+  "source_article_unchanged": true,
+  "status": "pass"
+}
+{
+  "all_four_operations_validated_per_run": true,
+  "direct_get_image_context_envelopes_validated": 3,
+  "draft": "2020-12",
+  "jsonschema_version": "4.26.0",
+  "nested_data_context_observed": false,
+  "passing_runs_validated": [
+    "gate05-step05-20260805T010224Z-1100690",
+    "gate05-step05-20260805T174126Z-18681",
+    "gate05-step05-20260805T184155Z-50124"
+  ],
+  "status": "pass",
+  "success_envelopes_validated": 21
+}
+[PASS] Gate 0.5 Step 05 audit passed.
+[PASS] Evidence: evidence/gates/gate-0.5/substrate-certification/gate05-step05-20260805T184155Z-50124
