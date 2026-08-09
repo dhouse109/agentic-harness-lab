@@ -168,6 +168,44 @@ This sequence and `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json` govern 
 generation. The Step 1.02 runtime-path decision is recorded in `ADR-0006`; ADR-0004 and ADR-0005 remain
 unchanged.
 
+## Gate 2 — cross-framework implementation and recovery
+
+Gate 2 preserves the original umbrella milestone and closes only after Gate 2C shared failure/recovery.
+
+- **Gate 2A — LangGraph:** current.
+- **Gate 2B — CrewAI:** follows the LangGraph freeze.
+- **Gate 2C — shared failure/recovery:** follows both frozen framework specimens.
+
+### Gate 2A — LangGraph
+
+**Completed package:**
+
+```text
+gate-2a-step01-langgraph-contract-and-evidence-plan-v1.0.3
+```
+
+**Next package:**
+
+```text
+gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.0
+```
+
+Accepted Step 2A.01 evidence run: `gate2a-step01-20260809T202418Z-2334327`
+Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b`
+
+- [x] Step 2A.01 — LangGraph contract and evidence plan
+- [ ] Step 2A.02 — LangGraph runtime and checkpoint probe
+- [ ] Step 2A.03 — LangGraph tool adapters
+- [ ] Step 2A.04 — LangGraph state and SQLite checkpoint proof
+- [ ] Step 2A.05 — LangGraph canonical vertical slice
+- [ ] Step 2A.06 — LangGraph human interrupt and review resume
+- [ ] Step 2A.07 — LangGraph batch runner
+- [ ] Step 2A.08 — LangGraph fresh batch and continuation
+- [ ] Step 2A.09 — LangGraph evidence, claims, and matrix
+- [ ] Step 2A.10 — LangGraph certification, freeze, and CrewAI handoff
+
+Step 2A.01 makes zero model calls and performs zero Drupal mutation. The accepted 2A.08 batch is designed to be the certification candidate; Step 2A.10 promotes it model-free by default rather than silently running a second 12-call batch.
+
 ## Subsequent implementation milestones
 
 1. Gate 1 — Drupal AI full implementation and batch evidence.

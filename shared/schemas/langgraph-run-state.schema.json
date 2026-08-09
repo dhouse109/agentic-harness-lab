@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "langgraph-run-state.schema.json",
+  "title": "Canonical LangGraph framework-owned run state",
+  "description": "Comparison contract for state owned by the LangGraph specimen. Runtime persistence is LangGraph-owned SQLite checkpoint state; the exact pinned API and runtime path are finalized in Step 2A.02. Raw image bytes, data URLs, credentials, and hidden reasoning are excluded.",
+  "type": "object",
+  "required": [
+    "schema_version", "run_id", "framework_origin", "thread_id", "checkpoint_backend",
+    "status", "target_sequence_hash", "next_target_index", "completed_target_identities",
+    "recommendation_ids", "validation_results", "started_at", "updated_at", "completed_at",
+    "interrupted_at", "resumed_at", "continuation_boundary_armed", "continuation_boundary_reached",
+    "gate2c_failure_injection_fired", "prompt_version", "model_id"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$"},
+    "framework_origin": {"const": "langgraph"},
+    "thread_id": {"type": "string", "minLength": 1, "maxLength": 200},
+    "checkpoint_backend": {"const": "sqlite"},
+    "checkpoint_id": {"type": ["string", "null"], "maxLength": 300},
+    "checkpoint_namespace": {"type": ["string", "null"], "maxLength": 300},
+    "status": {"enum": ["initialized", "running", "interrupted", "resuming", "completed", "failed"]},
+    "target_sequence_hash": {"const": "sha256:1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"},
+    "next_target_index": {"type": "integer", "minimum": 0, "maximum": 12},
+    "completed_target_identities": {"type": "array", "maxItems": 12, "uniqueItems": true, "items": {"$ref": "target.schema.json"}},
+    "recommendation_ids": {
+      "type": "array", "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["sequence", "node_id", "uuid", "revision_id"],
+        "properties": {
+          "sequence": {"type": "integer", "minimum": 1, "maximum": 12},
+          "node_id": {"type": "integer", "minimum": 1},
+          "uuid": {"type": "string", "format": "uuid"},
+          "revision_id": {"type": "integer", "minimum": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "validation_results": {"type": "array", "maxItems": 12, "items": {"$ref": "batch-validation.schema.json#/$defs/result"}},
+    "started_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "interrupted_at": {"type": ["string", "null"], "format": "date-time"},
+    "resumed_at": {"type": ["string", "null"], "format": "date-time"},
+    "continuation_boundary_armed": {"type": "boolean"},
+    "continuation_boundary_reached": {"type": "boolean"},
+    "gate2c_failure_injection_fired": {"type": "boolean"},
+    "prompt_version": {"const": "langgraph-alt-text-v1.0.0"},
+    "model_id": {"const": "gpt-4.1-mini-2025-04-14"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "completed"}}, "required": ["status"]},
+      "then": {"properties": {"completed_at": {"type": "string", "format": "date-time"}, "next_target_index": {"const": 12}}}
+    },
+    {
+      "if": {"properties": {"continuation_boundary_reached": {"const": true}}, "required": ["continuation_boundary_reached"]},
+      "then": {"properties": {"continuation_boundary_armed": {"const": true}, "interrupted_at": {"type": "string", "format": "date-time"}}}
+    }
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,332 @@
+{
+  "acceptance": {
+    "contract_digest_matches": true,
+    "drupal_state_mutated": false,
+    "evidence_stages_explicit": true,
+    "frozen_input_hashes_match": true,
+    "gate1_artifacts_unchanged": true,
+    "gate1_freeze_digest_matches": true,
+    "gate1_permanent_audit_passes": true,
+    "langgraph_state_ownership_explicit": true,
+    "model_call_performed": false,
+    "new_schemas_are_draft_2020_12_valid": true,
+    "next_package": "gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.0",
+    "repository_dependencies_unchanged": true,
+    "runtime_storage_location_deferred_to_step_2A_02": true,
+    "schema_examples_pass_and_negative_controls_fail": true,
+    "second_approval_system_prohibited": true,
+    "secret_hygiene_passes": true,
+    "sqlite_checkpoint_backend_explicit": true,
+    "step_2A_08_certification_candidate_policy_frozen": true
+  },
+  "canonical_schemas": {
+    "framework_owned_run_state": "shared/schemas/langgraph-run-state.schema.json",
+    "raw_structured_model_output": "shared/schemas/langgraph-model-output.schema.json"
+  },
+  "change_control": "Any material change to a frozen constant, shared semantic operation, idempotency identity, target order, evidence contract, prompt-fairness boundary, review destination, failure point, source-mutation rule, model/settings, or pinned dependency requires an ADR plus invalidated-evidence review.",
+  "continuation_policy": {
+    "do_not_conflate_gate2a_with_gate2c": true,
+    "gate2a_same_run_continuation": "controlled stop after target 6 is persisted; same run/thread resumes at target 7",
+    "gate2c_shared_failure_recovery": "distinct later comparison using the same target-6/7 process failure across all three frozen specimens"
+  },
+  "contract": "gate2a-langgraph-batch",
+  "contract_version": "1.0.3",
+  "evidence": {
+    "allowed": [
+      "exact versions and hashes",
+      "sanitized fixture/context facts",
+      "raw structured model output",
+      "sanitized shared-operation traces",
+      "validator outcomes",
+      "recommendation and revision identifiers",
+      "LangGraph state/checkpoint transitions",
+      "human review lineage",
+      "sanitized errors"
+    ],
+    "checkpoint_evidence": "sanitized checkpoint/thread metadata and state projection; never raw image bytes, secrets, or a private database export",
+    "contract_root": "evidence/gates/gate-2a/contract/<run-id>",
+    "prohibited": [
+      "API keys",
+      "Basic Auth passwords",
+      "authorization headers",
+      "raw Base64 image data",
+      "full data URLs",
+      "private database exports",
+      "hidden model reasoning",
+      "unrelated private configuration or user data"
+    ],
+    "result_files": [
+      "run.json",
+      "events.jsonl",
+      "targets.json",
+      "tool-traces.json",
+      "model-outputs.json",
+      "recommendations.json",
+      "validation.json",
+      "submissions.json",
+      "statuses.json",
+      "human-review.json",
+      "recovery.json",
+      "summary.json",
+      "summary.md"
+    ],
+    "result_root": "evidence/results/langgraph/<run-id>"
+  },
+  "framework_owned": [
+    "context assembly",
+    "model invocation",
+    "structured-output integration",
+    "prompt orchestration",
+    "tool wrappers and binding",
+    "state and memory",
+    "SQLite checkpointing",
+    "human interrupt/resume behavior",
+    "recovery logic",
+    "workflow sequencing"
+  ],
+  "frozen_constants": {
+    "automatic_publication": "prohibited",
+    "expected_duplicate_count": 0,
+    "failure_after_sequence": 6,
+    "failure_before_sequence": 7,
+    "langchain": "1.3.14",
+    "langgraph": "1.2.10",
+    "langgraph_sqlite_checkpointer": "3.1.1",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "prompt_version": "langgraph-alt-text-v1.0.0",
+    "provider": "OpenAI",
+    "python": "3.12.13",
+    "resume_at_sequence": 7,
+    "review_destination": "alt_text_suggestion",
+    "reviewer": "editor_dana",
+    "source_article_mutation": "prohibited",
+    "source_framework": "langgraph",
+    "temperature": 0.0,
+    "validator_version": "gate05-validator-1.0.0"
+  },
+  "frozen_input_hashes": {
+    "shared/schemas/image-context.schema.json": "b2e27b533551759d181c58330ebedcb26ca92c1a596dbb4aaf48a48422dffaee",
+    "shared/schemas/recommendation.schema.json": "7b1cf9800d5c8d8df4cd0a718c721dd43013afa256f7814a365d4696e2cfe2bd",
+    "shared/schemas/run-state.schema.json": "ee5face3d81138cfa2d5de2e03d8fb2aded881743e2e0334129342bf95f3010b",
+    "shared/schemas/target.schema.json": "2bcb867c3b58a5f4bb20b29274434c153ad043e8c0dba3ce3d1e496a44a32469",
+    "shared/schemas/tool-result.schema.json": "ce04e938eb4e34e861c000b86fffeed4adc5e5c66167c52ebf5380b8cd3cd91b"
+  },
+  "gate_structure": {
+    "gate_2": "cross-framework implementation and recovery milestone",
+    "gate_2_complete_only_after": "gate_2c",
+    "gate_2a": "LangGraph full implementation, checkpointing, continuation, evidence, and freeze",
+    "gate_2b": "CrewAI full implementation, persistence, continuation, evidence, and freeze",
+    "gate_2c": "shared failure/recovery comparison across the three frozen specimens"
+  },
+  "hidden_reasoning_capture_prohibited": true,
+  "human_review_boundary": {
+    "approval_does_not_apply_source_content": true,
+    "authoritative_system": "Drupal revision-enabled alt_text_suggestion queue",
+    "representative_lineage": "edit-and-approve preferred when practical",
+    "reviewer": "editor_dana",
+    "second_approval_system_prohibited": true,
+    "sequence": [
+      "LangGraph submits one pending recommendation through the frozen shared operation",
+      "pending status is confirmed",
+      "LangGraph checkpoints/interrupts at await Drupal review",
+      "editor_dana performs the real Drupal review action",
+      "the same LangGraph run/thread resumes",
+      "get_recommendation_status observes the Drupal revision/status lineage"
+    ]
+  },
+  "idempotency_identity": [
+    "source_framework",
+    "run_id",
+    "node_uuid",
+    "revision_id",
+    "field_name",
+    "delta",
+    "file_uuid"
+  ],
+  "lifecycle_stage_combination_prohibited": true,
+  "lifecycle_stages": [
+    {
+      "collection_schema": "shared/schemas/batch-model-outputs.schema.json",
+      "schema": "shared/schemas/langgraph-model-output.schema.json",
+      "stage": "raw_structured_model_output"
+    },
+    {
+      "collection_schema": "shared/schemas/batch-recommendations.schema.json",
+      "schema": "shared/schemas/recommendation.schema.json",
+      "stage": "assembled_recommendation"
+    },
+    {
+      "schema": "shared/schemas/batch-validation.schema.json",
+      "stage": "deterministic_validator_result"
+    },
+    {
+      "schema": "shared/schemas/batch-submissions.schema.json",
+      "stage": "submitted_recommendation"
+    },
+    {
+      "schema": "shared/schemas/batch-statuses.schema.json",
+      "stage": "recommendation_status"
+    },
+    {
+      "schema": "shared/schemas/batch-human-review.schema.json",
+      "stage": "human_review_decision"
+    },
+    {
+      "schema": "shared/schemas/langgraph-run-state.schema.json",
+      "stage": "checkpoint_metadata"
+    },
+    {
+      "schema": "shared/schemas/batch-recovery.schema.json",
+      "stage": "continuation_or_recovery"
+    }
+  ],
+  "model_call_policy": {
+    "expected_successful_calls_total": 13,
+    "human_review_required_before_retry": true,
+    "second_12_call_certification_batch_required_by_default": false,
+    "semantic_retry_loop_prohibited": true,
+    "step_2A_01": 0,
+    "step_2A_02": 0,
+    "step_2A_03": 0,
+    "step_2A_04": 0,
+    "step_2A_05": 1,
+    "step_2A_06": 0,
+    "step_2A_07": 0,
+    "step_2A_08": 12,
+    "step_2A_08_is_certification_candidate": true,
+    "step_2A_09": 0,
+    "step_2A_10": 0,
+    "step_2A_10_promotes_accepted_2A_08_model_free": true,
+    "transport_failure_is_retained_failure": true
+  },
+  "package_repair": {
+    "evidence_created": false,
+    "experiment_semantics_changed": false,
+    "package_version": "1.0.3",
+    "reasons": [
+      "v1.0.0 and v1.0.1 encoded the frozen shared/schemas/tool-result.schema.json SHA-256 with the three hexadecimal characters 3cd omitted",
+      "v1.0.1 correctly added canonical-HEAD comparison and rollback through post-install audit, but retained the truncated expected hash",
+      "v1.0.2 README transition omitted the exact active package marker required by the installed active-state auditor; rollback restored the pre-run state"
+    ],
+    "repairs": [
+      "restore the exact frozen tool-result schema SHA-256 ce04e938eb4e34e861c000b86fffeed4adc5e5c66167c52ebf5380b8cd3cd91b in both the contract and auditor",
+      "extend package self-check to reject any frozen SHA-256 value that is not exactly 64 lowercase hexadecimal characters",
+      "retain v1.0.1 canonical-HEAD comparison and rollback behavior unchanged"
+    ],
+    "superseded_package_version": "1.0.1",
+    "superseded_run_status": "failed_during_post_install_static_audit_and_rolled_back"
+  },
+  "package_sequence": [
+    {
+      "name": "LangGraph contract and evidence plan",
+      "package": "gate-2a-step01-langgraph-contract-and-evidence-plan-v1.0.3",
+      "step": "2A.01"
+    },
+    {
+      "name": "LangGraph runtime and checkpoint probe",
+      "package": "gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.0",
+      "step": "2A.02"
+    },
+    {
+      "name": "LangGraph tool adapters",
+      "package": "gate-2a-step03-langgraph-tool-adapters-v1.0.0",
+      "step": "2A.03"
+    },
+    {
+      "name": "LangGraph state and SQLite checkpoint proof",
+      "package": "gate-2a-step04-langgraph-state-and-sqlite-checkpoint-proof-v1.0.0",
+      "step": "2A.04"
+    },
+    {
+      "name": "LangGraph canonical vertical slice",
+      "package": "gate-2a-step05-langgraph-canonical-vertical-slice-v1.0.0",
+      "step": "2A.05"
+    },
+    {
+      "name": "LangGraph human interrupt and review resume",
+      "package": "gate-2a-step06-langgraph-human-interrupt-and-review-resume-v1.0.0",
+      "step": "2A.06"
+    },
+    {
+      "name": "LangGraph batch runner",
+      "package": "gate-2a-step07-langgraph-batch-runner-v1.0.0",
+      "step": "2A.07"
+    },
+    {
+      "name": "LangGraph fresh batch and continuation",
+      "package": "gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.0",
+      "step": "2A.08"
+    },
+    {
+      "name": "LangGraph evidence claims and matrix",
+      "package": "gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.0",
+      "step": "2A.09"
+    },
+    {
+      "name": "LangGraph certification freeze and CrewAI handoff",
+      "package": "gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.0",
+      "step": "2A.10"
+    }
+  ],
+  "predecessor": {
+    "branch": "main",
+    "commit": "d87c66a8a342109253e906e7e29ce2c15f7ddbef",
+    "gate1_artifacts_immutable": true,
+    "gate1_batch_run_id": "drupal_ai-20260809T012559Z-22064c",
+    "gate1_certification_run_id": "gate1-step07-20260809T012559Z-2229836",
+    "gate1_freeze_manifest": "shared/contracts/GATE1-DRUPAL-AI-FREEZE.json",
+    "gate1_freeze_sha256": "2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd",
+    "gate1_status": "certified"
+  },
+  "schema_version": 1,
+  "scope": {
+    "dependency_change": false,
+    "drupal_state_mutated_by_step01": false,
+    "framework": "langgraph",
+    "gate1_artifact_change": false,
+    "gate2c_failure_comparison_performed": false,
+    "model_call_performed_by_step01": false,
+    "step01_contract_only": true,
+    "step02_implementation_included": false,
+    "target_count": 12,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+  },
+  "shared_operations": [
+    {
+      "method": "GET",
+      "model_free": true,
+      "name": "find_images_needing_review",
+      "path": "/api/agentic-harness/v1/images-needing-review"
+    },
+    {
+      "method": "POST",
+      "model_free": true,
+      "name": "get_image_context",
+      "path": "/api/agentic-harness/v1/image-context"
+    },
+    {
+      "method": "POST",
+      "model_free": true,
+      "name": "submit_recommendation",
+      "path": "/api/agentic-harness/v1/recommendations"
+    },
+    {
+      "method": "GET",
+      "model_free": true,
+      "name": "get_recommendation_status",
+      "path": "/api/agentic-harness/v1/recommendations/{recommendation_id}/status"
+    }
+  ],
+  "state_ownership": {
+    "checkpoint_backend": "sqlite",
+    "comparison_contract_location": "shared/schemas/langgraph-run-state.schema.json",
+    "credentials_in_checkpoint_prohibited": true,
+    "owner": "langgraph",
+    "raw_image_bytes_in_checkpoint_prohibited": true,
+    "runtime_storage_location": "deferred_to_step_2A_02",
+    "runtime_storage_owner": "langgraph",
+    "shared_runtime_storage_prohibited": true,
+    "thread_identity": "stable run/thread identity; exact pinned API finalized in Step 2A.02"
+  },
+  "status": "frozen"
+}

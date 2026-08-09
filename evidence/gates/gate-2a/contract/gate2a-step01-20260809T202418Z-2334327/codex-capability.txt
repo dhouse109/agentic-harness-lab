@@ -1,0 +1,7 @@
+codex-cli 0.146.1
+multi_agent                          stable             true
+multi_agent_v2                       stable             false
+worktree /home/dhouse109/projects/agentic-harness-lab
+HEAD d87c66a8a342109253e906e7e29ce2c15f7ddbef
+branch refs/heads/gate-2a-step01-langgraph-contract-and-evidence-plan
+
