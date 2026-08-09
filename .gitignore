@@ -82,3 +82,6 @@ Thumbs.db
 /.phase0-step17-backups/
 /.phase0-step17-package-backups/
 # END PHASE0 STEP17 RUNTIME
+# BEGIN GATE 2A LANGGRAPH RUNTIME
+/langchain/.gate2a-runtime/
+# END GATE 2A LANGGRAPH RUNTIME

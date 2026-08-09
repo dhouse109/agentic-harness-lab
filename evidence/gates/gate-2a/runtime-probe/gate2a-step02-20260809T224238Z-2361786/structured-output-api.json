@@ -1,0 +1,8 @@
+{
+  "method": "ChatOpenAI.with_structured_output",
+  "method_parameter_supported": true,
+  "model_call_performed": false,
+  "signature": "(self, schema: '_DictOrPydanticClass | None' = None, *, method: \"Literal['function_calling', 'json_mode', 'json_schema']\" = 'json_schema', include_raw: 'bool' = False, strict: 'bool | None' = None, tools: 'list | None' = None, **kwargs: 'Any') -> 'Runnable[LanguageModelInput, _DictOrPydantic]'",
+  "status": "pass",
+  "strict_parameter_supported": true
+}

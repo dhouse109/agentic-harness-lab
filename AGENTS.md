@@ -182,11 +182,18 @@ Gate 1 Drupal AI is complete and frozen at `2af9870aed1ea2ce15cf16f848cc1eb41573
 
 **Step 2A.01:** complete.
 
-**Next package:** `gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.0`.
+**Step 2A.02:** complete.
+
+**Next package:** `gate-2a-step03-langgraph-tool-adapters-v1.0.0`.
+
+**Step 2A.02:** active — pinned runtime/checkpoint capability probe only.
 
 Read `docs/gates/GATE-2-STRUCTURE.md`, `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`, `docs/CODEX-GATE-2A-RUNBOOK.md`, `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md`, the Gate 1 freeze manifest, and accepted Step 1.07 evidence. Preserve the frozen dataset, model/settings, shared operations, validator, review destination, source-mutation rule, and later shared failure point. Do not infer LangGraph behavior from Drupal AI evidence.
 
-Do not generate Step 2A.02 until Step 2A.01 is committed, merged, local `main` is resynchronized, and the post-merge audit passes.
+Do not generate Step 2A.03 until Step 2A.02 is committed, merged, local `main` is resynchronized, and the post-merge audit passes.
+
+Accepted Step 2A.02 evidence run: `gate2a-step02-20260809T224238Z-2361786`
+Accepted runtime ADR: `docs/decisions/ADR-0010-langgraph-runtime-and-checkpoint-path.md`
 
 Accepted Step 2A.01 evidence run: `gate2a-step01-20260809T202418Z-2334327`
 Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b`

@@ -14,7 +14,10 @@
 - **Gate 2:** in progress.
 - **Gate 2A — LangGraph:** active.
 - **Step 2A.01:** complete.
-- **Next package:** `gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.0`.
+- **Step 2A.02:** complete.
+- **Next package:** `gate-2a-step03-langgraph-tool-adapters-v1.0.0`.
+Accepted Step 2A.02 evidence run: `gate2a-step02-20260809T224238Z-2361786`
+Accepted runtime ADR: `docs/decisions/ADR-0010-langgraph-runtime-and-checkpoint-path.md`
 Accepted Step 2A.01 evidence run: `gate2a-step01-20260809T202418Z-2334327`
 Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b`
 - **Execution environment:** package-driven local execution inside WSL2, governed by `AGENTS.md`.
@@ -176,4 +179,4 @@ A new planning or implementation session should read these files in order:
 11. `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json`
 
 Do not reopen Gate 0.5 or Gate 1 unless an audit fails or a frozen contract is intentionally changed.
-Use `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md` together with `docs/gates/GATE-2-STRUCTURE.md` and `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`. Step 2A.01 is complete. Do not generate Step 2A.02 until 2A.01 is committed and merged, local `main` is resynchronized, and the post-merge audit passes.
+Use `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md` together with `docs/gates/GATE-2-STRUCTURE.md`, `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`, and `docs/gates/GATE-2A-STEP02-LANGGRAPH-RUNTIME-PROBE.md`. Step 2A.01 is complete. Step 2A.02 is the active model-free runtime/checkpoint probe. Do not generate Step 2A.03 until Step 2A.02 is committed and merged, local `main` is resynchronized, and the post-merge audit passes.

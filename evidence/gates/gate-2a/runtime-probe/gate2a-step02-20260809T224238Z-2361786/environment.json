@@ -1,0 +1,23 @@
+{
+  "drupal_state_mutated": false,
+  "expected": {
+    "langchain": "1.3.14",
+    "langgraph": "1.2.10",
+    "langgraph-checkpoint-sqlite": "3.1.1",
+    "python": "3.12.13"
+  },
+  "model_call_performed": false,
+  "observed": {
+    "langchain": "1.3.14",
+    "langchain-openai": "1.4.1",
+    "langgraph": "1.2.10",
+    "langgraph-checkpoint": "4.1.1",
+    "langgraph-checkpoint-sqlite": "3.1.1",
+    "openai": "2.53.0",
+    "python": "3.12.13"
+  },
+  "run_id": "gate2a-step02-20260809T224238Z-2361786",
+  "runtime_root": "langchain/.gate2a-runtime",
+  "schema_version": 1,
+  "versions_match": true
+}

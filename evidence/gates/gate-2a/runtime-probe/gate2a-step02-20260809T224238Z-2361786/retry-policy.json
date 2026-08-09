@@ -1,0 +1,8 @@
+{
+  "experiment_setting": 0,
+  "explicit_zero_supported": true,
+  "field": "max_retries",
+  "model_call_performed": false,
+  "observed_default_repr": "None",
+  "status": "pass"
+}
