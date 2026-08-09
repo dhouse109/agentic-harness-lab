@@ -1,0 +1,18 @@
+{
+  "decision_revision_id": 36,
+  "deviation_observed": true,
+  "edit_revision_id": 35,
+  "edited_alt_preserved_into_approval": true,
+  "final_status": "approved",
+  "impact": "Observed reviewer workflow is retained explicitly; no revision was deleted or rewritten.",
+  "planned_workflow": "single_save_edit_and_approve",
+  "review_revision_count": 2,
+  "review_revision_ids": [
+    35,
+    36
+  ],
+  "review_workflow": "two_save_edit_then_approve",
+  "run_id": "drupal_ai-20260808T020222Z-205fd9",
+  "schema_version": 1,
+  "sequence": 12
+}

@@ -1,0 +1,58 @@
+{
+    "helper_version": "1.0.0",
+    "mode": "inspect",
+    "status": "pass",
+    "node_id": 21,
+    "uuid": "964c5baa-c22c-457d-b9a8-c7b28a966f7f",
+    "title": "Alt text recommendation: drupal_ai target 1 (drupal_ai-20260808T020222Z-205fd9)",
+    "owner_username": "agent_bot",
+    "published": false,
+    "revision_count": 1,
+    "current_revision_id": 21,
+    "current_review_status": "pending",
+    "current_proposed_alt_text": "Solid navy background with a large white number 1 composed of blocks in the center, labeled as Phase 0 Primary Image, with text Emergency Preparedness and Slot 1 in corners, representing the first article in an emergency preparedness checklist series",
+    "current_source_framework": "drupal_ai",
+    "current_run_id": "drupal_ai-20260808T020222Z-205fd9",
+    "current_evidence_hash": "sha256:41be554b399f68e86f4ea116656ee9e3c7e89b24e01193ee44bb7970726f549f",
+    "current_target": {
+        "node_id": 1,
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "field_name": "field_image",
+        "delta": 0,
+        "file_id": 1,
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25"
+    },
+    "access": {
+        "agent_can_view": true,
+        "agent_can_update": false,
+        "editor_can_update": true
+    },
+    "revisions": [
+        {
+            "revision_id": 21,
+            "revision_user": {
+                "uid": 3,
+                "name": "agent_bot"
+            },
+            "timestamp_unix": 1786154943,
+            "timestamp_utc": "2026-08-08T02:09:03Z",
+            "revision_log": "submit_recommendation validator=gate05-validator-1.0.0 evidence=sha256:41be554b399f68e86f4ea116656ee9e3c7e89b24e01193ee44bb7970726f549f",
+            "published": false,
+            "proposed_alt_text": "Solid navy background with a large white number 1 composed of blocks in the center, labeled as Phase 0 Primary Image, with text Emergency Preparedness and Slot 1 in corners, representing the first article in an emergency preparedness checklist series",
+            "review_status": "pending",
+            "source_framework": "drupal_ai",
+            "run_id": "drupal_ai-20260808T020222Z-205fd9",
+            "evidence_hash": "sha256:41be554b399f68e86f4ea116656ee9e3c7e89b24e01193ee44bb7970726f549f",
+            "target": {
+                "node_id": 1,
+                "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+                "revision_id": 1,
+                "field_name": "field_image",
+                "delta": 0,
+                "file_id": 1,
+                "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25"
+            }
+        }
+    ]
+}

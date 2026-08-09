@@ -1,0 +1,10 @@
+{
+    "status": "pass",
+    "username": "editor_dana",
+    "uid": 2,
+    "active": true,
+    "roles": [
+        "authenticated",
+        "content_editor"
+    ]
+}

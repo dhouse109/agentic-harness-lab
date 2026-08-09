@@ -1,0 +1,22 @@
+{
+  "approved_recommendation_applied_to_source": false,
+  "batch_run_id": "drupal_ai-20260808T020222Z-205fd9",
+  "evidence_run_id": "gate1-step06-20260808T231216Z-2188911",
+  "instruction_deviation_recorded": true,
+  "model_call_performed": false,
+  "restored_seeded_clean": true,
+  "review_counts_after_decisions": {
+    "approved": 2,
+    "pending": 9,
+    "rejected": 1
+  },
+  "review_decision_count": 3,
+  "review_revision_count": 4,
+  "reviewer_username": "editor_dana",
+  "schema_version": 1,
+  "sequence_12_review_workflow": "two_save_edit_then_approve",
+  "source_articles_unchanged": true,
+  "status": "pass",
+  "step": "1.06",
+  "step_1_07_authorized": true
+}

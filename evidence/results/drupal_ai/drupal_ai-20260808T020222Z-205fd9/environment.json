@@ -1,0 +1,12 @@
+{
+  "authorization_headers_retained": false,
+  "credentials_retained": false,
+  "framework_origin": "drupal_ai",
+  "human_ui_review": true,
+  "model_call_performed": false,
+  "raw_image_retained": false,
+  "reviewer_username": "editor_dana",
+  "run_id": "drupal_ai-20260808T020222Z-205fd9",
+  "schema_version": 1,
+  "step": "1.06"
+}

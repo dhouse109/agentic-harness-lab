@@ -1,0 +1,39 @@
+{
+  "action": "reject_unchanged",
+  "decision_revision_id": 34,
+  "immutable_fields_unchanged": true,
+  "immutable_projection": {
+    "evidence_hash": "sha256:6ff2f7ea390e04ddde23f6c7c3b83c8bfad502c6fe78c140d58c14353219aa86",
+    "node_id": 26,
+    "owner_username": "agent_bot",
+    "published": false,
+    "run_id": "drupal_ai-20260808T020222Z-205fd9",
+    "source_framework": "drupal_ai",
+    "target": {
+      "delta": 1,
+      "field_name": "field_image",
+      "file_id": 9,
+      "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+      "node_id": 6,
+      "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+      "revision_id": 6
+    },
+    "title": "Alt text recommendation: drupal_ai target 6 (drupal_ai-20260808T020222Z-205fd9)",
+    "uuid": "8c728772-8f13-4ea3-a2c8-b39b0674fdf2"
+  },
+  "node_id": 26,
+  "pending_revision_id": 26,
+  "proposed_alt_after": "White block-style number 6 centered on a solid blue background with white text labels reading 'PHASE 0 - SUPPORTING IMAGE' at top left, 'ROAD MAINTENANCE' at bottom left, and 'SLOT 2' at bottom right.",
+  "proposed_alt_before": "White block-style number 6 centered on a solid blue background with white text labels reading 'PHASE 0 - SUPPORTING IMAGE' at top left, 'ROAD MAINTENANCE' at bottom left, and 'SLOT 2' at bottom right.",
+  "proposed_alt_changed": false,
+  "review_timestamp_utc": "2026-08-08T23:18:44Z",
+  "reviewer_username": "editor_dana",
+  "revision_count_after": 2,
+  "revision_count_before": 1,
+  "revision_delta": 1,
+  "schema_version": 1,
+  "sequence": 6,
+  "status_after": "rejected",
+  "status_before": "pending",
+  "uuid": "8c728772-8f13-4ea3-a2c8-b39b0674fdf2"
+}

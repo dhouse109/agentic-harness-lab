@@ -1,0 +1,37 @@
+{
+  "after_restore": {
+    "article_count": 20,
+    "article_source_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+    "combined_state_sha256": "e8f1a2a94edb4a98caec41498c32a93bf380c7ab8073e38bd5a8e375a7edc096",
+    "helper_version": "1.0.0",
+    "mode": "snapshot",
+    "recommendation_state_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "status": "pass",
+    "suggestion_count": 0
+  },
+  "after_review": {
+    "article_count": 20,
+    "article_source_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+    "combined_state_sha256": "e19c9b2e91515ff5a107916b08261084025229b72c8f5e4971216bd042181d59",
+    "helper_version": "1.0.0",
+    "mode": "snapshot",
+    "recommendation_state_sha256": "776ac9a81dbd1593ebf53bf287a789d340ca01de5d67ce4624977a59df0873fe",
+    "status": "pass",
+    "suggestion_count": 12
+  },
+  "approved_recommendation_applied_to_source": false,
+  "before_review": {
+    "article_count": 20,
+    "article_source_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+    "combined_state_sha256": "2d79333597ea6a66a7a015f6d342fdbd39b5706b66072c786c6969e388b20d3f",
+    "helper_version": "1.0.0",
+    "mode": "snapshot",
+    "recommendation_state_sha256": "4e9fa44544256d8c506d60d76499eb0a23613f9b72aae2959b32d3d630e47b09",
+    "status": "pass",
+    "suggestion_count": 12
+  },
+  "restored_seeded_clean": true,
+  "run_id": "drupal_ai-20260808T020222Z-205fd9",
+  "schema_version": 1,
+  "source_articles_unchanged": true
+}

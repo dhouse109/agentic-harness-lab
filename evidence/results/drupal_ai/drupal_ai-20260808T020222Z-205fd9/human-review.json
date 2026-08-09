@@ -1,0 +1,133 @@
+{
+  "automated_decision_performed": false,
+  "decisions": [
+    {
+      "action": "approve_unchanged",
+      "decision_revision_id": 33,
+      "immutable_fields_unchanged": true,
+      "immutable_projection": {
+        "evidence_hash": "sha256:41be554b399f68e86f4ea116656ee9e3c7e89b24e01193ee44bb7970726f549f",
+        "node_id": 21,
+        "owner_username": "agent_bot",
+        "published": false,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 0,
+          "field_name": "field_image",
+          "file_id": 1,
+          "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+          "node_id": 1,
+          "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+          "revision_id": 1
+        },
+        "title": "Alt text recommendation: drupal_ai target 1 (drupal_ai-20260808T020222Z-205fd9)",
+        "uuid": "964c5baa-c22c-457d-b9a8-c7b28a966f7f"
+      },
+      "node_id": 21,
+      "pending_revision_id": 21,
+      "proposed_alt_after": "Solid navy background with a large white number 1 composed of blocks in the center, labeled as Phase 0 Primary Image, with text Emergency Preparedness and Slot 1 in corners, representing the first article in an emergency preparedness checklist series",
+      "proposed_alt_before": "Solid navy background with a large white number 1 composed of blocks in the center, labeled as Phase 0 Primary Image, with text Emergency Preparedness and Slot 1 in corners, representing the first article in an emergency preparedness checklist series",
+      "proposed_alt_changed": false,
+      "review_timestamp_utc": "2026-08-08T23:13:46Z",
+      "reviewer_username": "editor_dana",
+      "revision_count_after": 2,
+      "revision_count_before": 1,
+      "revision_delta": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "status_after": "approved",
+      "status_before": "pending",
+      "uuid": "964c5baa-c22c-457d-b9a8-c7b28a966f7f"
+    },
+    {
+      "action": "reject_unchanged",
+      "decision_revision_id": 34,
+      "immutable_fields_unchanged": true,
+      "immutable_projection": {
+        "evidence_hash": "sha256:6ff2f7ea390e04ddde23f6c7c3b83c8bfad502c6fe78c140d58c14353219aa86",
+        "node_id": 26,
+        "owner_username": "agent_bot",
+        "published": false,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 1,
+          "field_name": "field_image",
+          "file_id": 9,
+          "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+          "node_id": 6,
+          "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+          "revision_id": 6
+        },
+        "title": "Alt text recommendation: drupal_ai target 6 (drupal_ai-20260808T020222Z-205fd9)",
+        "uuid": "8c728772-8f13-4ea3-a2c8-b39b0674fdf2"
+      },
+      "node_id": 26,
+      "pending_revision_id": 26,
+      "proposed_alt_after": "White block-style number 6 centered on a solid blue background with white text labels reading 'PHASE 0 - SUPPORTING IMAGE' at top left, 'ROAD MAINTENANCE' at bottom left, and 'SLOT 2' at bottom right.",
+      "proposed_alt_before": "White block-style number 6 centered on a solid blue background with white text labels reading 'PHASE 0 - SUPPORTING IMAGE' at top left, 'ROAD MAINTENANCE' at bottom left, and 'SLOT 2' at bottom right.",
+      "proposed_alt_changed": false,
+      "review_timestamp_utc": "2026-08-08T23:18:44Z",
+      "reviewer_username": "editor_dana",
+      "revision_count_after": 2,
+      "revision_count_before": 1,
+      "revision_delta": 1,
+      "schema_version": 1,
+      "sequence": 6,
+      "status_after": "rejected",
+      "status_before": "pending",
+      "uuid": "8c728772-8f13-4ea3-a2c8-b39b0674fdf2"
+    },
+    {
+      "action": "edit_and_approve",
+      "decision_revision_id": 36,
+      "edit_revision_id": 35,
+      "immutable_fields_unchanged": true,
+      "immutable_projection": {
+        "evidence_hash": "sha256:85c3556d861126b7a7a0e12945c665c1cf53cf0278208a9cfe0e8ab0ee19f68e",
+        "node_id": 32,
+        "owner_username": "agent_bot",
+        "published": false,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 1,
+          "field_name": "field_image",
+          "file_id": 18,
+          "file_uuid": "891be849-b0d8-5d3a-961c-05921b70e274",
+          "node_id": 12,
+          "node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+          "revision_id": 12
+        },
+        "title": "Alt text recommendation: drupal_ai target 12 (drupal_ai-20260808T020222Z-205fd9)",
+        "uuid": "15103f8e-fa51-456f-bc06-b8bde77f6382"
+      },
+      "instruction_deviation": true,
+      "node_id": 32,
+      "pending_revision_id": 32,
+      "proposed_alt_after": "Park Facility Improvement Plan",
+      "proposed_alt_before": "Teal background with a large white block-style number 12 in the center, labeled as Phase 0 supporting image, with text indicating park improvements and slot 2.",
+      "proposed_alt_changed": true,
+      "review_revision_count": 2,
+      "review_revision_ids": [
+        35,
+        36
+      ],
+      "review_timestamp_utc": "2026-08-08T23:28:40Z",
+      "review_workflow": "two_save_edit_then_approve",
+      "reviewer_username": "editor_dana",
+      "revision_count_after": 3,
+      "revision_count_before": 1,
+      "revision_delta": 2,
+      "schema_version": 1,
+      "sequence": 12,
+      "status_after": "approved",
+      "status_before": "pending",
+      "uuid": "15103f8e-fa51-456f-bc06-b8bde77f6382"
+    }
+  ],
+  "reviewer_username": "editor_dana",
+  "run_id": "drupal_ai-20260808T020222Z-205fd9",
+  "schema_version": 1
+}
