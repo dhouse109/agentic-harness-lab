@@ -2,7 +2,7 @@
 
 ## Current status
 
-> Phase 0 and Gate 0.5 are complete. Gate 1 Steps 1.01 through 1.06 are complete; Step 1.07 is next.
+> Phase 0, Gate 0.5, and Gate 1 are complete. Drupal AI is certified and frozen; LangGraph implementation is next.
 
 See `docs/CURRENT-STATUS.md` for the authoritative fresh-session status snapshot and reading order.
 
@@ -72,7 +72,7 @@ preflight. That is an intentional proof boundary, not an unfinished Gate 0.5 che
 
 ## Gate 1 — Drupal AI full implementation
 
-Gate 1 is the active phase. Drupal AI must use the frozen shared operations and constants while
+Gate 1 is complete and certified. The frozen Drupal AI result remains the baseline while
 owning its model invocation, prompt orchestration, state, sequencing, evidence, and lifecycle
 behavior.
 
@@ -117,11 +117,19 @@ gate-1-step05-drupal-ai-batch-runner-v1.0.0
 gate-1-step06-drupal-ai-batch-evidence-and-human-review-v1.0.3
 ```
 
-**Next package:**
+**Completed package:**
 
 ```text
-gate-1-step07-drupal-ai-certification-and-handoff-v1.0.0
+gate-1-step07-drupal-ai-certification-and-handoff-v1.0.6
 ```
+
+Accepted Step 1.07 certification evidence: `evidence/gates/gate-1/certification/gate1-step07-20260809T012559Z-2229836`
+Accepted Drupal AI certification batch: `drupal_ai-20260809T012559Z-22064c`
+Accepted Gate 1 freeze digest: `2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd`
+Step 1.07 certification salvage: v1.0.3 corrected the v1.0.2 auditor-field mismatch and promoted the retained model-backed run without a model rerun.
+Step 1.07 v1.0.4 documentation repair was rolled back after exposing an audit-shell cleanup defect; certification evidence remained valid and unchanged.
+Step 1.07 v1.0.5 repaired the post-certification audit cleanup trap and reapplied the documentation-coherence edits; certification evidence and freeze remained unchanged.
+Final Step 1.07 documentation cleanup: v1.0.6 (model-free; residual stale-status/word-boundary defects only; certification evidence and freeze unchanged).
 
 Accepted Step 1.01 evidence run: `gate1-step01-20260805T205448Z-103220`
 Accepted Gate 1 contract digest: `360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6`
@@ -154,7 +162,7 @@ audit restriction. The v1.0.1 repair changes formatting and audit policy only, n
 - [x] Step 1.04 — canonical vertical slice
 - [x] Step 1.05 — 12-target batch runner
 - [x] Step 1.06 — batch evidence and human review
-- [ ] Step 1.07 — certification, freeze, and handoff
+- [x] Step 1.07 — certification, freeze, and handoff
 
 This sequence and `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json` govern later package
 generation. The Step 1.02 runtime-path decision is recorded in `ADR-0006`; ADR-0004 and ADR-0005 remain

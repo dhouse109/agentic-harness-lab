@@ -1,0 +1,24 @@
+{
+  "batch_run_id": "drupal_ai-20260809T012559Z-22064c",
+  "classification": "auditor_field_mismatch",
+  "corrected_start_evidence_fields": [
+    "provider_request_count",
+    "agent_request_count",
+    "recommendation_count",
+    "pending_status_count",
+    "failure_injection_fired",
+    "failure_after_sequence",
+    "failure_before_sequence",
+    "resume_at_sequence"
+  ],
+  "failed_package_version": "1.0.2",
+  "gate_run_id": "gate1-step07-20260809T012559Z-2229836",
+  "incorrect_v1_0_2_assertion": "start-result.json.model_call_count_total == 6",
+  "model_rerun_performed": false,
+  "original_terminal_error": "Fresh certification start did not stop after six calls",
+  "recorded_at": "2026-08-09T01:49:52.197745Z",
+  "repair_package_version": "1.0.3",
+  "runtime_artifacts_rewritten": false,
+  "schema_version": 1,
+  "status": "audit_repair"
+}

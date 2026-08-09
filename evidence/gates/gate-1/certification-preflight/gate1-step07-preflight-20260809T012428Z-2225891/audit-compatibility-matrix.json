@@ -1,0 +1,51 @@
+{
+  "entries": [
+    {
+      "boundary": "Gate 0.5 Step 05",
+      "classification": "meaningful_live_state_and_retained_evidence",
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.01",
+      "classification": "progression_aware_live_static_and_retained_evidence",
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.02",
+      "classification": "meaningful_static_runtime_surface_and_retained_evidence",
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.03",
+      "classification": "meaningful_static_adapter_invariants_and_retained_evidence",
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.04",
+      "classification": "retained_evidence_plus_meaningful_current_implementation",
+      "historical_assertions": [
+        "Step 1.06 source absent"
+      ],
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.05",
+      "classification": "retained_evidence_plus_meaningful_current_implementation",
+      "historical_assertions": [
+        "Step 1.06 absent",
+        "module enabled with 12 pending recommendations"
+      ],
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.06",
+      "classification": "retained_evidence_auditor_plus_meaningful_final_live_state",
+      "historical_assertions": [
+        "exact pre-merge HEAD/origin-main"
+      ],
+      "status": "pass"
+    }
+  ],
+  "schema_version": 1,
+  "status": "pass"
+}

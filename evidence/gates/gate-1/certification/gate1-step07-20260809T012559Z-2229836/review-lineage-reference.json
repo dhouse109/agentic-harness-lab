@@ -1,0 +1,9 @@
+{
+  "human_review_recreated_in_step07": false,
+  "review_decision_count": 3,
+  "review_revision_count": 4,
+  "reviewer_decisions_sha256": "507b36044f80487e41bd143291e24b8fb7ea8007ebb123efe46c72e1d6cc4da6",
+  "schema_version": 1,
+  "sequence_12_review_workflow": "two_save_edit_then_approve",
+  "step06_run_id": "gate1-step06-20260808T231216Z-2188911"
+}

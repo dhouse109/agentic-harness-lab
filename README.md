@@ -15,14 +15,15 @@ and lifecycle and recovery.
 
 - **Phase 0:** complete.
 - **Gate 0.5:** complete and certified.
-- **Gate 1:** active.
+- **Gate 1:** complete and certified.
 - **Step 1.01:** complete.
 - **Step 1.02:** complete.
 - **Step 1.03:** complete.
 - **Step 1.04:** complete.
 - **Step 1.05:** complete.
 - **Step 1.06:** complete.
-- **Next package:** `gate-1-step07-drupal-ai-certification-and-handoff-v1.0.0`.
+- **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
+- **Next implementation:** LangGraph.
 
 Accepted Gate 0.5 certification evidence is
 `evidence/gates/gate-0.5/substrate-certification/gate05-step05-20260805T184155Z-50124/`.
@@ -40,6 +41,9 @@ Accepted Drupal AI batch run: `drupal_ai-20260808T020222Z-205fd9`
 Accepted Step 1.06 evidence run: `gate1-step06-20260808T231216Z-2188911`
 Accepted Step 1.06 implementation package: `gate-1-step06-drupal-ai-batch-evidence-and-human-review-v1.0.3`
 Step 1.06 reviewer-lineage recovery patch: `gate-1-step06-drupal-ai-batch-evidence-and-human-review-v1.0.4`
+Accepted Step 1.07 certification evidence: `evidence/gates/gate-1/certification/gate1-step07-20260809T012559Z-2229836`
+Accepted Drupal AI certification batch: `drupal_ai-20260809T012559Z-22064c`
+Accepted Gate 1 freeze digest: `2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd`
 
 
 Step 1.03 directly exercises exactly four model-free Drupal AI FunctionCall adapters: `discover_targets`, `get_image_context`, `submit_recommendation`, and `get_recommendation_status`. It does not execute an AI Agent and makes no model or provider call. Its predecessor-compatible Article-source SHA-256 is `f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17`; the original Step 1.03 hash discrepancy was definition drift only, with no Drupal source drift.

@@ -1,0 +1,254 @@
+{
+    "schema_version": 1,
+    "status": "interrupted",
+    "run_id": "drupal_ai-20260809T012559Z-22064c",
+    "failure_injection_fired": true,
+    "failure_after_sequence": 6,
+    "failure_before_sequence": 7,
+    "resume_at_sequence": 7,
+    "completed_sequences": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+    ],
+    "next_target_index": 6,
+    "provider_request_count": 6,
+    "agent_request_count": 6,
+    "automatic_retries": 0,
+    "recommendation_count": 6,
+    "pending_status_count": 6,
+    "state": {
+        "schema_version": 1,
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "framework_origin": "drupal_ai",
+        "status": "interrupted",
+        "target_sequence_hash": "sha256:1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+        "next_target_index": 6,
+        "completed_target_identities": [
+            {
+                "schema_version": 1,
+                "sequence": 1,
+                "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+                "revision_id": 1,
+                "field_name": "field_image",
+                "delta": 0,
+                "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+                "target_state": "missing",
+                "existing_alt": ""
+            },
+            {
+                "schema_version": 1,
+                "sequence": 2,
+                "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+                "revision_id": 2,
+                "field_name": "field_image",
+                "delta": 1,
+                "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4",
+                "target_state": "missing",
+                "existing_alt": ""
+            },
+            {
+                "schema_version": 1,
+                "sequence": 3,
+                "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+                "revision_id": 3,
+                "field_name": "field_image",
+                "delta": 0,
+                "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3",
+                "target_state": "missing",
+                "existing_alt": ""
+            },
+            {
+                "schema_version": 1,
+                "sequence": 4,
+                "node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+                "revision_id": 4,
+                "field_name": "field_image",
+                "delta": 0,
+                "file_uuid": "4c2bacbf-1a18-5b91-95b6-04be3911e035",
+                "target_state": "missing",
+                "existing_alt": ""
+            },
+            {
+                "schema_version": 1,
+                "sequence": 5,
+                "node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+                "revision_id": 5,
+                "field_name": "field_image",
+                "delta": 0,
+                "file_uuid": "a5b69415-6c44-5263-adb0-ac7270f6c19f",
+                "target_state": "missing",
+                "existing_alt": ""
+            },
+            {
+                "schema_version": 1,
+                "sequence": 6,
+                "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+                "revision_id": 6,
+                "field_name": "field_image",
+                "delta": 1,
+                "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+                "target_state": "missing",
+                "existing_alt": ""
+            }
+        ],
+        "recommendation_ids": [
+            {
+                "sequence": 1,
+                "node_id": 21,
+                "uuid": "7878e917-a8cf-44d9-a023-8a69a8a91f68",
+                "revision_id": 21
+            },
+            {
+                "sequence": 2,
+                "node_id": 22,
+                "uuid": "37edf440-b1b6-4fc4-8f03-2b2837c10302",
+                "revision_id": 22
+            },
+            {
+                "sequence": 3,
+                "node_id": 23,
+                "uuid": "222266e6-e0bc-4eb2-818e-b6d58ced9079",
+                "revision_id": 23
+            },
+            {
+                "sequence": 4,
+                "node_id": 24,
+                "uuid": "2dcb42d9-504f-4e05-8528-90e03fcb2f40",
+                "revision_id": 24
+            },
+            {
+                "sequence": 5,
+                "node_id": 25,
+                "uuid": "239fc0aa-9478-4b0a-8e69-d1a44b0990d2",
+                "revision_id": 25
+            },
+            {
+                "sequence": 6,
+                "node_id": 26,
+                "uuid": "92c77d81-84f9-4cce-b227-9c981822fa2a",
+                "revision_id": 26
+            }
+        ],
+        "validation_results": [
+            {
+                "sequence": 1,
+                "target": {
+                    "schema_version": 1,
+                    "sequence": 1,
+                    "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+                    "revision_id": 1,
+                    "field_name": "field_image",
+                    "delta": 0,
+                    "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+                    "target_state": "missing",
+                    "existing_alt": ""
+                },
+                "structured_output_schema_valid": true,
+                "deterministic_validation_passed": true,
+                "errors": []
+            },
+            {
+                "sequence": 2,
+                "target": {
+                    "schema_version": 1,
+                    "sequence": 2,
+                    "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+                    "revision_id": 2,
+                    "field_name": "field_image",
+                    "delta": 1,
+                    "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4",
+                    "target_state": "missing",
+                    "existing_alt": ""
+                },
+                "structured_output_schema_valid": true,
+                "deterministic_validation_passed": true,
+                "errors": []
+            },
+            {
+                "sequence": 3,
+                "target": {
+                    "schema_version": 1,
+                    "sequence": 3,
+                    "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+                    "revision_id": 3,
+                    "field_name": "field_image",
+                    "delta": 0,
+                    "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3",
+                    "target_state": "missing",
+                    "existing_alt": ""
+                },
+                "structured_output_schema_valid": true,
+                "deterministic_validation_passed": true,
+                "errors": []
+            },
+            {
+                "sequence": 4,
+                "target": {
+                    "schema_version": 1,
+                    "sequence": 4,
+                    "node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+                    "revision_id": 4,
+                    "field_name": "field_image",
+                    "delta": 0,
+                    "file_uuid": "4c2bacbf-1a18-5b91-95b6-04be3911e035",
+                    "target_state": "missing",
+                    "existing_alt": ""
+                },
+                "structured_output_schema_valid": true,
+                "deterministic_validation_passed": true,
+                "errors": []
+            },
+            {
+                "sequence": 5,
+                "target": {
+                    "schema_version": 1,
+                    "sequence": 5,
+                    "node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+                    "revision_id": 5,
+                    "field_name": "field_image",
+                    "delta": 0,
+                    "file_uuid": "a5b69415-6c44-5263-adb0-ac7270f6c19f",
+                    "target_state": "missing",
+                    "existing_alt": ""
+                },
+                "structured_output_schema_valid": true,
+                "deterministic_validation_passed": true,
+                "errors": []
+            },
+            {
+                "sequence": 6,
+                "target": {
+                    "schema_version": 1,
+                    "sequence": 6,
+                    "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+                    "revision_id": 6,
+                    "field_name": "field_image",
+                    "delta": 1,
+                    "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+                    "target_state": "missing",
+                    "existing_alt": ""
+                },
+                "structured_output_schema_valid": true,
+                "deterministic_validation_passed": true,
+                "errors": []
+            }
+        ],
+        "started_at": "2026-08-09T01:26:18Z",
+        "updated_at": "2026-08-09T01:31:58Z",
+        "completed_at": null,
+        "interrupted_at": "2026-08-09T01:31:58Z",
+        "resumed_at": null,
+        "failure_injection_armed": true,
+        "failure_injection_fired": true,
+        "prompt_version": "drupal-ai-alt-text-v1.0.0",
+        "model_id": "gpt-4.1-mini-2025-04-14"
+    },
+    "raw_image_retained": false,
+    "post_image_wrapper_serialization_performed": false,
+    "human_review_started": false,
+    "step_1_06_started": false
+}

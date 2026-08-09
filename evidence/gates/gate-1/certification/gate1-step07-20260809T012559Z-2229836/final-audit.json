@@ -1,0 +1,11 @@
+{
+  "duplicate_count": 0,
+  "pending_count": 12,
+  "recommendation_count": 12,
+  "restored_seeded_clean": true,
+  "run_id": "drupal_ai-20260809T012559Z-22064c",
+  "shared_process_failure_recovery_claimed": false,
+  "source_articles_unchanged": true,
+  "status": "pass",
+  "target_count": 12
+}

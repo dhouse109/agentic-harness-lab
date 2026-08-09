@@ -1,0 +1,13 @@
+{
+  "certification_started": false,
+  "completed_at": "2026-08-09T01:25:04.278810Z",
+  "drupal_mutation_performed": false,
+  "model_call_performed": false,
+  "next_boundary": "explicit certification approval",
+  "ordered_boundary_count": 8,
+  "package": "gate-1-step07-drupal-ai-certification-and-handoff",
+  "package_version": "1.0.2",
+  "run_id": "gate1-step07-preflight-20260809T012428Z-2225891",
+  "schema_version": 1,
+  "status": "pass"
+}

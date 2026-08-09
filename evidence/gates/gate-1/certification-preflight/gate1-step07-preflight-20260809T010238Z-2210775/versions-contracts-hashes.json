@@ -1,0 +1,36 @@
+{
+  "adr0006_sha256": "223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b",
+  "contract_inputs": {
+    "shared/prompts/PROMPTS.md": "875ff406e3425cddbf2257d1280d8161c1f30de62046cdf25e94fae7bff279c8",
+    "shared/schemas/batch-event.schema.json": "6c282c812cdbb1038cb0a92aeacc029cdf7683e2f093413d81329bf3cd406ccc",
+    "shared/schemas/batch-human-review.schema.json": "0972636d984b3cdf24579457336c94306f0337af6885104d031e5a0a088d330e",
+    "shared/schemas/batch-model-outputs.schema.json": "ce035491a2b407f5765fceae55ff406ebfa28c9bd53ead983372f02627fbe0f9",
+    "shared/schemas/batch-recommendations.schema.json": "53071df5a9d8c326e8598035b6b6742d5f1127d79cc93ca405807b864c95c159",
+    "shared/schemas/batch-recovery.schema.json": "72ee62c6416ff06c112c14e733365a1b999570f2b2f31a672b230a99113d6bb4",
+    "shared/schemas/batch-statuses.schema.json": "259fe56d36dc78993dafd4d51fb7696cc8de7c49a1558a137332cade3793c3cf",
+    "shared/schemas/batch-submissions.schema.json": "af9db6dba2da1a1d95f782f7ea0cb879af6d90ee80d94369c203f70fa8317d76",
+    "shared/schemas/batch-summary.schema.json": "7f7b403f1ecf346af72c7f09ac9376a5aa8492223fe93bfa394e16dc6994c2e8",
+    "shared/schemas/batch-target-sequence.schema.json": "79075694777a9a048dd344beb4500d9548a9349825c1c97d3348e943879c57dc",
+    "shared/schemas/batch-tool-traces.schema.json": "6bb844d9c046ad45a8f7711be07a2b1f29f4adf90280432e8977d6fb1b99f4d9",
+    "shared/schemas/batch-validation.schema.json": "46a37841d57ef96d09ed0a435de4c2a34cd2711c1dd7070d576de7956927d5cd",
+    "shared/schemas/drupal-ai-model-output.schema.json": "2a964f35de72643a1c5e95e4377abbcada12a58931e21db5c09a6ba24801056c",
+    "shared/schemas/drupal-ai-run-state.schema.json": "8a7d3c21020f6883f0cf26cabc1fa3738e79accd25d77bcc9d9e8d8ae87f63b3",
+    "shared/schemas/image-context.schema.json": "b2e27b533551759d181c58330ebedcb26ca92c1a596dbb4aaf48a48422dffaee",
+    "shared/schemas/recommendation.schema.json": "7b1cf9800d5c8d8df4cd0a718c721dd43013afa256f7814a365d4696e2cfe2bd",
+    "shared/schemas/run-state.schema.json": "ee5face3d81138cfa2d5de2e03d8fb2aded881743e2e0334129342bf95f3010b",
+    "shared/schemas/target.schema.json": "2bcb867c3b58a5f4bb20b29274434c153ad043e8c0dba3ce3d1e496a44a32469",
+    "shared/schemas/tool-result.schema.json": "ce04e938eb4e34e861c000b86fffeed4adc5e5c66167c52ebf5380b8cd3cd91b"
+  },
+  "full_article_source_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+  "gate05_freeze_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+  "gate1_contract_sha256": "360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6",
+  "reduced_article_source_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "status": "pass",
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "versions": {
+    "drupal/ai": "1.4.5",
+    "drupal/ai_agents": "1.3.2",
+    "drupal/ai_provider_openai": "1.2.3",
+    "drupal/core-recommended": "11.4.4"
+  }
+}

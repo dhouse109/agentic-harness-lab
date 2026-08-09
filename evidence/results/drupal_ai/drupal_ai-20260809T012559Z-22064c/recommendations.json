@@ -1,0 +1,403 @@
+{
+  "recommendations": [
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:8be8ca2132b18505efab94bf5f880ee4a4ae03c5b6edf7cb96b0f6c084eb10a5",
+        "proposed_alt_text": "Solid navy background with a large white number 1 composed of smaller squares in the center, framed by a thin white border. Text in corners reads 'PHASE 0 - PRIMARY IMAGE', 'EMERGENCY PREPAREDNESS', and 'SLOT 1'.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+          "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+          "revision_id": 1,
+          "schema_version": 1,
+          "sequence": 1,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 1,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:9bdaa5821702eb345d88eac1fd2d4b0240e71da594674e700dbba59cd198fa49",
+        "proposed_alt_text": "White pixelated number 2 on a solid teal background with text labels reading 'PHASE 0 - SUPPORTING IMAGE' at top, 'COMMUNITY GRANTS' at bottom left, and 'SLOT 2' at bottom right, framed by a thin white border.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 1,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4",
+          "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+          "revision_id": 2,
+          "schema_version": 1,
+          "sequence": 2,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 2,
+      "target": {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4",
+        "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+        "revision_id": 2,
+        "schema_version": 1,
+        "sequence": 2,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:d6c222f119276cf126944accef0e822ee8ca2779b6cc08c7b25060c00a2f0d9f",
+        "proposed_alt_text": "White block-style number 3 centered on a solid maroon background with text labels reading 'PHASE 0 - PRIMARY IMAGE' at top left, 'ACCESSIBLE PUBLIC MEETINGS' at bottom left, and 'SLOT 1' at bottom right.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3",
+          "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+          "revision_id": 3,
+          "schema_version": 1,
+          "sequence": 3,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 3,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3",
+        "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+        "revision_id": 3,
+        "schema_version": 1,
+        "sequence": 3,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:783431cd2c1548387deb44b2922b7f851d46cd41a4872033b375f346e874f0d3",
+        "proposed_alt_text": "White block number 4 centered on an olive background with text labels reading PHASE 0 - PRIMARY IMAGE at top left, WATER QUALITY MONITORING at bottom left, and SLOT 1 at bottom right.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "4c2bacbf-1a18-5b91-95b6-04be3911e035",
+          "node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+          "revision_id": 4,
+          "schema_version": 1,
+          "sequence": 4,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 4,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "4c2bacbf-1a18-5b91-95b6-04be3911e035",
+        "node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+        "revision_id": 4,
+        "schema_version": 1,
+        "sequence": 4,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:4eda0292314e095f97ba10284e5726f6d59c85090f2280827f49ca66980acb93",
+        "proposed_alt_text": "White block-style number 5 centered on a solid purple background with text labels reading 'PHASE 0 - PRIMARY IMAGE' at top left, 'EXPORT ASSISTANCE' at bottom left, and 'SLOT 1' at bottom right.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "a5b69415-6c44-5263-adb0-ac7270f6c19f",
+          "node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+          "revision_id": 5,
+          "schema_version": 1,
+          "sequence": 5,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 5,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "a5b69415-6c44-5263-adb0-ac7270f6c19f",
+        "node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+        "revision_id": 5,
+        "schema_version": 1,
+        "sequence": 5,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:dc17caafde7ecb76603437be50955f5970b52d403f76f1d49e786262b1751d47",
+        "proposed_alt_text": "White block-style number 6 centered on a solid blue background with text labels reading 'PHASE 0 - SUPPORTING IMAGE' at top left, 'ROAD MAINTENANCE' at bottom left, and 'SLOT 2' at bottom right.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 1,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+          "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+          "revision_id": 6,
+          "schema_version": 1,
+          "sequence": 6,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 6,
+      "target": {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+        "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+        "revision_id": 6,
+        "schema_version": 1,
+        "sequence": 6,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:e013d637d2d2e91eea26b0c0025638531b0f0275c66966e02b682aa2818ed4b0",
+        "proposed_alt_text": "White pixelated number 7 on a solid rust background with text labels reading 'PHASE 0 - PRIMARY IMAGE' at top left, 'RECORDS RETENTION' at bottom left, and 'SLOT 1' at bottom right inside a double-lined border.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "e7f2552b-adcc-5864-9331-4da0dfe829e0",
+          "node_uuid": "36ab6f42-32b8-57ae-919f-aad69ff1de69",
+          "revision_id": 7,
+          "schema_version": 1,
+          "sequence": 7,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 7,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "e7f2552b-adcc-5864-9331-4da0dfe829e0",
+        "node_uuid": "36ab6f42-32b8-57ae-919f-aad69ff1de69",
+        "revision_id": 7,
+        "schema_version": 1,
+        "sequence": 7,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:7af085446cb8aa3f686ac6e2bbe59c0db93de38498fc725e2909e17e3d54237a",
+        "proposed_alt_text": "White pixelated number 8 centered on a solid green background with white text labels reading 'PHASE 0 - SUPPORTING IMAGE' at top left, 'LIBRARY TECHNOLOGY' at bottom left, and 'SLOT 2' at bottom right.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 1,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "55375469-e22b-5b16-b667-46347039f610",
+          "node_uuid": "4a58d6c1-64d1-5d01-b6e2-518b7622aac6",
+          "revision_id": 8,
+          "schema_version": 1,
+          "sequence": 8,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 8,
+      "target": {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "55375469-e22b-5b16-b667-46347039f610",
+        "node_uuid": "4a58d6c1-64d1-5d01-b6e2-518b7622aac6",
+        "revision_id": 8,
+        "schema_version": 1,
+        "sequence": 8,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:e541a65860496108120260594844e94dc3c789cfeb2f98e1be6fcf621b4c95a4",
+        "proposed_alt_text": "A digital-style graphic with a dark slate background featuring a large white number 9 composed of square blocks in the center, labeled 'PHASE 0 - PRIMARY IMAGE' at top left, 'WORKFORCE TRAINING' at bottom left, and 'SLOT 1' at bottom right.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "0edde8a1-266b-5fc2-b61c-71ac41ae35cf",
+          "node_uuid": "3fb5d79e-a5e7-5d92-84d0-797018ec34b4",
+          "revision_id": 9,
+          "schema_version": 1,
+          "sequence": 9,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 9,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "0edde8a1-266b-5fc2-b61c-71ac41ae35cf",
+        "node_uuid": "3fb5d79e-a5e7-5d92-84d0-797018ec34b4",
+        "revision_id": 9,
+        "schema_version": 1,
+        "sequence": 9,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:e35148754fb586a86a2918167e6cb1a6f6e984fd8d7a4861a29e990c2848edd6",
+        "proposed_alt_text": "White pixelated number 10 on an indigo background with text labels indicating Phase 0 supporting image, recycling instructions, and slot 2.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 1,
+          "existing_alt": "image.jpg",
+          "field_name": "field_image",
+          "file_uuid": "86301d0c-54cf-5389-be0e-7f070abf6a61",
+          "node_uuid": "e574f0bf-40dc-539a-93c3-0750b1bbfd94",
+          "revision_id": 10,
+          "schema_version": 1,
+          "sequence": 10,
+          "target_state": "poor"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 10,
+      "target": {
+        "delta": 1,
+        "existing_alt": "image.jpg",
+        "field_name": "field_image",
+        "file_uuid": "86301d0c-54cf-5389-be0e-7f070abf6a61",
+        "node_uuid": "e574f0bf-40dc-539a-93c3-0750b1bbfd94",
+        "revision_id": 10,
+        "schema_version": 1,
+        "sequence": 10,
+        "target_state": "poor"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:a14bd7154f4b7d0a0d8d2a491d4bfcb4d8146dd975dbc3bd994568a7d261d166",
+        "proposed_alt_text": "White pixelated number 11 centered on a solid navy background with text labels reading 'PHASE 0 - PRIMARY IMAGE' at top left, 'BROADBAND ACCESS' at bottom left, and 'SLOT 1' at bottom right, representing the Phase 0 11 Broadband Availability Survey.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 0,
+          "existing_alt": "photo",
+          "field_name": "field_image",
+          "file_uuid": "96c76d54-cd3b-55b2-9fa5-ea817732ff8c",
+          "node_uuid": "dcbc6fff-fd8f-51ec-9b28-5ccaf043de3c",
+          "revision_id": 11,
+          "schema_version": 1,
+          "sequence": 11,
+          "target_state": "poor"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 11,
+      "target": {
+        "delta": 0,
+        "existing_alt": "photo",
+        "field_name": "field_image",
+        "file_uuid": "96c76d54-cd3b-55b2-9fa5-ea817732ff8c",
+        "node_uuid": "dcbc6fff-fd8f-51ec-9b28-5ccaf043de3c",
+        "revision_id": 11,
+        "schema_version": 1,
+        "sequence": 11,
+        "target_state": "poor"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:61c6409af91e0a57424dad192935d796f62ffdd49f84e2d853d5d56d6b3376a2",
+        "proposed_alt_text": "Teal background with a large white block-style number 12 in the center, labeled as Phase 0 supporting image, with text 'Park Improvements' at the bottom left and 'Slot 2' at the bottom right.",
+        "run_id": "drupal_ai-20260809T012559Z-22064c",
+        "schema_version": 1,
+        "source_framework": "drupal_ai",
+        "target": {
+          "delta": 1,
+          "existing_alt": "phase0-article-12-image-2.png",
+          "field_name": "field_image",
+          "file_uuid": "891be849-b0d8-5d3a-961c-05921b70e274",
+          "node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+          "revision_id": 12,
+          "schema_version": 1,
+          "sequence": 12,
+          "target_state": "poor"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 12,
+      "target": {
+        "delta": 1,
+        "existing_alt": "phase0-article-12-image-2.png",
+        "field_name": "field_image",
+        "file_uuid": "891be849-b0d8-5d3a-961c-05921b70e274",
+        "node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+        "revision_id": 12,
+        "schema_version": 1,
+        "sequence": 12,
+        "target_state": "poor"
+      }
+    }
+  ],
+  "run_id": "drupal_ai-20260809T012559Z-22064c",
+  "schema_version": 1,
+  "source_framework": "drupal_ai"
+}

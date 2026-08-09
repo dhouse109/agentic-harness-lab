@@ -1,0 +1,41 @@
+{
+  "canonical_schemas_validated": 2,
+  "contract_inputs_verified": 19,
+  "contract_semantics_changed": false,
+  "contract_sha256": "360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6",
+  "dependency_change": false,
+  "document_progression": {
+    "completed_steps": [
+      "1.01",
+      "1.02",
+      "1.03",
+      "1.04",
+      "1.05",
+      "1.06"
+    ],
+    "next_step": "1.07",
+    "sequence_length": 7,
+    "sequence_source": "shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json"
+  },
+  "document_state": "complete",
+  "drupal_state_mutated": false,
+  "gate05_freeze_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+  "gate05_recertified": false,
+  "gate05_run_id": "gate05-step05-20260805T184155Z-50124",
+  "json_terminal_formatting_validated": 14,
+  "jsonschema_version": "4.26.0",
+  "lifecycle_stages_validated": 6,
+  "model_call_performed": false,
+  "negative_controls_rejected": 13,
+  "package": "gate-1-step01-drupal-ai-batch-contract",
+  "package_version": "1.0.1",
+  "positive_examples_validated": 13,
+  "predecessor_commit": "3016819f738a7db39fef0a6ccbb9cff0c8ec5fa0",
+  "schemas_validated": 18,
+  "secret_hygiene": "pass",
+  "status": "pass",
+  "step02_started_by_step01_package": false,
+  "step02_started_scope": "historical Step 1.01 package action; not repository current state",
+  "superseded_run_id": "gate1-step01-20260805T200619Z-87483",
+  "superseded_run_preserved": true
+}
