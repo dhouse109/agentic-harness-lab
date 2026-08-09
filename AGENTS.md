@@ -43,13 +43,13 @@ Delivery packages are build artifacts and must remain outside this Git repositor
 Use this default local package root unless the user explicitly supplies another path:
 
 ```text
-~/projects/agentic-harness-lab-packages/
+~/projects/agentic-harness-package-staging/
 ```
 
 A package therefore lives at a path such as:
 
 ```text
-~/projects/agentic-harness-lab-packages/gate-1-step01-drupal-ai-batch-contract-v1.0.0/
+~/projects/agentic-harness-package-staging/gate-1-step01-drupal-ai-batch-contract-v1.0.0/
 ```
 
 Do not add package archives, extracted delivery-package directories, package backups, or temporary
@@ -58,7 +58,7 @@ changes and sanitized retained evidence.
 
 ## Package-driven workflow
 
-Gate 1 is executed one package at a time. Never generate later packages in advance.
+Gate 2A is executed one package at a time. Never generate later packages in advance.
 
 For each package:
 
@@ -97,7 +97,7 @@ Always stop for the user at these boundaries:
 Normal commands inside an approved package boundary may be executed without asking the user to copy
 and run them manually.
 
-## Gate 1 frozen experiment rules
+## Frozen comparative experiment rules
 
 Preserve the frozen values and semantics recorded in the repository, including:
 
@@ -105,7 +105,8 @@ Preserve the frozen values and semantics recorded in the repository, including:
 - Model: `gpt-4.1-mini-2025-04-14`.
 - Temperature: `0.0`.
 - Dataset: 20 Articles and the frozen 12-target sequence.
-- Framework origin for Gate 1: `drupal_ai`.
+- Certified Gate 1 origin: `drupal_ai` (frozen and immutable).
+- Current Gate 2A origin: `langgraph`.
 - Shared semantic operations:
   - `find_images_needing_review()`
   - `get_image_context(target)`
@@ -177,9 +178,15 @@ evaluation results, and human decisions needed to audit the experiment.
 
 ## Immediate task boundary
 
-Gate 1 Drupal AI is complete and frozen at `2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd`. The next implementation is LangGraph.
+Gate 1 Drupal AI is complete and frozen at `2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd`. Gate 2 is the umbrella cross-framework milestone; Gate 2A LangGraph is current.
 
-Before LangGraph work, read `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md`, the Gate 1 freeze manifest,
-and the accepted Step 1.07 certification evidence. Preserve the frozen dataset, model/settings, shared
-operations, validator, review destination, source-mutation rule, and later shared failure point. Do not
-infer LangGraph behavior from Drupal AI evidence.
+**Step 2A.01:** complete.
+
+**Next package:** `gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.0`.
+
+Read `docs/gates/GATE-2-STRUCTURE.md`, `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`, `docs/CODEX-GATE-2A-RUNBOOK.md`, `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md`, the Gate 1 freeze manifest, and accepted Step 1.07 evidence. Preserve the frozen dataset, model/settings, shared operations, validator, review destination, source-mutation rule, and later shared failure point. Do not infer LangGraph behavior from Drupal AI evidence.
+
+Do not generate Step 2A.02 until Step 2A.01 is committed, merged, local `main` is resynchronized, and the post-merge audit passes.
+
+Accepted Step 2A.01 evidence run: `gate2a-step01-20260809T202418Z-2334327`
+Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b`

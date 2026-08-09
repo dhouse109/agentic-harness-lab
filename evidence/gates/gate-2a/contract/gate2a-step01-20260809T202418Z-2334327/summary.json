@@ -1,0 +1,19 @@
+{
+  "codex_disposition": "B",
+  "completed_at": "2026-08-09T20:24:26.263143Z",
+  "contract_sha256": "1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b",
+  "dependency_change": false,
+  "drupal_state_mutated": false,
+  "gate1_artifacts_changed": false,
+  "gate1_freeze_sha256": "2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd",
+  "gate1_predecessor_audit": "pass",
+  "model_call_performed": false,
+  "next_boundary": "human commit approval",
+  "next_package": "gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.0",
+  "package": "gate-2a-step01-langgraph-contract-and-evidence-plan",
+  "package_version": "1.0.3",
+  "run_id": "gate2a-step01-20260809T202418Z-2334327",
+  "schema_version": 1,
+  "status": "pass",
+  "step02_started": false
+}

@@ -23,7 +23,11 @@ and lifecycle and recovery.
 - **Step 1.05:** complete.
 - **Step 1.06:** complete.
 - **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
-- **Next implementation:** LangGraph.
+- **Gate 2:** in progress; Gate 2A LangGraph is current.
+- **Step 2A.01:** complete.
+- **Next package:** `gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.0`.
+Accepted Step 2A.01 evidence run: `gate2a-step01-20260809T202418Z-2334327`
+Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b`
 
 Accepted Gate 0.5 certification evidence is
 `evidence/gates/gate-0.5/substrate-certification/gate05-step05-20260805T184155Z-50124/`.
@@ -85,25 +89,22 @@ This sequence and the machine-readable Gate 1 contract govern later package gene
 
 ## Local Codex execution
 
-Gate 1 is designed to run through Codex locally inside WSL2 while preserving one-package-at-a-time
-preview, audit, evidence, and commit controls.
-
-Read:
+Gate 2A continues the package-driven local workflow inside WSL2. Read:
 
 ```text
 AGENTS.md
-docs/CODEX-GATE-1-RUNBOOK.md
-docs/prompts/CODEX-GATE-1-STEP01.md
+docs/CODEX-GATE-2A-RUNBOOK.md
+docs/gates/GATE-2-STRUCTURE.md
+docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md
 ```
 
 Delivery packages are generated outside Git under:
 
 ```text
-~/projects/agentic-harness-lab-packages/
+~/projects/agentic-harness-package-staging/
 ```
 
-Do not commit extracted packages or package archives. Commit only their intended installed repository
-changes and sanitized retained evidence.
+Do not commit extracted packages or archives. Step 2A.01 is model-free and Drupal-mutation-free; it freezes the LangGraph contract and evidence boundary only.
 
 ## Shared task
 
