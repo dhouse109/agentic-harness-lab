@@ -1,0 +1,22 @@
+{
+  "checkpoint_namespace": "",
+  "checkpointer": "langgraph.checkpoint.sqlite.SqliteSaver",
+  "config_shape": {
+    "configurable": {
+      "thread_id": "<run-id>"
+    }
+  },
+  "constructor": "SqliteSaver.from_conn_string(path)",
+  "credentials_persisted": false,
+  "db_relative_path": "langchain/.gate2a-runtime/gate2a-step02-20260809T224238Z-2361786.sqlite",
+  "db_sha256": "61abddbc176d2bf02de1eb99a27283d14c5294c0ac192c213be67d60f99fe306",
+  "raw_image_bytes_persisted": false,
+  "state_after_reload": {
+    "counter": 1,
+    "trace": [
+      "bump"
+    ]
+  },
+  "status": "pass",
+  "thread_id": "gate2a-step02-20260809T224238Z-2361786"
+}

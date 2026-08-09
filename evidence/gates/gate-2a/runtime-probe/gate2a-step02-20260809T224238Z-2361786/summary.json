@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "explicit_zero_transport_retries": true,
+    "image_message_shape": true,
+    "interrupt_resume": true,
+    "native_tool_wrapper": true,
+    "persisted_state_privacy": true,
+    "sqlite_checkpoint_reload": true,
+    "stategraph_model_free": true,
+    "strict_structured_output_api": true
+  },
+  "dependency_change": false,
+  "drupal_state_mutated": false,
+  "errors": [],
+  "model_call_performed": false,
+  "run_id": "gate2a-step02-20260809T224238Z-2361786",
+  "status": "pass"
+}

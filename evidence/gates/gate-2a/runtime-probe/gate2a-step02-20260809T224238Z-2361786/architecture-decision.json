@@ -1,0 +1,22 @@
+{
+  "checkpoint_namespace": "",
+  "checkpointer": "langgraph.checkpoint.sqlite.SqliteSaver",
+  "credentials_in_checkpoint": false,
+  "drupal_state_mutated": false,
+  "graph": "langgraph.graph.StateGraph",
+  "image_message": "HumanMessage content block type=image_url; image bytes remain ephemeral",
+  "interrupt": "langgraph.types.interrupt",
+  "model_call_performed": false,
+  "per_run_checkpoint_path": "langchain/.gate2a-runtime/<run-id>.sqlite",
+  "raw_image_bytes_in_checkpoint": false,
+  "resume": "graph.invoke(langgraph.types.Command(resume=<value>), same thread config)",
+  "routing": "deterministic graph nodes control workflow/write decisions",
+  "runtime_root": "langchain/.gate2a-runtime/",
+  "schema_version": 1,
+  "shared_runtime_storage": false,
+  "status": "selected",
+  "structured_output": "ChatOpenAI.with_structured_output(..., strict=True)",
+  "thread_identity": "Gate 2A run_id used as configurable.thread_id",
+  "tool_wrappers": "langchain_core.tools.tool thin wrappers; deterministic nodes invoke them",
+  "transport_retries": "ChatOpenAI(max_retries=0) for experiment model path"
+}

@@ -1,0 +1,9 @@
+{
+  "interrupt_count": 1,
+  "interrupt_symbol": "langgraph.types.interrupt",
+  "resume_call": "graph.invoke(Command(resume=<value>), config)",
+  "resume_observed": "synthetic-review-complete",
+  "resume_symbol": "langgraph.types.Command",
+  "status": "pass",
+  "thread_id": "gate2a-step02-20260809T224238Z-2361786-interrupt"
+}

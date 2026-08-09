@@ -184,17 +184,26 @@ Gate 2 preserves the original umbrella milestone and closes only after Gate 2C s
 gate-2a-step01-langgraph-contract-and-evidence-plan-v1.0.3
 ```
 
+**Completed package:**
+
+```text
+gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.4
+```
+
 **Next package:**
 
 ```text
-gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.0
+gate-2a-step03-langgraph-tool-adapters-v1.0.0
 ```
+
+Accepted Step 2A.02 evidence run: `gate2a-step02-20260809T224238Z-2361786`
+Accepted runtime ADR: `docs/decisions/ADR-0010-langgraph-runtime-and-checkpoint-path.md`
 
 Accepted Step 2A.01 evidence run: `gate2a-step01-20260809T202418Z-2334327`
 Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b`
 
 - [x] Step 2A.01 — LangGraph contract and evidence plan
-- [ ] Step 2A.02 — LangGraph runtime and checkpoint probe
+- [x] Step 2A.02 — LangGraph runtime and checkpoint probe
 - [ ] Step 2A.03 — LangGraph tool adapters
 - [ ] Step 2A.04 — LangGraph state and SQLite checkpoint proof
 - [ ] Step 2A.05 — LangGraph canonical vertical slice
