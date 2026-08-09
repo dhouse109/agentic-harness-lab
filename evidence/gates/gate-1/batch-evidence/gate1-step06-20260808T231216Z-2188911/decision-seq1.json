@@ -1,0 +1,39 @@
+{
+  "action": "approve_unchanged",
+  "decision_revision_id": 33,
+  "immutable_fields_unchanged": true,
+  "immutable_projection": {
+    "evidence_hash": "sha256:41be554b399f68e86f4ea116656ee9e3c7e89b24e01193ee44bb7970726f549f",
+    "node_id": 21,
+    "owner_username": "agent_bot",
+    "published": false,
+    "run_id": "drupal_ai-20260808T020222Z-205fd9",
+    "source_framework": "drupal_ai",
+    "target": {
+      "delta": 0,
+      "field_name": "field_image",
+      "file_id": 1,
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_id": 1,
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1
+    },
+    "title": "Alt text recommendation: drupal_ai target 1 (drupal_ai-20260808T020222Z-205fd9)",
+    "uuid": "964c5baa-c22c-457d-b9a8-c7b28a966f7f"
+  },
+  "node_id": 21,
+  "pending_revision_id": 21,
+  "proposed_alt_after": "Solid navy background with a large white number 1 composed of blocks in the center, labeled as Phase 0 Primary Image, with text Emergency Preparedness and Slot 1 in corners, representing the first article in an emergency preparedness checklist series",
+  "proposed_alt_before": "Solid navy background with a large white number 1 composed of blocks in the center, labeled as Phase 0 Primary Image, with text Emergency Preparedness and Slot 1 in corners, representing the first article in an emergency preparedness checklist series",
+  "proposed_alt_changed": false,
+  "review_timestamp_utc": "2026-08-08T23:13:46Z",
+  "reviewer_username": "editor_dana",
+  "revision_count_after": 2,
+  "revision_count_before": 1,
+  "revision_delta": 1,
+  "schema_version": 1,
+  "sequence": 1,
+  "status_after": "approved",
+  "status_before": "pending",
+  "uuid": "964c5baa-c22c-457d-b9a8-c7b28a966f7f"
+}

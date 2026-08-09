@@ -1,0 +1,58 @@
+{
+    "helper_version": "1.0.0",
+    "mode": "inspect",
+    "status": "pass",
+    "node_id": 32,
+    "uuid": "15103f8e-fa51-456f-bc06-b8bde77f6382",
+    "title": "Alt text recommendation: drupal_ai target 12 (drupal_ai-20260808T020222Z-205fd9)",
+    "owner_username": "agent_bot",
+    "published": false,
+    "revision_count": 1,
+    "current_revision_id": 32,
+    "current_review_status": "pending",
+    "current_proposed_alt_text": "Teal background with a large white block-style number 12 in the center, labeled as Phase 0 supporting image, with text indicating park improvements and slot 2.",
+    "current_source_framework": "drupal_ai",
+    "current_run_id": "drupal_ai-20260808T020222Z-205fd9",
+    "current_evidence_hash": "sha256:85c3556d861126b7a7a0e12945c665c1cf53cf0278208a9cfe0e8ab0ee19f68e",
+    "current_target": {
+        "node_id": 12,
+        "node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+        "revision_id": 12,
+        "field_name": "field_image",
+        "delta": 1,
+        "file_id": 18,
+        "file_uuid": "891be849-b0d8-5d3a-961c-05921b70e274"
+    },
+    "access": {
+        "agent_can_view": true,
+        "agent_can_update": false,
+        "editor_can_update": true
+    },
+    "revisions": [
+        {
+            "revision_id": 32,
+            "revision_user": {
+                "uid": 3,
+                "name": "agent_bot"
+            },
+            "timestamp_unix": 1786156305,
+            "timestamp_utc": "2026-08-08T02:31:45Z",
+            "revision_log": "submit_recommendation validator=gate05-validator-1.0.0 evidence=sha256:85c3556d861126b7a7a0e12945c665c1cf53cf0278208a9cfe0e8ab0ee19f68e",
+            "published": false,
+            "proposed_alt_text": "Teal background with a large white block-style number 12 in the center, labeled as Phase 0 supporting image, with text indicating park improvements and slot 2.",
+            "review_status": "pending",
+            "source_framework": "drupal_ai",
+            "run_id": "drupal_ai-20260808T020222Z-205fd9",
+            "evidence_hash": "sha256:85c3556d861126b7a7a0e12945c665c1cf53cf0278208a9cfe0e8ab0ee19f68e",
+            "target": {
+                "node_id": 12,
+                "node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+                "revision_id": 12,
+                "field_name": "field_image",
+                "delta": 1,
+                "file_id": 18,
+                "file_uuid": "891be849-b0d8-5d3a-961c-05921b70e274"
+            }
+        }
+    ]
+}

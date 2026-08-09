@@ -1,0 +1,530 @@
+{
+  "after_sequence_1": {
+    "counts": {
+      "approved": 1,
+      "pending": 11,
+      "rejected": 0
+    },
+    "records": [
+      {
+        "node_id": 21,
+        "revision_id": 33,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "approved",
+        "target_node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "uuid": "964c5baa-c22c-457d-b9a8-c7b28a966f7f"
+      },
+      {
+        "node_id": 22,
+        "revision_id": 22,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+        "uuid": "4c99772d-90d6-4200-a8c5-e285413a2fa2"
+      },
+      {
+        "node_id": 23,
+        "revision_id": 23,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+        "uuid": "720102f0-54bc-4828-b71d-3a297d67cd6b"
+      },
+      {
+        "node_id": 24,
+        "revision_id": 24,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+        "uuid": "1947312a-3c47-4964-a9b5-beba91ad0525"
+      },
+      {
+        "node_id": 25,
+        "revision_id": 25,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+        "uuid": "0b1bb956-e480-4b7d-ac14-ace348bdf492"
+      },
+      {
+        "node_id": 26,
+        "revision_id": 26,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+        "uuid": "8c728772-8f13-4ea3-a2c8-b39b0674fdf2"
+      },
+      {
+        "node_id": 27,
+        "revision_id": 27,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "36ab6f42-32b8-57ae-919f-aad69ff1de69",
+        "uuid": "dfd8b30f-1408-4bfb-9bb0-d911c039fe84"
+      },
+      {
+        "node_id": 28,
+        "revision_id": 28,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "4a58d6c1-64d1-5d01-b6e2-518b7622aac6",
+        "uuid": "a1d67e8f-9831-43bc-ae09-7c99875536c6"
+      },
+      {
+        "node_id": 29,
+        "revision_id": 29,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "3fb5d79e-a5e7-5d92-84d0-797018ec34b4",
+        "uuid": "ebe66b86-9de5-4152-b5e3-285e0ab4f12a"
+      },
+      {
+        "node_id": 30,
+        "revision_id": 30,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "e574f0bf-40dc-539a-93c3-0750b1bbfd94",
+        "uuid": "07d6bc90-6c6a-47b1-8a0f-c65cf887acd8"
+      },
+      {
+        "node_id": 31,
+        "revision_id": 31,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "dcbc6fff-fd8f-51ec-9b28-5ccaf043de3c",
+        "uuid": "6aac2b5c-048b-4c65-9ac2-c3455bcba1ec"
+      },
+      {
+        "node_id": 32,
+        "revision_id": 32,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+        "uuid": "15103f8e-fa51-456f-bc06-b8bde77f6382"
+      }
+    ],
+    "run_id": "drupal_ai-20260808T020222Z-205fd9",
+    "status": "pass",
+    "total": 12
+  },
+  "after_sequence_12": {
+    "counts": {
+      "approved": 2,
+      "pending": 9,
+      "rejected": 1
+    },
+    "records": [
+      {
+        "node_id": 21,
+        "revision_id": 33,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "approved",
+        "target_node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "uuid": "964c5baa-c22c-457d-b9a8-c7b28a966f7f"
+      },
+      {
+        "node_id": 22,
+        "revision_id": 22,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+        "uuid": "4c99772d-90d6-4200-a8c5-e285413a2fa2"
+      },
+      {
+        "node_id": 23,
+        "revision_id": 23,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+        "uuid": "720102f0-54bc-4828-b71d-3a297d67cd6b"
+      },
+      {
+        "node_id": 24,
+        "revision_id": 24,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+        "uuid": "1947312a-3c47-4964-a9b5-beba91ad0525"
+      },
+      {
+        "node_id": 25,
+        "revision_id": 25,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+        "uuid": "0b1bb956-e480-4b7d-ac14-ace348bdf492"
+      },
+      {
+        "node_id": 26,
+        "revision_id": 34,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "rejected",
+        "target_node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+        "uuid": "8c728772-8f13-4ea3-a2c8-b39b0674fdf2"
+      },
+      {
+        "node_id": 27,
+        "revision_id": 27,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "36ab6f42-32b8-57ae-919f-aad69ff1de69",
+        "uuid": "dfd8b30f-1408-4bfb-9bb0-d911c039fe84"
+      },
+      {
+        "node_id": 28,
+        "revision_id": 28,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "4a58d6c1-64d1-5d01-b6e2-518b7622aac6",
+        "uuid": "a1d67e8f-9831-43bc-ae09-7c99875536c6"
+      },
+      {
+        "node_id": 29,
+        "revision_id": 29,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "3fb5d79e-a5e7-5d92-84d0-797018ec34b4",
+        "uuid": "ebe66b86-9de5-4152-b5e3-285e0ab4f12a"
+      },
+      {
+        "node_id": 30,
+        "revision_id": 30,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "e574f0bf-40dc-539a-93c3-0750b1bbfd94",
+        "uuid": "07d6bc90-6c6a-47b1-8a0f-c65cf887acd8"
+      },
+      {
+        "node_id": 31,
+        "revision_id": 31,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "dcbc6fff-fd8f-51ec-9b28-5ccaf043de3c",
+        "uuid": "6aac2b5c-048b-4c65-9ac2-c3455bcba1ec"
+      },
+      {
+        "node_id": 32,
+        "revision_id": 36,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "approved",
+        "target_node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+        "uuid": "15103f8e-fa51-456f-bc06-b8bde77f6382"
+      }
+    ],
+    "run_id": "drupal_ai-20260808T020222Z-205fd9",
+    "status": "pass",
+    "total": 12
+  },
+  "after_sequence_6": {
+    "counts": {
+      "approved": 1,
+      "pending": 10,
+      "rejected": 1
+    },
+    "records": [
+      {
+        "node_id": 21,
+        "revision_id": 33,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "approved",
+        "target_node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "uuid": "964c5baa-c22c-457d-b9a8-c7b28a966f7f"
+      },
+      {
+        "node_id": 22,
+        "revision_id": 22,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+        "uuid": "4c99772d-90d6-4200-a8c5-e285413a2fa2"
+      },
+      {
+        "node_id": 23,
+        "revision_id": 23,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+        "uuid": "720102f0-54bc-4828-b71d-3a297d67cd6b"
+      },
+      {
+        "node_id": 24,
+        "revision_id": 24,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+        "uuid": "1947312a-3c47-4964-a9b5-beba91ad0525"
+      },
+      {
+        "node_id": 25,
+        "revision_id": 25,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+        "uuid": "0b1bb956-e480-4b7d-ac14-ace348bdf492"
+      },
+      {
+        "node_id": 26,
+        "revision_id": 34,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "rejected",
+        "target_node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+        "uuid": "8c728772-8f13-4ea3-a2c8-b39b0674fdf2"
+      },
+      {
+        "node_id": 27,
+        "revision_id": 27,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "36ab6f42-32b8-57ae-919f-aad69ff1de69",
+        "uuid": "dfd8b30f-1408-4bfb-9bb0-d911c039fe84"
+      },
+      {
+        "node_id": 28,
+        "revision_id": 28,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "4a58d6c1-64d1-5d01-b6e2-518b7622aac6",
+        "uuid": "a1d67e8f-9831-43bc-ae09-7c99875536c6"
+      },
+      {
+        "node_id": 29,
+        "revision_id": 29,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "3fb5d79e-a5e7-5d92-84d0-797018ec34b4",
+        "uuid": "ebe66b86-9de5-4152-b5e3-285e0ab4f12a"
+      },
+      {
+        "node_id": 30,
+        "revision_id": 30,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "e574f0bf-40dc-539a-93c3-0750b1bbfd94",
+        "uuid": "07d6bc90-6c6a-47b1-8a0f-c65cf887acd8"
+      },
+      {
+        "node_id": 31,
+        "revision_id": 31,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "dcbc6fff-fd8f-51ec-9b28-5ccaf043de3c",
+        "uuid": "6aac2b5c-048b-4c65-9ac2-c3455bcba1ec"
+      },
+      {
+        "node_id": 32,
+        "revision_id": 32,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+        "uuid": "15103f8e-fa51-456f-bc06-b8bde77f6382"
+      }
+    ],
+    "run_id": "drupal_ai-20260808T020222Z-205fd9",
+    "status": "pass",
+    "total": 12
+  },
+  "before_review": {
+    "counts": {
+      "approved": 0,
+      "pending": 12,
+      "rejected": 0
+    },
+    "records": [
+      {
+        "node_id": 21,
+        "revision_id": 21,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "uuid": "964c5baa-c22c-457d-b9a8-c7b28a966f7f"
+      },
+      {
+        "node_id": 22,
+        "revision_id": 22,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+        "uuid": "4c99772d-90d6-4200-a8c5-e285413a2fa2"
+      },
+      {
+        "node_id": 23,
+        "revision_id": 23,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+        "uuid": "720102f0-54bc-4828-b71d-3a297d67cd6b"
+      },
+      {
+        "node_id": 24,
+        "revision_id": 24,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+        "uuid": "1947312a-3c47-4964-a9b5-beba91ad0525"
+      },
+      {
+        "node_id": 25,
+        "revision_id": 25,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+        "uuid": "0b1bb956-e480-4b7d-ac14-ace348bdf492"
+      },
+      {
+        "node_id": 26,
+        "revision_id": 26,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+        "uuid": "8c728772-8f13-4ea3-a2c8-b39b0674fdf2"
+      },
+      {
+        "node_id": 27,
+        "revision_id": 27,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "36ab6f42-32b8-57ae-919f-aad69ff1de69",
+        "uuid": "dfd8b30f-1408-4bfb-9bb0-d911c039fe84"
+      },
+      {
+        "node_id": 28,
+        "revision_id": 28,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "4a58d6c1-64d1-5d01-b6e2-518b7622aac6",
+        "uuid": "a1d67e8f-9831-43bc-ae09-7c99875536c6"
+      },
+      {
+        "node_id": 29,
+        "revision_id": 29,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "3fb5d79e-a5e7-5d92-84d0-797018ec34b4",
+        "uuid": "ebe66b86-9de5-4152-b5e3-285e0ab4f12a"
+      },
+      {
+        "node_id": 30,
+        "revision_id": 30,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "e574f0bf-40dc-539a-93c3-0750b1bbfd94",
+        "uuid": "07d6bc90-6c6a-47b1-8a0f-c65cf887acd8"
+      },
+      {
+        "node_id": 31,
+        "revision_id": 31,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "dcbc6fff-fd8f-51ec-9b28-5ccaf043de3c",
+        "uuid": "6aac2b5c-048b-4c65-9ac2-c3455bcba1ec"
+      },
+      {
+        "node_id": 32,
+        "revision_id": 32,
+        "run_id": "drupal_ai-20260808T020222Z-205fd9",
+        "sequence_hint": null,
+        "source_framework": "drupal_ai",
+        "status": "pending",
+        "target_node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+        "uuid": "15103f8e-fa51-456f-bc06-b8bde77f6382"
+      }
+    ],
+    "run_id": "drupal_ai-20260808T020222Z-205fd9",
+    "status": "pass",
+    "total": 12
+  }
+}
