@@ -177,11 +177,9 @@ evaluation results, and human decisions needed to audit the experiment.
 
 ## Immediate task boundary
 
-The current next package is:
+Gate 1 Drupal AI is complete and frozen at `2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd`. The next implementation is LangGraph.
 
-```text
-gate-1-step01-drupal-ai-batch-contract-v1.0.0
-```
-
-Step 1.01 freezes the Gate 1 execution contract and evidence schemas. It must not call a model,
-mutate Drupal state, change dependencies, recertify Gate 0.5, or begin Step 1.02.
+Before LangGraph work, read `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md`, the Gate 1 freeze manifest,
+and the accepted Step 1.07 certification evidence. Preserve the frozen dataset, model/settings, shared
+operations, validator, review destination, source-mutation rule, and later shared failure point. Do not
+infer LangGraph behavior from Drupal AI evidence.

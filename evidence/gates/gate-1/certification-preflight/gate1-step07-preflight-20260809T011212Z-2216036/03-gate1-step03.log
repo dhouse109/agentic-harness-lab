@@ -1,0 +1,62 @@
+{
+  "dependency_injection": "FunctionCallBase ContainerFactoryPluginInterface create override",
+  "dependency_machine_names": [
+    "ai",
+    "ai_agents",
+    "agentic_harness_tools"
+  ],
+  "direct_entity_path_found": false,
+  "evidence": {
+    "actual_source_drift": false,
+    "api_credit_used": false,
+    "article_count_before_after": [
+      20,
+      20
+    ],
+    "canonical_target_sequence": 1,
+    "hash_definition_drift_resolved": true,
+    "model_call_performed": false,
+    "module_enabled_before_after": [
+      false,
+      false
+    ],
+    "negative_controls": 7,
+    "network_call_performed": false,
+    "next_package": "gate-1-step04-drupal-ai-canonical-vertical-slice-v1.0.0",
+    "permission_denials": 8,
+    "plugin_count": 4,
+    "predecessor_compatible_article_source_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+    "recommendation_count_before_after": [
+      0,
+      0
+    ],
+    "run_id": "gate1-step03-20260806T050827Z-494925",
+    "secret_hygiene": "pass",
+    "seeded_clean_before_after": true,
+    "source_hash_unchanged": true,
+    "status": "pass",
+    "target_count_before_after": [
+      12,
+      12
+    ],
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+  },
+  "model_or_agent_invocation_found": false,
+  "network_invocation_found": false,
+  "payload_files_checked": 13,
+  "plugin_ids": [
+    "discover_targets",
+    "get_image_context",
+    "submit_recommendation",
+    "get_recommendation_status"
+  ],
+  "predecessor_commit": "3915af75779869e19c40abf3cbb4e2021cc57952",
+  "runtime_state_path_found": false,
+  "status": "pass",
+  "versions": {
+    "drupal/ai": "1.4.5",
+    "drupal/ai_agents": "1.3.2",
+    "drupal/ai_provider_openai": "1.2.3",
+    "drupal/core-recommended": "11.4.4"
+  }
+}

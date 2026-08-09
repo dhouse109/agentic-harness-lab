@@ -7,10 +7,11 @@
 
 - **Phase 0:** complete.
 - **Gate 0.5:** complete and certified.
-- **Gate 1:** active.
+- **Gate 1:** complete and certified.
 - **Completed packages:** Step 1.01 batch contract, Step 1.02 Drupal AI runtime probe, Step 1.03 Drupal AI tool adapters, Step 1.04 canonical vertical slice, Step 1.05 12-target batch runner, and Step 1.06 batch evidence and human review.
 - **Step 1.06 execution:** complete; three representative reviewer decisions are retained and the Drupal sandbox is restored to seeded-clean.
-- **Next package:** `gate-1-step07-drupal-ai-certification-and-handoff-v1.0.0`.
+- **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
+- **Next implementation:** LangGraph.
 - **Execution environment:** package-driven local execution inside WSL2, governed by `AGENTS.md`.
 
 Gate 0.5 completed when the framework-neutral Drupal substrate passed its standalone certification,
@@ -33,6 +34,9 @@ Accepted Drupal AI batch run: `drupal_ai-20260808T020222Z-205fd9`
 Accepted Step 1.06 evidence run: `gate1-step06-20260808T231216Z-2188911`
 Accepted Step 1.06 implementation package: `gate-1-step06-drupal-ai-batch-evidence-and-human-review-v1.0.3`
 Step 1.06 reviewer-lineage recovery patch: `gate-1-step06-drupal-ai-batch-evidence-and-human-review-v1.0.4`
+Accepted Step 1.07 certification evidence: `evidence/gates/gate-1/certification/gate1-step07-20260809T012559Z-2229836`
+Accepted Drupal AI certification batch: `drupal_ai-20260809T012559Z-22064c`
+Accepted Gate 1 freeze digest: `2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd`
 
 
 Step 1.03 directly exercises exactly four model-free Drupal AI FunctionCall adapters: `discover_targets`, `get_image_context`, `submit_recommendation`, and `get_recommendation_status`. It does not execute an AI Agent and makes no model or provider call. Its predecessor-compatible Article-source SHA-256 is `f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17`; the original Step 1.03 hash discrepancy was definition drift only, with no Drupal source drift.
@@ -83,11 +87,11 @@ shared/contracts/GATE05-SUBSTRATE-FREEZE.sha256
 docs/handoffs/GATE-0.5-FRAMEWORK-HANDOFF.md
 ```
 
-## Gate 1 local execution handoff
+## Gate 1 completion and local execution handoff
 
-Gate 1 will use Codex locally in WSL2. Codex creates delivery packages outside the repository,
-previews them, stops for package-boundary approval, executes approved packages, audits retained
-evidence, and stops again before commit.
+Gate 1 used package-driven local execution inside WSL2. The same control pattern governs the next
+framework implementation: create delivery packages outside the repository, preview them, stop for
+package-boundary approval, execute approved packages, audit retained evidence, and stop again before commit.
 
 The governing files are:
 
@@ -100,11 +104,10 @@ docs/prompts/CODEX-GATE-1-STEP01.md
 The external delivery-package root is:
 
 ```text
-~/projects/agentic-harness-lab-packages/
+~/projects/agentic-harness-package-staging/
 ```
 
-Packages 1.01 through 1.06 are complete. The next package is
-`gate-1-step07-drupal-ai-certification-and-handoff-v1.0.0`. Do not commit extracted packages or reuse a package
+Packages 1.01 through 1.07 are complete. Gate 1 Drupal AI is certified and frozen; LangGraph implementation is next. Do not commit extracted packages or reuse a package
 generated against a different repository baseline.
 
 ## Important interpretation
@@ -167,5 +170,5 @@ A new planning or implementation session should read these files in order:
 10. `docs/gates/GATE-1-STEP01-DRUPAL-AI-BATCH-CONTRACT.md`
 11. `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json`
 
-Do not add a Gate 0.5 reconciliation package before Gate 1 unless an audit fails or the frozen
-substrate is intentionally changed. Do not generate Step 1.03 until Step 1.02 is committed.
+Do not reopen Gate 0.5 or Gate 1 unless an audit fails or a frozen contract is intentionally changed.
+Use `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md` as the next implementation boundary.

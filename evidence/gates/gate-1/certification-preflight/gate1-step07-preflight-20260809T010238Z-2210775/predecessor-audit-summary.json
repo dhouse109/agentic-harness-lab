@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "ordered_boundaries": [
+    "Gate 0.5 Step 05",
+    "Gate 1 Step 1.01",
+    "Gate 1 Step 1.02",
+    "Gate 1 Step 1.03",
+    "Gate 1 Step 1.04",
+    "Gate 1 Step 1.05",
+    "Gate 1 Step 1.06",
+    "Pinned versions/contracts/hashes"
+  ],
+  "model_call_performed": false,
+  "drupal_mutation_performed": false
+}

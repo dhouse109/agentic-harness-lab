@@ -1,0 +1,8 @@
+?? docs/gates/GATE-1-STEP07-DRUPAL-AI-CERTIFICATION-AND-HANDOFF.md
+?? drupal/scripts/gate1-step07-certification.php
+?? evidence/gates/gate-1/certification-preflight/
+?? evidence/gates/gate-1/certification/
+?? scripts/gate1_step07_evidence_audit.py
+?? scripts/gate1_step07_finalize.py
+?? scripts/gate1_step07_predecessor_audit.py
+?? scripts/run-gate1-step07-drupal-ai-certification-and-handoff.sh

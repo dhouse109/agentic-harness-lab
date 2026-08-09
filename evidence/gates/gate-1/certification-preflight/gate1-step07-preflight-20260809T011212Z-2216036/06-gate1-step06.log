@@ -1,0 +1,14 @@
+{
+  "batch_run_id": "drupal_ai-20260808T020222Z-205fd9",
+  "final_review_counts": {
+    "approved": 2,
+    "pending": 9,
+    "rejected": 1
+  },
+  "restored_seeded_clean": true,
+  "review_decisions": 3,
+  "source_articles_unchanged": true,
+  "status": "pass",
+  "step": "1.06",
+  "step_1_07_authorized": true
+}

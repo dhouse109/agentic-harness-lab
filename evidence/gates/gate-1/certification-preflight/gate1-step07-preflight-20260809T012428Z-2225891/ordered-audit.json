@@ -1,0 +1,46 @@
+{
+  "ordered": [
+    {
+      "boundary": "Gate 0.5 Step 05",
+      "order": 0,
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.01",
+      "order": 1,
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.02",
+      "order": 2,
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.03",
+      "order": 3,
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.04",
+      "order": 4,
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.05",
+      "order": 5,
+      "status": "pass"
+    },
+    {
+      "boundary": "Gate 1 Step 1.06",
+      "order": 6,
+      "status": "pass"
+    },
+    {
+      "boundary": "Pinned versions/contracts/hashes",
+      "order": 7,
+      "status": "pass"
+    }
+  ],
+  "schema_version": 1,
+  "status": "pass"
+}

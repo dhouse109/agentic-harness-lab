@@ -1,0 +1,45 @@
+{
+  "automatic_publication": "prohibited",
+  "batch_run_id": "drupal_ai-20260809T012559Z-22064c",
+  "certification_run_id": "gate1-step07-20260809T012559Z-2229836",
+  "duplicate_count_on_replay": 0,
+  "framework": "drupal_ai",
+  "framework_state_complete": true,
+  "gate05_freeze_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+  "gate1_batch_contract_sha256": "360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6",
+  "lifecycle_seam": {
+    "after_sequence": 6,
+    "before_sequence": 7,
+    "present": true,
+    "shared_process_failure_recovery_claimed": false
+  },
+  "model": "gpt-4.1-mini-2025-04-14",
+  "non_claims": [
+    "production readiness",
+    "accessibility quality of every generated alt text",
+    "autonomous publishing safety",
+    "shared injected-failure recovery",
+    "superiority over LangGraph or CrewAI",
+    "cost/speed/token efficiency",
+    "general security beyond tested boundaries"
+  ],
+  "pending_count_before_restore": 12,
+  "provider": "OpenAI",
+  "recommendation_count": 12,
+  "review_destination": "alt_text_suggestion",
+  "review_lineage_reference": {
+    "review_decisions": 3,
+    "review_revisions": 4,
+    "step06_run_id": "gate1-step06-20260808T231216Z-2188911"
+  },
+  "schema_version": 1,
+  "source_article_full_projection_sha256": "877cd888fa41eb660b3e3cc0461bee04c0b92bef7e8f2f63fc56d9ec77adde32",
+  "source_article_mutation": "prohibited",
+  "source_article_reduced_projection_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "source_framework": "drupal_ai",
+  "status": "certified",
+  "target_count": 12,
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "temperature": 0.0,
+  "validator_version": "gate05-validator-1.0.0"
+}

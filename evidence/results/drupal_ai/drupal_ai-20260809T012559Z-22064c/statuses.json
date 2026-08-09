@@ -1,0 +1,79 @@
+{
+  "framework_origin": "drupal_ai",
+  "observations": [
+    {
+      "observed_at": "2026-08-09T01:26:22Z",
+      "recommendation_uuid": "7878e917-a8cf-44d9-a023-8a69a8a91f68",
+      "revision_id": 21,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:27:30Z",
+      "recommendation_uuid": "37edf440-b1b6-4fc4-8f03-2b2837c10302",
+      "revision_id": 22,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:28:37Z",
+      "recommendation_uuid": "222266e6-e0bc-4eb2-818e-b6d58ced9079",
+      "revision_id": 23,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:29:44Z",
+      "recommendation_uuid": "2dcb42d9-504f-4e05-8528-90e03fcb2f40",
+      "revision_id": 24,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:30:51Z",
+      "recommendation_uuid": "239fc0aa-9478-4b0a-8e69-d1a44b0990d2",
+      "revision_id": 25,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:31:58Z",
+      "recommendation_uuid": "92c77d81-84f9-4cce-b227-9c981822fa2a",
+      "revision_id": 26,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:33:09Z",
+      "recommendation_uuid": "d37ef116-a42d-45f0-9666-96b8e6c4f447",
+      "revision_id": 27,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:34:16Z",
+      "recommendation_uuid": "adc6a074-17ab-4a91-8818-f7f5976b4978",
+      "revision_id": 28,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:35:23Z",
+      "recommendation_uuid": "9afcb6b2-64c3-440c-befc-da69aa07d788",
+      "revision_id": 29,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:36:29Z",
+      "recommendation_uuid": "9e9383e9-4ac0-4522-a1e0-61179aee9a86",
+      "revision_id": 30,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:37:37Z",
+      "recommendation_uuid": "07fd91c6-475a-483c-b80d-c06a670b5b5d",
+      "revision_id": 31,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-09T01:38:44Z",
+      "recommendation_uuid": "345cac54-31e4-48fb-853c-520b477a15dd",
+      "revision_id": 32,
+      "status": "pending"
+    }
+  ],
+  "run_id": "drupal_ai-20260809T012559Z-22064c",
+  "schema_version": 1
+}

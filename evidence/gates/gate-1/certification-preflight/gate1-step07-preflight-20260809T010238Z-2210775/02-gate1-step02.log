@@ -1,0 +1,47 @@
+{
+  "drupal_mutation_invocation_found": false,
+  "evidence": {
+    "article_count_before_after": [
+      20,
+      20
+    ],
+    "canonical_target_sequence": 1,
+    "chosen_entry_point": "determineSolvability",
+    "chosen_service": "plugin.manager.ai_agents",
+    "chosen_state_collection": "agentic_harness_drupal_ai.run_state",
+    "drupal_state_mutated": false,
+    "explicit_model": "gpt-4.1-mini-2025-04-14",
+    "explicit_temperature": 0.0,
+    "model_call_performed": false,
+    "network_call_performed": false,
+    "provider_default_rejected": true,
+    "provider_request_events": 0,
+    "rejected_path_count": 9,
+    "run_id": "gate1-step02-20260806T010227Z-189538",
+    "secret_hygiene": "pass",
+    "seeded_clean_before_after": true,
+    "source_hash_unchanged": true,
+    "status": "pass",
+    "step03_started": false,
+    "suggestion_count_before_after": [
+      0,
+      0
+    ],
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+  },
+  "gate05_freeze_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+  "gate05_run_id": "gate05-step05-20260805T184155Z-50124",
+  "model_invocation_found": false,
+  "network_invocation_found": false,
+  "payload_files_checked": 6,
+  "predecessor_commit": "10a7f531bff1af8ea93ecbe1e447e98cb4834ac6",
+  "status": "pass",
+  "step01_contract_sha256": "360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6",
+  "step01_run_id": "gate1-step01-20260805T205448Z-103220",
+  "versions": {
+    "drupal/ai": "1.4.5",
+    "drupal/ai_agents": "1.3.2",
+    "drupal/ai_provider_openai": "1.2.3",
+    "drupal/core-recommended": "11.4.4"
+  }
+}
