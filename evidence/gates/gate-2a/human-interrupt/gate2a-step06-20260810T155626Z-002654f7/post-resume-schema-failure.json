@@ -1,0 +1,15 @@
+{
+  "accepted": false,
+  "drupal_restored_to_seeded_clean": true,
+  "evidence_rewritten": false,
+  "failure_stage": "post-resume-evidence-schema-validation",
+  "frozen_schema": "langgraph-run-state.schema.json",
+  "human_review_retained": true,
+  "invalid_checkpoint_field": "status",
+  "invalid_checkpoint_value": "awaiting_human_review",
+  "required_checkpoint_value": "interrupted",
+  "run_id": "langgraph-20260810T155626Z-002654f7",
+  "same_run_thread_resumed_before_failure": true,
+  "schema_version": 1,
+  "status": "failed"
+}

@@ -210,11 +210,19 @@ gate-2a-step04-langgraph-state-and-sqlite-checkpoint-proof-v1.0.6
 gate-2a-step05-langgraph-canonical-vertical-slice-v1.0.0
 ```
 
+**Completed Step 2A.06 package:**
+
+```text
+gate-2a-step06-langgraph-human-interrupt-and-review-resume-v1.0.8
+```
+
 **Next package:**
 
 ```text
-gate-2a-step06-langgraph-human-interrupt-and-review-resume-v1.0.0
+gate-2a-step07-langgraph-batch-runner-v1.0.0
 ```
+
+Accepted Step 2A.06 evidence run: `evidence/gates/gate-2a/human-interrupt/gate2a-step06-20260810T162448Z-002692eb`
 
 Accepted Step 2A.05 evidence run: `evidence/gates/gate-2a/canonical-slice/gate2a-step05-20260810T140133Z-0025b888`
 
@@ -234,7 +242,7 @@ Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b897
 - [x] Step 2A.03 — LangGraph tool adapters
 - [x] Step 2A.04 — LangGraph state and SQLite checkpoint proof
 - [x] Step 2A.05 — LangGraph canonical vertical slice
-- [ ] Step 2A.06 — LangGraph human interrupt and review resume
+- [x] Step 2A.06 — LangGraph human interrupt and review resume
 - [ ] Step 2A.07 — LangGraph batch runner
 - [ ] Step 2A.08 — LangGraph fresh batch and continuation
 - [ ] Step 2A.09 — LangGraph evidence, claims, and matrix

@@ -1,0 +1,60 @@
+{
+  "checkpoint_backend": "sqlite",
+  "completed_at": null,
+  "completed_target_identities": [
+    {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    }
+  ],
+  "continuation_boundary_armed": false,
+  "continuation_boundary_reached": false,
+  "framework_origin": "langgraph",
+  "gate2c_failure_injection_fired": false,
+  "interrupted_at": "2026-08-10T16:26:01.232518Z",
+  "model_id": "gpt-4.1-mini-2025-04-14",
+  "next_target_index": 1,
+  "prompt_version": "langgraph-alt-text-v1.0.0",
+  "recommendation_ids": [
+    {
+      "node_id": 21,
+      "revision_id": 21,
+      "sequence": 1,
+      "uuid": "12a5d2d8-cf30-4717-a3f5-94eb6935c6db"
+    }
+  ],
+  "resumed_at": "2026-08-10T16:30:51.691904Z",
+  "run_id": "langgraph-20260810T162448Z-002692eb",
+  "schema_version": 1,
+  "started_at": "2026-08-10T16:25:58.015466Z",
+  "status": "running",
+  "target_sequence_hash": "sha256:1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "thread_id": "langgraph-20260810T162448Z-002692eb",
+  "updated_at": "2026-08-10T16:30:52.565150Z",
+  "validation_results": [
+    {
+      "deterministic_validation_passed": true,
+      "errors": [],
+      "sequence": 1,
+      "structured_output_schema_valid": true,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      }
+    }
+  ]
+}

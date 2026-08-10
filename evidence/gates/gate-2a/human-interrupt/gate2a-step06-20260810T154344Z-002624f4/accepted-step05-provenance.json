@@ -1,0 +1,9 @@
+{
+  "accepted_evidence": "evidence/gates/gate-2a/canonical-slice/gate2a-step05-20260810T140133Z-0025b888",
+  "accepted_model_output_sha256": "1401922421fb451b8dce74804f8ae392d40b7ca7aa747f9d932234a918fa3541",
+  "accepted_recommendation_sha256": "3ba6b2899ec4567008612b6922c84d69d0a97693d1c9b337428cbc40f9f4ae9d",
+  "accepted_run_id": "langgraph-20260810T140133Z-0025b888",
+  "model_output_reused": true,
+  "new_model_call_performed": false,
+  "schema_version": 1
+}

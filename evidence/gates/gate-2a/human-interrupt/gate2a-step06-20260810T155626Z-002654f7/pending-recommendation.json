@@ -1,0 +1,50 @@
+{
+  "accepted_model_output_reused": true,
+  "new_model_call_performed": false,
+  "pending_status": {
+    "reviewed_at": null,
+    "reviewer_username": null,
+    "revision_id": 21,
+    "status": "pending",
+    "uuid": "bfbe1bd5-738f-45b9-a9db-0c989c379f77"
+  },
+  "recommendation": {
+    "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+    "proposed_alt_text": "Solid navy background with a large white number 1 composed of smaller squares, labeled as Phase 0 Primary Image, Emergency Preparedness, Slot 1, representing the first article in the emergency preparedness checklist series.",
+    "run_id": "langgraph-20260810T155626Z-002654f7",
+    "schema_version": 1,
+    "source_framework": "langgraph",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    "validator_version": "gate05-validator-1.0.0"
+  },
+  "schema_version": 1,
+  "submission": {
+    "node_id": 21,
+    "revision_id": 21,
+    "run_id": "langgraph-20260810T155626Z-002654f7",
+    "source_framework": "langgraph",
+    "status": "pending",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    "uuid": "bfbe1bd5-738f-45b9-a9db-0c989c379f77"
+  }
+}

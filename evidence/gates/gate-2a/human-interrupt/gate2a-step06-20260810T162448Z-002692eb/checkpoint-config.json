@@ -1,0 +1,9 @@
+{
+  "checkpoint_id": "1f194d82-ce66-6144-8001-958498035aef",
+  "checkpoint_namespace": "",
+  "checkpointer": "langgraph.checkpoint.sqlite.SqliteSaver",
+  "run_id": "langgraph-20260810T162448Z-002692eb",
+  "runtime_relative_path": "langchain/.gate2a-runtime/langgraph-20260810T162448Z-002692eb.sqlite",
+  "schema_version": 1,
+  "thread_id": "langgraph-20260810T162448Z-002692eb"
+}

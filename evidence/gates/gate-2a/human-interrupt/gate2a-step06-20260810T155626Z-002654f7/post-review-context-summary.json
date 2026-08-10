@@ -1,0 +1,18 @@
+{
+  "article_body_retained": false,
+  "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+  "image_representation_retained": false,
+  "schema_version": 1,
+  "source_context_matches_accepted_step05": true,
+  "target": {
+    "delta": 0,
+    "existing_alt": "",
+    "field_name": "field_image",
+    "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+    "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+    "revision_id": 1,
+    "schema_version": 1,
+    "sequence": 1,
+    "target_state": "missing"
+  }
+}
