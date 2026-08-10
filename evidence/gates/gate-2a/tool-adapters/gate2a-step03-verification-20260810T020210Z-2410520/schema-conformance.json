@@ -1,0 +1,90 @@
+{
+  "all_correlation_ids_exact": true,
+  "checks": [
+    {
+      "correlation_id_exact": true,
+      "draft": "2020-12",
+      "label": "agent-discovery-success",
+      "ok": true,
+      "schema": "shared/schemas/tool-result.schema.json",
+      "status": "pass",
+      "tool_name": "find_images_needing_review"
+    },
+    {
+      "correlation_id_exact": true,
+      "draft": "2020-12",
+      "label": "agent-context-success",
+      "ok": true,
+      "schema": "shared/schemas/tool-result.schema.json",
+      "status": "pass",
+      "tool_name": "get_image_context"
+    },
+    {
+      "correlation_id_exact": true,
+      "draft": "2020-12",
+      "label": "agent-invalid-context",
+      "ok": false,
+      "schema": "shared/schemas/tool-result.schema.json",
+      "status": "pass",
+      "tool_name": "get_image_context"
+    },
+    {
+      "correlation_id_exact": true,
+      "draft": "2020-12",
+      "label": "agent-invalid-submit",
+      "ok": false,
+      "schema": "shared/schemas/tool-result.schema.json",
+      "status": "pass",
+      "tool_name": "submit_recommendation"
+    },
+    {
+      "correlation_id_exact": true,
+      "draft": "2020-12",
+      "label": "agent-not-found-status",
+      "ok": false,
+      "schema": "shared/schemas/tool-result.schema.json",
+      "status": "pass",
+      "tool_name": "get_recommendation_status"
+    },
+    {
+      "correlation_id_exact": true,
+      "draft": "2020-12",
+      "label": "editor-denied-find_images_needing_review",
+      "ok": false,
+      "schema": "shared/schemas/tool-result.schema.json",
+      "status": "pass",
+      "tool_name": "find_images_needing_review"
+    },
+    {
+      "correlation_id_exact": true,
+      "draft": "2020-12",
+      "label": "editor-denied-get_image_context",
+      "ok": false,
+      "schema": "shared/schemas/tool-result.schema.json",
+      "status": "pass",
+      "tool_name": "get_image_context"
+    },
+    {
+      "correlation_id_exact": true,
+      "draft": "2020-12",
+      "label": "editor-denied-submit_recommendation",
+      "ok": false,
+      "schema": "shared/schemas/tool-result.schema.json",
+      "status": "pass",
+      "tool_name": "submit_recommendation"
+    },
+    {
+      "correlation_id_exact": true,
+      "draft": "2020-12",
+      "label": "editor-denied-get_recommendation_status",
+      "ok": false,
+      "schema": "shared/schemas/tool-result.schema.json",
+      "status": "pass",
+      "tool_name": "get_recommendation_status"
+    }
+  ],
+  "draft": "2020-12",
+  "raw_context_representation_retained": false,
+  "schema": "shared/schemas/tool-result.schema.json",
+  "status": "pass"
+}

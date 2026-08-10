@@ -1,0 +1,8 @@
+{
+  "drupal_call_performed": false,
+  "model_call_performed": false,
+  "raw_error_body_retained": false,
+  "route_denial_sanitized": true,
+  "safe_substrate_error_preserved_exactly": true,
+  "status": "pass"
+}

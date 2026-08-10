@@ -1,0 +1,12 @@
+{
+  "article_source_sha256_after": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "article_source_sha256_before": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "raw_state_retained": false,
+  "schema_version": 1,
+  "source_state_unchanged": true,
+  "status": "pass",
+  "suggestion_count_after": 0,
+  "suggestion_count_before": 0,
+  "target_sequence_sha256_after": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "target_sequence_sha256_before": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}

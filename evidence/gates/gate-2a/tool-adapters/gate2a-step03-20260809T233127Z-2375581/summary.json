@@ -1,0 +1,30 @@
+{
+  "article_body_retained": false,
+  "authorization_header_retained": false,
+  "before_during_after_state_proof": true,
+  "canonical_target_sequence": 1,
+  "checkpoint_state_opened": false,
+  "credentials_retained": false,
+  "dependency_change": false,
+  "drupal_restored_to_seeded_clean": true,
+  "framework": "langgraph",
+  "local_drupal_http_calls_performed": true,
+  "model_call_performed": false,
+  "pending_status_observed": true,
+  "provider_call_performed": false,
+  "raw_image_representation_retained": false,
+  "run_id": "gate2a-step03-20260809T233127Z-2375581",
+  "same_identity_replay": true,
+  "schema_version": 1,
+  "source_article_mutation_performed": false,
+  "status": "pass",
+  "target_count": 12,
+  "temporary_recommendation_mutation_performed": true,
+  "tool_count": 4,
+  "tool_names": [
+    "find_images_needing_review",
+    "get_image_context",
+    "submit_recommendation",
+    "get_recommendation_status"
+  ]
+}

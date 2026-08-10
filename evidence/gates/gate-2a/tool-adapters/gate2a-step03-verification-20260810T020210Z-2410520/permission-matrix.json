@@ -1,0 +1,85 @@
+{
+  "agent_allowed_all_four": true,
+  "authorization_headers_retained": false,
+  "credentials_retained": false,
+  "editor_denied_all_four": true,
+  "rows": [
+    {
+      "account": "editor_dana",
+      "correlation_id_exact": true,
+      "error_code": "ACCESS_DENIED",
+      "expected": "denied",
+      "http_status": 403,
+      "observed": "denied",
+      "response_body_retained": false,
+      "status": "pass",
+      "tool_name": "find_images_needing_review"
+    },
+    {
+      "account": "editor_dana",
+      "correlation_id_exact": true,
+      "error_code": "ACCESS_DENIED",
+      "expected": "denied",
+      "http_status": 403,
+      "observed": "denied",
+      "response_body_retained": false,
+      "status": "pass",
+      "tool_name": "get_image_context"
+    },
+    {
+      "account": "editor_dana",
+      "correlation_id_exact": true,
+      "error_code": "ACCESS_DENIED",
+      "expected": "denied",
+      "http_status": 403,
+      "observed": "denied",
+      "response_body_retained": false,
+      "status": "pass",
+      "tool_name": "submit_recommendation"
+    },
+    {
+      "account": "editor_dana",
+      "correlation_id_exact": true,
+      "error_code": "ACCESS_DENIED",
+      "expected": "denied",
+      "http_status": 403,
+      "observed": "denied",
+      "response_body_retained": false,
+      "status": "pass",
+      "tool_name": "get_recommendation_status"
+    },
+    {
+      "account": "agent_bot",
+      "expected": "allowed",
+      "observed": "allowed",
+      "proof": "success",
+      "status": "pass",
+      "tool_name": "find_images_needing_review"
+    },
+    {
+      "account": "agent_bot",
+      "expected": "allowed",
+      "observed": "allowed",
+      "proof": "success_and_application_error",
+      "status": "pass",
+      "tool_name": "get_image_context"
+    },
+    {
+      "account": "agent_bot",
+      "expected": "allowed",
+      "observed": "allowed",
+      "proof": "application_error_no_write",
+      "status": "pass",
+      "tool_name": "submit_recommendation"
+    },
+    {
+      "account": "agent_bot",
+      "expected": "allowed",
+      "observed": "allowed",
+      "proof": "application_error_no_write",
+      "status": "pass",
+      "tool_name": "get_recommendation_status"
+    }
+  ],
+  "status": "pass"
+}

@@ -1,0 +1,20 @@
+{
+  "business_logic_duplicated": false,
+  "checkpoint_state_opened": false,
+  "model_call_performed": false,
+  "native_types": {
+    "find_images_needing_review": "StructuredTool",
+    "get_image_context": "StructuredTool",
+    "get_recommendation_status": "StructuredTool",
+    "submit_recommendation": "StructuredTool"
+  },
+  "shared_client": "shared.drupal_client.client.DrupalClient",
+  "status": "pass",
+  "tool_count": 4,
+  "tool_names": [
+    "find_images_needing_review",
+    "get_image_context",
+    "submit_recommendation",
+    "get_recommendation_status"
+  ]
+}

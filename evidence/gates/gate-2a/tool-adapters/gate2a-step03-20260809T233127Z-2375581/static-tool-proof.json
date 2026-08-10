@@ -1,0 +1,20 @@
+{
+  "checkpoint_state_opened": false,
+  "delegation_calls": [
+    "find_images_needing_review",
+    "get_image_context",
+    "submit_recommendation",
+    "get_recommendation_status"
+  ],
+  "drupal_call_performed": false,
+  "model_call_performed": false,
+  "pass_through_results": true,
+  "status": "pass",
+  "tool_count": 4,
+  "tool_names": [
+    "find_images_needing_review",
+    "get_image_context",
+    "submit_recommendation",
+    "get_recommendation_status"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "data": {
+    "reviewed_at": null,
+    "reviewer_username": null,
+    "revision_id": 21,
+    "status": "pending",
+    "uuid": "ce077261-4821-47c9-ab17-733df296f093"
+  },
+  "recommendation_id": "ce077261-4821-47c9-ab17-733df296f093",
+  "status": "pass"
+}

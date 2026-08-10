@@ -1,0 +1,37 @@
+{
+  "article": {
+    "body_plain_retained": false,
+    "body_plain_sha256": "3ca835b18ecc6be4cfc33c779794566c818beb5f83bffa829776d80e7bb09896",
+    "content_language": "en",
+    "revision_id": 1,
+    "title": "Phase 0 01 \u2014 Emergency Preparedness Checklist"
+  },
+  "collected_at": "2026-08-09T23:32:04Z",
+  "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+  "existing_alt": "",
+  "image": {
+    "byte_length": 4490,
+    "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+    "filename": "phase0-article-01-image-1.png",
+    "height": 675,
+    "mime_type": "image/png",
+    "representation_kind": "data_url",
+    "representation_value_length": 6010,
+    "representation_value_retained": false,
+    "representation_value_sha256": "05c56d8ca0052910ef6b52d3a0555a67b698fe89bc3273cf605d0492bff6335d",
+    "sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+    "width": 1200
+  },
+  "schema_version": 1,
+  "target": {
+    "delta": 0,
+    "existing_alt": "",
+    "field_name": "field_image",
+    "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+    "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+    "revision_id": 1,
+    "schema_version": 1,
+    "sequence": 1,
+    "target_state": "missing"
+  }
+}

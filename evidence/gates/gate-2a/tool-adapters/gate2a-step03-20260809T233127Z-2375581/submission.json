@@ -1,0 +1,61 @@
+{
+  "first": {
+    "node_id": 21,
+    "revision_id": 21,
+    "run_id": "langgraph-20260809T233204Z-step03",
+    "source_framework": "langgraph",
+    "status": "pending",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    "uuid": "ce077261-4821-47c9-ab17-733df296f093"
+  },
+  "idempotent_replay": true,
+  "recommendation": {
+    "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+    "proposed_alt_text": "Synthetic adapter proof description for deterministic editor review",
+    "run_id": "langgraph-20260809T233204Z-step03",
+    "schema_version": 1,
+    "source_framework": "langgraph",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    "validator_version": "gate05-validator-1.0.0"
+  },
+  "same_identity_replay": {
+    "node_id": 21,
+    "revision_id": 21,
+    "run_id": "langgraph-20260809T233204Z-step03",
+    "source_framework": "langgraph",
+    "status": "pending",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    "uuid": "ce077261-4821-47c9-ab17-733df296f093"
+  },
+  "status": "pass"
+}
