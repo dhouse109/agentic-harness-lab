@@ -1,0 +1,42 @@
+{
+  "automatic_model_retries_configured": 0,
+  "automatic_publication_performed": false,
+  "canonical_target_sequence": 1,
+  "checkpoint_backend": "sqlite",
+  "checkpoint_privacy_pass": true,
+  "completed_sequences": [
+    1
+  ],
+  "continuation_boundary_armed": false,
+  "continuation_boundary_reached": false,
+  "drupal_semantic_call_count": 6,
+  "drupal_semantic_call_counts": {
+    "find_images_needing_review": 1,
+    "get_image_context": 3,
+    "get_recommendation_status": 1,
+    "submit_recommendation": 1
+  },
+  "framework": "langgraph",
+  "gate2c_failure_injection_fired": false,
+  "human_review_performed": false,
+  "model_id": "gpt-4.1-mini-2025-04-14",
+  "model_invocations_attempted": 1,
+  "model_invocations_succeeded": 1,
+  "next_target_index": 1,
+  "pending_status_observed": true,
+  "prompt_version": "langgraph-alt-text-v1.0.0",
+  "recommendation_write_count": 1,
+  "run_id": "langgraph-20260810T140133Z-0025b888",
+  "runtime_db_relative_path": "langchain/.gate2a-runtime/langgraph-20260810T140133Z-0025b888.sqlite",
+  "runtime_db_sha256": "729577523f7fe8f972683adfac6538f079010fe46695408f871bf8a7d4af043f",
+  "schema_version": 1,
+  "semantic_retry_loop_performed": false,
+  "source_article_mutation_performed": false,
+  "source_context_stable_before_model_to_after_submit": true,
+  "source_context_stable_before_model_to_before_submit": true,
+  "status": "pass",
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "temperature": 0.0,
+  "thread_id_equals_run_id": true,
+  "validator_version": "gate05-validator-1.0.0"
+}
