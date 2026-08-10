@@ -1,0 +1,9 @@
+{"event":"tool-call","occurred_at":"2026-08-10T14:02:50.476791Z","operation":"find_images_needing_review","outcome":"pass","run_id":"langgraph-20260810T140133Z-0025b888","sequence":null}
+{"event":"tool-call","occurred_at":"2026-08-10T14:02:50.930535Z","operation":"get_image_context","outcome":"pass","run_id":"langgraph-20260810T140133Z-0025b888","sequence":1}
+{"event":"model-call-start","model_id":"gpt-4.1-mini-2025-04-14","occurred_at":"2026-08-10T14:02:52.439069Z","run_id":"langgraph-20260810T140133Z-0025b888","sequence":1}
+{"event":"model-call-complete","model_output_sha256":"sha256:1401922421fb451b8dce74804f8ae392d40b7ca7aa747f9d932234a918fa3541","occurred_at":"2026-08-10T14:03:02.066012Z","outcome":"pass","run_id":"langgraph-20260810T140133Z-0025b888","sequence":1}
+{"event":"tool-call","occurred_at":"2026-08-10T14:03:02.522953Z","operation":"get_image_context","outcome":"pass","run_id":"langgraph-20260810T140133Z-0025b888","sequence":1}
+{"event":"deterministic-validation","occurred_at":"2026-08-10T14:03:02.528038Z","outcome":"pass","run_id":"langgraph-20260810T140133Z-0025b888","sequence":1}
+{"event":"tool-call","occurred_at":"2026-08-10T14:03:03.877459Z","operation":"submit_recommendation","outcome":"pass","run_id":"langgraph-20260810T140133Z-0025b888","sequence":1}
+{"event":"tool-call","occurred_at":"2026-08-10T14:03:04.289211Z","operation":"get_recommendation_status","outcome":"pass","run_id":"langgraph-20260810T140133Z-0025b888","sequence":1}
+{"event":"tool-call","occurred_at":"2026-08-10T14:03:04.650557Z","operation":"get_image_context","outcome":"pass","run_id":"langgraph-20260810T140133Z-0025b888","sequence":1}
