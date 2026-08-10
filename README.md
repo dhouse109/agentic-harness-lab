@@ -26,7 +26,10 @@ and lifecycle and recovery.
 - **Gate 2:** in progress; Gate 2A LangGraph is current.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
-- **Next package:** `gate-2a-step03-langgraph-tool-adapters-v1.0.0`.
+- **Step 2A.03:** complete.
+- **Next package:** `gate-2a-step04-langgraph-state-and-sqlite-checkpoint-proof-v1.0.0`.
+Accepted Step 2A.03 evidence run: `gate2a-step03-20260809T233127Z-2375581`
+Accepted Step 2A.03 compliance verification: `gate2a-step03-verification-20260810T020210Z-2410520`
 Accepted Step 2A.02 evidence run: `gate2a-step02-20260809T224238Z-2361786`
 Accepted runtime ADR: `docs/decisions/ADR-0010-langgraph-runtime-and-checkpoint-path.md`
 Accepted Step 2A.01 evidence run: `gate2a-step01-20260809T202418Z-2334327`

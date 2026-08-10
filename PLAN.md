@@ -190,11 +190,22 @@ gate-2a-step01-langgraph-contract-and-evidence-plan-v1.0.3
 gate-2a-step02-langgraph-runtime-and-checkpoint-probe-v1.0.4
 ```
 
-**Next package:**
+**Completed Step 2A.03 packages:**
 
 ```text
 gate-2a-step03-langgraph-tool-adapters-v1.0.0
+gate-2a-step03-langgraph-tool-adapters-v1.0.2
+gate-2a-step03-langgraph-tool-adapters-v1.0.3
 ```
+
+**Next package:**
+
+```text
+gate-2a-step04-langgraph-state-and-sqlite-checkpoint-proof-v1.0.0
+```
+
+Accepted Step 2A.03 evidence run: `gate2a-step03-20260809T233127Z-2375581`
+Accepted Step 2A.03 compliance verification: `gate2a-step03-verification-20260810T020210Z-2410520`
 
 Accepted Step 2A.02 evidence run: `gate2a-step02-20260809T224238Z-2361786`
 Accepted runtime ADR: `docs/decisions/ADR-0010-langgraph-runtime-and-checkpoint-path.md`
@@ -204,7 +215,7 @@ Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b897
 
 - [x] Step 2A.01 — LangGraph contract and evidence plan
 - [x] Step 2A.02 — LangGraph runtime and checkpoint probe
-- [ ] Step 2A.03 — LangGraph tool adapters
+- [x] Step 2A.03 — LangGraph tool adapters
 - [ ] Step 2A.04 — LangGraph state and SQLite checkpoint proof
 - [ ] Step 2A.05 — LangGraph canonical vertical slice
 - [ ] Step 2A.06 — LangGraph human interrupt and review resume

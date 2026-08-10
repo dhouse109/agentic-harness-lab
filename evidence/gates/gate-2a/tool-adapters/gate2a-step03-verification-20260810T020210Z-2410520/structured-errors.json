@@ -1,0 +1,29 @@
+{
+  "live_application_errors": [
+    {
+      "code": "INVALID_TARGET",
+      "correlation_id": "gate2a-step03-verification-20260810T020210Z-2410520-agent-invalid-context",
+      "message": "Target values do not conform to target.schema.json.",
+      "retryable": false,
+      "tool_name": "get_image_context"
+    },
+    {
+      "code": "INVALID_RECOMMENDATION",
+      "correlation_id": "gate2a-step03-verification-20260810T020210Z-2410520-agent-invalid-submit",
+      "message": "The request body must be one recommendation object.",
+      "retryable": false,
+      "tool_name": "submit_recommendation"
+    },
+    {
+      "code": "RECOMMENDATION_NOT_FOUND",
+      "correlation_id": "gate2a-step03-verification-20260810T020210Z-2410520-agent-not-found-status",
+      "message": "The recommendation identifier does not resolve to an available recommendation.",
+      "retryable": false,
+      "tool_name": "get_recommendation_status"
+    }
+  ],
+  "raw_error_body_retained": false,
+  "route_denial_sanitized_static": true,
+  "safe_substrate_error_preserved_exactly_static": true,
+  "status": "pass"
+}

@@ -1,0 +1,12 @@
+{
+  "article_body_retained": false,
+  "article_body_sha256": "3ca835b18ecc6be4cfc33c779794566c818beb5f83bffa829776d80e7bb09896",
+  "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+  "image_sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+  "representation_kind": "data_url",
+  "representation_value_retained": false,
+  "representation_value_sha256": "05c56d8ca0052910ef6b52d3a0555a67b698fe89bc3273cf605d0492bff6335d",
+  "status": "pass",
+  "target_sequence": 1,
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}

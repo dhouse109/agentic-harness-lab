@@ -1,0 +1,86 @@
+{
+  "checkpoint_state_opened": false,
+  "model_call_performed": false,
+  "native_tool_type": {
+    "find_images_needing_review": "StructuredTool",
+    "get_image_context": "StructuredTool",
+    "get_recommendation_status": "StructuredTool",
+    "submit_recommendation": "StructuredTool"
+  },
+  "status": "pass",
+  "tool_count": 4,
+  "tool_names": [
+    "find_images_needing_review",
+    "get_image_context",
+    "submit_recommendation",
+    "get_recommendation_status"
+  ],
+  "tools": {
+    "find_images_needing_review": {
+      "args_schema": {
+        "description": "Find the frozen set of Drupal image-field usages needing editor review.",
+        "properties": {},
+        "title": "find_images_needing_review",
+        "type": "object"
+      },
+      "description": "Find the frozen set of Drupal image-field usages needing editor review.",
+      "name": "find_images_needing_review"
+    },
+    "get_image_context": {
+      "args_schema": {
+        "description": "Get permitted Drupal page and image context for one frozen target.",
+        "properties": {
+          "target": {
+            "additionalProperties": true,
+            "title": "Target",
+            "type": "object"
+          }
+        },
+        "required": [
+          "target"
+        ],
+        "title": "get_image_context",
+        "type": "object"
+      },
+      "description": "Get permitted Drupal page and image context for one frozen target.",
+      "name": "get_image_context"
+    },
+    "get_recommendation_status": {
+      "args_schema": {
+        "description": "Read the current Drupal review status for one recommendation.",
+        "properties": {
+          "recommendation_id": {
+            "title": "Recommendation Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "recommendation_id"
+        ],
+        "title": "get_recommendation_status",
+        "type": "object"
+      },
+      "description": "Read the current Drupal review status for one recommendation.",
+      "name": "get_recommendation_status"
+    },
+    "submit_recommendation": {
+      "args_schema": {
+        "description": "Submit one validated recommendation to the frozen Drupal review queue.",
+        "properties": {
+          "recommendation": {
+            "additionalProperties": true,
+            "title": "Recommendation",
+            "type": "object"
+          }
+        },
+        "required": [
+          "recommendation"
+        ],
+        "title": "submit_recommendation",
+        "type": "object"
+      },
+      "description": "Submit one validated recommendation to the frozen Drupal review queue.",
+      "name": "submit_recommendation"
+    }
+  }
+}
