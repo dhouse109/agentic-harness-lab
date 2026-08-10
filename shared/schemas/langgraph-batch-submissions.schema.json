@@ -1,0 +1,71 @@
+{
+  "$id": "langgraph-batch-submissions.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "framework_origin": {
+      "const": "langgraph"
+    },
+    "run_id": {
+      "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "submissions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "idempotent_replay_same_identity": {
+            "type": "boolean"
+          },
+          "initial_status": {
+            "const": "pending"
+          },
+          "node_id": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "revision_id": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "sequence": {
+            "maximum": 12,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "target": {
+            "$ref": "target.schema.json"
+          },
+          "uuid": {
+            "format": "uuid",
+            "type": "string"
+          }
+        },
+        "required": [
+          "sequence",
+          "target",
+          "node_id",
+          "uuid",
+          "revision_id",
+          "initial_status",
+          "idempotent_replay_same_identity"
+        ],
+        "type": "object"
+      },
+      "maxItems": 12,
+      "minItems": 12,
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "framework_origin",
+    "submissions"
+  ],
+  "title": "Submitted recommendation evidence",
+  "type": "object"
+}

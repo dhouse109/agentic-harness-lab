@@ -1,0 +1,109 @@
+{
+  "$id": "langgraph-batch-recovery.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "completed_after_resume": {
+      "items": false,
+      "maxItems": 6,
+      "minItems": 6,
+      "prefixItems": [
+        {
+          "const": 7
+        },
+        {
+          "const": 8
+        },
+        {
+          "const": 9
+        },
+        {
+          "const": 10
+        },
+        {
+          "const": 11
+        },
+        {
+          "const": 12
+        }
+      ],
+      "type": "array"
+    },
+    "completed_before_stop": {
+      "items": false,
+      "maxItems": 6,
+      "minItems": 6,
+      "prefixItems": [
+        {
+          "const": 1
+        },
+        {
+          "const": 2
+        },
+        {
+          "const": 3
+        },
+        {
+          "const": 4
+        },
+        {
+          "const": 5
+        },
+        {
+          "const": 6
+        }
+      ],
+      "type": "array"
+    },
+    "controlled_stop_after_sequence": {
+      "const": 6
+    },
+    "duplicate_count": {
+      "const": 0
+    },
+    "gate2c_failure_injection_fired": {
+      "const": false
+    },
+    "interrupted_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "resume_at_sequence": {
+      "const": 7
+    },
+    "resumed_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "resumed_with_run_id": {
+      "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$",
+      "type": "string"
+    },
+    "run_id": {
+      "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "source_framework": {
+      "const": "langgraph"
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "source_framework",
+    "controlled_stop_after_sequence",
+    "resume_at_sequence",
+    "completed_before_stop",
+    "interrupted_at",
+    "resumed_at",
+    "resumed_with_run_id",
+    "duplicate_count",
+    "completed_after_resume",
+    "gate2c_failure_injection_fired"
+  ],
+  "title": "LangGraph controlled same-run continuation evidence",
+  "type": "object"
+}

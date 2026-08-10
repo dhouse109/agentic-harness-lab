@@ -1,0 +1,102 @@
+{
+  "adr": "docs/decisions/ADR-0011-langgraph-batch-evidence-schema-instantiation.md",
+  "allowed_provenance_transformations": [
+    "$id batch-* -> langgraph-batch-*",
+    "exact provenance constant drupal_ai -> langgraph",
+    "run-id regex prefix ^drupal_ai- -> ^langgraph-",
+    "drupal-ai-model-output.schema.json -> langgraph-model-output.schema.json",
+    "drupal-ai-run-state.schema.json -> langgraph-run-state.schema.json",
+    "human-readable title Drupal AI -> LangGraph"
+  ],
+  "controlled_continuation_adaptations": [
+    "batch-event adds continuation_interrupted without removing historical failure_injected",
+    "batch-recovery failure-only fields are instantiated as controlled stop/resume fields required by Gate 2A continuation_policy"
+  ],
+  "controlled_continuation_semantics_preserved": true,
+  "frozen_contract_changed": false,
+  "frozen_gate2a_contract_sha256": "1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b",
+  "gate2c_failure_semantics_introduced": false,
+  "prior_evidence_invalidated": false,
+  "purpose": "langgraph-instantiation-of-frozen-batch-collection-evidence-shapes",
+  "schema_version": 1,
+  "schemas": [
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-event.schema.json",
+      "derived_sha256": "bc5983e1290531ae5ca427b1d1e6702a8b690215fc62f984b6366d118f9bcb8f",
+      "source_schema": "shared/schemas/batch-event.schema.json",
+      "source_sha256": "6c282c812cdbb1038cb0a92aeacc029cdf7683e2f093413d81329bf3cd406ccc",
+      "transformation_kind": "controlled-continuation-event-adaptation"
+    },
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-human-review.schema.json",
+      "derived_sha256": "3c4a73cecdd42524c7dade5a249a901a9e0236fe95d3502d595de6d84f5199ad",
+      "source_schema": "shared/schemas/batch-human-review.schema.json",
+      "source_sha256": "0972636d984b3cdf24579457336c94306f0337af6885104d031e5a0a088d330e",
+      "transformation_kind": "provenance-only"
+    },
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-model-outputs.schema.json",
+      "derived_sha256": "7d47863fc4dc24a3e7791351a835639553c9ad8081a22735382f318ee8b70333",
+      "source_schema": "shared/schemas/batch-model-outputs.schema.json",
+      "source_sha256": "ce035491a2b407f5765fceae55ff406ebfa28c9bd53ead983372f02627fbe0f9",
+      "transformation_kind": "provenance-only"
+    },
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-recommendations.schema.json",
+      "derived_sha256": "ac23d48b3916ae4e6d11c9f7a0e46070688a2cba7571759c9c26b3ff8104de24",
+      "source_schema": "shared/schemas/batch-recommendations.schema.json",
+      "source_sha256": "53071df5a9d8c326e8598035b6b6742d5f1127d79cc93ca405807b864c95c159",
+      "transformation_kind": "provenance-only"
+    },
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-recovery.schema.json",
+      "derived_sha256": "9a739cca5c166bde881b1945c6098017d3e5c869efb0629ac06d9a97d236233f",
+      "source_schema": "shared/schemas/batch-recovery.schema.json",
+      "source_sha256": "72ee62c6416ff06c112c14e733365a1b999570f2b2f31a672b230a99113d6bb4",
+      "transformation_kind": "controlled-continuation-recovery-adaptation"
+    },
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-statuses.schema.json",
+      "derived_sha256": "947d03ec88dff44b26cff4839b742069adcaef88748328fc407d3c47d8694e90",
+      "source_schema": "shared/schemas/batch-statuses.schema.json",
+      "source_sha256": "259fe56d36dc78993dafd4d51fb7696cc8de7c49a1558a137332cade3793c3cf",
+      "transformation_kind": "provenance-only"
+    },
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-submissions.schema.json",
+      "derived_sha256": "f2ebf656d03472fb9c823f72d41566b3cbc6914708702b435b86d65f2c1546da",
+      "source_schema": "shared/schemas/batch-submissions.schema.json",
+      "source_sha256": "af9db6dba2da1a1d95f782f7ea0cb879af6d90ee80d94369c203f70fa8317d76",
+      "transformation_kind": "provenance-only"
+    },
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-summary.schema.json",
+      "derived_sha256": "137736f47fc7619cde4ad5745a23d1f1bdf73d257bd235b03ad66d2dcce5951f",
+      "source_schema": "shared/schemas/batch-summary.schema.json",
+      "source_sha256": "7f7b403f1ecf346af72c7f09ac9376a5aa8492223fe93bfa394e16dc6994c2e8",
+      "transformation_kind": "provenance-only"
+    },
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-target-sequence.schema.json",
+      "derived_sha256": "f31a37a1d58b85393c2b88630066b83f87be815e1afe6b0051eb732061eebda2",
+      "source_schema": "shared/schemas/batch-target-sequence.schema.json",
+      "source_sha256": "79075694777a9a048dd344beb4500d9548a9349825c1c97d3348e943879c57dc",
+      "transformation_kind": "provenance-only"
+    },
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-tool-traces.schema.json",
+      "derived_sha256": "cc7acb99c80e345373a9db4d02b31aec950f6ba7a2ca6b8a0f2137f225a697f1",
+      "source_schema": "shared/schemas/batch-tool-traces.schema.json",
+      "source_sha256": "6bb844d9c046ad45a8f7711be07a2b1f29f4adf90280432e8977d6fb1b99f4d9",
+      "transformation_kind": "provenance-only"
+    },
+    {
+      "derived_schema": "shared/schemas/langgraph-batch-validation.schema.json",
+      "derived_sha256": "9ff587749458b8910319e991e589ed1d546a7a199503943c58b64bb7b4b4cac1",
+      "source_schema": "shared/schemas/batch-validation.schema.json",
+      "source_sha256": "46a37841d57ef96d09ed0a435de4c2a34cd2711c1dd7070d576de7956927d5cd",
+      "transformation_kind": "provenance-only"
+    }
+  ],
+  "status": "active"
+}

@@ -1,0 +1,81 @@
+{
+  "$id": "langgraph-batch-human-review.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "decisions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "decided_text_sha256": {
+            "pattern": "^sha256:[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "decision": {
+            "enum": [
+              "approved",
+              "rejected",
+              "edited_and_approved"
+            ]
+          },
+          "decision_revision_id": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "prior_revision_id": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "prior_text_sha256": {
+            "pattern": "^sha256:[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "recommendation_uuid": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "reviewed_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "reviewer": {
+            "const": "editor_dana"
+          },
+          "source_article_unchanged": {
+            "const": true
+          }
+        },
+        "required": [
+          "recommendation_uuid",
+          "prior_revision_id",
+          "decision_revision_id",
+          "reviewer",
+          "decision",
+          "reviewed_at",
+          "source_article_unchanged"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "framework_origin": {
+      "const": "langgraph"
+    },
+    "run_id": {
+      "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "framework_origin",
+    "decisions"
+  ],
+  "title": "Human review decision evidence",
+  "type": "object"
+}

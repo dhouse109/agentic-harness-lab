@@ -1,0 +1,17 @@
+{
+  "completed_before_stop": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "event": "construction-test-langgraph-interrupt",
+  "gate2c_failure_injection": false,
+  "interrupt_count": 1,
+  "resume_at_sequence": 7,
+  "run_id": "langgraph-20260810T185629Z-00272cd1",
+  "schema_version": 1,
+  "thread_id": "langgraph-20260810T185629Z-00272cd1"
+}

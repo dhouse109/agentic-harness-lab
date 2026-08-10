@@ -1,0 +1,131 @@
+{
+  "$id": "langgraph-batch-tool-traces.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {
+      "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "source_framework": {
+      "const": "langgraph"
+    },
+    "traces": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "completed_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "correlation_id": {
+            "maxLength": 128,
+            "minLength": 1,
+            "type": "string"
+          },
+          "error": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "code": {
+                    "maxLength": 64,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "message": {
+                    "maxLength": 500,
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "retryable": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "code",
+                  "message",
+                  "retryable"
+                ],
+                "type": "object"
+              }
+            ]
+          },
+          "ok": {
+            "type": "boolean"
+          },
+          "operation": {
+            "enum": [
+              "find_images_needing_review",
+              "get_image_context",
+              "submit_recommendation",
+              "get_recommendation_status"
+            ]
+          },
+          "recommendation_uuid": {
+            "format": "uuid",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "result_sha256": {
+            "pattern": "^sha256:[a-f0-9]{64}$",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sequence": {
+            "maximum": 12,
+            "minimum": 1,
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "started_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "target": {
+            "oneOf": [
+              {
+                "$ref": "target.schema.json"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "operation",
+          "correlation_id",
+          "started_at",
+          "completed_at",
+          "ok",
+          "sequence",
+          "result_sha256",
+          "error"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "source_framework",
+    "traces"
+  ],
+  "title": "Sanitized shared-operation trace evidence",
+  "type": "object"
+}

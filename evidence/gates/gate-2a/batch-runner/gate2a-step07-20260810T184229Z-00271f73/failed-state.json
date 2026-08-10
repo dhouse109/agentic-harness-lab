@@ -1,0 +1,11 @@
+{
+  "drupal_semantic_call_count": 0,
+  "evidence_path": "evidence/gates/gate-2a/batch-runner/gate2a-step07-20260810T184229Z-00271f73",
+  "failed_at": "2026-08-10T18:42:31.081083Z",
+  "failure_class": "step2a07-model-free-construction-verification",
+  "model_call_count": 0,
+  "reason": "construction-test core exited nonzero",
+  "recommendation_write_count": 0,
+  "schema_version": 1,
+  "status": "failed"
+}
