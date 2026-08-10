@@ -27,7 +27,9 @@ and lifecycle and recovery.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
 - **Step 2A.03:** complete.
-- **Next package:** `gate-2a-step04-langgraph-state-and-sqlite-checkpoint-proof-v1.0.0`.
+- **Step 2A.04:** complete.
+- **Next package:** `gate-2a-step05-langgraph-canonical-vertical-slice-v1.0.0`.
+Accepted Step 2A.04 evidence run: `evidence/gates/gate-2a/checkpoint-proof/gate2a-step04-20260810T034027Z-00250b07`
 Accepted Step 2A.03 evidence run: `gate2a-step03-20260809T233127Z-2375581`
 Accepted Step 2A.03 compliance verification: `gate2a-step03-verification-20260810T020210Z-2410520`
 Accepted Step 2A.02 evidence run: `gate2a-step02-20260809T224238Z-2361786`

@@ -16,7 +16,9 @@
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
 - **Step 2A.03:** complete.
-- **Next package:** `gate-2a-step04-langgraph-state-and-sqlite-checkpoint-proof-v1.0.0`.
+- **Step 2A.04:** complete.
+- **Next package:** `gate-2a-step05-langgraph-canonical-vertical-slice-v1.0.0`.
+Accepted Step 2A.04 evidence run: `evidence/gates/gate-2a/checkpoint-proof/gate2a-step04-20260810T034027Z-00250b07`
 Accepted Step 2A.03 evidence run: `gate2a-step03-20260809T233127Z-2375581`
 Accepted Step 2A.03 compliance verification: `gate2a-step03-verification-20260810T020210Z-2410520`
 Accepted Step 2A.02 evidence run: `gate2a-step02-20260809T224238Z-2361786`
@@ -182,4 +184,4 @@ A new planning or implementation session should read these files in order:
 11. `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json`
 
 Do not reopen Gate 0.5 or Gate 1 unless an audit fails or a frozen contract is intentionally changed.
-Use `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md` together with `docs/gates/GATE-2-STRUCTURE.md`, `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`, and `docs/gates/GATE-2A-STEP02-LANGGRAPH-RUNTIME-PROBE.md`. Step 2A.01 through Step 2A.03 are complete. Step 2A.04 is next but remains locked until Step 2A.03 is committed and merged, local `main` is resynchronized, and the post-merge audit passes.
+Use `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md` together with `docs/gates/GATE-2-STRUCTURE.md`, `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`, and `docs/gates/GATE-2A-STEP02-LANGGRAPH-RUNTIME-PROBE.md`. Step 2A.01 through Step 2A.04 are complete. Step 2A.05 is next but remains locked until Step 2A.04 is committed and merged, local `main` is resynchronized, and the post-merge audit passes.
