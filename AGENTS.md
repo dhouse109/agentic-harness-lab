@@ -190,7 +190,13 @@ Gate 1 Drupal AI is complete and frozen at `2af9870aed1ea2ce15cf16f848cc1eb41573
 
 **Step 2A.05:** complete.
 
-**Next package:** `gate-2a-step06-langgraph-human-interrupt-and-review-resume-v1.0.0`.
+**Step 2A.06:** complete.
+
+**Completed package:** `gate-2a-step06-langgraph-human-interrupt-and-review-resume-v1.0.8`.
+
+**Next package:** `gate-2a-step07-langgraph-batch-runner-v1.0.0`.
+
+Accepted Step 2A.06 evidence run: `evidence/gates/gate-2a/human-interrupt/gate2a-step06-20260810T162448Z-002692eb`
 
 Accepted Step 2A.05 evidence run: `evidence/gates/gate-2a/canonical-slice/gate2a-step05-20260810T140133Z-0025b888`
 
@@ -201,7 +207,7 @@ Accepted Step 2A.03 compliance verification: `gate2a-step03-verification-2026081
 
 Read `docs/gates/GATE-2-STRUCTURE.md`, `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`, `docs/CODEX-GATE-2A-RUNBOOK.md`, `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md`, the Gate 1 freeze manifest, and accepted Step 1.07 evidence. Preserve the frozen dataset, model/settings, shared operations, validator, review destination, source-mutation rule, and later shared failure point. Do not infer LangGraph behavior from Drupal AI evidence.
 
-Do not generate Step 2A.06 until Step 2A.05 is passing, committed, merged, local `main` is resynchronized, and the post-merge audit passes.
+Do not generate Step 2A.07 until Step 2A.06 is passing, committed, merged, local `main` is resynchronized, and the post-merge audit passes.
 
 Accepted Step 2A.02 evidence run: `gate2a-step02-20260809T224238Z-2361786`
 Accepted runtime ADR: `docs/decisions/ADR-0010-langgraph-runtime-and-checkpoint-path.md`

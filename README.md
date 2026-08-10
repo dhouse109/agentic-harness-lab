@@ -29,7 +29,10 @@ and lifecycle and recovery.
 - **Step 2A.03:** complete.
 - **Step 2A.04:** complete.
 - **Step 2A.05:** complete.
-- **Next package:** `gate-2a-step06-langgraph-human-interrupt-and-review-resume-v1.0.0`.
+- **Step 2A.06:** complete.
+- **Completed package:** `gate-2a-step06-langgraph-human-interrupt-and-review-resume-v1.0.8`.
+- **Next package:** `gate-2a-step07-langgraph-batch-runner-v1.0.0`.
+Accepted Step 2A.06 evidence run: `evidence/gates/gate-2a/human-interrupt/gate2a-step06-20260810T162448Z-002692eb`
 Accepted Step 2A.05 evidence run: `evidence/gates/gate-2a/canonical-slice/gate2a-step05-20260810T140133Z-0025b888`
 Accepted Step 2A.04 evidence run: `evidence/gates/gate-2a/checkpoint-proof/gate2a-step04-20260810T034027Z-00250b07`
 Accepted Step 2A.03 evidence run: `gate2a-step03-20260809T233127Z-2375581`

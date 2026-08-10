@@ -1,0 +1,10 @@
+{
+  "event": "langgraph-resume",
+  "resume_signal": {
+    "review_complete": true
+  },
+  "resumed_at": "2026-08-10T16:30:51.691904Z",
+  "run_id": "langgraph-20260810T162448Z-002692eb",
+  "schema_version": 1,
+  "thread_id": "langgraph-20260810T162448Z-002692eb"
+}

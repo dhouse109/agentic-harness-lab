@@ -1,0 +1,13 @@
+{
+  "approval_system": "Drupal alt_text_suggestion revision workflow",
+  "authoritative_reviewer": "editor_dana",
+  "event": "langgraph-interrupt",
+  "interrupt_count": 1,
+  "interrupted_at": "2026-08-10T15:57:39.146630Z",
+  "next_nodes": [
+    "await_review"
+  ],
+  "run_id": "langgraph-20260810T155626Z-002654f7",
+  "schema_version": 1,
+  "thread_id": "langgraph-20260810T155626Z-002654f7"
+}

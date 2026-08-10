@@ -1,0 +1,36 @@
+{
+    "schema_version": 1,
+    "status": "pass",
+    "audit_state": "pending",
+    "run_id": "langgraph-20260810T155626Z-002654f7",
+    "node_id": 21,
+    "node_uuid": "bfbe1bd5-738f-45b9-a9db-0c989c379f77",
+    "revision_count": 1,
+    "revisions": [
+        {
+            "revision_id": 21,
+            "revision_user": {
+                "uid": 3,
+                "name": "agent_bot"
+            },
+            "timestamp_unix": 1786377457,
+            "timestamp_utc": "2026-08-10T15:57:37+00:00",
+            "revision_log": "submit_recommendation validator=gate05-validator-1.0.0 evidence=sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+            "proposed_alt": "Solid navy background with a large white number 1 composed of smaller squares, labeled as Phase 0 Primary Image, Emergency Preparedness, Slot 1, representing the first article in the emergency preparedness checklist series.",
+            "review_status": "pending",
+            "source_framework": "langgraph",
+            "run_id": "langgraph-20260810T155626Z-002654f7",
+            "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+            "target_node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+            "target_revision": 1,
+            "target_field": "field_image",
+            "target_delta": 0,
+            "target_file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25"
+        }
+    ],
+    "paths": {
+        "view": "/node/21",
+        "edit": "/node/21/edit",
+        "history": "/node/21/revisions"
+    }
+}
