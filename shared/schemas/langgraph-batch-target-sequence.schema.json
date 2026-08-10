@@ -1,0 +1,29 @@
+{
+  "$id": "langgraph-batch-target-sequence.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "target_sequence_sha256": {
+      "const": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+    },
+    "targets": {
+      "items": {
+        "$ref": "target.schema.json"
+      },
+      "maxItems": 12,
+      "minItems": 12,
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema_version",
+    "target_sequence_sha256",
+    "targets"
+  ],
+  "title": "Frozen 12-target batch sequence evidence",
+  "type": "object"
+}

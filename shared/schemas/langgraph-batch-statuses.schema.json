@@ -1,0 +1,60 @@
+{
+  "$id": "langgraph-batch-statuses.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "framework_origin": {
+      "const": "langgraph"
+    },
+    "observations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "observed_at": {
+            "format": "date-time",
+            "type": "string"
+          },
+          "recommendation_uuid": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "revision_id": {
+            "minimum": 1,
+            "type": "integer"
+          },
+          "status": {
+            "enum": [
+              "pending",
+              "approved",
+              "rejected"
+            ]
+          }
+        },
+        "required": [
+          "recommendation_uuid",
+          "revision_id",
+          "status",
+          "observed_at"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "run_id": {
+      "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "framework_origin",
+    "observations"
+  ],
+  "title": "Read-only recommendation-status evidence",
+  "type": "object"
+}

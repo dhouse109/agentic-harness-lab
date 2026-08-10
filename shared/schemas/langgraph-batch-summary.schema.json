@@ -1,0 +1,110 @@
+{
+  "$id": "langgraph-batch-summary.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "automatic_publication_performed": {
+      "const": false
+    },
+    "completed_at": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "completed_count": {
+      "maximum": 12,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "duplicate_count": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "failed_count": {
+      "maximum": 12,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "failure_seam_observed": {
+      "type": "boolean"
+    },
+    "human_review_completed": {
+      "type": "boolean"
+    },
+    "model": {
+      "const": "gpt-4.1-mini-2025-04-14"
+    },
+    "provider": {
+      "const": "OpenAI"
+    },
+    "resume_sequence": {
+      "maximum": 7,
+      "minimum": 7,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "review_destination": {
+      "const": "alt_text_suggestion"
+    },
+    "run_id": {
+      "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "source_article_unchanged": {
+      "type": "boolean"
+    },
+    "source_framework": {
+      "const": "langgraph"
+    },
+    "started_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pass",
+        "fail"
+      ]
+    },
+    "target_count": {
+      "const": 12
+    },
+    "temperature": {
+      "const": 0.0
+    },
+    "validator_version": {
+      "const": "gate05-validator-1.0.0"
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "run_id",
+    "source_framework",
+    "provider",
+    "model",
+    "temperature",
+    "target_count",
+    "completed_count",
+    "failed_count",
+    "duplicate_count",
+    "validator_version",
+    "review_destination",
+    "source_article_unchanged",
+    "automatic_publication_performed",
+    "failure_seam_observed",
+    "resume_sequence",
+    "started_at",
+    "completed_at",
+    "human_review_completed"
+  ],
+  "title": "LangGraph batch result summary",
+  "type": "object"
+}

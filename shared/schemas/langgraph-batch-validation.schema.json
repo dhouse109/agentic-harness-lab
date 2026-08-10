@@ -1,0 +1,73 @@
+{
+  "$defs": {
+    "result": {
+      "additionalProperties": false,
+      "properties": {
+        "deterministic_validation_passed": {
+          "type": "boolean"
+        },
+        "errors": {
+          "items": {
+            "maxLength": 500,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "sequence": {
+          "maximum": 12,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "structured_output_schema_valid": {
+          "type": "boolean"
+        },
+        "target": {
+          "$ref": "target.schema.json"
+        }
+      },
+      "required": [
+        "sequence",
+        "target",
+        "structured_output_schema_valid",
+        "deterministic_validation_passed",
+        "errors"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "langgraph-batch-validation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "results": {
+      "items": {
+        "$ref": "#/$defs/result"
+      },
+      "maxItems": 12,
+      "minItems": 12,
+      "type": "array"
+    },
+    "run_id": {
+      "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "source_framework": {
+      "const": "langgraph"
+    },
+    "validator_version": {
+      "const": "gate05-validator-1.0.0"
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "source_framework",
+    "validator_version",
+    "results"
+  ],
+  "title": "Batch structured-output and deterministic-validation evidence",
+  "type": "object"
+}

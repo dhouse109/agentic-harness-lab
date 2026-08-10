@@ -1,0 +1,52 @@
+{
+  "$id": "langgraph-batch-recommendations.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "recommendations": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "recommendation": {
+            "$ref": "recommendation.schema.json"
+          },
+          "sequence": {
+            "maximum": 12,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "target": {
+            "$ref": "target.schema.json"
+          }
+        },
+        "required": [
+          "sequence",
+          "target",
+          "recommendation"
+        ],
+        "type": "object"
+      },
+      "maxItems": 12,
+      "minItems": 12,
+      "type": "array"
+    },
+    "run_id": {
+      "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "source_framework": {
+      "const": "langgraph"
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "source_framework",
+    "recommendations"
+  ],
+  "title": "Assembled recommendation evidence",
+  "type": "object"
+}

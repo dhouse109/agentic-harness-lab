@@ -1,0 +1,97 @@
+{
+  "$id": "langgraph-batch-event.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "correlation_id": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string"
+    },
+    "error_code": {
+      "maxLength": 64,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "event_index": {
+      "minimum": 1,
+      "type": "integer"
+    },
+    "event_type": {
+      "enum": [
+        "run_initialized",
+        "run_started",
+        "target_started",
+        "context_collected",
+        "model_invocation_started",
+        "model_output_received",
+        "validation_completed",
+        "recommendation_submitted",
+        "status_observed",
+        "target_completed",
+        "continuation_interrupted",
+        "failure_injected",
+        "run_resumed",
+        "run_completed",
+        "run_failed"
+      ]
+    },
+    "occurred_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "outcome": {
+      "enum": [
+        "started",
+        "passed",
+        "failed",
+        "persisted",
+        "interrupted",
+        "resumed",
+        "completed"
+      ]
+    },
+    "run_id": {
+      "pattern": "^langgraph-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{4,12}$",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "sequence": {
+      "maximum": 12,
+      "minimum": 1,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "source_framework": {
+      "const": "langgraph"
+    },
+    "target": {
+      "oneOf": [
+        {
+          "$ref": "target.schema.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "event_index",
+    "event_type",
+    "run_id",
+    "source_framework",
+    "occurred_at",
+    "sequence",
+    "correlation_id"
+  ],
+  "title": "Sanitized framework batch event",
+  "type": "object"
+}
