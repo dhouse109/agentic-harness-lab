@@ -1,0 +1,1 @@
+FAIL: Step 2A.04 run stopped with exit code 1. Retained run: evidence/gates/gate-2a/checkpoint-proof/gate2a-step04-20260810T033420Z-0025067d

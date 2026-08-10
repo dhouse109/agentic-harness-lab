@@ -1,0 +1,32 @@
+{
+  "drupal_calls_during_repair": 0,
+  "langgraph_rerun_performed": false,
+  "model_provider_calls_during_repair": 0,
+  "note": "Attempt #3 completed checkpoint/state evidence generation and PASS finalization. The post-proof auditor rejected manifest coverage because REQUIRED_FILES omitted run-id.txt. The runner then retained run-failure.txt. This repair preserves that history and rewrites the manifest to cover every retained evidence file.",
+  "original_manifest_files": [
+    "checkpoint-config.json",
+    "isolation-negative-control.json",
+    "persisted-field-audit.json",
+    "process-1-events.jsonl",
+    "process-2-events.jsonl",
+    "run-id.txt",
+    "runtime-db-sha256.txt",
+    "secret-scan.log",
+    "state-after-reload-schema-validation.json",
+    "state-after-reload.json",
+    "state-before-schema-validation.json",
+    "state-before.json",
+    "summary.json",
+    "summary.md"
+  ],
+  "original_manifest_omitted_by_auditor": "run-id.txt",
+  "original_manifest_sha256": "58e34112c45c9180f62b06c9f9e12c493f5994639956e467474926bf6f73b40c",
+  "recommendation_writes_during_repair": 0,
+  "repair_type": "post-proof-manifest-auditor-mismatch",
+  "schema_version": 1,
+  "source_run": "evidence/gates/gate-2a/checkpoint-proof/gate2a-step04-20260810T034027Z-00250b07",
+  "status": "pass",
+  "underlying_checkpoint_mechanics_reexecuted": false,
+  "underlying_proof_summary_status": "pass",
+  "wrapper_failure_marker_preserved": true
+}

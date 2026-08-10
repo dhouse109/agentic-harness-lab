@@ -1,0 +1,10 @@
+{
+  "negative_thread_empty": true,
+  "negative_thread_id": "langgraph-20260810T034027Z-00250b07-isolation-negative",
+  "negative_thread_state": {},
+  "primary_state_equal_to_process_1": true,
+  "primary_state_reloaded": true,
+  "primary_thread_id": "langgraph-20260810T034027Z-00250b07",
+  "schema_version": 1,
+  "status": "pass"
+}
