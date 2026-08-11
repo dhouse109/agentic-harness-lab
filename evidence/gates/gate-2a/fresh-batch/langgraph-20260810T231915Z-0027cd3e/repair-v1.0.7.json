@@ -1,0 +1,29 @@
+{
+  "additional_model_calls_attempted": 0,
+  "additional_model_calls_succeeded": 0,
+  "additional_step2a08_semantic_calls": 0,
+  "core_batch_runner_changed": true,
+  "core_batch_runner_sha256_after": "590effb2df62ed53fa064c83e4243979e45e8b2f6367dc71693b1843fa5a0db5",
+  "core_batch_runner_sha256_before": "57ec791f1a5c05d1f731cc90bd29c4dce9e01f40443fad72a3a8b634372fe9de",
+  "failed_runs_entry_preserved": true,
+  "live_resume_performed": false,
+  "model_calls_already_completed": 12,
+  "original_failed_execution_preserved": true,
+  "original_failed_privacy_report_preserved": true,
+  "recorded_at": "2026-08-11T01:03:50.088192Z",
+  "repair_package": "gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.7",
+  "restore_performed": false,
+  "result_path": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e",
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "salvage_candidate_promoted_during_install": false,
+  "scanner_self_reporting_artifacts_excluded": [
+    "checkpoint-privacy-before-continuation.json",
+    "checkpoint-privacy-after-continuation.json"
+  ],
+  "schema_version": 1,
+  "status": "pass",
+  "superseded_active_package": "gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.5",
+  "superseded_uninstalled_preview_package": "gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.6",
+  "trigger": "final checkpoint privacy scanner matched hidden_reasoning inside its own midpoint privacy-report field name",
+  "v1_0_6_preview_failure": "package.sh nounset local gate/run/gdir declaration; no repository mutation or live activity"
+}

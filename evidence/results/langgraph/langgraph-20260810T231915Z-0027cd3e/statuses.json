@@ -1,0 +1,79 @@
+{
+  "framework_origin": "langgraph",
+  "observations": [
+    {
+      "observed_at": "2026-08-10T23:19:30.387005Z",
+      "recommendation_uuid": "d15fef1b-efa9-45dc-85e8-75afa84bbcc7",
+      "revision_id": 21,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-10T23:19:32.902323Z",
+      "recommendation_uuid": "86634c88-235f-4d29-92fd-484a2778721d",
+      "revision_id": 22,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-10T23:19:35.146680Z",
+      "recommendation_uuid": "f4250ae0-ebce-46e7-809b-66c149d5a9a2",
+      "revision_id": 23,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-10T23:19:36.927856Z",
+      "recommendation_uuid": "d22864bb-aeb7-46dd-8c1a-0c78019d3259",
+      "revision_id": 24,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-10T23:19:39.235290Z",
+      "recommendation_uuid": "02beb24a-9b96-475a-b30e-1dd650eab992",
+      "revision_id": 25,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-10T23:19:41.554912Z",
+      "recommendation_uuid": "6ba4eea6-b566-4b22-a999-631f232eb63f",
+      "revision_id": 26,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-11T00:24:32.365409Z",
+      "recommendation_uuid": "f6753b8e-2e2d-4a0b-941f-6b9975cef40d",
+      "revision_id": 27,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-11T00:24:35.139222Z",
+      "recommendation_uuid": "b5787ed7-2145-4275-b24a-4e214fe941a3",
+      "revision_id": 28,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-11T00:24:37.737442Z",
+      "recommendation_uuid": "d5f52a60-51f3-4526-aa14-186ba377cb63",
+      "revision_id": 29,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-11T00:24:40.514586Z",
+      "recommendation_uuid": "8b1dbd92-52c1-4049-84e7-da4fe6468876",
+      "revision_id": 30,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-11T00:24:42.622019Z",
+      "recommendation_uuid": "42417adf-2fa0-4fcc-9bc7-6cacc43f88ee",
+      "revision_id": 31,
+      "status": "pending"
+    },
+    {
+      "observed_at": "2026-08-11T00:24:44.749926Z",
+      "recommendation_uuid": "ecb82845-11ed-4125-8202-a28f3871731c",
+      "revision_id": 32,
+      "status": "pending"
+    }
+  ],
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "schema_version": 1
+}

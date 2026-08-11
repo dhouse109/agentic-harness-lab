@@ -31,8 +31,10 @@ and lifecycle and recovery.
 - **Step 2A.05:** complete.
 - **Step 2A.06:** complete.
 - **Step 2A.07:** complete.
-- **Completed package:** `gate-2a-step07-langgraph-batch-runner-v1.0.5`.
-- **Next package:** `gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.0`.
+- **Step 2A.08:** complete.
+- **Completed package:** `gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.7`.
+- **Next package:** `gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.0`.
+Accepted Step 2A.08 batch evidence run: `evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e`
 Accepted Step 2A.07 construction evidence run: `evidence/gates/gate-2a/batch-runner/gate2a-step07-20260810T185629Z-00272cd1`
 Accepted Step 2A.06 evidence run: `evidence/gates/gate-2a/human-interrupt/gate2a-step06-20260810T162448Z-002692eb`
 Accepted Step 2A.05 evidence run: `evidence/gates/gate-2a/canonical-slice/gate2a-step05-20260810T140133Z-0025b888`

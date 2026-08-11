@@ -1,0 +1,17 @@
+{
+  "completed_before_stop": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "controlled_stop": true,
+  "gate2c_failure_injection": false,
+  "interrupt_count": 1,
+  "resume_at_sequence": 7,
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "schema_version": 1,
+  "thread_id": "langgraph-20260810T231915Z-0027cd3e"
+}

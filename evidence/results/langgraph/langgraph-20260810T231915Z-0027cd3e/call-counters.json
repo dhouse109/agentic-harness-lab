@@ -1,0 +1,10 @@
+{
+  "automatic_model_retries_configured": 0,
+  "find_images_needing_review": 1,
+  "get_image_context": 36,
+  "get_recommendation_status": 12,
+  "model_invocations_attempted": 12,
+  "model_invocations_succeeded": 12,
+  "semantic_retry_loop_performed": false,
+  "submit_recommendation": 12
+}

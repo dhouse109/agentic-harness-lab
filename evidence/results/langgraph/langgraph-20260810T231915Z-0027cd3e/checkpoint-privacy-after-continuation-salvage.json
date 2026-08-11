@@ -1,0 +1,19 @@
+{
+  "actual_prohibited_content_found": false,
+  "diagnosis": "privacy-report-self-match",
+  "midpoint_sqlite_privacy_scan_passed": true,
+  "original_exact_ephemeral_value_hits_empty": true,
+  "original_failed_pattern": "hidden_reasoning",
+  "original_failed_privacy_report_preserved": true,
+  "raw_evidence_scan_excluding_privacy_reports_passed": true,
+  "recorded_at": "2026-08-11T01:07:35.038554Z",
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "runtime_db_disposed_by_verified_recovery": true,
+  "runtime_db_rescan_limitation": "The verified failure-recovery path disposed the final SQLite runtime after recording its SHA-256; salvage therefore preserves that limitation rather than fabricating a rescan.",
+  "runtime_db_rescan_performed": false,
+  "runtime_db_sha256_before_disposal": "af3e9e4bcfc223730247c226fba2f4e8cf94ed64a44230590f81e2acc145c61c",
+  "salvage_is_model_free": true,
+  "scanner_repair": "checkpoint_privacy excludes its own checkpoint-privacy report files from evidence_bytes",
+  "schema_version": 1,
+  "status": "pass"
+}

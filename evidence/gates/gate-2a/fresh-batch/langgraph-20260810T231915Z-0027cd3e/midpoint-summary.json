@@ -1,0 +1,27 @@
+{
+  "before_state_sha256": "3840cbd70efc3b9912e51c3eac8275a276638411133bfa0099a6b26eec64d900",
+  "completed_before_stop": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "drupal_semantic_calls": {
+    "find_images_needing_review": 1,
+    "get_image_context": 18,
+    "get_recommendation_status": 6,
+    "submit_recommendation": 6
+  },
+  "gate2c_failure_injection": false,
+  "midpoint_state_sha256": "8adefa5d69c0f66e0b4a6aaa67b1b22743ef3f87e377051c39970872ba42bb98",
+  "model_calls_succeeded": 6,
+  "phase": "midpoint",
+  "result_path": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e",
+  "resume_at_sequence": 7,
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "schema_version": 1,
+  "snapshot_restored": false,
+  "status": "pass"
+}
