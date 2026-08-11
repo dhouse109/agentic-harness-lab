@@ -234,10 +234,20 @@ gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.7
 gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.4
 ```
 
+**Completed Step 2A.10 package:**
+
+```text
+gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.1
+```
+
+Gate 2A LangGraph freeze SHA-256: `a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0`
+
+Accepted Step 2A.10 certification evidence: `evidence/gates/gate-2a/certification/gate2a-step10-20260811T034835Z-03f93652`
+
 **Next package:**
 
 ```text
-gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.0
+gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0
 ```
 
 Accepted Step 2A.09 evidence synthesis: `evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f`
@@ -270,7 +280,7 @@ Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b897
 - [x] Step 2A.07 — LangGraph batch runner
 - [x] Step 2A.08 — LangGraph fresh batch and continuation
 - [x] Step 2A.09 — LangGraph evidence, claims, and matrix
-- [ ] Step 2A.10 — LangGraph certification, freeze, and CrewAI handoff
+- [x] Step 2A.10 — LangGraph certification, freeze, and CrewAI handoff
 
 Step 2A.01 makes zero model calls and performs zero Drupal mutation. The accepted 2A.08 batch is designed to be the certification candidate; Step 2A.10 promotes it model-free by default rather than silently running a second 12-call batch.
 

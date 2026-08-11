@@ -23,7 +23,7 @@ and lifecycle and recovery.
 - **Step 1.05:** complete.
 - **Step 1.06:** complete.
 - **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
-- **Gate 2:** in progress; Gate 2A LangGraph is current.
+- **Gate 2:** in progress; Gate 2A LangGraph is certified and frozen; Gate 2B CrewAI is next.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
 - **Step 2A.03:** complete.
@@ -33,8 +33,11 @@ and lifecycle and recovery.
 - **Step 2A.07:** complete.
 - **Step 2A.08:** complete.
 - **Step 2A.09:** complete.
-- **Completed package:** `gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.4`.
-- **Next package:** `gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.0`.
+- **Step 2A.10:** complete; Gate 2A LangGraph is certified and frozen.
+- **Completed package:** `gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.1`.
+- **Gate 2A freeze:** `shared/contracts/GATE2A-LANGGRAPH-FREEZE.json` (`a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0`).
+- **Next package:** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
+Accepted Step 2A.10 certification evidence: `evidence/gates/gate-2a/certification/gate2a-step10-20260811T034835Z-03f93652`
 Accepted Step 2A.09 evidence synthesis: `evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f`
 Accepted Step 2A.08 batch evidence run: `evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e`
 Accepted Step 2A.07 construction evidence run: `evidence/gates/gate-2a/batch-runner/gate2a-step07-20260810T185629Z-00272cd1`
