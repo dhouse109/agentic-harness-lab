@@ -1,0 +1,31 @@
+{
+  "accepted_step08_run": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e",
+  "crewai_rows_changed": false,
+  "cross_framework_claims_promoted": [],
+  "drupal_mutations": 0,
+  "drupal_semantic_calls": 0,
+  "gate2c_failure_injection": false,
+  "human_review_actions": 0,
+  "langgraph_claims_left_hypothesis": [
+    "CLM-LG-001",
+    "CLM-LG-003"
+  ],
+  "model_provider_calls": 0,
+  "next_package": "gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.0",
+  "observed_langgraph_claims": [
+    "CLM-LG-008"
+  ],
+  "package": "gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.4",
+  "predecessor_merge_sha": "28e8e93fc7805449debbb1df3336bf06e3959e7c",
+  "run_id": "gate2a-step09-20260811T025248Z-7e9c1f5f",
+  "schema_version": 1,
+  "status": "pass",
+  "step08_failure_salvage_lineage_preserved": true,
+  "verified_langgraph_claims": [
+    "CLM-LG-002",
+    "CLM-LG-004",
+    "CLM-LG-005",
+    "CLM-LG-006",
+    "CLM-LG-007"
+  ]
+}

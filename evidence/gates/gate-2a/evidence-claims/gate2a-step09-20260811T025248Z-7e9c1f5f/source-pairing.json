@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "official": true,
+      "retrieved": "2026-08-10",
+      "source_id": "SRC-LG-001",
+      "url": "https://docs.langchain.com/oss/python/langgraph/persistence"
+    },
+    {
+      "official": true,
+      "retrieved": "2026-08-10",
+      "source_id": "SRC-LG-002",
+      "url": "https://docs.langchain.com/oss/python/langgraph/interrupts"
+    },
+    {
+      "official": true,
+      "retrieved": "2026-08-10",
+      "source_id": "SRC-LG-003",
+      "url": "https://docs.langchain.com/oss/python/langchain/tools"
+    },
+    {
+      "official": true,
+      "retrieved": "2026-08-04",
+      "source_id": "SRC-S16-004",
+      "url": "https://docs.langchain.com/oss/python/integrations/chat/openai"
+    }
+  ]
+}

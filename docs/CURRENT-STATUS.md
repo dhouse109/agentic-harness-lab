@@ -21,8 +21,10 @@
 - **Step 2A.06:** complete.
 - **Step 2A.07:** complete.
 - **Step 2A.08:** complete.
-- **Completed package:** `gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.7`.
-- **Next package:** `gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.0`.
+- **Step 2A.09:** complete.
+- **Completed package:** `gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.4`.
+- **Next package:** `gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.0`.
+Accepted Step 2A.09 evidence synthesis: `evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f`
 Accepted Step 2A.08 batch evidence run: `evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e`
 Accepted Step 2A.07 construction evidence run: `evidence/gates/gate-2a/batch-runner/gate2a-step07-20260810T185629Z-00272cd1`
 Accepted Step 2A.06 evidence run: `evidence/gates/gate-2a/human-interrupt/gate2a-step06-20260810T162448Z-002692eb`
@@ -193,4 +195,4 @@ A new planning or implementation session should read these files in order:
 11. `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json`
 
 Do not reopen Gate 0.5 or Gate 1 unless an audit fails or a frozen contract is intentionally changed.
-Use `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md` together with `docs/gates/GATE-2-STRUCTURE.md`, `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`, and `docs/gates/GATE-2A-STEP02-LANGGRAPH-RUNTIME-PROBE.md`. Step 2A.01 through Step 2A.08 are complete. Step 2A.09 is next but remains locked until Step 2A.08 is committed and merged, local `main` is resynchronized, and the post-merge audit passes.
+Use `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md` together with `docs/gates/GATE-2-STRUCTURE.md`, `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`, and `docs/gates/GATE-2A-STEP02-LANGGRAPH-RUNTIME-PROBE.md`. Step 2A.01 through Step 2A.09 are complete. Step 2A.10 is next but remains locked until Step 2A.09 is committed and merged, local `main` is resynchronized, and the post-merge audit passes.

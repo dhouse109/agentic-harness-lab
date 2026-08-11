@@ -1,0 +1,21 @@
+{
+  "accepted_step08_run_changed": false,
+  "claim_semantics_changed": false,
+  "drupal_mutations": 0,
+  "drupal_semantic_calls": 0,
+  "gate2c_failure_injection": false,
+  "human_review_actions": 0,
+  "lifecycle_after": "Step 2A.01 through Step 2A.09",
+  "lifecycle_variant_before": "canonical-spaced",
+  "matrix_semantics_changed": false,
+  "model_provider_calls": 0,
+  "package": "gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.4",
+  "reason": "normalize Step 2A.09 lifecycle wording after v1.0.3 exact-match preview was too brittle",
+  "repaired_file": "docs/CURRENT-STATUS.md",
+  "run_id": "gate2a-step09-20260811T025248Z-7e9c1f5f",
+  "schema_version": 1,
+  "source_pairings_changed": false,
+  "status": "pass",
+  "supersedes": "gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.2",
+  "v1_0_3_preview_installed": false
+}
