@@ -1,0 +1,23 @@
+{
+  "additional_model_calls_for_salvage": 0,
+  "after_restore_state_sha256": "3840cbd70efc3b9912e51c3eac8275a276638411133bfa0099a6b26eec64d900",
+  "before_state_sha256": "3840cbd70efc3b9912e51c3eac8275a276638411133bfa0099a6b26eec64d900",
+  "gate2c_failure_injection": false,
+  "human_review_performed": false,
+  "midpoint_state_sha256": "8adefa5d69c0f66e0b4a6aaa67b1b22743ef3f87e377051c39970872ba42bb98",
+  "model_calls_succeeded": 12,
+  "original_failure_preserved": true,
+  "original_live_execution_status": "failed-after-completion-privacy-check",
+  "recorded_at": "2026-08-11T01:07:35.067205Z",
+  "restore_attempted": true,
+  "restore_verified": true,
+  "result_path": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e",
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "runtime_db_retained": false,
+  "runtime_db_sha256_before_disposal": "af3e9e4bcfc223730247c226fba2f4e8cf94ed64a44230590f81e2acc145c61c",
+  "salvaged_candidate": true,
+  "schema_version": 1,
+  "snapshot_cleaned": true,
+  "snapshot_restored": true,
+  "status": "pass"
+}

@@ -1,0 +1,403 @@
+{
+  "recommendations": [
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+        "proposed_alt_text": "Solid navy background with a large white number 1 composed of square blocks, labeled as Phase 0 primary image for emergency preparedness, with text indicating Article 1 and Slot 1.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+          "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+          "revision_id": 1,
+          "schema_version": 1,
+          "sequence": 1,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 1,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:5130b33a93bb73f9c39046a37bd88fd880ff23a4003dbcb1428d55e92114052f",
+        "proposed_alt_text": "White block-style number 2 centered on a solid teal background with text labels reading 'PHASE 0 - SUPPORTING IMAGE' at top left, 'COMMUNITY GRANTS' at bottom left, and 'SLOT 2' at bottom right.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 1,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4",
+          "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+          "revision_id": 2,
+          "schema_version": 1,
+          "sequence": 2,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 2,
+      "target": {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4",
+        "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+        "revision_id": 2,
+        "schema_version": 1,
+        "sequence": 2,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:46cb78c572a473e3a992936f5b19b8248029cc2c80fccf461f60908f48fa95d3",
+        "proposed_alt_text": "White pixelated number 3 centered on a solid maroon background with text labels reading 'PHASE 0 - PRIMARY IMAGE' at top left, 'ACCESSIBLE PUBLIC MEETINGS' at bottom left, and 'SLOT 1' at bottom right.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3",
+          "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+          "revision_id": 3,
+          "schema_version": 1,
+          "sequence": 3,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 3,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3",
+        "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+        "revision_id": 3,
+        "schema_version": 1,
+        "sequence": 3,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:31cf84f841262e8107735ed95c2e8b81e32849dc27091beeeadcc1330dda280c",
+        "proposed_alt_text": "Solid olive background with a large white number 4 composed of square blocks, labeled as Phase 0 Primary Image, with text Water Quality Monitoring and Slot 1 in corners.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "4c2bacbf-1a18-5b91-95b6-04be3911e035",
+          "node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+          "revision_id": 4,
+          "schema_version": 1,
+          "sequence": 4,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 4,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "4c2bacbf-1a18-5b91-95b6-04be3911e035",
+        "node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+        "revision_id": 4,
+        "schema_version": 1,
+        "sequence": 4,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:7a1a73b053bb50d213b1d9c7c45ec213a4b6d6b6b23aaa7dd1690cb9d7429323",
+        "proposed_alt_text": "White block-style number 5 centered on a solid purple background with white text labels reading 'PHASE 0 - PRIMARY IMAGE' at top left, 'EXPORT ASSISTANCE' at bottom left, and 'SLOT 1' at bottom right, framed by a thin white border.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "a5b69415-6c44-5263-adb0-ac7270f6c19f",
+          "node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+          "revision_id": 5,
+          "schema_version": 1,
+          "sequence": 5,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 5,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "a5b69415-6c44-5263-adb0-ac7270f6c19f",
+        "node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+        "revision_id": 5,
+        "schema_version": 1,
+        "sequence": 5,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:839ef14d787b37ab412f3255de215c23f8cd0a8669b1b021c4771b2cbdfcd3cf",
+        "proposed_alt_text": "White block-style number 6 centered on a solid blue background with text labels reading 'PHASE 0 - SUPPORTING IMAGE' at top left, 'ROAD MAINTENANCE' at bottom left, and 'SLOT 2' at bottom right.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 1,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+          "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+          "revision_id": 6,
+          "schema_version": 1,
+          "sequence": 6,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 6,
+      "target": {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+        "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+        "revision_id": 6,
+        "schema_version": 1,
+        "sequence": 6,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:77fa032aefcd5c827010a70c0be098f7fbc76e9124f99d077da48a9dbd72c2e2",
+        "proposed_alt_text": "Rust-colored background with a large white pixelated number 7 in the center, labeled as Phase 0 primary image, with text 'Records Retention' at bottom left and 'Slot 1' at bottom right.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "e7f2552b-adcc-5864-9331-4da0dfe829e0",
+          "node_uuid": "36ab6f42-32b8-57ae-919f-aad69ff1de69",
+          "revision_id": 7,
+          "schema_version": 1,
+          "sequence": 7,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 7,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "e7f2552b-adcc-5864-9331-4da0dfe829e0",
+        "node_uuid": "36ab6f42-32b8-57ae-919f-aad69ff1de69",
+        "revision_id": 7,
+        "schema_version": 1,
+        "sequence": 7,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:d6e23c41ca3535bd3d20f26f650370751cee9b8790759eb91ce56885bc1b7c51",
+        "proposed_alt_text": "White pixelated number 8 centered on a solid green background with text labels reading 'PHASE 0 - SUPPORTING IMAGE' at top, 'LIBRARY TECHNOLOGY' at bottom left, and 'SLOT 2' at bottom right.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 1,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "55375469-e22b-5b16-b667-46347039f610",
+          "node_uuid": "4a58d6c1-64d1-5d01-b6e2-518b7622aac6",
+          "revision_id": 8,
+          "schema_version": 1,
+          "sequence": 8,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 8,
+      "target": {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "55375469-e22b-5b16-b667-46347039f610",
+        "node_uuid": "4a58d6c1-64d1-5d01-b6e2-518b7622aac6",
+        "revision_id": 8,
+        "schema_version": 1,
+        "sequence": 8,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:8c678ab0d4ffd029d173c4eaca1ae2ba0928ad3dda60c4baebf236ba4b781727",
+        "proposed_alt_text": "A digital display with a large white number 9 made of square blocks on a slate blue background, labeled 'PHASE 0 - PRIMARY IMAGE' at top left, 'WORKFORCE TRAINING' at bottom left, and 'SLOT 1' at bottom right.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 0,
+          "existing_alt": "",
+          "field_name": "field_image",
+          "file_uuid": "0edde8a1-266b-5fc2-b61c-71ac41ae35cf",
+          "node_uuid": "3fb5d79e-a5e7-5d92-84d0-797018ec34b4",
+          "revision_id": 9,
+          "schema_version": 1,
+          "sequence": 9,
+          "target_state": "missing"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 9,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "0edde8a1-266b-5fc2-b61c-71ac41ae35cf",
+        "node_uuid": "3fb5d79e-a5e7-5d92-84d0-797018ec34b4",
+        "revision_id": 9,
+        "schema_version": 1,
+        "sequence": 9,
+        "target_state": "missing"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:5d1da07cb1a0d58de9227a3fd5395038f49f6298a324f46e6fe09a9d892856c8",
+        "proposed_alt_text": "White pixelated number 10 on a solid indigo background with text labels reading Phase 0 Supporting Image, Recycling Instructions, and Slot 2, illustrating a fictional municipal recycling instructions article.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 1,
+          "existing_alt": "image.jpg",
+          "field_name": "field_image",
+          "file_uuid": "86301d0c-54cf-5389-be0e-7f070abf6a61",
+          "node_uuid": "e574f0bf-40dc-539a-93c3-0750b1bbfd94",
+          "revision_id": 10,
+          "schema_version": 1,
+          "sequence": 10,
+          "target_state": "poor"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 10,
+      "target": {
+        "delta": 1,
+        "existing_alt": "image.jpg",
+        "field_name": "field_image",
+        "file_uuid": "86301d0c-54cf-5389-be0e-7f070abf6a61",
+        "node_uuid": "e574f0bf-40dc-539a-93c3-0750b1bbfd94",
+        "revision_id": 10,
+        "schema_version": 1,
+        "sequence": 10,
+        "target_state": "poor"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:1eb535c21f53fd02d7a5e467b0e121529ffb41a40ebc6d1349e07fa88acf1ef9",
+        "proposed_alt_text": "White pixelated number 11 centered on a solid navy background with labels reading PHASE 0 - PRIMARY IMAGE, BROADBAND ACCESS, and SLOT 1 in a simple digital font.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 0,
+          "existing_alt": "photo",
+          "field_name": "field_image",
+          "file_uuid": "96c76d54-cd3b-55b2-9fa5-ea817732ff8c",
+          "node_uuid": "dcbc6fff-fd8f-51ec-9b28-5ccaf043de3c",
+          "revision_id": 11,
+          "schema_version": 1,
+          "sequence": 11,
+          "target_state": "poor"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 11,
+      "target": {
+        "delta": 0,
+        "existing_alt": "photo",
+        "field_name": "field_image",
+        "file_uuid": "96c76d54-cd3b-55b2-9fa5-ea817732ff8c",
+        "node_uuid": "dcbc6fff-fd8f-51ec-9b28-5ccaf043de3c",
+        "revision_id": 11,
+        "schema_version": 1,
+        "sequence": 11,
+        "target_state": "poor"
+      }
+    },
+    {
+      "recommendation": {
+        "evidence_hash": "sha256:64c9c2865ee03fdbb85af991fd0ff66db6268a08274831d1710ef609a5d016f4",
+        "proposed_alt_text": "Teal background with a large white block-style number 12 in the center, labeled as a supporting image for Phase 0 park improvements, with text indicating slot 2.",
+        "run_id": "langgraph-20260810T231915Z-0027cd3e",
+        "schema_version": 1,
+        "source_framework": "langgraph",
+        "target": {
+          "delta": 1,
+          "existing_alt": "phase0-article-12-image-2.png",
+          "field_name": "field_image",
+          "file_uuid": "891be849-b0d8-5d3a-961c-05921b70e274",
+          "node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+          "revision_id": 12,
+          "schema_version": 1,
+          "sequence": 12,
+          "target_state": "poor"
+        },
+        "validator_version": "gate05-validator-1.0.0"
+      },
+      "sequence": 12,
+      "target": {
+        "delta": 1,
+        "existing_alt": "phase0-article-12-image-2.png",
+        "field_name": "field_image",
+        "file_uuid": "891be849-b0d8-5d3a-961c-05921b70e274",
+        "node_uuid": "96a45697-b1d9-5a0f-ad73-8ffd1ff29ea6",
+        "revision_id": 12,
+        "schema_version": 1,
+        "sequence": 12,
+        "target_state": "poor"
+      }
+    }
+  ],
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "schema_version": 1,
+  "source_framework": "langgraph"
+}

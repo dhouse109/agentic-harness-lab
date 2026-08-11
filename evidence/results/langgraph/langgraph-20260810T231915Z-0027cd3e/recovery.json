@@ -1,0 +1,28 @@
+{
+  "completed_after_resume": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "completed_before_stop": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "controlled_stop_after_sequence": 6,
+  "duplicate_count": 0,
+  "gate2c_failure_injection_fired": false,
+  "interrupted_at": "2026-08-10T23:19:41.707953Z",
+  "resume_at_sequence": 7,
+  "resumed_at": "2026-08-11T00:24:28.773076Z",
+  "resumed_with_run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "schema_version": 1,
+  "source_framework": "langgraph"
+}

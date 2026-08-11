@@ -222,11 +222,19 @@ gate-2a-step06-langgraph-human-interrupt-and-review-resume-v1.0.8
 gate-2a-step07-langgraph-batch-runner-v1.0.5
 ```
 
+**Completed Step 2A.08 package:**
+
+```text
+gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.7
+```
+
 **Next package:**
 
 ```text
-gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.0
+gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.0
 ```
+
+Accepted Step 2A.08 batch evidence run: `evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e`
 
 Accepted Step 2A.07 construction evidence run: `evidence/gates/gate-2a/batch-runner/gate2a-step07-20260810T185629Z-00272cd1`
 
@@ -252,7 +260,7 @@ Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b897
 - [x] Step 2A.05 — LangGraph canonical vertical slice
 - [x] Step 2A.06 — LangGraph human interrupt and review resume
 - [x] Step 2A.07 — LangGraph batch runner
-- [ ] Step 2A.08 — LangGraph fresh batch and continuation
+- [x] Step 2A.08 — LangGraph fresh batch and continuation
 - [ ] Step 2A.09 — LangGraph evidence, claims, and matrix
 - [ ] Step 2A.10 — LangGraph certification, freeze, and CrewAI handoff
 

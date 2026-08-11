@@ -1,0 +1,230 @@
+{
+  "checkpoint_backend": "sqlite",
+  "completed_at": null,
+  "completed_target_identities": [
+    {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    {
+      "delta": 1,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4",
+      "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+      "revision_id": 2,
+      "schema_version": 1,
+      "sequence": 2,
+      "target_state": "missing"
+    },
+    {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3",
+      "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+      "revision_id": 3,
+      "schema_version": 1,
+      "sequence": 3,
+      "target_state": "missing"
+    },
+    {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "4c2bacbf-1a18-5b91-95b6-04be3911e035",
+      "node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+      "revision_id": 4,
+      "schema_version": 1,
+      "sequence": 4,
+      "target_state": "missing"
+    },
+    {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "a5b69415-6c44-5263-adb0-ac7270f6c19f",
+      "node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+      "revision_id": 5,
+      "schema_version": 1,
+      "sequence": 5,
+      "target_state": "missing"
+    },
+    {
+      "delta": 1,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+      "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+      "revision_id": 6,
+      "schema_version": 1,
+      "sequence": 6,
+      "target_state": "missing"
+    }
+  ],
+  "continuation_boundary_armed": true,
+  "continuation_boundary_reached": true,
+  "framework_origin": "langgraph",
+  "gate2c_failure_injection_fired": false,
+  "interrupted_at": "2026-08-10T23:19:41.707953Z",
+  "model_id": "gpt-4.1-mini-2025-04-14",
+  "next_target_index": 6,
+  "prompt_version": "langgraph-alt-text-v1.0.0",
+  "recommendation_ids": [
+    {
+      "node_id": 21,
+      "revision_id": 21,
+      "sequence": 1,
+      "uuid": "d15fef1b-efa9-45dc-85e8-75afa84bbcc7"
+    },
+    {
+      "node_id": 22,
+      "revision_id": 22,
+      "sequence": 2,
+      "uuid": "86634c88-235f-4d29-92fd-484a2778721d"
+    },
+    {
+      "node_id": 23,
+      "revision_id": 23,
+      "sequence": 3,
+      "uuid": "f4250ae0-ebce-46e7-809b-66c149d5a9a2"
+    },
+    {
+      "node_id": 24,
+      "revision_id": 24,
+      "sequence": 4,
+      "uuid": "d22864bb-aeb7-46dd-8c1a-0c78019d3259"
+    },
+    {
+      "node_id": 25,
+      "revision_id": 25,
+      "sequence": 5,
+      "uuid": "02beb24a-9b96-475a-b30e-1dd650eab992"
+    },
+    {
+      "node_id": 26,
+      "revision_id": 26,
+      "sequence": 6,
+      "uuid": "6ba4eea6-b566-4b22-a999-631f232eb63f"
+    }
+  ],
+  "resumed_at": null,
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "schema_version": 1,
+  "started_at": "2026-08-10T23:19:25.829609Z",
+  "status": "interrupted",
+  "target_sequence_hash": "sha256:1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "thread_id": "langgraph-20260810T231915Z-0027cd3e",
+  "updated_at": "2026-08-10T23:19:41.707953Z",
+  "validation_results": [
+    {
+      "deterministic_validation_passed": true,
+      "errors": [],
+      "sequence": 1,
+      "structured_output_schema_valid": true,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+        "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+        "revision_id": 1,
+        "schema_version": 1,
+        "sequence": 1,
+        "target_state": "missing"
+      }
+    },
+    {
+      "deterministic_validation_passed": true,
+      "errors": [],
+      "sequence": 2,
+      "structured_output_schema_valid": true,
+      "target": {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "b630423d-c3d0-5542-a5a9-418da3472af4",
+        "node_uuid": "29f7a107-5567-5f64-b183-99ba0f7d2725",
+        "revision_id": 2,
+        "schema_version": 1,
+        "sequence": 2,
+        "target_state": "missing"
+      }
+    },
+    {
+      "deterministic_validation_passed": true,
+      "errors": [],
+      "sequence": 3,
+      "structured_output_schema_valid": true,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "e5beebf7-66d1-5f7c-aa1f-899721995bb3",
+        "node_uuid": "016f6faa-c1e9-56e2-885f-696d733e52ad",
+        "revision_id": 3,
+        "schema_version": 1,
+        "sequence": 3,
+        "target_state": "missing"
+      }
+    },
+    {
+      "deterministic_validation_passed": true,
+      "errors": [],
+      "sequence": 4,
+      "structured_output_schema_valid": true,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "4c2bacbf-1a18-5b91-95b6-04be3911e035",
+        "node_uuid": "cbcc3dce-3144-5bd0-9298-67b518d28385",
+        "revision_id": 4,
+        "schema_version": 1,
+        "sequence": 4,
+        "target_state": "missing"
+      }
+    },
+    {
+      "deterministic_validation_passed": true,
+      "errors": [],
+      "sequence": 5,
+      "structured_output_schema_valid": true,
+      "target": {
+        "delta": 0,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "a5b69415-6c44-5263-adb0-ac7270f6c19f",
+        "node_uuid": "1b46f678-3e78-5ed8-bfbc-63770cb9c8ab",
+        "revision_id": 5,
+        "schema_version": 1,
+        "sequence": 5,
+        "target_state": "missing"
+      }
+    },
+    {
+      "deterministic_validation_passed": true,
+      "errors": [],
+      "sequence": 6,
+      "structured_output_schema_valid": true,
+      "target": {
+        "delta": 1,
+        "existing_alt": "",
+        "field_name": "field_image",
+        "file_uuid": "0171ad59-3343-5307-a429-d1750f3b81e3",
+        "node_uuid": "fa9fc047-8c71-5e5f-a5ad-5272d0ecc6ae",
+        "revision_id": 6,
+        "schema_version": 1,
+        "sequence": 6,
+        "target_state": "missing"
+      }
+    }
+  ]
+}

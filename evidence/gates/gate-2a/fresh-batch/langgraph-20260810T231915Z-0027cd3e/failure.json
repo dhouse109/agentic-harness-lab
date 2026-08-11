@@ -1,0 +1,17 @@
+{
+  "message": "Live resume core exited nonzero.",
+  "model_or_semantic_retry_authorized": false,
+  "phase": "resume",
+  "recovery_control_retained": false,
+  "restore_attempted": true,
+  "restore_verified": true,
+  "result_path": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e",
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "runtime_db_retained": false,
+  "runtime_db_sha256_before_disposal": "af3e9e4bcfc223730247c226fba2f4e8cf94ed64a44230590f81e2acc145c61c",
+  "schema_version": 1,
+  "snapshot_cleaned": true,
+  "snapshot_name": "gate2a-step08-pre-20260810T231915Z-0027cd3e",
+  "status": "failed",
+  "trigger_exit_code": 1
+}

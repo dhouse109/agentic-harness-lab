@@ -1,0 +1,22 @@
+{
+  "additional_model_calls_attempted": 0,
+  "additional_model_calls_succeeded": 0,
+  "additional_step2a08_semantic_calls": 0,
+  "core_batch_runner_changed": false,
+  "experiment_semantics_changed": false,
+  "gate1_restored_state_audit_after_final_restore_required": true,
+  "gate1_restored_state_audit_before_certification_required": true,
+  "gate1_restored_state_audit_before_start_required": true,
+  "generic_preflight_lifecycle_neutral": true,
+  "midpoint_preserved": true,
+  "midpoint_state_sha256": "8adefa5d69c0f66e0b4a6aaa67b1b22743ef3f87e377051c39970872ba42bb98",
+  "recorded_at": "2026-08-11T00:21:00.260904Z",
+  "repair_package": "gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.5",
+  "result_path": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e",
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "schema_version": 1,
+  "status": "pass",
+  "superseded_active_package": "gate-2a-step08-langgraph-fresh-batch-and-continuation-v1.0.4",
+  "trigger": "v1.0.4 model-free generic preflight still invoked state-sensitive Gate 1 restored-state audit at intentional midpoint",
+  "trigger_observed_during_model_free_midpoint_inspection": true
+}

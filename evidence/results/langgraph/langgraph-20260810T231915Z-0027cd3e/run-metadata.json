@@ -1,0 +1,18 @@
+{
+  "automatic_model_retries": 0,
+  "controlled_stop_after_sequence": 6,
+  "framework_origin": "langgraph",
+  "gate2c_failure_injection": false,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "prompt_version": "langgraph-alt-text-v1.0.0",
+  "provider": "OpenAI",
+  "resume_at_sequence": 7,
+  "run_id": "langgraph-20260810T231915Z-0027cd3e",
+  "schema_version": 1,
+  "semantic_retry_loop": false,
+  "started_at": "2026-08-10T23:19:25.829609Z",
+  "target_count": 12,
+  "temperature": 0.0,
+  "thread_id": "langgraph-20260810T231915Z-0027cd3e",
+  "validator_version": "gate05-validator-1.0.0"
+}

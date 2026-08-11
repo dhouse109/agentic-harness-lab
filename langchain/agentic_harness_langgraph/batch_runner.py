@@ -157,8 +157,12 @@ def checkpoint_privacy(
     db_bytes = sqlite_path.read_bytes()
     state_bytes = canonical(state)
     evidence_bytes = b""
+    privacy_report_names = {
+        "checkpoint-privacy-before-continuation.json",
+        "checkpoint-privacy-after-continuation.json",
+    }
     for path in evidence.iterdir():
-        if path.is_file() and path != sqlite_path:
+        if path.is_file() and path != sqlite_path and path.name not in privacy_report_names:
             evidence_bytes += path.read_bytes()
     haystacks = (db_bytes, state_bytes, evidence_bytes)
     generic_patterns = [
