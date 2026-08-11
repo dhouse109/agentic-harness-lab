@@ -1,0 +1,95 @@
+{
+  "accepted_batch_run": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e",
+  "automatic_model_retries": 0,
+  "automatic_publication": "prohibited",
+  "certification_run_id": "gate2a-step10-20260811T034835Z-03f93652",
+  "checkpoint_backend": "sqlite",
+  "controlled_continuation": {
+    "after_sequence": 6,
+    "before_sequence": 7,
+    "reprocessed_prior_targets": 0,
+    "same_run_thread": true
+  },
+  "cross_framework_claims_promoted": [],
+  "drupal_snapshot_restore_verified": true,
+  "drupal_state_after_restore_sha256": "3840cbd70efc3b9912e51c3eac8275a276638411133bfa0099a6b26eec64d900",
+  "drupal_state_before_run_sha256": "3840cbd70efc3b9912e51c3eac8275a276638411133bfa0099a6b26eec64d900",
+  "duplicate_recommendation_count": 0,
+  "framework": "langgraph",
+  "gate05_freeze_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+  "gate1_freeze_sha256": "2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd",
+  "gate2a_batch_contract_sha256": "1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b",
+  "human_review_lineage": {
+    "action": "edit-and-approve",
+    "reviewer": "editor_dana",
+    "same_run_thread_resumed": true,
+    "step06_run": "evidence/gates/gate-2a/human-interrupt/gate2a-step06-20260810T162448Z-002692eb"
+  },
+  "hypothesis_claims": [
+    "CLM-LG-001",
+    "CLM-LG-003"
+  ],
+  "model": "gpt-4.1-mini-2025-04-14",
+  "model_call_total_gate2a": 13,
+  "non_claims": [
+    "production readiness",
+    "accessibility quality of every generated alt text",
+    "autonomous publication safety",
+    "shared injected-failure recovery",
+    "superiority over Drupal AI or CrewAI",
+    "cost/speed/token efficiency",
+    "general security beyond tested boundaries"
+  ],
+  "observed_claims": [
+    "CLM-LG-008"
+  ],
+  "predecessor_evidence": {
+    "step02_runtime_probe": "evidence/gates/gate-2a/runtime-probe/gate2a-step02-20260809T224238Z-2361786",
+    "step03_compliance": "evidence/gates/gate-2a/tool-adapters/gate2a-step03-verification-20260810T020210Z-2410520",
+    "step03_tool_adapters": "evidence/gates/gate-2a/tool-adapters/gate2a-step03-20260809T233127Z-2375581",
+    "step04_checkpoint_proof": "evidence/gates/gate-2a/checkpoint-proof/gate2a-step04-20260810T034027Z-00250b07",
+    "step05_canonical_slice": "evidence/gates/gate-2a/canonical-slice/gate2a-step05-20260810T140133Z-0025b888",
+    "step06_human_interrupt": "evidence/gates/gate-2a/human-interrupt/gate2a-step06-20260810T162448Z-002692eb",
+    "step07_batch_runner": "evidence/gates/gate-2a/batch-runner/gate2a-step07-20260810T185629Z-00272cd1",
+    "step08_batch": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e",
+    "step09_claims_synthesis": "evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f"
+  },
+  "privacy_lineage": {
+    "actual_prohibited_content_found": false,
+    "original_step08_failure_preserved": true,
+    "salvage_diagnosis": "privacy-report-self-match"
+  },
+  "provider": "OpenAI",
+  "recommendation_count": 12,
+  "review_destination": "alt_text_suggestion",
+  "runtime_versions": {
+    "langchain": "1.3.14",
+    "langgraph": "1.2.10",
+    "python": "3.12.13",
+    "sqlite_checkpointer": "3.1.1"
+  },
+  "schema_version": 1,
+  "semantic_retry_loop": false,
+  "shared_process_failure_recovery_claimed": false,
+  "source_article_mutation": "prohibited",
+  "source_framework": "langgraph",
+  "status": "certified",
+  "step08_model_calls": 12,
+  "step09_synthesis_run": "evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f",
+  "step10_drupal_mutations": 0,
+  "step10_drupal_semantic_calls": 0,
+  "step10_gate2c_failure_injection": false,
+  "step10_human_review_actions": 0,
+  "step10_model_provider_calls": 0,
+  "target_count": 12,
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "temperature": 0.0,
+  "validator_version": "gate05-validator-1.0.0",
+  "verified_claims": [
+    "CLM-LG-002",
+    "CLM-LG-004",
+    "CLM-LG-005",
+    "CLM-LG-006",
+    "CLM-LG-007"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "certification_candidate": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e",
+  "certification_run_id": "gate2a-step10-20260811T034835Z-03f93652",
+  "gate2a_freeze_sha256": "a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0",
+  "gate2c_failure_recovery_exercised": false,
+  "model_free_promotion": true,
+  "predecessor_evidence_verified": true,
+  "result": "certified",
+  "schema_version": 1,
+  "second_batch_run": false,
+  "step09_synthesis": "evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f"
+}

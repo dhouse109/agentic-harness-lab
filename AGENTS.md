@@ -198,9 +198,15 @@ Gate 1 Drupal AI is complete and frozen at `2af9870aed1ea2ce15cf16f848cc1eb41573
 
 **Step 2A.09:** complete.
 
-**Completed package:** `gate-2a-step09-langgraph-evidence-claims-and-matrix-v1.0.4`.
+**Step 2A.10:** complete; Gate 2A LangGraph is certified and frozen.
 
-**Next package:** `gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.0`.
+**Completed package:** `gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.1`.
+
+**Gate 2A freeze:** `shared/contracts/GATE2A-LANGGRAPH-FREEZE.json` (`a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0`).
+
+**Next package:** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
+
+Accepted Step 2A.10 certification evidence: `evidence/gates/gate-2a/certification/gate2a-step10-20260811T034835Z-03f93652`
 
 Accepted Step 2A.09 evidence synthesis: `evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f`
 
@@ -219,7 +225,7 @@ Accepted Step 2A.03 compliance verification: `gate2a-step03-verification-2026081
 
 Read `docs/gates/GATE-2-STRUCTURE.md`, `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`, `docs/CODEX-GATE-2A-RUNBOOK.md`, `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md`, the Gate 1 freeze manifest, and accepted Step 1.07 evidence. Preserve the frozen dataset, model/settings, shared operations, validator, review destination, source-mutation rule, and later shared failure point. Do not infer LangGraph behavior from Drupal AI evidence.
 
-Do not generate or execute Step 2A.10 until Step 2A.09 is committed, merged, local `main` is resynchronized, and the post-merge audit passes.
+Do not generate or execute Gate 2B Step 2B.01 until Step 2A.10 is committed, merged, local `main` is resynchronized, and the post-merge audit passes.
 
 Accepted Step 2A.02 evidence run: `gate2a-step02-20260809T224238Z-2361786`
 Accepted runtime ADR: `docs/decisions/ADR-0010-langgraph-runtime-and-checkpoint-path.md`

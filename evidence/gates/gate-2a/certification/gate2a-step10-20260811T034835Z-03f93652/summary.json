@@ -1,0 +1,19 @@
+{
+  "accepted_step08_run": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e",
+  "drupal_mutations": 0,
+  "drupal_semantic_calls": 0,
+  "gate2a_freeze_sha256": "a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0",
+  "gate2c_failure_injection": false,
+  "human_review_actions": 0,
+  "model_provider_calls": 0,
+  "next_package": "gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0",
+  "package": "gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.1",
+  "predecessor_evidence_verified": true,
+  "predecessor_merge_sha": "f3daab20509c72aebf8536bcb7742f1a3e9f504f",
+  "run_id": "gate2a-step10-20260811T034835Z-03f93652",
+  "schema_version": 1,
+  "second_certification_batch": false,
+  "status": "pass",
+  "step09_synthesis_run": "evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f",
+  "successful_gate2a_model_calls": 13
+}
