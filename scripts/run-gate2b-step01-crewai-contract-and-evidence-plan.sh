@@ -11,6 +11,7 @@ PYTHON="$REPO/crewai/.venv/bin/python"
 AUDITOR="$REPO/scripts/gate2b_step01_audit.py"
 EVIDENCE_ROOT="$REPO/evidence/gates/gate-2b/contract"
 EXPECTED_BASE="0477e882987501438ae07fbb51e741b4be800843"
+EXPECTED_FEATURE_COMMIT="62a50ac956fdebe2474c9cab0bf879aa451ae9dd"
 EXPECTED_BRANCH="gate-2b-step01-crewai-contract-and-evidence-plan"
 PACKAGE="gate-2b-step01-crewai-contract-and-evidence-plan"
 PACKAGE_VERSION="1.0.0"
@@ -21,14 +22,28 @@ fail() {
   exit 1
 }
 
-verify_repo() {
+verify_common() {
+  [[ -x "$PYTHON" ]] || fail "Missing locked audit Python: $PYTHON"
+  [[ -f "$AUDITOR" ]] || fail "Missing Step 2B.01 auditor"
+}
+
+verify_run_repo() {
   local branch head
   if ! branch="$(git -C "$REPO" branch --show-current)"; then fail "Unable to resolve branch"; fi
   if ! head="$(git -C "$REPO" rev-parse HEAD)"; then fail "Unable to resolve HEAD"; fi
   [[ "$branch" == "$EXPECTED_BRANCH" ]] || fail "Expected branch $EXPECTED_BRANCH"
   [[ "$head" == "$EXPECTED_BASE" ]] || fail "Expected uncommitted package work on base $EXPECTED_BASE"
-  [[ -x "$PYTHON" ]] || fail "Missing locked audit Python: $PYTHON"
-  [[ -f "$AUDITOR" ]] || fail "Missing Step 2B.01 auditor"
+}
+
+verify_audit_repo() {
+  local head
+  if ! head="$(git -C "$REPO" rev-parse HEAD)"; then fail "Unable to resolve HEAD"; fi
+  if ! git -C "$REPO" cat-file -e "${EXPECTED_FEATURE_COMMIT}^{commit}"; then
+    fail "Required Step 2B.01 feature commit is unavailable: $EXPECTED_FEATURE_COMMIT"
+  fi
+  if ! git -C "$REPO" merge-base --is-ancestor "$EXPECTED_FEATURE_COMMIT" "$head"; then
+    fail "Current HEAD does not retain the committed Step 2B.01 boundary"
+  fi
 }
 
 transition_complete() {
@@ -94,10 +109,10 @@ verify_evidence() {
   printf '[PASS] Evidence: %s\n' "$run_dir"
 }
 
-verify_repo
-
 case "$MODE" in
   run)
+    verify_common
+    verify_run_repo
     run_id="gate2b-step01-$(date -u +%Y%m%dT%H%M%SZ)-$(printf '%08x' "$$")"
     run_dir="$EVIDENCE_ROOT/$run_id"
     mkdir -p "$run_dir"
@@ -254,6 +269,8 @@ PY
     printf '[STOP] Review evidence and diff; human commit approval is required.\n'
     ;;
   audit)
+    verify_common
+    verify_audit_repo
     bash "$REPO/scripts/run-gate2a-step10-langgraph-certification-freeze-and-crewai-handoff.sh" audit >/dev/null
     verify_evidence
     printf '[PASS] Gate 2B Step 2B.01 permanent post-run audit passed.\n'
