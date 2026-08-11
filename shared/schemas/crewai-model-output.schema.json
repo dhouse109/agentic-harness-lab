@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness-lab.local/schemas/crewai-model-output.schema.json",
+  "title": "CrewAI raw structured model output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["proposed_alt_text"],
+  "properties": {
+    "proposed_alt_text": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

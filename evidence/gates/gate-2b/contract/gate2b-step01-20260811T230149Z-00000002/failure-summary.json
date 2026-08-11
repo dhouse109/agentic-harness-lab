@@ -1,0 +1,15 @@
+{
+  "crewai_origin_drupal_mutations": 0,
+  "dependency_changes": 0,
+  "exit_code": 1,
+  "failed_at": "2026-08-11T23:01:49.999073Z",
+  "gate2c_executions": 0,
+  "gate2c_status": "deferred_unclaimed",
+  "model_calls": 0,
+  "package": "gate-2b-step01-crewai-contract-and-evidence-plan",
+  "package_version": "1.0.0",
+  "run_id": "gate2b-step01-20260811T230149Z-00000002",
+  "schema_version": 1,
+  "source_content_mutations": 0,
+  "status": "fail"
+}

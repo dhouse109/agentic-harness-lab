@@ -23,7 +23,7 @@ and lifecycle and recovery.
 - **Step 1.05:** complete.
 - **Step 1.06:** complete.
 - **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
-- **Gate 2:** in progress; Gate 2A LangGraph is certified and frozen; Gate 2B CrewAI is next.
+- **Gate 2:** in progress; Gate 2A LangGraph is certified and frozen; Gate 2B CrewAI is current; Gate 2C is deferred and unclaimed.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
 - **Step 2A.03:** complete.
@@ -35,8 +35,12 @@ and lifecycle and recovery.
 - **Step 2A.09:** complete.
 - **Step 2A.10:** complete; Gate 2A LangGraph is certified and frozen.
 - **Completed package:** `gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.1`.
+- **Gate 2A handoff package (historical next package):** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
 - **Gate 2A freeze:** `shared/contracts/GATE2A-LANGGRAPH-FREEZE.json` (`a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0`).
-- **Next package:** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
+- **Step 2B.01:** complete.
+- **Next package:** `gate-2b-step02-crewai-runtime-persistence-and-continuation-probe-v1.0.0`.
+Accepted Step 2B.01 evidence run: `gate2b-step01-20260811T231020Z-00000002`
+Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77`
 Accepted Step 2A.10 certification evidence: `evidence/gates/gate-2a/certification/gate2a-step10-20260811T034835Z-03f93652`
 Accepted Step 2A.09 evidence synthesis: `evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f`
 Accepted Step 2A.08 batch evidence run: `evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e`
@@ -111,22 +115,16 @@ This sequence and the machine-readable Gate 1 contract govern later package gene
 
 ## Local Codex execution
 
-Gate 2A continues the package-driven local workflow inside WSL2. Read:
+Gate 2B continues the package-driven local workflow inside WSL2. Read:
 
 ```text
 AGENTS.md
-docs/CODEX-GATE-2A-RUNBOOK.md
-docs/gates/GATE-2-STRUCTURE.md
-docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md
+docs/CODEX-GATE-2B-RUNBOOK.md
+docs/gates/GATE-2B-STEP01-CREWAI-CONTRACT-AND-EVIDENCE-PLAN.md
+docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md
 ```
 
-Delivery packages are generated outside Git under:
-
-```text
-~/projects/agentic-harness-package-staging/
-```
-
-Do not commit extracted packages or archives. Step 2A.01 is model-free and Drupal-mutation-free; it freezes the LangGraph contract and evidence boundary only.
+Delivery packages remain outside Git under `~/projects/agentic-harness-package-staging/`. Step 2B.01 is model-free, Drupal-mutation-free, dependency-neutral, and Gate-2C-free. It freezes only the CrewAI comparison contract and evidence boundary. Runtime capabilities discovered through source inspection remain classified as inspected, not observed, until the next model-free probe.
 
 ## Shared task
 

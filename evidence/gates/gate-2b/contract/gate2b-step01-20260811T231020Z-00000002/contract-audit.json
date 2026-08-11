@@ -1,0 +1,16 @@
+{
+  "architecture_status": "deferred_to_step_2B_02",
+  "contract_sha256": "c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77",
+  "crewai": "1.15.10",
+  "crewai_origin_drupal_mutations": 0,
+  "crewai_tools": "1.15.10",
+  "dependency_changes": 0,
+  "evidence": null,
+  "gate2a_freeze_sha256": "a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0",
+  "gate2c_status": "deferred_unclaimed",
+  "model_calls": 0,
+  "next_package": "gate-2b-step02-crewai-runtime-persistence-and-continuation-probe-v1.0.0",
+  "predecessor_commit": "0477e882987501438ae07fbb51e741b4be800843",
+  "python": "3.12.13",
+  "status": "pass"
+}
