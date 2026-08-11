@@ -1,0 +1,68 @@
+{
+  "claims": [
+    {
+      "claim_id": "CLM-LG-002",
+      "local_evidence": [
+        "evidence/gates/gate-2a/checkpoint-proof/gate2a-step04-20260810T034027Z-00250b07"
+      ],
+      "official_sources": [
+        "SRC-LG-001"
+      ],
+      "status": "verified"
+    },
+    {
+      "claim_id": "CLM-LG-004",
+      "local_evidence": [
+        "evidence/gates/gate-2a/tool-adapters/gate2a-step03-20260809T233127Z-2375581",
+        "evidence/gates/gate-2a/tool-adapters/gate2a-step03-verification-20260810T020210Z-2410520"
+      ],
+      "official_sources": [
+        "SRC-LG-003"
+      ],
+      "status": "verified"
+    },
+    {
+      "claim_id": "CLM-LG-005",
+      "local_evidence": [
+        "evidence/gates/gate-2a/human-interrupt/gate2a-step06-20260810T162448Z-002692eb"
+      ],
+      "official_sources": [
+        "SRC-LG-002"
+      ],
+      "status": "verified"
+    },
+    {
+      "claim_id": "CLM-LG-006",
+      "local_evidence": [
+        "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e"
+      ],
+      "official_sources": [
+        "SRC-LG-001",
+        "SRC-LG-002"
+      ],
+      "status": "verified"
+    },
+    {
+      "claim_id": "CLM-LG-007",
+      "local_evidence": [
+        "evidence/gates/gate-2a/canonical-slice/gate2a-step05-20260810T140133Z-0025b888",
+        "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e"
+      ],
+      "official_sources": [
+        "SRC-S16-004"
+      ],
+      "status": "verified"
+    },
+    {
+      "claim_id": "CLM-LG-008",
+      "local_evidence": [
+        "evidence/gates/gate-2a/checkpoint-proof/gate2a-step04-20260810T034027Z-00250b07",
+        "evidence/gates/gate-2a/canonical-slice/gate2a-step05-20260810T140133Z-0025b888",
+        "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e"
+      ],
+      "official_sources": [],
+      "status": "observed"
+    }
+  ],
+  "schema_version": 1
+}
