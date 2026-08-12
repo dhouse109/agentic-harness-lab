@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "contract_id": "gate2b-crewai-contract-v1.0.0",
+  "status": "frozen_contract_with_planned_and_inspected_capabilities",
+  "package": "gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0",
+  "predecessor": {
+    "merged_commit": "0477e882987501438ae07fbb51e741b4be800843",
+    "gate2a_feature_commit": "1a32f8584a75dc59533f48dfb0b7636da94d5a00",
+    "gate05_freeze_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+    "gate1_freeze_sha256": "2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd",
+    "gate2a_batch_contract_sha256": "1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b",
+    "gate2a_freeze_sha256": "a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0",
+    "accepted_gate2a_certification_evidence": "evidence/gates/gate-2a/certification/gate2a-step10-20260811T034835Z-03f93652",
+    "accepted_langgraph_batch": "evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e"
+  },
+  "authorization": {
+    "model_calls": 0,
+    "crewai_origin_drupal_mutations": 0,
+    "source_content_mutations": 0,
+    "dependency_changes": 0,
+    "gate2c_executions": 0
+  },
+  "frozen_constants": {
+    "provider": "OpenAI",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "temperature": 0.0,
+    "dataset_article_count": 20,
+    "target_count": 12,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+    "framework_origin": "crewai",
+    "validator_version": "gate05-validator-1.0.0",
+    "review_destination": "alt_text_suggestion",
+    "reviewer": "editor_dana",
+    "source_article_mutation": "prohibited",
+    "automatic_publication": "prohibited",
+    "gate2c_failure_seam": "after_target_6_fully_persisted_before_target_7_begins"
+  },
+  "frozen_input_hashes": {
+    "shared/schemas/target.schema.json": "2bcb867c3b58a5f4bb20b29274434c153ad043e8c0dba3ce3d1e496a44a32469",
+    "shared/schemas/image-context.schema.json": "b2e27b533551759d181c58330ebedcb26ca92c1a596dbb4aaf48a48422dffaee",
+    "shared/schemas/recommendation.schema.json": "7b1cf9800d5c8d8df4cd0a718c721dd43013afa256f7814a365d4696e2cfe2bd",
+    "shared/schemas/tool-result.schema.json": "ce04e938eb4e34e861c000b86fffeed4adc5e5c66167c52ebf5380b8cd3cd91b",
+    "shared/schemas/run-state.schema.json": "ee5face3d81138cfa2d5de2e03d8fb2aded881743e2e0334129342bf95f3010b"
+  },
+  "pinned_runtime": {
+    "python": "3.12.13",
+    "crewai": "1.15.10",
+    "crewai_tools": "1.15.10",
+    "uv_lock_sha256": "855e5edff2cb86eb64ea9856d239b19010e7d3b1f80c40e370ed81d66b8e4e7c",
+    "version_evidence_status": "observed_in_phase0_and_reconfirmed_from_lock_and_installed_metadata",
+    "dependency_change_prohibited": true
+  },
+  "runtime_capability_inspection": {
+    "status": "inspected_not_yet_gate2b_observed",
+    "flow_persistence": {
+      "public_surfaces": [
+        "crewai.flow.persistence.FlowPersistence",
+        "crewai.flow.persistence.SQLiteFlowPersistence",
+        "crewai.flow.persistence.persist"
+      ],
+      "inspection_finding": "Flow persistence and state restoration surfaces exist in the pinned installed source. Process-boundary behavior, re-execution semantics, isolation, and fitness for this specimen remain unproved."
+    },
+    "runtime_checkpointing": {
+      "public_surfaces": [
+        "crewai.events.CheckpointConfig",
+        "crewai.events.JsonFileProvider",
+        "crewai.events.SQLiteProvider",
+        "crewai.flow.flow.Flow.from_checkpoint",
+        "crewai.crew.Crew.from_checkpoint"
+      ],
+      "inspection_finding": "Automatic runtime checkpoint surfaces exist and are distinct from Flow persistence. Their completeness and continuation semantics remain unproved for this specimen."
+    },
+    "human_feedback": {
+      "public_surfaces": [
+        "crewai.flow.human_feedback.human_feedback",
+        "crewai.flow.human_feedback.HumanFeedbackPending",
+        "crewai.flow.flow.Flow.from_pending"
+      ],
+      "inspection_finding": "A nonblocking pending/resume surface and custom provider path exist. Drupal remains authoritative; use without an emit/outcome collapse must be probed model-free before any adoption."
+    },
+    "retry_controls": {
+      "inspection_finding": "Retry-relevant surfaces differ across direct LLM calls, task guardrails, and framework lifecycle. Exact no-hidden-retry controls remain unresolved and must be proved before model execution."
+    },
+    "import_time_storage": {
+      "inspection_finding": "Import resolves application data beneath XDG data storage; Gate 2B must bind any used runtime storage explicitly to CrewAI-owned, sanitized locations."
+    }
+  },
+  "architecture": {
+    "status": "deferred_to_step_2B_02",
+    "selected_orchestration_path": null,
+    "selected_persistence_path": null,
+    "selected_human_continuation_path": null,
+    "rule": "Select only after retained model-free evidence compares supported pinned-runtime paths. Do not normalize CrewAI to LangGraph."
+  },
+  "ownership": {
+    "crewai_owned": [
+      "model invocation",
+      "orchestration",
+      "sequencing",
+      "framework runtime state",
+      "persistence",
+      "continuation",
+      "lifecycle behavior",
+      "framework error and retry behavior"
+    ],
+    "shared_framework_neutral": [
+      "frozen contracts and schemas",
+      "deterministic validator",
+      "four shared Drupal operation semantics",
+      "frozen dataset and target order"
+    ],
+    "shared_runtime_storage_prohibited": true,
+    "private_drupal_write_path_prohibited": true
+  },
+  "run_identity": {
+    "logical_run_id_pattern": "^crewai-[0-9]{8}T[0-9]{6}Z-[0-9a-f]{8}$",
+    "one_logical_run_across_supported_continuation": true,
+    "framework_state_identifier_relation": "must_be_recorded_and_bound_to_logical_run_after_architecture_selection",
+    "recommendation_identity": "framework_origin_plus_logical_run_id_plus_frozen_target_identity_plus_prompt_version_plus_model_id",
+    "duplicate_policy": "replay_or_continuation_must_not_create_a_second_recommendation_for_the_same_idempotency_identity"
+  },
+  "operation_semantics": [
+    "find_images_needing_review()",
+    "get_image_context(target)",
+    "submit_recommendation(recommendation)",
+    "get_recommendation_status(recommendation_id)"
+  ],
+  "stage_separation": [
+    "target discovery and frozen ordering",
+    "permission-scoped context retrieval",
+    "raw structured model output",
+    "recommendation assembly",
+    "deterministic validation",
+    "submission through the frozen operation",
+    "CrewAI-owned state persistence",
+    "authoritative Drupal human review",
+    "status observation through the frozen read operation",
+    "supported continuation",
+    "completion and certification"
+  ],
+  "model_output": {
+    "schema": "shared/schemas/crewai-model-output.schema.json",
+    "contains_only": "proposed_alt_text",
+    "hidden_reasoning_retention_prohibited": true,
+    "validation_must_precede_submission": true
+  },
+  "run_state": {
+    "schema": "shared/schemas/crewai-run-state.schema.json",
+    "comparison_contract_only": true,
+    "runtime_state_must_remain_crewai_owned": true
+  },
+  "human_review": {
+    "authority": "Drupal alt_text_suggestion revision reviewed by editor_dana",
+    "second_authoritative_approval_system_prohibited": true,
+    "crewai_feedback_api_may_orchestrate_but_may_not_replace_drupal": true
+  },
+  "evidence_policy": {
+    "unique_id_required": true,
+    "roots": {
+      "contract": "evidence/gates/gate-2b/contract/",
+      "runtime_probe": "evidence/gates/gate-2b/runtime-probe/",
+      "failed": "retain_in_originating_boundary_with_status_fail"
+    },
+    "exact_expected_file_set_required_for_significant_runs": true,
+    "sha256_manifest_required": true,
+    "predecessor_commit_and_freeze_provenance_required": true,
+    "failed_run_retention_required": true,
+    "sanitized_logs_required": true,
+    "secret_scan_required": true,
+    "prohibited": [
+      "credentials",
+      "authorization headers",
+      "raw Base64 image data",
+      "full data URLs",
+      "private database dumps",
+      "hidden model reasoning",
+      "unrelated private configuration"
+    ],
+    "freeze_claim_rule": "Every material Gate 2B freeze claim requires retained evidence and a permanent certification check."
+  },
+  "next_evidence_boundary": {
+    "package": "gate-2b-step02-crewai-runtime-persistence-and-continuation-probe-v1.0.0",
+    "status": "planned_not_started",
+    "model_calls": 0,
+    "drupal_mutations": 0,
+    "questions": [
+      "Which pinned public path should own orchestration and persistent state for this specimen?",
+      "What survives process exit, and what re-executes during supported restore or continuation?",
+      "How are run isolation, storage ownership, serialization privacy, and failure propagation evidenced?",
+      "Can Drupal-authoritative review be represented as a nonblocking CrewAI continuation without a second model call?",
+      "Which retry controls must later be frozen so model-call budgets remain explicit?"
+    ]
+  },
+  "nonclaims": [
+    "No CrewAI Gate 2B model behavior is observed by this contract package.",
+    "No CrewAI persistence, checkpoint, resume, retry, isolation, or human-feedback behavior is yet proved.",
+    "No CrewAI-origin recommendation or Drupal mutation is performed.",
+    "No production readiness, framework superiority, accessibility quality, autonomous publishing safety, cost, speed, or broad security claim is made.",
+    "Gate 2C is deferred and unclaimed; CrewAI-specific continuation must not be relabeled as Gate 2C."
+  ],
+  "change_control": "Changes to frozen experiment constants, semantic operations, target identity/order, validator, review authority/destination, source-mutation policy, model/settings, idempotency identity, prompt fairness, dependencies, or the Gate 2C seam require the repository ADR and evidence-invalidation process."
+}

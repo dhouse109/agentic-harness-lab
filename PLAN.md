@@ -172,9 +172,9 @@ unchanged.
 
 Gate 2 preserves the original umbrella milestone and closes only after Gate 2C shared failure/recovery.
 
-- **Gate 2A — LangGraph:** current.
-- **Gate 2B — CrewAI:** follows the LangGraph freeze.
-- **Gate 2C — shared failure/recovery:** follows both frozen framework specimens.
+- **Gate 2A — LangGraph:** certified and frozen.
+- **Gate 2B — CrewAI:** current.
+- **Gate 2C — shared failure/recovery:** deferred and unclaimed.
 
 ### Gate 2A — LangGraph
 
@@ -283,6 +283,31 @@ Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b897
 - [x] Step 2A.10 — LangGraph certification, freeze, and CrewAI handoff
 
 Step 2A.01 makes zero model calls and performs zero Drupal mutation. The accepted 2A.08 batch is designed to be the certification candidate; Step 2A.10 promotes it model-free by default rather than silently running a second 12-call batch.
+
+### Gate 2B — CrewAI
+
+Gate 2B is current. Its later package count is not frozen; evidence boundaries follow observed CrewAI behavior rather than LangGraph symmetry.
+
+**Completed package:**
+
+```text
+gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0
+```
+
+**Next package:**
+
+```text
+gate-2b-step02-crewai-runtime-persistence-and-continuation-probe-v1.0.0
+```
+
+Accepted Step 2B.01 evidence run: `gate2b-step01-20260811T231020Z-00000002`
+Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77`
+
+- [x] Step 2B.01 — CrewAI contract and evidence plan
+
+The next planned evidence question is a model-free pinned-runtime persistence and continuation probe. It must resolve supported architecture, process-boundary behavior, storage ownership, serialization privacy, run isolation, human-feedback compatibility with Drupal authority, and retry controls before deep implementation. No later package is authorized by this plan entry.
+
+Gate 2C shared failure/recovery remains deferred and unclaimed. CrewAI-specific continuation evidence must remain labeled Gate 2B.
 
 ## Subsequent implementation milestones
 

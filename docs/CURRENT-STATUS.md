@@ -1,6 +1,6 @@
 # Current Implementation Status
 
-**Status date:** August 8, 2026
+**Status date:** August 11, 2026
 **Authoritative branch:** `main` after this status-update PR is merged
 
 ## Current position
@@ -13,7 +13,8 @@
 - **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
 - **Gate 2:** in progress.
 - **Gate 2A — LangGraph:** certified and frozen.
-- **Gate 2B — CrewAI:** next; locked until Step 2A.10 merge/resync/post-merge audit.
+- **Gate 2B — CrewAI:** current; Step 2A.10 merge/resync/post-merge audit prerequisite passed.
+- **Gate 2C — shared three-framework failure/recovery:** deferred and unclaimed.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
 - **Step 2A.03:** complete.
@@ -25,8 +26,12 @@
 - **Step 2A.09:** complete.
 - **Step 2A.10:** complete.
 - **Completed package:** `gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.1`.
+- **Gate 2A handoff package (historical next package):** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
 - **Gate 2A freeze:** `shared/contracts/GATE2A-LANGGRAPH-FREEZE.json` (`a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0`).
-- **Next package:** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
+- **Step 2B.01:** complete.
+- **Next package:** `gate-2b-step02-crewai-runtime-persistence-and-continuation-probe-v1.0.0`.
+Accepted Step 2B.01 evidence run: `gate2b-step01-20260811T231020Z-00000002`
+Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77`
 Accepted Step 2A.10 certification evidence: `evidence/gates/gate-2a/certification/gate2a-step10-20260811T034835Z-03f93652`
 Accepted Step 2A.09 evidence synthesis: `evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f`
 Accepted Step 2A.08 batch evidence run: `evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e`
@@ -199,4 +204,6 @@ A new planning or implementation session should read these files in order:
 11. `shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json`
 
 Do not reopen Gate 0.5 or Gate 1 unless an audit fails or a frozen contract is intentionally changed.
-Use `docs/handoffs/GATE-1-TO-LANGGRAPH-HANDOFF.md` together with `docs/gates/GATE-2-STRUCTURE.md`, `docs/gates/GATE-2A-STEP01-LANGGRAPH-CONTRACT.md`, and `docs/gates/GATE-2A-STEP02-LANGGRAPH-RUNTIME-PROBE.md`. Step 2A.01 through Step 2A.10 are complete and Gate 2A LangGraph is certified and frozen. Gate 2B Step 2B.01 is next but remains locked until Step 2A.10 is committed and merged, local `main` is resynchronized, and the post-merge audit passes.
+Step 2A.01 through Step 2A.10 are complete and Gate 2A LangGraph is certified and frozen.
+
+Use `docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md`, `docs/gates/GATE-2B-STEP01-CREWAI-CONTRACT-AND-EVIDENCE-PLAN.md`, and `docs/CODEX-GATE-2B-RUNBOOK.md`. The Step 2A.10 merge/resync/post-merge audit prerequisite passed. Step 2B.01 is complete. Do not generate Step 2B.02 until Step 2B.01 is committed and merged, local `main` is resynchronized, and the post-merge audit passes. Gate 2C remains deferred and unclaimed.

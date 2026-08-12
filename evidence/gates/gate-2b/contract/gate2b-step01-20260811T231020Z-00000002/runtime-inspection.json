@@ -1,0 +1,34 @@
+{
+  "architecture_status": "deferred_to_step_2B_02",
+  "drupal_mutations": 0,
+  "findings": [
+    {
+      "classification": "inspected",
+      "surface": "FlowPersistence/@persist/SQLiteFlowPersistence",
+      "unresolved": "process-boundary restore, re-execution, isolation, specimen fitness"
+    },
+    {
+      "classification": "inspected",
+      "surface": "CheckpointConfig with JSON/SQLite providers and Flow/Crew restore",
+      "unresolved": "checkpoint completeness and continuation semantics"
+    },
+    {
+      "classification": "inspected",
+      "surface": "HumanFeedbackPending/custom provider/Flow.from_pending",
+      "unresolved": "Drupal-authoritative no-extra-model-call continuation"
+    },
+    {
+      "classification": "inspected",
+      "surface": "LLM/task/guardrail retry controls",
+      "unresolved": "explicit zero-hidden-retry configuration"
+    },
+    {
+      "classification": "inspected",
+      "surface": "platform/XDG application data resolution",
+      "unresolved": "selected CrewAI-owned runtime path"
+    }
+  ],
+  "model_calls": 0,
+  "schema_version": 1,
+  "status": "inspected_not_yet_gate2b_observed"
+}

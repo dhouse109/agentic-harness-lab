@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness-lab.local/schemas/crewai-run-state.schema.json",
+  "title": "CrewAI comparison run-state contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "framework_origin",
+    "framework_state_id",
+    "runtime_state_mechanism",
+    "runtime_storage_location",
+    "status",
+    "continuation_status",
+    "target_sequence_hash",
+    "next_target_index",
+    "completed_target_identities",
+    "recommendation_ids",
+    "validation_results",
+    "started_at",
+    "updated_at",
+    "completed_at",
+    "gate2c_failure_injection_fired",
+    "prompt_version",
+    "model_id"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {
+      "type": "string",
+      "pattern": "^crewai-[0-9]{8}T[0-9]{6}Z-[0-9a-f]{8}$"
+    },
+    "framework_origin": {"const": "crewai"},
+    "framework_state_id": {"type": ["string", "null"]},
+    "runtime_state_mechanism": {
+      "enum": [
+        "unselected",
+        "flow_sqlite_persistence",
+        "runtime_checkpoint_json",
+        "runtime_checkpoint_sqlite",
+        "other_supported_public_api"
+      ]
+    },
+    "runtime_storage_location": {"type": ["string", "null"]},
+    "status": {
+      "enum": ["planned", "running", "awaiting_human_review", "continuing", "completed", "failed"]
+    },
+    "continuation_status": {
+      "enum": ["untested", "armed", "pending", "resumed", "completed", "failed"]
+    },
+    "target_sequence_hash": {
+      "const": "sha256:1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+    },
+    "next_target_index": {"type": "integer", "minimum": 0, "maximum": 12},
+    "completed_target_identities": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "recommendation_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "validation_results": {
+      "type": "array",
+      "items": {"$ref": "https://agentic-harness-lab.local/schemas/tool-result.schema.json"}
+    },
+    "started_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "gate2c_failure_injection_fired": {"const": false},
+    "prompt_version": {"type": "string", "minLength": 1},
+    "model_id": {"const": "gpt-4.1-mini-2025-04-14"}
+  }
+}
