@@ -1,0 +1,26 @@
+{
+  "adr_created": false,
+  "candidate_paths": [
+    "Flow @persist with SQLiteFlowPersistence",
+    "Flow runtime checkpoint with JsonProvider",
+    "Flow runtime checkpoint with SqliteProvider",
+    "Flow pending/from_pending with SQLiteFlowPersistence"
+  ],
+  "decision_inputs": {
+    "failure_controls_complete": true,
+    "flow_persistence_complete": true,
+    "model_call_guard_pass": true,
+    "pending_continuation_complete": true,
+    "privacy_pass": true,
+    "provider_paths_complete": true,
+    "runtime_checkpoint_restore_complete": true
+  },
+  "next_action": "human architecture approval and bounded ADR preparation",
+  "selected_architecture": {
+    "orchestration": "CrewAI Flow",
+    "ordinary_flow_state_snapshots": "SQLiteFlowPersistence retained only where state hydration/re-execution semantics are acceptable",
+    "pending_continuation": "HumanFeedbackPending plus SQLiteFlowPersistence from_pending/resume with emit disabled",
+    "runtime_checkpoint": "CheckpointConfig with SqliteProvider"
+  },
+  "status": "recommendation_ready"
+}

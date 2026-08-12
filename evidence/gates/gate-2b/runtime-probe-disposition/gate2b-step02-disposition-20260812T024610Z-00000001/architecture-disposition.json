@@ -1,0 +1,49 @@
+{
+  "acceptance_predicates": {
+    "all_authorization_counts_zero": true,
+    "all_required_evidence_and_hashes_intact": true,
+    "checkpoint_semantics_narrow": true,
+    "default_and_public_flow_lifecycle_pass": true,
+    "drupal_remains_authoritative": true,
+    "every_provider_request_counted_later": true,
+    "feedback_collapse_disabled_unless_budgeted": true,
+    "gate2c_deferred_unexecuted": true,
+    "guardrail_retries_zeroed_or_avoided_later": true,
+    "independent_ab_isolation_passes": true,
+    "learning_disabled_later": true,
+    "native_parse_to_create_fallback_possible": true,
+    "no_private_instrumentation_dependency": true,
+    "no_unexplained_selected_path_network_behavior": true,
+    "pending_resume_preserves_logical_identity": true,
+    "prior_model_owning_work_not_replayed": true,
+    "privacy_and_storage_provenance_pass": true,
+    "public_version_check_disable_control_verified": true,
+    "runtime_checkpoint_explicitly_nonselected": true,
+    "sqlite_flow_process_boundary_persistence_observed": true,
+    "structured_correction_disabled_or_budgeted_later": true,
+    "supported_public_crewai_apis": true,
+    "transport_retries_zeroable_later": true,
+    "version_events_governed_from_immutable_stacks": true,
+    "wrong_and_unknown_identity_controls_pass": true
+  },
+  "adr_created": false,
+  "blocking_reasons": [],
+  "human_architecture_approval_required": true,
+  "private_instrumentation_is_architecture_support": false,
+  "selected_candidate": {
+    "inference_controls": [
+      "CREWAI_DISABLE_VERSION_CHECK=true",
+      "max_retries=0",
+      "guardrail retries zero/avoided",
+      "correction fallback prevented or separately budgeted",
+      "learn=False",
+      "count every SDK/provider request"
+    ],
+    "memory_storage": "public set_memory_storage_factory extension",
+    "orchestration": "supported CrewAI Flow",
+    "review_boundary": "HumanFeedbackPending plus from_pending()/resume(); Drupal authoritative",
+    "runtime_checkpoint": "excluded; investigated optional/nonselected facility",
+    "workflow_persistence": "SQLiteFlowPersistence"
+  },
+  "status": "recommendation_ready"
+}

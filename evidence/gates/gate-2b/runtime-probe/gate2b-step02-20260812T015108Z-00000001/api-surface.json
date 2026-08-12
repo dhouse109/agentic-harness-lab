@@ -1,0 +1,62 @@
+{
+  "files": {
+    "converter_helpers": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/utilities/converter.py",
+      "sha256": "df69160f0a50886c0dacca2acae3ee512ef1aebc732c8fd49d9d54585e4308a5"
+    },
+    "flow_runtime": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py",
+      "sha256": "7ffbc8e5255b72dfa7cbcd5bcc48a35e569d40907a8d80cc932662af32ba1514"
+    },
+    "memory_backend": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/memory/storage/backend.py",
+      "sha256": "6b9115c11a7cbcd04e92b10ca9d2cc7818f8851eceb900ee8762d345f93f1421"
+    },
+    "memory_factory": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/memory/storage/factory.py",
+      "sha256": "d7e39deda8c1eb0e0ef1e9113e44bec77aeae51d23591a66982375809d60647d"
+    },
+    "openai_completion": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/llms/providers/openai/completion.py",
+      "sha256": "d37e6f9c244c565ab611c9b13e93b1cb7d65291a5d1f758f098b09c895aa475a"
+    },
+    "openai_sdk_base": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/openai/_base_client.py",
+      "sha256": "5539c83d01c27e1bbf1ad34e59cc872202feb6c8bf81b56fadbeeb2b81a3e869"
+    },
+    "openai_sdk_constants": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/openai/_constants.py",
+      "sha256": "ace7e06c293099027477a40f94cad2f9d761ca9b5c4f8e62b874972c3dd70fa0"
+    },
+    "output_converter": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/agents/agent_builder/utilities/base_output_converter.py",
+      "sha256": "f7ed84bbdb1e6925f5c3e4458494857cc83dcd0f6f58e964b2707a0ef6b4182a"
+    },
+    "task": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/task.py",
+      "sha256": "fe8eb35ed6ca1e0b077dbbe9de0f414dc222d036ba0eca18b233c374ee9e37a4"
+    }
+  },
+  "memory_configuration": {
+    "default_backend": "LanceDB for the default lancedb storage spec",
+    "default_behavior": "Flow constructs unified Memory when memory is None",
+    "extension_semantics": "one-time application-startup factory used for subsequently constructed Memory instances",
+    "fresh_probe_candidates": [
+      "default_unmodified",
+      "supported_public_extension",
+      "probe_isolated_diagnostic"
+    ],
+    "private_internal_mechanism": "_skip_auto_memory",
+    "private_usage": "internal RecallFlow/EncodingFlow escape hatch; not a public specimen configuration",
+    "supported_public_configuration": "no public disable-auto-memory boolean found",
+    "supported_public_extension": "set_memory_storage_factory(factory)"
+  },
+  "signatures": {
+    "Flow.from_pending": "(flow_id: 'str', persistence: 'FlowPersistence | None' = None, *, definition: 'FlowDefinition | None' = None, **kwargs: 'Any') -> 'Flow[Any]'",
+    "Flow.kickoff": "(self, inputs: 'dict[str, Any] | None' = None, input_files: 'dict[str, FileInput] | None' = None, from_checkpoint: 'CheckpointConfig | None' = None, restore_from_state_id: 'str | None' = None) -> 'Any | StreamSession[Any]'",
+    "Flow.resume": "(self, feedback: 'str' = '') -> 'Any'",
+    "SQLiteFlowPersistence.load_state": "(self, flow_uuid: 'str') -> 'dict[str, Any] | None'",
+    "set_memory_storage_factory": "(factory: 'MemoryStorageFactory | None') -> 'None'"
+  },
+  "status": "inspected"
+}

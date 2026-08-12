@@ -181,9 +181,23 @@ evaluation results, and human decisions needed to audit the experiment.
 
 Gate 1 Drupal AI and Gate 2A LangGraph are certified and frozen. Gate 2 is the umbrella cross-framework milestone; Gate 2B CrewAI is current. Gate 2C shared three-framework failure/recovery remains deferred and unclaimed.
 
-**Step 2B.01:** complete.
+**Step 2B.01:** complete, merged, and post-merge audited.
 
-**Next package:** `gate-2b-step02-crewai-runtime-persistence-and-continuation-probe-v1.0.0`.
+**Completed Step 2B.02 package:** `gate-2b-step02-crewai-architecture-adr-and-closure-v1.0.0`.
+
+**Step 2B.02:** complete after retained model-free runtime evidence, permanent architecture audit, and explicit human architecture approval.
+
+**Next package:** `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0` is named but locked and unbegun pending Step 2B.02 commit, merge, local `main` resynchronization, and post-merge audit.
+
+**Retained diagnostic Step 2B.02 run:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid diagnostic evidence but is superseded/unaccepted for architecture selection. Its original mechanical audit passed; later integrity review found unlabeled private Flow instrumentation and incomplete isolation/retry predicates. At that capture boundary, Step 2B.02 remained open.
+
+**Retained superseding Step 2B.02 capture:** `gate2b-step02-20260812T015108Z-00000001` passed its v2 capture boundary and remains byte-identical, with architecture status `unresolved`.
+
+**Retained targeted Step 2B.02 supplemental capture:** `gate2b-step02-followup-20260812T022947Z-00000001` remains byte-identical. It corrected native structured-output fallback and checkpoint semantics, while its immutable classifier retained four version-check events as `unresolved_path`.
+
+**Accepted governed Step 2B.02 disposition:** `gate2b-step02-disposition-20260812T024610Z-00000001` separately binds the immutable call stacks to pinned-source version-check provenance, verifies the public disable control, and passes all 25 permanent architecture predicates with machine status `recommendation_ready`.
+
+**Accepted CrewAI architecture:** `docs/decisions/ADR-0012-crewai-flow-persistence-and-human-review-continuation.md`. The human approval decision is distinct from the machine recommendation. The selected path uses supported Flow, public `set_memory_storage_factory(...)`, `SQLiteFlowPersistence`, and `HumanFeedbackPending` / `from_pending()` / `resume()` while Drupal remains authoritative. Runtime `CheckpointConfig` and private `_skip_auto_memory` are nonselected.
 
 **Gate 1 freeze:** `shared/contracts/GATE1-DRUPAL-AI-FREEZE.json` (`2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd`).
 
@@ -193,11 +207,11 @@ Gate 1 Drupal AI and Gate 2A LangGraph are certified and frozen. Gate 2 is the u
 
 **Gate 2A handoff package (historical next package):** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
 
-**Gate 2B Step 2B.01 authorization:** zero model calls, zero CrewAI-origin Drupal mutations, zero source-content mutations, zero dependency changes, and zero Gate 2C executions.
+**Gate 2B Step 2B.02 authorization:** zero model/provider calls, zero CrewAI-origin Drupal mutations, zero source-content mutations, zero authoritative human-review actions, zero dependency changes, zero live recommendation submissions, and zero Gate 2C executions.
 
-Read `docs/gates/GATE-2B-STEP01-CREWAI-CONTRACT-AND-EVIDENCE-PLAN.md`, `docs/CODEX-GATE-2B-RUNBOOK.md`, `docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md`, the frozen Gate 1 and Gate 2A manifests, the accepted certification evidence, and the pinned CrewAI environment. Preserve the frozen dataset, model/settings, shared operations, validator, review destination and authority, source-mutation rule, idempotency identity, and reserved Gate 2C target-6/7 seam. Do not infer CrewAI behavior from LangGraph evidence.
+Read `docs/gates/GATE-2B-STEP02-CREWAI-RUNTIME-PERSISTENCE-AND-CONTINUATION-PROBE.md`, `docs/gates/GATE-2B-STEP01-CREWAI-CONTRACT-AND-EVIDENCE-PLAN.md`, `docs/CODEX-GATE-2B-RUNBOOK.md`, and `docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md`. Preserve the frozen dataset, model/settings, shared operations, validator, review destination and authority, source-mutation rule, idempotency identity, and reserved Gate 2C target-6/7 seam. Do not infer CrewAI behavior from LangGraph evidence.
 
-Do not generate Step 2B.02 until Step 2B.01 is committed, merged, local `main` is resynchronized, and the post-merge audit passes.
+Step 2B.02 created only model-free CrewAI-specific runtime and governed-disposition evidence. Step 2B.03 remains locked until the completed Step 2B.02 boundary is committed, merged, resynchronized to local `main`, and passes its permanent post-merge audit. Do not generate or begin Step 2B.03 before that approval boundary.
 
 Accepted Step 2B.01 evidence run: `gate2b-step01-20260811T231020Z-00000002`
 Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77`

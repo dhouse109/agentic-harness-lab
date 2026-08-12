@@ -1,0 +1,17 @@
+{
+  "architecture_status": "unresolved",
+  "authorization": {
+    "dependency_changes": 0,
+    "drupal_mutations": 0,
+    "gate2c_executions": 0,
+    "human_review_actions": 0,
+    "live_recommendation_submissions": 0,
+    "model_calls": 0,
+    "provider_calls": 0,
+    "source_mutations": 0
+  },
+  "evidence_id": "gate2b-step02-followup-20260812T022947Z-00000001",
+  "gate2c": "deferred_unclaimed",
+  "schema_version": 1,
+  "status": "pass"
+}

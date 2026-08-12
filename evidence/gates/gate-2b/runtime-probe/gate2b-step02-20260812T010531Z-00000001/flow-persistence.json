@@ -1,0 +1,121 @@
+{
+  "cross_process_load": {
+    "completed": true,
+    "logical_run_id": "crewai-probe-run-b",
+    "mode": "flow-load-state",
+    "result": {
+      "finished_at": "2026-08-12T01:06:30Z",
+      "loaded": {
+        "counter": 2,
+        "id": "crewai-probe-run-a",
+        "review_status": "not_requested",
+        "trace": [
+          "first",
+          "second"
+        ]
+      },
+      "logical_run_id": "crewai-probe-run-b",
+      "mode": "flow-load-state",
+      "model_calls": 0,
+      "pid": 2838698,
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T010531Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "/home/dhouse109/projects/agentic-harness-lab/crewai/runtime_probe/step2b02_worker.py:259: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  result[\"finished_at\"] = datetime.utcnow().isoformat(timespec=\"seconds\") + \"Z\"\n",
+    "stdout": "",
+    "timed_out": false
+  },
+  "restore_into_new_identity": {
+    "completed": true,
+    "logical_run_id": "crewai-probe-run-b",
+    "mode": "flow-persist-restore",
+    "result": {
+      "finished_at": "2026-08-12T01:06:33Z",
+      "logical_run_id": "crewai-probe-run-b",
+      "mode": "flow-persist-restore",
+      "model_calls": 0,
+      "output": {
+        "counter": 4,
+        "id": "crewai-probe-run-b",
+        "review_status": "not_requested",
+        "trace": [
+          "first",
+          "second",
+          "first",
+          "second"
+        ]
+      },
+      "pid": 2838707,
+      "state": {
+        "counter": 4,
+        "id": "crewai-probe-run-b",
+        "review_status": "not_requested",
+        "trace": [
+          "first",
+          "second",
+          "first",
+          "second"
+        ]
+      },
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T010531Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "/home/dhouse109/projects/agentic-harness-lab/crewai/runtime_probe/step2b02_worker.py:259: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  result[\"finished_at\"] = datetime.utcnow().isoformat(timespec=\"seconds\") + \"Z\"\n",
+    "stdout": "Forking flow state from UUID: crewai-probe-run-a\n",
+    "timed_out": false
+  },
+  "semantic_question": "state hydration and re-execution, not assumed continuation",
+  "unknown_identity": {
+    "completed": true,
+    "logical_run_id": "crewai-probe-run-b",
+    "mode": "flow-load-state",
+    "result": {
+      "finished_at": "2026-08-12T01:06:37Z",
+      "loaded": null,
+      "logical_run_id": "crewai-probe-run-b",
+      "mode": "flow-load-state",
+      "model_calls": 0,
+      "pid": 2838741,
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T010531Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "/home/dhouse109/projects/agentic-harness-lab/crewai/runtime_probe/step2b02_worker.py:259: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  result[\"finished_at\"] = datetime.utcnow().isoformat(timespec=\"seconds\") + \"Z\"\n",
+    "stdout": "",
+    "timed_out": false
+  },
+  "write": {
+    "completed": true,
+    "logical_run_id": "crewai-probe-run-a",
+    "mode": "flow-persist-write",
+    "result": {
+      "finished_at": "2026-08-12T01:06:26Z",
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "flow-persist-write",
+      "model_calls": 0,
+      "output": {
+        "counter": 2,
+        "id": "crewai-probe-run-a",
+        "review_status": "not_requested",
+        "trace": [
+          "first",
+          "second"
+        ]
+      },
+      "pid": 2838687,
+      "state": {
+        "counter": 2,
+        "id": "crewai-probe-run-a",
+        "review_status": "not_requested",
+        "trace": [
+          "first",
+          "second"
+        ]
+      },
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T010531Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "/home/dhouse109/projects/agentic-harness-lab/crewai/runtime_probe/step2b02_worker.py:259: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  result[\"finished_at\"] = datetime.utcnow().isoformat(timespec=\"seconds\") + \"Z\"\n",
+    "stdout": "No flow state found for UUID: crewai-probe-run-a\n",
+    "timed_out": false
+  }
+}

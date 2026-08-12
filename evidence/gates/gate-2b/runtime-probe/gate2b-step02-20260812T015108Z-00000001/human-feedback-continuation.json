@@ -1,0 +1,141 @@
+{
+  "drupal_authority": "preserved; deterministic stand-in only",
+  "emit": null,
+  "execution_classification": "supported_public_extension",
+  "learn": false,
+  "llm": null,
+  "logical_identity_preserved": true,
+  "nonempty_emit_constraint": "configured emit can make structured and fallback LLM calls",
+  "outcome_collapse_model_call_expected": false,
+  "pause": {
+    "classification": "completed",
+    "completed": true,
+    "execution_classification": "supported-public-extension",
+    "last_lifecycle_point": "public_memory_storage_factory_registered",
+    "lifecycle_markers": [
+      "worker_started",
+      "crewai_import_completed",
+      "public_memory_storage_factory_registered"
+    ],
+    "logical_run_id": "crewai-probe-run-a",
+    "mode": "feedback-pause-public",
+    "new_runtime_artifacts": [],
+    "process_group_id": 2854342,
+    "result": {
+      "architecture_evidence": "supported public extension candidate",
+      "blocked_provider_network_attempts": 0,
+      "callback_info": {
+        "kind": "deterministic_external_review_stand_in"
+      },
+      "execution_classification": "supported-public-extension",
+      "finished_at": "2026-08-12T01:53:05Z",
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "feedback-pause-public",
+      "model_calls": 0,
+      "normal_behavior_bypassed": [
+        "default LanceDB storage backend"
+      ],
+      "observation_instrumentation": "sys.setprofile lifecycle markers; no private behavior bypass",
+      "pending": true,
+      "pgid": 2854342,
+      "pid": 2854342,
+      "private_override": null,
+      "provider_calls": 0,
+      "public_extension": "crewai.memory.storage.factory.set_memory_storage_factory",
+      "state": {
+        "counter": 3,
+        "id": "crewai-probe-run-a",
+        "payload": "payload-a-only",
+        "review_status": "pending_external_authority",
+        "trace": [
+          "crewai-probe-run-a:first",
+          "crewai-probe-run-a:second",
+          "await_review"
+        ]
+      },
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\nGATE2B_PHASE_MARKER=public_memory_storage_factory_registered\n",
+    "stdout": "Loading flow state from memory for UUID: crewai-probe-run-a\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u23f3 Flow Paused \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Paused - Waiting for Feedback                                          \u2502\n\u2502  Name: FeedbackProbeFlow                                                     \u2502\n\u2502  ID: crewai-probe-run-a                                                      \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n",
+    "timed_out": false,
+    "timeout_cleanup": {
+      "reaped": true,
+      "sent_sigkill": false,
+      "sent_sigterm": false
+    },
+    "timeout_seconds": 15,
+    "worker_pid": 2854342
+  },
+  "pending_persisted": true,
+  "resume": {
+    "classification": "completed",
+    "completed": true,
+    "execution_classification": "supported-public-extension",
+    "last_lifecycle_point": "public_memory_storage_factory_registered",
+    "lifecycle_markers": [
+      "worker_started",
+      "crewai_import_completed",
+      "public_memory_storage_factory_registered"
+    ],
+    "logical_run_id": "crewai-probe-run-a",
+    "mode": "feedback-resume-public",
+    "new_runtime_artifacts": [],
+    "process_group_id": 2854354,
+    "result": {
+      "architecture_evidence": "supported public extension candidate",
+      "blocked_provider_network_attempts": 0,
+      "execution_classification": "supported-public-extension",
+      "finished_at": "2026-08-12T01:53:08Z",
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "feedback-resume-public",
+      "model_calls": 0,
+      "normal_behavior_bypassed": [
+        "default LanceDB storage backend"
+      ],
+      "observation_instrumentation": "sys.setprofile lifecycle markers; no private behavior bypass",
+      "output": {
+        "counter": 4,
+        "id": "crewai-probe-run-a",
+        "payload": "payload-a-only",
+        "review_status": "approved_in_drupal_stand_in",
+        "trace": [
+          "crewai-probe-run-a:first",
+          "crewai-probe-run-a:second",
+          "await_review",
+          "observe_review"
+        ]
+      },
+      "pgid": 2854354,
+      "pid": 2854354,
+      "private_override": null,
+      "provider_calls": 0,
+      "public_extension": "crewai.memory.storage.factory.set_memory_storage_factory",
+      "state": {
+        "counter": 4,
+        "id": "crewai-probe-run-a",
+        "payload": "payload-a-only",
+        "review_status": "approved_in_drupal_stand_in",
+        "trace": [
+          "crewai-probe-run-a:first",
+          "crewai-probe-run-a:second",
+          "await_review",
+          "observe_review"
+        ]
+      },
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\nGATE2B_PHASE_MARKER=public_memory_storage_factory_registered\n",
+    "stdout": "",
+    "timed_out": false,
+    "timeout_cleanup": {
+      "reaped": true,
+      "sent_sigkill": false,
+      "sent_sigterm": false
+    },
+    "timeout_seconds": 15,
+    "worker_pid": 2854354
+  },
+  "separate_process_reconstruction": true
+}

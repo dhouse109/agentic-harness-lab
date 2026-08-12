@@ -1,0 +1,1293 @@
+{
+  "attempts_blocked_before_connect": true,
+  "event_count": 4,
+  "events": [
+    {
+      "blocked_before_connect": true,
+      "declared_phase": "checkpoint-json-write",
+      "destination": {
+        "host": "151.101.192.223",
+        "port": 443
+      },
+      "frames": [
+        {
+          "function": "_call_handlers",
+          "line": 419,
+          "source": "crewai/events/event_bus.py"
+        },
+        {
+          "function": "is_call_handler_safe",
+          "line": 78,
+          "source": "crewai/events/utils/handlers.py"
+        },
+        {
+          "function": "on_flow_started",
+          "line": 313,
+          "source": "crewai/events/event_listener.py"
+        },
+        {
+          "function": "handle_flow_started",
+          "line": 339,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "_show_version_update_message_if_needed",
+          "line": 78,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "is_newer_version_available",
+          "line": 186,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "check_version",
+          "line": 180,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "get_latest_version_from_pypi",
+          "line": 125,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "urlopen",
+          "line": 215,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "open",
+          "line": 515,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_open",
+          "line": 532,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_call_chain",
+          "line": 492,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "https_open",
+          "line": 1392,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "do_open",
+          "line": 1344,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "request",
+          "line": 1358,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_request",
+          "line": 1404,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "endheaders",
+          "line": 1353,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_output",
+          "line": 1113,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "send",
+          "line": 1057,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1492,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1023,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "create_connection",
+          "line": 850,
+          "source": "[stdlib-or-runner]/socket.py"
+        }
+      ],
+      "operation": "socket.connect",
+      "order": 1,
+      "path_classification": "unresolved_path",
+      "phase": "checkpoint-json-write",
+      "pid": 2866128,
+      "process_group_id": 2866128,
+      "timestamp": "2026-08-12T02:30:36.208Z"
+    },
+    {
+      "blocked_before_connect": true,
+      "declared_phase": "checkpoint-json-restore",
+      "destination": {
+        "host": "151.101.192.223",
+        "port": 443
+      },
+      "frames": [
+        {
+          "function": "_call_handlers",
+          "line": 419,
+          "source": "crewai/events/event_bus.py"
+        },
+        {
+          "function": "is_call_handler_safe",
+          "line": 78,
+          "source": "crewai/events/utils/handlers.py"
+        },
+        {
+          "function": "on_flow_started",
+          "line": 313,
+          "source": "crewai/events/event_listener.py"
+        },
+        {
+          "function": "handle_flow_started",
+          "line": 339,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "_show_version_update_message_if_needed",
+          "line": 78,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "is_newer_version_available",
+          "line": 186,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "check_version",
+          "line": 180,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "get_latest_version_from_pypi",
+          "line": 125,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "urlopen",
+          "line": 215,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "open",
+          "line": 515,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_open",
+          "line": 532,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_call_chain",
+          "line": 492,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "https_open",
+          "line": 1392,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "do_open",
+          "line": 1344,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "request",
+          "line": 1358,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_request",
+          "line": 1404,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "endheaders",
+          "line": 1353,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_output",
+          "line": 1113,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "send",
+          "line": 1057,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1492,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1023,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "create_connection",
+          "line": 850,
+          "source": "[stdlib-or-runner]/socket.py"
+        }
+      ],
+      "operation": "socket.connect",
+      "order": 1,
+      "path_classification": "unresolved_path",
+      "phase": "checkpoint-restore",
+      "pid": 2866157,
+      "process_group_id": 2866157,
+      "timestamp": "2026-08-12T02:30:42.020Z"
+    },
+    {
+      "blocked_before_connect": true,
+      "declared_phase": "checkpoint-sqlite-write",
+      "destination": {
+        "host": "151.101.0.223",
+        "port": 443
+      },
+      "frames": [
+        {
+          "function": "_call_handlers",
+          "line": 419,
+          "source": "crewai/events/event_bus.py"
+        },
+        {
+          "function": "is_call_handler_safe",
+          "line": 78,
+          "source": "crewai/events/utils/handlers.py"
+        },
+        {
+          "function": "on_flow_started",
+          "line": 313,
+          "source": "crewai/events/event_listener.py"
+        },
+        {
+          "function": "handle_flow_started",
+          "line": 339,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "_show_version_update_message_if_needed",
+          "line": 78,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "is_newer_version_available",
+          "line": 186,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "check_version",
+          "line": 180,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "get_latest_version_from_pypi",
+          "line": 125,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "urlopen",
+          "line": 215,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "open",
+          "line": 515,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_open",
+          "line": 532,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_call_chain",
+          "line": 492,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "https_open",
+          "line": 1392,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "do_open",
+          "line": 1344,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "request",
+          "line": 1358,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_request",
+          "line": 1404,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "endheaders",
+          "line": 1353,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_output",
+          "line": 1113,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "send",
+          "line": 1057,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1492,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1023,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "create_connection",
+          "line": 850,
+          "source": "[stdlib-or-runner]/socket.py"
+        }
+      ],
+      "operation": "socket.connect",
+      "order": 1,
+      "path_classification": "unresolved_path",
+      "phase": "checkpoint-sqlite-write",
+      "pid": 2866178,
+      "process_group_id": 2866178,
+      "timestamp": "2026-08-12T02:30:46.009Z"
+    },
+    {
+      "blocked_before_connect": true,
+      "declared_phase": "checkpoint-sqlite-restore",
+      "destination": {
+        "host": "151.101.0.223",
+        "port": 443
+      },
+      "frames": [
+        {
+          "function": "_call_handlers",
+          "line": 419,
+          "source": "crewai/events/event_bus.py"
+        },
+        {
+          "function": "is_call_handler_safe",
+          "line": 78,
+          "source": "crewai/events/utils/handlers.py"
+        },
+        {
+          "function": "on_flow_started",
+          "line": 313,
+          "source": "crewai/events/event_listener.py"
+        },
+        {
+          "function": "handle_flow_started",
+          "line": 339,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "_show_version_update_message_if_needed",
+          "line": 78,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "is_newer_version_available",
+          "line": 186,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "check_version",
+          "line": 180,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "get_latest_version_from_pypi",
+          "line": 125,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "urlopen",
+          "line": 215,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "open",
+          "line": 515,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_open",
+          "line": 532,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_call_chain",
+          "line": 492,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "https_open",
+          "line": 1392,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "do_open",
+          "line": 1344,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "request",
+          "line": 1358,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_request",
+          "line": 1404,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "endheaders",
+          "line": 1353,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_output",
+          "line": 1113,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "send",
+          "line": 1057,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1492,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1023,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "create_connection",
+          "line": 850,
+          "source": "[stdlib-or-runner]/socket.py"
+        }
+      ],
+      "operation": "socket.connect",
+      "order": 1,
+      "path_classification": "unresolved_path",
+      "phase": "checkpoint-restore",
+      "pid": 2866191,
+      "process_group_id": 2866191,
+      "timestamp": "2026-08-12T02:30:52.326Z"
+    }
+  ],
+  "model_calls": 0,
+  "provider_calls": 0,
+  "selected_architecture_uses_runtime_checkpoint": false,
+  "selected_path_network_attempts_in_fresh_capture": 0,
+  "status": "unresolved",
+  "targeted_phases": {
+    "checkpoint-json-restore": {
+      "classification": "completed",
+      "completed": true,
+      "execution_classification": "probe-isolated",
+      "last_lifecycle_point": "crewai_import_completed",
+      "lifecycle_markers": [
+        "worker_started",
+        "crewai_import_completed"
+      ],
+      "logical_run_id": "crewai-followup-checkpoint-json",
+      "mode": "checkpoint-restore",
+      "new_runtime_artifacts": [],
+      "process_group_id": 2866157,
+      "result": {
+        "architecture_evidence": "diagnostic only; cannot independently establish supported viability",
+        "blocked_network_events": [
+          {
+            "blocked_before_connect": true,
+            "destination": {
+              "host": "151.101.192.223",
+              "port": 443
+            },
+            "frames": [
+              {
+                "function": "_call_handlers",
+                "line": 419,
+                "source": "crewai/events/event_bus.py"
+              },
+              {
+                "function": "is_call_handler_safe",
+                "line": 78,
+                "source": "crewai/events/utils/handlers.py"
+              },
+              {
+                "function": "on_flow_started",
+                "line": 313,
+                "source": "crewai/events/event_listener.py"
+              },
+              {
+                "function": "handle_flow_started",
+                "line": 339,
+                "source": "crewai/events/utils/console_formatter.py"
+              },
+              {
+                "function": "_show_version_update_message_if_needed",
+                "line": 78,
+                "source": "crewai/events/utils/console_formatter.py"
+              },
+              {
+                "function": "is_newer_version_available",
+                "line": 186,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "check_version",
+                "line": 180,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "get_latest_version_from_pypi",
+                "line": 125,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "urlopen",
+                "line": 215,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "open",
+                "line": 515,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "_open",
+                "line": 532,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "_call_chain",
+                "line": 492,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "https_open",
+                "line": 1392,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "do_open",
+                "line": 1344,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "request",
+                "line": 1358,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "_send_request",
+                "line": 1404,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "endheaders",
+                "line": 1353,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "_send_output",
+                "line": 1113,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "send",
+                "line": 1057,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "connect",
+                "line": 1492,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "connect",
+                "line": 1023,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "create_connection",
+                "line": 850,
+                "source": "[stdlib-or-runner]/socket.py"
+              }
+            ],
+            "operation": "socket.connect",
+            "order": 1,
+            "phase": "checkpoint-restore",
+            "pid": 2866157,
+            "process_group_id": 2866157,
+            "timestamp": "2026-08-12T02:30:42.020Z"
+          }
+        ],
+        "blocked_provider_network_attempts": 1,
+        "diagnostic_question": "isolate Flow persistence mechanics from automatic memory startup",
+        "execution_classification": "probe-isolated",
+        "finished_at": "2026-08-12T02:30:42Z",
+        "logical_run_id": "crewai-followup-checkpoint-json",
+        "mode": "checkpoint-restore",
+        "model_calls": 0,
+        "normal_behavior_bypassed": [
+          "automatic Flow unified-memory construction"
+        ],
+        "output": {
+          "counter": 2,
+          "id": "crewai-followup-checkpoint-json",
+          "payload": "targeted-json",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-followup-checkpoint-json:first",
+            "crewai-followup-checkpoint-json:second"
+          ]
+        },
+        "pgid": 2866157,
+        "pid": 2866157,
+        "private_override": "_skip_auto_memory = True",
+        "provider_calls": 0,
+        "public_extension": null,
+        "state": {
+          "counter": 0,
+          "id": "bbe018d8-2547-4fc8-a1db-ded79d336314",
+          "payload": "unset",
+          "review_status": "not_requested",
+          "trace": []
+        },
+        "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02-followup/gate2b-step02-followup-20260812T022947Z-00000001"
+      },
+      "returncode": 0,
+      "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+      "stdout": "\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Execution \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Starting Flow Execution                                                     \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-json                                         \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Started \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Started                                                                \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-json                                         \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Execution Completed                                                    \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-json                                         \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n",
+      "timed_out": false,
+      "timeout_cleanup": {
+        "reaped": true,
+        "sent_sigkill": false,
+        "sent_sigterm": false
+      },
+      "timeout_seconds": 15,
+      "worker_pid": 2866157
+    },
+    "checkpoint-json-write": {
+      "classification": "completed",
+      "completed": true,
+      "execution_classification": "probe-isolated",
+      "last_lifecycle_point": "crewai_import_completed",
+      "lifecycle_markers": [
+        "worker_started",
+        "crewai_import_completed"
+      ],
+      "logical_run_id": "crewai-followup-checkpoint-json",
+      "mode": "checkpoint-json-write",
+      "new_runtime_artifacts": [
+        "flow-persistence.sqlite3",
+        "runtime-checkpoints-json/main/20260812T023036_55356e64_p-none.json",
+        "runtime-checkpoints-json/main/20260812T023036_f66b344e_p-none.json"
+      ],
+      "process_group_id": 2866128,
+      "result": {
+        "architecture_evidence": "diagnostic only; cannot independently establish supported viability",
+        "blocked_network_events": [
+          {
+            "blocked_before_connect": true,
+            "destination": {
+              "host": "151.101.192.223",
+              "port": 443
+            },
+            "frames": [
+              {
+                "function": "_call_handlers",
+                "line": 419,
+                "source": "crewai/events/event_bus.py"
+              },
+              {
+                "function": "is_call_handler_safe",
+                "line": 78,
+                "source": "crewai/events/utils/handlers.py"
+              },
+              {
+                "function": "on_flow_started",
+                "line": 313,
+                "source": "crewai/events/event_listener.py"
+              },
+              {
+                "function": "handle_flow_started",
+                "line": 339,
+                "source": "crewai/events/utils/console_formatter.py"
+              },
+              {
+                "function": "_show_version_update_message_if_needed",
+                "line": 78,
+                "source": "crewai/events/utils/console_formatter.py"
+              },
+              {
+                "function": "is_newer_version_available",
+                "line": 186,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "check_version",
+                "line": 180,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "get_latest_version_from_pypi",
+                "line": 125,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "urlopen",
+                "line": 215,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "open",
+                "line": 515,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "_open",
+                "line": 532,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "_call_chain",
+                "line": 492,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "https_open",
+                "line": 1392,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "do_open",
+                "line": 1344,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "request",
+                "line": 1358,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "_send_request",
+                "line": 1404,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "endheaders",
+                "line": 1353,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "_send_output",
+                "line": 1113,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "send",
+                "line": 1057,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "connect",
+                "line": 1492,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "connect",
+                "line": 1023,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "create_connection",
+                "line": 850,
+                "source": "[stdlib-or-runner]/socket.py"
+              }
+            ],
+            "operation": "socket.connect",
+            "order": 1,
+            "phase": "checkpoint-json-write",
+            "pid": 2866128,
+            "process_group_id": 2866128,
+            "timestamp": "2026-08-12T02:30:36.208Z"
+          }
+        ],
+        "blocked_provider_network_attempts": 1,
+        "checkpoints": [
+          "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02-followup/gate2b-step02-followup-20260812T022947Z-00000001/runtime-checkpoints-json/main/20260812T023036_55356e64_p-none.json",
+          "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02-followup/gate2b-step02-followup-20260812T022947Z-00000001/runtime-checkpoints-json/main/20260812T023036_f66b344e_p-none.json"
+        ],
+        "diagnostic_question": "isolate Flow persistence mechanics from automatic memory startup",
+        "execution_classification": "probe-isolated",
+        "finished_at": "2026-08-12T02:30:36Z",
+        "logical_run_id": "crewai-followup-checkpoint-json",
+        "mode": "checkpoint-json-write",
+        "model_calls": 0,
+        "normal_behavior_bypassed": [
+          "automatic Flow unified-memory construction"
+        ],
+        "output": {
+          "counter": 2,
+          "id": "crewai-followup-checkpoint-json",
+          "payload": "targeted-json",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-followup-checkpoint-json:first",
+            "crewai-followup-checkpoint-json:second"
+          ]
+        },
+        "pgid": 2866128,
+        "pid": 2866128,
+        "private_override": "_skip_auto_memory = True",
+        "provider_calls": 0,
+        "public_extension": null,
+        "state": {
+          "counter": 2,
+          "id": "crewai-followup-checkpoint-json",
+          "payload": "targeted-json",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-followup-checkpoint-json:first",
+            "crewai-followup-checkpoint-json:second"
+          ]
+        },
+        "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02-followup/gate2b-step02-followup-20260812T022947Z-00000001"
+      },
+      "returncode": 0,
+      "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+      "stdout": "\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Execution \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Starting Flow Execution                                                     \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-json                                         \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Started \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Started                                                                \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-json                                         \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Execution Completed                                                    \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-json                                         \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n",
+      "timed_out": false,
+      "timeout_cleanup": {
+        "reaped": true,
+        "sent_sigkill": false,
+        "sent_sigterm": false
+      },
+      "timeout_seconds": 15,
+      "worker_pid": 2866128
+    },
+    "checkpoint-sqlite-restore": {
+      "classification": "completed",
+      "completed": true,
+      "execution_classification": "probe-isolated",
+      "last_lifecycle_point": "crewai_import_completed",
+      "lifecycle_markers": [
+        "worker_started",
+        "crewai_import_completed"
+      ],
+      "logical_run_id": "crewai-followup-checkpoint-sqlite",
+      "mode": "checkpoint-restore",
+      "new_runtime_artifacts": [],
+      "process_group_id": 2866191,
+      "result": {
+        "architecture_evidence": "diagnostic only; cannot independently establish supported viability",
+        "blocked_network_events": [
+          {
+            "blocked_before_connect": true,
+            "destination": {
+              "host": "151.101.0.223",
+              "port": 443
+            },
+            "frames": [
+              {
+                "function": "_call_handlers",
+                "line": 419,
+                "source": "crewai/events/event_bus.py"
+              },
+              {
+                "function": "is_call_handler_safe",
+                "line": 78,
+                "source": "crewai/events/utils/handlers.py"
+              },
+              {
+                "function": "on_flow_started",
+                "line": 313,
+                "source": "crewai/events/event_listener.py"
+              },
+              {
+                "function": "handle_flow_started",
+                "line": 339,
+                "source": "crewai/events/utils/console_formatter.py"
+              },
+              {
+                "function": "_show_version_update_message_if_needed",
+                "line": 78,
+                "source": "crewai/events/utils/console_formatter.py"
+              },
+              {
+                "function": "is_newer_version_available",
+                "line": 186,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "check_version",
+                "line": 180,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "get_latest_version_from_pypi",
+                "line": 125,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "urlopen",
+                "line": 215,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "open",
+                "line": 515,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "_open",
+                "line": 532,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "_call_chain",
+                "line": 492,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "https_open",
+                "line": 1392,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "do_open",
+                "line": 1344,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "request",
+                "line": 1358,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "_send_request",
+                "line": 1404,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "endheaders",
+                "line": 1353,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "_send_output",
+                "line": 1113,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "send",
+                "line": 1057,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "connect",
+                "line": 1492,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "connect",
+                "line": 1023,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "create_connection",
+                "line": 850,
+                "source": "[stdlib-or-runner]/socket.py"
+              }
+            ],
+            "operation": "socket.connect",
+            "order": 1,
+            "phase": "checkpoint-restore",
+            "pid": 2866191,
+            "process_group_id": 2866191,
+            "timestamp": "2026-08-12T02:30:52.326Z"
+          }
+        ],
+        "blocked_provider_network_attempts": 1,
+        "diagnostic_question": "isolate Flow persistence mechanics from automatic memory startup",
+        "execution_classification": "probe-isolated",
+        "finished_at": "2026-08-12T02:30:52Z",
+        "logical_run_id": "crewai-followup-checkpoint-sqlite",
+        "mode": "checkpoint-restore",
+        "model_calls": 0,
+        "normal_behavior_bypassed": [
+          "automatic Flow unified-memory construction"
+        ],
+        "output": {
+          "counter": 2,
+          "id": "crewai-followup-checkpoint-sqlite",
+          "payload": "targeted-sqlite",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-followup-checkpoint-sqlite:first",
+            "crewai-followup-checkpoint-sqlite:second"
+          ]
+        },
+        "pgid": 2866191,
+        "pid": 2866191,
+        "private_override": "_skip_auto_memory = True",
+        "provider_calls": 0,
+        "public_extension": null,
+        "state": {
+          "counter": 0,
+          "id": "e6ba6090-2869-436a-9930-4fbc6f2c28f2",
+          "payload": "unset",
+          "review_status": "not_requested",
+          "trace": []
+        },
+        "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02-followup/gate2b-step02-followup-20260812T022947Z-00000001"
+      },
+      "returncode": 0,
+      "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+      "stdout": "\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Execution \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Starting Flow Execution                                                     \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-sqlite                                       \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Started \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Started                                                                \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-sqlite                                       \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Execution Completed                                                    \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-sqlite                                       \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n",
+      "timed_out": false,
+      "timeout_cleanup": {
+        "reaped": true,
+        "sent_sigkill": false,
+        "sent_sigterm": false
+      },
+      "timeout_seconds": 15,
+      "worker_pid": 2866191
+    },
+    "checkpoint-sqlite-write": {
+      "classification": "completed",
+      "completed": true,
+      "execution_classification": "probe-isolated",
+      "last_lifecycle_point": "crewai_import_completed",
+      "lifecycle_markers": [
+        "worker_started",
+        "crewai_import_completed"
+      ],
+      "logical_run_id": "crewai-followup-checkpoint-sqlite",
+      "mode": "checkpoint-sqlite-write",
+      "new_runtime_artifacts": [
+        "runtime-checkpoints.sqlite3"
+      ],
+      "process_group_id": 2866178,
+      "result": {
+        "architecture_evidence": "diagnostic only; cannot independently establish supported viability",
+        "blocked_network_events": [
+          {
+            "blocked_before_connect": true,
+            "destination": {
+              "host": "151.101.0.223",
+              "port": 443
+            },
+            "frames": [
+              {
+                "function": "_call_handlers",
+                "line": 419,
+                "source": "crewai/events/event_bus.py"
+              },
+              {
+                "function": "is_call_handler_safe",
+                "line": 78,
+                "source": "crewai/events/utils/handlers.py"
+              },
+              {
+                "function": "on_flow_started",
+                "line": 313,
+                "source": "crewai/events/event_listener.py"
+              },
+              {
+                "function": "handle_flow_started",
+                "line": 339,
+                "source": "crewai/events/utils/console_formatter.py"
+              },
+              {
+                "function": "_show_version_update_message_if_needed",
+                "line": 78,
+                "source": "crewai/events/utils/console_formatter.py"
+              },
+              {
+                "function": "is_newer_version_available",
+                "line": 186,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "check_version",
+                "line": 180,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "get_latest_version_from_pypi",
+                "line": 125,
+                "source": "crewai_core/version.py"
+              },
+              {
+                "function": "urlopen",
+                "line": 215,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "open",
+                "line": 515,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "_open",
+                "line": 532,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "_call_chain",
+                "line": 492,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "https_open",
+                "line": 1392,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "do_open",
+                "line": 1344,
+                "source": "[stdlib-or-runner]/request.py"
+              },
+              {
+                "function": "request",
+                "line": 1358,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "_send_request",
+                "line": 1404,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "endheaders",
+                "line": 1353,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "_send_output",
+                "line": 1113,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "send",
+                "line": 1057,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "connect",
+                "line": 1492,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "connect",
+                "line": 1023,
+                "source": "[stdlib-or-runner]/client.py"
+              },
+              {
+                "function": "create_connection",
+                "line": 850,
+                "source": "[stdlib-or-runner]/socket.py"
+              }
+            ],
+            "operation": "socket.connect",
+            "order": 1,
+            "phase": "checkpoint-sqlite-write",
+            "pid": 2866178,
+            "process_group_id": 2866178,
+            "timestamp": "2026-08-12T02:30:46.009Z"
+          }
+        ],
+        "blocked_provider_network_attempts": 1,
+        "checkpoints": [
+          "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02-followup/gate2b-step02-followup-20260812T022947Z-00000001/runtime-checkpoints.sqlite3#20260812T023046_9cf95e62",
+          "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02-followup/gate2b-step02-followup-20260812T022947Z-00000001/runtime-checkpoints.sqlite3#20260812T023046_a7a773eb"
+        ],
+        "diagnostic_question": "isolate Flow persistence mechanics from automatic memory startup",
+        "execution_classification": "probe-isolated",
+        "finished_at": "2026-08-12T02:30:46Z",
+        "logical_run_id": "crewai-followup-checkpoint-sqlite",
+        "mode": "checkpoint-sqlite-write",
+        "model_calls": 0,
+        "normal_behavior_bypassed": [
+          "automatic Flow unified-memory construction"
+        ],
+        "output": {
+          "counter": 2,
+          "id": "crewai-followup-checkpoint-sqlite",
+          "payload": "targeted-sqlite",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-followup-checkpoint-sqlite:first",
+            "crewai-followup-checkpoint-sqlite:second"
+          ]
+        },
+        "pgid": 2866178,
+        "pid": 2866178,
+        "private_override": "_skip_auto_memory = True",
+        "provider_calls": 0,
+        "public_extension": null,
+        "state": {
+          "counter": 2,
+          "id": "crewai-followup-checkpoint-sqlite",
+          "payload": "targeted-sqlite",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-followup-checkpoint-sqlite:first",
+            "crewai-followup-checkpoint-sqlite:second"
+          ]
+        },
+        "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02-followup/gate2b-step02-followup-20260812T022947Z-00000001"
+      },
+      "returncode": 0,
+      "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+      "stdout": "\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Execution \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Starting Flow Execution                                                     \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-sqlite                                       \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Started \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Started                                                                \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-sqlite                                       \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Execution Completed                                                    \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-followup-checkpoint-sqlite                                       \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n",
+      "timed_out": false,
+      "timeout_cleanup": {
+        "reaped": true,
+        "sent_sigkill": false,
+        "sent_sigterm": false
+      },
+      "timeout_seconds": 15,
+      "worker_pid": 2866178
+    }
+  }
+}

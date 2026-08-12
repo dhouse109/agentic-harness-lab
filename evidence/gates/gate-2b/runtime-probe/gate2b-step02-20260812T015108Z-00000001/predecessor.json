@@ -1,0 +1,14 @@
+{
+  "branch_at_generation": "gate-2b-step02-crewai-runtime-persistence-and-continuation-probe",
+  "diagnostic_predecessor": {
+    "disposition": "retained_diagnostic_unaccepted",
+    "evidence_id": "gate2b-step02-20260812T010531Z-00000001",
+    "manifest_sha256": "6bbb9619df39cfba939f09223bde9ce160b52476598d2b847a0591c3a0edb5f5",
+    "summary_sha256": "e7c2bde43dcc30c8b912099ac2e6682684649ebbd0125a10b5fe0d3940494aee"
+  },
+  "gate05_freeze_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+  "gate2a_freeze_sha256": "a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0",
+  "gate2b_step01_contract_sha256": "c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77",
+  "head_at_generation": "7bea4320c08670d8e9a0c71f88d10922fced8c1e",
+  "predecessor_sha": "7bea4320c08670d8e9a0c71f88d10922fced8c1e"
+}

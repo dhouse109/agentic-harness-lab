@@ -1,0 +1,9 @@
+{
+  "branch_at_generation": "gate-2b-step02-crewai-runtime-persistence-and-continuation-probe",
+  "gate05_freeze_sha256": "99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a",
+  "gate2a_freeze_sha256": "a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0",
+  "gate2b_step01_contract_sha256": "c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77",
+  "gate2b_step01_manifest_sha256": "e43fc0ec2dded8129ee0256cb84bbd2c6775161f31cadfda350249c49f56f097",
+  "head_at_generation": "7bea4320c08670d8e9a0c71f88d10922fced8c1e",
+  "predecessor_sha": "7bea4320c08670d8e9a0c71f88d10922fced8c1e"
+}

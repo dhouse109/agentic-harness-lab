@@ -45,6 +45,10 @@ Read `AGENTS.md`, `docs/CURRENT-STATUS.md`, the frozen predecessor artifacts, `d
 
 ## Current boundary
 
-Step 2B.01 freezes the contract and evidence plan with zero model calls, zero CrewAI-origin Drupal mutations, zero dependency changes, and zero Gate 2C executions.
+Step 2B.02 is complete with four immutable model-free evidence boundaries, a governed machine recommendation, explicit human architecture approval, ADR-0012, and a permanent closure audit. Machine status `recommendation_ready` and human status `approved` are separate provenance facts.
 
-The next model-free question is defined in `docs/gates/GATE-2B-STEP01-CREWAI-CONTRACT-AND-EVIDENCE-PLAN.md`. Do not implement it until Step 2B.01 passes, is committed and merged, local `main` is resynchronized, and the post-merge audit passes.
+The approved architecture uses supported CrewAI Flow, public `set_memory_storage_factory(...)`, `SQLiteFlowPersistence`, and `HumanFeedbackPending` / `from_pending()` / `resume()` while Drupal remains authoritative. Runtime `CheckpointConfig` and private `_skip_auto_memory` are nonselected. Later inference must use zero transport/guardrail retries, fail-closed structured output, explicit fallback accounting, `learn=False`, and complete SDK/provider request counting.
+
+The next proposed package is `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0`. It is named but locked and unbegun. Do not prepare it until Step 2B.02 is committed and merged, local `main` is resynchronized, and the lifecycle-compatible Step 2B.02 closure audit passes on merged `main`.
+
+Use `bash scripts/run-gate2b-step02-crewai-architecture-closure.sh audit` for the permanent closure check. Its `run` mode is restricted to the exact Step 2B.02 feature lifecycle; its `audit` mode validates retained evidence, hashes, ADR/closure provenance, and lifecycle state on legitimate commit and merge descendants without requiring `HEAD` to remain the pre-install predecessor.

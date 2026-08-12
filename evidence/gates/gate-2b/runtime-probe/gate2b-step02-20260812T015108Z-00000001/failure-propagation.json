@@ -1,0 +1,88 @@
+{
+  "gate2c_seam_exercised": false,
+  "method_failure": {
+    "classification": "completed",
+    "completed": true,
+    "execution_classification": "probe-isolated",
+    "last_lifecycle_point": "crewai_import_completed",
+    "lifecycle_markers": [
+      "worker_started",
+      "crewai_import_completed"
+    ],
+    "logical_run_id": "crewai-probe-failure",
+    "mode": "method-failure",
+    "new_runtime_artifacts": [],
+    "process_group_id": 2854365,
+    "result": {
+      "architecture_evidence": "diagnostic only; cannot independently establish supported viability",
+      "blocked_provider_network_attempts": 0,
+      "diagnostic_question": "isolate Flow persistence mechanics from automatic memory startup",
+      "exception": "deterministic-probe-failure",
+      "exception_type": "RuntimeError",
+      "execution_classification": "probe-isolated",
+      "finished_at": "2026-08-12T01:53:11Z",
+      "loaded_after_failure": null,
+      "logical_run_id": "crewai-probe-failure",
+      "mode": "method-failure",
+      "model_calls": 0,
+      "normal_behavior_bypassed": [
+        "automatic Flow unified-memory construction"
+      ],
+      "pgid": 2854365,
+      "pid": 2854365,
+      "private_override": "_skip_auto_memory = True",
+      "provider_calls": 0,
+      "public_extension": null,
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+    "stdout": "No flow state found for UUID: crewai-probe-failure\n",
+    "timed_out": false,
+    "timeout_cleanup": {
+      "reaped": true,
+      "sent_sigkill": false,
+      "sent_sigterm": false
+    },
+    "timeout_seconds": 15,
+    "worker_pid": 2854365
+  },
+  "unknown_checkpoint": {
+    "classification": "completed",
+    "completed": true,
+    "execution_classification": "provider-only",
+    "last_lifecycle_point": "crewai_import_completed",
+    "lifecycle_markers": [
+      "worker_started",
+      "crewai_import_completed"
+    ],
+    "logical_run_id": "crewai-probe-run-a",
+    "mode": "provider-invalid-read",
+    "new_runtime_artifacts": [],
+    "process_group_id": 2854399,
+    "result": {
+      "blocked_provider_network_attempts": 0,
+      "exception": "Checkpoint not found: missing",
+      "exception_type": "ValueError",
+      "finished_at": "2026-08-12T01:53:15Z",
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "provider-invalid-read",
+      "model_calls": 0,
+      "pgid": 2854399,
+      "pid": 2854399,
+      "provider_calls": 0,
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+    "stdout": "",
+    "timed_out": false,
+    "timeout_cleanup": {
+      "reaped": true,
+      "sent_sigkill": false,
+      "sent_sigterm": false
+    },
+    "timeout_seconds": 15,
+    "worker_pid": 2854399
+  }
+}

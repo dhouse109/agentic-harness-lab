@@ -1,0 +1,7 @@
+{
+  "crewai": "1.15.10",
+  "crewai_tools": "1.15.10",
+  "dependency_changes": 0,
+  "python": "3.12.13",
+  "uv_lock_sha256": "855e5edff2cb86eb64ea9856d239b19010e7d3b1f80c40e370ed81d66b8e4e7c"
+}

@@ -1,0 +1,21 @@
+{
+  "architecture_status": "recommendation_ready",
+  "authorization": {
+    "checkpoint_runs": 0,
+    "dependency_changes": 0,
+    "drupal_mutations": 0,
+    "gate2c_executions": 0,
+    "human_review_actions": 0,
+    "model_calls": 0,
+    "outbound_successful_connections": 0,
+    "provider_calls": 0,
+    "recommendation_submissions": 0,
+    "runtime_probe_runs": 0,
+    "source_mutations": 0
+  },
+  "evidence_id": "gate2b-step02-disposition-20260812T024610Z-00000001",
+  "gate2c": "deferred_unclaimed",
+  "human_architecture_approval_required": true,
+  "schema_version": 1,
+  "status": "pass"
+}

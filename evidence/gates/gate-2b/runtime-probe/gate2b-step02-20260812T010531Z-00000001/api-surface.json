@@ -1,0 +1,57 @@
+{
+  "files": {
+    "checkpoint_config": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/state/checkpoint_config.py",
+      "sha256": "d9b84dc83c8100fc71551938c0e6879fbabab534c369a0fe3055f5c1fbec003a"
+    },
+    "checkpoint_listener": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/state/checkpoint_listener.py",
+      "sha256": "2eccb5df1e0f5a8c79f6ececeb528e66f0d8007e77ad3f5d61afb86a62c96870"
+    },
+    "flow_persistence": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/flow/persistence/sqlite.py",
+      "sha256": "89da1729edf0b0fcbc1081601cb04123d6b5a90152df61b60f3bcefdbeb2e6dc"
+    },
+    "flow_runtime": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py",
+      "sha256": "7ffbc8e5255b72dfa7cbcd5bcc48a35e569d40907a8d80cc932662af32ba1514"
+    },
+    "json_provider": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/state/provider/json_provider.py",
+      "sha256": "b2d0263f48885fc8b86525f099c1d0388aea57a19e85fe763622497b1cb24964"
+    },
+    "llm": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/llm.py",
+      "sha256": "5ea3650e7c89f34cf46c9437a1fa33722caf2557770af0ece563ab2de7c08897"
+    },
+    "runtime_state": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/state/runtime.py",
+      "sha256": "855e9132a439bc7e93f9808787e96f3c4bb2ac8432fade677e79a1d743718981"
+    },
+    "sqlite_provider": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/state/provider/sqlite_provider.py",
+      "sha256": "cf249fc94a5d83b5a57f9e99e452a73e9cf6f8520fc16c6cff5150a21bd2ccf5"
+    },
+    "task": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/task.py",
+      "sha256": "fe8eb35ed6ca1e0b077dbbe9de0f414dc222d036ba0eca18b233c374ee9e37a4"
+    }
+  },
+  "observed_source_distinctions": [
+    "restore_from_state_id hydrates persisted Flow state into a new run identity and then enters kickoff",
+    "runtime checkpoints serialize completed methods, method outputs, method counts, and Flow state",
+    "from_pending loads pending context through FlowPersistence and resume triggers downstream listeners",
+    "SQLiteFlowPersistence stores pending feedback context separately from ordinary state snapshots"
+  ],
+  "signatures": {
+    "CheckpointConfig": "(*, location: str = './.checkpoints', on_events: list[typing.Union[typing.Literal['task_started', 'task_completed', 'task_failed', 'task_evaluation', 'crew_kickoff_started', 'crew_kickoff_completed', 'crew_kickoff_failed', 'crew_train_started', 'crew_train_completed', 'crew_train_failed', 'crew_test_started', 'crew_test_completed', 'crew_test_failed', 'crew_test_result', 'agent_execution_started', 'agent_execution_completed', 'agent_execution_error', 'lite_agent_execution_started', 'lite_agent_execution_completed', 'lite_agent_execution_error', 'agent_evaluation_started', 'agent_evaluation_completed', 'agent_evaluation_failed', 'flow_created', 'flow_started', 'flow_finished', 'flow_failed', 'flow_paused', 'method_execution_started', 'method_execution_finished', 'method_execution_failed', 'method_execution_paused', 'human_feedback_requested', 'human_feedback_received', 'flow_input_requested', 'flow_input_received', 'llm_call_started', 'llm_call_completed', 'llm_call_failed', 'llm_stream_chunk', 'llm_thinking_chunk', 'llm_guardrail_started', 'llm_guardrail_completed', 'llm_guardrail_failed', 'tool_usage_started', 'tool_usage_finished', 'tool_usage_error', 'tool_validate_input_error', 'tool_selection_error', 'tool_execution_error', 'memory_save_started', 'memory_save_completed', 'memory_save_failed', 'memory_query_started', 'memory_query_completed', 'memory_query_failed', 'memory_retrieval_started', 'memory_retrieval_completed', 'memory_retrieval_failed', 'knowledge_search_query_started', 'knowledge_search_query_completed', 'knowledge_query_started', 'knowledge_query_completed', 'knowledge_query_failed', 'knowledge_search_query_failed', 'agent_reasoning_started', 'agent_reasoning_completed', 'agent_reasoning_failed', 'mcp_connection_started', 'mcp_connection_completed', 'mcp_connection_failed', 'mcp_tool_execution_started', 'mcp_tool_execution_completed', 'mcp_tool_execution_failed', 'mcp_config_fetch_failed', 'step_observation_started', 'step_observation_completed', 'step_observation_failed', 'plan_refinement', 'plan_replan_triggered', 'goal_achieved_early', 'skill_discovery_started', 'skill_discovery_completed', 'skill_loaded', 'skill_activated', 'skill_load_failed', 'agent_logs_started', 'agent_logs_execution', 'a2a_delegation_started', 'a2a_delegation_completed', 'a2a_conversation_started', 'a2a_conversation_completed', 'a2a_message_sent', 'a2a_response_received', 'a2a_polling_started', 'a2a_polling_status', 'a2a_push_notification_registered', 'a2a_push_notification_received', 'a2a_push_notification_sent', 'a2a_push_notification_timeout', 'a2a_streaming_started', 'a2a_streaming_chunk', 'a2a_agent_card_fetched', 'a2a_authentication_failed', 'a2a_artifact_received', 'a2a_connection_error', 'a2a_server_task_started', 'a2a_server_task_completed', 'a2a_server_task_canceled', 'a2a_server_task_failed', 'a2a_parallel_delegation_started', 'a2a_parallel_delegation_completed', 'a2a_transport_negotiated', 'a2a_content_type_negotiated', 'a2a_context_created', 'a2a_context_expired', 'a2a_context_idle', 'a2a_context_completed', 'a2a_context_pruned', 'SIGTERM', 'SIGINT', 'SIGHUP', 'SIGTSTP', 'SIGCONT', 'cc_env', 'codex_env', 'cursor_env', 'default_env'], typing.Literal['*']]] = ['task_completed'], provider: crewai.state.provider.json_provider.JsonProvider | crewai.state.provider.sqlite_provider.SqliteProvider = <factory>, max_checkpoints: int | None = None, restore_from: pathlib.Path | str | None = None) -> None",
+    "Flow.from_checkpoint": "(config: 'CheckpointConfig', *, definition: 'FlowDefinition | None' = None) -> 'Flow'",
+    "Flow.from_pending": "(flow_id: 'str', persistence: 'FlowPersistence | None' = None, *, definition: 'FlowDefinition | None' = None, **kwargs: 'Any') -> 'Flow[Any]'",
+    "Flow.kickoff": "(self, inputs: 'dict[str, Any] | None' = None, input_files: 'dict[str, FileInput] | None' = None, from_checkpoint: 'CheckpointConfig | None' = None, restore_from_state_id: 'str | None' = None) -> 'Any | StreamSession[Any]'",
+    "Flow.resume": "(self, feedback: 'str' = '') -> 'Any'",
+    "JsonProvider.from_checkpoint": "(self, location: 'str') -> 'str'",
+    "SQLiteFlowPersistence.load_state": "(self, flow_uuid: 'str') -> 'dict[str, Any] | None'",
+    "SqliteProvider.from_checkpoint": "(self, location: 'str') -> 'str'"
+  },
+  "status": "inspected"
+}

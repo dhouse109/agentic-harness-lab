@@ -37,8 +37,15 @@ and lifecycle and recovery.
 - **Completed package:** `gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.1`.
 - **Gate 2A handoff package (historical next package):** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
 - **Gate 2A freeze:** `shared/contracts/GATE2A-LANGGRAPH-FREEZE.json` (`a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0`).
-- **Step 2B.01:** complete.
-- **Next package:** `gate-2b-step02-crewai-runtime-persistence-and-continuation-probe-v1.0.0`.
+- **Step 2B.01:** complete, merged, and post-merge audited.
+- **Completed Step 2B.02 package:** `gate-2b-step02-crewai-architecture-adr-and-closure-v1.0.0`.
+- **Step 2B.02:** complete with retained model-free evidence, permanent architecture audit, and explicit human architecture approval.
+- **Next package:** `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0` is named but locked and unbegun pending commit, merge, resynchronization, and post-merge audit.
+- **Retained Step 2B.02 diagnostic:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid and retained, but superseded/unaccepted as conclusive architecture evidence after integrity review. At that capture boundary, Step 2B.02 remained open.
+- **Retained Step 2B.02 v2 capture:** `gate2b-step02-20260812T015108Z-00000001` passed its capture boundary with architecture unresolved.
+- **Retained Step 2B.02 supplemental capture:** `gate2b-step02-followup-20260812T022947Z-00000001` corrected native fallback and checkpoint semantics while immutably retaining four observed version-check call paths as `unresolved_path`.
+- **Accepted Step 2B.02 governed disposition:** `gate2b-step02-disposition-20260812T024610Z-00000001` preserves those raw classifications, binds the call stacks to pinned-source version-check provenance, verifies `CREWAI_DISABLE_VERSION_CHECK=true`, and passes all 25 permanent predicates with machine status `recommendation_ready`.
+- **Accepted CrewAI architecture:** [ADR-0012](docs/decisions/ADR-0012-crewai-flow-persistence-and-human-review-continuation.md) records the distinct human approval of supported Flow, public `set_memory_storage_factory(...)`, `SQLiteFlowPersistence`, and `HumanFeedbackPending` / `from_pending()` / `resume()` with Drupal authority preserved; runtime `CheckpointConfig` and private `_skip_auto_memory` are nonselected.
 Accepted Step 2B.01 evidence run: `gate2b-step01-20260811T231020Z-00000002`
 Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77`
 Accepted Step 2A.10 certification evidence: `evidence/gates/gate-2a/certification/gate2a-step10-20260811T034835Z-03f93652`
@@ -121,10 +128,11 @@ Gate 2B continues the package-driven local workflow inside WSL2. Read:
 AGENTS.md
 docs/CODEX-GATE-2B-RUNBOOK.md
 docs/gates/GATE-2B-STEP01-CREWAI-CONTRACT-AND-EVIDENCE-PLAN.md
+docs/gates/GATE-2B-STEP02-CREWAI-RUNTIME-PERSISTENCE-AND-CONTINUATION-PROBE.md
 docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md
 ```
 
-Delivery packages remain outside Git under `~/projects/agentic-harness-package-staging/`. Step 2B.01 is model-free, Drupal-mutation-free, dependency-neutral, and Gate-2C-free. It freezes only the CrewAI comparison contract and evidence boundary. Runtime capabilities discovered through source inspection remain classified as inspected, not observed, until the next model-free probe.
+Delivery packages remain outside Git under `~/projects/agentic-harness-package-staging/`. Step 2B.02 observes pinned CrewAI runtime behavior model-free and mutation-free. Its evidence must distinguish state persistence, checkpoint restoration, continuation, replay, and re-execution; it does not establish Gate 2C recovery evidence.
 
 ## Shared task
 

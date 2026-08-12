@@ -1,0 +1,507 @@
+{
+  "events": [
+    {
+      "architecture_blocking": false,
+      "declared_phase": "checkpoint-json-write",
+      "event_order": 1,
+      "event_sha256": "4311f64cb91902792476267e4ae1b1240022d83466972895eca8dfd2e8f99aee",
+      "governed_disposition": "crewai_version_availability_check",
+      "original_classification": "unresolved_path",
+      "retained_call_path": [
+        {
+          "function": "_call_handlers",
+          "line": 419,
+          "source": "crewai/events/event_bus.py"
+        },
+        {
+          "function": "is_call_handler_safe",
+          "line": 78,
+          "source": "crewai/events/utils/handlers.py"
+        },
+        {
+          "function": "on_flow_started",
+          "line": 313,
+          "source": "crewai/events/event_listener.py"
+        },
+        {
+          "function": "handle_flow_started",
+          "line": 339,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "_show_version_update_message_if_needed",
+          "line": 78,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "is_newer_version_available",
+          "line": 186,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "check_version",
+          "line": 180,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "get_latest_version_from_pypi",
+          "line": 125,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "urlopen",
+          "line": 215,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "open",
+          "line": 515,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_open",
+          "line": 532,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_call_chain",
+          "line": 492,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "https_open",
+          "line": 1392,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "do_open",
+          "line": 1344,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "request",
+          "line": 1358,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_request",
+          "line": 1404,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "endheaders",
+          "line": 1353,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_output",
+          "line": 1113,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "send",
+          "line": 1057,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1492,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1023,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "create_connection",
+          "line": 850,
+          "source": "[stdlib-or-runner]/socket.py"
+        }
+      ],
+      "selected_path_relevance": "unrelated_console_version_behavior; publicly suppressible; selected Flow/pending-resume capture recorded zero attempts"
+    },
+    {
+      "architecture_blocking": false,
+      "declared_phase": "checkpoint-json-restore",
+      "event_order": 1,
+      "event_sha256": "54220e6346d5ac1386e08eab7d35187f46ce529d11f46e89c880081f9b739da6",
+      "governed_disposition": "crewai_version_availability_check",
+      "original_classification": "unresolved_path",
+      "retained_call_path": [
+        {
+          "function": "_call_handlers",
+          "line": 419,
+          "source": "crewai/events/event_bus.py"
+        },
+        {
+          "function": "is_call_handler_safe",
+          "line": 78,
+          "source": "crewai/events/utils/handlers.py"
+        },
+        {
+          "function": "on_flow_started",
+          "line": 313,
+          "source": "crewai/events/event_listener.py"
+        },
+        {
+          "function": "handle_flow_started",
+          "line": 339,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "_show_version_update_message_if_needed",
+          "line": 78,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "is_newer_version_available",
+          "line": 186,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "check_version",
+          "line": 180,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "get_latest_version_from_pypi",
+          "line": 125,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "urlopen",
+          "line": 215,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "open",
+          "line": 515,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_open",
+          "line": 532,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_call_chain",
+          "line": 492,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "https_open",
+          "line": 1392,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "do_open",
+          "line": 1344,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "request",
+          "line": 1358,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_request",
+          "line": 1404,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "endheaders",
+          "line": 1353,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_output",
+          "line": 1113,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "send",
+          "line": 1057,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1492,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1023,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "create_connection",
+          "line": 850,
+          "source": "[stdlib-or-runner]/socket.py"
+        }
+      ],
+      "selected_path_relevance": "unrelated_console_version_behavior; publicly suppressible; selected Flow/pending-resume capture recorded zero attempts"
+    },
+    {
+      "architecture_blocking": false,
+      "declared_phase": "checkpoint-sqlite-write",
+      "event_order": 1,
+      "event_sha256": "77a5545b53887e4e30971a175710efaa2c808e2e26d48989e9c7144ed0142dfc",
+      "governed_disposition": "crewai_version_availability_check",
+      "original_classification": "unresolved_path",
+      "retained_call_path": [
+        {
+          "function": "_call_handlers",
+          "line": 419,
+          "source": "crewai/events/event_bus.py"
+        },
+        {
+          "function": "is_call_handler_safe",
+          "line": 78,
+          "source": "crewai/events/utils/handlers.py"
+        },
+        {
+          "function": "on_flow_started",
+          "line": 313,
+          "source": "crewai/events/event_listener.py"
+        },
+        {
+          "function": "handle_flow_started",
+          "line": 339,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "_show_version_update_message_if_needed",
+          "line": 78,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "is_newer_version_available",
+          "line": 186,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "check_version",
+          "line": 180,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "get_latest_version_from_pypi",
+          "line": 125,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "urlopen",
+          "line": 215,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "open",
+          "line": 515,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_open",
+          "line": 532,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_call_chain",
+          "line": 492,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "https_open",
+          "line": 1392,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "do_open",
+          "line": 1344,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "request",
+          "line": 1358,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_request",
+          "line": 1404,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "endheaders",
+          "line": 1353,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_output",
+          "line": 1113,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "send",
+          "line": 1057,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1492,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1023,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "create_connection",
+          "line": 850,
+          "source": "[stdlib-or-runner]/socket.py"
+        }
+      ],
+      "selected_path_relevance": "unrelated_console_version_behavior; publicly suppressible; selected Flow/pending-resume capture recorded zero attempts"
+    },
+    {
+      "architecture_blocking": false,
+      "declared_phase": "checkpoint-sqlite-restore",
+      "event_order": 1,
+      "event_sha256": "bb850055cc97f095f952bd6fa2bffcf8717d0fd4f410e4c8c8cb818189903f83",
+      "governed_disposition": "crewai_version_availability_check",
+      "original_classification": "unresolved_path",
+      "retained_call_path": [
+        {
+          "function": "_call_handlers",
+          "line": 419,
+          "source": "crewai/events/event_bus.py"
+        },
+        {
+          "function": "is_call_handler_safe",
+          "line": 78,
+          "source": "crewai/events/utils/handlers.py"
+        },
+        {
+          "function": "on_flow_started",
+          "line": 313,
+          "source": "crewai/events/event_listener.py"
+        },
+        {
+          "function": "handle_flow_started",
+          "line": 339,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "_show_version_update_message_if_needed",
+          "line": 78,
+          "source": "crewai/events/utils/console_formatter.py"
+        },
+        {
+          "function": "is_newer_version_available",
+          "line": 186,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "check_version",
+          "line": 180,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "get_latest_version_from_pypi",
+          "line": 125,
+          "source": "crewai_core/version.py"
+        },
+        {
+          "function": "urlopen",
+          "line": 215,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "open",
+          "line": 515,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_open",
+          "line": 532,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "_call_chain",
+          "line": 492,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "https_open",
+          "line": 1392,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "do_open",
+          "line": 1344,
+          "source": "[stdlib-or-runner]/request.py"
+        },
+        {
+          "function": "request",
+          "line": 1358,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_request",
+          "line": 1404,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "endheaders",
+          "line": 1353,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "_send_output",
+          "line": 1113,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "send",
+          "line": 1057,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1492,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "connect",
+          "line": 1023,
+          "source": "[stdlib-or-runner]/client.py"
+        },
+        {
+          "function": "create_connection",
+          "line": 850,
+          "source": "[stdlib-or-runner]/socket.py"
+        }
+      ],
+      "selected_path_relevance": "unrelated_console_version_behavior; publicly suppressible; selected Flow/pending-resume capture recorded zero attempts"
+    }
+  ],
+  "evidence_id": "gate2b-step02-disposition-20260812T024610Z-00000001",
+  "governed_disposition": "crewai_version_availability_check",
+  "pinned_runtime": {
+    "crewai": "1.15.10",
+    "crewai_core": "1.15.10",
+    "crewai_tools": "1.15.10"
+  },
+  "public_disable_control": {
+    "disabled_control_called_version_helpers": false,
+    "enabled_control_called_version_helpers": true,
+    "name": "CREWAI_DISABLE_VERSION_CHECK",
+    "successful_network_connections": 0,
+    "value": "true"
+  },
+  "raw_classification_preserved": "unresolved_path",
+  "schema_version": 1,
+  "status": "pass",
+  "supplemental_manifest_sha256": "6654fd33e10efdf275f0aa9ea104293ed1f7ba3092d054718a9ac0a491b07a79",
+  "supplemental_run_id": "gate2b-step02-followup-20260812T022947Z-00000001"
+}

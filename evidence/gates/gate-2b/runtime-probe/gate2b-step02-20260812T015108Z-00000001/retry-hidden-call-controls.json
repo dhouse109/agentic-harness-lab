@@ -1,0 +1,33 @@
+{
+  "blocked_provider_network_attempts": 4,
+  "other_layers": {
+    "application_retry": "not added by this probe",
+    "feedback_outcome": "non-empty feedback with emit may make structured plus fallback LLM calls; emit=None and llm=None avoid collapse",
+    "guardrail_retry": "guardrail_max_retries + 1 total attempts",
+    "restore_replay": "restoring a Flow execution unit may re-execute model-owning methods and must be budgeted separately",
+    "task_retry": "guardrail failure reinvokes the task agent"
+  },
+  "provider_call_still_required_later": "model-free source evidence identifies controls; later real-call evidence must verify the declared one-call counter",
+  "status": "resolved_from_pinned_source",
+  "sufficient_for_later_one_call_design": true,
+  "transport": {
+    "crewai_openai_default_max_retries": 2,
+    "crewai_passes_max_retries_to_openai_sdk": true,
+    "later_requirement": "construct the native OpenAI completion path with max_retries=0 and count every SDK request",
+    "openai_sdk_default_max_retries": 2,
+    "openai_sdk_version": "2.53.0",
+    "openai_sdk_zero_disables_retries": true,
+    "retry_can_occur_below_framework_counter": true,
+    "source_resolution_sufficient": true
+  },
+  "validation": {
+    "guardrail_failure_reinvokes_agent": true,
+    "later_requirement": "avoid correction conversion, set guardrail_max_retries=0, fail closed on invalid structured output, and count any API fallback",
+    "native_openai_parse_can_fall_through_to_create": false,
+    "output_converter_default_attempts": 3,
+    "schema_parse_is_local_first": true,
+    "source_resolution_sufficient": true,
+    "structured_output_correction_can_call_llm": true,
+    "task_guardrail_default_retries": 3
+  }
+}

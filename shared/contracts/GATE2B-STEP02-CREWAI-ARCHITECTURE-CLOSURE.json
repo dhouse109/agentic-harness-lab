@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "step": "2B.02",
+  "status": "complete",
+  "decision_date": "2026-08-11",
+  "machine_recommendation": {
+    "status": "recommendation_ready",
+    "evidence_id": "gate2b-step02-disposition-20260812T024610Z-00000001",
+    "manifest_sha256": "8666c77d3fc7f6a82a88adec652ea30b59198a3ce700ea14069b2ea6496c0f7d",
+    "summary_sha256": "77d56c2a9df0c3f6c269c1c9b3a5e9a4ec816541827aa5add74b570bcf15ad45",
+    "architecture_disposition_sha256": "ab23b6a78638b7c45346ba0b5419745779f37b56e0fe6c67faac8b49597040d8",
+    "permanent_predicates_passed": 25
+  },
+  "human_decision": {
+    "status": "approved",
+    "authority": "human approval authority",
+    "approved_candidate": [
+      "supported CrewAI Flow",
+      "public set_memory_storage_factory(...) extension",
+      "SQLiteFlowPersistence",
+      "HumanFeedbackPending",
+      "from_pending()/resume()",
+      "Drupal-authoritative human review",
+      "learn=False",
+      "CREWAI_DISABLE_VERSION_CHECK=true",
+      "later transport retries configured to zero",
+      "guardrail retries zero or avoided",
+      "invalid structured output fails closed",
+      "structured-output correction/fallback prevented or separately budgeted",
+      "every SDK/provider request counted"
+    ],
+    "checkpoint_characterization": "terminal-output reconstruction observed; live Flow state restoration/continuation not demonstrated",
+    "nonselected": [
+      "runtime CheckpointConfig",
+      "private _skip_auto_memory"
+    ]
+  },
+  "adr": {
+    "path": "docs/decisions/ADR-0012-crewai-flow-persistence-and-human-review-continuation.md",
+    "sha256": "58414e67a2527edb402982391b8af78793a19b7bdaab1d86ea2571a6f995a278",
+    "status": "Accepted"
+  },
+  "retained_evidence": [
+    {
+      "evidence_id": "gate2b-step02-20260812T010531Z-00000001",
+      "path": "evidence/gates/gate-2b/runtime-probe/gate2b-step02-20260812T010531Z-00000001",
+      "manifest_sha256": "6bbb9619df39cfba939f09223bde9ce160b52476598d2b847a0591c3a0edb5f5",
+      "summary_sha256": "e7c2bde43dcc30c8b912099ac2e6682684649ebbd0125a10b5fe0d3940494aee",
+      "disposition": "diagnostic; superseded/unaccepted for architecture selection"
+    },
+    {
+      "evidence_id": "gate2b-step02-20260812T015108Z-00000001",
+      "path": "evidence/gates/gate-2b/runtime-probe/gate2b-step02-20260812T015108Z-00000001",
+      "manifest_sha256": "8339eca113dfb1bc5cfa15d2fcbc1f95e104d908852e0656024f299f4e2c2b66",
+      "summary_sha256": "b03d7c8a787757b020f889faa8cb3f6393edfb0f477e2a39dd93dbbd868ef349",
+      "disposition": "completed runtime capture; initially architecture unresolved"
+    },
+    {
+      "evidence_id": "gate2b-step02-followup-20260812T022947Z-00000001",
+      "path": "evidence/gates/gate-2b/runtime-probe-followup/gate2b-step02-followup-20260812T022947Z-00000001",
+      "manifest_sha256": "6654fd33e10efdf275f0aa9ea104293ed1f7ba3092d054718a9ac0a491b07a79",
+      "summary_sha256": "48fa2e41db6089cf63d3f250b8a31c547c322dc8e72d8a25ae9dc1078a734a57",
+      "disposition": "completed supplemental capture; source attribution initially unresolved"
+    },
+    {
+      "evidence_id": "gate2b-step02-disposition-20260812T024610Z-00000001",
+      "path": "evidence/gates/gate-2b/runtime-probe-disposition/gate2b-step02-disposition-20260812T024610Z-00000001",
+      "manifest_sha256": "8666c77d3fc7f6a82a88adec652ea30b59198a3ce700ea14069b2ea6496c0f7d",
+      "summary_sha256": "77d56c2a9df0c3f6c269c1c9b3a5e9a4ec816541827aa5add74b570bcf15ad45",
+      "architecture_disposition_sha256": "ab23b6a78638b7c45346ba0b5419745779f37b56e0fe6c67faac8b49597040d8",
+      "disposition": "machine recommendation_ready; human architecture approval governed separately"
+    }
+  ],
+  "authorization": {
+    "model_calls": 0,
+    "provider_calls": 0,
+    "outbound_successful_connections": 0,
+    "drupal_mutations": 0,
+    "source_mutations": 0,
+    "human_review_actions": 0,
+    "dependency_changes": 0,
+    "recommendation_submissions": 0,
+    "gate2c_executions": 0,
+    "runtime_probe_reruns": 0,
+    "checkpoint_reruns": 0,
+    "new_experiment_evidence_runs": 0
+  },
+  "gate2c": "deferred_unclaimed",
+  "next_boundary": {
+    "step": "2B.03",
+    "package": "gate-2b-step03-crewai-shared-operation-adapters-v1.0.0",
+    "status": "named_not_begun"
+  }
+}

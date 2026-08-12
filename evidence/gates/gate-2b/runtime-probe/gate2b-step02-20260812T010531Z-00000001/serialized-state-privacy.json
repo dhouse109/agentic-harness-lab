@@ -1,0 +1,14 @@
+{
+  "artifact_count": 7,
+  "checks": [
+    "credentials",
+    "authorization_headers",
+    "raw_image_or_data_url",
+    "long_base64_payload",
+    "hidden_reasoning_markers"
+  ],
+  "environment_dump_retained": false,
+  "findings": [],
+  "full_article_body_in_probe_state": false,
+  "status": "pass"
+}

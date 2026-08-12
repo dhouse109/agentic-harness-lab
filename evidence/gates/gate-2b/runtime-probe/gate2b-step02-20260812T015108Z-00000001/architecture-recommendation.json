@@ -1,0 +1,36 @@
+{
+  "adr_created": false,
+  "blocking_reasons": [
+    "zero_authorization_budgets"
+  ],
+  "candidate_paths": [
+    "default_unmodified",
+    "supported_public_extension",
+    "probe_isolated_diagnostic",
+    "runtime_checkpoint_json",
+    "runtime_checkpoint_sqlite"
+  ],
+  "next_action": "resolve listed blockers within Step 2B.02",
+  "prerequisites": {
+    "continuation_semantics_characterized": true,
+    "default_flow_classified": true,
+    "failure_controls_complete": true,
+    "human_feedback_implications_characterized": true,
+    "independent_run_a_and_b_isolation": true,
+    "privacy_pass": true,
+    "process_boundary_characterized": true,
+    "runtime_checkpoint_characterized": true,
+    "selected_candidate_not_private_only": true,
+    "selected_candidate_supported_public_api": true,
+    "storage_provenance_pass": true,
+    "task_guardrail_retry_resolved": true,
+    "transport_retry_resolved": true,
+    "unknown_identity_control_pass": true,
+    "validation_retry_resolved": true,
+    "wrong_identity_control_pass": true,
+    "zero_authorization_budgets": false
+  },
+  "private_instrumentation_is_sole_support": false,
+  "selected_architecture": null,
+  "status": "unresolved"
+}
