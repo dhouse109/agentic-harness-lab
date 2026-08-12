@@ -1,0 +1,48 @@
+{
+  "crewai_version": "1.15.10",
+  "learning_paths": {
+    "can_add_inference": true,
+    "definition_sha256": "4bc07d48933745463f9e5c67bd729862081788465ef677ff646fee8d8ea90073",
+    "definition_source": "crewai/.venv/lib/python3.12/site-packages/crewai/flow/human_feedback.py",
+    "distillation_definition_lines": [
+      301
+    ],
+    "distillation_function": "_distill_and_store_lessons",
+    "distillation_invocation_lines": [
+      110,
+      3526
+    ],
+    "invocation_sha256": "7ffbc8e5255b72dfa7cbcd5bcc48a35e569d40907a8d80cc932662af32ba1514",
+    "invocation_source": "crewai/.venv/lib/python3.12/site-packages/crewai/flow/runtime/__init__.py",
+    "later_requirement": "set learn=False for the controlled review boundary",
+    "pre_review_definition_lines": [
+      247
+    ],
+    "pre_review_function": "_pre_review_with_lessons",
+    "pre_review_invocation_lines": [
+      111,
+      3474
+    ]
+  },
+  "status": "inspected_pinned_source",
+  "structured_output_fallback": {
+    "additional_provider_request_possible": true,
+    "condition": "when response_model parsing produces no truthy parsed_object, execution proceeds to chat.completions.create",
+    "create_lines": [
+      1920,
+      2211,
+      2349,
+      2487,
+      2554
+    ],
+    "function": "OpenAICompletion._handle_completion",
+    "later_one_call_control": "count parse and create as separate provider requests; fail closed before fallback or use a path proven to return parsed output",
+    "native_parse_can_fall_through_to_create": true,
+    "parse_lines": [
+      1891,
+      2318
+    ],
+    "sha256": "d37e6f9c244c565ab611c9b13e93b1cb7d65291a5d1f758f098b09c895aa475a",
+    "source": "crewai/.venv/lib/python3.12/site-packages/crewai/llms/providers/openai/completion.py"
+  }
+}

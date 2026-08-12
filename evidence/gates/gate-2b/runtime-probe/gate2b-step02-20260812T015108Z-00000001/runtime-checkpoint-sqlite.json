@@ -1,0 +1,215 @@
+{
+  "characterization": "checkpoint restoration reconstructs output/state; continuation is not inferred",
+  "flow_restore": {
+    "classification": "completed",
+    "completed": true,
+    "execution_classification": "probe-isolated",
+    "last_lifecycle_point": "crewai_import_completed",
+    "lifecycle_markers": [
+      "worker_started",
+      "crewai_import_completed"
+    ],
+    "logical_run_id": "crewai-probe-run-b",
+    "mode": "checkpoint-restore",
+    "new_runtime_artifacts": [],
+    "process_group_id": 2854302,
+    "result": {
+      "architecture_evidence": "diagnostic only; cannot independently establish supported viability",
+      "blocked_provider_network_attempts": 1,
+      "diagnostic_question": "isolate Flow persistence mechanics from automatic memory startup",
+      "execution_classification": "probe-isolated",
+      "finished_at": "2026-08-12T01:53:01Z",
+      "logical_run_id": "crewai-probe-run-b",
+      "mode": "checkpoint-restore",
+      "model_calls": 0,
+      "normal_behavior_bypassed": [
+        "automatic Flow unified-memory construction"
+      ],
+      "output": {
+        "counter": 2,
+        "id": "crewai-probe-run-b",
+        "payload": "payload-b-only",
+        "review_status": "not_requested",
+        "trace": [
+          "crewai-probe-run-b:first",
+          "crewai-probe-run-b:second"
+        ]
+      },
+      "pgid": 2854302,
+      "pid": 2854302,
+      "private_override": "_skip_auto_memory = True",
+      "provider_calls": 0,
+      "public_extension": null,
+      "state": {
+        "counter": 0,
+        "id": "457d1e06-26db-4dcf-b0db-00d64dc334f3",
+        "payload": "unset",
+        "review_status": "not_requested",
+        "trace": []
+      },
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+    "stdout": "\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Execution \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Starting Flow Execution                                                     \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-probe-run-b                                                      \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Started \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Started                                                                \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-probe-run-b                                                      \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Execution Completed                                                    \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-probe-run-b                                                      \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n",
+    "timed_out": false,
+    "timeout_cleanup": {
+      "reaped": true,
+      "sent_sigkill": false,
+      "sent_sigterm": false
+    },
+    "timeout_seconds": 15,
+    "worker_pid": 2854302
+  },
+  "flow_write": {
+    "classification": "completed",
+    "completed": true,
+    "execution_classification": "probe-isolated",
+    "last_lifecycle_point": "crewai_import_completed",
+    "lifecycle_markers": [
+      "worker_started",
+      "crewai_import_completed"
+    ],
+    "logical_run_id": "crewai-probe-run-b",
+    "mode": "checkpoint-sqlite-write",
+    "new_runtime_artifacts": [
+      "runtime-checkpoints.sqlite3"
+    ],
+    "process_group_id": 2854289,
+    "result": {
+      "architecture_evidence": "diagnostic only; cannot independently establish supported viability",
+      "blocked_provider_network_attempts": 1,
+      "checkpoints": [
+        "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001/runtime-checkpoints.sqlite3#20260812T015256_d4e2b60e",
+        "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001/runtime-checkpoints.sqlite3#20260812T015256_4c9fca02"
+      ],
+      "diagnostic_question": "isolate Flow persistence mechanics from automatic memory startup",
+      "execution_classification": "probe-isolated",
+      "finished_at": "2026-08-12T01:52:56Z",
+      "logical_run_id": "crewai-probe-run-b",
+      "mode": "checkpoint-sqlite-write",
+      "model_calls": 0,
+      "normal_behavior_bypassed": [
+        "automatic Flow unified-memory construction"
+      ],
+      "output": {
+        "counter": 2,
+        "id": "crewai-probe-run-b",
+        "payload": "payload-b-only",
+        "review_status": "not_requested",
+        "trace": [
+          "crewai-probe-run-b:first",
+          "crewai-probe-run-b:second"
+        ]
+      },
+      "pgid": 2854289,
+      "pid": 2854289,
+      "private_override": "_skip_auto_memory = True",
+      "provider_calls": 0,
+      "public_extension": null,
+      "state": {
+        "counter": 2,
+        "id": "crewai-probe-run-b",
+        "payload": "payload-b-only",
+        "review_status": "not_requested",
+        "trace": [
+          "crewai-probe-run-b:first",
+          "crewai-probe-run-b:second"
+        ]
+      },
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+    "stdout": "\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Execution \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Starting Flow Execution                                                     \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-probe-run-b                                                      \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83c\udf0a Flow Started \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Started                                                                \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-probe-run-b                                                      \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: first                                                               \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \ud83d\udd04 Flow Method Running \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Running                                                             \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Method Completed \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Method: second                                                              \u2502\n\u2502  Status: Completed                                                           \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u2705 Flow Completion \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Execution Completed                                                    \u2502\n\u2502  Name: CheckpointProbeFlow                                                   \u2502\n\u2502  ID: crewai-probe-run-b                                                      \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n",
+    "timed_out": false,
+    "timeout_cleanup": {
+      "reaped": true,
+      "sent_sigkill": false,
+      "sent_sigterm": false
+    },
+    "timeout_seconds": 15,
+    "worker_pid": 2854289
+  },
+  "provider_read": {
+    "classification": "completed",
+    "completed": true,
+    "execution_classification": "provider-only",
+    "last_lifecycle_point": "crewai_import_completed",
+    "lifecycle_markers": [
+      "worker_started",
+      "crewai_import_completed"
+    ],
+    "logical_run_id": "crewai-probe-run-a",
+    "mode": "provider-sqlite-read",
+    "new_runtime_artifacts": [],
+    "process_group_id": 2854117,
+    "result": {
+      "blocked_provider_network_attempts": 0,
+      "finished_at": "2026-08-12T01:52:44Z",
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "provider-sqlite-read",
+      "model_calls": 0,
+      "payload": {
+        "logical_run_id": "crewai-probe-run-a",
+        "trace": [
+          "provider"
+        ]
+      },
+      "pgid": 2854117,
+      "pid": 2854117,
+      "provider_calls": 0,
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+    "stdout": "",
+    "timed_out": false,
+    "timeout_cleanup": {
+      "reaped": true,
+      "sent_sigkill": false,
+      "sent_sigterm": false
+    },
+    "timeout_seconds": 15,
+    "worker_pid": 2854117
+  },
+  "provider_write": {
+    "classification": "completed",
+    "completed": true,
+    "execution_classification": "provider-only",
+    "last_lifecycle_point": "crewai_import_completed",
+    "lifecycle_markers": [
+      "worker_started",
+      "crewai_import_completed"
+    ],
+    "logical_run_id": "crewai-probe-run-a",
+    "mode": "provider-sqlite-write",
+    "new_runtime_artifacts": [
+      "provider.sqlite3"
+    ],
+    "process_group_id": 2854110,
+    "result": {
+      "blocked_provider_network_attempts": 0,
+      "checkpoint_location": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001/provider.sqlite3#20260812T015240_63f7de8d",
+      "finished_at": "2026-08-12T01:52:40Z",
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "provider-sqlite-write",
+      "model_calls": 0,
+      "pgid": 2854110,
+      "pid": 2854110,
+      "provider_calls": 0,
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+    "stdout": "",
+    "timed_out": false,
+    "timeout_cleanup": {
+      "reaped": true,
+      "sent_sigkill": false,
+      "sent_sigterm": false
+    },
+    "timeout_seconds": 15,
+    "worker_pid": 2854110
+  }
+}

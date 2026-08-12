@@ -1,0 +1,425 @@
+{
+  "checks": {
+    "a_and_b_payloads_distinct": true,
+    "cross_identity_returns_requested_b_not_a": true,
+    "independent_run_a_persisted_and_reloaded": true,
+    "independent_run_b_persisted_and_reloaded": true,
+    "state_leak_or_alias_detected": false,
+    "unknown_identity_returns_empty": true
+  },
+  "explicit_state_fork_not_isolation_control": {
+    "classification": "completed",
+    "completed": true,
+    "execution_classification": "probe-isolated",
+    "last_lifecycle_point": "flow_kickoff_completed",
+    "lifecycle_markers": [
+      "worker_started",
+      "crewai_import_completed",
+      "flow_class_definition_started",
+      "flow_class_definition_completed",
+      "flow_construction_started",
+      "flow_construction_completed",
+      "flow_kickoff_started",
+      "flow_kickoff_completed"
+    ],
+    "logical_run_id": "crewai-probe-fork",
+    "mode": "flow-persist-restore",
+    "new_runtime_artifacts": [],
+    "process_group_id": 2854069,
+    "result": {
+      "architecture_evidence": "diagnostic only; cannot independently establish supported viability",
+      "blocked_provider_network_attempts": 0,
+      "diagnostic_question": "isolate Flow persistence mechanics from automatic memory startup",
+      "execution_classification": "probe-isolated",
+      "finished_at": "2026-08-12T01:52:30Z",
+      "logical_run_id": "crewai-probe-fork",
+      "mode": "flow-persist-restore",
+      "model_calls": 0,
+      "normal_behavior_bypassed": [
+        "automatic Flow unified-memory construction"
+      ],
+      "output": {
+        "counter": 4,
+        "id": "crewai-probe-fork",
+        "payload": "fork-request",
+        "review_status": "not_requested",
+        "trace": [
+          "crewai-probe-run-a:first",
+          "crewai-probe-run-a:second",
+          "crewai-probe-fork:first",
+          "crewai-probe-fork:second"
+        ]
+      },
+      "pgid": 2854069,
+      "pid": 2854069,
+      "private_override": "_skip_auto_memory = True",
+      "provider_calls": 0,
+      "public_extension": null,
+      "state": {
+        "counter": 4,
+        "id": "crewai-probe-fork",
+        "payload": "fork-request",
+        "review_status": "not_requested",
+        "trace": [
+          "crewai-probe-run-a:first",
+          "crewai-probe-run-a:second",
+          "crewai-probe-fork:first",
+          "crewai-probe-fork:second"
+        ]
+      },
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\nGATE2B_PHASE_MARKER=flow_class_definition_started\nGATE2B_PHASE_MARKER=flow_class_definition_completed\nGATE2B_PHASE_MARKER=flow_construction_started\nGATE2B_PHASE_MARKER=flow_construction_completed\nGATE2B_PHASE_MARKER=flow_kickoff_started\nGATE2B_PHASE_MARKER=flow_kickoff_completed\n",
+    "stdout": "Forking flow state from UUID: crewai-probe-run-a\n",
+    "timed_out": false,
+    "timeout_cleanup": {
+      "reaped": true,
+      "sent_sigkill": false,
+      "sent_sigterm": false
+    },
+    "timeout_seconds": 15,
+    "worker_pid": 2854069
+  },
+  "run_a": {
+    "identity": "crewai-probe-run-a",
+    "reload": {
+      "classification": "completed",
+      "completed": true,
+      "execution_classification": "provider-only",
+      "last_lifecycle_point": "crewai_import_completed",
+      "lifecycle_markers": [
+        "worker_started",
+        "crewai_import_completed"
+      ],
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "flow-load-state",
+      "new_runtime_artifacts": [],
+      "process_group_id": 2854023,
+      "result": {
+        "blocked_provider_network_attempts": 0,
+        "caller_identity": "crewai-probe-run-a",
+        "finished_at": "2026-08-12T01:52:17Z",
+        "loaded": {
+          "counter": 2,
+          "id": "crewai-probe-run-a",
+          "payload": "payload-a-only",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-probe-run-a:first",
+            "crewai-probe-run-a:second"
+          ]
+        },
+        "logical_run_id": "crewai-probe-run-a",
+        "mode": "flow-load-state",
+        "model_calls": 0,
+        "pgid": 2854023,
+        "pid": 2854023,
+        "provider_calls": 0,
+        "requested_identity": "crewai-probe-run-a",
+        "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+      },
+      "returncode": 0,
+      "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+      "stdout": "",
+      "timed_out": false,
+      "timeout_cleanup": {
+        "reaped": true,
+        "sent_sigkill": false,
+        "sent_sigterm": false
+      },
+      "timeout_seconds": 15,
+      "worker_pid": 2854023
+    },
+    "write": {
+      "classification": "completed",
+      "completed": true,
+      "execution_classification": "supported-public-extension",
+      "last_lifecycle_point": "flow_kickoff_completed",
+      "lifecycle_markers": [
+        "worker_started",
+        "crewai_import_completed",
+        "public_memory_storage_factory_registered",
+        "flow_class_definition_started",
+        "flow_class_definition_completed",
+        "flow_construction_started",
+        "unified_memory_initialization_entered",
+        "flow_construction_completed",
+        "flow_kickoff_started",
+        "flow_kickoff_completed"
+      ],
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "flow-public-extension",
+      "new_runtime_artifacts": [],
+      "process_group_id": 2853959,
+      "result": {
+        "architecture_evidence": "supported public extension candidate",
+        "blocked_provider_network_attempts": 0,
+        "execution_classification": "supported-public-extension",
+        "finished_at": "2026-08-12T01:52:09Z",
+        "logical_run_id": "crewai-probe-run-a",
+        "mode": "flow-public-extension",
+        "model_calls": 0,
+        "normal_behavior_bypassed": [
+          "default LanceDB storage backend"
+        ],
+        "observation_instrumentation": "sys.setprofile lifecycle markers; no private behavior bypass",
+        "output": {
+          "counter": 2,
+          "id": "crewai-probe-run-a",
+          "payload": "payload-a-only",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-probe-run-a:first",
+            "crewai-probe-run-a:second"
+          ]
+        },
+        "pgid": 2853959,
+        "pid": 2853959,
+        "private_override": null,
+        "provider_calls": 0,
+        "public_extension": "crewai.memory.storage.factory.set_memory_storage_factory",
+        "state": {
+          "counter": 2,
+          "id": "crewai-probe-run-a",
+          "payload": "payload-a-only",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-probe-run-a:first",
+            "crewai-probe-run-a:second"
+          ]
+        },
+        "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+      },
+      "returncode": 0,
+      "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\nGATE2B_PHASE_MARKER=public_memory_storage_factory_registered\nGATE2B_PHASE_MARKER=flow_class_definition_started\nGATE2B_PHASE_MARKER=flow_class_definition_completed\nGATE2B_PHASE_MARKER=flow_construction_started\nGATE2B_PHASE_MARKER=unified_memory_initialization_entered\nGATE2B_PHASE_MARKER=flow_construction_completed\nGATE2B_PHASE_MARKER=flow_kickoff_started\nGATE2B_PHASE_MARKER=flow_kickoff_completed\n",
+      "stdout": "No flow state found for UUID: crewai-probe-run-a\n",
+      "timed_out": false,
+      "timeout_cleanup": {
+        "reaped": true,
+        "sent_sigkill": false,
+        "sent_sigterm": false
+      },
+      "timeout_seconds": 15,
+      "worker_pid": 2853959
+    }
+  },
+  "run_b": {
+    "identity": "crewai-probe-run-b",
+    "reload": {
+      "classification": "completed",
+      "completed": true,
+      "execution_classification": "provider-only",
+      "last_lifecycle_point": "crewai_import_completed",
+      "lifecycle_markers": [
+        "worker_started",
+        "crewai_import_completed"
+      ],
+      "logical_run_id": "crewai-probe-run-b",
+      "mode": "flow-load-state",
+      "new_runtime_artifacts": [],
+      "process_group_id": 2854030,
+      "result": {
+        "blocked_provider_network_attempts": 0,
+        "caller_identity": "crewai-probe-run-b",
+        "finished_at": "2026-08-12T01:52:20Z",
+        "loaded": {
+          "counter": 2,
+          "id": "crewai-probe-run-b",
+          "payload": "payload-b-only",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-probe-run-b:first",
+            "crewai-probe-run-b:second"
+          ]
+        },
+        "logical_run_id": "crewai-probe-run-b",
+        "mode": "flow-load-state",
+        "model_calls": 0,
+        "pgid": 2854030,
+        "pid": 2854030,
+        "provider_calls": 0,
+        "requested_identity": "crewai-probe-run-b",
+        "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+      },
+      "returncode": 0,
+      "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+      "stdout": "",
+      "timed_out": false,
+      "timeout_cleanup": {
+        "reaped": true,
+        "sent_sigkill": false,
+        "sent_sigterm": false
+      },
+      "timeout_seconds": 15,
+      "worker_pid": 2854030
+    },
+    "write": {
+      "classification": "completed",
+      "completed": true,
+      "execution_classification": "supported-public-extension",
+      "last_lifecycle_point": "flow_kickoff_completed",
+      "lifecycle_markers": [
+        "worker_started",
+        "crewai_import_completed",
+        "public_memory_storage_factory_registered",
+        "flow_class_definition_started",
+        "flow_class_definition_completed",
+        "flow_construction_started",
+        "unified_memory_initialization_entered",
+        "flow_construction_completed",
+        "flow_kickoff_started",
+        "flow_kickoff_completed"
+      ],
+      "logical_run_id": "crewai-probe-run-b",
+      "mode": "flow-public-extension",
+      "new_runtime_artifacts": [],
+      "process_group_id": 2853974,
+      "result": {
+        "architecture_evidence": "supported public extension candidate",
+        "blocked_provider_network_attempts": 0,
+        "execution_classification": "supported-public-extension",
+        "finished_at": "2026-08-12T01:52:13Z",
+        "logical_run_id": "crewai-probe-run-b",
+        "mode": "flow-public-extension",
+        "model_calls": 0,
+        "normal_behavior_bypassed": [
+          "default LanceDB storage backend"
+        ],
+        "observation_instrumentation": "sys.setprofile lifecycle markers; no private behavior bypass",
+        "output": {
+          "counter": 2,
+          "id": "crewai-probe-run-b",
+          "payload": "payload-b-only",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-probe-run-b:first",
+            "crewai-probe-run-b:second"
+          ]
+        },
+        "pgid": 2853974,
+        "pid": 2853974,
+        "private_override": null,
+        "provider_calls": 0,
+        "public_extension": "crewai.memory.storage.factory.set_memory_storage_factory",
+        "state": {
+          "counter": 2,
+          "id": "crewai-probe-run-b",
+          "payload": "payload-b-only",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-probe-run-b:first",
+            "crewai-probe-run-b:second"
+          ]
+        },
+        "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+      },
+      "returncode": 0,
+      "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\nGATE2B_PHASE_MARKER=public_memory_storage_factory_registered\nGATE2B_PHASE_MARKER=flow_class_definition_started\nGATE2B_PHASE_MARKER=flow_class_definition_completed\nGATE2B_PHASE_MARKER=flow_construction_started\nGATE2B_PHASE_MARKER=unified_memory_initialization_entered\nGATE2B_PHASE_MARKER=flow_construction_completed\nGATE2B_PHASE_MARKER=flow_kickoff_started\nGATE2B_PHASE_MARKER=flow_kickoff_completed\n",
+      "stdout": "No flow state found for UUID: crewai-probe-run-b\n",
+      "timed_out": false,
+      "timeout_cleanup": {
+        "reaped": true,
+        "sent_sigkill": false,
+        "sent_sigterm": false
+      },
+      "timeout_seconds": 15,
+      "worker_pid": 2853974
+    }
+  },
+  "status": "pass",
+  "unknown_identity": {
+    "identity": "crewai-probe-run-c",
+    "result": {
+      "classification": "completed",
+      "completed": true,
+      "execution_classification": "provider-only",
+      "last_lifecycle_point": "crewai_import_completed",
+      "lifecycle_markers": [
+        "worker_started",
+        "crewai_import_completed"
+      ],
+      "logical_run_id": "crewai-probe-run-c",
+      "mode": "flow-load-state",
+      "new_runtime_artifacts": [],
+      "process_group_id": 2854037,
+      "result": {
+        "blocked_provider_network_attempts": 0,
+        "caller_identity": "crewai-probe-run-c",
+        "finished_at": "2026-08-12T01:52:23Z",
+        "loaded": null,
+        "logical_run_id": "crewai-probe-run-c",
+        "mode": "flow-load-state",
+        "model_calls": 0,
+        "pgid": 2854037,
+        "pid": 2854037,
+        "provider_calls": 0,
+        "requested_identity": "crewai-probe-run-c",
+        "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+      },
+      "returncode": 0,
+      "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+      "stdout": "",
+      "timed_out": false,
+      "timeout_cleanup": {
+        "reaped": true,
+        "sent_sigkill": false,
+        "sent_sigterm": false
+      },
+      "timeout_seconds": 15,
+      "worker_pid": 2854037
+    }
+  },
+  "wrong_cross_identity": {
+    "caller_identity": "crewai-probe-run-a",
+    "requested_identity": "crewai-probe-run-b",
+    "result": {
+      "classification": "completed",
+      "completed": true,
+      "execution_classification": "provider-only",
+      "last_lifecycle_point": "crewai_import_completed",
+      "lifecycle_markers": [
+        "worker_started",
+        "crewai_import_completed"
+      ],
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "flow-load-state",
+      "new_runtime_artifacts": [],
+      "process_group_id": 2854044,
+      "result": {
+        "blocked_provider_network_attempts": 0,
+        "caller_identity": "crewai-probe-run-a",
+        "finished_at": "2026-08-12T01:52:27Z",
+        "loaded": {
+          "counter": 2,
+          "id": "crewai-probe-run-b",
+          "payload": "payload-b-only",
+          "review_status": "not_requested",
+          "trace": [
+            "crewai-probe-run-b:first",
+            "crewai-probe-run-b:second"
+          ]
+        },
+        "logical_run_id": "crewai-probe-run-a",
+        "mode": "flow-load-state",
+        "model_calls": 0,
+        "pgid": 2854044,
+        "pid": 2854044,
+        "provider_calls": 0,
+        "requested_identity": "crewai-probe-run-b",
+        "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001"
+      },
+      "returncode": 0,
+      "stderr": "GATE2B_PHASE_MARKER=worker_started\nGATE2B_PHASE_MARKER=crewai_import_completed\n",
+      "stdout": "",
+      "timed_out": false,
+      "timeout_cleanup": {
+        "reaped": true,
+        "sent_sigkill": false,
+        "sent_sigterm": false
+      },
+      "timeout_seconds": 15,
+      "worker_pid": 2854044
+    }
+  }
+}

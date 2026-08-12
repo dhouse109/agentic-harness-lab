@@ -1,0 +1,42 @@
+{
+  "gate2c_seam_exercised": false,
+  "method_failure": {
+    "completed": true,
+    "logical_run_id": "crewai-probe-failure",
+    "mode": "method-failure",
+    "result": {
+      "exception": "deterministic-probe-failure",
+      "exception_type": "RuntimeError",
+      "finished_at": "2026-08-12T01:07:20Z",
+      "loaded_after_failure": null,
+      "logical_run_id": "crewai-probe-failure",
+      "mode": "method-failure",
+      "model_calls": 0,
+      "pid": 2839033,
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T010531Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "/home/dhouse109/projects/agentic-harness-lab/crewai/runtime_probe/step2b02_worker.py:259: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  result[\"finished_at\"] = datetime.utcnow().isoformat(timespec=\"seconds\") + \"Z\"\n",
+    "stdout": "No flow state found for UUID: crewai-probe-failure\n",
+    "timed_out": false
+  },
+  "unknown_checkpoint": {
+    "completed": true,
+    "logical_run_id": "crewai-probe-run-a",
+    "mode": "provider-invalid-read",
+    "result": {
+      "exception": "Checkpoint not found: missing",
+      "exception_type": "ValueError",
+      "finished_at": "2026-08-12T01:07:23Z",
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "provider-invalid-read",
+      "model_calls": 0,
+      "pid": 2839044,
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T010531Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "/home/dhouse109/projects/agentic-harness-lab/crewai/runtime_probe/step2b02_worker.py:259: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  result[\"finished_at\"] = datetime.utcnow().isoformat(timespec=\"seconds\") + \"Z\"\n",
+    "stdout": "",
+    "timed_out": false
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "distinct_completed_pids": 16,
+  "method": "separate subprocess per phase with hard timeout",
+  "phases": [
+    {
+      "completed": true,
+      "mode": "flow-persist-write",
+      "pid": 2838687,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "flow-load-state",
+      "pid": 2838698,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "flow-persist-restore",
+      "pid": 2838707,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "flow-load-state",
+      "pid": 2838741,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "provider-json-write",
+      "pid": 2838748,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "provider-json-read",
+      "pid": 2838806,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "provider-sqlite-write",
+      "pid": 2838813,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "provider-sqlite-read",
+      "pid": 2838820,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "checkpoint-json-write",
+      "pid": 2838829,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "checkpoint-restore",
+      "pid": 2838858,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "checkpoint-sqlite-write",
+      "pid": 2838931,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "checkpoint-restore",
+      "pid": 2838970,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "feedback-pause",
+      "pid": 2838991,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "feedback-resume",
+      "pid": 2839004,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "method-failure",
+      "pid": 2839033,
+      "timed_out": false
+    },
+    {
+      "completed": true,
+      "mode": "provider-invalid-read",
+      "pid": 2839044,
+      "timed_out": false
+    }
+  ],
+  "timeout_seconds": 15
+}

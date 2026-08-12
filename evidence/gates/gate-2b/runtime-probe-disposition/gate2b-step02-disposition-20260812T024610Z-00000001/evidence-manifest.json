@@ -1,0 +1,10 @@
+{
+  "files": {
+    "architecture-disposition.json": "ab23b6a78638b7c45346ba0b5419745779f37b56e0fe6c67faac8b49597040d8",
+    "authorization.json": "a63079f15fbd1601cb8ed9f12c3acff0d97ed9d75a2581d9af9556f102b87d80",
+    "network-event-disposition.json": "2abeedbdb7c2417bb277a5c1d484f82a5dbf543983b68a6ddc097de1ef571130",
+    "provenance.json": "eddb1f96d39ec17836d71ea81a4a396d25c3034540e8c91402151be04004850b",
+    "summary.json": "77d56c2a9df0c3f6c269c1c9b3a5e9a4ec816541827aa5add74b570bcf15ad45"
+  },
+  "schema_version": 1
+}

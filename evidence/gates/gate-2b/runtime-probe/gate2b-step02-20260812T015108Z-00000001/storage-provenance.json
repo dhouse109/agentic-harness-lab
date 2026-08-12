@@ -1,0 +1,40 @@
+{
+  "ambient_xdg_used": false,
+  "artifacts": [
+    {
+      "path": "flow-persistence.sqlite3",
+      "sha256": "4483c754e693fc3c01c4dbab344570cf7ff714bc1983d4098bec0b0783b75149",
+      "size": 28672
+    },
+    {
+      "path": "provider-json/crewai-probe-run-a/20260812T015234_0fd188d9_p-none.json",
+      "sha256": "420ac26af7602d81d77ceb2006634932618dbd4670e922e5eff75f195e90dde4",
+      "size": 63
+    },
+    {
+      "path": "provider.sqlite3",
+      "sha256": "20ed70b320bd593626d0541676c7531f735e47349a401c0730ffc7d8a626fd1e",
+      "size": 12288
+    },
+    {
+      "path": "runtime-checkpoints-json/main/20260812T015247_2cb1cc26_p-none.json",
+      "sha256": "7837f6aff4a685f96e5347f24feb7bba3d55eb87c49e0657ff748f788106b358",
+      "size": 10827
+    },
+    {
+      "path": "runtime-checkpoints-json/main/20260812T015247_9f88c046_p-none.json",
+      "sha256": "cd322a4dc1c5467432de6e165a8c3d6dbfaca007afe82666220ecb4bb16bce7a",
+      "size": 9661
+    },
+    {
+      "path": "runtime-checkpoints.sqlite3",
+      "sha256": "2555ec81c7951fb7747ea74a5866ce2e064a332eb63c9da6acc50e0a36a1eb0c",
+      "size": 24576
+    }
+  ],
+  "cleanup_scope": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001",
+  "ownership": "crewai",
+  "runtime_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T015108Z-00000001",
+  "shared_storage_used": false,
+  "status": "pass"
+}

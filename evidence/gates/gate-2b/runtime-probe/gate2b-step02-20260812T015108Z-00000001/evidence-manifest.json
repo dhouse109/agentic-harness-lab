@@ -1,0 +1,22 @@
+{
+  "files": {
+    "api-surface.json": "d51057f43649c77795bb4e3e738b764a3f52cdf1dacd62cae8d62790f6f33753",
+    "architecture-recommendation.json": "a81fa2aecbfaac8ef664afd3a1e734feb8d74c45e1a5b1a4c6a1ed67a2563565",
+    "authorization.json": "fad978216c4f189ee1beddb7af312621c0246cd961ed91274dab11b369634d5c",
+    "failure-propagation.json": "27d7685d5563accafbb6eb390ac64a6ec609b02a8b36cb9fb95d115bd47a0529",
+    "flow-persistence.json": "7e4a9307de7ce0a23374b1899aec36e93faf2b25e6db7b54c8575d1aec69d95c",
+    "human-feedback-continuation.json": "2315c7d0cbade80b81b2386a2c193bb5fa48f6b0a103a606026185e22303c542",
+    "predecessor.json": "35dc82f32fbf44faf415e3c48441916357d9aba0d93187085881d51277fe18ae",
+    "probe-log.txt": "49452e27779b278722bbd2f77efe67816bd35f7d5433482329897539c2869288",
+    "process-boundary.json": "f9def6e00e0c89811c79688949113b025883005987ed309b46c2ae561918dd77",
+    "retry-hidden-call-controls.json": "307f9719748d059640c70a7899048cd16de7a5de9aa1dee082a1b49e8f9d9ee0",
+    "run-isolation.json": "98b97ea88a358bdf34efd6bfeefc7f8088cfd5a035e95c694b6b44709becf09d",
+    "runtime-checkpoint-json.json": "e44f2512c83713361e4fcaa16779401a9072b6b1acd7aac8b5c35272be40f10f",
+    "runtime-checkpoint-sqlite.json": "cc25666c0574072fcfddfc98f997f36518184a1071eccb40c3c282163d40b80d",
+    "runtime-versions.json": "c6af45ad6a68379284f03aa635c61dbd81f7c37339c1bc5d66d25ce48ea90c97",
+    "serialized-state-privacy.json": "d151e2fdd5a4c79634abe134df19bb282553a8b2c3cc4f81d8e4305f90536be5",
+    "storage-provenance.json": "ceca35b09a90eefebb7b8c688a259b8858374e44d8af073da948352abe31eb19",
+    "summary.json": "b03d7c8a787757b020f889faa8cb3f6393edfb0f477e2a39dd93dbbd868ef349"
+  },
+  "schema_version": 2
+}

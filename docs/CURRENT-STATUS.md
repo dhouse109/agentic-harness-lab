@@ -28,8 +28,15 @@
 - **Completed package:** `gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.1`.
 - **Gate 2A handoff package (historical next package):** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
 - **Gate 2A freeze:** `shared/contracts/GATE2A-LANGGRAPH-FREEZE.json` (`a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0`).
-- **Step 2B.01:** complete.
-- **Next package:** `gate-2b-step02-crewai-runtime-persistence-and-continuation-probe-v1.0.0`.
+- **Step 2B.01:** complete, merged, and post-merge audited.
+- **Completed Step 2B.02 package:** `gate-2b-step02-crewai-architecture-adr-and-closure-v1.0.0`.
+- **Step 2B.02:** complete with retained model-free evidence, all 25 permanent architecture predicates passing, and explicit human architecture approval.
+- **Next package:** `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0` is named but locked and unbegun pending Step 2B.02 commit, merge, local `main` resynchronization, and post-merge audit.
+- **Retained Step 2B.02 diagnostic:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid and retained. Its mechanical audit originally passed, but later integrity review found its architecture recommendation unsupported by the stronger default/instrumented, independent-isolation, and retry predicates. It is diagnostic/unaccepted, not corrupted; at that capture boundary, Step 2B.02 remained open.
+- **Retained Step 2B.02 v2 capture:** `gate2b-step02-20260812T015108Z-00000001` is byte-valid and passed its superseding capture boundary with architecture unresolved.
+- **Retained Step 2B.02 supplemental capture:** `gate2b-step02-followup-20260812T022947Z-00000001` is byte-valid and corrected the native structured-output fallback and terminal-output-only checkpoint interpretation. Its immutable classifier remains `unresolved_path`; no retained evidence was rewritten.
+- **Accepted Step 2B.02 governed disposition:** `gate2b-step02-disposition-20260812T024610Z-00000001` binds the immutable call stacks to pinned-source `crewai_version_availability_check` provenance, verifies the public version-check disable control, and independently passes all 25 machine predicates with `recommendation_ready`.
+- **Human architecture decision:** approved and recorded in `docs/decisions/ADR-0012-crewai-flow-persistence-and-human-review-continuation.md`. The approved path uses supported Flow, public `set_memory_storage_factory(...)`, `SQLiteFlowPersistence`, and `HumanFeedbackPending` / `from_pending()` / `resume()` while Drupal remains authoritative. Runtime `CheckpointConfig` and private `_skip_auto_memory` are nonselected. Machine recommendation and human approval remain distinct in `shared/contracts/GATE2B-STEP02-CREWAI-ARCHITECTURE-CLOSURE.json`.
 Accepted Step 2B.01 evidence run: `gate2b-step01-20260811T231020Z-00000002`
 Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77`
 Accepted Step 2A.10 certification evidence: `evidence/gates/gate-2a/certification/gate2a-step10-20260811T034835Z-03f93652`
@@ -206,4 +213,4 @@ A new planning or implementation session should read these files in order:
 Do not reopen Gate 0.5 or Gate 1 unless an audit fails or a frozen contract is intentionally changed.
 Step 2A.01 through Step 2A.10 are complete and Gate 2A LangGraph is certified and frozen.
 
-Use `docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md`, `docs/gates/GATE-2B-STEP01-CREWAI-CONTRACT-AND-EVIDENCE-PLAN.md`, and `docs/CODEX-GATE-2B-RUNBOOK.md`. The Step 2A.10 merge/resync/post-merge audit prerequisite passed. Step 2B.01 is complete. Do not generate Step 2B.02 until Step 2B.01 is committed and merged, local `main` is resynchronized, and the post-merge audit passes. Gate 2C remains deferred and unclaimed.
+Use `docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md`, the Step 2B.01 contract, the Step 2B.02 runtime-probe document, and `docs/CODEX-GATE-2B-RUNBOOK.md`. Step 2B.01 is closed and Step 2B.02 is active. Do not create an ADR or begin Step 2B.03 without evidence-supported architecture approval. Gate 2C remains deferred and unclaimed.

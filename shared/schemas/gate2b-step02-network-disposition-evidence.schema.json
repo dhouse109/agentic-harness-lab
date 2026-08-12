@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness-lab.invalid/schemas/gate2b-step02-network-disposition-evidence.schema.json",
+  "title": "Gate 2B Step 2B.02 governed network disposition evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "status",
+    "supplemental_run_id",
+    "supplemental_manifest_sha256",
+    "raw_classification_preserved",
+    "governed_disposition",
+    "pinned_runtime",
+    "public_disable_control",
+    "events"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "evidence_id": {"pattern": "^gate2b-step02-disposition-[0-9]{8}T[0-9]{6}Z-[0-9]{8}$"},
+    "status": {"const": "pass"},
+    "supplemental_run_id": {"const": "gate2b-step02-followup-20260812T022947Z-00000001"},
+    "supplemental_manifest_sha256": {"const": "6654fd33e10efdf275f0aa9ea104293ed1f7ba3092d054718a9ac0a491b07a79"},
+    "raw_classification_preserved": {"const": "unresolved_path"},
+    "governed_disposition": {"const": "crewai_version_availability_check"},
+    "pinned_runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["crewai", "crewai_core", "crewai_tools"],
+      "properties": {
+        "crewai": {"const": "1.15.10"},
+        "crewai_core": {"const": "1.15.10"},
+        "crewai_tools": {"const": "1.15.10"}
+      }
+    },
+    "public_disable_control": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "value", "enabled_control_called_version_helpers", "disabled_control_called_version_helpers", "successful_network_connections"],
+      "properties": {
+        "name": {"const": "CREWAI_DISABLE_VERSION_CHECK"},
+        "value": {"const": "true"},
+        "enabled_control_called_version_helpers": {"const": true},
+        "disabled_control_called_version_helpers": {"const": false},
+        "successful_network_connections": {"const": 0}
+      }
+    },
+    "events": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["declared_phase", "event_order", "event_sha256", "original_classification", "governed_disposition", "retained_call_path", "selected_path_relevance", "architecture_blocking"],
+        "properties": {
+          "declared_phase": {"enum": ["checkpoint-json-write", "checkpoint-json-restore", "checkpoint-sqlite-write", "checkpoint-sqlite-restore"]},
+          "event_order": {"const": 1},
+          "event_sha256": {"pattern": "^[0-9a-f]{64}$"},
+          "original_classification": {"const": "unresolved_path"},
+          "governed_disposition": {"const": "crewai_version_availability_check"},
+          "retained_call_path": {
+            "type": "array",
+            "minItems": 8,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["source", "function", "line"],
+              "properties": {
+                "source": {"type": "string", "minLength": 1},
+                "function": {"type": "string", "minLength": 1},
+                "line": {"type": "integer", "minimum": 1}
+              }
+            }
+          },
+          "selected_path_relevance": {"const": "unrelated_console_version_behavior; publicly suppressible; selected Flow/pending-resume capture recorded zero attempts"},
+          "architecture_blocking": {"const": false}
+        }
+      }
+    }
+  }
+}

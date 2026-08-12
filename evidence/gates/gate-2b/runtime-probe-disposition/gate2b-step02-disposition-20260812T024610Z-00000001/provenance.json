@@ -1,0 +1,63 @@
+{
+  "branch_at_generation": "gate-2b-step02-crewai-runtime-persistence-and-continuation-probe",
+  "head_at_generation": "7bea4320c08670d8e9a0c71f88d10922fced8c1e",
+  "historical_interpretation": [
+    "targeted capture retained the calls as unresolved_path",
+    "architecture remained unresolved at capture time",
+    "later pinned-source inspection established the governed disposition"
+  ],
+  "pinned_source": {
+    "console_formatter": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai/events/utils/console_formatter.py",
+      "sha256": "091e2e2cec3e169c88b5b4c6584591f7384d8e106dcc2efef79c64a21f056e88"
+    },
+    "interpretation": "CrewAI console version-availability check triggered by Flow-start events",
+    "not_checkpoint_persistence": true,
+    "not_memory_initialization": true,
+    "not_model_or_provider": true,
+    "not_telemetry_export": true,
+    "source_path": [
+      "crewai/events/event_bus.py",
+      "crewai/events/utils/handlers.py",
+      "crewai/events/event_listener.py",
+      "crewai/events/utils/console_formatter.py",
+      "crewai/events/utils/console_formatter.py",
+      "crewai_core/version.py",
+      "crewai_core/version.py",
+      "crewai_core/version.py",
+      "urllib/request.py"
+    ],
+    "version_module": {
+      "path": "crewai/.venv/lib/python3.12/site-packages/crewai_core/version.py",
+      "sha256": "5ecd486348434283b4d280be7999332aace31f8c6b88c7d9fb42617381749e09"
+    }
+  },
+  "predecessor_sha": "7bea4320c08670d8e9a0c71f88d10922fced8c1e",
+  "public_control_test": {
+    "blocked_network_attempts_disabled": 0,
+    "blocked_network_attempts_enabled": 2,
+    "disabled_control_called_version_helpers": false,
+    "enabled_control_called_version_helpers": true,
+    "name": "CREWAI_DISABLE_VERSION_CHECK",
+    "successful_network_connections": 0,
+    "test_method": "disposable socket.create_connection guard before DNS/connect; no connection attempted",
+    "value": "true"
+  },
+  "retained_runs": {
+    "gate2b-step02-20260812T010531Z-00000001": {
+      "disposition": "diagnostic_superseded_unaccepted",
+      "manifest_sha256": "6bbb9619df39cfba939f09223bde9ce160b52476598d2b847a0591c3a0edb5f5",
+      "summary_sha256": "e7c2bde43dcc30c8b912099ac2e6682684649ebbd0125a10b5fe0d3940494aee"
+    },
+    "gate2b-step02-20260812T015108Z-00000001": {
+      "disposition": "completed_capture_architecture_unresolved",
+      "manifest_sha256": "8339eca113dfb1bc5cfa15d2fcbc1f95e104d908852e0656024f299f4e2c2b66",
+      "summary_sha256": "b03d7c8a787757b020f889faa8cb3f6393edfb0f477e2a39dd93dbbd868ef349"
+    },
+    "gate2b-step02-followup-20260812T022947Z-00000001": {
+      "disposition": "completed_supplemental_capture_architecture_unresolved",
+      "manifest_sha256": "6654fd33e10efdf275f0aa9ea104293ed1f7ba3092d054718a9ac0a491b07a79",
+      "summary_sha256": "48fa2e41db6089cf63d3f250b8a31c547c322dc8e72d8a25ae9dc1078a734a57"
+    }
+  }
+}

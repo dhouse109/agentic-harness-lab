@@ -1,0 +1,4 @@
+{"blocked_network_attempts": 1, "completed": true, "phase": "checkpoint-json-write", "process_group_id": 2866128, "timed_out": false, "worker_pid": 2866128}
+{"blocked_network_attempts": 1, "completed": true, "phase": "checkpoint-json-restore", "process_group_id": 2866157, "timed_out": false, "worker_pid": 2866157}
+{"blocked_network_attempts": 1, "completed": true, "phase": "checkpoint-sqlite-write", "process_group_id": 2866178, "timed_out": false, "worker_pid": 2866178}
+{"blocked_network_attempts": 1, "completed": true, "phase": "checkpoint-sqlite-restore", "process_group_id": 2866191, "timed_out": false, "worker_pid": 2866191}

@@ -1,0 +1,25 @@
+{
+  "adr_created": false,
+  "blocking_reasons": [
+    "checkpoint_optional_path_attributed_or_excluded"
+  ],
+  "human_architecture_approval_required": true,
+  "prerequisites": {
+    "checkpoint_optional_path_attributed_or_excluded": false,
+    "checkpoint_semantics_corrected": true,
+    "drupal_authority_preserved": true,
+    "learning_controls_resolved": true,
+    "no_private_instrumentation_dependency": true,
+    "pending_resume_no_prior_replay": true,
+    "pending_resume_same_identity": true,
+    "privacy_pass": true,
+    "process_boundary_persistence_and_isolation": true,
+    "selected_path_hidden_network_clear": true,
+    "selected_path_retry_controls_sufficient": true,
+    "structured_output_fallback_corrected": true,
+    "supported_public_extension": true,
+    "zero_authorization_counts": true
+  },
+  "selected_candidate": null,
+  "status": "unresolved"
+}

@@ -1,0 +1,76 @@
+{
+  "drupal_authority": "preserved; deterministic stand-in only",
+  "emit": null,
+  "free_form_emit_constraint": "non-empty feedback with emit can call the configured LLM and a fallback",
+  "outcome_collapse_model_call_expected": false,
+  "pause": {
+    "completed": true,
+    "logical_run_id": "crewai-probe-run-a",
+    "mode": "feedback-pause",
+    "result": {
+      "callback_info": {
+        "kind": "deterministic_external_review_stand_in"
+      },
+      "finished_at": "2026-08-12T01:07:13Z",
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "feedback-pause",
+      "model_calls": 0,
+      "pending": true,
+      "pid": 2838991,
+      "state": {
+        "counter": 3,
+        "id": "crewai-probe-run-a",
+        "review_status": "pending_external_authority",
+        "trace": [
+          "first",
+          "second",
+          "await_review"
+        ]
+      },
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T010531Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "/home/dhouse109/projects/agentic-harness-lab/crewai/runtime_probe/step2b02_worker.py:259: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  result[\"finished_at\"] = datetime.utcnow().isoformat(timespec=\"seconds\") + \"Z\"\n",
+    "stdout": "Loading flow state from memory for UUID: crewai-probe-run-a\n\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 \u23f3 Flow Paused \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                              \u2502\n\u2502  Flow Paused - Waiting for Feedback                                          \u2502\n\u2502  Name: FeedbackProbeFlow                                                     \u2502\n\u2502  ID: crewai-probe-run-a                                                      \u2502\n\u2502                                                                              \u2502\n\u2502                                                                              \u2502\n\u2570\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\n\n",
+    "timed_out": false
+  },
+  "resume": {
+    "completed": true,
+    "logical_run_id": "crewai-probe-run-a",
+    "mode": "feedback-resume",
+    "result": {
+      "finished_at": "2026-08-12T01:07:16Z",
+      "logical_run_id": "crewai-probe-run-a",
+      "mode": "feedback-resume",
+      "model_calls": 0,
+      "output": {
+        "counter": 4,
+        "id": "crewai-probe-run-a",
+        "review_status": "approved_in_drupal_stand_in",
+        "trace": [
+          "first",
+          "second",
+          "await_review",
+          "observe_review"
+        ]
+      },
+      "pid": 2839004,
+      "state": {
+        "counter": 4,
+        "id": "crewai-probe-run-a",
+        "review_status": "approved_in_drupal_stand_in",
+        "trace": [
+          "first",
+          "second",
+          "await_review",
+          "observe_review"
+        ]
+      },
+      "storage_root": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step02/gate2b-step02-20260812T010531Z-00000001"
+    },
+    "returncode": 0,
+    "stderr": "/home/dhouse109/projects/agentic-harness-lab/crewai/runtime_probe/step2b02_worker.py:259: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).\n  result[\"finished_at\"] = datetime.utcnow().isoformat(timespec=\"seconds\") + \"Z\"\n",
+    "stdout": "",
+    "timed_out": false
+  }
+}

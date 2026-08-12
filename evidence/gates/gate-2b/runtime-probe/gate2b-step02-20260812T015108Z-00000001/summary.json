@@ -1,0 +1,19 @@
+{
+  "architecture_status": "unresolved",
+  "authorization": {
+    "dependency_changes": 0,
+    "drupal_mutations": 0,
+    "gate2c_executions": 0,
+    "human_review_actions": 0,
+    "live_recommendation_submissions": 0,
+    "model_calls": 0,
+    "provider_calls": 0,
+    "source_mutations": 0
+  },
+  "evidence_disposition": "superseding_candidate",
+  "evidence_id": "gate2b-step02-20260812T015108Z-00000001",
+  "gate2c": "deferred_unclaimed",
+  "predecessor_sha": "7bea4320c08670d8e9a0c71f88d10922fced8c1e",
+  "schema_version": 2,
+  "status": "pass"
+}

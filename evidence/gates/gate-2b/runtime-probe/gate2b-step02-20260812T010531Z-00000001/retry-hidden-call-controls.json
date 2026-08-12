@@ -1,0 +1,19 @@
+{
+  "controls": {
+    "empty_feedback_avoids_collapse": true,
+    "guardrail_attempts_are_reinvocations": true,
+    "human_feedback_outcome_fallback_call": true,
+    "human_feedback_outcome_structured_call": true,
+    "learn_distillation_call": true,
+    "learn_pre_review_call": true,
+    "task_guardrail_max_retries": true
+  },
+  "later_one_call_requirements": [
+    "set Task.guardrail_max_retries=0 or avoid LLM guardrails at the one-call boundary",
+    "do not use human_feedback emit outcomes with non-empty free-form feedback unless collapse calls are budgeted",
+    "set learn=False at the human-review boundary",
+    "use a provider configuration with transport retries explicitly bounded and prove it before the real call",
+    "treat restore/re-execution of a model-owning execution unit as a potential additional call"
+  ],
+  "status": "inspected"
+}

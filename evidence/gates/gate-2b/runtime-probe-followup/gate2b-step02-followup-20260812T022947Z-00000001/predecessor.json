@@ -1,0 +1,17 @@
+{
+  "branch_at_generation": "gate-2b-step02-crewai-runtime-persistence-and-continuation-probe",
+  "head_at_generation": "7bea4320c08670d8e9a0c71f88d10922fced8c1e",
+  "predecessor_sha": "7bea4320c08670d8e9a0c71f88d10922fced8c1e",
+  "retained_runs": {
+    "gate2b-step02-20260812T010531Z-00000001": {
+      "disposition": "diagnostic_superseded_unaccepted",
+      "manifest_sha256": "6bbb9619df39cfba939f09223bde9ce160b52476598d2b847a0591c3a0edb5f5",
+      "summary_sha256": "e7c2bde43dcc30c8b912099ac2e6682684649ebbd0125a10b5fe0d3940494aee"
+    },
+    "gate2b-step02-20260812T015108Z-00000001": {
+      "disposition": "completed_capture_architecture_unresolved",
+      "manifest_sha256": "8339eca113dfb1bc5cfa15d2fcbc1f95e104d908852e0656024f299f4e2c2b66",
+      "summary_sha256": "b03d7c8a787757b020f889faa8cb3f6393edfb0f477e2a39dd93dbbd868ef349"
+    }
+  }
+}

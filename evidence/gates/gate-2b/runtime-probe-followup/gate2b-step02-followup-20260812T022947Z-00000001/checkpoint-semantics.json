@@ -1,0 +1,85 @@
+{
+  "backends": {
+    "json": {
+      "characterization": "terminal-output reconstruction observed; live Flow state restoration/continuation not demonstrated",
+      "continuation_demonstrated": false,
+      "live_flow_state_restored": false,
+      "restore_live_state": {
+        "counter": 0,
+        "id": "3bef4b56-a956-4013-9b6f-8ced4e0aaa33",
+        "payload": "unset",
+        "review_status": "not_requested",
+        "trace": []
+      },
+      "restore_pid": 2854268,
+      "restored_terminal_output": {
+        "counter": 2,
+        "id": "crewai-probe-run-a",
+        "payload": "payload-a-only",
+        "review_status": "not_requested",
+        "trace": [
+          "crewai-probe-run-a:first",
+          "crewai-probe-run-a:second"
+        ]
+      },
+      "separate_processes": true,
+      "terminal_output_reconstructed": true,
+      "write_pid": 2854210,
+      "write_state": {
+        "counter": 2,
+        "id": "crewai-probe-run-a",
+        "payload": "payload-a-only",
+        "review_status": "not_requested",
+        "trace": [
+          "crewai-probe-run-a:first",
+          "crewai-probe-run-a:second"
+        ]
+      }
+    },
+    "sqlite": {
+      "characterization": "terminal-output reconstruction observed; live Flow state restoration/continuation not demonstrated",
+      "continuation_demonstrated": false,
+      "live_flow_state_restored": false,
+      "restore_live_state": {
+        "counter": 0,
+        "id": "457d1e06-26db-4dcf-b0db-00d64dc334f3",
+        "payload": "unset",
+        "review_status": "not_requested",
+        "trace": []
+      },
+      "restore_pid": 2854302,
+      "restored_terminal_output": {
+        "counter": 2,
+        "id": "crewai-probe-run-b",
+        "payload": "payload-b-only",
+        "review_status": "not_requested",
+        "trace": [
+          "crewai-probe-run-b:first",
+          "crewai-probe-run-b:second"
+        ]
+      },
+      "separate_processes": true,
+      "terminal_output_reconstructed": true,
+      "write_pid": 2854289,
+      "write_state": {
+        "counter": 2,
+        "id": "crewai-probe-run-b",
+        "payload": "payload-b-only",
+        "review_status": "not_requested",
+        "trace": [
+          "crewai-probe-run-b:first",
+          "crewai-probe-run-b:second"
+        ]
+      }
+    }
+  },
+  "overstrong_claims_prohibited": [
+    "live Flow state restored",
+    "live execution state reconstructed",
+    "workflow resumed",
+    "workflow continued after checkpoint"
+  ],
+  "runtime_checkpoint_disposition": "investigated_optional_nonselected_path",
+  "runtime_checkpoint_required_by_selected_architecture": false,
+  "status": "corrected"
+}

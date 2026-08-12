@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness-lab.local/schemas/gate2b-step02-architecture-closure.schema.json",
+  "title": "Gate 2B Step 2B.02 architecture closure",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "step",
+    "status",
+    "decision_date",
+    "machine_recommendation",
+    "human_decision",
+    "adr",
+    "retained_evidence",
+    "authorization",
+    "gate2c",
+    "next_boundary"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "step": {"const": "2B.02"},
+    "status": {"const": "complete"},
+    "decision_date": {"const": "2026-08-11"},
+    "machine_recommendation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "evidence_id", "manifest_sha256", "summary_sha256", "architecture_disposition_sha256", "permanent_predicates_passed"],
+      "properties": {
+        "status": {"const": "recommendation_ready"},
+        "evidence_id": {"const": "gate2b-step02-disposition-20260812T024610Z-00000001"},
+        "manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "summary_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "architecture_disposition_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "permanent_predicates_passed": {"const": 25}
+      }
+    },
+    "human_decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "authority", "approved_candidate", "checkpoint_characterization", "nonselected"],
+      "properties": {
+        "status": {"const": "approved"},
+        "authority": {"const": "human approval authority"},
+        "approved_candidate": {
+          "type": "array",
+          "minItems": 13,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "checkpoint_characterization": {"const": "terminal-output reconstruction observed; live Flow state restoration/continuation not demonstrated"},
+        "nonselected": {
+          "type": "array",
+          "const": ["runtime CheckpointConfig", "private _skip_auto_memory"]
+        }
+      }
+    },
+    "adr": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "status"],
+      "properties": {
+        "path": {"const": "docs/decisions/ADR-0012-crewai-flow-persistence-and-human-review-continuation.md"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "status": {"const": "Accepted"}
+      }
+    },
+    "retained_evidence": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "path", "manifest_sha256", "summary_sha256", "disposition"],
+        "properties": {
+          "evidence_id": {"type": "string", "minLength": 1},
+          "path": {"type": "string", "minLength": 1},
+          "manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "summary_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "architecture_disposition_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "disposition": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 12,
+      "maxProperties": 12,
+      "patternProperties": {"^[a-z0-9_]+$": {"const": 0}}
+    },
+    "gate2c": {"const": "deferred_unclaimed"},
+    "next_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["step", "package", "status"],
+      "properties": {
+        "step": {"const": "2B.03"},
+        "package": {"const": "gate-2b-step03-crewai-shared-operation-adapters-v1.0.0"},
+        "status": {"const": "named_not_begun"}
+      }
+    }
+  }
+}

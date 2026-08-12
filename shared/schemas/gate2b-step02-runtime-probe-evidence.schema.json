@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness-lab.local/schemas/gate2b-step02-runtime-probe-evidence.schema.json",
+  "title": "Gate 2B Step 2B.02 runtime probe summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "status",
+    "evidence_disposition",
+    "predecessor_sha",
+    "architecture_status",
+    "authorization",
+    "gate2c"
+  ],
+  "properties": {
+    "schema_version": {"const": 2},
+    "evidence_id": {"type": "string", "pattern": "^gate2b-step02-[0-9]{8}T[0-9]{6}Z-[0-9]{8}$"},
+    "status": {"enum": ["pass", "fail"]},
+    "evidence_disposition": {"const": "superseding_candidate"},
+    "predecessor_sha": {"const": "7bea4320c08670d8e9a0c71f88d10922fced8c1e"},
+    "architecture_status": {"enum": ["recommendation_ready", "unresolved"]},
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_calls", "provider_calls", "drupal_mutations", "source_mutations", "human_review_actions", "dependency_changes", "gate2c_executions", "live_recommendation_submissions"],
+      "properties": {
+        "model_calls": {"const": 0},
+        "provider_calls": {"const": 0},
+        "drupal_mutations": {"const": 0},
+        "source_mutations": {"const": 0},
+        "human_review_actions": {"const": 0},
+        "dependency_changes": {"const": 0},
+        "gate2c_executions": {"const": 0},
+        "live_recommendation_submissions": {"const": 0}
+      }
+    },
+    "gate2c": {"const": "deferred_unclaimed"}
+  }
+}
