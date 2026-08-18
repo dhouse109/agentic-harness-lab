@@ -30,8 +30,9 @@
 - **Gate 2A freeze:** `shared/contracts/GATE2A-LANGGRAPH-FREEZE.json` (`a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0`).
 - **Step 2B.01:** complete, merged, and post-merge audited.
 - **Completed Step 2B.02 package:** `gate-2b-step02-crewai-architecture-adr-and-closure-v1.0.0`.
-- **Step 2B.02:** complete with retained model-free evidence, all 25 permanent architecture predicates passing, and explicit human architecture approval.
-- **Next package:** `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0` is named but locked and unbegun pending Step 2B.02 commit, merge, local `main` resynchronization, and post-merge audit.
+- **Step 2B.02:** complete, merged, resynchronized, and post-merge audited with retained model-free evidence, all 25 permanent architecture predicates passing, and explicit human architecture approval.
+- **Completed Step 2B.03 package:** `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0`.
+- **Step 2B.03:** complete locally with accepted model-free adapter evidence `gate2b-step03-20260818T163812Z-7a58ef58` and a passing permanent audit. It has not been committed or merged. Step 2B.04 remains unbegun; no later Gate 2B package is named or begun.
 - **Retained Step 2B.02 diagnostic:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid and retained. Its mechanical audit originally passed, but later integrity review found its architecture recommendation unsupported by the stronger default/instrumented, independent-isolation, and retry predicates. It is diagnostic/unaccepted, not corrupted; at that capture boundary, Step 2B.02 remained open.
 - **Retained Step 2B.02 v2 capture:** `gate2b-step02-20260812T015108Z-00000001` is byte-valid and passed its superseding capture boundary with architecture unresolved.
 - **Retained Step 2B.02 supplemental capture:** `gate2b-step02-followup-20260812T022947Z-00000001` is byte-valid and corrected the native structured-output fallback and terminal-output-only checkpoint interpretation. Its immutable classifier remains `unresolved_path`; no retained evidence was rewritten.
@@ -213,4 +214,4 @@ A new planning or implementation session should read these files in order:
 Do not reopen Gate 0.5 or Gate 1 unless an audit fails or a frozen contract is intentionally changed.
 Step 2A.01 through Step 2A.10 are complete and Gate 2A LangGraph is certified and frozen.
 
-Use `docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md`, the Step 2B.01 contract, the Step 2B.02 runtime-probe document, and `docs/CODEX-GATE-2B-RUNBOOK.md`. Step 2B.01 is closed and Step 2B.02 is active. Do not create an ADR or begin Step 2B.03 without evidence-supported architecture approval. Gate 2C remains deferred and unclaimed.
+Use `docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md`, the Step 2B.01 contract, the Step 2B.02 runtime-probe document, ADR-0012, and `docs/CODEX-GATE-2B-RUNBOOK.md`. Steps 2B.01 through 2B.03 have completed their current evidence boundaries; Step 2B.03 evidence `gate2b-step03-20260818T163812Z-7a58ef58` awaits commit, merge, resynchronization, and post-merge audit. Gate 2C remains deferred and unclaimed.

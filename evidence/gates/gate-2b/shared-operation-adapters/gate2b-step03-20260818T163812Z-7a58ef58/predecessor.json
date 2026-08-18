@@ -1,0 +1,8 @@
+{
+  "branch": "gate-2b-step03-crewai-shared-operation-adapters",
+  "crewai_lock_sha256": "855e5edff2cb86eb64ea9856d239b19010e7d3b1f80c40e370ed81d66b8e4e7c",
+  "gate2b_contract_sha256": "c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77",
+  "head": "e11746138c77f03b71a93a52ce69d199e71f697f",
+  "required_predecessor": "e11746138c77f03b71a93a52ce69d199e71f697f",
+  "status": "pass"
+}

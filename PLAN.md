@@ -305,13 +305,13 @@ Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e458
 
 - [x] Step 2B.01 — CrewAI contract and evidence plan
 - [x] Step 2B.02 — model-free pinned-runtime persistence, continuation, architecture selection, and human-approved ADR
-- [ ] Step 2B.03 — CrewAI shared-operation adapters (named, locked, and unbegun)
+- [x] Step 2B.03 — CrewAI shared-operation adapters (accepted evidence `gate2b-step03-20260818T163812Z-7a58ef58`)
 
 Step 2B.02 compared supported persistence families, process-boundary semantics, storage ownership, serialization privacy, run isolation, Drupal-authoritative pending-continuation compatibility, hidden-call controls, and deterministic failure propagation. Its accepted architecture is recorded in `docs/decisions/ADR-0012-crewai-flow-persistence-and-human-review-continuation.md` and its machine/human closure provenance is retained in `shared/contracts/GATE2B-STEP02-CREWAI-ARCHITECTURE-CLOSURE.json`.
 
 The retained first run `gate2b-step02-20260812T010531Z-00000001` remains immutable diagnostic evidence and superseded/unaccepted for architecture selection. The byte-identical v2 capture `gate2b-step02-20260812T015108Z-00000001` passed its capture boundary but initially left architecture unresolved. The byte-identical targeted supplemental capture `gate2b-step02-followup-20260812T022947Z-00000001` corrected native fallback and checkpoint semantics while preserving its raw `unresolved_path` classifications. The separate governed disposition `gate2b-step02-disposition-20260812T024610Z-00000001` source-attributed those paths, verified the public version-check disable control, and passed all 25 permanent predicates. Human approval selected supported Flow persistence plus the public memory extension plus `HumanFeedbackPending` / `from_pending()` / `resume()`, with runtime checkpoints excluded.
 
-The next proposed package is `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0`. It remains locked and unbegun until Step 2B.02 is committed, merged, resynchronized, and post-merge audited.
+Step 2B.02 is committed, merged, resynchronized, and post-merge audited. Package `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0` completed with accepted model-free evidence `gate2b-step03-20260818T163812Z-7a58ef58`. No later Gate 2B package is named or begun.
 
 Gate 2C shared failure/recovery remains deferred and unclaimed. CrewAI-specific continuation evidence must remain labeled Gate 2B.
 

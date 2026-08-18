@@ -1,0 +1,14 @@
+{
+  "crewai": "1.15.10",
+  "crewai_tools": "1.15.10",
+  "public_exported": true,
+  "python": "3.12.13",
+  "selected_api": "crewai.tools.tool",
+  "selected_api_signature": "(*args: 'Callable[P2, R2] | str', result_schema: 'type[BaseModel] | None' = None, result_as_answer: 'bool' = False, max_usage_count: 'int | None' = None) -> 'Tool[P2, R2] | Callable[[Callable[P2, R2]], Tool[P2, R2]]'",
+  "source_files": {
+    "crewai/tools/__init__.py": "fda33a70254e62fc6443fb4f2559ed904ef5059c84b7ca2bc8c3933b94ce0551",
+    "crewai/tools/base_tool.py": "5f2b8f7116a283e65403e84430819bd4d74d73e51187202a705603d6b1354abe",
+    "crewai/tools/structured_tool.py": "c56dbf91a047924abc1b6c1a8ca2d324b50cb89eafaf71b8e453474ec3455c3f"
+  },
+  "status": "pass"
+}

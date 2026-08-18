@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "authoritative_human_review_actions": 0,
+    "dependency_changes": 0,
+    "drupal_mutations": 0,
+    "flow_initializations": 0,
+    "gate2c_executions": 0,
+    "live_recommendation_submissions": 0,
+    "model_calls": 0,
+    "outbound_network_attempts": 0,
+    "persistence_initializations": 0,
+    "provider_calls": 0,
+    "source_content_mutations": 0,
+    "successful_outbound_network_connections": 0
+  },
+  "network_guard": "socket connection APIs denied during all CrewAI imports and invocations",
+  "status": "pass",
+  "submission_proof": "non-mutating FakeSharedClient only"
+}

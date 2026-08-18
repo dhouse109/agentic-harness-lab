@@ -1,0 +1,15 @@
+{
+  "files_scanned": [
+    "adapter-inventory.json",
+    "authorization.json",
+    "delegation-proof.json",
+    "failure-propagation.json",
+    "pinned-source-provenance.json",
+    "predecessor.json",
+    "proof-log.txt",
+    "summary.json",
+    "summary.md"
+  ],
+  "findings": [],
+  "status": "pass"
+}

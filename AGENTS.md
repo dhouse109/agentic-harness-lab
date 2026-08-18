@@ -185,9 +185,11 @@ Gate 1 Drupal AI and Gate 2A LangGraph are certified and frozen. Gate 2 is the u
 
 **Completed Step 2B.02 package:** `gate-2b-step02-crewai-architecture-adr-and-closure-v1.0.0`.
 
-**Step 2B.02:** complete after retained model-free runtime evidence, permanent architecture audit, and explicit human architecture approval.
+**Step 2B.02:** complete, merged, resynchronized, and post-merge audited after retained model-free runtime evidence, permanent architecture audit, and explicit human architecture approval.
 
-**Next package:** `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0` is named but locked and unbegun pending Step 2B.02 commit, merge, local `main` resynchronization, and post-merge audit.
+**Completed Step 2B.03 package:** `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0`.
+
+**Step 2B.03:** complete locally with accepted model-free adapter evidence `gate2b-step03-20260818T163812Z-7a58ef58` and a passing permanent audit. It has not been committed or merged. Step 2B.04 remains unbegun; no later Gate 2B package is named or begun.
 
 **Retained diagnostic Step 2B.02 run:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid diagnostic evidence but is superseded/unaccepted for architecture selection. Its original mechanical audit passed; later integrity review found unlabeled private Flow instrumentation and incomplete isolation/retry predicates. At that capture boundary, Step 2B.02 remained open.
 
@@ -207,11 +209,11 @@ Gate 1 Drupal AI and Gate 2A LangGraph are certified and frozen. Gate 2 is the u
 
 **Gate 2A handoff package (historical next package):** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
 
-**Gate 2B Step 2B.02 authorization:** zero model/provider calls, zero CrewAI-origin Drupal mutations, zero source-content mutations, zero authoritative human-review actions, zero dependency changes, zero live recommendation submissions, and zero Gate 2C executions.
+**Gate 2B Step 2B.03 authorization:** zero model/provider calls, zero successful outbound network connections, zero CrewAI-origin Drupal mutations, zero source-content mutations, zero authoritative human-review actions, zero dependency changes, zero live recommendation submissions, and zero Gate 2C executions.
 
 Read `docs/gates/GATE-2B-STEP02-CREWAI-RUNTIME-PERSISTENCE-AND-CONTINUATION-PROBE.md`, `docs/gates/GATE-2B-STEP01-CREWAI-CONTRACT-AND-EVIDENCE-PLAN.md`, `docs/CODEX-GATE-2B-RUNBOOK.md`, and `docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md`. Preserve the frozen dataset, model/settings, shared operations, validator, review destination and authority, source-mutation rule, idempotency identity, and reserved Gate 2C target-6/7 seam. Do not infer CrewAI behavior from LangGraph evidence.
 
-Step 2B.02 created only model-free CrewAI-specific runtime and governed-disposition evidence. Step 2B.03 remains locked until the completed Step 2B.02 boundary is committed, merged, resynchronized to local `main`, and passes its permanent post-merge audit. Do not generate or begin Step 2B.03 before that approval boundary.
+Step 2B.03 completed its model-free shared-operation adapter boundary with accepted evidence `gate2b-step03-20260818T163812Z-7a58ef58`. Do not begin a later package until Step 2B.03 is committed, merged, resynchronized, and post-merge audited.
 
 Accepted Step 2B.01 evidence run: `gate2b-step01-20260811T231020Z-00000002`
 Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77`

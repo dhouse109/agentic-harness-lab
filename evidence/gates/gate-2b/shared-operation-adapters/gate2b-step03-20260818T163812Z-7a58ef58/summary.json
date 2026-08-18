@@ -1,0 +1,28 @@
+{
+  "accepted_claims": [
+    "four supported deterministic CrewAI adapters exist",
+    "delegation preserves frozen shared-operation ownership",
+    "adapter invocation is model-free and persistence-independent",
+    "adapter code introduces no retry or business-logic layer",
+    "deterministic shared-boundary failures propagate after one call"
+  ],
+  "evidence_file_count": 11,
+  "nonclaims": [
+    "model call",
+    "one-call inference budget",
+    "recommendation quality",
+    "canonical vertical slice",
+    "live Drupal submission",
+    "Drupal human review",
+    "pending/resume continuation",
+    "12-target batch",
+    "Gate 2C recovery",
+    "production readiness",
+    "framework superiority"
+  ],
+  "purpose": "model-free CrewAI shared-operation adapter construction and deterministic delegation proof",
+  "run_id": "gate2b-step03-20260818T163812Z-7a58ef58",
+  "schema_version": "1.0.0",
+  "status": "pass",
+  "step": "2B.03"
+}

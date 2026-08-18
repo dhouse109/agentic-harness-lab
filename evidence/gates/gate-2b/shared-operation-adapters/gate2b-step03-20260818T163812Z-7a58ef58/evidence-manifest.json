@@ -1,0 +1,45 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "adapter-inventory.json",
+      "sha256": "7f99b8aea118007073a741a8d6c6553fc6a11d6b54db941962b398d1fd31358f"
+    },
+    {
+      "path": "authorization.json",
+      "sha256": "9aa10cbe433532e77caf5954ed8219ec9be7e1c65276f05f6a83baf4b9eb930d"
+    },
+    {
+      "path": "delegation-proof.json",
+      "sha256": "1dcb40a7e1c202403463f943c023f62000afdfd83b31e8b9fefd3f42b89d0116"
+    },
+    {
+      "path": "failure-propagation.json",
+      "sha256": "3b91426aef0c7d34d4d99ef357479bea05af489504bbab8159ec13c9474fd5ce"
+    },
+    {
+      "path": "pinned-source-provenance.json",
+      "sha256": "201fc67538c1b8add8cd37471d472fa1d2569cd4eb63edbcc31f26aaf39ea22f"
+    },
+    {
+      "path": "predecessor.json",
+      "sha256": "ab19f974ba9047b97dcba8b6bd0829ecf3500c647bc2f4b5628f90149fa35edd"
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "40f952ecc8dd49d27e6ee140aa2ab6995daac98f591aee4c483697177a51c57f"
+    },
+    {
+      "path": "proof-log.txt",
+      "sha256": "56b64cf4555cfb325aaa3531885a61e20d72d3598d13244a9aa5d72c934a44a7"
+    },
+    {
+      "path": "summary.json",
+      "sha256": "33d6bc403fe60556e4fc4d823eaf98d7d23b9c9973f66a1ccd283fce316c35ec"
+    },
+    {
+      "path": "summary.md",
+      "sha256": "04dbde015073bf17a6ddb2b7bef0aa76c777d7cb166f8cb4faaeffdc14afa65f"
+    }
+  ]
+}

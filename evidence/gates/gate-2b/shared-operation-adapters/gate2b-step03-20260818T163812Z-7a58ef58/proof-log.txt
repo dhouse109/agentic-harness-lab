@@ -1,0 +1,6 @@
+Step 2B.03 deterministic proof log
+run_id=gate2b-step03-20260818T163812Z-7a58ef58
+mechanism=public crewai.tools.tool
+shared_boundary=fake_non_mutating
+tool_runtime_output_lines=0
+result=adapter proof completed without model, provider, network, Drupal, Flow, or persistence activity
