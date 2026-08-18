@@ -1,0 +1,72 @@
+{
+  "mechanism": "public crewai.tools.tool decorator",
+  "status": "pass",
+  "tools": [
+    {
+      "argument_schema": {
+        "properties": {},
+        "title": "Find_Images_Needing_Review",
+        "type": "object"
+      },
+      "description": "Return the frozen ordered targets needing accessibility review.",
+      "name": "find_images_needing_review",
+      "return_translation": "shared dict envelope returned unchanged"
+    },
+    {
+      "argument_schema": {
+        "properties": {
+          "target": {
+            "additionalProperties": true,
+            "title": "Target",
+            "type": "object"
+          }
+        },
+        "required": [
+          "target"
+        ],
+        "title": "Get_Image_Context",
+        "type": "object"
+      },
+      "description": "Return permission-scoped context for one frozen target object.",
+      "name": "get_image_context",
+      "return_translation": "shared dict envelope returned unchanged"
+    },
+    {
+      "argument_schema": {
+        "properties": {
+          "recommendation": {
+            "additionalProperties": true,
+            "title": "Recommendation",
+            "type": "object"
+          }
+        },
+        "required": [
+          "recommendation"
+        ],
+        "title": "Submit_Recommendation",
+        "type": "object"
+      },
+      "description": "Submit one recommendation through the authoritative shared boundary.",
+      "name": "submit_recommendation",
+      "return_translation": "shared dict envelope returned unchanged"
+    },
+    {
+      "argument_schema": {
+        "properties": {
+          "recommendation_id": {
+            "title": "Recommendation Id",
+            "type": "string"
+          }
+        },
+        "required": [
+          "recommendation_id"
+        ],
+        "title": "Get_Recommendation_Status",
+        "type": "object"
+      },
+      "description": "Observe recommendation status through the read-only shared boundary.",
+      "name": "get_recommendation_status",
+      "return_translation": "shared dict envelope returned unchanged"
+    }
+  ]
+}

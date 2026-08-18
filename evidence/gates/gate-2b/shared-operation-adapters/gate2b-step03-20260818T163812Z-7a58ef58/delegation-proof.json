@@ -1,0 +1,105 @@
+{
+  "fake_boundary": "non-mutating recording fake; no Drupal client instance constructed",
+  "rows": [
+    {
+      "adapter": "find_images_needing_review",
+      "arguments": {},
+      "call_delta": 1,
+      "correlation_id_bound": true,
+      "return_identity_preserved": true,
+      "return_value": {
+        "data": {
+          "targets": [
+            {
+              "entity_uuid": "fixture-article"
+            }
+          ]
+        },
+        "ok": true
+      },
+      "shared_operation": "find_images_needing_review"
+    },
+    {
+      "adapter": "get_image_context",
+      "arguments": {
+        "target": {
+          "delta": 0,
+          "entity_uuid": "fixture-article",
+          "field_name": "field_image"
+        }
+      },
+      "call_delta": 1,
+      "correlation_id_bound": true,
+      "return_identity_preserved": true,
+      "return_value": {
+        "data": {
+          "context": "fixture",
+          "target": {
+            "entity_uuid": "fixture-article"
+          }
+        },
+        "ok": true
+      },
+      "shared_operation": "get_image_context"
+    },
+    {
+      "adapter": "submit_recommendation",
+      "arguments": {
+        "recommendation": {
+          "proposed_alt_text": "Fixture text used only for adapter wiring.",
+          "rationale": "Non-mutating deterministic fixture.",
+          "target": {
+            "delta": 0,
+            "entity_uuid": "fixture-article",
+            "field_name": "field_image"
+          }
+        }
+      },
+      "call_delta": 1,
+      "correlation_id_bound": true,
+      "return_identity_preserved": true,
+      "return_value": {
+        "data": {
+          "recommendation_id": "fixture-nonmutating",
+          "status": "pending"
+        },
+        "ok": true
+      },
+      "shared_operation": "submit_recommendation"
+    },
+    {
+      "adapter": "get_recommendation_status",
+      "arguments": {
+        "recommendation_id": "fixture-nonmutating"
+      },
+      "call_delta": 1,
+      "correlation_id_bound": true,
+      "return_identity_preserved": true,
+      "return_value": {
+        "data": {
+          "recommendation_id": "fixture-nonmutating",
+          "status": "pending"
+        },
+        "ok": true
+      },
+      "shared_operation": "get_recommendation_status"
+    }
+  ],
+  "static_safety": {
+    "adapter_source_sha256": "49754266b5cb34d9e0a81bb99af463618ff7926d0ffb992599b906c2c5231444",
+    "disallowed_network_or_model_imports": [],
+    "exception_handler_count": 0,
+    "imports": [
+      "__future__",
+      "crewai.tools",
+      "shared.drupal_client.client",
+      "typing"
+    ],
+    "loop_count": 0,
+    "prohibited_runtime_symbols": [],
+    "second_drupal_write_path_present": false,
+    "shared_validation_implemented": false,
+    "status": "pass"
+  },
+  "status": "pass"
+}

@@ -49,6 +49,6 @@ Step 2B.02 is complete with four immutable model-free evidence boundaries, a gov
 
 The approved architecture uses supported CrewAI Flow, public `set_memory_storage_factory(...)`, `SQLiteFlowPersistence`, and `HumanFeedbackPending` / `from_pending()` / `resume()` while Drupal remains authoritative. Runtime `CheckpointConfig` and private `_skip_auto_memory` are nonselected. Later inference must use zero transport/guardrail retries, fail-closed structured output, explicit fallback accounting, `learn=False`, and complete SDK/provider request counting.
 
-The next proposed package is `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0`. It is named but locked and unbegun. Do not prepare it until Step 2B.02 is committed and merged, local `main` is resynchronized, and the lifecycle-compatible Step 2B.02 closure audit passes on merged `main`.
+Step 2B.02 is committed, merged, locally resynchronized, and post-merge audited. The current package is `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0`. Its model-free CrewAI tool layer over the frozen shared operations is accepted in `gate2b-step03-20260818T163812Z-7a58ef58`. No later Gate 2B package is named or begun.
 
 Use `bash scripts/run-gate2b-step02-crewai-architecture-closure.sh audit` for the permanent closure check. Its `run` mode is restricted to the exact Step 2B.02 feature lifecycle; its `audit` mode validates retained evidence, hashes, ADR/closure provenance, and lifecycle state on legitimate commit and merge descendants without requiring `HEAD` to remain the pre-install predecessor.

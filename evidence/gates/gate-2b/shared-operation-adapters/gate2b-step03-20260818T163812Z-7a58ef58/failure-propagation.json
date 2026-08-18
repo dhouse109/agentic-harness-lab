@@ -1,0 +1,37 @@
+{
+  "rows": [
+    {
+      "adapter": "find_images_needing_review",
+      "call_count": 1,
+      "exception_message": "fixture failure: find_images_needing_review",
+      "exception_type": "DeterministicBoundaryFailure",
+      "propagated": true,
+      "retry_count": 0
+    },
+    {
+      "adapter": "get_image_context",
+      "call_count": 1,
+      "exception_message": "fixture failure: get_image_context",
+      "exception_type": "DeterministicBoundaryFailure",
+      "propagated": true,
+      "retry_count": 0
+    },
+    {
+      "adapter": "submit_recommendation",
+      "call_count": 1,
+      "exception_message": "fixture failure: submit_recommendation",
+      "exception_type": "DeterministicBoundaryFailure",
+      "propagated": true,
+      "retry_count": 0
+    },
+    {
+      "adapter": "get_recommendation_status",
+      "call_count": 1,
+      "exception_message": "fixture failure: get_recommendation_status",
+      "exception_type": "DeterministicBoundaryFailure",
+      "propagated": true,
+      "retry_count": 0
+    }
+  ],
+  "status": "pass"
+}
