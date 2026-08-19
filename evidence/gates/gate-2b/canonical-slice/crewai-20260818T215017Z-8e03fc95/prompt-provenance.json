@@ -1,0 +1,11 @@
+{
+  "model": "gpt-4.1-mini-2025-04-14",
+  "prompt_version": "crewai-alt-text-v1.0.0",
+  "raw_prompt_retained": false,
+  "status": "pass",
+  "system_prompt_length": 634,
+  "system_prompt_sha256": "0a82c7e744ac7313e1e7772ef1c3b71f4732d5a5e8e46cc87e0a61cedeb92816",
+  "temperature": 0.0,
+  "user_prompt_semantics": "frozen shared template",
+  "user_prompt_sha256": "f1760d1e61b5355ffe00005d1d105e4a4b51ec4d63a9528ddae35c687c06b042"
+}

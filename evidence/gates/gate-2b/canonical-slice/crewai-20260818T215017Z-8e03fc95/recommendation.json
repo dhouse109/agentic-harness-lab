@@ -1,0 +1,19 @@
+{
+  "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+  "proposed_alt_text": "Minimalist graphic with a large white number 1 composed of small squares on a solid navy background, labeled as Phase 0 primary image for emergency preparedness.",
+  "run_id": "crewai-20260818T215017Z-8e03fc95",
+  "schema_version": 1,
+  "source_framework": "crewai",
+  "target": {
+    "delta": 0,
+    "existing_alt": "",
+    "field_name": "field_image",
+    "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+    "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+    "revision_id": 1,
+    "schema_version": 1,
+    "sequence": 1,
+    "target_state": "missing"
+  },
+  "validator_version": "gate05-validator-1.0.0"
+}

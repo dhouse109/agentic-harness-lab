@@ -1,0 +1,12 @@
+{
+  "classification": "post_close_provenance",
+  "closure_id": "gate2b-step04-closure-20260819T195009Z-60344274",
+  "drupal_mutation_performed": false,
+  "inference_performed": false,
+  "model_free": true,
+  "original_live_evidence_replaced": false,
+  "schema_version": "1.0.0",
+  "source_run_id": "crewai-20260818T215017Z-8e03fc95",
+  "status": "pass",
+  "step": "2B.04"
+}

@@ -1,0 +1,18 @@
+{
+  "article_count": 20,
+  "drupal_write_performed": false,
+  "inspection": "read_only_Drupal_snapshot_and_recommendation_status_provider",
+  "recommendation": {
+    "bundle": "alt_text_suggestion",
+    "node_id": 21,
+    "reviewed_at": null,
+    "reviewer_username": null,
+    "revision_id": 21,
+    "status": "pending",
+    "uuid": "1878ae86-834c-4813-9134-4c3b8d0833c9"
+  },
+  "source_projection_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "status": "pass",
+  "suggestion_count": 1,
+  "target_count": 12
+}

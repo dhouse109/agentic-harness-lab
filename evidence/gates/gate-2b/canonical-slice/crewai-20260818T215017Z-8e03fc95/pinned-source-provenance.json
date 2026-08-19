@@ -1,0 +1,16 @@
+{
+  "crewai": "1.15.10",
+  "crewai_tools": "1.15.10",
+  "public_transport_counter": "crewai.llms.hooks.base.BaseInterceptor",
+  "python": "3.12.13",
+  "selected_path": "CrewAI Flow -> native OpenAICompletion(api=responses) -> OpenAI.responses.create",
+  "source_sha256": {
+    "crewai/flow/persistence/decorators.py": "330f795765693fdc85491a2eaa9dcf4cbce356a34edf1df8744770d554bedc62",
+    "crewai/flow/persistence/sqlite.py": "89da1729edf0b0fcbc1081601cb04123d6b5a90152df61b60f3bcefdbeb2e6dc",
+    "crewai/llm.py": "5ea3650e7c89f34cf46c9437a1fa33722caf2557770af0ece563ab2de7c08897",
+    "crewai/llms/hooks/base.py": "5d840f12787183a04fcc5938a24855417cb71c15c79e3078656b5eaa33c96b82",
+    "crewai/llms/hooks/transport.py": "6a8ca9d0bb31ae973f2a70931f59160502b3e69052c419cd0a410abba1e7f98f",
+    "crewai/llms/providers/openai/completion.py": "d37e6f9c244c565ab611c9b13e93b1cb7d65291a5d1f758f098b09c895aa475a"
+  },
+  "status": "pass"
+}

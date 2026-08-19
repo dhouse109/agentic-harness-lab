@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness-lab.local/schemas/gate2b-step04-closure-provenance.schema.json",
+  "title": "Gate 2B Step 2B.04 post-close persistence provenance",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "step",
+    "closure_id",
+    "status",
+    "classification",
+    "source_run",
+    "open_running_persistence_provenance",
+    "post_process_close_file_set_provenance",
+    "linked_artifacts",
+    "statements"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "step": {"const": "2B.04"},
+    "closure_id": {
+      "type": "string",
+      "pattern": "^gate2b-step04-closure-[0-9]{8}T[0-9]{6}Z-[0-9a-f]{8}$"
+    },
+    "status": {"const": "pass"},
+    "classification": {"const": "post_close_provenance_model_free_evidence_closure"},
+    "source_run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_id", "relative_path", "file_count", "manifest_sha256", "summary_sha256", "whole_tree_sha256"],
+      "properties": {
+        "run_id": {"const": "crewai-20260818T215017Z-8e03fc95"},
+        "relative_path": {"const": "evidence/gates/gate-2b/canonical-slice/crewai-20260818T215017Z-8e03fc95"},
+        "file_count": {"const": 20},
+        "manifest_sha256": {"const": "c6115ffea4b7ceefb7858e6b482713fc92998dcf2bde7bc6de8831d583665aaf"},
+        "summary_sha256": {"const": "5cd324d26b866c83d9728e7634887bcf3ccc46c2df5f4fc6a9563069f71ef490"},
+        "whole_tree_sha256": {"const": "0d0e2c6af5e328a52aa867e4cbc3ade787e13833fece34009854212d2cda69be"}
+      }
+    },
+    "open_running_persistence_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lifecycle_state", "artifact_relative_path", "artifact_sha256", "recorded_main_file_sha256", "byte_identity_with_post_close_main_required"],
+      "properties": {
+        "lifecycle_state": {"const": "open_running_wal_backed_capture"},
+        "artifact_relative_path": {"const": "evidence/gates/gate-2b/canonical-slice/crewai-20260818T215017Z-8e03fc95/persistence-provenance.json"},
+        "artifact_sha256": {"const": "4048d5daed9b30a0d2702f5530dafaeafb5bb13e5bdba30117397de0ff5823a1"},
+        "recorded_main_file_sha256": {"const": "9c0ca1e75def573857de1ecfcb7a392381848dcbd8e27eebf8288908f1b271f8"},
+        "byte_identity_with_post_close_main_required": {"const": false}
+      }
+    },
+    "post_process_close_file_set_provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["captured_at", "lifecycle_state", "process_closure", "authoritative_files_hashed_as_files_without_mutation", "authoritative_sqlite_opened", "runtime_components"],
+      "properties": {
+        "captured_at": {"type": "string", "format": "date-time"},
+        "lifecycle_state": {"const": "post_process_close_file_set"},
+        "process_closure": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["method", "checked_process_count", "matching_live_runner_processes", "matching_open_runtime_file_descriptors", "process_closed"],
+          "properties": {
+            "method": {"type": "string", "minLength": 1},
+            "checked_process_count": {"type": "integer", "minimum": 0},
+            "matching_live_runner_processes": {"const": 0},
+            "matching_open_runtime_file_descriptors": {"const": 0},
+            "process_closed": {"const": true}
+          }
+        },
+        "authoritative_files_hashed_as_files_without_mutation": {"const": true},
+        "authoritative_sqlite_opened": {"const": false},
+        "runtime_components": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["relative_path", "sha256", "byte_size", "present"],
+            "properties": {
+              "relative_path": {"type": "string", "minLength": 1},
+              "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+              "byte_size": {"type": "integer", "minimum": 0},
+              "present": {"const": true}
+            }
+          }
+        }
+      }
+    },
+    "linked_artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authorization_sha256", "drupal_observation_sha256", "sqlite_semantic_inspection_sha256"],
+      "properties": {
+        "authorization_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "drupal_observation_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "sqlite_semantic_inspection_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "statements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model_or_provider_action_during_capture",
+        "drupal_mutation_during_capture",
+        "source_content_mutation_during_capture",
+        "human_review_during_capture",
+        "experiment_replayed",
+        "original_evidence_rewritten",
+        "authoritative_runtime_mutated",
+        "semantic_inspection_used_disposable_copy_only"
+      ],
+      "properties": {
+        "model_or_provider_action_during_capture": {"const": false},
+        "drupal_mutation_during_capture": {"const": false},
+        "source_content_mutation_during_capture": {"const": false},
+        "human_review_during_capture": {"const": false},
+        "experiment_replayed": {"const": false},
+        "original_evidence_rewritten": {"const": false},
+        "authoritative_runtime_mutated": {"const": false},
+        "semantic_inspection_used_disposable_copy_only": {"const": true}
+      }
+    }
+  }
+}

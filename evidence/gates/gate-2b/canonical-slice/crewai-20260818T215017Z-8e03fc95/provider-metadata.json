@@ -1,0 +1,12 @@
+{
+  "api": "responses",
+  "max_retries": 0,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "provider": "OpenAI",
+  "response_body_retained": false,
+  "response_format": "strict json_schema",
+  "status": "pass",
+  "store": false,
+  "stream": false,
+  "temperature": 0.0
+}

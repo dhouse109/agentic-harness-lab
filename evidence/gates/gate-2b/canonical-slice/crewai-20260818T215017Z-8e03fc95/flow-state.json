@@ -1,0 +1,103 @@
+{
+  "assembled_recommendation": {
+    "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+    "proposed_alt_text": "Minimalist graphic with a large white number 1 composed of small squares on a solid navy background, labeled as Phase 0 primary image for emergency preparedness.",
+    "run_id": "crewai-20260818T215017Z-8e03fc95",
+    "schema_version": 1,
+    "source_framework": "crewai",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    "validator_version": "gate05-validator-1.0.0"
+  },
+  "canonical_target": {
+    "delta": 0,
+    "existing_alt": "",
+    "field_name": "field_image",
+    "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+    "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+    "revision_id": 1,
+    "schema_version": 1,
+    "sequence": 1,
+    "target_state": "missing"
+  },
+  "context_provenance": {
+    "article_body_length": 609,
+    "article_body_sha256": "3ca835b18ecc6be4cfc33c779794566c818beb5f83bffa829776d80e7bb09896",
+    "article_title": "Phase 0 01 — Emergency Preparedness Checklist",
+    "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+    "image_filename": "phase0-article-01-image-1.png",
+    "image_height": 675,
+    "image_mime_type": "image/png",
+    "image_sha256": "49bdc7c2d792d5839bc36576b6f2de7fb7fa6f6633967ed3a5bbb541cf9676d5",
+    "image_width": 1200,
+    "raw_body_retained": false,
+    "raw_representation_retained": false,
+    "representation_length": 6010,
+    "representation_sha256": "05c56d8ca0052910ef6b52d3a0555a67b698fe89bc3273cf605d0492bff6335d",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    }
+  },
+  "continuation_status": "untested",
+  "deterministic_validation": {
+    "owner": "shared submit_recommendation boundary",
+    "separate_adapter_validation": false,
+    "status": "pass"
+  },
+  "framework_origin": "crewai",
+  "id": "crewai-20260818T215017Z-8e03fc95",
+  "lifecycle_stage": "awaiting_drupal_authoritative_review",
+  "model_id": "gpt-4.1-mini-2025-04-14",
+  "persistence_provenance": {
+    "continuation_claimed": false,
+    "mechanism": "SQLiteFlowPersistence",
+    "runtime_db": "crewai/.runtime/gate2b-step04/crewai-20260818T215017Z-8e03fc95/flow-state.sqlite",
+    "shared_runtime_storage": false
+  },
+  "prompt_sha256": "f1760d1e61b5355ffe00005d1d105e4a4b51ec4d63a9528ddae35c687c06b042",
+  "prompt_version": "crewai-alt-text-v1.0.0",
+  "raw_model_output": {
+    "proposed_alt_text": "Minimalist graphic with a large white number 1 composed of small squares on a solid navy background, labeled as Phase 0 primary image for emergency preparedness."
+  },
+  "recommendation_id": "1878ae86-834c-4813-9134-4c3b8d0833c9",
+  "recommendation_revision_id": 21,
+  "request_accounting": {
+    "actual_provider_requests": 1,
+    "fallback_provider_calls": 0,
+    "feedback_collapse_calls": 0,
+    "guardrail_correction_retries": 0,
+    "learning_distillation_calls": 0,
+    "logical_generations": 1,
+    "provider_retries": 0,
+    "response_statuses": [
+      200
+    ],
+    "structured_repair_calls": 0,
+    "successful_provider_responses": 1,
+    "transport_retries": 0
+  },
+  "review_status": "pending",
+  "run_id": "crewai-20260818T215017Z-8e03fc95",
+  "started_at": "2026-08-18T21:50:22Z",
+  "status": "awaiting_human_review",
+  "target_sequence_hash": "sha256:1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "temperature": 0.0,
+  "updated_at": "2026-08-18T21:50:28Z"
+}

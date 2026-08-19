@@ -1,0 +1,33 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "authorization.json",
+      "sha256": "bf0a7f719dcd31c04ae113df0d7d91279563142485058c9fc32df63458a52173"
+    },
+    {
+      "path": "closure-provenance.json",
+      "sha256": "edf393f999698ae07844e3743e6c8b2969015bef3846f0970c9b89af905601ac"
+    },
+    {
+      "path": "drupal-observation.json",
+      "sha256": "58bc56185d8694319ff7c4b9d002476abe494aaf2c197595fece04edfe086705"
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "03dd3686bfed541e586b424148d179249496d539579701950fc7959dc82e6d3b"
+    },
+    {
+      "path": "sqlite-semantic-inspection.json",
+      "sha256": "92cdc405e9c893f01861d74cc79affe487216a1258c81abbc2e7255e6ee0e4b6"
+    },
+    {
+      "path": "summary.json",
+      "sha256": "e482aa166485ea97c0698b82dade0cfdadbe9947fb06aa2ce0d59c9a3cc87f01"
+    },
+    {
+      "path": "summary.md",
+      "sha256": "d33f87ccdf7774e47e1ab0c9a0c12819a5d2f2e29ece69fd80ebca563b663441"
+    }
+  ]
+}

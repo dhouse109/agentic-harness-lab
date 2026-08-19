@@ -41,7 +41,8 @@ and lifecycle and recovery.
 - **Completed Step 2B.02 package:** `gate-2b-step02-crewai-architecture-adr-and-closure-v1.0.0`.
 - **Step 2B.02:** complete, merged, resynchronized, and post-merge audited with retained model-free evidence, permanent architecture audit, and explicit human architecture approval.
 - **Completed Step 2B.03 package:** `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0`.
-- **Step 2B.03:** complete locally with accepted model-free adapter evidence `gate2b-step03-20260818T163812Z-7a58ef58` and a passing permanent audit. It has not been committed or merged. Step 2B.04 remains unbegun; no later Gate 2B package is named or begun.
+- **Step 2B.03:** Package `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0` is complete, committed, normally merged at `7629434b04d04154b9f219e1d93ed772401a1288`, resynchronized, and post-merge audited with accepted model-free evidence `gate2b-step03-20260818T163812Z-7a58ef58`.
+- **Completed Step 2B.04 package:** `gate-2b-step04-crewai-canonical-vertical-slice-v1.0.0` completed the successful live run with immutable canonical evidence `crewai-20260818T215017Z-8e03fc95`. Same-step repair `gate-2b-step04-crewai-canonical-vertical-slice-v1.0.1` added model-free post-process-close provenance `gate2b-step04-closure-20260819T195009Z-60344274` and strengthened permanent-audit coverage without replaying the experiment. The result is not yet committed or merged. The recommendation remains pending Drupal-authoritative review; human-feedback continuation and later batch work remain unbegun.
 - **Retained Step 2B.02 diagnostic:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid and retained, but superseded/unaccepted as conclusive architecture evidence after integrity review. At that capture boundary, Step 2B.02 remained open.
 - **Retained Step 2B.02 v2 capture:** `gate2b-step02-20260812T015108Z-00000001` passed its capture boundary with architecture unresolved.
 - **Retained Step 2B.02 supplemental capture:** `gate2b-step02-followup-20260812T022947Z-00000001` corrected native fallback and checkpoint semantics while immutably retaining four observed version-check call paths as `unresolved_path`.
@@ -133,7 +134,7 @@ docs/gates/GATE-2B-STEP02-CREWAI-RUNTIME-PERSISTENCE-AND-CONTINUATION-PROBE.md
 docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md
 ```
 
-Delivery packages remain outside Git under `~/projects/agentic-harness-package-staging/`. Step 2B.02 is complete, merged, resynchronized, and post-merge audited. Step 2B.03 proves only the model-free CrewAI shared-operation adapter boundary; it does not establish model, lifecycle, Drupal-mutation, human-review, batch, or Gate 2C evidence.
+Delivery packages remain outside Git under `~/projects/agentic-harness-package-staging/`. Package `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0` is complete, committed, normally merged at `7629434b04d04154b9f219e1d93ed772401a1288`, resynchronized, and post-merge audited with accepted model-free evidence `gate2b-step03-20260818T163812Z-7a58ef58`. Step 2B.04 is limited to the canonical target-1 Flow/model/submission/persistence boundary and does not claim human-review continuation, batch completion, Gate 2C recovery, production readiness, or framework superiority.
 
 ## Shared task
 

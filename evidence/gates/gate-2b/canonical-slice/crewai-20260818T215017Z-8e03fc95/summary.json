@@ -1,0 +1,14 @@
+{
+  "canonical_sequence": 1,
+  "continuation_claimed": false,
+  "gate2c": "deferred_unclaimed",
+  "live_submissions": 1,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "provider_requests": 1,
+  "review_status": "pending",
+  "run_id": "crewai-20260818T215017Z-8e03fc95",
+  "schema_version": "1.0.0",
+  "status": "pass",
+  "step": "2B.04",
+  "temperature": 0.0
+}
