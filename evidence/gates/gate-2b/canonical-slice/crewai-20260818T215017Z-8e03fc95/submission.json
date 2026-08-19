@@ -1,0 +1,24 @@
+{
+  "result": {
+    "node_id": 21,
+    "revision_id": 21,
+    "run_id": "crewai-20260818T215017Z-8e03fc95",
+    "source_framework": "crewai",
+    "status": "pending",
+    "target": {
+      "delta": 0,
+      "existing_alt": "",
+      "field_name": "field_image",
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1,
+      "schema_version": 1,
+      "sequence": 1,
+      "target_state": "missing"
+    },
+    "uuid": "1878ae86-834c-4813-9134-4c3b8d0833c9"
+  },
+  "review_action_performed": false,
+  "shared_validation": "passed atomically inside authoritative submit_recommendation",
+  "status": "pass"
+}

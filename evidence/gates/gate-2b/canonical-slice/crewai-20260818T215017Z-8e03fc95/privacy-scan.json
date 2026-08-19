@@ -1,0 +1,24 @@
+{
+  "files_scanned": [
+    "authorization.json",
+    "canonical-target.json",
+    "context-provenance.json",
+    "events.jsonl",
+    "flow-state.json",
+    "persistence-provenance.json",
+    "pinned-source-provenance.json",
+    "predecessor.json",
+    "prompt-provenance.json",
+    "provider-accounting.json",
+    "provider-metadata.json",
+    "raw-model-output.json",
+    "recommendation.json",
+    "source-nonmutation.json",
+    "stage-results.json",
+    "submission.json",
+    "summary.json",
+    "summary.md"
+  ],
+  "findings": [],
+  "status": "pass"
+}

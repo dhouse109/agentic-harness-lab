@@ -1,0 +1,8 @@
+{
+  "article_source_sha256_after": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "article_source_sha256_before": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "mutation_effect": "one unpublished revision-enabled alt_text_suggestion initial revision in pending state",
+  "status": "pass",
+  "suggestion_count_after": 1,
+  "suggestion_count_before": 0
+}

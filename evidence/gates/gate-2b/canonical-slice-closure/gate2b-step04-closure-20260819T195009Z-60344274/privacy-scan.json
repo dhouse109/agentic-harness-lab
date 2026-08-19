@@ -1,0 +1,12 @@
+{
+  "files_scanned": [
+    "authorization.json",
+    "closure-provenance.json",
+    "drupal-observation.json",
+    "sqlite-semantic-inspection.json",
+    "summary.json",
+    "summary.md"
+  ],
+  "findings": [],
+  "status": "pass"
+}

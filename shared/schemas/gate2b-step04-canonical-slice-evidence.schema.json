@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness-lab.local/schemas/gate2b-step04-canonical-slice-evidence.schema.json",
+  "title": "Gate 2B Step 2B.04 canonical-slice summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "step",
+    "status",
+    "run_id",
+    "canonical_sequence",
+    "model",
+    "temperature",
+    "provider_requests",
+    "live_submissions",
+    "review_status",
+    "continuation_claimed",
+    "gate2c"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "step": {"const": "2B.04"},
+    "status": {"const": "pass"},
+    "run_id": {
+      "type": "string",
+      "pattern": "^crewai-[0-9]{8}T[0-9]{6}Z-[0-9a-f]{8}$"
+    },
+    "canonical_sequence": {"const": 1},
+    "model": {"const": "gpt-4.1-mini-2025-04-14"},
+    "temperature": {"const": 0.0},
+    "provider_requests": {"const": 1},
+    "live_submissions": {"const": 1},
+    "review_status": {"const": "pending"},
+    "continuation_claimed": {"const": false},
+    "gate2c": {"const": "deferred_unclaimed"}
+  }
+}

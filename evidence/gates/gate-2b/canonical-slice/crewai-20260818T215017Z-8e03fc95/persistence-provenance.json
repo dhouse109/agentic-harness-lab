@@ -1,0 +1,8 @@
+{
+  "continuation_claimed": false,
+  "mechanism": "SQLiteFlowPersistence",
+  "runtime_db": "crewai/.runtime/gate2b-step04/crewai-20260818T215017Z-8e03fc95/flow-state.sqlite",
+  "shared_runtime_storage": false,
+  "sqlite_sha256": "9c0ca1e75def573857de1ecfcb7a392381848dcbd8e27eebf8288908f1b271f8",
+  "wording": "terminal-output reconstruction observed; live Flow state restoration/continuation not demonstrated"
+}

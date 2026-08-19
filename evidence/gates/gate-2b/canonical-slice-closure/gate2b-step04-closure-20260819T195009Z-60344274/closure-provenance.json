@@ -1,0 +1,70 @@
+{
+  "classification": "post_close_provenance_model_free_evidence_closure",
+  "closure_id": "gate2b-step04-closure-20260819T195009Z-60344274",
+  "linked_artifacts": {
+    "authorization_sha256": "bf0a7f719dcd31c04ae113df0d7d91279563142485058c9fc32df63458a52173",
+    "drupal_observation_sha256": "58bc56185d8694319ff7c4b9d002476abe494aaf2c197595fece04edfe086705",
+    "sqlite_semantic_inspection_sha256": "92cdc405e9c893f01861d74cc79affe487216a1258c81abbc2e7255e6ee0e4b6"
+  },
+  "open_running_persistence_provenance": {
+    "artifact_relative_path": "evidence/gates/gate-2b/canonical-slice/crewai-20260818T215017Z-8e03fc95/persistence-provenance.json",
+    "artifact_sha256": "4048d5daed9b30a0d2702f5530dafaeafb5bb13e5bdba30117397de0ff5823a1",
+    "byte_identity_with_post_close_main_required": false,
+    "lifecycle_state": "open_running_wal_backed_capture",
+    "recorded_main_file_sha256": "9c0ca1e75def573857de1ecfcb7a392381848dcbd8e27eebf8288908f1b271f8"
+  },
+  "post_process_close_file_set_provenance": {
+    "authoritative_files_hashed_as_files_without_mutation": true,
+    "authoritative_sqlite_opened": false,
+    "captured_at": "2026-08-19T19:50:17Z",
+    "lifecycle_state": "post_process_close_file_set",
+    "process_closure": {
+      "checked_process_count": 102,
+      "matching_live_runner_processes": 0,
+      "matching_open_runtime_file_descriptors": 0,
+      "method": "Linux /proc process scan plus exact open-file-descriptor scan",
+      "process_closed": true
+    },
+    "runtime_components": [
+      {
+        "byte_size": 45056,
+        "present": true,
+        "relative_path": "crewai/.runtime/gate2b-step04/crewai-20260818T215017Z-8e03fc95/flow-state.sqlite",
+        "sha256": "d0fd3ac373b6af0aace07b7eed6813ebea28ceab37ab47265da2da94a24acff2"
+      },
+      {
+        "byte_size": 0,
+        "present": true,
+        "relative_path": "crewai/.runtime/gate2b-step04/crewai-20260818T215017Z-8e03fc95/flow-state.sqlite-wal",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "byte_size": 32768,
+        "present": true,
+        "relative_path": "crewai/.runtime/gate2b-step04/crewai-20260818T215017Z-8e03fc95/flow-state.sqlite-shm",
+        "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+      }
+    ]
+  },
+  "schema_version": "1.0.0",
+  "source_run": {
+    "file_count": 20,
+    "manifest_sha256": "c6115ffea4b7ceefb7858e6b482713fc92998dcf2bde7bc6de8831d583665aaf",
+    "relative_path": "evidence/gates/gate-2b/canonical-slice/crewai-20260818T215017Z-8e03fc95",
+    "run_id": "crewai-20260818T215017Z-8e03fc95",
+    "summary_sha256": "5cd324d26b866c83d9728e7634887bcf3ccc46c2df5f4fc6a9563069f71ef490",
+    "whole_tree_sha256": "0d0e2c6af5e328a52aa867e4cbc3ade787e13833fece34009854212d2cda69be"
+  },
+  "statements": {
+    "authoritative_runtime_mutated": false,
+    "drupal_mutation_during_capture": false,
+    "experiment_replayed": false,
+    "human_review_during_capture": false,
+    "model_or_provider_action_during_capture": false,
+    "original_evidence_rewritten": false,
+    "semantic_inspection_used_disposable_copy_only": true,
+    "source_content_mutation_during_capture": false
+  },
+  "status": "pass",
+  "step": "2B.04"
+}

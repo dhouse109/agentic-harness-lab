@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "target": {
+    "delta": 0,
+    "existing_alt": "",
+    "field_name": "field_image",
+    "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+    "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+    "revision_id": 1,
+    "schema_version": 1,
+    "sequence": 1,
+    "target_state": "missing"
+  },
+  "target_sequence_sha256": "sha256:1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}

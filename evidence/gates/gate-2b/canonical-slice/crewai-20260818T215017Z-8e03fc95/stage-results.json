@@ -1,0 +1,42 @@
+{
+  "failed_stage": null,
+  "stages": [
+    {
+      "name": "target_discovery",
+      "status": "pass"
+    },
+    {
+      "name": "context_retrieval",
+      "status": "pass"
+    },
+    {
+      "name": "provider_request",
+      "status": "pass"
+    },
+    {
+      "name": "structured_parsing",
+      "status": "pass"
+    },
+    {
+      "name": "recommendation_assembly",
+      "status": "pass"
+    },
+    {
+      "name": "shared_deterministic_validation",
+      "status": "pass"
+    },
+    {
+      "name": "submission",
+      "status": "pass"
+    },
+    {
+      "name": "flow_state_persistence",
+      "status": "pass"
+    },
+    {
+      "name": "evidence_serialization",
+      "status": "pass"
+    }
+  ],
+  "status": "pass"
+}

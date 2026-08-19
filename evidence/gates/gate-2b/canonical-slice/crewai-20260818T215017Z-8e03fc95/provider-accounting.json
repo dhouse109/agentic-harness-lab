@@ -1,0 +1,16 @@
+{
+  "actual_provider_requests": 1,
+  "fallback_provider_calls": 0,
+  "feedback_collapse_calls": 0,
+  "guardrail_correction_retries": 0,
+  "learning_distillation_calls": 0,
+  "logical_generations": 1,
+  "provider_retries": 0,
+  "response_statuses": [
+    200
+  ],
+  "status": "pass",
+  "structured_repair_calls": 0,
+  "successful_provider_responses": 1,
+  "transport_retries": 0
+}
