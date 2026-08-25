@@ -1,0 +1,17 @@
+{
+  "additional_model_provider_activity": 0,
+  "continuation_id": "gate2b-step05-20260825T192434Z-ff4f89dd",
+  "duplicate_submissions": 0,
+  "flow_state_id": "crewai-20260818T215017Z-8e03fc95",
+  "gate2c_executed": false,
+  "pending_identity": "4b0d568bd5e39e4fe3ebc612aa71a6b1c113b8da50e429cb147939b88262b687",
+  "prior_work_replayed": false,
+  "recommendation_uuid": "1878ae86-834c-4813-9134-4c3b8d0833c9",
+  "review_status": "approved",
+  "reviewer": "editor_dana",
+  "same_logical_flow": true,
+  "schema_version": 1,
+  "source_article_unchanged": true,
+  "source_run_id": "crewai-20260818T215017Z-8e03fc95",
+  "status": "pass"
+}

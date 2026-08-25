@@ -1,0 +1,25 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "authorization.json",
+      "sha256": "a24d79d6910f010ae6c7770fa1db0c4d692aa875e8586d313bb49ba8e13a4343"
+    },
+    {
+      "path": "bindings.json",
+      "sha256": "241382187d622e1daf31bcd766918b7fa15ec42cab89e7635a40528740b40719"
+    },
+    {
+      "path": "process-a.json",
+      "sha256": "6312746be7085ca599d518d86ac61b041c9ac2934f34da51d7a1db60fb897276"
+    },
+    {
+      "path": "events-process-a.jsonl",
+      "sha256": "6965773944a1fa0d8e3323bff7a69f82f63c6a90328ac740536f83453d497bed"
+    },
+    {
+      "path": "process-a-summary.json",
+      "sha256": "8f8c446debcb8e68a811ffdfbe77a0775975d2a11433bc68316b65769f90ba1e"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.local/schemas/gate2b-step05-continuation-evidence.schema.json",
+  "title": "Gate 2B Step 2B.05 final continuation summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "status", "continuation_id", "source_run_id", "flow_state_id",
+    "pending_identity", "recommendation_uuid", "reviewer", "review_status",
+    "same_logical_flow", "prior_work_replayed", "additional_model_provider_activity",
+    "duplicate_submissions", "source_article_unchanged", "gate2c_executed"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "status": {"const": "pass"},
+    "continuation_id": {"type": "string", "pattern": "^gate2b-step05-[0-9]{8}T[0-9]{6}Z-[0-9a-f]{8}$"},
+    "source_run_id": {"const": "crewai-20260818T215017Z-8e03fc95"},
+    "flow_state_id": {"const": "crewai-20260818T215017Z-8e03fc95"},
+    "pending_identity": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "recommendation_uuid": {"const": "1878ae86-834c-4813-9134-4c3b8d0833c9"},
+    "reviewer": {"const": "editor_dana"},
+    "review_status": {"const": "approved"},
+    "same_logical_flow": {"const": true},
+    "prior_work_replayed": {"const": false},
+    "additional_model_provider_activity": {"const": 0},
+    "duplicate_submissions": {"const": 0},
+    "source_article_unchanged": {"const": true},
+    "gate2c_executed": {"const": false}
+  }
+}
