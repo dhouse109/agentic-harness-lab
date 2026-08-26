@@ -1,0 +1,61 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "authorization.json",
+      "sha256": "a24d79d6910f010ae6c7770fa1db0c4d692aa875e8586d313bb49ba8e13a4343"
+    },
+    {
+      "path": "bindings.json",
+      "sha256": "241382187d622e1daf31bcd766918b7fa15ec42cab89e7635a40528740b40719"
+    },
+    {
+      "path": "process-a.json",
+      "sha256": "6312746be7085ca599d518d86ac61b041c9ac2934f34da51d7a1db60fb897276"
+    },
+    {
+      "path": "events-process-a.jsonl",
+      "sha256": "6965773944a1fa0d8e3323bff7a69f82f63c6a90328ac740536f83453d497bed"
+    },
+    {
+      "path": "process-a-summary.json",
+      "sha256": "8f8c446debcb8e68a811ffdfbe77a0775975d2a11433bc68316b65769f90ba1e"
+    },
+    {
+      "path": "process-a-manifest.json",
+      "sha256": "154b2242bd0a8f37a8392c5d9c68071fef58790a3439a79f983c7d3b8e7a4f23"
+    },
+    {
+      "path": "human-review.json",
+      "sha256": "0a5c7504cc68996f688afe934a791f071a46bc96698a73f78ad18e539bcbe03a"
+    },
+    {
+      "path": "human-review-manifest.json",
+      "sha256": "f58357f484bac5470ea826da4b3e64b92cddacc1d222544c21ea9aa519e891e8"
+    },
+    {
+      "path": "process-b.json",
+      "sha256": "07b3ad56634edd413ad4ce4e07b8b1df79c5fdc7214642e18cb879086e20f541"
+    },
+    {
+      "path": "accounting.json",
+      "sha256": "52380a54abcddaef105a99c46bef012c7d9bc2d6389264f60d6f6bb8bbd6cf97"
+    },
+    {
+      "path": "events-process-b.jsonl",
+      "sha256": "2713d677379c2e5d8351d39da39a09326735bd5051d7aed7d653e043f9e48f4b"
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "7a91acdc0031b20d9a02d05797ee079f88d981033793f48bdc115b0291847ae4"
+    },
+    {
+      "path": "summary.json",
+      "sha256": "417c3fa7f7d9a3a0e0ae1bd02736357b67356ee3c928bdeaace79969d6e3d7b9"
+    },
+    {
+      "path": "summary.md",
+      "sha256": "8abed789f2cbc36ff80523106a55372bd61bb63f8706fbd178dd5ae0ed465d87"
+    }
+  ]
+}

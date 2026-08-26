@@ -1,0 +1,108 @@
+{
+  "action": "approve-as-is",
+  "authority": "Drupal",
+  "decision_revision_id": 22,
+  "lineage": {
+    "access": {
+      "agent_can_update": false,
+      "agent_can_view": true,
+      "editor_can_update": true
+    },
+    "current_evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+    "current_proposed_alt_text": "Minimalist graphic with a large white number 1 composed of small squares on a solid navy background, labeled as Phase 0 primary image for emergency preparedness.",
+    "current_review_status": "approved",
+    "current_revision_id": 22,
+    "current_run_id": "crewai-20260818T215017Z-8e03fc95",
+    "current_source_framework": "crewai",
+    "current_target": {
+      "delta": 0,
+      "field_name": "field_image",
+      "file_id": 1,
+      "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+      "node_id": 1,
+      "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+      "revision_id": 1
+    },
+    "helper_version": "1.0.0",
+    "mode": "inspect",
+    "node_id": 21,
+    "owner_username": "agent_bot",
+    "published": false,
+    "revision_count": 2,
+    "revisions": [
+      {
+        "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+        "proposed_alt_text": "Minimalist graphic with a large white number 1 composed of small squares on a solid navy background, labeled as Phase 0 primary image for emergency preparedness.",
+        "published": false,
+        "review_status": "pending",
+        "revision_id": 21,
+        "revision_log": "submit_recommendation validator=gate05-validator-1.0.0 evidence=sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+        "revision_user": {
+          "name": "agent_bot",
+          "uid": 3
+        },
+        "run_id": "crewai-20260818T215017Z-8e03fc95",
+        "source_framework": "crewai",
+        "target": {
+          "delta": 0,
+          "field_name": "field_image",
+          "file_id": 1,
+          "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+          "node_id": 1,
+          "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+          "revision_id": 1
+        },
+        "timestamp_unix": 1787089827,
+        "timestamp_utc": "2026-08-18T21:50:27Z"
+      },
+      {
+        "evidence_hash": "sha256:9949b114fb2463bade7ac81261740fa64ff4821f873ce1b3576bff9105cbae82",
+        "proposed_alt_text": "Minimalist graphic with a large white number 1 composed of small squares on a solid navy background, labeled as Phase 0 primary image for emergency preparedness.",
+        "published": false,
+        "review_status": "approved",
+        "revision_id": 22,
+        "revision_log": "",
+        "revision_user": {
+          "name": "editor_dana",
+          "uid": 2
+        },
+        "run_id": "crewai-20260818T215017Z-8e03fc95",
+        "source_framework": "crewai",
+        "target": {
+          "delta": 0,
+          "field_name": "field_image",
+          "file_id": 1,
+          "file_uuid": "07af2dce-7bfd-5de6-b291-e090669eda25",
+          "node_id": 1,
+          "node_uuid": "344eb273-ac74-5be8-85fb-6c2efd1f93a6",
+          "revision_id": 1
+        },
+        "timestamp_unix": 1787686696,
+        "timestamp_utc": "2026-08-25T19:38:16Z"
+      }
+    ],
+    "status": "pass",
+    "title": "Alt text recommendation: crewai target 1 (crewai-20260818T215017Z-8e03fc95)",
+    "uuid": "1878ae86-834c-4813-9134-4c3b8d0833c9"
+  },
+  "prior_revision_id": 21,
+  "process_a_manifest_sha256": "154b2242bd0a8f37a8392c5d9c68071fef58790a3439a79f983c7d3b8e7a4f23",
+  "reviewed_at": "2026-08-25T19:38:16Z",
+  "reviewer": "editor_dana",
+  "source_snapshot": {
+    "article_count": 20,
+    "article_source_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+    "canonical_target_sequence": 1,
+    "suggestion_count": 1,
+    "target_count": 12,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+  },
+  "status": "pass",
+  "status_observation": {
+    "reviewed_at": "2026-08-25T19:38:16Z",
+    "reviewer_username": "editor_dana",
+    "revision_id": 22,
+    "status": "approved",
+    "uuid": "1878ae86-834c-4813-9134-4c3b8d0833c9"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "authoritative_drupal_observation": {
+    "node_id": 21,
+    "reviewed_at": "2026-08-25T19:38:16Z",
+    "reviewer_username": "editor_dana",
+    "revision_id": 22,
+    "status": "approved",
+    "uuid": "1878ae86-834c-4813-9134-4c3b8d0833c9"
+  },
+  "authoritative_from_pending_calls": 1,
+  "authoritative_resume_calls": 1,
+  "flow_state_id": "crewai-20260818T215017Z-8e03fc95",
+  "from_pending": true,
+  "pending_cleared": true,
+  "pending_identity": "4b0d568bd5e39e4fe3ebc612aa71a6b1c113b8da50e429cb147939b88262b687",
+  "pending_rows_after": 0,
+  "pending_rows_before": 1,
+  "process_b_pid": 24951,
+  "result": {
+    "flow_state_id": "crewai-20260818T215017Z-8e03fc95",
+    "recommendation_uuid": "1878ae86-834c-4813-9134-4c3b8d0833c9",
+    "review_revision_id": 22,
+    "status": "completed"
+  },
+  "resume": true,
+  "resume_payload_sha256": "fea0aa4f6991b8f40061505f532a57abf582e517bd09b1f003c7ec71a6304ab0",
+  "same_process_as_a": false,
+  "second_authoritative_from_pending_attempts": 0,
+  "second_authoritative_resume_attempts": 0,
+  "status": "pass"
+}

@@ -1,0 +1,13 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "process-a-manifest.json",
+      "sha256": "154b2242bd0a8f37a8392c5d9c68071fef58790a3439a79f983c7d3b8e7a4f23"
+    },
+    {
+      "path": "human-review.json",
+      "sha256": "0a5c7504cc68996f688afe934a791f071a46bc96698a73f78ad18e539bcbe03a"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "canonical_manifest_sha256": "c6115ffea4b7ceefb7858e6b482713fc92998dcf2bde7bc6de8831d583665aaf",
+  "canonical_summary_sha256": "5cd324d26b866c83d9728e7634887bcf3ccc46c2df5f4fc6a9563069f71ef490",
+  "closure_manifest_sha256": "d62ababa96b223643ab23e3d67c75b3fcc2bb325a8a3e69787fff870cc56583b",
+  "closure_summary_sha256": "e482aa166485ea97c0698b82dade0cfdadbe9947fb06aa2ce0d59c9a3cc87f01",
+  "flow_state_id": "crewai-20260818T215017Z-8e03fc95",
+  "predecessor": "c61d0b0213d754fcc40f18065836de6e0da70d2c",
+  "recommendation_node_id": 21,
+  "recommendation_uuid": "1878ae86-834c-4813-9134-4c3b8d0833c9",
+  "runtime_copy_before_open": {
+    "flow-state.sqlite": {
+      "copy_sha256": "d0fd3ac373b6af0aace07b7eed6813ebea28ceab37ab47265da2da94a24acff2",
+      "size": 45056,
+      "source_sha256": "d0fd3ac373b6af0aace07b7eed6813ebea28ceab37ab47265da2da94a24acff2"
+    },
+    "flow-state.sqlite-shm": {
+      "copy_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "size": 32768,
+      "source_sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    "flow-state.sqlite-wal": {
+      "copy_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "source_revision_id": 21,
+  "source_run_id": "crewai-20260818T215017Z-8e03fc95",
+  "source_runtime": {
+    "flow-state.sqlite": {
+      "sha256": "d0fd3ac373b6af0aace07b7eed6813ebea28ceab37ab47265da2da94a24acff2",
+      "size": 45056
+    },
+    "flow-state.sqlite-shm": {
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "size": 32768
+    },
+    "flow-state.sqlite-wal": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    }
+  },
+  "status": "pass",
+  "xdg_runtime_separation": {
+    "runtime": "/home/dhouse109/projects/agentic-harness-lab/crewai/.runtime/gate2b-step05/gate2b-step05-20260825T192434Z-ff4f89dd",
+    "status": "pass",
+    "xdg_root": "/tmp/gate2b-step05-xdg-gate2b-step05-20260825T192434Z-ff4f89dd.5GRMwb"
+  }
+}

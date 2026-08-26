@@ -1,0 +1,33 @@
+{
+  "additional_activity": {
+    "fallback_calls": 0,
+    "feedback_collapse_calls": 0,
+    "learning_calls": 0,
+    "logical_generations": 0,
+    "provider_requests": 0,
+    "provider_responses": 0,
+    "provider_retries": 0,
+    "recommendation_submissions": 0,
+    "source_mutations": 0,
+    "structured_repair_calls": 0
+  },
+  "authoritative_from_pending_calls": 1,
+  "authoritative_resume_calls": 1,
+  "pending_rows_after": 0,
+  "pending_rows_before": 1,
+  "read_only_status_observations": 4,
+  "replay_attempts": {
+    "deterministic_validation": 0,
+    "find_images_needing_review": 0,
+    "get_image_context": 0,
+    "get_recommendation_status": 2,
+    "model_generation": 0,
+    "recommendation_assembly": 0,
+    "submit_recommendation": 0
+  },
+  "second_authoritative_from_pending_attempts": 0,
+  "second_authoritative_resume_attempts": 0,
+  "source_nonmutation": true,
+  "source_projection_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "status": "pass"
+}
