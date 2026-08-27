@@ -1,0 +1,9 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "supplement.json",
+      "sha256": "4881bba7fd86762df4e60d032d69cb491f7157649bdb54421f8247c608fd01ff"
+    }
+  ]
+}

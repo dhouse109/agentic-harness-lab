@@ -1,0 +1,19 @@
+{
+  "completed_sequences": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "lifecycle": "BATCH_COMPLETE_AWAITING_RESTORE",
+  "runtime_sqlite_sha256": "acba30a27e301b09354ff367aa6a85bdab2c90abfab258fd0b99f25645ed7f8c",
+  "status": "complete"
+}

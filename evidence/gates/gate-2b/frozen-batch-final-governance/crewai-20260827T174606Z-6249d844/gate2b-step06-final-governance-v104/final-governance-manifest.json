@@ -1,0 +1,9 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "final-governance.json",
+      "sha256": "0c6b5ed06625a172c3b076a7b1b7898969b60b56c60d636dcab5e0b81545f503"
+    }
+  ]
+}

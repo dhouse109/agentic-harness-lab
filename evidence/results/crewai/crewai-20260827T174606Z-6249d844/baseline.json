@@ -1,0 +1,16 @@
+{
+  "batch_manifest_sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1",
+  "drupal_restored": true,
+  "post_restore_state_sha256": "27650091ae470243c5de8c6cf4b6127ce1cb36ee825a4dcf636d84dbf8088fed",
+  "pre_restore_state_sha256": "1c369dc558d0b4f242c514f3eac6d04fa8b1f695cef03bff63b1fce7dc4fd7ca",
+  "restore_count": 1,
+  "snapshot": {
+    "id": "gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "path": "drupal/.ddev/db_snapshots/gate2b-step06-post-step2b05-recovery-20260826T152003Z-mariadb_11.8.zst",
+    "restore_command": "ddev snapshot restore gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "sha256": "4ba4cece2d30a5f90699afdf9a2ab2094f0d902213c66cdc0b40dfa466094906",
+    "size": 4112532
+  },
+  "snapshot_deleted": false,
+  "step2b04_step2b05_history_preserved": true
+}

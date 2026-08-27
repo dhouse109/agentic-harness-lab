@@ -1,0 +1,11 @@
+{
+  "boundary": "batch_only",
+  "logical_generations": 12,
+  "provider_requests": 12,
+  "resets": 0,
+  "restores": 0,
+  "snapshot_creates": 0,
+  "source_writes": 0,
+  "status": "pass",
+  "submissions": 12
+}

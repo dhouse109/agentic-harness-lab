@@ -1,0 +1,33 @@
+{
+  "completed_sequences": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "drupal_restored": true,
+  "duplicate_recommendations": 0,
+  "duplicate_targets": 0,
+  "gate2c_executed": false,
+  "lifecycle": "STEP_2B_06_COMPLETE",
+  "logical_generations": 12,
+  "privacy": "PASS",
+  "provider_requests": 12,
+  "provider_responses": 12,
+  "recommendation_count": 12,
+  "recommendation_submissions": 12,
+  "run_id": "crewai-20260827T174606Z-6249d844",
+  "schema_version": 1,
+  "source_mutations": 0,
+  "status": "pass",
+  "step": "2B.06",
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}

@@ -1,0 +1,18 @@
+{
+  "activation_manifest_sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d",
+  "flow_id": "crewai-20260827T174606Z-6249d844",
+  "http_readiness_manifest_sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511",
+  "lock_sha256": "855e5edff2cb86eb64ea9856d239b19010e7d3b1f80c40e370ed81d66b8e4e7c",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "predecessor": "2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148",
+  "run_id": "crewai-20260827T174606Z-6249d844",
+  "snapshot": {
+    "id": "gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "path": "drupal/.ddev/db_snapshots/gate2b-step06-post-step2b05-recovery-20260826T152003Z-mariadb_11.8.zst",
+    "restore_command": "ddev snapshot restore gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "sha256": "4ba4cece2d30a5f90699afdf9a2ab2094f0d902213c66cdc0b40dfa466094906",
+    "size": 4112532
+  },
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "temperature": 0.0
+}
