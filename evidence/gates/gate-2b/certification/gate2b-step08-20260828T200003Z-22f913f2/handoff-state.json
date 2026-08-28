@@ -1,0 +1,7 @@
+{
+  "gate_2_overall": "NOT_COMPLETE",
+  "gate_2b": "CERTIFIED_FROZEN",
+  "gate_2c": "DEFERRED_UNCLAIMED",
+  "next_boundary": "SEPARATE_GATE_2C_DECISION",
+  "schema_version": 1
+}

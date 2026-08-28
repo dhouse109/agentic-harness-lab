@@ -1,0 +1,9 @@
+{
+  "credentials_retained": false,
+  "hidden_reasoning_retained": false,
+  "private_database_content_retained": false,
+  "prohibited_value_hits": 0,
+  "raw_image_or_data_url_retained": false,
+  "schema_version": 1,
+  "status": "pass"
+}

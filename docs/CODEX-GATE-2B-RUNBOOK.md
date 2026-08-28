@@ -1,5 +1,9 @@
 # Codex Gate 2B Runbook
 
+## Step 2B.08 certification boundary
+
+Step 2B.08 is complete after model-free, Drupal-read-only promotion of the accepted Step 2B.06 batch and Step 2B.07 synthesis without rerunning either. Permanent audit binds the final lifecycle documents to one accepted six-file certification family, one JSON freeze artifact, one privacy-safe handoff, and one exact pointer. Gate 2C remains deferred; snapshot cleanup remains separately authorized.
+
 ## Scope
 
 Gate 2B builds and certifies the CrewAI specimen one approved external delivery package at a time. Gate 2C remains deferred and unclaimed.
@@ -59,7 +63,9 @@ The live continuation is consumed and complete. Never call `from_pending(...)` o
 
 **Step 2B.06 transaction:** consumed run `crewai-20260827T125501Z-c5381188` remains a permanent zero-provider pre-target failure. Distinct run `crewai-20260827T174606Z-6249d844` completed all 12 frozen targets with exact 12/12 accounting and zero retry/correction/repair/fallback/learning/feedback-collapse/source mutation. Restore-only ran exactly once; the immutable 19-file closure and final-governance bridge record `RESTORE_VERIFIED` / `STEP_2B_06_COMPLETE` / `FINAL_GOVERNANCE_ACCEPTED`. Normal merge `78ba79165378ac2905801d994682aa385cdfb607` preserves the feature commit and passes the permanent composite audit. Never rerun either batch identity, restore again, alter historical evidence, or delete the retained snapshot while `SNAPSHOT_RETAINED` remains an audit predicate.
 
-**Step 2B.07 synthesis:** run only `scripts/run-gate2b-step07-crewai-evidence-synthesis-and-comparison.sh run <repo> <run-id>` after the package boundary is approved. It reads accepted evidence, writes one five-file model-free synthesis family plus a package-defined pointer, and runs the permanent auditor. It must not call a provider, write Drupal, create a CrewAI experiment runtime, operate on snapshots, or modify predecessor evidence. Every promoted claim needs an exact claim/proof record; `architecture/probe`, `hypothesis`, `unsupported`, and `gate-2c-deferred` remain distinct. Step 2B.08 alone may certify/freeze Gate 2B.
+**Step 2B.07 synthesis:** complete, normally merged at `50e7296406a39de23b20bdfb1b45960dca13d3a1`, and post-merge audited. Accepted synthesis `gate2b-step07-20260828T135201Z-1ed07bea` is immutable. Never invoke its disabled synthesis mode or allocate another synthesis identity. Step 2B.08 promoted this accepted family without rerunning it.
+
+**Step 2B.08 certification:** complete and permanently accepted. Gate 2B is certified and frozen only while the exact certification family, `GATE2B-CREWAI-FREEZE.json`, freeze-bound handoff, and exact pointer all pass the lifecycle-aware permanent auditor. Do not rerun the CrewAI batch, canonical model path, human-review continuation, Step 2B.07 synthesis, or certification identity. Gate 2C remains `DEFERRED_UNCLAIMED`; Gate 2 overall remains `NOT_COMPLETE`.
 
 Historical lessons remain controlling: the consumed v1.0.0 identity `gate2b-step05-20260820T151225Z-8b7fa221` failed closed because XDG storage was placed below the candidate runtime; v1.0.1 separated those namespaces. The restricted Codex sandbox asyncio/thread wakeup issue was environmental, not a CrewAI HITL defect. v1.0.2 moved the post-clear second-reconstruction negative control to disposable rehearsal so live continuation stayed exactly-once. Persistence is not continuation, and Drupal remains the sole human-review authority.
 

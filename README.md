@@ -1,5 +1,7 @@
 # Agentic Harness Lab
 
+> Step 2B.08 is complete after permanent acceptance of its model-free certification family, freeze, and handoff. Gate 2B CrewAI is certified and frozen. Gate 2C remains deferred and unclaimed; Gate 2 overall remains incomplete.
+
 A reproducible Drupal GovCon 2026 laboratory for building the same governance-sensitive alt-text
 recommendation task in three harnesses:
 
@@ -23,7 +25,7 @@ and lifecycle and recovery.
 - **Step 1.05:** complete.
 - **Step 1.06:** complete.
 - **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
-- **Gate 2:** in progress; Gate 2A LangGraph is certified and frozen; Gate 2B CrewAI is current; Gate 2C is deferred and unclaimed.
+- **Gate 2:** in progress; Gate 2A LangGraph and Gate 2B CrewAI are certified and frozen; Gate 2C is deferred and unclaimed.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
 - **Step 2A.03:** complete.
@@ -45,7 +47,8 @@ and lifecycle and recovery.
 - **Completed Step 2B.04 packages:** `gate-2b-step04-crewai-canonical-vertical-slice-v1.0.0` and repair `v1.0.1` are committed, normally merged at `c61d0b0213d754fcc40f18065836de6e0da70d2c`, resynchronized, and post-merge audited. Their accepted recommendation was the pending input to Step 2B.05 and is now approved.
 - **Step 2B.05:** complete, normally merged at `2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148`, and post-merge audited under final v1.0.2 semantics. The same CrewAI Flow was reconstructed and resumed exactly once after an external approve-as-is Drupal review by `editor_dana` at revision 22; pending rows reached zero without replaying model-owning work or submitting a duplicate recommendation. The 15-file evidence family is `gate2b-step05-20260825T192434Z-ff4f89dd`.
 - **Step 2B.06:** complete, normally merged at `78ba79165378ac2905801d994682aa385cdfb607`, and post-merge audited. The accepted CrewAI batch completed 12/12 with exact one-request accounting and zero retry/correction/repair/fallback/learning/feedback-collapse/source-mutation counts. Its retained failure/disposition, readiness repair, supplement, exactly-once restoration, 19-file closure, and final-governance bridge remain immutable; the recovery snapshot remains local-only and retained.
-- **Step 2B.07:** model-free evidence synthesis and comparison update. Promoted claims are required to map to exact retained proof; architecture/probe evidence remains separately labeled; Gate 2C recovery, production readiness, and framework superiority remain unclaimed. Step 2B.08 certification/freeze is separate.
+- **Step 2B.07:** complete, normally merged at `50e7296406a39de23b20bdfb1b45960dca13d3a1`, and post-merge audited. Its accepted model-free synthesis is immutable and was not rerun by Step 2B.08.
+- **Step 2B.08:** complete; permanent audit binds its exactly-once certification family, Gate 2B freeze, freeze-bound handoff, and exact pointer. Gate 2B is certified and frozen without rerunning CrewAI behavior.
 - **Retained Step 2B.02 diagnostic:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid and retained, but superseded/unaccepted as conclusive architecture evidence after integrity review. At that capture boundary, Step 2B.02 remained open.
 - **Retained Step 2B.02 v2 capture:** `gate2b-step02-20260812T015108Z-00000001` passed its capture boundary with architecture unresolved.
 - **Retained Step 2B.02 supplemental capture:** `gate2b-step02-followup-20260812T022947Z-00000001` corrected native fallback and checkpoint semantics while immutably retaining four observed version-check call paths as `unresolved_path`.
@@ -137,7 +140,7 @@ docs/gates/GATE-2B-STEP02-CREWAI-RUNTIME-PERSISTENCE-AND-CONTINUATION-PROBE.md
 docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md
 ```
 
-Delivery packages remain outside Git under `~/projects/agentic-harness-package-staging/`. Step 2B.04 is frozen at merge `c61d0b0213d754fcc40f18065836de6e0da70d2c`; Step 2B.05 at `2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148`; and Step 2B.06 at normal merge `78ba79165378ac2905801d994682aa385cdfb607`. Step 2B.07 may synthesize those accepted records but may not rewrite them or claim Gate 2B certification, Gate 2C recovery, production readiness, or framework superiority.
+Delivery packages remain outside Git under `~/projects/agentic-harness-package-staging/`. Step 2B.04 is frozen at merge `c61d0b0213d754fcc40f18065836de6e0da70d2c`; Step 2B.05 at `2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148`; Step 2B.06 at `78ba79165378ac2905801d994682aa385cdfb607`; and Step 2B.07 at `50e7296406a39de23b20bdfb1b45960dca13d3a1`. Step 2B.08 certified only those accepted records and did not rewrite them or claim Gate 2C recovery, production readiness, or framework superiority.
 
 ## Shared task
 

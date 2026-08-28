@@ -1,0 +1,31 @@
+{
+  "entries": [
+    {
+      "path": "certification.json",
+      "sha256": "53b0fab1c5ed54ff762652ddc5713b91cbbefe9bf25e7f06d11d568d6a4c1e14",
+      "size": 3288
+    },
+    {
+      "path": "certified-bindings.json",
+      "sha256": "ff6e2f49c27c411f6a5542d398294707ed12aef71a8e01828cd2072243327bbb",
+      "size": 2888
+    },
+    {
+      "path": "freeze-projection.json",
+      "sha256": "60cdf6886a1ad841e4d65efdbbfc6ff0ba78217678c2b4ee1c13debd368f3b7c",
+      "size": 3634
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "e7b1f089cd7f94cde20e175168d08094c4daf6df414bdbcf174966a1707ef84a",
+      "size": 236
+    },
+    {
+      "path": "handoff-state.json",
+      "sha256": "2ca0310929dddccfc490a7e131ff9eba3521263efb7e4029157c23bc17681cb3",
+      "size": 178
+    }
+  ],
+  "run_id": "gate2b-step08-20260828T200003Z-22f913f2",
+  "schema_version": 1
+}

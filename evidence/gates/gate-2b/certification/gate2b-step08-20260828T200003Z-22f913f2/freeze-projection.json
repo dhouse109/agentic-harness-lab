@@ -1,0 +1,100 @@
+{
+  "accepted_batch": "crewai-20260827T174606Z-6249d844",
+  "accepted_synthesis": "gate2b-step07-20260828T135201Z-1ed07bea",
+  "accounting": {
+    "fallback_calls": 0,
+    "feedback_collapse_calls": 0,
+    "guardrail_retries": 0,
+    "learning_calls": 0,
+    "logical_generations": 12,
+    "provider_requests": 12,
+    "provider_responses": 12,
+    "recommendation_submissions": 12,
+    "repair_calls": 0,
+    "sdk_retries": 0,
+    "source_mutations": 0,
+    "structured_output_correction_calls": 0,
+    "transport_retries": 0
+  },
+  "adr0012_sha256": "58414e67a2527edb402982391b8af78793a19b7bdaab1d86ea2571a6f995a278",
+  "architecture_closure_sha256": "6da9f30e8bd3e5104907ca785a84080521bd5394c86ac48b75f3dcc95a999f2a",
+  "certification_activity": {
+    "drupal_writes": 0,
+    "model_generations": 0,
+    "provider_requests": 0,
+    "provider_responses": 0,
+    "snapshot_operations": 0
+  },
+  "certification_run_id": "gate2b-step08-20260828T200003Z-22f913f2",
+  "claims": {
+    "architecture_probe": [
+      "CLM-CR-012"
+    ],
+    "gate_2c_deferred": [
+      "CLM-CMP-002"
+    ],
+    "hypothesis": [
+      "CLM-CR-001",
+      "CLM-CMP-003"
+    ],
+    "observed": [
+      "CLM-CR-005",
+      "CLM-CR-006",
+      "CLM-CR-007",
+      "CLM-CR-008",
+      "CLM-CR-009",
+      "CLM-CR-010",
+      "CLM-CR-011",
+      "CLM-CMP-001",
+      "CLM-CMP-004"
+    ],
+    "unsupported": [
+      "CLM-CR-013"
+    ],
+    "verified": [
+      "CLM-CR-002",
+      "CLM-CR-003",
+      "CLM-CR-004"
+    ]
+  },
+  "crewai": "1.15.10",
+  "crewai_tools": "1.15.10",
+  "false_symmetry_guard": "pass",
+  "framework": "crewai",
+  "gate2b_contract_digest": "c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77",
+  "gate_2_overall": "NOT_COMPLETE",
+  "gate_2c": "DEFERRED_UNCLAIMED",
+  "hashes": {
+    "step2b06_activation_manifest": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d",
+    "step2b06_batch_manifest": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1",
+    "step2b06_final_governance_manifest": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41",
+    "step2b06_final_manifest": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6",
+    "step2b06_final_summary": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c",
+    "step2b06_readiness_manifest": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511",
+    "step2b06_supplement_manifest": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d",
+    "step2b07_claim_map": "ac2595be175c19dc8d7c5adae77289bc1f452cce8418bc4ff30d2e5c2d5ff0aa",
+    "step2b07_comparison": "4f51548da036d74db4cab939bbfe2c417b453fb6f3bcf93453334e8330cddb1d",
+    "step2b07_manifest": "1b0e55e7ba32130b18d2756135125b82b2994274c2743a73acb73839f92be708",
+    "step2b07_privacy": "3c4180e2068351828b3010aa580f11a7a5a7e398153762fc49e59cf0f6c3f635",
+    "step2b07_summary": "b9517af014e247d415fecb74ecccc0654b7b854d8b635662a4c30c011a5f82bb"
+  },
+  "lock_sha256": "855e5edff2cb86eb64ea9856d239b19010e7d3b1f80c40e370ed81d66b8e4e7c",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "organs": [
+    "context",
+    "tools",
+    "state",
+    "verification",
+    "human-review",
+    "lifecycle"
+  ],
+  "predecessor_merge_sha": "50e7296406a39de23b20bdfb1b45960dca13d3a1",
+  "provider": "OpenAI",
+  "python": "3.12.13",
+  "schema_version": 1,
+  "snapshot_state": "SNAPSHOT_RETAINED",
+  "source_projection_sha256": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "status": "certified",
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "temperature": 0.0
+}
