@@ -1,0 +1,115 @@
+{
+  "acceptance_predicates": {
+    "batch_stage_governance": "PASS",
+    "composite_privacy": "PASS",
+    "experiment_execution": "PASS",
+    "final_closure": "PASS",
+    "final_supplement_binding": "PASS",
+    "restoration": "PASS"
+  },
+  "acceptance_status": "FINAL_GOVERNANCE_ACCEPTED",
+  "activation_manifest_sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d",
+  "authenticated_readiness_manifest_sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511",
+  "experimental_accounting": {
+    "correction_calls": 0,
+    "fallback_calls": 0,
+    "feedback_collapse_calls": 0,
+    "guardrail_retries": 0,
+    "learning_calls": 0,
+    "logical_generations": 12,
+    "provider_requests": 12,
+    "provider_responses": 12,
+    "recommendation_submissions": 12,
+    "repair_calls": 0,
+    "sdk_retries": 0,
+    "transport_retries": 0
+  },
+  "final_governance_activity": {
+    "drupal_writes": 0,
+    "git_staging": 0,
+    "model_generations": 0,
+    "provider_requests": 0,
+    "provider_responses": 0,
+    "snapshot_operations": 0
+  },
+  "finalized_closure": {
+    "batch_manifest_sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1",
+    "evidence_manifest_sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6",
+    "files": 19,
+    "manifest_entries": 18,
+    "summary_sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+  },
+  "governance_supplement": {
+    "feedback_collapse_classification": "STRUCTURALLY_UNREACHABLE_AND_RUNTIME_CORROBORATED",
+    "files": 2,
+    "manifest_entries": 1,
+    "manifest_sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d",
+    "supplement_sha256": "4881bba7fd86762df4e60d032d69cb491f7157649bdb54421f8247c608fd01ff"
+  },
+  "historical_failure": {
+    "disposition_manifest_sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00",
+    "failure_json_sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661",
+    "failure_manifest_sha256": "a7615f9b47737201f26d8a368f74fd4bd543eeb6b7dcef16a2e7bd69b07c9afd",
+    "run_id": "crewai-20260827T125501Z-c5381188",
+    "runtime_sha256": "8c5cec3b085f2c239e9163abb014a7255a7bb64ab52c9e6cc1662e34bf5ff5aa"
+  },
+  "privacy": "PASS",
+  "readiness": "READY_FOR_SEPARATE_CLEANUP_AND_STAGING_DECISION",
+  "restoration_state": "RESTORE_VERIFIED",
+  "restore_boundary_activity": {
+    "human_reviews": 0,
+    "manual_drupal_writes": 0,
+    "model_generations": 0,
+    "provider_requests": 0,
+    "provider_responses": 0,
+    "recommendation_submissions": 0,
+    "resets": 0,
+    "snapshot_creates": 0,
+    "snapshot_deletes": 0,
+    "snapshot_restores": 1
+  },
+  "restored_state": {
+    "article_count": 20,
+    "canonical_sha256": "27650091ae470243c5de8c6cf4b6127ce1cb36ee825a4dcf636d84dbf8088fed",
+    "source_projection": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+    "suggestion_count": 1,
+    "suggestions": [
+      {
+        "nid": 21,
+        "proposed_alt_sha256": "3e96afaf0ffe1eb5395b00660bbdd6353d23b482973e316ee8a4de266df6e767",
+        "published": false,
+        "reviewed_at": "2026-08-25T19:38:16Z",
+        "reviewer": "editor_dana",
+        "revision_count": 2,
+        "revision_id": 22,
+        "run_id": "crewai-20260818T215017Z-8e03fc95",
+        "source_framework": "crewai",
+        "status": "approved",
+        "uuid": "1878ae86-834c-4813-9134-4c3b8d0833c9"
+      }
+    ],
+    "target_count": 12,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+  },
+  "schema_version": 1,
+  "snapshot": {
+    "id": "gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "path": "drupal/.ddev/db_snapshots/gate2b-step06-post-step2b05-recovery-20260826T152003Z-mariadb_11.8.zst",
+    "restore_command": "ddev snapshot restore gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "restore_count": 1,
+    "retained": true,
+    "sha256": "4ba4cece2d30a5f90699afdf9a2ab2094f0d902213c66cdc0b40dfa466094906",
+    "size": 4112532
+  },
+  "snapshot_state": "SNAPSHOT_RETAINED",
+  "status": "pass",
+  "step": "2B.06",
+  "step_lifecycle": "STEP_2B_06_COMPLETE",
+  "successful_run_id": "crewai-20260827T174606Z-6249d844",
+  "successful_runtime": {
+    "flow_state_rows": 75,
+    "pending_feedback_rows": 0,
+    "sha256": "acba30a27e301b09354ff367aa6a85bdab2c90abfab258fd0b99f25645ed7f8c",
+    "size": 868352
+  }
+}

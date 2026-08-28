@@ -43,7 +43,8 @@ and lifecycle and recovery.
 - **Completed Step 2B.03 package:** `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0`.
 - **Step 2B.03:** Package `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0` is complete, committed, normally merged at `7629434b04d04154b9f219e1d93ed772401a1288`, resynchronized, and post-merge audited with accepted model-free evidence `gate2b-step03-20260818T163812Z-7a58ef58`.
 - **Completed Step 2B.04 packages:** `gate-2b-step04-crewai-canonical-vertical-slice-v1.0.0` and repair `v1.0.1` are committed, normally merged at `c61d0b0213d754fcc40f18065836de6e0da70d2c`, resynchronized, and post-merge audited. Their accepted recommendation was the pending input to Step 2B.05 and is now approved.
-- **Step 2B.05:** complete locally under final v1.0.2 semantics. The same CrewAI Flow was reconstructed and resumed exactly once after an external approve-as-is Drupal review by `editor_dana` at revision 22; pending rows reached zero without replaying model-owning work or submitting a duplicate recommendation. The 15-file evidence family is `gate2b-step05-20260825T192434Z-ff4f89dd`. Step 2B.05 still awaits commit/merge; Step 2B.06, the CrewAI batch, Step 2B.07, and Step 2B.08 are not started, and Gate 2C remains deferred.
+- **Step 2B.05:** complete, normally merged at `2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148`, and post-merge audited under final v1.0.2 semantics. The same CrewAI Flow was reconstructed and resumed exactly once after an external approve-as-is Drupal review by `editor_dana` at revision 22; pending rows reached zero without replaying model-owning work or submitting a duplicate recommendation. The 15-file evidence family is `gate2b-step05-20260825T192434Z-ff4f89dd`.
+- **Step 2B.06:** v1.0.2 is installed but uncommitted. After retaining one zero-provider pre-target failure, a distinct fresh CrewAI run completed the frozen 12 targets serially with exactly 12 provider responses and 12 pending unpublished suggestions, without retries or source mutation. The 15-file batch family is frozen. Prepared v1.0.3 adds a separate model-free governance supplement for two missing explicit audit bindings; the batch is never rerun and restoration remains deferred.
 - **Retained Step 2B.02 diagnostic:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid and retained, but superseded/unaccepted as conclusive architecture evidence after integrity review. At that capture boundary, Step 2B.02 remained open.
 - **Retained Step 2B.02 v2 capture:** `gate2b-step02-20260812T015108Z-00000001` passed its capture boundary with architecture unresolved.
 - **Retained Step 2B.02 supplemental capture:** `gate2b-step02-followup-20260812T022947Z-00000001` corrected native fallback and checkpoint semantics while immutably retaining four observed version-check call paths as `unresolved_path`.
@@ -135,7 +136,7 @@ docs/gates/GATE-2B-STEP02-CREWAI-RUNTIME-PERSISTENCE-AND-CONTINUATION-PROBE.md
 docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md
 ```
 
-Delivery packages remain outside Git under `~/projects/agentic-harness-package-staging/`. Step 2B.04 is frozen at merge `c61d0b0213d754fcc40f18065836de6e0da70d2c`. Step 2B.05 locally observed continuation around one Drupal-approved recommendation; it does not claim CrewAI batch completion, Gate 2C recovery, production readiness, or framework superiority.
+Delivery packages remain outside Git under `~/projects/agentic-harness-package-staging/`. Step 2B.04 is frozen at merge `c61d0b0213d754fcc40f18065836de6e0da70d2c`; Step 2B.05 is frozen at merge `2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148`. Step 2B.06 has an operationally complete 12/12 batch awaiting model-free evidence supplementation and later restoration. It does not claim restore verification, Step 2B.06 completion, Gate 2C recovery, production readiness, or framework superiority.
 
 ## Shared task
 
@@ -202,3 +203,11 @@ Certification baseline:
 fb23e41f6fc8f8e070babbf9a0f593edb94f8c5c
 Certify Gate 0.5 shared substrate
 ```
+
+## Gate 2B Step 2B.06 final governance
+
+The CrewAI 12-target batch and its one authorized restoration are complete. The finalized 19-file
+closure and the v1.0.3 two-file governance supplement are immutable. v1.0.4 adds only a separate,
+model-free final-governance attestation that binds those roots and a lifecycle-aware permanent
+composite audit. It cannot rerun the experiment or restoration. The retained snapshot must not be
+deleted, and repository changes must not be staged, until separately authorized.

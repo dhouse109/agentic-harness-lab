@@ -2,7 +2,7 @@
 
 ## Current status
 
-> Phase 0, Gate 0.5, and Gate 1 are complete. Drupal AI and LangGraph are certified and frozen. Gate 2B CrewAI is current; Step 2B.05 is complete locally and awaits Git closure.
+> Phase 0, Gate 0.5, and Gate 1 are complete. Drupal AI and LangGraph are certified and frozen. Gate 2B CrewAI is current; Step 2B.05 is merged and post-merge audited. Step 2B.06 has one permanent pre-target failure and one distinct operationally successful 12/12 batch; model-free governance supplementation is prepared before restoration.
 
 See `docs/CURRENT-STATUS.md` for the authoritative fresh-session status snapshot and reading order.
 
@@ -308,7 +308,7 @@ Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e458
 - [x] Step 2B.03 — CrewAI shared-operation adapters (accepted evidence `gate2b-step03-20260818T163812Z-7a58ef58`)
 - [x] Step 2B.04 — CrewAI canonical vertical slice and post-process closure
 - [x] Step 2B.05 — Drupal-authoritative human-review continuation
-- [ ] Step 2B.06 — not started
+- [ ] Step 2B.06 — v1.0.2 installed; successful 12/12 batch frozen at `BATCH_COMPLETE_AWAITING_RESTORE`; v1.0.3 governance supplement prepared; restore not executed
 - [ ] Step 2B.07 — not started
 - [ ] Step 2B.08 — not started
 
@@ -320,11 +320,11 @@ Step 2B.02 is committed, merged, resynchronized, and post-merge audited. Package
 
 **Completed Step 2B.04 packages:** `gate-2b-step04-crewai-canonical-vertical-slice-v1.0.0` and repair `v1.0.1` are committed, normally merged at `c61d0b0213d754fcc40f18065836de6e0da70d2c`, resynchronized, and post-merge audited. Its accepted recommendation became the frozen pending input to Step 2B.05 and is now approved at unpublished Drupal revision 22.
 
-**Completed locally Step 2B.05:** final repair `gate-2b-step05-crewai-drupal-authoritative-human-review-continuation-v1.0.2` completed continuation `gate2b-step05-20260825T192434Z-ff4f89dd` around source/Flow `crewai-20260818T215017Z-8e03fc95`. Boundary A persisted one public pending context; Boundary B retained one real approve-as-is review by `editor_dana` at unpublished Drupal revision 22; Boundary C reconstructed the same Flow once, resumed once, and cleared pending rows `1 -> 0`. Prior-work replay, additional model/provider activity, new submissions, Process B Drupal writes, and source writes remained zero. Final manifest `7f3294f75be9602d55c27f66a6c084784b9571d12ced26a2e08234af66d0dd24` covers the 15-file evidence family. Step 2B.05 is not yet committed or merged.
+**Completed Step 2B.05:** final repair `gate-2b-step05-crewai-drupal-authoritative-human-review-continuation-v1.0.2` completed continuation `gate2b-step05-20260825T192434Z-ff4f89dd` around source/Flow `crewai-20260818T215017Z-8e03fc95`. Boundary A persisted one public pending context; Boundary B retained one real approve-as-is review by `editor_dana` at unpublished Drupal revision 22; Boundary C reconstructed the same Flow once, resumed once, and cleared pending rows `1 -> 0`. Prior-work replay, additional model/provider activity, new submissions, Process B Drupal writes, and source writes remained zero. Final manifest `7f3294f75be9602d55c27f66a6c084784b9571d12ced26a2e08234af66d0dd24` covers the 15-file evidence family. It is normally merged at `2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148`, resynchronized, and post-merge audited.
 
 Historical lessons remain part of the boundary: the v1.0.0 XDG/runtime collision failed closed; the restricted Codex sandbox wakeup problem was environmental rather than a CrewAI HITL defect; and v1.0.2 moved the post-clear second-reconstruction negative control to disposable rehearsal so the live continuation remained exactly-once. Persistence and continuation remain distinct, and Drupal is the sole human-review authority.
 
-After Step 2B.05 Git closure, Step 2B.06 is the next eligible planning/preparation boundary but is not started. The frozen 12-target CrewAI batch, Step 2B.07, and Step 2B.08 are not started and are not authorized by this completion.
+Step 2B.06 restoration is verified and the 19-file final closure records `STEP_2B_06_COMPLETE`. The first run remains an immutable zero-provider pre-target failure; successful run `crewai-20260827T174606Z-6249d844` remains the only accepted 12/12 batch. The v1.0.3 two-file supplement independently proves zero feedback-collapse calls and is immutable. v1.0.4 repairs only the remaining post-finalization audit-composition gap with a separate two-file final-governance bridge and a stage-specific composite permanent audit. It does not regenerate the experiment, restore Drupal, or rewrite either predecessor family. Snapshot cleanup and Git staging remain separate decisions. Step 2B.07 and Step 2B.08 are not started. Gate 2C remains deferred.
 
 Gate 2C shared failure/recovery remains deferred and unclaimed. CrewAI-specific continuation evidence must remain labeled Gate 2B.
 

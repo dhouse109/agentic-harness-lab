@@ -1,0 +1,15 @@
+{
+  "authenticated_http_requests": 1,
+  "base_url_matches_ddev": true,
+  "client": "shared.drupal_client.DrupalClient",
+  "credential_resynchronization_required": false,
+  "credential_source": "drupal/.secrets/phase0-step7-accounts.txt",
+  "credential_source_present": true,
+  "http_status": 200,
+  "operation": "find_images_needing_review",
+  "principal": "agent_bot",
+  "principal_binding_matches_expected": true,
+  "result": "PASS",
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+  "targets": 12
+}

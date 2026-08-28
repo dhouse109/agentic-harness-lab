@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness-lab.local/schemas/gate2b-step06-batch-evidence.schema.json",
+  "title": "Gate 2B Step 2B.06 frozen CrewAI batch summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "step", "status", "lifecycle", "run_id",
+    "target_sequence_sha256", "completed_sequences", "recommendation_count",
+    "logical_generations", "provider_requests", "provider_responses",
+    "recommendation_submissions", "duplicate_targets", "duplicate_recommendations",
+    "source_mutations", "drupal_restored", "privacy", "gate2c_executed"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "step": {"const": "2B.06"},
+    "status": {"enum": ["pass", "fail"]},
+    "lifecycle": {"enum": ["STEP_2B_06_COMPLETE", "STEP_2B_06_FAILED"]},
+    "run_id": {"type": "string", "pattern": "^crewai-[0-9]{8}T[0-9]{6}Z-[0-9a-f]{8}$"},
+    "target_sequence_sha256": {"const": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"},
+    "completed_sequences": {"type": "array", "items": {"type": "integer", "minimum": 1, "maximum": 12}, "uniqueItems": true},
+    "recommendation_count": {"type": "integer", "minimum": 0, "maximum": 12},
+    "logical_generations": {"type": "integer", "minimum": 0, "maximum": 12},
+    "provider_requests": {"type": "integer", "minimum": 0, "maximum": 12},
+    "provider_responses": {"type": "integer", "minimum": 0, "maximum": 12},
+    "recommendation_submissions": {"type": "integer", "minimum": 0, "maximum": 12},
+    "duplicate_targets": {"const": 0},
+    "duplicate_recommendations": {"const": 0},
+    "source_mutations": {"const": 0},
+    "drupal_restored": {"type": "boolean"},
+    "privacy": {"enum": ["PASS", "FAIL"]},
+    "gate2c_executed": {"const": false}
+  }
+}

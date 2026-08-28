@@ -1,0 +1,61 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "authorization.json",
+      "sha256": "8ebf1b697ff4d9a1395d86f5e47618787fc6b995e21745b61893d98de9fabd2e"
+    },
+    {
+      "path": "bindings.json",
+      "sha256": "65357aae751a8001445a6b9e951ca5bfb3fb85508bac37367beff98e1da5176a"
+    },
+    {
+      "path": "targets.json",
+      "sha256": "26e7f27d2904bc118a36f6338872aa8eed703e1e87518f55f746cb481c5e6e74"
+    },
+    {
+      "path": "events.jsonl",
+      "sha256": "c95425da8a6bc6406643c44d4bad1376c9d3fd57fd089e973c79c4b0509a7084"
+    },
+    {
+      "path": "model-provider-accounting.json",
+      "sha256": "21f7a78be4fc5a61797e59e9c2865aa4ed448197740533c55e870f641926533f"
+    },
+    {
+      "path": "model-outputs.json",
+      "sha256": "85fc021a062fe60a9dde3e023232686203da5f025d760ee749038371a9084342"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "e363db3769690251cf55e648d53fe9532e72a445c565b91995f0a71d58382ae5"
+    },
+    {
+      "path": "recommendations.json",
+      "sha256": "88673f95138e24687b515b0053b2d07d6ed5d95df6862cbabac99c6fce88c4b6"
+    },
+    {
+      "path": "submissions.json",
+      "sha256": "6c1b586ada10f59f7958df0e11b031ea5e4baa1ce1646b13535db1a9d5fe0807"
+    },
+    {
+      "path": "statuses.json",
+      "sha256": "780454f915e811d22ff92a41f5d830769b361208ff4546288a3e50cacf520f40"
+    },
+    {
+      "path": "runtime-state.json",
+      "sha256": "d48ac0ecd43c672cafc1dbf6895836b06c4ea42104375c09bf0baa65516733d9"
+    },
+    {
+      "path": "idempotency.json",
+      "sha256": "512b35db365f16842d99406cbfc99606fde379602862af91e934768678e88a91"
+    },
+    {
+      "path": "source-nonmutation.json",
+      "sha256": "34aa96e583f2393f1f5dc11168fb5f9c1abb6515e001aedce1a6b3744427fce8"
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "f7023e61fc8e6b176ae2bbb252e4577662edf0a93a1c29dab1b9950caeee2f72"
+    }
+  ]
+}

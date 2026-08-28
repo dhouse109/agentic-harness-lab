@@ -1,0 +1,17 @@
+{
+  "activation_manifest_sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d",
+  "historical_failed_run_id": "crewai-20260827T125501Z-c5381188",
+  "historical_failed_runtime_sha256": "8c5cec3b085f2c239e9163abb014a7255a7bb64ab52c9e6cc1662e34bf5ff5aa",
+  "historical_failure_manifest_sha256": "a7615f9b47737201f26d8a368f74fd4bd543eeb6b7dcef16a2e7bd69b07c9afd",
+  "predecessor": "2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148",
+  "readiness_id": "gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102",
+  "snapshot": {
+    "id": "gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "path": "drupal/.ddev/db_snapshots/gate2b-step06-post-step2b05-recovery-20260826T152003Z-mariadb_11.8.zst",
+    "restore_command": "ddev snapshot restore gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "sha256": "4ba4cece2d30a5f90699afdf9a2ab2094f0d902213c66cdc0b40dfa466094906",
+    "size": 4112532
+  },
+  "source_projection": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}

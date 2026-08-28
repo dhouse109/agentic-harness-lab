@@ -1,0 +1,15 @@
+{
+  "articles": 20,
+  "authenticated_http_requests": 1,
+  "authoritative_run_ids_allocated": 0,
+  "authoritative_runtimes_created": 0,
+  "drupal_writes": 0,
+  "lifecycle": "AUTHENTICATED_HTTP_PREFLIGHT_PASS_MODEL_READY",
+  "model_provider_activity": 0,
+  "readiness_id": "gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102",
+  "schema_version": 1,
+  "status": "pass",
+  "step": "2B.06",
+  "suggestions": 0,
+  "targets": 12
+}

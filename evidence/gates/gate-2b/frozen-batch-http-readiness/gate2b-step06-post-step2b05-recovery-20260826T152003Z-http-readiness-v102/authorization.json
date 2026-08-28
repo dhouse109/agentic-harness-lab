@@ -1,0 +1,10 @@
+{
+  "authenticated_http_requests": 1,
+  "authoritative_run_ids_allocated": 0,
+  "authoritative_runtimes_created": 0,
+  "boundary": "model_free_authenticated_http_readiness_only",
+  "drupal_writes": 0,
+  "model_generations": 0,
+  "provider_requests": 0,
+  "submissions": 0
+}

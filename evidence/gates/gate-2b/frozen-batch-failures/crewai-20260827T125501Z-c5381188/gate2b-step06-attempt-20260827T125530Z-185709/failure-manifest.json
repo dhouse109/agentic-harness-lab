@@ -1,0 +1,9 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "failure.json",
+      "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+    }
+  ]
+}

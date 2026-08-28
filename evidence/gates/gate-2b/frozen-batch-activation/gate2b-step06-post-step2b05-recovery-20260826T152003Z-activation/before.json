@@ -1,0 +1,37 @@
+{
+  "agent_bot_roles": [
+    "authenticated",
+    "agent_service"
+  ],
+  "agent_service_permissions": [
+    "access content",
+    "create alt_text_suggestion content",
+    "view own unpublished content"
+  ],
+  "article_count": 20,
+  "capture_is_sanitized": true,
+  "content_editor_permissions": [
+    "access administration pages",
+    "access content",
+    "access content overview",
+    "access contextual links",
+    "access navigation",
+    "edit any alt_text_suggestion content",
+    "view alt_text_suggestion revisions",
+    "view the administration theme"
+  ],
+  "editor_dana_roles": [
+    "authenticated",
+    "content_editor"
+  ],
+  "jsonapi_read_only": false,
+  "modules": {
+    "agentic_harness_drupal_ai": false,
+    "agentic_harness_tools": false
+  },
+  "source_projection": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "suggestion_count": 0,
+  "suggestions": [],
+  "target_count": 12,
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}

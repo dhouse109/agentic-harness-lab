@@ -1,0 +1,33 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "authorization.json",
+      "sha256": "789144465a1ff7be77fe6fb526e3ae64b94daa87309a87cea8032fff5aa6dbc8"
+    },
+    {
+      "path": "bindings.json",
+      "sha256": "1a4826c78d25962d2b07242824825968da8f2d14dd6a5f4c4c72c4df1735cf6b"
+    },
+    {
+      "path": "before.json",
+      "sha256": "e9c680bee3ece32c5bbe6de42b8f77b0afb3580ca4fece7b8b88378cf974d25a"
+    },
+    {
+      "path": "after.json",
+      "sha256": "72a5aa5fc7da780116ac044ad7ae6b618028282c6dde2d002377d547e1edb065"
+    },
+    {
+      "path": "events.jsonl",
+      "sha256": "25feaf7040b95e2659b9e1325f9159627280b229bb14331236a56685a93babd0"
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "04aa51cf3d935882f39b04714c39476346c85a7e9b792abdec2995875909a43e"
+    },
+    {
+      "path": "summary.json",
+      "sha256": "fce5fff37c63794c62b99926288f54b28b0a96e6605909b2719b8ab3d6acfa22"
+    }
+  ]
+}

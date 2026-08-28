@@ -1,0 +1,35 @@
+{
+  "activation_manifest_sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d",
+  "classification": "pre_target_authenticated_http_discovery_failure",
+  "credential_values_retained": false,
+  "failed_attempt_id": "gate2b-step06-attempt-20260827T125530Z-185709",
+  "failed_run_id": "crewai-20260827T125501Z-c5381188",
+  "failed_runtime": {
+    "flow_state_rows": 0,
+    "path": "crewai/.runtime/gate2b-step06/crewai-20260827T125501Z-c5381188/flow-state.sqlite",
+    "pending_feedback_rows": 0,
+    "sha256": "8c5cec3b085f2c239e9163abb014a7255a7bb64ab52c9e6cc1662e34bf5ff5aa",
+    "size": 28672
+  },
+  "failure_json_sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661",
+  "failure_manifest_sha256": "a7615f9b47737201f26d8a368f74fd4bd543eeb6b7dcef16a2e7bd69b07c9afd",
+  "live_state": {
+    "articles": 20,
+    "source_projection": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+    "suggestions": 0,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+    "targets": 12
+  },
+  "privacy": "PASS",
+  "repair_version": "v1.0.2",
+  "root_cause": "ambient_password_binding_differed_from_governed_agent_bot_credential",
+  "schema_version": 1,
+  "snapshot": {
+    "id": "gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "path": "drupal/.ddev/db_snapshots/gate2b-step06-post-step2b05-recovery-20260826T152003Z-mariadb_11.8.zst",
+    "restore_command": "ddev snapshot restore gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "sha256": "4ba4cece2d30a5f90699afdf9a2ab2094f0d902213c66cdc0b40dfa466094906",
+    "size": 4112532
+  },
+  "status": "pass"
+}

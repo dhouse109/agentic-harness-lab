@@ -1,0 +1,9 @@
+{
+  "algorithm": "sha256",
+  "entries": [
+    {
+      "path": "disposition.json",
+      "sha256": "fff9ae64584dbf6953490189c3514f7f58e3f722e49ef1998a91ec3ecba73b6a"
+    }
+  ]
+}

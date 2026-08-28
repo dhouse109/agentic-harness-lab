@@ -1,0 +1,13 @@
+{
+  "activation_id": "gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation",
+  "predecessor": "2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148",
+  "snapshot": {
+    "id": "gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "path": "drupal/.ddev/db_snapshots/gate2b-step06-post-step2b05-recovery-20260826T152003Z-mariadb_11.8.zst",
+    "restore_command": "ddev snapshot restore gate2b-step06-post-step2b05-recovery-20260826T152003Z",
+    "sha256": "4ba4cece2d30a5f90699afdf9a2ab2094f0d902213c66cdc0b40dfa466094906",
+    "size": 4112532
+  },
+  "source_projection": "f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17",
+  "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728"
+}

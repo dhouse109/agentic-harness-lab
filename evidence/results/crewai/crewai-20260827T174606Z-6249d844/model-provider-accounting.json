@@ -1,0 +1,14 @@
+{
+  "actual_provider_requests": 12,
+  "fallback_calls": 0,
+  "guardrail_retries": 0,
+  "learning_calls": 0,
+  "logical_generation_budget": 12,
+  "logical_generations": 12,
+  "provider_request_budget": 12,
+  "repair_calls": 0,
+  "sdk_retries": 0,
+  "structured_output_correction_calls": 0,
+  "successful_provider_responses": 12,
+  "transport_retries": 0
+}

@@ -1,0 +1,11 @@
+{
+  "accepted_rerun_blocked": true,
+  "batch_only_reset_count": 0,
+  "batch_only_restore_count": 0,
+  "batch_only_snapshot_create_count": 0,
+  "exact_order": true,
+  "stale_runtime_blocked": true,
+  "target_order_drift_blocked": true,
+  "unique_recommendations": true,
+  "unique_targets": true
+}
