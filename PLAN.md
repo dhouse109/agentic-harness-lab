@@ -1,8 +1,10 @@
 # Implementation Plan
 
+> Gate 2B Step 2B.08 is complete and its accepted evidence, freeze, and handoff certify and freeze the CrewAI specimen. Gate 2C remains deferred and unclaimed; Gate 2 overall remains open.
+
 ## Current status
 
-> Phase 0, Gate 0.5, and Gate 1 are complete. Drupal AI and LangGraph are certified and frozen. Gate 2B CrewAI is current; Steps 2B.01–2B.06 are merged and post-merge audited. Step 2B.07 synthesizes accepted evidence and updates the comparison without model/provider or Drupal activity.
+> Phase 0, Gate 0.5, and Gate 1 are complete. Drupal AI, LangGraph, and Gate 2B CrewAI are certified and frozen. Steps 2B.01–2B.08 are complete. Step 2B.08 promoted accepted evidence without model/provider, Drupal-write, or snapshot activity.
 
 See `docs/CURRENT-STATUS.md` for the authoritative fresh-session status snapshot and reading order.
 
@@ -173,7 +175,7 @@ unchanged.
 Gate 2 preserves the original umbrella milestone and closes only after Gate 2C shared failure/recovery.
 
 - **Gate 2A — LangGraph:** certified and frozen.
-- **Gate 2B — CrewAI:** current.
+- **Gate 2B — CrewAI:** certified and frozen.
 - **Gate 2C — shared failure/recovery:** deferred and unclaimed.
 
 ### Gate 2A — LangGraph
@@ -286,7 +288,7 @@ Step 2A.01 makes zero model calls and performs zero Drupal mutation. The accepte
 
 ### Gate 2B — CrewAI
 
-Gate 2B is current. Its later package count is not frozen; evidence boundaries follow observed CrewAI behavior rather than LangGraph symmetry.
+Gate 2B is certified and frozen. Its evidence boundaries follow observed CrewAI behavior rather than LangGraph symmetry.
 
 **Completed package:**
 
@@ -308,9 +310,9 @@ Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e458
 - [x] Step 2B.03 — CrewAI shared-operation adapters (accepted evidence `gate2b-step03-20260818T163812Z-7a58ef58`)
 - [x] Step 2B.04 — CrewAI canonical vertical slice and post-process closure
 - [x] Step 2B.05 — Drupal-authoritative human-review continuation
-- [ ] Step 2B.06 — v1.0.2 installed; successful 12/12 batch frozen at `BATCH_COMPLETE_AWAITING_RESTORE`; v1.0.3 governance supplement prepared; restore not executed
-- [x] Step 2B.07 — evidence synthesis and comparison update (model-free claim/proof mapping; package audit required before commit)
-- [ ] Step 2B.08 — not started
+- [x] Step 2B.06 — complete, normally merged at `78ba79165378ac2905801d994682aa385cdfb607`, restored exactly once, and post-merge audited with `STEP_2B_06_COMPLETE`, `RESTORE_VERIFIED`, `FINAL_GOVERNANCE_ACCEPTED`, and `SNAPSHOT_RETAINED`
+- [x] Step 2B.07 — evidence synthesis and comparison update (model-free claim/proof mapping; merged and post-merge audited)
+- [x] Step 2B.08 — certification, freeze, and Gate 2C handoff complete; Gate 2B certified/frozen model-free and Drupal-read-only
 
 Step 2B.02 compared supported persistence families, process-boundary semantics, storage ownership, serialization privacy, run isolation, Drupal-authoritative pending-continuation compatibility, hidden-call controls, and deterministic failure propagation. Its accepted architecture is recorded in `docs/decisions/ADR-0012-crewai-flow-persistence-and-human-review-continuation.md` and its machine/human closure provenance is retained in `shared/contracts/GATE2B-STEP02-CREWAI-ARCHITECTURE-CLOSURE.json`.
 
@@ -324,7 +326,7 @@ Step 2B.02 is committed, merged, resynchronized, and post-merge audited. Package
 
 Historical lessons remain part of the boundary: the v1.0.0 XDG/runtime collision failed closed; the restricted Codex sandbox wakeup problem was environmental rather than a CrewAI HITL defect; and v1.0.2 moved the post-clear second-reconstruction negative control to disposable rehearsal so the live continuation remained exactly-once. Persistence and continuation remain distinct, and Drupal is the sole human-review authority.
 
-Step 2B.06 is normally merged at `78ba79165378ac2905801d994682aa385cdfb607` and its post-merge composite audit passes with `STEP_2B_06_COMPLETE`, `RESTORE_VERIFIED`, `FINAL_GOVERNANCE_ACCEPTED`, and `SNAPSHOT_RETAINED`. The first run remains an immutable zero-provider pre-target failure; successful run `crewai-20260827T174606Z-6249d844` remains the only accepted 12/12 batch. Step 2B.07 adds only model-free synthesis evidence and proof-bounded comparison wording. It does not regenerate behavior, mutate Drupal, remove the retained snapshot, certify/freeze Gate 2B, or execute Gate 2C. Step 2B.08 remains separate.
+Step 2B.06 is complete, normally merged at `78ba79165378ac2905801d994682aa385cdfb607`, restored exactly once, and post-merge audited. Step 2B.07 is complete, normally merged at `50e7296406a39de23b20bdfb1b45960dca13d3a1`, and post-merge audited with accepted synthesis `gate2b-step07-20260828T135201Z-1ed07bea`. Step 2B.08 certifies and freezes only those retained records; it did not regenerate behavior, mutate Drupal, remove the retained snapshot, or execute Gate 2C.
 
 Gate 2C shared failure/recovery remains deferred and unclaimed. CrewAI-specific continuation evidence must remain labeled Gate 2B.
 

@@ -1,7 +1,9 @@
 # Current Implementation Status
 
+> **Current authoritative state:** Step 2B.08 is complete; its accepted certification family, freeze, handoff, and exact pointer certify and freeze Gate 2B. Gate 2C remains `DEFERRED_UNCLAIMED`, and Gate 2 overall is `NOT_COMPLETE`.
+
 **Status date:** August 28, 2026
-**Authoritative branch:** `gate-2b-step07-crewai-evidence-synthesis-and-comparison`; predecessor `main` is the normal Step 2B.06 merge `78ba79165378ac2905801d994682aa385cdfb607`
+**Certification predecessor:** `main` at normal Step 2B.07 merge `50e7296406a39de23b20bdfb1b45960dca13d3a1`
 
 ## Current position
 
@@ -13,7 +15,7 @@
 - **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
 - **Gate 2:** in progress.
 - **Gate 2A — LangGraph:** certified and frozen.
-- **Gate 2B — CrewAI:** current; Steps 2B.01–2B.06 are merged and post-merge audited, and Step 2B.07 evidence synthesis is the current model-free boundary.
+- **Gate 2B — CrewAI:** certified and frozen by completed Step 2B.08 after permanent acceptance of the model-free, Drupal-read-only certification/freeze/handoff family.
 - **Gate 2C — shared three-framework failure/recovery:** deferred and unclaimed.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
@@ -41,7 +43,8 @@
 - **Step 2B.05 evidence:** 15 successful files with 14-entry manifest `7f3294f75be9602d55c27f66a6c084784b9571d12ced26a2e08234af66d0dd24`; final summary `417c3fa7f7d9a3a0e0ae1bd02736357b67356ee3c928bdeaace79969d6e3d7b9`; Process A manifest `154b2242bd0a8f37a8392c5d9c68071fef58790a3439a79f983c7d3b8e7a4f23`; review manifest `f58357f484bac5470ea826da4b3e64b92cddacc1d222544c21ea9aa519e891e8`; privacy and permanent audit PASS.
 - **Step 2B.05 runtime:** terminal state `completed / drupal_authoritative_review_observed`, pending rows 0. The runtime is CrewAI-owned, local-only, untracked, and not evidence.
 - **Step 2B.06 lifecycle:** complete, normally merged at `78ba79165378ac2905801d994682aa385cdfb607`, resynchronized, and post-merge audited. Accepted run `crewai-20260827T174606Z-6249d844` completed 12/12 with exact logical/provider/submission accounting; every retry/correction/repair/fallback/learning/feedback-collapse count and source mutation was zero. The permanent composite chain retains the failed attempt/disposition, activation/readiness, immutable batch stage, v1.0.3 supplement, exactly-once restoration, 19-file closure, and v1.0.4 final-governance bridge. It reports `STEP_2B_06_COMPLETE`, `RESTORE_VERIFIED`, `FINAL_GOVERNANCE_ACCEPTED`, and `SNAPSHOT_RETAINED`.
-- **Current boundary:** Step 2B.07 creates only model-free claim/proof and comparison-synthesis evidence from accepted predecessors. Promoted claims must cite exact retained proof and their evidence strength; architecture/probe evidence is not live-experiment evidence. The six-organ comparison may describe material observed differences but may not infer production readiness, a recovery winner, or framework superiority. Step 2B.08 certification/freeze and Gate 2C remain separate and unstarted.
+- **Step 2B.07:** complete, normally merged at `50e7296406a39de23b20bdfb1b45960dca13d3a1`, and post-merge audited; accepted synthesis `gate2b-step07-20260828T135201Z-1ed07bea` is immutable and was not rerun.
+- **Step 2B.08:** complete. Permanent audit binds the final lifecycle documents to the accepted certification evidence, freeze digest, exact pointer, and handoff. Gate 2C remains separate, deferred, and unclaimed.
 - **Retained Step 2B.02 diagnostic:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid and retained. Its mechanical audit originally passed, but later integrity review found its architecture recommendation unsupported by the stronger default/instrumented, independent-isolation, and retry predicates. It is diagnostic/unaccepted, not corrupted; at that capture boundary, Step 2B.02 remained open.
 - **Retained Step 2B.02 v2 capture:** `gate2b-step02-20260812T015108Z-00000001` is byte-valid and passed its superseding capture boundary with architecture unresolved.
 - **Retained Step 2B.02 supplemental capture:** `gate2b-step02-followup-20260812T022947Z-00000001` is byte-valid and corrected the native structured-output fallback and terminal-output-only checkpoint interpretation. Its immutable classifier remains `unresolved_path`; no retained evidence was rewritten.
@@ -223,4 +226,4 @@ A new planning or implementation session should read these files in order:
 Do not reopen Gate 0.5 or Gate 1 unless an audit fails or a frozen contract is intentionally changed.
 Step 2A.01 through Step 2A.10 are complete and Gate 2A LangGraph is certified and frozen.
 
-Use `docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md`, the Step 2B.01 contract, the Step 2B.02 runtime-probe document, ADR-0012, and `docs/CODEX-GATE-2B-RUNBOOK.md`. Steps 2B.05 and 2B.06 are complete and their consumed continuation, batch identities, restoration, evidence, and runtimes must never be replayed or rewritten. Retain the Step 2B.06 recovery snapshot because the merged permanent auditor still proves `SNAPSHOT_RETAINED`. Step 2B.07 may read those records and create its separate model-free synthesis family only. Step 2B.08 certification/freeze and Gate 2C remain deferred and unclaimed.
+Use `shared/contracts/GATE2B-CREWAI-FREEZE.json`, `docs/handoffs/GATE-2B-CREWAI-HANDOFF.md`, the Step 2B.01 contract, ADR-0012, and `docs/CODEX-GATE-2B-RUNBOOK.md`. Steps 2B.05–2B.08 are complete and their consumed identities/evidence must never be replayed or rewritten. Retain the Step 2B.06 recovery snapshot because permanent audit still proves `SNAPSHOT_RETAINED`. Gate 2C remains deferred and unclaimed.
