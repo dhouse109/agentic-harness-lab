@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "path": "claim-proof-map.json",
+      "sha256": "ac2595be175c19dc8d7c5adae77289bc1f452cce8418bc4ff30d2e5c2d5ff0aa",
+      "size": 35816
+    },
+    {
+      "path": "comparison-synthesis.json",
+      "sha256": "4f51548da036d74db4cab939bbfe2c417b453fb6f3bcf93453334e8330cddb1d",
+      "size": 615
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "3c4180e2068351828b3010aa580f11a7a5a7e398153762fc49e59cf0f6c3f635",
+      "size": 352
+    },
+    {
+      "path": "summary.json",
+      "sha256": "b9517af014e247d415fecb74ecccc0654b7b854d8b635662a4c30c011a5f82bb",
+      "size": 1194
+    }
+  ],
+  "run_id": "gate2b-step07-20260828T135201Z-1ed07bea",
+  "schema_version": "1.0.0"
+}

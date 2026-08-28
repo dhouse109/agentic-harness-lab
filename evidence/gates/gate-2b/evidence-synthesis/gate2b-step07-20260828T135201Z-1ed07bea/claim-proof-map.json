@@ -1,0 +1,671 @@
+{
+  "claims": [
+    {
+      "claim_id": "CLM-CR-002",
+      "claim_strength": "verified",
+      "claim_text": "Pinned Flow persistence crossed a process boundary.",
+      "comparison_safe_wording": "Pinned Flow persistence crossed a process boundary.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/canonical-slice-closure/gate2b-step04-closure-20260819T195009Z-60344274/evidence-manifest.json",
+          "sha256": "d62ababa96b223643ab23e3d67c75b3fcc2bb325a8a3e69787fff870cc56583b"
+        },
+        {
+          "path": "evidence/gates/gate-2b/canonical-slice/crewai-20260818T215017Z-8e03fc95/evidence-manifest.json",
+          "sha256": "c6115ffea4b7ceefb7858e6b482713fc92998dcf2bde7bc6de8831d583665aaf"
+        },
+        {
+          "path": "evidence/gates/gate-2b/human-review-continuation/gate2b-step05-20260825T192434Z-ff4f89dd/evidence-manifest.json",
+          "sha256": "7f3294f75be9602d55c27f66a6c084784b9571d12ced26a2e08234af66d0dd24"
+        },
+        {
+          "path": "evidence/gates/gate-2b/runtime-probe-disposition/gate2b-step02-disposition-20260812T024610Z-00000001/evidence-manifest.json",
+          "sha256": "8666c77d3fc7f6a82a88adec652ea30b59198a3ce700ea14069b2ea6496c0f7d"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [
+        "SRC-CR-001"
+      ],
+      "organ": "state",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-002:verified"
+      },
+      "prohibited_overstatement": "Do not infer production durability or Gate 2C recovery."
+    },
+    {
+      "claim_id": "CLM-CR-003",
+      "claim_strength": "verified",
+      "claim_text": "One pending Flow was reconstructed and resumed once around Drupal review.",
+      "comparison_safe_wording": "One pending Flow was reconstructed and resumed once around Drupal review.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/human-review-continuation/gate2b-step05-20260825T192434Z-ff4f89dd/evidence-manifest.json",
+          "sha256": "7f3294f75be9602d55c27f66a6c084784b9571d12ced26a2e08234af66d0dd24"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [
+        "SRC-CR-002"
+      ],
+      "organ": "human-review",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-003:verified"
+      },
+      "prohibited_overstatement": "Do not infer autonomous or non-Drupal review authority."
+    },
+    {
+      "claim_id": "CLM-CR-004",
+      "claim_strength": "verified",
+      "claim_text": "Four BaseTool adapters delegated to the shared operations.",
+      "comparison_safe_wording": "Four BaseTool adapters delegated to the shared operations.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/shared-operation-adapters/gate2b-step03-20260818T163812Z-7a58ef58/evidence-manifest.json",
+          "sha256": "6b76549c442d3f27eb7278a41c69dad4e7313bd673adf331012d9c02c2216dad"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [
+        "SRC-CR-003"
+      ],
+      "organ": "tools",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-004:verified"
+      },
+      "prohibited_overstatement": "Do not infer untested tool breadth."
+    },
+    {
+      "claim_id": "CLM-CR-005",
+      "claim_strength": "observed",
+      "claim_text": "Fresh permitted context and sanitized retained evidence were observed.",
+      "comparison_safe_wording": "Fresh permitted context and sanitized retained evidence were observed.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/canonical-slice-closure/gate2b-step04-closure-20260819T195009Z-60344274/evidence-manifest.json",
+          "sha256": "d62ababa96b223643ab23e3d67c75b3fcc2bb325a8a3e69787fff870cc56583b"
+        },
+        {
+          "path": "evidence/gates/gate-2b/canonical-slice/crewai-20260818T215017Z-8e03fc95/evidence-manifest.json",
+          "sha256": "c6115ffea4b7ceefb7858e6b482713fc92998dcf2bde7bc6de8831d583665aaf"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-activation/gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation/activation-manifest.json",
+          "sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failure-disposition/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709-v102/disposition-manifest.json",
+          "sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failures/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709/failure.json",
+          "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-final-governance/crewai-20260827T174606Z-6249d844/gate2b-step06-final-governance-v104/final-governance-manifest.json",
+          "sha256": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-governance-supplement/crewai-20260827T174606Z-6249d844/gate2b-step06-governance-supplement-v103/supplement-manifest.json",
+          "sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-http-readiness/gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102/http-readiness-manifest.json",
+          "sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/batch-manifest.json",
+          "sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/evidence-manifest.json",
+          "sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/summary.json",
+          "sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [],
+      "organ": "context",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-005:observed"
+      },
+      "prohibited_overstatement": "Do not infer output quality or privacy beyond scanned artifacts."
+    },
+    {
+      "claim_id": "CLM-CR-006",
+      "claim_strength": "observed",
+      "claim_text": "Strict output, shared validation, and one-request controls preceded submit.",
+      "comparison_safe_wording": "Strict output, shared validation, and one-request controls preceded submit.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/canonical-slice-closure/gate2b-step04-closure-20260819T195009Z-60344274/evidence-manifest.json",
+          "sha256": "d62ababa96b223643ab23e3d67c75b3fcc2bb325a8a3e69787fff870cc56583b"
+        },
+        {
+          "path": "evidence/gates/gate-2b/canonical-slice/crewai-20260818T215017Z-8e03fc95/evidence-manifest.json",
+          "sha256": "c6115ffea4b7ceefb7858e6b482713fc92998dcf2bde7bc6de8831d583665aaf"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-activation/gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation/activation-manifest.json",
+          "sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failure-disposition/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709-v102/disposition-manifest.json",
+          "sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failures/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709/failure.json",
+          "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-final-governance/crewai-20260827T174606Z-6249d844/gate2b-step06-final-governance-v104/final-governance-manifest.json",
+          "sha256": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-governance-supplement/crewai-20260827T174606Z-6249d844/gate2b-step06-governance-supplement-v103/supplement-manifest.json",
+          "sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-http-readiness/gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102/http-readiness-manifest.json",
+          "sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/batch-manifest.json",
+          "sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/evidence-manifest.json",
+          "sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/summary.json",
+          "sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [],
+      "organ": "verification",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-006:observed"
+      },
+      "prohibited_overstatement": "Do not infer provider-wide retry behavior."
+    },
+    {
+      "claim_id": "CLM-CR-007",
+      "claim_strength": "observed",
+      "claim_text": "The accepted serial batch completed 12/12 with exact accounting.",
+      "comparison_safe_wording": "The accepted serial batch completed 12/12 with exact accounting.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-activation/gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation/activation-manifest.json",
+          "sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failure-disposition/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709-v102/disposition-manifest.json",
+          "sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failures/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709/failure.json",
+          "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-final-governance/crewai-20260827T174606Z-6249d844/gate2b-step06-final-governance-v104/final-governance-manifest.json",
+          "sha256": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-governance-supplement/crewai-20260827T174606Z-6249d844/gate2b-step06-governance-supplement-v103/supplement-manifest.json",
+          "sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-http-readiness/gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102/http-readiness-manifest.json",
+          "sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/batch-manifest.json",
+          "sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/evidence-manifest.json",
+          "sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/summary.json",
+          "sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [],
+      "organ": "lifecycle",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-007:observed"
+      },
+      "prohibited_overstatement": "Do not generalize beyond this run."
+    },
+    {
+      "claim_id": "CLM-CR-008",
+      "claim_strength": "observed",
+      "claim_text": "Source nonmutation, identity uniqueness, and rerun blocking passed.",
+      "comparison_safe_wording": "Source nonmutation, identity uniqueness, and rerun blocking passed.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-activation/gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation/activation-manifest.json",
+          "sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failure-disposition/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709-v102/disposition-manifest.json",
+          "sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failures/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709/failure.json",
+          "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-final-governance/crewai-20260827T174606Z-6249d844/gate2b-step06-final-governance-v104/final-governance-manifest.json",
+          "sha256": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-governance-supplement/crewai-20260827T174606Z-6249d844/gate2b-step06-governance-supplement-v103/supplement-manifest.json",
+          "sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-http-readiness/gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102/http-readiness-manifest.json",
+          "sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511"
+        },
+        {
+          "path": "evidence/gates/gate-2b/shared-operation-adapters/gate2b-step03-20260818T163812Z-7a58ef58/evidence-manifest.json",
+          "sha256": "6b76549c442d3f27eb7278a41c69dad4e7313bd673adf331012d9c02c2216dad"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/batch-manifest.json",
+          "sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/evidence-manifest.json",
+          "sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/summary.json",
+          "sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [],
+      "organ": "verification",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-008:observed"
+      },
+      "prohibited_overstatement": "Do not infer general transactional safety."
+    },
+    {
+      "claim_id": "CLM-CR-009",
+      "claim_strength": "observed",
+      "claim_text": "The failed HTTP attempt, disposition, readiness repair, and accepted run are retained.",
+      "comparison_safe_wording": "The failed HTTP attempt, disposition, readiness repair, and accepted run are retained.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-activation/gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation/activation-manifest.json",
+          "sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failure-disposition/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709-v102/disposition-manifest.json",
+          "sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failures/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709/failure.json",
+          "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-final-governance/crewai-20260827T174606Z-6249d844/gate2b-step06-final-governance-v104/final-governance-manifest.json",
+          "sha256": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-governance-supplement/crewai-20260827T174606Z-6249d844/gate2b-step06-governance-supplement-v103/supplement-manifest.json",
+          "sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-http-readiness/gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102/http-readiness-manifest.json",
+          "sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/batch-manifest.json",
+          "sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/evidence-manifest.json",
+          "sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/summary.json",
+          "sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [],
+      "organ": "lifecycle",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-009:observed"
+      },
+      "prohibited_overstatement": "Do not retain or disclose credentials."
+    },
+    {
+      "claim_id": "CLM-CR-010",
+      "claim_strength": "observed",
+      "claim_text": "One exact restoration and final evidence closure passed.",
+      "comparison_safe_wording": "One exact restoration and final evidence closure passed.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-activation/gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation/activation-manifest.json",
+          "sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failure-disposition/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709-v102/disposition-manifest.json",
+          "sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failures/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709/failure.json",
+          "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-final-governance/crewai-20260827T174606Z-6249d844/gate2b-step06-final-governance-v104/final-governance-manifest.json",
+          "sha256": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-governance-supplement/crewai-20260827T174606Z-6249d844/gate2b-step06-governance-supplement-v103/supplement-manifest.json",
+          "sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-http-readiness/gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102/http-readiness-manifest.json",
+          "sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511"
+        },
+        {
+          "path": "evidence/gates/gate-2b/human-review-continuation/gate2b-step05-20260825T192434Z-ff4f89dd/evidence-manifest.json",
+          "sha256": "7f3294f75be9602d55c27f66a6c084784b9571d12ced26a2e08234af66d0dd24"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/batch-manifest.json",
+          "sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/evidence-manifest.json",
+          "sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/summary.json",
+          "sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [],
+      "organ": "lifecycle",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-010:observed"
+      },
+      "prohibited_overstatement": "Restoration is not the shared Gate 2C trial."
+    },
+    {
+      "claim_id": "CLM-CR-011",
+      "claim_strength": "observed",
+      "claim_text": "The final composite auditor passed on a normal merge descendant.",
+      "comparison_safe_wording": "The final composite auditor passed on a normal merge descendant.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-activation/gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation/activation-manifest.json",
+          "sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failure-disposition/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709-v102/disposition-manifest.json",
+          "sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failures/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709/failure.json",
+          "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-final-governance/crewai-20260827T174606Z-6249d844/gate2b-step06-final-governance-v104/final-governance-manifest.json",
+          "sha256": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-governance-supplement/crewai-20260827T174606Z-6249d844/gate2b-step06-governance-supplement-v103/supplement-manifest.json",
+          "sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-http-readiness/gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102/http-readiness-manifest.json",
+          "sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/batch-manifest.json",
+          "sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/evidence-manifest.json",
+          "sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/summary.json",
+          "sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [],
+      "organ": "lifecycle",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-011:observed"
+      },
+      "prohibited_overstatement": "Do not infer audits cover untested deployments."
+    },
+    {
+      "claim_id": "CLM-CR-012",
+      "claim_strength": "architecture/probe",
+      "claim_text": "The public storage factory and SQLiteFlowPersistence are selected.",
+      "comparison_safe_wording": "The public storage factory and SQLiteFlowPersistence are selected.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/runtime-probe-disposition/gate2b-step02-disposition-20260812T024610Z-00000001/evidence-manifest.json",
+          "sha256": "8666c77d3fc7f6a82a88adec652ea30b59198a3ce700ea14069b2ea6496c0f7d"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [
+        "SRC-CR-001"
+      ],
+      "organ": "state",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-012:architecture/probe"
+      },
+      "prohibited_overstatement": "Do not promote architecture/probe evidence to observed behavior without live proof."
+    },
+    {
+      "claim_id": "CLM-CR-013",
+      "claim_strength": "unsupported",
+      "claim_text": "Runtime CheckpointConfig is nonselected for this specimen.",
+      "comparison_safe_wording": "Runtime CheckpointConfig is nonselected for this specimen.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/runtime-probe-disposition/gate2b-step02-disposition-20260812T024610Z-00000001/evidence-manifest.json",
+          "sha256": "8666c77d3fc7f6a82a88adec652ea30b59198a3ce700ea14069b2ea6496c0f7d"
+        }
+      ],
+      "framework": "crewai",
+      "official_source_ids": [
+        "SRC-CR-001"
+      ],
+      "organ": "state",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CR-013:unsupported"
+      },
+      "prohibited_overstatement": "Do not claim it is the live continuation mechanism."
+    },
+    {
+      "claim_id": "CLM-CMP-001",
+      "claim_strength": "observed",
+      "claim_text": "Separate accepted runs submitted validator-approved recommendations to one queue.",
+      "comparison_safe_wording": "Separate accepted runs submitted validator-approved recommendations to one queue.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-activation/gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation/activation-manifest.json",
+          "sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failure-disposition/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709-v102/disposition-manifest.json",
+          "sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failures/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709/failure.json",
+          "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-final-governance/crewai-20260827T174606Z-6249d844/gate2b-step06-final-governance-v104/final-governance-manifest.json",
+          "sha256": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-governance-supplement/crewai-20260827T174606Z-6249d844/gate2b-step06-governance-supplement-v103/supplement-manifest.json",
+          "sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-http-readiness/gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102/http-readiness-manifest.json",
+          "sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/batch-manifest.json",
+          "sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/evidence-manifest.json",
+          "sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/summary.json",
+          "sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+        }
+      ],
+      "framework": "cross-framework",
+      "official_source_ids": [],
+      "organ": "verification",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CMP-001:observed"
+      },
+      "prohibited_overstatement": "Do not infer equal quality, readiness, or simultaneity."
+    },
+    {
+      "claim_id": "CLM-CMP-002",
+      "claim_strength": "gate-2c-deferred",
+      "claim_text": "Framework-specific lifecycle evidence may be described separately.",
+      "comparison_safe_wording": "Framework-specific lifecycle evidence may be described separately.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-activation/gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation/activation-manifest.json",
+          "sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failure-disposition/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709-v102/disposition-manifest.json",
+          "sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failures/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709/failure.json",
+          "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-final-governance/crewai-20260827T174606Z-6249d844/gate2b-step06-final-governance-v104/final-governance-manifest.json",
+          "sha256": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-governance-supplement/crewai-20260827T174606Z-6249d844/gate2b-step06-governance-supplement-v103/supplement-manifest.json",
+          "sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-http-readiness/gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102/http-readiness-manifest.json",
+          "sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/batch-manifest.json",
+          "sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/evidence-manifest.json",
+          "sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/summary.json",
+          "sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+        }
+      ],
+      "framework": "cross-framework",
+      "official_source_ids": [],
+      "organ": "lifecycle",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CMP-002:gate-2c-deferred"
+      },
+      "prohibited_overstatement": "No shared recovery conclusion or winner is permitted."
+    },
+    {
+      "claim_id": "CLM-CMP-004",
+      "claim_strength": "observed",
+      "claim_text": "The accepted framework runs preserve the frozen comparison controls.",
+      "comparison_safe_wording": "The accepted framework runs preserve the frozen comparison controls.",
+      "evidence": [
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-activation/gate2b-step06-post-step2b05-recovery-20260826T152003Z-activation/activation-manifest.json",
+          "sha256": "2008ce545bb553e3ba21e2a013fb419d953a03c36c361bf7f46a986bd8d7f63d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failure-disposition/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709-v102/disposition-manifest.json",
+          "sha256": "0d7a8310092d60f6ce5c43754d9646c831fccf39a12a119c323a13f28d3f6e00"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-failures/crewai-20260827T125501Z-c5381188/gate2b-step06-attempt-20260827T125530Z-185709/failure.json",
+          "sha256": "e1249a21c5a4252c8b0d53dcf56ebc23837a36e6d2d8429c9a7ee6fbce1f8661"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-final-governance/crewai-20260827T174606Z-6249d844/gate2b-step06-final-governance-v104/final-governance-manifest.json",
+          "sha256": "4c31328172c1c99372a4c07133c52babcf6662083a562882e30fa654f07afb41"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-governance-supplement/crewai-20260827T174606Z-6249d844/gate2b-step06-governance-supplement-v103/supplement-manifest.json",
+          "sha256": "6de9183a368ac2781317b64ad21dfb09c9c8b2ad01f354be8c1b9669ae48d19d"
+        },
+        {
+          "path": "evidence/gates/gate-2b/frozen-batch-http-readiness/gate2b-step06-post-step2b05-recovery-20260826T152003Z-http-readiness-v102/http-readiness-manifest.json",
+          "sha256": "adb8865a813678bab30389f177d8cdffb9d92cd5df49aa7f8770398123167511"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/batch-manifest.json",
+          "sha256": "e89069bec85a51655631fe1333f8af4a8f54968b06492619b50a36e8204368e1"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/evidence-manifest.json",
+          "sha256": "98d09c9f09db3f4043d8618d2ed78f67dd4ee67727910e5c401f05875a8330e6"
+        },
+        {
+          "path": "evidence/results/crewai/crewai-20260827T174606Z-6249d844/summary.json",
+          "sha256": "8ef1ef350803d9d3f833e75fdd421cd3e09bc5b57e733b8e2747bd0c117d824c"
+        }
+      ],
+      "framework": "cross-framework",
+      "official_source_ids": [],
+      "organ": "verification",
+      "permanent_auditor": {
+        "path": "scripts/gate2b_step07_audit.py",
+        "predicate": "claim:CLM-CMP-004:observed"
+      },
+      "prohibited_overstatement": "Do not erase evidence-strength differences."
+    }
+  ],
+  "schema_version": "1.0.0"
+}

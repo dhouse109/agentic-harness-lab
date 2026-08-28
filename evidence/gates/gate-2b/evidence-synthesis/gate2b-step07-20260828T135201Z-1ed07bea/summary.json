@@ -1,0 +1,48 @@
+{
+  "architecture_probe_claims": [
+    "CLM-CR-012"
+  ],
+  "created_at": "2026-08-28T13:52:01Z",
+  "drupal_read_only_predecessor_audit": true,
+  "drupal_writes": 0,
+  "gate2b_certified": false,
+  "gate2c_deferred_claims": [
+    "CLM-CMP-002"
+  ],
+  "gate2c_executed": false,
+  "human_reviews": 0,
+  "model_generations": 0,
+  "new_crewai_runtimes": 0,
+  "observed_claims": [
+    "CLM-CR-005",
+    "CLM-CR-006",
+    "CLM-CR-007",
+    "CLM-CR-008",
+    "CLM-CR-009",
+    "CLM-CR-010",
+    "CLM-CR-011",
+    "CLM-CMP-001",
+    "CLM-CMP-004"
+  ],
+  "package": "gate-2b-step07-crewai-evidence-synthesis-and-comparison-v1.0.0",
+  "predecessor_evidence_rewritten": false,
+  "predecessor_merge": "78ba79165378ac2905801d994682aa385cdfb607",
+  "privacy": "pass",
+  "provider_requests": 0,
+  "provider_responses": 0,
+  "recommendation_submissions": 0,
+  "run_id": "gate2b-step07-20260828T135201Z-1ed07bea",
+  "schema_version": "1.0.0",
+  "snapshot_operations": 0,
+  "status": "pass",
+  "step2b08_started": false,
+  "successful_crewai_run": "crewai-20260827T174606Z-6249d844",
+  "unsupported_claims": [
+    "CLM-CR-013"
+  ],
+  "verified_claims": [
+    "CLM-CR-002",
+    "CLM-CR-003",
+    "CLM-CR-004"
+  ]
+}
