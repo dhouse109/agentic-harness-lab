@@ -1,0 +1,14 @@
+{
+  "credentials_retained": false,
+  "hidden_reasoning_retained": false,
+  "private_database_content_retained": false,
+  "prohibited_value_hits": 0,
+  "raw_image_or_data_url_retained": false,
+  "scanned_artifacts": [
+    "claim-proof-map.json",
+    "comparison-synthesis.json",
+    "summary.json"
+  ],
+  "schema_version": "1.0.0",
+  "status": "pass"
+}

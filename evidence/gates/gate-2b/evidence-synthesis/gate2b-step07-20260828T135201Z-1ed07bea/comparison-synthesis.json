@@ -1,0 +1,25 @@
+{
+  "crewai_http_failure_and_disposition_preserved": true,
+  "false_symmetry_avoided": true,
+  "framework_superiority_claimed": false,
+  "frameworks": [
+    "drupal_ai",
+    "langgraph",
+    "crewai"
+  ],
+  "gate2c_status": "DEFERRED_UNCLAIMED",
+  "langgraph_privacy_failure_and_salvage_preserved": true,
+  "organs": [
+    "context",
+    "tools",
+    "state",
+    "verification",
+    "human-review",
+    "lifecycle"
+  ],
+  "production_readiness_claimed": false,
+  "recovery_winner_claimed": false,
+  "run_id": "gate2b-step07-20260828T135201Z-1ed07bea",
+  "schema_version": "1.0.0",
+  "shared_controls_held": true
+}
