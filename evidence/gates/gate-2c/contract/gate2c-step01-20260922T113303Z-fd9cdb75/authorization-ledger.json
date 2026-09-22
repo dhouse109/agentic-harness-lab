@@ -1,0 +1,74 @@
+{
+  "boundaries": [
+    {
+      "boundary": "2C.01_preview_to_execution",
+      "grants": "install_and_model_free_contract_certification_only",
+      "requirement": "explicit_human_approval"
+    },
+    {
+      "boundary": "2C.02_snapshot_reset_or_Drupal_rehearsal",
+      "grants": "declared_model_free_disposable_setup_rehearsal_and_reset_restoration_proof_only",
+      "requirement": "separate_explicit_human_approval"
+    },
+    {
+      "boundary": "2C.02_CrewAI_recovery_architecture",
+      "grants": "architecture_selection_only",
+      "requirement": "explicit_human_approve_or_reject_after_model_free_evidence"
+    },
+    {
+      "boundary": "2C.02_to_2C.03",
+      "grants": "permission_to_preview_2C.03_not_live_execution",
+      "requirement": "accepted_injector_and_all_three_recovery_mappings"
+    },
+    {
+      "boundary": "2C.03_model_backed_prefailure_execution_each_framework",
+      "grants": "fresh_zero-baseline_run_through_verified_seam_and_one_SIGKILL",
+      "requirement": "explicit_human_approval_per_framework"
+    },
+    {
+      "boundary": "2C.03_post_kill_recovery_each_framework",
+      "grants": "one_declared_recovery_invocation",
+      "requirement": "explicit_human_approval_after_midpoint_evidence_inspection"
+    },
+    {
+      "boundary": "2C.03_Drupal_natural_lock_expiry_attempt",
+      "grants": "one_final_Drupal_recovery_invocation",
+      "requirement": "second_explicit_human_approval_after_verified_lock_denial_and_natural_expiry"
+    },
+    {
+      "boundary": "2C.03_restoration",
+      "grants": "declared_exactly_once_restore_and_post_restore_audit",
+      "requirement": "explicit_human_approval_after_trial_evidence_capture"
+    },
+    {
+      "boundary": "unexpected_failure_or_invalid_trial_retry",
+      "grants": "no_automatic_retry",
+      "requirement": "preserve_attempt_then_explicit_human_disposition_and_new_authorization"
+    },
+    {
+      "boundary": "2C.03_evidence_acceptance",
+      "grants": "freeze_immutable_2C03_experimental_evidence_only_no_cross_framework_claim_promotion",
+      "requirement": "explicit_human_acceptance_after_three_authoritative_observations_accounting_source_nonmutation_and_exact_restoration_pass"
+    },
+    {
+      "boundary": "2C.03_to_2C.04",
+      "grants": "permission_to_preview_2C04_not_certification_or_claim_acceptance",
+      "requirement": "accepted_immutable_2C03_evidence_family"
+    },
+    {
+      "boundary": "2C.04_claim_synthesis_and_Gate2_certification",
+      "grants": "claim_matrix_updates_Gate2C_freeze_and_Gate2_certification_only",
+      "requirement": "explicit_human_acceptance_of_evidence_bound_claims_and_all_umbrella_exit_criteria"
+    },
+    {
+      "boundary": "commit_push_merge",
+      "grants": "only_the_named_action",
+      "requirement": "separate_explicit_human_approval_at_each_repository_boundary"
+    }
+  ],
+  "crewai_recovery_architecture_decision": "PENDING_MODEL_FREE_PROOF_AND_HUMAN_DECISION",
+  "drupal_lock_policy": "PROPOSED_FOR_EXPLICIT_HUMAN_APPROVAL",
+  "live_gate2c_authorizations_granted": 0,
+  "run_id": "gate2c-step01-20260922T113303Z-fd9cdb75",
+  "schema_version": 1
+}

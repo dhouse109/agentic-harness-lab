@@ -1,0 +1,31 @@
+{
+  "entries": [
+    {
+      "path": "authorization-ledger.json",
+      "sha256": "b4134d113960afad62997274e9f57bf3e80a72111dbb1668ce9690d2232bcd25",
+      "size": 3121
+    },
+    {
+      "path": "contract-certification.json",
+      "sha256": "366af2854187854acd29d9f2b30a2b62b627294bdfa3a03f6e376281302eee4f",
+      "size": 714
+    },
+    {
+      "path": "predecessor-bindings.json",
+      "sha256": "6c8447d1abf28fb9bb05ec19c1571d984d3b80f6c34818906eb4e17fb0a30070",
+      "size": 574
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "bdc73e79f33e45394688f43bd334494e2109fb5e6afdc818c8ea267029b5c0ad",
+      "size": 183
+    },
+    {
+      "path": "summary.md",
+      "sha256": "af5daac4d11a99e9f59d1f31f318feaae6d49ac851db47b5bb9f7c91e59e9e57",
+      "size": 365
+    }
+  ],
+  "run_id": "gate2c-step01-20260922T113303Z-fd9cdb75",
+  "schema_version": 1
+}
