@@ -1,6 +1,6 @@
 # Codex Operating Instructions
 
-> Gate 2B Step 2B.08 is complete after permanent acceptance of its model-free, Drupal-read-only certification family, freeze, and handoff. Gate 2B is certified and frozen; Gate 2C remains deferred and unclaimed, and Gate 2 overall remains incomplete.
+> Gate 2C Step 2C.01 is complete after acceptance of its model-free, Drupal-read-only, no-runtime-mutation contract and evidence family. Gate 2C remains `DEFERRED_UNCLAIMED`, Gate 2 overall remains `NOT_COMPLETE`, and Step 2C.02 is the next separately approved package boundary.
 
 ## Purpose
 
@@ -202,6 +202,10 @@ Gate 1 Drupal AI, Gate 2A LangGraph, and Gate 2B CrewAI are certified and frozen
 **Step 2B.07:** complete, normally merged at `50e7296406a39de23b20bdfb1b45960dca13d3a1`, and post-merge audited. Accepted synthesis `gate2b-step07-20260828T135201Z-1ed07bea` is immutable and must never be rerun or rewritten.
 
 **Step 2B.08:** complete after permanent acceptance of its exactly-once certification family, `shared/contracts/GATE2B-CREWAI-FREEZE.json`, freeze-bound handoff, and exact pointer. Gate 2B is certified and frozen. Gate 2C remains deferred, no shared recovery result or winner exists, and no production-readiness or framework-superiority claim is permitted.
+
+**Step 2C.01:** complete after accepted model-free contract certification. It freezes the target-6/7 semantic seam, evidence overlays, accounting/classification rules, protected-tree policy, and approval ledger without executing Gate 2C. The CrewAI recovery architecture remains pending model-free proof and human decision. The Drupal persistent-lock policy is approved as contract policy only, not as authorization to execute recovery.
+
+**Next package:** `gate-2c-step02-shared-failure-injector-and-model-free-rehearsals` may be prepared only after separate authorization. Gate 2C remains `DEFERRED_UNCLAIMED`; no model-backed execution, Drupal reset, snapshot operation, or recovery attempt is authorized by Step 2C.01.
 
 **Step 2B.05 historical lessons:** the v1.0.0 Boundary A attempt failed closed before runtime copy or Flow creation because import-time XDG storage pre-created the runtime candidate; consumed identity `gate2b-step05-20260820T151225Z-8b7fa221` remains local and is never reused. v1.0.1 separated disposable XDG and authoritative runtime paths. v1.0.2 removed the live post-clear reconstruction control so the authoritative path was exactly-once while retaining that negative control in disposable rehearsal. The restricted Codex sandbox asyncio/thread wakeup issue was environmental, not a CrewAI HITL defect; persistence alone is not continuation; Drupal remained the sole human-review authority.
 

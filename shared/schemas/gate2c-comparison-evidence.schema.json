@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.example/shared/schemas/gate2c-comparison-evidence.schema.json",
+  "title": "Gate 2C cross-framework comparison evidence",
+  "type": "object",
+  "required": ["schema_version", "comparison_id", "contract_sha256", "framework_trials", "comparability", "gate_2c_result", "claim_policy", "restoration", "privacy"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "comparison_id": {"type": "string", "minLength": 1},
+    "contract_sha256": {"pattern": "^[0-9a-f]{64}$"},
+    "framework_trials": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "prefixItems": [
+        {"$ref": "#/$defs/drupal"},
+        {"$ref": "#/$defs/langgraph"},
+        {"$ref": "#/$defs/crewai"}
+      ],
+      "items": false
+    },
+    "comparability": {"type": "object", "required": ["same_semantic_seam", "same_failure_class", "frozen_constants_preserved", "valid_evidence_count"], "properties": {"same_semantic_seam": {"type": "boolean"}, "same_failure_class": {"type": "boolean"}, "frozen_constants_preserved": {"type": "boolean"}, "valid_evidence_count": {"type": "integer", "minimum": 0, "maximum": 3}}, "additionalProperties": true},
+    "gate_2c_result": {"enum": ["COMPLETE_COMPARABLE_EVIDENCE", "NOT_COMPLETE_INVALID_OR_MISSING_EVIDENCE"]},
+    "claim_policy": {"type": "object", "required": ["winner_claim", "production_readiness_claim", "framework_superiority_claim"], "properties": {"winner_claim": {"const": false}, "production_readiness_claim": {"const": false}, "framework_superiority_claim": {"const": false}}, "additionalProperties": true},
+    "restoration": {"type": "object", "required": ["authorized", "completed", "post_restore_audit"], "properties": {"authorized": {"type": "boolean"}, "completed": {"type": "boolean"}, "post_restore_audit": {"enum": ["PASS", "FAIL", "NOT_RUN"]}}, "additionalProperties": true},
+    "privacy": {"enum": ["PASS", "FAIL"]}
+  },
+  "$defs": {
+    "trial": {"type": "object", "required": ["framework_origin", "trial_id", "evidence_path", "evidence_sha256", "experiment_validity", "classification"], "properties": {"framework_origin": {"enum": ["drupal_ai", "langgraph", "crewai"]}, "trial_id": {"type": "string"}, "evidence_path": {"type": "string"}, "evidence_sha256": {"pattern": "^[0-9a-f]{64}$"}, "experiment_validity": {"enum": ["VALID", "INVALID_PENDING_DISPOSITION"]}, "classification": {"type": "string"}}, "additionalProperties": false},
+    "drupal": {"allOf": [{"$ref": "#/$defs/trial"}, {"properties": {"framework_origin": {"const": "drupal_ai"}}}]},
+    "langgraph": {"allOf": [{"$ref": "#/$defs/trial"}, {"properties": {"framework_origin": {"const": "langgraph"}}}]},
+    "crewai": {"allOf": [{"$ref": "#/$defs/trial"}, {"properties": {"framework_origin": {"const": "crewai"}}}]}
+  },
+  "additionalProperties": false
+}

@@ -1,6 +1,6 @@
 # Agentic Harness Lab
 
-> Step 2B.08 is complete after permanent acceptance of its model-free certification family, freeze, and handoff. Gate 2B CrewAI is certified and frozen. Gate 2C remains deferred and unclaimed; Gate 2 overall remains incomplete.
+> Gate 2C Step 2C.01 is complete as a model-free contract boundary. Gate 2C remains `DEFERRED_UNCLAIMED`; no shared failure/recovery trial has run, and Gate 2 remains `NOT_COMPLETE`.
 
 A reproducible Drupal GovCon 2026 laboratory for building the same governance-sensitive alt-text
 recommendation task in three harnesses:
@@ -25,7 +25,8 @@ and lifecycle and recovery.
 - **Step 1.05:** complete.
 - **Step 1.06:** complete.
 - **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
-- **Gate 2:** in progress; Gate 2A LangGraph and Gate 2B CrewAI are certified and frozen; Gate 2C is deferred and unclaimed.
+- **Gate 2:** in progress; Gate 2A LangGraph and Gate 2B CrewAI are certified and frozen; Gate 2C remains deferred and unclaimed.
+- **Step 2C.01:** complete after model-free contract certification; `gate-2c-step02-shared-failure-injector-and-model-free-rehearsals` is next but requires separate authorization, and the CrewAI recovery architecture remains pending proof and human decision.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
 - **Step 2A.03:** complete.

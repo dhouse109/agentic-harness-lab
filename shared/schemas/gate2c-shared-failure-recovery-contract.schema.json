@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.example/shared/schemas/gate2c-shared-failure-recovery-contract.schema.json",
+  "title": "Gate 2C shared failure/recovery contract",
+  "type": "object",
+  "required": [
+    "$schema", "schema_version", "contract_id", "step", "status", "lifecycle",
+    "repository_predecessor", "predecessors", "frozen_constants", "failure_protocol",
+    "framework_seam_map", "crewai_recovery_architecture", "drupal_persistent_lock_policy",
+    "dataset_and_reset", "run_identity_and_isolation", "model_call_accounting",
+    "outcome_semantics", "evidence_plan", "protected_worktree",
+    "authorization_ledger", "package_sequence"
+  ],
+  "properties": {
+    "$schema": {"const": "../schemas/gate2c-shared-failure-recovery-contract.schema.json"},
+    "schema_version": {"const": 1},
+    "contract_id": {"const": "gate2c-shared-failure-recovery-contract-1.0.0"},
+    "step": {"const": "2C.01"},
+    "status": {"const": "COMPLETE_AFTER_ACCEPTED_MODEL_FREE_CERTIFICATION"},
+    "lifecycle": {
+      "type": "object",
+      "required": ["gate_2c", "gate_2", "live_execution_authorized", "next_package", "claims_register_status"],
+      "properties": {
+        "gate_2c": {"const": "DEFERRED_UNCLAIMED"},
+        "gate_2": {"const": "NOT_COMPLETE"},
+        "live_execution_authorized": {"const": false},
+        "next_package": {"type": "string", "minLength": 1},
+        "claims_register_status": {"const": "gate-2c-deferred"}
+      },
+      "additionalProperties": false
+    },
+    "repository_predecessor": {
+      "type": "object",
+      "required": ["branch", "merge_sha"],
+      "properties": {
+        "branch": {"const": "main"},
+        "merge_sha": {"pattern": "^[0-9a-f]{40}$"}
+      },
+      "additionalProperties": false
+    },
+    "predecessors": {
+      "type": "object",
+      "required": ["drupal_ai", "langgraph", "crewai"],
+      "properties": {
+        "drupal_ai": {"$ref": "#/$defs/predecessor"},
+        "langgraph": {"$ref": "#/$defs/predecessor"},
+        "crewai": {"$ref": "#/$defs/predecessor"}
+      },
+      "additionalProperties": false
+    },
+    "frozen_constants": {"type": "object", "required": ["article_count", "target_count", "target_sequence_sha256", "provider", "model", "temperature", "validator", "review_destination", "reviewer_authority", "source_article_and_image_field_mutation", "automatic_publication", "semantic_operations"]},
+    "failure_protocol": {
+      "type": "object",
+      "required": ["semantic_boundary", "trigger_owner", "proposed_mechanism", "mechanism_status", "clean_exit_or_framework_interrupt_is_not_equivalent", "seam_ready_predicates", "supervisor_owns", "supervisor_forbidden"],
+      "properties": {
+        "semantic_boundary": {"const": "after target 6 is fully persisted and before target 7 begins"},
+        "trigger_owner": {"const": "common_external_supervisor_only"},
+        "proposed_mechanism": {"const": "SIGKILL_actual_framework_worker_after_independently_verifiable_seam_ready_signal"},
+        "mechanism_status": {"const": "PENDING_MODEL_FREE_PROOF_IN_2C_02"},
+        "clean_exit_or_framework_interrupt_is_not_equivalent": {"const": true},
+        "seam_ready_predicates": {"type": "object"},
+        "supervisor_owns": {"type": "array", "minItems": 5, "uniqueItems": true},
+        "supervisor_forbidden": {"type": "array", "minItems": 7, "uniqueItems": true}
+      },
+      "additionalProperties": false
+    },
+    "framework_seam_map": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "prefixItems": [
+        {"$ref": "#/$defs/drupalMap"},
+        {"$ref": "#/$defs/langgraphMap"},
+        {"$ref": "#/$defs/crewaiMap"}
+      ],
+      "items": false
+    },
+    "crewai_recovery_architecture": {"type": "object", "required": ["decision_status", "candidate", "existing_frozen_batch_constraint", "prohibited_alternatives", "approval_predicates", "required_2c02_evidence"]},
+    "drupal_persistent_lock_policy": {"type": "object", "required": ["decision_status", "lock_lease_seconds", "lock_mutation", "manual_clear_shorten_delete_bypass_or_replacement", "maximum_authoritative_recovery_invocations", "attempt_1", "attempt_1_lock_denial", "attempt_2", "no_attempt_2_when", "runner_or_injector_defect_indicators", "classification_rule"]},
+    "dataset_and_reset": {"type": "object", "required": ["authoritative_trial_baseline", "reset_before_each_framework", "expected_article_count", "expected_target_count", "expected_suggestion_count", "target_sequence_sha256", "current_approved_crewai_suggestion_untouched_in_2c01", "gate2b_snapshot_path", "gate2b_snapshot_sha256", "gate2b_snapshot_size", "gate2b_snapshot_may_be_zero_baseline", "gate2b_snapshot_delete_or_modify", "later_protocol"]},
+    "run_identity_and_isolation": {"type": "object"},
+    "model_call_accounting": {"type": "object", "required": ["step_2c01_successful_generations", "successful_generations_before_failure_per_framework", "maximum_successful_generations_after_recovery_per_framework", "maximum_successful_logical_generations_per_framework", "maximum_successful_logical_generations_experiment", "successful_generation_ceiling_scope", "existing_frozen_framework_retry_configuration", "new_gate2c_retry_logic", "recovery_retries", "observed_retry_accounting", "provider_or_transport_failure", "invalid_model_output", "replayed_successful_generation_after_recovery", "unexpected_failure", "runner_supervisor_injector_environment_or_credential_defect"]},
+    "outcome_semantics": {"type": "object", "required": ["gate2c_success_definition", "valid_framework_recovery_failure_is_acceptable", "valid_classes", "invalid_classes", "recovery_success_predicates"]},
+    "evidence_plan": {"type": "object", "required": ["schema_family", "trial_schema_covers", "comparison_schema_covers", "historical_evidence_rewrite", "privacy_prohibited"]},
+    "protected_worktree": {"type": "object", "required": ["policy", "tracked_or_staged_changes_allowed_before_install", "allowed_untracked", "stage_or_commit_local_runtime"]},
+    "authorization_ledger": {"type": "array", "minItems": 13, "items": {"$ref": "#/$defs/authorization"}},
+    "package_sequence": {
+      "type": "array", "minItems": 4, "maxItems": 4,
+      "prefixItems": [
+        {"$ref": "#/$defs/step201"},
+        {"$ref": "#/$defs/step202"},
+        {"$ref": "#/$defs/step203"},
+        {"$ref": "#/$defs/step204"}
+      ],
+      "items": false
+    }
+  },
+  "$defs": {
+    "predecessor": {
+      "type": "object",
+      "required": ["freeze_path", "freeze_sha256", "certification_run_id", "accepted_batch_run_id", "contract_sha256"],
+      "properties": {
+        "freeze_path": {"type": "string", "minLength": 1},
+        "freeze_sha256": {"pattern": "^[0-9a-f]{64}$"},
+        "certification_run_id": {"type": "string", "minLength": 1},
+        "accepted_batch_run_id": {"type": "string", "minLength": 1},
+        "contract_sha256": {"pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "map": {
+      "type": "object",
+      "required": ["origin", "mapping_status", "seam_location", "worker", "persistence_surface", "candidate_recovery_surface", "required_2c02_proof"],
+      "properties": {
+        "origin": {"enum": ["drupal_ai", "langgraph", "crewai"]},
+        "mapping_status": {"const": "IMPLEMENTATION_MAPPING_NOT_OBSERVED_GATE2C_BEHAVIOR"},
+        "seam_location": {"type": "string", "minLength": 1},
+        "worker": {"type": "string", "minLength": 1},
+        "persistence_surface": {"type": "string", "minLength": 1},
+        "candidate_recovery_surface": {"type": "string", "minLength": 1},
+        "required_2c02_proof": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "drupalMap": {"allOf": [{"$ref": "#/$defs/map"}, {"properties": {"origin": {"const": "drupal_ai"}}}]},
+    "langgraphMap": {"allOf": [{"$ref": "#/$defs/map"}, {"properties": {"origin": {"const": "langgraph"}}}]},
+    "crewaiMap": {"allOf": [{"$ref": "#/$defs/map"}, {"properties": {"origin": {"const": "crewai"}}}]},
+    "authorization": {
+      "type": "object",
+      "required": ["boundary", "requirement", "grants"],
+      "properties": {"boundary": {"type": "string"}, "requirement": {"type": "string"}, "grants": {"type": "string"}},
+      "additionalProperties": false
+    },
+    "step201": {"type": "object", "properties": {"step": {"const": "2C.01"}, "package": {"const": "gate-2c-step01-shared-failure-recovery-contract-and-evidence-plan"}}, "required": ["step", "package", "name", "mode", "exit"]},
+    "step202": {"type": "object", "properties": {"step": {"const": "2C.02"}, "package": {"const": "gate-2c-step02-shared-failure-injector-and-model-free-rehearsals"}}, "required": ["step", "package", "name", "mode", "exit"]},
+    "step203": {"type": "object", "properties": {"step": {"const": "2C.03"}, "package": {"const": "gate-2c-step03-three-framework-failure-recovery-execution"}}, "required": ["step", "package", "name", "mode", "exit"]},
+    "step204": {"type": "object", "properties": {"step": {"const": "2C.04"}, "package": {"const": "gate-2c-step04-evidence-synthesis-and-gate2-certification"}}, "required": ["step", "package", "name", "mode", "exit"]}
+  },
+  "additionalProperties": false
+}

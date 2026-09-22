@@ -1,9 +1,9 @@
 # Current Implementation Status
 
-> **Current authoritative state:** Step 2B.08 is complete; its accepted certification family, freeze, handoff, and exact pointer certify and freeze Gate 2B. Gate 2C remains `DEFERRED_UNCLAIMED`, and Gate 2 overall is `NOT_COMPLETE`.
+> **Current authoritative state:** Step 2C.01 is complete after accepted model-free, Drupal-read-only, no-runtime-mutation contract certification. Gate 2C remains `DEFERRED_UNCLAIMED`, and Gate 2 overall remains `NOT_COMPLETE`.
 
-**Status date:** August 28, 2026
-**Certification predecessor:** `main` at normal Step 2B.07 merge `50e7296406a39de23b20bdfb1b45960dca13d3a1`
+**Status date:** September 21, 2026
+**Gate 2C.01 predecessor:** `main` at normal Step 2B.08 merge `c022619e220715be17e541650c261ea0b568704b`
 
 ## Current position
 
@@ -16,7 +16,10 @@
 - **Gate 2:** in progress.
 - **Gate 2A — LangGraph:** certified and frozen.
 - **Gate 2B — CrewAI:** certified and frozen by completed Step 2B.08 after permanent acceptance of the model-free, Drupal-read-only certification/freeze/handoff family.
-- **Gate 2C — shared three-framework failure/recovery:** deferred and unclaimed.
+- **Gate 2C — shared three-framework failure/recovery:** `DEFERRED_UNCLAIMED`; no failure injector, authoritative run, or recovery result exists.
+- **Step 2C.01:** complete after accepted model-free contract certification. It binds the three predecessor freezes, exact target-6/7 seam, evidence overlays, call accounting, protected-tree policy, and authorization ledger.
+- **CrewAI Gate 2C recovery architecture:** pending model-free Step 2C.02 proof and explicit human approval or rejection.
+- **Next package:** `gate-2c-step02-shared-failure-injector-and-model-free-rehearsals`; not yet authorized or created.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
 - **Step 2A.03:** complete.

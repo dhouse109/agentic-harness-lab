@@ -1,0 +1,20 @@
+{
+  "contract_path": "shared/contracts/GATE2C-SHARED-FAILURE-RECOVERY-CONTRACT.json",
+  "contract_sha256": "3c4801e6eb35d40d94e066c70017d3acebca95183e7e544646be6e2b40aa5ec6",
+  "created_at": "2026-09-22T11:33:04.772811Z",
+  "drupal_read_only": true,
+  "failure_injections": 0,
+  "framework_workers_started": 0,
+  "gate_2": "NOT_COMPLETE",
+  "gate_2c": "DEFERRED_UNCLAIMED",
+  "model_free": true,
+  "model_generations": 0,
+  "next_package": "gate-2c-step02-shared-failure-injector-and-model-free-rehearsals",
+  "provider_requests": 0,
+  "provider_responses": 0,
+  "run_id": "gate2c-step01-20260922T113303Z-fd9cdb75",
+  "runtime_mutations": 0,
+  "schema_version": 1,
+  "snapshot_operations": 0,
+  "status": "PASS"
+}

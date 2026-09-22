@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.example/shared/schemas/gate2c-trial-evidence.schema.json",
+  "title": "Gate 2C authoritative framework trial evidence",
+  "type": "object",
+  "required": [
+    "schema_version", "contract_sha256", "framework_origin", "trial_id", "run_id",
+    "runtime_identity", "predecessor_freeze_sha256", "timestamps", "drupal_state",
+    "seam_ready", "termination", "persisted_midpoint", "recovery_attempts",
+    "call_accounting", "outcome", "source_nonmutation", "privacy", "sanitized_errors"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "contract_sha256": {"pattern": "^[0-9a-f]{64}$"},
+    "framework_origin": {"enum": ["drupal_ai", "langgraph", "crewai"]},
+    "trial_id": {"type": "string", "minLength": 1},
+    "run_id": {"type": "string", "minLength": 1},
+    "runtime_identity": {"type": "object", "required": ["fresh", "framework_owned", "historical_runtime_reused"], "properties": {"fresh": {"const": true}, "framework_owned": {"const": true}, "historical_runtime_reused": {"const": false}}, "additionalProperties": true},
+    "predecessor_freeze_sha256": {"pattern": "^[0-9a-f]{64}$"},
+    "timestamps": {"type": "object", "required": ["started", "seam_ready", "terminated", "recovery_authorized", "completed_or_stopped"], "additionalProperties": false, "properties": {"started": {"type": "string", "format": "date-time"}, "seam_ready": {"type": "string", "format": "date-time"}, "terminated": {"type": "string", "format": "date-time"}, "recovery_authorized": {"type": ["string", "null"], "format": "date-time"}, "completed_or_stopped": {"type": "string", "format": "date-time"}}},
+    "drupal_state": {"type": "object", "required": ["pre_run", "midpoint", "post_recovery", "post_restore"], "properties": {"pre_run": {"$ref": "#/$defs/drupalProjection"}, "midpoint": {"$ref": "#/$defs/drupalProjection"}, "post_recovery": {"$ref": "#/$defs/drupalProjection"}, "post_restore": {"anyOf": [{"$ref": "#/$defs/drupalProjection"}, {"type": "null"}]}}, "additionalProperties": false},
+    "seam_ready": {"type": "object", "required": ["signal_id", "run_id", "worker_identity", "target_6_fully_persisted", "next_target", "target_7_started", "independently_verified"], "properties": {"signal_id": {"type": "string"}, "run_id": {"type": "string"}, "worker_identity": {"type": "string"}, "target_6_fully_persisted": {"const": true}, "next_target": {"const": 7}, "target_7_started": {"const": false}, "independently_verified": {"const": true}}, "additionalProperties": true},
+    "termination": {"type": "object", "required": ["requested_signal", "observed_signal", "actual_worker_terminated", "supervisor_only_trigger"], "properties": {"requested_signal": {"const": "SIGKILL"}, "observed_signal": {"const": 9}, "actual_worker_terminated": {"type": "boolean"}, "supervisor_only_trigger": {"type": "boolean"}}, "additionalProperties": true},
+    "persisted_midpoint": {"type": "object", "required": ["run_id", "completed_sequences", "next_target", "recommendation_identities", "framework_state_sha256"], "properties": {"run_id": {"type": "string"}, "completed_sequences": {"const": [1, 2, 3, 4, 5, 6]}, "next_target": {"const": 7}, "recommendation_identities": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true}, "framework_state_sha256": {"pattern": "^[0-9a-f]{64}$"}}, "additionalProperties": true},
+    "recovery_attempts": {"type": "array", "maxItems": 2, "items": {"type": "object", "required": ["ordinal", "authorization_id", "started", "result", "lock_observation", "first_framework_target"], "properties": {"ordinal": {"enum": [1, 2]}, "authorization_id": {"type": "string"}, "started": {"type": "string", "format": "date-time"}, "result": {"enum": ["completed", "lock_denied", "cannot_resume", "operator_action_required", "invalid_defect", "other_failure"]}, "lock_observation": {"type": ["object", "null"]}, "first_framework_target": {"type": ["integer", "null"]}}, "additionalProperties": true}},
+    "call_accounting": {
+      "type": "object",
+      "required": [
+        "existing_frozen_retry_configuration_preserved", "gate2c_added_retry_loops",
+        "successful_generations_before_failure", "successful_generations_after_recovery",
+        "provider_requests", "provider_responses", "provider_failures", "framework_retries",
+        "sdk_retries", "transport_retries", "provider_retries", "semantic_retries",
+        "repair_or_correction_calls", "generation_retries", "recovery_invocations",
+        "replayed_generations", "unaccounted_retry_events"
+      ],
+      "properties": {
+        "existing_frozen_retry_configuration_preserved": {"const": true},
+        "gate2c_added_retry_loops": {"const": 0},
+        "successful_generations_before_failure": {"const": 6},
+        "successful_generations_after_recovery": {"type": "integer", "minimum": 0, "maximum": 6},
+        "provider_requests": {"type": "integer", "minimum": 6},
+        "provider_responses": {"type": "integer", "minimum": 0},
+        "provider_failures": {"type": "integer", "minimum": 0},
+        "framework_retries": {"type": "integer", "minimum": 0},
+        "sdk_retries": {"type": "integer", "minimum": 0},
+        "transport_retries": {"type": "integer", "minimum": 0},
+        "provider_retries": {"type": "integer", "minimum": 0},
+        "semantic_retries": {"type": "integer", "minimum": 0},
+        "repair_or_correction_calls": {"type": "integer", "minimum": 0},
+        "generation_retries": {"type": "integer", "minimum": 0},
+        "recovery_invocations": {"type": "integer", "minimum": 0, "maximum": 2},
+        "replayed_generations": {"type": "integer", "minimum": 0},
+        "unaccounted_retry_events": {"const": 0}
+      },
+      "additionalProperties": true
+    },
+    "outcome": {"type": "object", "required": ["experiment_validity", "classification", "framework_recovery_succeeded", "same_run_id", "first_post_restart_target", "replay_count", "duplicate_count", "completed_sequences"], "properties": {"experiment_validity": {"enum": ["VALID", "INVALID_PENDING_DISPOSITION"]}, "classification": {"enum": ["VALID_RECOVERY_SUCCESS", "VALID_FRAMEWORK_RECOVERY_FAILURE", "VALID_OPERATOR_WAIT_OR_ACTION_REQUIRED", "INVALID_SEAM", "INVALID_SUPERVISOR_OR_INJECTOR", "INVALID_RUNNER", "INVALID_ENVIRONMENT", "INVALID_CREDENTIAL", "INVALID_PROVIDER_OR_TRANSPORT", "INVALID_ACCOUNTING", "INVALID_EVIDENCE_OR_PRIVACY", "INVALID_FROZEN_CONSTANT_DRIFT", "INVALID_PENDING_DISPOSITION"]}, "framework_recovery_succeeded": {"type": ["boolean", "null"]}, "same_run_id": {"type": "boolean"}, "first_post_restart_target": {"type": ["integer", "null"]}, "replay_count": {"type": "integer", "minimum": 0}, "duplicate_count": {"type": "integer", "minimum": 0}, "completed_sequences": {"type": "array", "items": {"type": "integer", "minimum": 1, "maximum": 12}, "uniqueItems": true}}, "additionalProperties": true},
+    "source_nonmutation": {"type": "object", "required": ["passed", "before_sha256", "after_sha256"], "properties": {"passed": {"type": "boolean"}, "before_sha256": {"pattern": "^[0-9a-f]{64}$"}, "after_sha256": {"pattern": "^[0-9a-f]{64}$"}}, "additionalProperties": false},
+    "privacy": {"enum": ["PASS", "FAIL"]},
+    "sanitized_errors": {"type": "array", "items": {"type": "object"}}
+  },
+  "$defs": {
+    "drupalProjection": {
+      "type": "object",
+      "required": ["article_count", "target_count", "suggestion_count", "source_projection_sha256"],
+      "properties": {"article_count": {"const": 20}, "target_count": {"const": 12}, "suggestion_count": {"type": "integer", "minimum": 0}, "source_projection_sha256": {"pattern": "^[0-9a-f]{64}$"}},
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
