@@ -1,0 +1,15 @@
+{
+  "files_scanned": [
+    "authorization-ledger.json",
+    "crewai-recovery.json",
+    "crewai-termination.json",
+    "langgraph-recovery.json",
+    "langgraph-termination.json",
+    "negative-controls.json",
+    "public-api-provenance.json"
+  ],
+  "hits": 0,
+  "schema_version": 1,
+  "scope": "strict_retained_evidence",
+  "status": "PASS"
+}

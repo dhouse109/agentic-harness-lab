@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "path": "authorization-ledger.json",
+      "sha256": "10f706c382f9c2c03dce67c1d8ec7c6f1630e4be0ae80f1ab7184b40b5cbe4a8",
+      "size": 272
+    },
+    {
+      "path": "crewai-startup.json",
+      "sha256": "7fec4da2532dc4f6c3f82148fbff83f7404fc1f3782bfda9e42153cd0c0654e6",
+      "size": 953
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "22a020ea14c626ddf86833f234e9e7b2ba6f0d4eb5725347cf7d9817f4cde9c0",
+      "size": 183
+    },
+    {
+      "path": "summary.md",
+      "sha256": "b5592fc0ff09b3563d765935c21af536a569c51da7db7c6f081e84b1136cb2eb",
+      "size": 387
+    }
+  ],
+  "schema_version": 1
+}

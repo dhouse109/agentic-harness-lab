@@ -1,8 +1,8 @@
 # Current Implementation Status
 
-> **Current authoritative state:** Step 2C.01 is complete after accepted model-free, Drupal-read-only, no-runtime-mutation contract certification. Gate 2C remains `DEFERRED_UNCLAIMED`, and Gate 2 overall remains `NOT_COMPLETE`.
+> **Current authoritative state:** Gate 2C is terminally `CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE`. Step 2C.02 is `TERMINAL_UNCERTIFIED`, never PASS or certified. Gate 2 overall remains `NOT_COMPLETE`.
 
-**Status date:** September 21, 2026
+**Status date:** October 3, 2026
 **Gate 2C.01 predecessor:** `main` at normal Step 2B.08 merge `c022619e220715be17e541650c261ea0b568704b`
 
 ## Current position
@@ -13,13 +13,17 @@
 - **Completed packages:** Step 1.01 batch contract, Step 1.02 Drupal AI runtime probe, Step 1.03 Drupal AI tool adapters, Step 1.04 canonical vertical slice, Step 1.05 12-target batch runner, and Step 1.06 batch evidence and human review.
 - **Step 1.06 execution:** complete; three representative reviewer decisions are retained and the Drupal sandbox is restored to seeded-clean.
 - **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
-- **Gate 2:** in progress.
+- **Gate 2:** `NOT_COMPLETE`; its shared three-framework recovery exit criterion was not satisfied.
 - **Gate 2A — LangGraph:** certified and frozen.
 - **Gate 2B — CrewAI:** certified and frozen by completed Step 2B.08 after permanent acceptance of the model-free, Drupal-read-only certification/freeze/handoff family.
-- **Gate 2C — shared three-framework failure/recovery:** `DEFERRED_UNCLAIMED`; no failure injector, authoritative run, or recovery result exists.
+- **Gate 2C — shared three-framework failure/recovery:** `CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE`; evidence collection is terminal, but the gate did not pass and is not certified.
 - **Step 2C.01:** complete after accepted model-free contract certification. It binds the three predecessor freezes, exact target-6/7 seam, evidence overlays, call accounting, protected-tree policy, and authorization ledger.
-- **CrewAI Gate 2C recovery architecture:** pending model-free Step 2C.02 proof and explicit human approval or rejection.
-- **Next package:** `gate-2c-step02-shared-failure-injector-and-model-free-rehearsals`; not yet authorized or created.
+- **Step 2C.02:** `TERMINAL_UNCERTIFIED`; corrected-environment offline rehearsal `gate2c-step02-offline-20260930T222029Z-24c7b158` is finalized PASS for LangGraph and CrewAI architecture mechanics, while the Drupal proof remains partial and non-certifying.
+- **CrewAI Gate 2C recovery architecture:** explicitly human-approved for the model-free recovery proof, with machine recommendation `APPROVAL_READY` kept distinct from the human decision.
+- **Drupal final disposition:** three failed-preserved starts culminated in durable sequences 1–6, next target 7, exact singleton PID verification, a successful exact-PID SIGKILL command, and later worker absence. The required durable termination artifact and immediate pre-expiry lock-denial observation are absent. One post-expiry observation found the lock acquirable and state unchanged, but is explicitly non-certifying. Recovery continuation was not run.
+- **Reset disposition:** `RESET_NOT_PERFORMED`; the existing full-passing-Drupal-rehearsal eligibility condition was never met, and closure creates no reset authority.
+- **No-more-runtime boundary:** zero further worker identities, replacements, retries, or observations; the single partial-observation allowance is consumed. Step 2C.03, certification, pointer updates, and identity allocation are prohibited.
+- **Closure authority:** `docs/gates/GATE-2C-CLOSURE-AND-DISPOSITION.md` and `shared/contracts/GATE2C-CLOSURE-AND-DISPOSITION.json`.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
 - **Step 2A.03:** complete.
@@ -47,7 +51,7 @@
 - **Step 2B.05 runtime:** terminal state `completed / drupal_authoritative_review_observed`, pending rows 0. The runtime is CrewAI-owned, local-only, untracked, and not evidence.
 - **Step 2B.06 lifecycle:** complete, normally merged at `78ba79165378ac2905801d994682aa385cdfb607`, resynchronized, and post-merge audited. Accepted run `crewai-20260827T174606Z-6249d844` completed 12/12 with exact logical/provider/submission accounting; every retry/correction/repair/fallback/learning/feedback-collapse count and source mutation was zero. The permanent composite chain retains the failed attempt/disposition, activation/readiness, immutable batch stage, v1.0.3 supplement, exactly-once restoration, 19-file closure, and v1.0.4 final-governance bridge. It reports `STEP_2B_06_COMPLETE`, `RESTORE_VERIFIED`, `FINAL_GOVERNANCE_ACCEPTED`, and `SNAPSHOT_RETAINED`.
 - **Step 2B.07:** complete, normally merged at `50e7296406a39de23b20bdfb1b45960dca13d3a1`, and post-merge audited; accepted synthesis `gate2b-step07-20260828T135201Z-1ed07bea` is immutable and was not rerun.
-- **Step 2B.08:** complete. Permanent audit binds the final lifecycle documents to the accepted certification evidence, freeze digest, exact pointer, and handoff. Gate 2C remains separate, deferred, and unclaimed.
+- **Step 2B.08:** complete. Permanent audit binds the final lifecycle documents to the accepted certification evidence, freeze digest, exact pointer, and handoff. Gate 2C remains separate and is now terminally closed without certification.
 - **Retained Step 2B.02 diagnostic:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid and retained. Its mechanical audit originally passed, but later integrity review found its architecture recommendation unsupported by the stronger default/instrumented, independent-isolation, and retry predicates. It is diagnostic/unaccepted, not corrupted; at that capture boundary, Step 2B.02 remained open.
 - **Retained Step 2B.02 v2 capture:** `gate2b-step02-20260812T015108Z-00000001` is byte-valid and passed its superseding capture boundary with architecture unresolved.
 - **Retained Step 2B.02 supplemental capture:** `gate2b-step02-followup-20260812T022947Z-00000001` is byte-valid and corrected the native structured-output fallback and terminal-output-only checkpoint interpretation. Its immutable classifier remains `unresolved_path`; no retained evidence was rewritten.
@@ -229,4 +233,4 @@ A new planning or implementation session should read these files in order:
 Do not reopen Gate 0.5 or Gate 1 unless an audit fails or a frozen contract is intentionally changed.
 Step 2A.01 through Step 2A.10 are complete and Gate 2A LangGraph is certified and frozen.
 
-Use `shared/contracts/GATE2B-CREWAI-FREEZE.json`, `docs/handoffs/GATE-2B-CREWAI-HANDOFF.md`, the Step 2B.01 contract, ADR-0012, and `docs/CODEX-GATE-2B-RUNBOOK.md`. Steps 2B.05–2B.08 are complete and their consumed identities/evidence must never be replayed or rewritten. Retain the Step 2B.06 recovery snapshot because permanent audit still proves `SNAPSHOT_RETAINED`. Gate 2C remains deferred and unclaimed.
+Use `shared/contracts/GATE2B-CREWAI-FREEZE.json`, `docs/handoffs/GATE-2B-CREWAI-HANDOFF.md`, the Step 2B.01 contract, ADR-0012, and `docs/CODEX-GATE-2B-RUNBOOK.md`. Steps 2B.05–2B.08 are complete and their consumed identities/evidence must never be replayed or rewritten. Retain the Step 2B.06 recovery snapshot because permanent audit still proves `SNAPSHOT_RETAINED`. Gate 2C is closed non-certifying with incomplete evidence; Gate 2 remains incomplete.

@@ -1,0 +1,171 @@
+{
+  "$schema": "../../../../shared/schemas/gate2c-step02-one-run-transition.schema.json",
+  "authorization_sha256": "1d70d9889561400ce6d9f002daab38113fb6ffc57f4f75cb120bfb3e9115f560",
+  "canonical_success_manifest": "VERIFIED",
+  "certification_status": "NOT_HUMAN_CERTIFIED",
+  "evidence_inventory": [
+    {
+      "path": "authorization-ledger.json",
+      "sha256": "8a795276e693d9f73ad6cf4a1f6d95a47010e8dbed6801168f884cb961325db2",
+      "size": 377
+    },
+    {
+      "path": "crewai-recovery.json",
+      "sha256": "feb2c31832e43027f58f5d772710e2768591436fd8b393e89e02e63299ae2236",
+      "size": 1250
+    },
+    {
+      "path": "crewai-termination.json",
+      "sha256": "bc50b5c582f72b2133f6186ee0eb39488d452e509490c2a68f6e0e7406f84f14",
+      "size": 659
+    },
+    {
+      "path": "evidence-manifest.json",
+      "sha256": "730b892d232a3dea7e77e4391b7beec5d40e807b76f99b13bb0036ae00cf74ca",
+      "size": 1433
+    },
+    {
+      "path": "langgraph-recovery.json",
+      "sha256": "071b4706c9ee1e24ed84734b94ada1dde1dfbcc743ec022cfb23aca0de184e9a",
+      "size": 602
+    },
+    {
+      "path": "langgraph-termination.json",
+      "sha256": "e84425a8b86cca7ff2d78415cd5ddd63caa7140cc374ff4eb7dce41579953586",
+      "size": 878
+    },
+    {
+      "path": "negative-controls.json",
+      "sha256": "7d2fa49f3f43ae0e47fa863459c29db249ef04e10a6c8ca5c365c21bee19a2fd",
+      "size": 320
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "f8ea3848d20299f8b1d6119c36919604414417f3355396f448349fc51b76b7c6",
+      "size": 344
+    },
+    {
+      "path": "public-api-provenance.json",
+      "sha256": "d7ca6b354976100be20f68e1c2ec265405350dd4d7e5bb6959062a6d9ab2ca04",
+      "size": 768
+    },
+    {
+      "path": "summary.md",
+      "sha256": "ea4d107b1d6cfd9479916f07ccd8efdedffb7f07345315a44f581bb4cef6575f",
+      "size": 431
+    }
+  ],
+  "evidence_inventory_sha256": "9ff1feb36f7d2baa1723ebbcfd142e4c36e35fe04a3fcb6f3f0253722d4844c3",
+  "experimental_termination": {
+    "records": [
+      {
+        "actual_worker_terminated": true,
+        "observed_signal": 9,
+        "path": "crewai-termination.json",
+        "status": "PASS"
+      },
+      {
+        "actual_worker_terminated": true,
+        "observed_signal": 9,
+        "path": "langgraph-termination.json",
+        "status": "PASS"
+      }
+    ]
+  },
+  "finalized_at": "2026-09-30T22:30:05.838506+00:00",
+  "integrity_status": "FINALIZED_AND_HASH_BOUND",
+  "non_experimental_cleanup": {
+    "classification": "NONE",
+    "evidence_path": null,
+    "evidence_sha256": null,
+    "outer_process_timed_out": false,
+    "required": false,
+    "signal": null,
+    "source": "NONE",
+    "supervisor_internal_timeout": false
+  },
+  "open_writer_count": 0,
+  "outcome": "PASS",
+  "record_type": "ONE_RUN_FINALIZATION",
+  "run_id": "gate2c-step02-offline-20260930T222029Z-24c7b158",
+  "runtime_inventory": [
+    {
+      "path": "authorization-binding.json",
+      "sha256": "b0a1ff3725c2613a892b0a540322f779d401bcbebcc1bf893c139a3ba6599fd6",
+      "size": 703
+    },
+    {
+      "path": "crewai/expected-host-pid.txt",
+      "sha256": "62773bd0a2e2dc290386f298d7830117e08ccb0ac8197ba47281765f3310c830",
+      "size": 6
+    },
+    {
+      "path": "crewai/midpoint.json",
+      "sha256": "dd630dfc68ae44d5bd4dfdc9b1eb1521179229a31471666c4b7a66539c8a3325",
+      "size": 733
+    },
+    {
+      "path": "crewai/recovery-phases.jsonl",
+      "sha256": "4f072561912130a29b5d3c585bd94b920bb2a14cbaa6e1df621b0a5c63d8f4af",
+      "size": 3103
+    },
+    {
+      "path": "crewai/seam-ready.json",
+      "sha256": "fcdf768f396048ec84fb5d20e18cac1c5cc092baa6ed68e74fafcf5ec0b7fd6d",
+      "size": 585
+    },
+    {
+      "path": "crewai/startup-phases.jsonl",
+      "sha256": "5da827a15b2530df10393df64b29c843e1cd916aaaec329eb19bfd54277eef58",
+      "size": 4012
+    },
+    {
+      "path": "crewai/state.sqlite",
+      "sha256": "9325c9b38e5255beb6358285fe3714626292c9748fb287e42d6cd2457497abb3",
+      "size": 45056
+    },
+    {
+      "path": "crewai/worker-command.json",
+      "sha256": "51d9ad08658b694d5868002fc44c1a95c659dae9f1a1b3879a1f64fa36299041",
+      "size": 763
+    },
+    {
+      "path": "langgraph/checkpoint-verifier-command.json",
+      "sha256": "08c0f444504977df701096271fd7b51ba9625c16026a8fdeb37275f7a20649c6",
+      "size": 841
+    },
+    {
+      "path": "langgraph/durable-checkpoint.json",
+      "sha256": "7b4175cb4430b87ea868cb7c9ceeae445e99ef2b63377ff06bdc951e7769e7cc",
+      "size": 1092
+    },
+    {
+      "path": "langgraph/expected-host-pid.txt",
+      "sha256": "2f3846fb5b6e956b8d84835bf78081763e7c2e04a8b452be39fe169de97ddaa5",
+      "size": 6
+    },
+    {
+      "path": "langgraph/midpoint.json",
+      "sha256": "1efe66566db6d625f8f933cc0fb941b7ac198c86f91dbe3b45b45d62900074d3",
+      "size": 776
+    },
+    {
+      "path": "langgraph/seam-ready.json",
+      "sha256": "70b996587978a0dba8425dedeb30839af20cc9885d44e55c438d806f1e6da602",
+      "size": 591
+    },
+    {
+      "path": "langgraph/state.sqlite",
+      "sha256": "4c70917bac1607e9aa3565275d8bc275b3c83e9867e5dfa24ddbba162c44fa82",
+      "size": 163840
+    },
+    {
+      "path": "langgraph/worker-command.json",
+      "sha256": "2256db880fa6e7cbe3b9debd35cb8f4da71cc36e3f24cf2868196a4c636b5c46",
+      "size": 664
+    }
+  ],
+  "runtime_inventory_sha256": "ef80347f5c0c090552330a9aa8101c88b23489bc0ea2baea2913c915454a734b",
+  "schema_version": 1,
+  "workers_stopped": true
+}

@@ -1,0 +1,28 @@
+{
+  "automatic_phase_transition": false,
+  "boundary": "2C.02_model_free_Drupal_lifecycle",
+  "model_provider": 0,
+  "phases": [
+    {
+      "authorization": "SEPARATE",
+      "name": "drupal_start_and_SIGKILL",
+      "status": "CONSUMED"
+    },
+    {
+      "authorization": "SEPARATE",
+      "name": "immediate_post_kill_observation",
+      "status": "PENDING"
+    },
+    {
+      "authorization": "SEPARATE",
+      "name": "post_natural_expiry_observation",
+      "status": "PENDING"
+    }
+  ],
+  "recommendation_writes": 0,
+  "repaired_installed_source_manifest_sha256": "2c634fe8a719cf453668d2c19aab3131696f84667d073221775c3bd81933e768",
+  "replacement_authorization_sha256": "7cf5ec3fc346632fe121e9154d76e7d6d6f009e053fec8e1aed3a45626a774cf",
+  "run_id": "gate2c-step02-drupal-20261001T225458Z-c5d0e6b2",
+  "schema_version": 1,
+  "source_mutations": 0
+}

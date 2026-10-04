@@ -1,0 +1,12 @@
+{
+  "boundary": "separately_authorized_model_free_public_lancedb_memory_async_connection_diagnostic",
+  "connection_attempts": 1,
+  "crewai_imports": 0,
+  "drupal": 0,
+  "failure_injections": 0,
+  "flow_invocations": 0,
+  "model_provider": 0,
+  "run_id": "gate2c-step02-memory-20260924T124150Z-b5d60fa6",
+  "schema_version": 1,
+  "snapshot": 0
+}

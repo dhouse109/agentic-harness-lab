@@ -1,0 +1,76 @@
+{
+  "$schema": "../schemas/gate2c-step02-offline-rehearsal-replacement-admission.schema.json",
+  "schema_version": 1,
+  "admission_id": "gate2c-step02-one-offline-rehearsal-replacement-admission-v1.0.0",
+  "status": "EMPTY_SINGLE_USE_REPLACEMENT_SLOT",
+  "predecessor": {
+    "installed_package": "gate-2c-step02-shared-failure-injector-and-model-free-rehearsals-v1.0.14",
+    "installed_source_manifest_sha256": "31d9b9e652276598163b1c43b37f5bffa51ec46cf7f531e280892115115ea096",
+    "consumed_admission_anchor_sha256": "07c9c6356efd9c5b0acbf6af09bbd975c0544e2a3598d6cb50b4dbff9ded57e3",
+    "consumed_run_id": "gate2c-step02-offline-20260925T154513Z-5420da48",
+    "consumed_authorization_sha256": "c5827b91aae862dca52ecfc7b6618e0ef1e007404cc68c029da5929a7a8ecfb3",
+    "finalized_fail_sha256": "e5a90548589e1ca94acd9df75394e6265738a61f0783bb262aedcfc948c5042e",
+    "failed_attempt_sha256": "007628eb6671458a2cfca55bd7d82cc11758957b529c3a0c3a1db345a52195d6",
+    "crewai_supervisor_diagnostic_sha256": "3a5437721bd10978684d46c7b942bb597a703fe66cc397bbadbd5a623a4449e1",
+    "outcome": "FAIL",
+    "legacy_classification": "KNOWN_HISTORICAL_CLASSIFICATION_INCONSISTENCY"
+  },
+  "retained_baseline": {
+    "family_count": 13,
+    "rehearsal_evidence_file_count": 44,
+    "runtime_file_count": 83,
+    "authorization_record_count": 1,
+    "finalization_record_count": 1,
+    "physical_file_count": 129,
+    "canonical_inventory_sha256": "8fb60b7f6c7e29f57b04384d2a974ebe0c8a9379d681a3853b0a664223b5c6d4"
+  },
+  "supporting_diagnostic": {
+    "result": "gate-2c-step02-crewai-kickoff-location-home-path-probe-v1.0.4-result-preservation-v1.0.0",
+    "result_manifest_sha256": "6670110a91f05f4b8bec97d73c1be47b9072a96eeebe499ddedd23f883fbfba9",
+    "result_status": "COMPLETED",
+    "package_role": "NON_PREDECESSOR_PROVENANCE_CONTEXT",
+    "package_closed_world_status": "FAIL_UNDECLARED_PYTHON_CACHE",
+    "undeclared_cache_relative_path": "diagnostic/__pycache__/stack_sanitizer.cpython-312.pyc",
+    "undeclared_cache_sha256": "80140dcc64cb91c4fca7b914c63d91b863b5399754531833231e5419ccda0419",
+    "undeclared_cache_provenance": "CPYTHON_3_12_IMPORT_DURING_AUTHORIZED_V1_0_4_SUPERVISOR_EXECUTION",
+    "package_or_cache_mutation_authorized": false
+  },
+  "replacement_admission": {
+    "maximum_new_identities": 1,
+    "allowed_kind": "offline",
+    "identity_pattern": "^gate2c-step02-offline-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{8}$",
+    "authorization_record_root": "evidence/gates/gate-2c/model-free-rehearsal-authorizations",
+    "family_evidence_root": "evidence/gates/gate-2c/model-free-rehearsals",
+    "family_runtime_root": ".cache/gate2c-step02",
+    "preservation_record_root": "evidence/gates/gate-2c/model-free-rehearsal-preservation",
+    "authorization_must_precede_identity_creation": true,
+    "authorization_and_worker_processes_are_separate": true,
+    "consumed_admission_reopened": false,
+    "historical_identity_reuse": "PROHIBITED",
+    "automatic_replacement_or_retry": "PROHIBITED",
+    "additional_replacement_identities": 0
+  },
+  "acceptance": {
+    "complete_langgraph_and_crewai_family_required": true,
+    "independently_verified_target_6_seam_required": true,
+    "experimental_worker_termination_required": true,
+    "public_recovery_interfaces_required": true,
+    "target_7_first_required": true,
+    "zero_replay_required": true,
+    "zero_duplicates_required": true,
+    "failure_or_timeout_must_be_finalized_and_retained": true,
+    "automatic_replacement_after_failure_or_timeout": false
+  },
+  "unchanged_implementation": {
+    "worker_adapters": true,
+    "supervisor": true,
+    "persistence": true,
+    "recovery": true,
+    "timeouts": true,
+    "failure_injection": true,
+    "experiment_controls": true,
+    "validator": true,
+    "frozen_contracts": true,
+    "future_cleanup_classification": "V1_0_14_CORRECTED_SOURCE_BOUND_POLICY"
+  }
+}

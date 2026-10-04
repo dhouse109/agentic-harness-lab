@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "path": "memory-async-connect-phases.jsonl",
+      "sha256": "e88b270cf5362a4c996dd6ad273c9c7cee116fd9924bc67ff3427ded34ab22e4",
+      "size": 2400
+    },
+    {
+      "path": "worker-command.json",
+      "sha256": "95271e715ff1353ceb5537d58444578d9fddb41947fdb29f27f79a5a04173249",
+      "size": 895
+    }
+  ],
+  "root": "lancedb-memory-async",
+  "schema_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "../schemas/gate2c-step02-corrected-environment-offline-rehearsal-admission.schema.json",
+  "schema_version": 1,
+  "admission_id": "gate2c-step02-corrected-environment-offline-rehearsal-admission-v1.0.0",
+  "status": "EMPTY_SINGLE_USE_CORRECTED_ENVIRONMENT_SLOT",
+  "historical_results": {
+    "immutable": true,
+    "first_governed_fail": {"run_id": "gate2c-step02-offline-20260925T154513Z-5420da48", "finalization_sha256": "e5a90548589e1ca94acd9df75394e6265738a61f0783bb262aedcfc948c5042e", "outcome": "FAIL"},
+    "replacement_fail": {"run_id": "gate2c-step02-offline-20260927T004530Z-8998079d", "finalization_sha256": "29844e2e83464780aba02720776249bd03f886ea8bb3aa8e9ac767040643f4d4", "outcome": "FAIL"},
+    "cleanup_classification_exception_preserved": true,
+    "diagnostic_preservation_manifest_sha256": {
+      "representative_traced_pass": "1a68e0b4ff5ee732efae0f96f4ad28afe35853089bcb96069801cb0ee40a76a8",
+      "representative_untraced_timeout": "2ed20502e629f1215193b2d64ba599d3b80e32d4039039a4ddfcb266a73602c2",
+      "pre_import_only_timeout": "46eb1ea574ef88309238ebe37f4168e4083444765a6ecda21972d6f5d11c69bc",
+      "tracing_only_timeout": "e95877b9d170c1a75659ffe3e3508e335a2ff7ac11ef4845b60d2b17d67b792c",
+      "flow_started_future_bridge_failure": "00c2c67890b7b3909cbf327054311bbc2211d23af10949a337d88076d83dfe66",
+      "cpython_cross_thread_wakeup_failure": "71db704fe5253743c89bb1d968653e7efa47ed18244b5d1d71d5d494b085f7e8",
+      "corrected_environment_v1_0_0_invalid_preflight": "5b012d0f6d1b9d4d44aeb82e86797ab33a8b96beb2442e6454edf6bbb3dfde26"
+    }
+  },
+  "corrected_environment_evidence": {
+    "execution_identity": "gate2c-step02-corrected-startup-20260930T214717Z-1354ab5e",
+    "preservation_manifest_sha256": "7bc109779f0e29e1d7e664679b17bced2cbb83294ecc702735687c888bea2392",
+    "classification": "PASS_CORRECTED_ENVIRONMENT_REPRESENTATIVE_STARTUP",
+    "scope": "REPRESENTATIVE_STARTUP_ONLY_NOT_RECOVERY_PROOF"
+  },
+  "admission": {
+    "maximum_new_identities": 1,
+    "allowed_kind": "offline",
+    "identity_pattern": "^gate2c-step02-offline-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{8}$",
+    "authorization_must_precede_identity_creation": true,
+    "preflight_must_pass_before_identity_allocation": true,
+    "fresh_preflight_must_pass_before_execution": true,
+    "historical_identity_reuse": "PROHIBITED",
+    "automatic_replacement_or_retry": "PROHIBITED",
+    "additional_identities_from_any_outcome": 0,
+    "all_outcomes_finalized_and_hash_bound": true
+  },
+  "preflight": {
+    "codex_requirement": "EXPLICIT_DANGER_FULL_ACCESS_SESSION",
+    "python_version": "3.12.13",
+    "no_new_privs": 0,
+    "seccomp": 0,
+    "event_loop_policy": "_UnixDefaultEventLoopPolicy",
+    "selector": "EpollSelector",
+    "cross_thread_callback_required": true,
+    "await_resumption_required": true,
+    "socketpair_null_byte_round_trip_required": true,
+    "failure_classification": "INVALID_EXECUTION_ENVIRONMENT_PREFLIGHT"
+  },
+  "acceptance": {
+    "targets_1_through_6_durably_persisted_before_termination": true,
+    "target_6_seam_verified": true,
+    "experimental_sigkill_to_intended_crewai_worker": true,
+    "intended_run_and_trial_identity_recovered": true,
+    "first_recovered_target_is_7": true,
+    "zero_replay_targets_1_through_6": true,
+    "zero_duplicate_target_processing": true,
+    "completion_through_12_of_12": true,
+    "expected_persistence_state_evidence": true,
+    "zero_prohibited_model_provider_drupal_source_mutation": true,
+    "langgraph_proof_remains_protected": true
+  },
+  "human_decision_boundary": {
+    "pass_status": "APPROVAL_READY",
+    "automatic_architecture_approval": false,
+    "automatic_step_certification": false,
+    "automatic_latest_pointer_update": false,
+    "automatic_drupal_or_reset_rehearsal": false,
+    "automatic_commit_or_push": false,
+    "automatic_step_2c_03_start": false
+  },
+  "unchanged_implementation": {
+    "crewai_recovery": true,
+    "langgraph_recovery": true,
+    "supervisor": true,
+    "persistence": true,
+    "failure_injection": true,
+    "timeouts": true,
+    "validator": true,
+    "frozen_contracts": true
+  }
+}

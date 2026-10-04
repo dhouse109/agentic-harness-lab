@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/gate2c-step02-drupal-replacement-admission.schema.json",
+  "schema_version": 1,
+  "record_type": "DRUPAL_REPLACEMENT_ADMISSION_ANCHOR",
+  "status": "EMPTY_SINGLE_USE_DRUPAL_REPLACEMENT_SLOT",
+  "failed_attempt": {
+    "run_id": "gate2c-step02-drupal-20261001T173201Z-545a1ba2",
+    "status": "FAILED_PRESERVED",
+    "start_authorization": "CONSUMED",
+    "aggregate_sha256": "1014dacee5194fed8a2c696145d792898d5c9b9399f20c548bdd6e6cd4137714",
+    "artifacts": [
+      {"path": "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261001T173201Z-545a1ba2/control/expected-host-pid.txt", "size": 6, "sha256": "0404ecadea447837d1fbe05b41c7a14dafa76c3b6713eccc7f92252bb1d837c5"},
+      {"path": "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261001T173201Z-545a1ba2/kill-command.json", "size": 52, "sha256": "3ea3c7ce75d356913333752af2328801124b819602e618a7378bf4b25e0a3b0b"},
+      {"path": "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261001T173201Z-545a1ba2/process-check-command.json", "size": 191, "sha256": "d3c3271e1288c24b8215b0fa9ae55fff768a31ca7e0464a8e5f89a1b5d18c212"},
+      {"path": "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261001T173201Z-545a1ba2/worker-command.json", "size": 268, "sha256": "f246dd35435059ecce6f79845a9de9983b9d0276f95acb5ab2aa37e5d2517a2b"},
+      {"path": "evidence/gates/gate-2c/model-free-rehearsals/gate2c-step02-drupal-20261001T173201Z-545a1ba2/FAILED-ATTEMPT.json", "size": 1275, "sha256": "0301fcb645d151ca9feaa82d233c7f98483d3e30bf089aa0789b65ea6dd3ddea"},
+      {"path": "evidence/gates/gate-2c/model-free-rehearsals/gate2c-step02-drupal-20261001T173201Z-545a1ba2/authorization-ledger.json", "size": 637, "sha256": "ff713910f136b309122747dda7c161e74413b3e8714343272a0c7028d558a760"}
+    ]
+  },
+  "replacement_reason": "SOURCE_RUNTIME_INSTRUMENTATION_DEFECT",
+  "repaired_source_epoch": {
+    "manifest_path": "shared/contracts/GATE2C-STEP02-INSTALLED-SOURCE-SHA256.txt",
+    "authorization_record_must_bind_current_manifest_sha256": true,
+    "execution_must_match_authorized_manifest_sha256": true
+  },
+  "replacement_admission": {
+    "identity_allocation": "DEFERRED_UNTIL_SEPARATE_HUMAN_AUTHORIZATION",
+    "maximum_new_identities": 1,
+    "failed_identity_reuse": "PROHIBITED",
+    "consumed_original_start_token_carry_forward": "PROHIBITED",
+    "automatic_retry": "PROHIBITED",
+    "additional_replacement_identities": 0,
+    "replacement_start_requires_separate_human_authorization": true
+  },
+  "lifecycle_boundaries": [
+    "package_installation",
+    "replacement_admission_and_identity_authorization",
+    "replacement_drupal_start",
+    "immediate_lock_denial_observation",
+    "post_natural_expiry_observation",
+    "reset_and_restoration",
+    "step_2c02_certification"
+  ],
+  "current_lifecycle": {
+    "step_2c02": "INCOMPLETE_UNCERTIFIED",
+    "reset": "NOT_PERFORMED",
+    "gate_2c": "DEFERRED_UNCLAIMED",
+    "gate_2": "NOT_COMPLETE",
+    "step_2c03": "NOT_AUTHORIZED"
+  }
+}

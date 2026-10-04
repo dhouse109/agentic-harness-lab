@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.example/shared/schemas/gate2c-step02-corrected-environment-offline-rehearsal-admission.schema.json",
+  "title": "Gate 2C.02 corrected-environment one-run rehearsal admission",
+  "oneOf": [
+    {"$ref": "#/$defs/admission"},
+    {"$ref": "#/$defs/authorization"}
+  ],
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "admission": {
+      "type": "object",
+      "required": ["$schema", "schema_version", "admission_id", "status", "historical_results", "corrected_environment_evidence", "admission", "preflight", "acceptance", "human_decision_boundary", "unchanged_implementation"],
+      "properties": {
+        "$schema": {"const": "../schemas/gate2c-step02-corrected-environment-offline-rehearsal-admission.schema.json"},
+        "schema_version": {"const": 1},
+        "admission_id": {"const": "gate2c-step02-corrected-environment-offline-rehearsal-admission-v1.0.0"},
+        "status": {"const": "EMPTY_SINGLE_USE_CORRECTED_ENVIRONMENT_SLOT"},
+        "historical_results": {"type": "object"},
+        "corrected_environment_evidence": {"type": "object"},
+        "admission": {"type": "object"},
+        "preflight": {"type": "object"},
+        "acceptance": {"type": "object"},
+        "human_decision_boundary": {"type": "object"},
+        "unchanged_implementation": {"type": "object"}
+      },
+      "additionalProperties": false
+    },
+    "authorization": {
+      "type": "object",
+      "required": ["$schema", "schema_version", "record_type", "run_id", "authorized_at", "authorization_boundary", "corrected_environment_admission_anchor_sha256", "installed_source_manifest_sha256", "historical_run_ids", "historical_finalization_sha256", "representative_startup_preservation_manifest_sha256", "identity_allocation_preflight_sha256", "identity_allocation_preflight", "maximum_new_identities", "historical_identity_reuse_authorized", "automatic_replacement_or_retry_authorized", "additional_identities_authorized", "scope"],
+      "properties": {
+        "$schema": {"const": "../../../../shared/schemas/gate2c-step02-corrected-environment-offline-rehearsal-admission.schema.json"},
+        "schema_version": {"const": 1},
+        "record_type": {"const": "CORRECTED_ENVIRONMENT_ONE_RUN_AUTHORIZATION"},
+        "run_id": {"type": "string", "pattern": "^gate2c-step02-offline-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{8}$"},
+        "authorized_at": {"type": "string", "format": "date-time"},
+        "authorization_boundary": {"const": "fresh_corrected_environment_preflight_before_identity_allocation"},
+        "corrected_environment_admission_anchor_sha256": {"$ref": "#/$defs/sha256"},
+        "installed_source_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "historical_run_ids": {"type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": {"type": "string"}},
+        "historical_finalization_sha256": {"type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": {"$ref": "#/$defs/sha256"}},
+        "representative_startup_preservation_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "identity_allocation_preflight_sha256": {"$ref": "#/$defs/sha256"},
+        "identity_allocation_preflight": {"type": "object"},
+        "maximum_new_identities": {"const": 1},
+        "historical_identity_reuse_authorized": {"const": false},
+        "automatic_replacement_or_retry_authorized": {"const": false},
+        "additional_identities_authorized": {"const": 0},
+        "scope": {"const": "one_corrected_environment_model_free_offline_rehearsal_identity_only"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

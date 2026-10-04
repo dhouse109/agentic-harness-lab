@@ -1,0 +1,20 @@
+{
+  "diagnostic": {
+    "cleanup_is_not_experimental_sigkill": true,
+    "cleanup_signal": 9,
+    "executable": "python",
+    "experimental_sigkill_delivered": false,
+    "returncode": -9,
+    "sanitized_stderr": "",
+    "stage": "lancedb_public_memory_async_connection_diagnostic",
+    "stderr_truncated": false,
+    "timed_out": true
+  },
+  "diagnostic_sha256": "efaf0b8263342b81bf6ce89e17b5ff5e69051eb9d4d14e764ce4ec73f81abcb2",
+  "phase": "lancedb_public_memory_async_connection_diagnostic",
+  "recorded_at": "2026-09-24T12:42:38.425379+00:00",
+  "replacement_automatic": false,
+  "run_id": "gate2c-step02-memory-20260924T124150Z-b5d60fa6",
+  "schema_version": 1,
+  "status": "FAILED_PRESERVED"
+}

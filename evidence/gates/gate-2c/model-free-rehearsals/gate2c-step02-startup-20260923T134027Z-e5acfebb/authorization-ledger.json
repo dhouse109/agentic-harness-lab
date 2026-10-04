@@ -1,0 +1,10 @@
+{
+  "boundary": "separately_authorized_model_free_crewai_startup_diagnostic",
+  "drupal": 0,
+  "failure_injections": 0,
+  "flow_invocations": 0,
+  "model_provider": 0,
+  "run_id": "gate2c-step02-startup-20260923T134027Z-e5acfebb",
+  "schema_version": 1,
+  "snapshot": 0
+}

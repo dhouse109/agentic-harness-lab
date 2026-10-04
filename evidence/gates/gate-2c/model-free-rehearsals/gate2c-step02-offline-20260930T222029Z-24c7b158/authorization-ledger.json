@@ -1,0 +1,11 @@
+{
+  "authorization_sha256": "1d70d9889561400ce6d9f002daab38113fb6ffc57f4f75cb120bfb3e9115f560",
+  "authorized_before_worker_execution": true,
+  "boundary": "explicit_disposable_failure_rehearsal_approval",
+  "drupal": 0,
+  "model_provider": 0,
+  "replacement_attempts": 0,
+  "run_id": "gate2c-step02-offline-20260930T222029Z-24c7b158",
+  "schema_version": 1,
+  "snapshot": 0
+}

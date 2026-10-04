@@ -1,0 +1,125 @@
+{
+  "$schema": "../../../../shared/schemas/gate2c-step02-one-run-transition.schema.json",
+  "authorization_sha256": "2a50c586c067f357ec53b810033ca6f472f382a7eb7e9a6cb71cd41824c38317",
+  "canonical_success_manifest": "PROHIBITED_FOR_NON_PASS",
+  "certification_status": "NOT_HUMAN_CERTIFIED",
+  "evidence_inventory": [
+    {
+      "path": "FAILED-ATTEMPT.json",
+      "sha256": "dbf066138e13c4c099057a953c04e10902d0eb671ae2ffa591491f14f2b422f5",
+      "size": 1507
+    },
+    {
+      "path": "authorization-ledger.json",
+      "sha256": "17bd3c646b8273ddb53a614820cceffe0d27fc14037f570470f1a6a652c131ce",
+      "size": 377
+    },
+    {
+      "path": "crewai-startup-diagnostic.json",
+      "sha256": "97ced0b83dd19d00c891e5de6bfa0d5c66c0740a76f10f0867e9c3e386b11134",
+      "size": 1205
+    },
+    {
+      "path": "langgraph-recovery.json",
+      "sha256": "985ddcf2d7eba66da14644522c673b91473b71aadb9677c4abb86b244a03c398",
+      "size": 602
+    },
+    {
+      "path": "langgraph-termination.json",
+      "sha256": "ef51cece8d0363e3d2da7395cd68be43974d813cbdd78478e137390becad5268",
+      "size": 878
+    }
+  ],
+  "evidence_inventory_sha256": "7294afb0074b21353531d81e11082eab25dffedfa54548196e0a1f103b069150",
+  "experimental_termination": {
+    "records": [
+      {
+        "actual_worker_terminated": true,
+        "observed_signal": 9,
+        "path": "langgraph-termination.json",
+        "status": "PASS"
+      }
+    ]
+  },
+  "finalized_at": "2026-09-27T00:51:04.105057+00:00",
+  "integrity_status": "FINALIZED_AND_HASH_BOUND",
+  "non_experimental_cleanup": {
+    "classification": "NON_EXPERIMENTAL_TIMEOUT_OR_FAILURE_CLEANUP",
+    "evidence_path": "crewai-startup-diagnostic.json",
+    "evidence_sha256": "97ced0b83dd19d00c891e5de6bfa0d5c66c0740a76f10f0867e9c3e386b11134",
+    "outer_process_timed_out": false,
+    "required": true,
+    "signal": 9,
+    "source": "SUPERVISOR_DIAGNOSTIC",
+    "supervisor_internal_timeout": true
+  },
+  "open_writer_count": 0,
+  "outcome": "FAIL",
+  "record_type": "ONE_RUN_FINALIZATION",
+  "run_id": "gate2c-step02-offline-20260927T004530Z-8998079d",
+  "runtime_inventory": [
+    {
+      "path": "authorization-binding.json",
+      "sha256": "88bda87f08d79a2b72c63316b163eefc1b21395c49f6600285566e3539393ba5",
+      "size": 432
+    },
+    {
+      "path": "crewai/expected-host-pid.txt",
+      "sha256": "076320a2a08267b4c026d06573bba408ea68841e73cdc20e62cce59de165ece3",
+      "size": 3
+    },
+    {
+      "path": "crewai/startup-phases.jsonl",
+      "sha256": "1d383492172f79cbd1d76c0224d696fa722b2db17444e18207defcb7ae1bef66",
+      "size": 2795
+    },
+    {
+      "path": "crewai/state.sqlite",
+      "sha256": "8c5cec3b085f2c239e9163abb014a7255a7bb64ab52c9e6cc1662e34bf5ff5aa",
+      "size": 28672
+    },
+    {
+      "path": "crewai/worker-command.json",
+      "sha256": "0cb48daffd742eaa26ff366767fb6273014743033669582d54aeac6d2d8411a6",
+      "size": 763
+    },
+    {
+      "path": "langgraph/checkpoint-verifier-command.json",
+      "sha256": "92bcd0b60cd9010ce0f2ae918101c63503c70946c68009f7e113632b076fa19d",
+      "size": 841
+    },
+    {
+      "path": "langgraph/durable-checkpoint.json",
+      "sha256": "5645e5d6490d0ef9e8e301f4b286dbdb1973252574a833a68093385da9cbae87",
+      "size": 1092
+    },
+    {
+      "path": "langgraph/expected-host-pid.txt",
+      "sha256": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+      "size": 2
+    },
+    {
+      "path": "langgraph/midpoint.json",
+      "sha256": "e1448c075c9a5ca5f6eac52e7aaa9ad80dbca92279e9dba83c2882a35754fcc9",
+      "size": 776
+    },
+    {
+      "path": "langgraph/seam-ready.json",
+      "sha256": "b367c6aa25c90a19494f8976c820748c637967e5c4c80abca1e401703b92387c",
+      "size": 583
+    },
+    {
+      "path": "langgraph/state.sqlite",
+      "sha256": "dabf41c91fbc09355fe944da76cb5b577c064e4ab44ada211293e56d06eaf11a",
+      "size": 163840
+    },
+    {
+      "path": "langgraph/worker-command.json",
+      "sha256": "f8f3043ce765161109d647dc5a8fbd826ae2be1aab0ceb02663bd5ec66970646",
+      "size": 664
+    }
+  ],
+  "runtime_inventory_sha256": "fbc12df19d934011b51f88fb0a5e2422e640c352935355d242477cd5e50dcbd3",
+  "schema_version": 1,
+  "workers_stopped": true
+}

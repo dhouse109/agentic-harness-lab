@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.local/schemas/gate2c-step02-drupal-post-expiry-partial-observation.schema.json",
+  "oneOf": [
+    {"$ref": "#/$defs/contract"},
+    {"$ref": "#/$defs/evidence"}
+  ],
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "runId": {"const": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a"},
+    "contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["$schema", "schema_version", "record_type", "status", "run_id", "final_admission_sha256", "final_failed_family_aggregate_sha256", "prior_failed_family_aggregates", "final_failed_attempt_governance_sha256", "recorded_chronology", "historical_gaps", "permitted_partial_claims", "prohibited_claims", "observation_mechanics", "execution_boundary", "certification_guardrails", "no_more_workers"],
+      "properties": {
+        "$schema": {"type": "string"},
+        "schema_version": {"const": 1},
+        "record_type": {"const": "DRUPAL_POST_EXPIRY_PARTIAL_OBSERVATION_CONTRACT"},
+        "status": {"const": "ADMITTED_NOT_EXECUTED"},
+        "run_id": {"$ref": "#/$defs/runId"},
+        "final_admission_sha256": {"$ref": "#/$defs/sha256"},
+        "final_failed_family_aggregate_sha256": {"$ref": "#/$defs/sha256"},
+        "prior_failed_family_aggregates": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "#/$defs/sha256"}},
+        "final_failed_attempt_governance_sha256": {"$ref": "#/$defs/sha256"},
+        "recorded_chronology": {"type": "object"},
+        "historical_gaps": {"type": "object"},
+        "permitted_partial_claims": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "prohibited_claims": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "observation_mechanics": {"type": "object"},
+        "execution_boundary": {"type": "object"},
+        "certification_guardrails": {"type": "object"},
+        "no_more_workers": {"type": "object"}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "record_type", "status", "run_id", "observation_timestamp", "observation_timestamp_unix", "recorded_lock_name_sha256", "recorded_lock_acquired_at_unix", "recorded_lock_expires_not_before_unix", "observation_occurred_after_recorded_expiry", "lock_acquisition_result", "lock_probe_method", "lock_probe_lease_seconds", "lock_probe_released", "expired_semaphore_cleanup_may_occur", "active_lock_shortening_or_bypass", "completed_sequences", "next_target", "target_7_started", "target_7_processed", "processed_identity_count", "processed_identities_unique", "state_sha256_before", "state_sha256_after", "worker_launch_count", "target_processing_count", "model_generation_count", "provider_request_count", "recommendation_write_count", "source_mutation_count", "certifying_evidence", "immediate_lock_denial_reconstructed", "historical_termination_proof_reconstructed", "contract_sha256", "final_failed_family_aggregate_sha256", "final_admission_sha256", "installed_source_manifest_sha256", "separate_human_execution_authorization_consumed", "missing_immediate_classification", "prior_failed_family_aggregates"],
+      "properties": {
+        "schema_version": {"const": 1},
+        "record_type": {"const": "DRUPAL_POST_EXPIRY_PARTIAL_OBSERVATION_EVIDENCE"},
+        "status": {"const": "PASS_PARTIAL_POST_NATURAL_EXPIRY_NON_CERTIFYING"},
+        "run_id": {"$ref": "#/$defs/runId"},
+        "observation_timestamp": {"type": "string"},
+        "observation_timestamp_unix": {"type": "number"},
+        "recorded_lock_name_sha256": {"$ref": "#/$defs/sha256"},
+        "recorded_lock_acquired_at_unix": {"const": 1790948971.691621},
+        "recorded_lock_expires_not_before_unix": {"const": 1790950771.691621},
+        "observation_occurred_after_recorded_expiry": {"const": true},
+        "lock_acquisition_result": {"const": "ACQUIRED_AFTER_RECORDED_EXPIRY"},
+        "lock_probe_method": {"const": "PERSISTENT_LOCK_ACQUIRE_THEN_IMMEDIATE_RELEASE"},
+        "lock_probe_lease_seconds": {"const": 1},
+        "lock_probe_released": {"const": true},
+        "expired_semaphore_cleanup_may_occur": {"const": true},
+        "active_lock_shortening_or_bypass": {"const": false},
+        "completed_sequences": {"const": [1, 2, 3, 4, 5, 6]},
+        "next_target": {"const": 7},
+        "target_7_started": {"const": false},
+        "target_7_processed": {"const": false},
+        "processed_identity_count": {"const": 6},
+        "processed_identities_unique": {"const": true},
+        "state_sha256_before": {"$ref": "#/$defs/sha256"},
+        "state_sha256_after": {"$ref": "#/$defs/sha256"},
+        "worker_launch_count": {"const": 0},
+        "target_processing_count": {"const": 0},
+        "model_generation_count": {"const": 0},
+        "provider_request_count": {"const": 0},
+        "recommendation_write_count": {"const": 0},
+        "source_mutation_count": {"const": 0},
+        "certifying_evidence": {"const": false},
+        "immediate_lock_denial_reconstructed": {"const": false},
+        "historical_termination_proof_reconstructed": {"const": false},
+        "contract_sha256": {"$ref": "#/$defs/sha256"},
+        "final_failed_family_aggregate_sha256": {"$ref": "#/$defs/sha256"},
+        "final_admission_sha256": {"$ref": "#/$defs/sha256"},
+        "installed_source_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "separate_human_execution_authorization_consumed": {"const": true},
+        "missing_immediate_classification": {"const": "DRUPAL_IMMEDIATE_OBSERVATION_MISSED_DUE_TO_TERMINATION_PROOF_GATE"},
+        "prior_failed_family_aggregates": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "#/$defs/sha256"}}
+      }
+    }
+  }
+}

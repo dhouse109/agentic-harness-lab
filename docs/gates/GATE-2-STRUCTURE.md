@@ -8,7 +8,7 @@ Gate 2 preserves the original master-plan meaning: it closes only when the remai
 - **Gate 2B — CrewAI:** equivalent full implementation, framework-owned persistence/continuation, evidence, certification, and freeze.
 - **Gate 2C — Shared failure/recovery:** the same process failure after target 6 is fully persisted and before target 7 begins, applied comparably to the frozen Drupal AI, LangGraph, and CrewAI specimens.
 
-**Gate 2 is not complete when Gate 2A or Gate 2B finishes. Gate 2 closes only after Gate 2C.**
+**Gate 2 is not complete when Gate 2A or Gate 2B finishes. Administrative closure of Gate 2C without a valid three-framework comparison does not satisfy Gate 2.**
 
 ## Repository precedence
 
@@ -37,3 +37,7 @@ Gate 2 closes only when:
 ## Interpretation guardrail
 
 A controlled continuation inside Gate 2A or Gate 2B proves only that implementation's continuation mechanism. It must not be labeled as the shared Gate 2C recovery comparison.
+
+## Terminal Gate 2C disposition
+
+Gate 2C is `CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE`. Runtime work has ended, Step 2C.02 remains `TERMINAL_UNCERTIFIED`, and the retained Drupal evidence does not satisfy the valid-comparable-family requirement. Therefore umbrella exit criteria 4 and 5 remain unsatisfied and Gate 2 remains `NOT_COMPLETE`. Reopening runtime work would require a new explicit governance decision; the closure itself grants no such authority.

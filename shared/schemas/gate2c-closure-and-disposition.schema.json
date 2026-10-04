@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/gate2c-closure-and-disposition.schema.json",
+  "title": "Gate 2C final closure and disposition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "record_type",
+    "status",
+    "source_epoch",
+    "predecessor_freezes",
+    "retained_evidence_inventory",
+    "step2c01",
+    "corrected_environment_model_free_rehearsal",
+    "framework_outcomes",
+    "lifecycle",
+    "reset_disposition",
+    "no_more_runtime",
+    "claim_guards",
+    "documentation_bindings",
+    "closure_activity"
+  ],
+  "properties": {
+    "$schema": {"const": "../schemas/gate2c-closure-and-disposition.schema.json"},
+    "schema_version": {"const": 1},
+    "record_type": {"const": "GATE_2C_FINAL_CLOSURE_AND_DISPOSITION"},
+    "status": {"const": "CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE"},
+    "source_epoch": {"type": "object"},
+    "predecessor_freezes": {"type": "object"},
+    "retained_evidence_inventory": {"type": "object"},
+    "step2c01": {"type": "object"},
+    "corrected_environment_model_free_rehearsal": {"type": "object"},
+    "framework_outcomes": {
+      "type": "object",
+      "required": ["langgraph", "crewai", "drupal_ai"],
+      "additionalProperties": false,
+      "properties": {
+        "langgraph": {"type": "object"},
+        "crewai": {"type": "object"},
+        "drupal_ai": {"type": "object"}
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": ["step_2c02", "step_2c02_pass", "step_2c02_certified", "gate_2c", "gate_2c_pass", "gate_2c_certified", "gate_2", "gate_2_pass", "gate_2_exit_criteria_satisfied", "authoritative_three_framework_comparison_completed", "step_2c03_performed"],
+      "properties": {
+        "step_2c02": {"const": "TERMINAL_UNCERTIFIED"},
+        "step_2c02_pass": {"const": false},
+        "step_2c02_certified": {"const": false},
+        "gate_2c": {"const": "CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE"},
+        "gate_2c_pass": {"const": false},
+        "gate_2c_certified": {"const": false},
+        "gate_2": {"const": "NOT_COMPLETE"},
+        "gate_2_pass": {"const": false},
+        "gate_2_exit_criteria_satisfied": {"const": false},
+        "authoritative_three_framework_comparison_completed": {"const": false},
+        "step_2c03_performed": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "reset_disposition": {"type": "object"},
+    "no_more_runtime": {"type": "object"},
+    "claim_guards": {"type": "object"},
+    "documentation_bindings": {"type": "object"},
+    "closure_activity": {"type": "object"}
+  }
+}

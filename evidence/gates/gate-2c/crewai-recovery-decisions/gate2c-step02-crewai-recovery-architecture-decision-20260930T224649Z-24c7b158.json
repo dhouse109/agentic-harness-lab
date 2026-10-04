@@ -1,0 +1,73 @@
+{
+  "authorization_binding": {
+    "authorization_path": "evidence/gates/gate-2c/model-free-rehearsal-authorizations/gate2c-step02-offline-20260930T222029Z-24c7b158/authorization.json",
+    "authorization_record_type": "CORRECTED_ENVIRONMENT_ONE_RUN_AUTHORIZATION",
+    "authorization_sha256": "1d70d9889561400ce6d9f002daab38113fb6ffc57f4f75cb120bfb3e9115f560",
+    "execution_preflight_sha256": "68114bfe5a4cc3b213d58b7fd83c21911c0d8e3cb1551743c2c581d963c97ec9",
+    "identity_allocation_preflight_sha256": "7c99feb0985ab0dd21f0978e7ce8154392939c0520c53edf206bcde05280c69f",
+    "rehearsal_installed_source_manifest_path": "shared/contracts/GATE2C-STEP02-INSTALLED-SOURCE-SHA256.txt",
+    "rehearsal_installed_source_manifest_sha256": "8a74aa96e78722a989c186b0aa993eaab87c0b84e86ed06a77b60e34542d58ff",
+    "runtime_authorization_binding_path": ".cache/gate2c-step02/gate2c-step02-offline-20260930T222029Z-24c7b158/authorization-binding.json",
+    "runtime_authorization_binding_sha256": "b0a1ff3725c2613a892b0a540322f779d401bcbebcc1bf893c139a3ba6599fd6"
+  },
+  "candidate": "public SQLiteFlowPersistence.load_state plus public Flow.kickoff inputs id hydration of the same Flow identity",
+  "contract_sha256": "3c4801e6eb35d40d94e066c70017d3acebca95183e7e544646be6e2b40aa5ec6",
+  "decided_at": "2026-09-30T22:46:49Z",
+  "decided_by": "human_operator",
+  "decision_id": "gate2c-step02-crewai-recovery-architecture-decision-20260930T224649Z-24c7b158",
+  "diagnostic_environment_history": {
+    "corrected_environment_admission_path": "shared/contracts/GATE2C-STEP02-CORRECTED-ENVIRONMENT-OFFLINE-REHEARSAL-ADMISSION.json",
+    "corrected_environment_admission_sha256": "698af65cf4487c39f23f0e592c450828caac69fb19de9a1484a4e671b4b37daa",
+    "execution_environment_finding_path": "docs/gates/GATE-2C-STEP02-EXECUTION-ENVIRONMENT-FINDING.md",
+    "execution_environment_finding_sha256": "145c21ffe8382cab569244be865ea73ba1661bdb03846cc3987b7b667bbab622",
+    "historical_finalizations": [
+      {
+        "outcome": "FAIL",
+        "path": "evidence/gates/gate-2c/model-free-rehearsal-preservation/gate2c-step02-offline-20260925T154513Z-5420da48/finalization.json",
+        "run_id": "gate2c-step02-offline-20260925T154513Z-5420da48",
+        "sha256": "e5a90548589e1ca94acd9df75394e6265738a61f0783bb262aedcfc948c5042e"
+      },
+      {
+        "outcome": "FAIL",
+        "path": "evidence/gates/gate-2c/model-free-rehearsal-preservation/gate2c-step02-offline-20260927T004530Z-8998079d/finalization.json",
+        "run_id": "gate2c-step02-offline-20260927T004530Z-8998079d",
+        "sha256": "29844e2e83464780aba02720776249bd03f886ea8bb3aa8e9ac767040643f4d4"
+      }
+    ],
+    "historical_inventory_sha256": "b123dade4e725e45401e2f580b0ed3987a1af5edd4576490c1c10a09c5a0d3be",
+    "preservation_manifests": [
+      {"package": "gate-2c-step02-crewai-representative-entry-boundary-diagnostic-v1.0.0-result-preservation-v1.0.0", "sha256": "1a68e0b4ff5ee732efae0f96f4ad28afe35853089bcb96069801cb0ee40a76a8"},
+      {"package": "gate-2c-step02-crewai-untraced-representative-entry-boundary-diagnostic-v1.0.0-result-preservation-v1.0.0", "sha256": "2ed20502e629f1215193b2d64ba599d3b80e32d4039039a4ddfcb266a73602c2"},
+      {"package": "gate-2c-step02-crewai-preimport-only-representative-entry-boundary-diagnostic-v1.0.0-result-preservation-v1.0.0", "sha256": "46eb1ea574ef88309238ebe37f4168e4083444765a6ecda21972d6f5d11c69bc"},
+      {"package": "gate-2c-step02-crewai-tracing-only-representative-entry-boundary-diagnostic-v1.0.0-result-preservation-v1.0.0", "sha256": "e95877b9d170c1a75659ffe3e3508e335a2ff7ac11ef4845b60d2b17d67b792c"},
+      {"package": "gate-2c-step02-crewai-flow-started-future-bridge-microprobe-v1.0.0-result-preservation-v1.0.0", "sha256": "00c2c67890b7b3909cbf327054311bbc2211d23af10949a337d88076d83dfe66"},
+      {"package": "gate-2c-step02-cpython-cross-thread-event-loop-wakeup-control-v1.0.0-result-preservation-v1.0.0", "sha256": "71db704fe5253743c89bb1d968653e7efa47ed18244b5d1d71d5d494b085f7e8"},
+      {"package": "gate-2c-step02-crewai-corrected-environment-representative-startup-verification-v1.0.0-result-preservation-v1.0.0", "sha256": "5b012d0f6d1b9d4d44aeb82e86797ab33a8b96beb2442e6454edf6bbb3dfde26"},
+      {"package": "gate-2c-step02-crewai-corrected-environment-representative-startup-verification-v1.0.1-result-preservation-v1.0.0", "sha256": "7bc109779f0e29e1d7e664679b17bced2cbb83294ecc702735687c888bea2392"}
+    ],
+    "retained_baseline_inventory_sha256": "8fb60b7f6c7e29f57b04384d2a974ebe0c8a9379d681a3853b0a664223b5c6d4"
+  },
+  "human_decision": "APPROVED",
+  "lifecycle_boundary": {
+    "additional_rehearsal_authorized": false,
+    "gate_2": "NOT_COMPLETE",
+    "gate_2c": "DEFERRED_UNCLAIMED",
+    "latest_pointer_update_authorized": false,
+    "step_2c02_certification": "NOT_PERFORMED",
+    "step_2c03_authorized": false
+  },
+  "machine_recommendation": "APPROVAL_READY",
+  "pass_family_binding": {
+    "certification_status": "NOT_HUMAN_CERTIFIED",
+    "evidence_manifest_path": "evidence/gates/gate-2c/model-free-rehearsals/gate2c-step02-offline-20260930T222029Z-24c7b158/evidence-manifest.json",
+    "evidence_manifest_sha256": "730b892d232a3dea7e77e4391b7beec5d40e807b76f99b13bb0036ae00cf74ca",
+    "evidence_root": "evidence/gates/gate-2c/model-free-rehearsals/gate2c-step02-offline-20260930T222029Z-24c7b158",
+    "finalization_path": "evidence/gates/gate-2c/model-free-rehearsal-preservation/gate2c-step02-offline-20260930T222029Z-24c7b158/finalization.json",
+    "finalization_sha256": "d882c8339025c1ba7e510abb19984fc4724e2a594a190760c07f95db034fd8d8",
+    "integrity_status": "FINALIZED_AND_HASH_BOUND",
+    "outcome": "PASS"
+  },
+  "rehearsal_run_id": "gate2c-step02-offline-20260930T222029Z-24c7b158",
+  "schema_version": 2,
+  "scope": "Gate_2C_CrewAI_process_recovery_architecture_only_no_live_execution_authorization"
+}

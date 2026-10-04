@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "record_type": "DRUPAL_FINAL_FAILED_ATTEMPT_GOVERNANCE",
+  "status": "FINAL_FURTHER_REPLACEMENT_POST_SIGKILL_TERMINATION_PROOF_FAILED_PRESERVED",
+  "run_id": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+  "admission_sha256": "15e66d4f70ed74a3921903cbb6134b8986ffabaf2644e08c754465bc3ad58c5c",
+  "installed_source_epoch_at_execution": "2d41065f108edc37c0146d8cad7565cea4ee58f340d4df080eb4a59f6defaac8",
+  "start_authorization": "CONSUMED",
+  "worker_launch_count": 1,
+  "automatic_retry_count": 0,
+  "additional_worker_identities_permitted": 0,
+  "canonical_family_aggregate_sha256": "cdd180a1c88de2fab50766e7bb82644dfd47fd51b57cca9a412985f15a67b08e",
+  "immutable_inventory": {
+    "evidence/gates/gate-2c/model-free-rehearsals/gate2c-step02-drupal-20261002T132121Z-a54c7a7a/FAILED-ATTEMPT.json": "c405e0cdab7b20f2ab19fb8234b839984929fd7934bdb0589ea4c9b4b4d80ba9",
+    "evidence/gates/gate-2c/model-free-rehearsals/gate2c-step02-drupal-20261002T132121Z-a54c7a7a/authorization-ledger.json": "2437097210950456800c7b1974247a34895e59f336c30e6188e0e8f69507df98",
+    "evidence/gates/gate-2c/model-free-rehearsals/gate2c-step02-drupal-20261002T132121Z-a54c7a7a/drupal-pre-kill-process-scan.json": "155d29c317889045d42c0f48ea5a324cb50076cda1ca0fb8a6fc1c3e03183797",
+    "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261002T132121Z-a54c7a7a/control/expected-host-pid.txt": "52c5450b85e75387e94b74bbfb8f6f5a244d445dfe666c673f9cd9f50b51b13e",
+    "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261002T132121Z-a54c7a7a/control/midpoint.json": "8e2729d9531e36832000d28d74f5f90f6ce125199bd4542e2307092461e09bfb",
+    "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261002T132121Z-a54c7a7a/control/seam-ready.json": "826d2f780116e1903556134c051695d798f8f25c512b61abcbb3317e3541eafa",
+    "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261002T132121Z-a54c7a7a/kill-command.json": "3ea3c7ce75d356913333752af2328801124b819602e618a7378bf4b25e0a3b0b",
+    "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261002T132121Z-a54c7a7a/process-check-command.json": "e1a6b3aa1546f7554951b9fa17de619f0b4f968b8f9c624bec5dfa42e96706bf",
+    "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261002T132121Z-a54c7a7a/worker-command.json": "c7466d36900a3a095e3b3823dac1aec1a509b134599f0d7aa49b683166da1e52"
+  },
+  "signal_boundary": {
+    "pre_kill_decision": "EXACT_SINGLETON_VERIFIED",
+    "expected_php_worker_pid": 28942,
+    "exact_matching_worker_pids": [28942],
+    "kill_command": ["ddev", "exec", "kill", "-9", "28942"],
+    "kill_command_returncode": 0,
+    "host_wrapper_pid": 234677,
+    "outer_wrapper_returncode": 1,
+    "post_command_php_pid_absent": true,
+    "post_command_wrapper_pid_absent": true,
+    "subsequent_exact_worker_count": 0,
+    "drupal_termination_artifact_present": false,
+    "post_kill_process_scan_artifact_present": false
+  },
+  "historical_provenance_conflict": {
+    "outer_failed_attempt_experimental_sigkill_delivered": false,
+    "outer_field_classification": "MECHANICAL_SUPERVISOR_FAILURE_DEFAULT",
+    "stronger_boundary_evidence": "EXACT_PRE_KILL_SINGLETON_PLUS_SUCCESSFUL_EXACT_KILL_COMMAND_PLUS_AUTHORIZED_POST_COMMAND_PROCESS_ABSENCE",
+    "historical_artifacts_must_not_be_rewritten": true,
+    "termination_pass_certified": false
+  },
+  "missed_immediate_observation": {
+    "classification": "IMMEDIATE_OBSERVATION_MISSED_DUE_TO_TERMINATION_PROOF_GATE",
+    "decision_time_utc": "2026-10-02T13:57:53.574704815Z",
+    "natural_expiry_utc": "2026-10-02T14:19:31.691621Z",
+    "window_open_at_decision": true,
+    "source_gate": "VALID_DRUPAL_TERMINATION_ARTIFACT_REQUIRED",
+    "command_invoked": false,
+    "ledger_status": "PENDING",
+    "drupal_immediate_artifact_present": false,
+    "lock_acquisition_attempted": false,
+    "lock_denial_proven": false,
+    "historical_observation_reconstructable": false,
+    "satisfies_immediate_pass": false
+  },
+  "post_expiry_policy": {
+    "current_source_admits_post_expiry": false,
+    "partial_evidence_may_be_scientifically_useful": true,
+    "requires_separate_contract_amendment_and_human_authorization": true,
+    "can_satisfy_current_step_2c02_certification": false
+  },
+  "step_2c02_certification": "BLOCKED_MISSING_IMMEDIATE_LOCK_DENIAL_AND_TERMINATION_PROOF",
+  "gate_2c": "DEFERRED_UNCLAIMED",
+  "gate_2": "NOT_COMPLETE"
+}

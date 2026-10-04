@@ -1,0 +1,92 @@
+{
+  "candidates": [
+    {
+      "argument_count": 9,
+      "argv_sha256": "f23b1f24b316452ed192c5190acfc5dcfb56223af46655c22a3e7e3da4567142",
+      "exact_worker_identity": false,
+      "executable": "bash",
+      "mode": "worker",
+      "observer": false,
+      "pid": 14291,
+      "pid_namespace_matches_observer": true,
+      "run_id": "gate2c-step02-drupal-20261001T225458Z-c5d0e6b2",
+      "script": "gate2c-step02-drupal-rehearsal.php"
+    },
+    {
+      "argument_count": 9,
+      "argv_sha256": "72bd0931cdec5b73d12a9fac158f593a55247b48f777f319a8387bd1f2a7ee73",
+      "exact_worker_identity": false,
+      "executable": "php",
+      "mode": "worker",
+      "observer": false,
+      "pid": 14297,
+      "pid_namespace_matches_observer": true,
+      "run_id": "gate2c-step02-drupal-20261001T225458Z-c5d0e6b2",
+      "script": "gate2c-step02-drupal-rehearsal.php"
+    },
+    {
+      "argument_count": 9,
+      "argv_sha256": "d61d26c1045e2d9dbcd1b690eb92583151e4fb0673a2dac544af0333aa14f34f",
+      "exact_worker_identity": false,
+      "executable": "bash",
+      "mode": "worker",
+      "observer": false,
+      "pid": 28936,
+      "pid_namespace_matches_observer": true,
+      "run_id": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+      "script": "gate2c-step02-drupal-rehearsal.php"
+    },
+    {
+      "argument_count": 9,
+      "argv_sha256": "8abd4f2611e4285e2e62081c0882d44726727fccf948066fed69733fcc5c1c58",
+      "exact_worker_identity": true,
+      "executable": "php",
+      "mode": "worker",
+      "observer": false,
+      "pid": 28942,
+      "pid_namespace_matches_observer": true,
+      "run_id": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+      "script": "gate2c-step02-drupal-rehearsal.php"
+    },
+    {
+      "argument_count": 9,
+      "argv_sha256": "0c8ce1834853c185217b36ef72d87503f26f061ac5ba8bac49a53fc4c61acd0f",
+      "exact_worker_identity": false,
+      "executable": "bash",
+      "mode": "process-check",
+      "observer": false,
+      "pid": 28946,
+      "pid_namespace_matches_observer": true,
+      "run_id": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+      "script": "gate2c-step02-drupal-rehearsal.php"
+    },
+    {
+      "argument_count": 9,
+      "argv_sha256": "8ec7426c33639c208400675749d7a69d95cfc50cb865c313352ee1a24172bdea",
+      "exact_worker_identity": false,
+      "executable": "php",
+      "mode": "process-check",
+      "observer": true,
+      "pid": 28952,
+      "pid_namespace_matches_observer": true,
+      "run_id": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+      "script": "gate2c-step02-drupal-rehearsal.php"
+    }
+  ],
+  "configuration_sha256": "9e3cd65ec6292f949de3abc466c75d99526c91d053f48e8b114e437f0e0112c6",
+  "decision": "EXACT_SINGLETON_VERIFIED",
+  "expected_pid_verified": true,
+  "expected_worker_pid": 28942,
+  "matching_worker_count": 1,
+  "matching_worker_pids": [
+    28942
+  ],
+  "observer_pid": 28952,
+  "observer_pid_namespace": "f01cd7504a918a2fcd54a864836006b3bb40ab53f2e1b4fd2e4c36a2d4c71bf9",
+  "record_type": "DRUPAL_PROCESS_IDENTITY_SCAN",
+  "recorded_at": "2026-10-02T13:49:33Z",
+  "run_id": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+  "schema_version": 1,
+  "verification_method": "CONTAINER_PROCFS_EXACT_SEAM_PID_AND_PHP_ARGV_WITH_WORKER_UNIQUENESS",
+  "worker_uniqueness_verified": true
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../../shared/schemas/gate2c-step02-drupal-further-replacement-admission.schema.json",
+  "additional_replacement_identities_authorized": 0,
+  "authorization_boundary": "separate_explicit_human_further_replacement_identity_authorization_before_drupal_start",
+  "authorized_at": "2026-10-02T13:21:22.586832+00:00",
+  "automatic_retry_authorized": false,
+  "execution_authorized": false,
+  "failed_replacement_family_aggregate_sha256": "6ec105136d47f8b25a271c0950ff11984709b7e876e207b45dad7805ccde33c0",
+  "failed_replacement_run_id": "gate2c-step02-drupal-20261001T225458Z-c5d0e6b2",
+  "further_replacement_admission_anchor_sha256": "045d32e7da973790c430041e95b8b1b849d9c0f1f5ea200a10a85b73470b1995",
+  "further_replacement_start_requires_separate_human_authorization": true,
+  "historical_start_authorizations_carried_forward": false,
+  "maximum_new_identities": 1,
+  "original_failed_family_aggregate_sha256": "1014dacee5194fed8a2c696145d792898d5c9b9399f20c548bdd6e6cd4137714",
+  "original_failed_run_id": "gate2c-step02-drupal-20261001T173201Z-545a1ba2",
+  "record_type": "ONE_RUN_DRUPAL_FURTHER_REPLACEMENT_AUTHORIZATION",
+  "repaired_installed_source_manifest_sha256": "2d41065f108edc37c0146d8cad7565cea4ee58f340d4df080eb4a59f6defaac8",
+  "replacement_reason": "PROCESS_IDENTITY_VERIFICATION_INSTRUMENTATION_DEFECT",
+  "run_id": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+  "schema_version": 1,
+  "scope": "one_fresh_model_free_drupal_further_replacement_identity_admission_only"
+}

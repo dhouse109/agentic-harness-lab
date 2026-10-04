@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.local/schemas/gate2c-step02-drupal-further-replacement-admission.schema.json",
+  "title": "Gate 2C.02 one further Drupal replacement admission",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_type", "status", "predecessor_installed_source_manifest_sha256", "original_failed_attempt", "failed_replacement_attempt", "replacement_reason", "future_repaired_source_epoch", "further_replacement_admission", "current_lifecycle"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema_version": {"const": 1},
+    "record_type": {"const": "DRUPAL_FURTHER_REPLACEMENT_ADMISSION_ANCHOR"},
+    "status": {"const": "EMPTY_SINGLE_USE_DRUPAL_FURTHER_REPLACEMENT_SLOT"},
+    "predecessor_installed_source_manifest_sha256": {"pattern": "^[0-9a-f]{64}$"},
+    "original_failed_attempt": {"type": "object"},
+    "failed_replacement_attempt": {
+      "type": "object",
+      "required": ["run_id", "status", "start_authorization", "admission_record_sha256", "aggregate_definition", "aggregate_sha256", "experimental_sigkill_delivered", "automatic_retry_count", "artifacts"],
+      "properties": {
+        "run_id": {"const": "gate2c-step02-drupal-20261001T225458Z-c5d0e6b2"},
+        "status": {"const": "FAILED_PRESERVED"},
+        "start_authorization": {"const": "CONSUMED"},
+        "admission_record_sha256": {"pattern": "^[0-9a-f]{64}$"},
+        "aggregate_definition": {"const": "SHA256_CANONICAL_JSON_SORTED_INVENTORY_PATH_SIZE_SHA256"},
+        "aggregate_sha256": {"pattern": "^[0-9a-f]{64}$"},
+        "experimental_sigkill_delivered": {"const": false},
+        "automatic_retry_count": {"const": 0},
+        "artifacts": {"type": "array", "minItems": 9, "maxItems": 9}
+      }
+    },
+    "replacement_reason": {"const": "PROCESS_IDENTITY_VERIFICATION_INSTRUMENTATION_DEFECT"},
+    "future_repaired_source_epoch": {"type": "object"},
+    "further_replacement_admission": {"type": "object"},
+    "current_lifecycle": {"type": "object"}
+  }
+}

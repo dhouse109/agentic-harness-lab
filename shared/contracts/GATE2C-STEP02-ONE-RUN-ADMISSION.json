@@ -1,0 +1,51 @@
+{
+  "$schema": "../schemas/gate2c-step02-one-run-transition.schema.json",
+  "schema_version": 1,
+  "admission_id": "gate2c-step02-one-offline-rehearsal-admission-v1.0.13",
+  "status": "EMPTY_SINGLE_USE_SLOT",
+  "predecessor_installed_source_manifest_sha256": "4809c2d228010f5a54f2e64fc3d196075c7aa7e1b20e90001f1dc8dcf5572708",
+  "historical_baseline": {
+    "family_count": 12,
+    "evidence_file_count": 39,
+    "original_runtime_artifact_count": 67,
+    "post_inspection_runtime_artifact_count": 4,
+    "physical_file_count": 110,
+    "canonical_inventory_sha256": "b123dade4e725e45401e2f580b0ed3987a1af5edd4576490c1c10a09c5a0d3be"
+  },
+  "admission": {
+    "maximum_new_identities": 1,
+    "allowed_kind": "offline",
+    "identity_pattern": "^gate2c-step02-offline-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{8}$",
+    "authorization_record_root": "evidence/gates/gate-2c/model-free-rehearsal-authorizations",
+    "family_evidence_root": "evidence/gates/gate-2c/model-free-rehearsals",
+    "family_runtime_root": ".cache/gate2c-step02",
+    "preservation_record_root": "evidence/gates/gate-2c/model-free-rehearsal-preservation",
+    "authorization_must_precede_worker_execution": true,
+    "authorization_and_worker_processes_are_separate": true,
+    "identity_reuse": "PROHIBITED",
+    "automatic_replacement_or_retry": "PROHIBITED"
+  },
+  "finalization": {
+    "outcomes": ["PASS", "FAIL", "TIMEOUT"],
+    "workers_must_be_stopped": true,
+    "open_writers_must_be_zero": true,
+    "inventory_roots": ["evidence", "runtime"],
+    "inventory_fields": ["path", "size", "sha256"],
+    "atomic_publication": true,
+    "success_requires_canonical_evidence_manifest": true,
+    "failure_or_timeout_prohibits_success_manifest": true,
+    "interrupted_finalization": "INCOMPLETE_FAIL_CLOSED",
+    "post_inspection_artifacts": "SEPARATE_ADDENDUM_REQUIRED_NOT_EXPERIMENTAL_STATE",
+    "audit_result": "INTEGRITY_AND_PROVENANCE_ONLY_NOT_EXPERIMENTAL_CERTIFICATION"
+  },
+  "unchanged_experiment_controls": {
+    "model_provider_or_Drupal_activity_authorized": false,
+    "framework_timeout_seconds": 30,
+    "one_attempt_no_retry": true,
+    "telemetry_control": "CREWAI_DISABLE_TELEMETRY=true",
+    "memory_factory": "public set_memory_storage_factory with RunScopedMemoryStorage",
+    "crewai_persistence": "SQLiteFlowPersistence",
+    "langgraph_persistence": "SqliteSaver synchronous durability",
+    "semantic_boundary": "after target 6 is fully persisted and before target 7 begins"
+  }
+}

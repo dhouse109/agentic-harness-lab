@@ -1,0 +1,30 @@
+{
+  "bootstrap_storage": {
+    "configured_before_worker_import": true,
+    "default_home_storage_avoided": true,
+    "fresh_run_scoped": true,
+    "mechanism": [
+      "XDG_DATA_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_CACHE_HOME"
+    ],
+    "separate_from_sqlite_flow_persistence": true,
+    "writable": true
+  },
+  "diagnostic_scope": "FLOW_CONSTRUCTION_ONLY",
+  "drupal_operations": 0,
+  "flow_constructed": true,
+  "flow_invoked": false,
+  "framework_origin": "crewai",
+  "lancedb_connect_entered": false,
+  "memory_storage_backend": "RunScopedMemoryStorage",
+  "model_free": true,
+  "model_generations": 0,
+  "provider_requests": 0,
+  "run_id": "gate2c-step02-startup-20260924T202432Z-b30ac8de-crewai",
+  "schema_version": 1,
+  "sigkill_delivered": false,
+  "stack_location_summary_sha256": "d962a4e85c5c20440673c3b663e1ae7ee1f97fcb2d001d21f63ce0bded3882b1",
+  "status": "PASS",
+  "trial_id": "gate2c-step02-startup-20260924T202432Z-b30ac8de"
+}

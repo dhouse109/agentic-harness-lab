@@ -1,0 +1,29 @@
+{
+  "completed_sequences": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "drupal_operations": 0,
+  "duplicate_count": 0,
+  "first_post_restart_target": 7,
+  "framework_origin": "langgraph",
+  "model_generations": 0,
+  "persistence": "SqliteSaver",
+  "provider_requests": 0,
+  "replay_count": 0,
+  "run_id": "gate2c-step02-offline-20260924T203449Z-1ec8feac-langgraph",
+  "schema_version": 1,
+  "status": "PASS",
+  "thread_id": "gate2c-step02-offline-20260924T203449Z-1ec8feac-langgraph",
+  "trial_id": "gate2c-step02-offline-20260924T203449Z-1ec8feac"
+}

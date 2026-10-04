@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.example/shared/schemas/gate2c-step02-one-run-transition.schema.json",
+  "title": "Gate 2C.02 one-run admission and preservation records",
+  "oneOf": [
+    {"$ref": "#/$defs/admissionAnchor"},
+    {"$ref": "#/$defs/authorizationRecord"},
+    {"$ref": "#/$defs/finalizationRecord"},
+    {"$ref": "#/$defs/postInspectionAddendum"}
+  ],
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "inventoryEntry": {
+      "type": "object",
+      "required": ["path", "size", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "size": {"type": "integer", "minimum": 0},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "additionalProperties": false
+    },
+    "legacyCleanupClassification": {
+      "description": "Immutable v1.0.13 shape; the permanent audit permits it only for the exact hash-bound historical anomaly.",
+      "type": "object",
+      "required": ["required", "signal", "classification"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "signal": {"type": ["integer", "null"]},
+        "classification": {"enum": ["NONE", "NON_EXPERIMENTAL_TIMEOUT_OR_FAILURE_CLEANUP"]}
+      },
+      "additionalProperties": false
+    },
+    "cleanupClassification": {
+      "type": "object",
+      "required": ["required", "signal", "classification", "source", "outer_process_timed_out", "supervisor_internal_timeout", "evidence_path", "evidence_sha256"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "signal": {"type": ["integer", "null"], "minimum": 1},
+        "classification": {"enum": ["NONE", "NON_EXPERIMENTAL_TIMEOUT_OR_FAILURE_CLEANUP"]},
+        "source": {"enum": ["NONE", "OUTER_COMMAND_DIAGNOSTIC", "SUPERVISOR_DIAGNOSTIC"]},
+        "outer_process_timed_out": {"type": "boolean"},
+        "supervisor_internal_timeout": {"type": "boolean"},
+        "evidence_path": {"type": ["string", "null"]},
+        "evidence_sha256": {"oneOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]}
+      },
+      "additionalProperties": false
+    },
+    "admissionAnchor": {
+      "type": "object",
+      "required": ["$schema", "schema_version", "admission_id", "status", "predecessor_installed_source_manifest_sha256", "historical_baseline", "admission", "finalization", "unchanged_experiment_controls"],
+      "properties": {
+        "$schema": {"const": "../schemas/gate2c-step02-one-run-transition.schema.json"},
+        "schema_version": {"const": 1},
+        "admission_id": {"const": "gate2c-step02-one-offline-rehearsal-admission-v1.0.13"},
+        "status": {"const": "EMPTY_SINGLE_USE_SLOT"},
+        "predecessor_installed_source_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "historical_baseline": {
+          "type": "object",
+          "required": ["family_count", "evidence_file_count", "original_runtime_artifact_count", "post_inspection_runtime_artifact_count", "physical_file_count", "canonical_inventory_sha256"],
+          "properties": {
+            "family_count": {"const": 12},
+            "evidence_file_count": {"const": 39},
+            "original_runtime_artifact_count": {"const": 67},
+            "post_inspection_runtime_artifact_count": {"const": 4},
+            "physical_file_count": {"const": 110},
+            "canonical_inventory_sha256": {"$ref": "#/$defs/sha256"}
+          },
+          "additionalProperties": false
+        },
+        "admission": {
+          "type": "object",
+          "required": ["maximum_new_identities", "allowed_kind", "identity_pattern", "authorization_record_root", "family_evidence_root", "family_runtime_root", "preservation_record_root", "authorization_must_precede_worker_execution", "authorization_and_worker_processes_are_separate", "identity_reuse", "automatic_replacement_or_retry"],
+          "properties": {
+            "maximum_new_identities": {"const": 1},
+            "allowed_kind": {"const": "offline"},
+            "identity_pattern": {"type": "string"},
+            "authorization_record_root": {"type": "string"},
+            "family_evidence_root": {"type": "string"},
+            "family_runtime_root": {"type": "string"},
+            "preservation_record_root": {"type": "string"},
+            "authorization_must_precede_worker_execution": {"const": true},
+            "authorization_and_worker_processes_are_separate": {"const": true},
+            "identity_reuse": {"const": "PROHIBITED"},
+            "automatic_replacement_or_retry": {"const": "PROHIBITED"}
+          },
+          "additionalProperties": false
+        },
+        "finalization": {
+          "type": "object",
+          "required": ["outcomes", "workers_must_be_stopped", "open_writers_must_be_zero", "inventory_roots", "inventory_fields", "atomic_publication", "success_requires_canonical_evidence_manifest", "failure_or_timeout_prohibits_success_manifest", "interrupted_finalization", "post_inspection_artifacts", "audit_result"],
+          "properties": {
+            "outcomes": {"const": ["PASS", "FAIL", "TIMEOUT"]},
+            "workers_must_be_stopped": {"const": true},
+            "open_writers_must_be_zero": {"const": true},
+            "inventory_roots": {"const": ["evidence", "runtime"]},
+            "inventory_fields": {"const": ["path", "size", "sha256"]},
+            "atomic_publication": {"const": true},
+            "success_requires_canonical_evidence_manifest": {"const": true},
+            "failure_or_timeout_prohibits_success_manifest": {"const": true},
+            "interrupted_finalization": {"const": "INCOMPLETE_FAIL_CLOSED"},
+            "post_inspection_artifacts": {"const": "SEPARATE_ADDENDUM_REQUIRED_NOT_EXPERIMENTAL_STATE"},
+            "audit_result": {"const": "INTEGRITY_AND_PROVENANCE_ONLY_NOT_EXPERIMENTAL_CERTIFICATION"}
+          },
+          "additionalProperties": false
+        },
+        "unchanged_experiment_controls": {"type": "object"}
+      },
+      "additionalProperties": false
+    },
+    "authorizationRecord": {
+      "type": "object",
+      "required": ["$schema", "schema_version", "record_type", "run_id", "authorized_at", "authorization_boundary", "admission_anchor_sha256", "predecessor_source_manifest_sha256", "historical_inventory_sha256", "maximum_new_identities", "replacement_or_retry_authorized", "scope"],
+      "properties": {
+        "$schema": {"const": "../../../../shared/schemas/gate2c-step02-one-run-transition.schema.json"},
+        "schema_version": {"const": 1},
+        "record_type": {"const": "ONE_RUN_AUTHORIZATION"},
+        "run_id": {"type": "string", "pattern": "^gate2c-step02-offline-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{8}$"},
+        "authorized_at": {"type": "string", "format": "date-time"},
+        "authorization_boundary": {"const": "explicit_human_authorization_before_worker_execution"},
+        "admission_anchor_sha256": {"$ref": "#/$defs/sha256"},
+        "predecessor_source_manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "historical_inventory_sha256": {"$ref": "#/$defs/sha256"},
+        "maximum_new_identities": {"const": 1},
+        "replacement_or_retry_authorized": {"const": false},
+        "scope": {"const": "one_model_free_offline_rehearsal_identity_only"}
+      },
+      "additionalProperties": false
+    },
+    "finalizationRecord": {
+      "type": "object",
+      "required": ["$schema", "schema_version", "record_type", "run_id", "authorization_sha256", "outcome", "finalized_at", "workers_stopped", "open_writer_count", "experimental_termination", "non_experimental_cleanup", "evidence_inventory", "runtime_inventory", "evidence_inventory_sha256", "runtime_inventory_sha256", "canonical_success_manifest", "integrity_status", "certification_status"],
+      "properties": {
+        "$schema": {"const": "../../../../shared/schemas/gate2c-step02-one-run-transition.schema.json"},
+        "schema_version": {"const": 1},
+        "record_type": {"const": "ONE_RUN_FINALIZATION"},
+        "run_id": {"type": "string"},
+        "authorization_sha256": {"$ref": "#/$defs/sha256"},
+        "outcome": {"enum": ["PASS", "FAIL", "TIMEOUT"]},
+        "finalized_at": {"type": "string", "format": "date-time"},
+        "workers_stopped": {"const": true},
+        "open_writer_count": {"const": 0},
+        "experimental_termination": {"type": "object"},
+        "non_experimental_cleanup": {
+          "oneOf": [
+            {"$ref": "#/$defs/cleanupClassification"},
+            {"$ref": "#/$defs/legacyCleanupClassification"}
+          ]
+        },
+        "evidence_inventory": {"type": "array", "items": {"$ref": "#/$defs/inventoryEntry"}},
+        "runtime_inventory": {"type": "array", "items": {"$ref": "#/$defs/inventoryEntry"}},
+        "evidence_inventory_sha256": {"$ref": "#/$defs/sha256"},
+        "runtime_inventory_sha256": {"$ref": "#/$defs/sha256"},
+        "canonical_success_manifest": {"enum": ["VERIFIED", "PROHIBITED_FOR_NON_PASS"]},
+        "integrity_status": {"const": "FINALIZED_AND_HASH_BOUND"},
+        "certification_status": {"const": "NOT_HUMAN_CERTIFIED"}
+      },
+      "additionalProperties": false
+    },
+    "postInspectionAddendum": {
+      "type": "object",
+      "required": ["$schema", "schema_version", "record_type", "run_id", "finalization_sha256", "recorded_at", "classification", "artifacts"],
+      "properties": {
+        "$schema": {"const": "../../../../shared/schemas/gate2c-step02-one-run-transition.schema.json"},
+        "schema_version": {"const": 1},
+        "record_type": {"const": "POST_INSPECTION_ADDENDUM"},
+        "run_id": {"type": "string"},
+        "finalization_sha256": {"$ref": "#/$defs/sha256"},
+        "recorded_at": {"type": "string", "format": "date-time"},
+        "classification": {"const": "POST_INSPECTION_NOT_EXPERIMENTAL_STATE"},
+        "artifacts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/inventoryEntry"}}
+      },
+      "additionalProperties": false
+    }
+  }
+}

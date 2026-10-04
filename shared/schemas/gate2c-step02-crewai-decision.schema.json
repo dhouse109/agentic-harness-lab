@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.example/shared/schemas/gate2c-step02-crewai-decision.schema.json",
+  "title": "Gate 2C Step 2C.02 CrewAI recovery architecture decision",
+  "type": "object",
+  "required": [
+    "schema_version", "decision_id", "rehearsal_run_id", "contract_sha256",
+    "candidate", "machine_recommendation", "human_decision", "decided_by",
+    "decided_at", "authorization_binding", "pass_family_binding",
+    "diagnostic_environment_history", "lifecycle_boundary", "scope"
+  ],
+  "properties": {
+    "schema_version": {"const": 2},
+    "decision_id": {"type": "string", "pattern": "^gate2c-step02-crewai-recovery-architecture-decision-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{8}$"},
+    "rehearsal_run_id": {"type": "string", "pattern": "^gate2c-step02-offline-[0-9]{8}T[0-9]{6}Z-[a-z0-9]{8}$"},
+    "contract_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "candidate": {"type": "string", "minLength": 1},
+    "machine_recommendation": {"const": "APPROVAL_READY"},
+    "human_decision": {"enum": ["APPROVED", "REJECTED"]},
+    "decided_by": {"const": "human_operator"},
+    "decided_at": {"type": "string", "format": "date-time"},
+    "authorization_binding": {
+      "type": "object",
+      "required": [
+        "authorization_path", "authorization_sha256", "authorization_record_type",
+        "identity_allocation_preflight_sha256", "runtime_authorization_binding_path",
+        "runtime_authorization_binding_sha256", "execution_preflight_sha256",
+        "rehearsal_installed_source_manifest_path", "rehearsal_installed_source_manifest_sha256"
+      ],
+      "properties": {
+        "authorization_path": {"type": "string", "minLength": 1},
+        "authorization_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "authorization_record_type": {"const": "CORRECTED_ENVIRONMENT_ONE_RUN_AUTHORIZATION"},
+        "identity_allocation_preflight_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "runtime_authorization_binding_path": {"type": "string", "minLength": 1},
+        "runtime_authorization_binding_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "execution_preflight_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "rehearsal_installed_source_manifest_path": {"const": "shared/contracts/GATE2C-STEP02-INSTALLED-SOURCE-SHA256.txt"},
+        "rehearsal_installed_source_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    },
+    "pass_family_binding": {
+      "type": "object",
+      "required": [
+        "evidence_root", "evidence_manifest_path", "evidence_manifest_sha256",
+        "finalization_path", "finalization_sha256", "outcome", "integrity_status",
+        "certification_status"
+      ],
+      "properties": {
+        "evidence_root": {"type": "string", "minLength": 1},
+        "evidence_manifest_path": {"type": "string", "minLength": 1},
+        "evidence_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "finalization_path": {"type": "string", "minLength": 1},
+        "finalization_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "outcome": {"const": "PASS"},
+        "integrity_status": {"const": "FINALIZED_AND_HASH_BOUND"},
+        "certification_status": {"const": "NOT_HUMAN_CERTIFIED"}
+      },
+      "additionalProperties": false
+    },
+    "diagnostic_environment_history": {
+      "type": "object",
+      "required": [
+        "corrected_environment_admission_path", "corrected_environment_admission_sha256",
+        "execution_environment_finding_path", "execution_environment_finding_sha256",
+        "historical_inventory_sha256", "retained_baseline_inventory_sha256",
+        "historical_finalizations", "preservation_manifests"
+      ],
+      "properties": {
+        "corrected_environment_admission_path": {"type": "string", "minLength": 1},
+        "corrected_environment_admission_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "execution_environment_finding_path": {"type": "string", "minLength": 1},
+        "execution_environment_finding_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "historical_inventory_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "retained_baseline_inventory_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "historical_finalizations": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["run_id", "path", "sha256", "outcome"],
+            "properties": {
+              "run_id": {"type": "string", "minLength": 1},
+              "path": {"type": "string", "minLength": 1},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+              "outcome": {"const": "FAIL"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "preservation_manifests": {
+          "type": "array", "minItems": 8, "maxItems": 8,
+          "items": {
+            "type": "object",
+            "required": ["package", "sha256"],
+            "properties": {
+              "package": {"type": "string", "minLength": 1},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "lifecycle_boundary": {
+      "type": "object",
+      "required": [
+        "step_2c02_certification", "gate_2c", "gate_2", "additional_rehearsal_authorized",
+        "step_2c03_authorized", "latest_pointer_update_authorized"
+      ],
+      "properties": {
+        "step_2c02_certification": {"const": "NOT_PERFORMED"},
+        "gate_2c": {"const": "DEFERRED_UNCLAIMED"},
+        "gate_2": {"const": "NOT_COMPLETE"},
+        "additional_rehearsal_authorized": {"const": false},
+        "step_2c03_authorized": {"const": false},
+        "latest_pointer_update_authorized": {"const": false}
+      },
+      "additionalProperties": false
+    },
+    "scope": {"const": "Gate_2C_CrewAI_process_recovery_architecture_only_no_live_execution_authorization"}
+  },
+  "additionalProperties": false
+}

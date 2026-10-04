@@ -1,0 +1,14 @@
+{
+  "diagnostic": {
+    "executable": "python",
+    "returncode": 1,
+    "sanitized_stderr": "Traceback (most recent call last):\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 241, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 237, in main\n    return run(parser.parse_args())\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 161, in run\n    wait_for(seam_path, process, args.timeout)\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 132, in wait_for\n    raise RuntimeError(\"timed out waiting for seam-ready\")\nRuntimeError: timed out waiting for seam-ready\n",
+    "stage": "crewai_termination",
+    "stderr_truncated": false
+  },
+  "recorded_at": "2026-09-23T10:59:05.455039+00:00",
+  "replacement_automatic": false,
+  "run_id": "gate2c-step02-offline-20260923T105822Z-ba36ceed",
+  "schema_version": 1,
+  "status": "FAILED_PRESERVED"
+}

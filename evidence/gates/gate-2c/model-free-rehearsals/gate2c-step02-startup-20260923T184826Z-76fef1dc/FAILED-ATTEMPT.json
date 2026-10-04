@@ -1,0 +1,20 @@
+{
+  "diagnostic": {
+    "cleanup_is_not_experimental_sigkill": true,
+    "cleanup_signal": 9,
+    "executable": "python",
+    "experimental_sigkill_delivered": false,
+    "returncode": -9,
+    "sanitized_stderr": "",
+    "stage": "crewai_startup_diagnostic",
+    "stderr_truncated": false,
+    "timed_out": true
+  },
+  "phase": "crewai_startup_diagnostic",
+  "recorded_at": "2026-09-23T18:49:09.105991+00:00",
+  "replacement_automatic": false,
+  "run_id": "gate2c-step02-startup-20260923T184826Z-76fef1dc",
+  "schema_version": 1,
+  "stack_location_summary_sha256": "d65b75a3e43823c360e7cf2b4e35f7b5866ea98237962a63d092862c1d9a97db",
+  "status": "FAILED_PRESERVED"
+}

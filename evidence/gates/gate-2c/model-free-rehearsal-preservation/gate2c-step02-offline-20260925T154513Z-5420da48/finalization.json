@@ -1,0 +1,120 @@
+{
+  "$schema": "../../../../shared/schemas/gate2c-step02-one-run-transition.schema.json",
+  "authorization_sha256": "c5827b91aae862dca52ecfc7b6618e0ef1e007404cc68c029da5929a7a8ecfb3",
+  "canonical_success_manifest": "PROHIBITED_FOR_NON_PASS",
+  "certification_status": "NOT_HUMAN_CERTIFIED",
+  "evidence_inventory": [
+    {
+      "path": "FAILED-ATTEMPT.json",
+      "sha256": "007628eb6671458a2cfca55bd7d82cc11758957b529c3a0c3a1db345a52195d6",
+      "size": 1507
+    },
+    {
+      "path": "authorization-ledger.json",
+      "sha256": "7f119b152a29240245b093993ecbf31093522beb8c2b27ecb355f36d9efefd29",
+      "size": 377
+    },
+    {
+      "path": "crewai-startup-diagnostic.json",
+      "sha256": "3a5437721bd10978684d46c7b942bb597a703fe66cc397bbadbd5a623a4449e1",
+      "size": 1205
+    },
+    {
+      "path": "langgraph-recovery.json",
+      "sha256": "7c36896b9e4f3762ec490774f7125629a67bc45663c8eaa979e78241454deaaa",
+      "size": 602
+    },
+    {
+      "path": "langgraph-termination.json",
+      "sha256": "b52472f256995a5039b3a58ea78e09b9c56d42bdf6ed790be87d051353b00c48",
+      "size": 878
+    }
+  ],
+  "evidence_inventory_sha256": "ea02d3d6df4124d0162de43af2b4e8c621d7f1f838d9945cd4d76e55226d542e",
+  "experimental_termination": {
+    "records": [
+      {
+        "actual_worker_terminated": true,
+        "observed_signal": 9,
+        "path": "langgraph-termination.json",
+        "status": "PASS"
+      }
+    ]
+  },
+  "finalized_at": "2026-09-25T15:52:12.529374+00:00",
+  "integrity_status": "FINALIZED_AND_HASH_BOUND",
+  "non_experimental_cleanup": {
+    "classification": "NONE",
+    "required": false,
+    "signal": null
+  },
+  "open_writer_count": 0,
+  "outcome": "FAIL",
+  "record_type": "ONE_RUN_FINALIZATION",
+  "run_id": "gate2c-step02-offline-20260925T154513Z-5420da48",
+  "runtime_inventory": [
+    {
+      "path": "authorization-binding.json",
+      "sha256": "ae52f297c0cecd5ffd0a519943775eb65271f980ef7434e79a50c0044df34b56",
+      "size": 432
+    },
+    {
+      "path": "crewai/expected-host-pid.txt",
+      "sha256": "076320a2a08267b4c026d06573bba408ea68841e73cdc20e62cce59de165ece3",
+      "size": 3
+    },
+    {
+      "path": "crewai/startup-phases.jsonl",
+      "sha256": "2dd183f164f2e48ca03e09a0cb667aac9f0dbb2427c3e9a5d4d5d0e4a4e59d91",
+      "size": 2804
+    },
+    {
+      "path": "crewai/state.sqlite",
+      "sha256": "8c5cec3b085f2c239e9163abb014a7255a7bb64ab52c9e6cc1662e34bf5ff5aa",
+      "size": 28672
+    },
+    {
+      "path": "crewai/worker-command.json",
+      "sha256": "545f925ad8006b0dc562042a5a6bd6313bf6d5016c066198732d687257108b0f",
+      "size": 763
+    },
+    {
+      "path": "langgraph/checkpoint-verifier-command.json",
+      "sha256": "57ab02d2e53cfca4e6cde32cb1c4cfeb03123f8744b2041434b1af1bbca32d31",
+      "size": 841
+    },
+    {
+      "path": "langgraph/durable-checkpoint.json",
+      "sha256": "a8b9e3f2fc1b9ed0753b2d9cfa952eb3b9b539eaae20984ebd3a62f0f465361f",
+      "size": 1092
+    },
+    {
+      "path": "langgraph/expected-host-pid.txt",
+      "sha256": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+      "size": 2
+    },
+    {
+      "path": "langgraph/midpoint.json",
+      "sha256": "cacab0ef2371fd59af03fe0ec0b37083039c596d039a24b381911e26b09c2275",
+      "size": 776
+    },
+    {
+      "path": "langgraph/seam-ready.json",
+      "sha256": "ca9ff8a63b175125a3d1592df6e29a2c488832762f56ccec2b97303a880fb4ef",
+      "size": 583
+    },
+    {
+      "path": "langgraph/state.sqlite",
+      "sha256": "c4cc24acd5ccc907ba0762acfb54b3f1c712e5b60bf1d68b165f576e2910d503",
+      "size": 163840
+    },
+    {
+      "path": "langgraph/worker-command.json",
+      "sha256": "f98b88038f936d07c207c8a4c158d27f32475d531b70db86ce54590eb467a19e",
+      "size": 664
+    }
+  ],
+  "runtime_inventory_sha256": "5e74a39d6021d140ae5cf72af7a51dc38bbfd7e4a67a522a934cdef27e79a5a7",
+  "schema_version": 1,
+  "workers_stopped": true
+}

@@ -1,0 +1,33 @@
+{
+  "actual_worker_identity_verified": false,
+  "automatic_retry_count": 0,
+  "bounded_sanitized_stderr": "Transient error HTTPSConnectionPool(host='telemetry.crewai.com', port=4319): Max retries exceeded with url: /v1/traces (Caused by NameResolutionError(\"HTTPSConnection(host='telemetry.crewai.com', port=4319): Failed to resolve 'telemetry.crewai.com' ([Errno -2] Name or service not known)\")) encountered while exporting span batch, retrying in 1.13s.\nTransient error HTTPSConnectionPool(host='telemetry.crewai.com', port=4319): Max retries exceeded with url: /v1/traces (Caused by NameResolutionError(\"HTTPSConnection(host='telemetry.crewai.com', port=4319): Failed to resolve 'telemetry.crewai.com' ([Errno -2] Name or service not known)\")) encountered while exporting span batch, retrying in 1.87s.\nTransient error HTTPSConnectionPool(host='telemetry.crewai.com', port=4319): Max retries exceeded with url: /v1/traces (Caused by NameResolutionError(\"HTTPSConnection(host='telemetry.crewai.com', port=4319): Failed to resolve 'telemetry.crewai.com' ([Errno -2] Name or service not known)\")) encountered while exporting span batch, retrying in 4.79s.\nTransient error HTTPSConnectionPool(host='telemetry.crewai.com', port=4319): Max retries exceeded with url: /v1/traces (Caused by NameResolutionError(\"HTTPSConnection(host='telemetry.crewai.com', port=4319): Failed to resolve 'telemetry.crewai.com' ([Errno -2] Name or service not known)\")) encountered while exporting span batch, retrying in 9.33s.\nFailed to export span batch due to timeout, max retries or shutdown.\n",
+  "cleanup_is_not_experimental_sigkill": true,
+  "cleanup_signal_observed": 9,
+  "cleanup_termination_required": true,
+  "completed_phase_count": 9,
+  "completed_phases": [
+    "worker_process_initialized",
+    "xdg_storage_validated",
+    "crewai_import_started",
+    "crewai_import_completed",
+    "sqlite_persistence_initialization_started",
+    "sqlite_persistence_initialized",
+    "flow_construction_started_memory_initialization_pending",
+    "flow_construction_and_memory_initialization_completed",
+    "flow_invocation_started"
+  ],
+  "connection_boundary_classification": "NOT_INSTRUMENTED",
+  "experimental_sigkill_delivered": false,
+  "failure_reason": "timeout_waiting_for_seam",
+  "framework_origin": "crewai",
+  "last_completed_phase": "flow_invocation_started",
+  "run_id": "gate2c-step02-offline-20260924T203449Z-1ec8feac-crewai",
+  "schema_version": 1,
+  "seam_ready_verified": false,
+  "status": "FAILED_BEFORE_VERIFIED_SEAM",
+  "stderr_truncated": false,
+  "timeout_seconds": 30.0,
+  "trial_id": "gate2c-step02-offline-20260924T203449Z-1ec8feac",
+  "worker_returncode": -9
+}

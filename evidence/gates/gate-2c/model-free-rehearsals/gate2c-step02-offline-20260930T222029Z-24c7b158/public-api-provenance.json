@@ -1,0 +1,28 @@
+{
+  "contract_sha256": "3c4801e6eb35d40d94e066c70017d3acebca95183e7e544646be6e2b40aa5ec6",
+  "crewai": [
+    "SQLiteFlowPersistence.load_state",
+    "Flow.kickoff(inputs={id: same_flow_id})"
+  ],
+  "crewai_bootstrap_storage": {
+    "configured_before_worker_import": true,
+    "default_home_storage_avoided": true,
+    "fresh_run_scoped": true,
+    "mechanism": [
+      "XDG_DATA_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_CACHE_HOME"
+    ],
+    "separate_from_sqlite_flow_persistence": true,
+    "writable": true
+  },
+  "langgraph": [
+    "SqliteSaver.from_conn_string",
+    "SqliteSaver.get_tuple",
+    "compiled_graph.get_state",
+    "compiled_graph.invoke(durability=sync)"
+  ],
+  "prohibited_private_apis_used": false,
+  "schema_version": 1,
+  "status": "PASS"
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "../schemas/gate2c-step02-drupal-further-replacement-admission.schema.json",
+  "schema_version": 1,
+  "record_type": "DRUPAL_FURTHER_REPLACEMENT_ADMISSION_ANCHOR",
+  "status": "EMPTY_SINGLE_USE_DRUPAL_FURTHER_REPLACEMENT_SLOT",
+  "predecessor_installed_source_manifest_sha256": "2c634fe8a719cf453668d2c19aab3131696f84667d073221775c3bd81933e768",
+  "original_failed_attempt": {
+    "run_id": "gate2c-step02-drupal-20261001T173201Z-545a1ba2",
+    "status": "FAILED_PRESERVED",
+    "start_authorization": "CONSUMED",
+    "aggregate_sha256": "1014dacee5194fed8a2c696145d792898d5c9b9399f20c548bdd6e6cd4137714"
+  },
+  "failed_replacement_attempt": {
+    "run_id": "gate2c-step02-drupal-20261001T225458Z-c5d0e6b2",
+    "status": "FAILED_PRESERVED",
+    "start_authorization": "CONSUMED",
+    "admission_record_sha256": "7cf5ec3fc346632fe121e9154d76e7d6d6f009e053fec8e1aed3a45626a774cf",
+    "aggregate_definition": "SHA256_CANONICAL_JSON_SORTED_INVENTORY_PATH_SIZE_SHA256",
+    "aggregate_sha256": "6ec105136d47f8b25a271c0950ff11984709b7e876e207b45dad7805ccde33c0",
+    "experimental_sigkill_delivered": false,
+    "automatic_retry_count": 0,
+    "artifacts": [
+      {"path": "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261001T225458Z-c5d0e6b2/control/expected-host-pid.txt", "size": 7, "sha256": "6c754b0616340013570400464f68f0e3e73cfc91cbd65e5c2d28d5d0a6770754"},
+      {"path": "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261001T225458Z-c5d0e6b2/control/midpoint.json", "size": 1241, "sha256": "925b6c396b399f3237d5daabdc5a5ae4ea326459342812f5623bc0d9e6e8e97d"},
+      {"path": "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261001T225458Z-c5d0e6b2/control/seam-ready.json", "size": 825, "sha256": "f84a32479a26195f5fd600c10882a34430d9acc5c6daf877389cb6015b121f09"},
+      {"path": "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261001T225458Z-c5d0e6b2/kill-command.json", "size": 52, "sha256": "3ea3c7ce75d356913333752af2328801124b819602e618a7378bf4b25e0a3b0b"},
+      {"path": "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261001T225458Z-c5d0e6b2/process-check-command.json", "size": 191, "sha256": "87494badb3a727c5fba0e068bb07845f8bc6ec499e2ac4ed43f0810fde1f869d"},
+      {"path": "drupal/.cache/gate2c-step02/gate2c-step02-drupal-20261001T225458Z-c5d0e6b2/worker-command.json", "size": 268, "sha256": "b82cb0c0dedd5ba75bc303022b996dd3b240e39b93318d19f6c3486b1a300ccf"},
+      {"path": "evidence/gates/gate-2c/model-free-rehearsals/gate2c-step02-drupal-20261001T225458Z-c5d0e6b2/FAILED-ATTEMPT.json", "size": 1645, "sha256": "aabb4a4a5eeab09bb67676393f2b733e1225bd3a0149b5fb6b22eaeb04a112db"},
+      {"path": "evidence/gates/gate-2c/model-free-rehearsals/gate2c-step02-drupal-20261001T225458Z-c5d0e6b2/authorization-ledger.json", "size": 858, "sha256": "1bb3332826eb514780093d304caff5a956ffffcfa56b88b2d02546480558f3af"},
+      {"path": "evidence/gates/gate-2c/model-free-rehearsals/gate2c-step02-drupal-20261001T225458Z-c5d0e6b2/drupal-pre-seam-diagnostic.json", "size": 1146, "sha256": "1ea434c9823a1df30b9e13891ab0f784ab060ea46c04834daa5f21b7a1ef3c04"}
+    ]
+  },
+  "replacement_reason": "PROCESS_IDENTITY_VERIFICATION_INSTRUMENTATION_DEFECT",
+  "future_repaired_source_epoch": {
+    "manifest_path": "shared/contracts/GATE2C-STEP02-INSTALLED-SOURCE-SHA256.txt",
+    "allocation_record_must_bind_current_manifest_sha256": true,
+    "execution_must_match_allocated_manifest_sha256": true
+  },
+  "further_replacement_admission": {
+    "identity_allocation": "DEFERRED_UNTIL_SEPARATE_HUMAN_AUTHORIZATION",
+    "maximum_new_identities": 1,
+    "historical_identity_reuse": "PROHIBITED",
+    "consumed_start_authorization_carry_forward": "PROHIBITED",
+    "automatic_retry": false,
+    "additional_replacements_after_this_slot": 0,
+    "execution_authorized": false,
+    "allocation_requires_separate_human_authorization": true,
+    "execution_requires_separate_human_authorization": true
+  },
+  "current_lifecycle": {
+    "step_2c02": "INCOMPLETE_UNCERTIFIED",
+    "reset": "NOT_PERFORMED",
+    "gate_2c": "DEFERRED_UNCLAIMED",
+    "gate_2": "NOT_COMPLETE",
+    "step_2c03": "NOT_AUTHORIZED"
+  }
+}

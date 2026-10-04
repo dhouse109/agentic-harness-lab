@@ -1,0 +1,137 @@
+{
+  "$schema": "../../schemas/gate2c-step02-model-free-rehearsal.schema.json",
+  "schema_version": 1,
+  "plan_id": "gate2c-step02-model-free-rehearsal-plan-1.0.0",
+  "step": "2C.02",
+  "status": "PREPARED_NOT_EXECUTED",
+  "repository_predecessor": {
+    "branch": "main",
+    "merge_sha": "03816e141f77820e42486fcbad9db244939cd7a8"
+  },
+  "gate2c_contract": {
+    "path": "shared/contracts/GATE2C-SHARED-FAILURE-RECOVERY-CONTRACT.json",
+    "sha256": "3c4801e6eb35d40d94e066c70017d3acebca95183e7e544646be6e2b40aa5ec6",
+    "certification_run_id": "gate2c-step01-20260922T113303Z-fd9cdb75"
+  },
+  "predecessor_freezes": {
+    "drupal_ai": "2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd",
+    "langgraph": "a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0",
+    "crewai": "74e2baad0cbe612dcd7e72ccdc264b01960ee12e09cfb0ae3154969b6055c206"
+  },
+  "semantic_boundary": "after target 6 is fully persisted and before target 7 begins",
+  "failure_class": "SIGKILL_ACTUAL_FRAMEWORK_WORKER_AFTER_INDEPENDENT_SEAM_VERIFICATION",
+  "mode": "MODEL_FREE_WITH_SEPARATELY_AUTHORIZED_DISPOSABLE_REHEARSAL_BOUNDARIES",
+  "frozen_controls": {
+    "article_count": 20,
+    "target_count": 12,
+    "target_sequence_sha256": "1f6132da02069f825cde52500242350e9ad6e85537c6c5407677e82d0e653728",
+    "provider": "OpenAI",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "temperature": 0.0,
+    "validator": "gate05-validator-1.0.0",
+    "review_destination": "alt_text_suggestion",
+    "reviewer_authority": "editor_dana",
+    "source_mutation": "PROHIBITED",
+    "automatic_publication": "PROHIBITED"
+  },
+  "phases": [
+    {
+      "name": "install",
+      "authorization": "package_execution_approval",
+      "operations": ["install_exact_previewed_scope", "predecessor_audit", "installed_static_audit"],
+      "prohibited": ["model_provider", "Drupal_write", "snapshot", "framework_worker", "SIGKILL", "decision"]
+    },
+    {
+      "name": "offline_rehearsal",
+      "authorization": "explicit_disposable_failure_rehearsal_approval",
+      "operations": ["local_disposable_SIGKILL", "LangGraph_model_free_worker", "CrewAI_model_free_worker", "sanitized_evidence"],
+      "prohibited": ["model_provider", "Drupal", "snapshot", "recommendation", "source_mutation"]
+    },
+    {
+      "name": "drupal_and_reset_rehearsal",
+      "authorization": "separate_explicit_2C.02_snapshot_reset_or_Drupal_rehearsal_approval",
+      "operations": ["dedicated_model_free_Drupal_worker", "persistent_lock_observation", "declared_reset_restoration_proof"],
+      "prohibited": ["model_provider", "recommendation", "source_mutation", "lock_clear_shorten_delete_bypass_or_replacement"]
+    },
+    {
+      "name": "crewai_human_decision",
+      "authorization": "explicit_human_approve_or_reject_after_model_free_evidence",
+      "operations": ["record_approve_or_reject_only"],
+      "prohibited": ["automatic_decision", "silent_architecture_change", "runtime_execution"]
+    },
+    {
+      "name": "finalize",
+      "authorization": "explicit_Step_2C.02_evidence_acceptance",
+      "operations": ["certify_model_free_evidence", "update_lifecycle_documents", "write_exact_pointer"],
+      "prohibited": ["Gate_2C.03", "model_provider", "Drupal_write", "snapshot", "failure_injection"]
+    }
+  ],
+  "framework_mappings": [
+    {
+      "origin": "drupal_ai",
+      "worker": "PHP Drush worker inside DDEV",
+      "persistence": "Drupal key/value run state",
+      "recovery": "same stored run through frozen resume surface",
+      "proof_scope": "dedicated model-free state and lock rehearsal plus frozen-source binding; not an authoritative recovery result"
+    },
+    {
+      "origin": "langgraph",
+      "worker": "host Python process",
+      "persistence": "per-run SqliteSaver with thread_id equal to run_id",
+      "recovery": "public compiled-graph invocation against the same database and thread",
+      "proof_scope": "disposable real LangGraph process boundary with zero model and Drupal activity"
+    },
+    {
+      "origin": "crewai",
+      "worker": "host Python Flow process",
+      "persistence": "fresh SQLiteFlowPersistence keyed by run and Flow identity",
+      "recovery": "public load_state inspection followed by public kickoff inputs id hydration of the same Flow identity",
+      "proof_scope": "candidate proof only; human approval or rejection remains mandatory"
+    }
+  ],
+  "crewai_recovery_architecture": {
+    "decision_status": "PENDING_MODEL_FREE_PROOF_AND_HUMAN_DECISION",
+    "candidate": "public SQLiteFlowPersistence.load_state plus public Flow.kickoff inputs id hydration of the same Flow identity",
+    "approval_requires": [
+      "public_API_source_provenance",
+      "fresh_runtime_and_Flow_identity",
+      "persisted_target_6_state_loaded_without_mutation",
+      "target_7_first_post_restart_work",
+      "zero_target_1_through_6_replay",
+      "zero_duplicate_recommendation_identity",
+      "zero_provider_activity",
+      "single_recovery_owner",
+      "deterministic_error_propagation",
+      "privacy_and_isolation_pass"
+    ],
+    "automatic_resolution": "PROHIBITED"
+  },
+  "drupal_lock_policy": {
+    "lease_seconds": 1800,
+    "mutation": "PROHIBITED",
+    "immediate_and_post_natural_expiry_invocations_are_separately_authorized": true,
+    "dedicated_rehearsal_lock_is_not_authoritative_framework_evidence": true
+  },
+  "retained_gate2b_snapshot": {
+    "path": "drupal/.ddev/db_snapshots/gate2b-step06-post-step2b05-recovery-20260826T152003Z-mariadb_11.8.zst",
+    "sha256": "4ba4cece2d30a5f90699afdf9a2ab2094f0d902213c66cdc0b40dfa466094906",
+    "size": 4112532,
+    "may_be_gate2c_baseline": false,
+    "mutation": "PROHIBITED"
+  },
+  "zero_operation_preview": {
+    "model_generations": 0,
+    "provider_requests": 0,
+    "Drupal_writes": 0,
+    "snapshot_operations": 0,
+    "framework_workers": 0,
+    "failure_injections": 0,
+    "Gate2C_runtime_paths": 0
+  },
+  "lifecycle": {
+    "gate_2c": "DEFERRED_UNCLAIMED",
+    "gate_2": "NOT_COMPLETE",
+    "next_after_accepted_2C02": "gate-2c-step03-three-framework-failure-recovery-execution",
+    "step_2C03_execution_authorized": false
+  }
+}

@@ -1,6 +1,6 @@
 # Agentic Harness Lab
 
-> Gate 2C Step 2C.01 is complete as a model-free contract boundary. Gate 2C remains `DEFERRED_UNCLAIMED`; no shared failure/recovery trial has run, and Gate 2 remains `NOT_COMPLETE`.
+> Gate 2C is terminally `CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE`. Step 2C.02 remains `UNCERTIFIED`; no authoritative three-framework recovery result exists, and Gate 2 remains `NOT_COMPLETE`.
 
 A reproducible Drupal GovCon 2026 laboratory for building the same governance-sensitive alt-text
 recommendation task in three harnesses:
@@ -25,8 +25,10 @@ and lifecycle and recovery.
 - **Step 1.05:** complete.
 - **Step 1.06:** complete.
 - **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
-- **Gate 2:** in progress; Gate 2A LangGraph and Gate 2B CrewAI are certified and frozen; Gate 2C remains deferred and unclaimed.
-- **Step 2C.01:** complete after model-free contract certification; `gate-2c-step02-shared-failure-injector-and-model-free-rehearsals` is next but requires separate authorization, and the CrewAI recovery architecture remains pending proof and human decision.
+- **Gate 2:** `NOT_COMPLETE`; Gate 2A LangGraph and Gate 2B CrewAI are certified and frozen, but the shared three-framework recovery exit criterion was not satisfied.
+- **Gate 2C:** `CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE`; the evidence record is final, not successful or certified.
+- **Step 2C.02:** `TERMINAL_UNCERTIFIED`. LangGraph and CrewAI passed the corrected-environment model-free recovery rehearsal; CrewAI's public recovery architecture is human-approved for that proof only. Drupal retained the target-6 seam and a non-certifying post-expiry observation, but full termination, immediate lock denial, and continuation through targets 7–12 were not demonstrated.
+- **Runtime boundary:** no additional worker, replacement, observation, reset, certification, pointer, or identity activity is permitted.
 - **Step 2A.01:** complete.
 - **Step 2A.02:** complete.
 - **Step 2A.03:** complete.

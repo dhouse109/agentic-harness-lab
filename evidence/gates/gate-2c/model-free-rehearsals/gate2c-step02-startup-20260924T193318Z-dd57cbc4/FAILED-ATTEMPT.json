@@ -1,0 +1,20 @@
+{
+  "diagnostic": {
+    "cleanup_is_not_experimental_sigkill": false,
+    "cleanup_signal": null,
+    "executable": "python",
+    "experimental_sigkill_delivered": false,
+    "returncode": 1,
+    "sanitized_stderr": "Traceback (most recent call last):\n  File \"[HOME]/projects/agentic-harness-lab/crewai/agentic_harness_crewai/gate2c_recovery.py\", line 759, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"[HOME]/projects/agentic-harness-lab/crewai/agentic_harness_crewai/gate2c_recovery.py\", line 755, in main\n    return worker(args)\n           ^^^^^^^^^^^^\n  File \"[HOME]/projects/agentic-harness-lab/crewai/agentic_harness_crewai/gate2c_recovery.py\", line 640, in worker\n    crewai_runtime = import_crewai_runtime()\n                     ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"[HOME]/projects/agentic-harness-lab/crewai/agentic_harness_crewai/gate2c_recovery.py\", line 559, in import_crewai_runtime\n    from .canonical_slice import RunScopedMemoryStorage\nImportError: attempted relative import with no known parent package\n",
+    "stage": "crewai_startup_diagnostic",
+    "stderr_truncated": false,
+    "timed_out": false
+  },
+  "phase": "crewai_startup_diagnostic",
+  "recorded_at": "2026-09-24T19:33:22.012908+00:00",
+  "replacement_automatic": false,
+  "run_id": "gate2c-step02-startup-20260924T193318Z-dd57cbc4",
+  "schema_version": 1,
+  "stack_location_summary_sha256": "8b7f604f749e78988e80104351108d4f2b2aab8d3c60c62ab7c277935cec2417",
+  "status": "FAILED_PRESERVED"
+}

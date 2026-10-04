@@ -1,0 +1,19 @@
+{
+  "diagnostic": {
+    "cleanup_is_not_experimental_sigkill": false,
+    "cleanup_signal": null,
+    "executable": "python",
+    "experimental_sigkill_delivered": false,
+    "returncode": 1,
+    "sanitized_stderr": "Traceback (most recent call last):\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 815, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 811, in main\n    return run(parser.parse_args())\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 724, in run\n    require(signal_number == 9, f\"worker termination was not signal 9: {returncode}\")\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 75, in require\n    raise RuntimeError(message)\nRuntimeError: worker termination was not signal 9: 1\n",
+    "stage": "drupal_termination",
+    "stderr_truncated": false,
+    "timed_out": false
+  },
+  "drupal_pre_kill_process_scan_sha256": "155d29c317889045d42c0f48ea5a324cb50076cda1ca0fb8a6fc1c3e03183797",
+  "phase": "dedicated_worker_and_SIGKILL",
+  "replacement_automatic": false,
+  "run_id": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+  "schema_version": 1,
+  "status": "FAILED_PRESERVED"
+}

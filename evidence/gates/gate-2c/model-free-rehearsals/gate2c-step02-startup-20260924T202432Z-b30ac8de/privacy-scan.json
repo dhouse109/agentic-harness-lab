@@ -1,0 +1,10 @@
+{
+  "files_scanned": [
+    "authorization-ledger.json",
+    "crewai-startup.json"
+  ],
+  "hits": 0,
+  "schema_version": 1,
+  "scope": "strict_retained_evidence",
+  "status": "PASS"
+}

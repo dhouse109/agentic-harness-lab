@@ -1,0 +1,22 @@
+{
+  "actual_worker_pid_recorded": true,
+  "actual_worker_terminated": true,
+  "automatic_retry_count": 0,
+  "drupal_writes": 0,
+  "durable_checkpoint_id": "1f1ba0d7-1340-601c-8006-58f827100018",
+  "durable_checkpoint_pending_write_count": 0,
+  "durable_checkpoint_public_api": "SqliteSaver.get_tuple",
+  "durable_checkpoint_verified": true,
+  "framework_origin": "langgraph",
+  "midpoint_sha256": "e1448c075c9a5ca5f6eac52e7aaa9ad80dbca92279e9dba83c2882a35754fcc9",
+  "model_generations": 0,
+  "observed_signal": 9,
+  "provider_requests": 0,
+  "requested_signal": "SIGKILL",
+  "run_id": "gate2c-step02-offline-20260927T004530Z-8998079d-langgraph",
+  "schema_version": 1,
+  "semantic_boundary": "after target 6 is fully persisted and before target 7 begins",
+  "status": "PASS",
+  "supervisor_only_trigger": true,
+  "trial_id": "gate2c-step02-offline-20260927T004530Z-8998079d"
+}

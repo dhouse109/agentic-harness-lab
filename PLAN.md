@@ -1,10 +1,10 @@
 # Implementation Plan
 
-> Gate 2C Step 2C.01 is complete as a model-free planning boundary. Gate 2C remains `DEFERRED_UNCLAIMED`; Gate 2 remains `NOT_COMPLETE`; Step 2C.02 is next but separately authorized.
+> Gate 2C is `CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE`. Step 2C.02 is terminally `UNCERTIFIED`; Gate 2 remains `NOT_COMPLETE`.
 
 ## Current status
 
-> Phase 0, Gate 0.5, and Gate 1 are complete. Drupal AI, LangGraph, and CrewAI are certified and frozen. Steps 2B.01–2B.08 and the model-free Step 2C.01 contract boundary are complete. No Gate 2C failure trial has run.
+> Phase 0, Gate 0.5, and Gate 1 are complete. Drupal AI, LangGraph, and CrewAI implementation gates are certified and frozen. Gate 2C runtime work is over: LangGraph and CrewAI have a corrected-environment model-free recovery rehearsal PASS, while Drupal retains qualified partial evidence and no certified recovery continuation. No authoritative three-framework Gate 2C comparison was completed.
 
 See `docs/CURRENT-STATUS.md` for the authoritative fresh-session status snapshot and reading order.
 
@@ -172,11 +172,11 @@ unchanged.
 
 ## Gate 2 — cross-framework implementation and recovery
 
-Gate 2 preserves the original umbrella milestone and closes only after Gate 2C shared failure/recovery.
+Gate 2 preserves the original umbrella milestone. Terminal administrative closure of an uncertified Gate 2C does not satisfy the Gate 2 exit criteria.
 
 - **Gate 2A — LangGraph:** certified and frozen.
 - **Gate 2B — CrewAI:** certified and frozen.
-- **Gate 2C — shared failure/recovery:** deferred and unclaimed.
+- **Gate 2C — shared failure/recovery:** closed non-certifying with incomplete evidence.
 
 ### Gate 2A — LangGraph
 
@@ -328,18 +328,19 @@ Historical lessons remain part of the boundary: the v1.0.0 XDG/runtime collision
 
 Step 2B.06 is complete, normally merged at `78ba79165378ac2905801d994682aa385cdfb607`, restored exactly once, and post-merge audited. Step 2B.07 is complete, normally merged at `50e7296406a39de23b20bdfb1b45960dca13d3a1`, and post-merge audited with accepted synthesis `gate2b-step07-20260828T135201Z-1ed07bea`. Step 2B.08 certifies and freezes only those retained records; it did not regenerate behavior, mutate Drupal, remove the retained snapshot, or execute Gate 2C.
 
-Gate 2C shared failure/recovery remains deferred and unclaimed. CrewAI-specific continuation evidence must remain labeled Gate 2B.
+Gate 2C is terminally closed without certification. CrewAI-specific Gate 2B continuation evidence must remain labeled Gate 2B.
 
 ### Gate 2C — shared failure/recovery
 
 - [x] Step 2C.01 — model-free shared failure/recovery contract, evidence overlays, successor-aware predecessor audit, and approval ledger.
-- [ ] Step 2C.02 — shared failure injector and model-free rehearsals; CrewAI approval/rejection boundary; no authoritative comparison.
-- [ ] Step 2C.03 — authoritative three-framework failure/recovery execution, exact restoration, accounting, and immutable evidence acceptance; no cross-framework claim synthesis.
-- [ ] Step 2C.04 — model-free evidence synthesis, claims/matrix updates, Gate 2C freeze/certification, and Gate 2 certification only if all umbrella criteria pass.
+- [x] Step 2C.02 — terminally dispositioned `UNCERTIFIED`; corrected-environment LangGraph/CrewAI model-free recovery proof passed, Drupal produced qualified partial evidence, reset was not performed, and certification is prohibited by the retained gaps.
+- [x] Final disposition — evidence-bound closure without PASS or certification; no further Gate 2C runtime is permitted.
+- [ ] Step 2C.03 — not performed and permanently not authorized by the final disposition.
+- [ ] Step 2C.04 certification path — not performed; replaced only by this non-certifying closure synthesis.
 
 Step 2C.01 makes zero model/provider calls, Drupal writes, runtime mutations, failure injections, and snapshot operations. Its contract keeps Gate 2C `DEFERRED_UNCLAIMED`, leaves the CrewAI recovery architecture pending, and does not authorize Step 2C.02 activity. Historical runtimes remain evidence/context only, and the retained Gate 2B recovery snapshot remains untouched and may not serve as the zero-suggestion Gate 2C baseline.
 
-**Next package:** `gate-2c-step02-shared-failure-injector-and-model-free-rehearsals`.
+**Terminal boundary:** no further Gate 2C worker, replacement, observation, reset, certification, pointer update, or identity allocation. Gate 2 remains `NOT_COMPLETE`.
 
 ## Subsequent implementation milestones
 

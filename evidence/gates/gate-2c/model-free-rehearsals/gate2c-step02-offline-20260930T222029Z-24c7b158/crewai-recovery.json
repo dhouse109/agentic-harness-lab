@@ -1,0 +1,48 @@
+{
+  "bootstrap_storage": {
+    "configured_before_worker_import": true,
+    "default_home_storage_avoided": true,
+    "fresh_run_scoped": true,
+    "mechanism": [
+      "XDG_DATA_HOME",
+      "XDG_CONFIG_HOME",
+      "XDG_CACHE_HOME"
+    ],
+    "separate_from_sqlite_flow_persistence": true,
+    "writable": true
+  },
+  "checkpoint_config_used": false,
+  "completed_sequences": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "drupal_operations": 0,
+  "duplicate_count": 0,
+  "first_post_restart_target": 7,
+  "flow_id": "gate2c-step02-offline-20260930T222029Z-24c7b158-crewai",
+  "framework_origin": "crewai",
+  "human_feedback_recovery_used": false,
+  "loaded_state_sha256": "2e4d56fd22c6b764aeac052382c706ffe1262f8b11bd066d346aaf1956ea841a",
+  "machine_recommendation": "APPROVAL_READY",
+  "model_generations": 0,
+  "persistence": "SQLiteFlowPersistence",
+  "private_restore_used": false,
+  "provider_requests": 0,
+  "public_kickoff_inputs_id_hydration_used": true,
+  "public_load_state_used": true,
+  "replay_count": 0,
+  "run_id": "gate2c-step02-offline-20260930T222029Z-24c7b158-crewai",
+  "schema_version": 1,
+  "status": "PASS",
+  "trial_id": "gate2c-step02-offline-20260930T222029Z-24c7b158"
+}

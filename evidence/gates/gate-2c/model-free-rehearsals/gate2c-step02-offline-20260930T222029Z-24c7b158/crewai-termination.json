@@ -1,0 +1,18 @@
+{
+  "actual_worker_pid_recorded": true,
+  "actual_worker_terminated": true,
+  "automatic_retry_count": 0,
+  "drupal_writes": 0,
+  "framework_origin": "crewai",
+  "midpoint_sha256": "dd630dfc68ae44d5bd4dfdc9b1eb1521179229a31471666c4b7a66539c8a3325",
+  "model_generations": 0,
+  "observed_signal": 9,
+  "provider_requests": 0,
+  "requested_signal": "SIGKILL",
+  "run_id": "gate2c-step02-offline-20260930T222029Z-24c7b158-crewai",
+  "schema_version": 1,
+  "semantic_boundary": "after target 6 is fully persisted and before target 7 begins",
+  "status": "PASS",
+  "supervisor_only_trigger": true,
+  "trial_id": "gate2c-step02-offline-20260930T222029Z-24c7b158"
+}

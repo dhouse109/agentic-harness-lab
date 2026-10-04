@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.example/shared/schemas/gate2c-step02-model-free-rehearsal.schema.json",
+  "title": "Gate 2C Step 2C.02 model-free rehearsal plan and evidence",
+  "type": "object",
+  "required": ["schema_version", "plan_id", "step", "status", "repository_predecessor", "gate2c_contract", "predecessor_freezes", "semantic_boundary", "failure_class", "mode", "frozen_controls", "phases", "framework_mappings", "crewai_recovery_architecture", "drupal_lock_policy", "retained_gate2b_snapshot", "zero_operation_preview", "lifecycle"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema_version": {"const": 1},
+    "plan_id": {"const": "gate2c-step02-model-free-rehearsal-plan-1.0.0"},
+    "step": {"const": "2C.02"},
+    "status": {"enum": ["PREPARED_NOT_EXECUTED", "INSTALLED_PENDING_REHEARSALS", "REHEARSALS_COMPLETE_PENDING_HUMAN_DECISION", "COMPLETE_AFTER_ACCEPTED_MODEL_FREE_CERTIFICATION"]},
+    "repository_predecessor": {"type": "object", "required": ["branch", "merge_sha"], "properties": {"branch": {"const": "main"}, "merge_sha": {"pattern": "^[0-9a-f]{40}$"}}, "additionalProperties": false},
+    "gate2c_contract": {"type": "object", "required": ["path", "sha256", "certification_run_id"], "properties": {"path": {"const": "shared/contracts/GATE2C-SHARED-FAILURE-RECOVERY-CONTRACT.json"}, "sha256": {"const": "3c4801e6eb35d40d94e066c70017d3acebca95183e7e544646be6e2b40aa5ec6"}, "certification_run_id": {"const": "gate2c-step01-20260922T113303Z-fd9cdb75"}}, "additionalProperties": false},
+    "predecessor_freezes": {"type": "object", "required": ["drupal_ai", "langgraph", "crewai"], "additionalProperties": {"pattern": "^[0-9a-f]{64}$"}},
+    "semantic_boundary": {"const": "after target 6 is fully persisted and before target 7 begins"},
+    "failure_class": {"const": "SIGKILL_ACTUAL_FRAMEWORK_WORKER_AFTER_INDEPENDENT_SEAM_VERIFICATION"},
+    "mode": {"const": "MODEL_FREE_WITH_SEPARATELY_AUTHORIZED_DISPOSABLE_REHEARSAL_BOUNDARIES"},
+    "frozen_controls": {"type": "object"},
+    "phases": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"type": "object", "required": ["name", "authorization", "operations", "prohibited"]}},
+    "framework_mappings": {"type": "array", "minItems": 3, "maxItems": 3, "prefixItems": [{"properties": {"origin": {"const": "drupal_ai"}}}, {"properties": {"origin": {"const": "langgraph"}}}, {"properties": {"origin": {"const": "crewai"}}}], "items": false},
+    "crewai_recovery_architecture": {"type": "object", "required": ["decision_status", "candidate", "approval_requires", "automatic_resolution"], "properties": {"decision_status": {"const": "PENDING_MODEL_FREE_PROOF_AND_HUMAN_DECISION"}, "automatic_resolution": {"const": "PROHIBITED"}}},
+    "drupal_lock_policy": {"type": "object", "required": ["lease_seconds", "mutation", "immediate_and_post_natural_expiry_invocations_are_separately_authorized", "dedicated_rehearsal_lock_is_not_authoritative_framework_evidence"], "properties": {"lease_seconds": {"const": 1800}, "mutation": {"const": "PROHIBITED"}}},
+    "retained_gate2b_snapshot": {"type": "object", "required": ["path", "sha256", "size", "may_be_gate2c_baseline", "mutation"], "properties": {"may_be_gate2c_baseline": {"const": false}, "mutation": {"const": "PROHIBITED"}}},
+    "zero_operation_preview": {"type": "object", "additionalProperties": {"const": 0}},
+    "lifecycle": {"type": "object", "required": ["gate_2c", "gate_2", "next_after_accepted_2C02", "step_2C03_execution_authorized"], "properties": {"gate_2c": {"const": "DEFERRED_UNCLAIMED"}, "gate_2": {"const": "NOT_COMPLETE"}, "step_2C03_execution_authorized": {"const": false}}}
+  },
+  "additionalProperties": false
+}

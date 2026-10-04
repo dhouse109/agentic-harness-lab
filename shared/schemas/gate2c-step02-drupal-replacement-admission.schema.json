@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.local/schemas/gate2c-step02-drupal-replacement-admission.schema.json",
+  "title": "Gate 2C.02 Drupal replacement admission",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_type", "status", "failed_attempt", "replacement_reason", "repaired_source_epoch", "replacement_admission", "lifecycle_boundaries", "current_lifecycle"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema_version": {"const": 1},
+    "record_type": {"const": "DRUPAL_REPLACEMENT_ADMISSION_ANCHOR"},
+    "status": {"const": "EMPTY_SINGLE_USE_DRUPAL_REPLACEMENT_SLOT"},
+    "failed_attempt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_id", "status", "start_authorization", "aggregate_sha256", "artifacts"],
+      "properties": {
+        "run_id": {"const": "gate2c-step02-drupal-20261001T173201Z-545a1ba2"},
+        "status": {"const": "FAILED_PRESERVED"},
+        "start_authorization": {"const": "CONSUMED"},
+        "aggregate_sha256": {"pattern": "^[0-9a-f]{64}$"},
+        "artifacts": {
+          "type": "array", "minItems": 6, "maxItems": 6,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["path", "size", "sha256"],
+            "properties": {
+              "path": {"type": "string", "minLength": 1},
+              "size": {"type": "integer", "minimum": 0},
+              "sha256": {"pattern": "^[0-9a-f]{64}$"}
+            }
+          }
+        }
+      }
+    },
+    "replacement_reason": {"const": "SOURCE_RUNTIME_INSTRUMENTATION_DEFECT"},
+    "repaired_source_epoch": {"type": "object"},
+    "replacement_admission": {"type": "object"},
+    "lifecycle_boundaries": {"type": "array", "minItems": 7, "maxItems": 7, "items": {"type": "string"}},
+    "current_lifecycle": {"type": "object"}
+  }
+}

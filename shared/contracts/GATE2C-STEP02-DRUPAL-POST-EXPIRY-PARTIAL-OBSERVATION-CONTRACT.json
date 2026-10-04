@@ -1,0 +1,85 @@
+{
+  "$schema": "../schemas/gate2c-step02-drupal-post-expiry-partial-observation.schema.json",
+  "schema_version": 1,
+  "record_type": "DRUPAL_POST_EXPIRY_PARTIAL_OBSERVATION_CONTRACT",
+  "status": "ADMITTED_NOT_EXECUTED",
+  "run_id": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+  "final_admission_sha256": "15e66d4f70ed74a3921903cbb6134b8986ffabaf2644e08c754465bc3ad58c5c",
+  "final_failed_family_aggregate_sha256": "cdd180a1c88de2fab50766e7bb82644dfd47fd51b57cca9a412985f15a67b08e",
+  "prior_failed_family_aggregates": [
+    "1014dacee5194fed8a2c696145d792898d5c9b9399f20c548bdd6e6cd4137714",
+    "6ec105136d47f8b25a271c0950ff11984709b7e876e207b45dad7805ccde33c0"
+  ],
+  "final_failed_attempt_governance_sha256": "a7460b1d6a7d3c71cddfefe218ff287328e661a56e3daf5ee9257883832f17c1",
+  "recorded_chronology": {
+    "lock_name_sha256": "0d1b9629dfcbe7be095941896b8e59f48e27fe268f524a8597656febd64920f0",
+    "lock_acquired_at_unix": 1790948971.691621,
+    "lock_expires_not_before_unix": 1790950771.691621,
+    "wall_clock_expiry_elapsed_is_evidence": false,
+    "actual_observation_timestamp_required": true
+  },
+  "historical_gaps": {
+    "drupal_termination_artifact_present": false,
+    "drupal_immediate_artifact_present": false,
+    "immediate_lock_denial_proven": false,
+    "immediate_observation_reconstructable": false,
+    "continuous_lock_retention_until_expiry_proven": false
+  },
+  "permitted_partial_claims": [
+    "OBSERVATION_OCCURRED_AFTER_RECORDED_NATURAL_EXPIRY",
+    "DEDICATED_PERSISTENT_LOCK_ACQUIRABLE_AFTER_RECORDED_EXPIRY",
+    "DURABLE_STATE_STILL_CONTAINS_SEQUENCES_1_THROUGH_6",
+    "NEXT_LOGICAL_TARGET_REMAINS_7",
+    "TARGET_7_HAS_NOT_ALREADY_BEEN_PROCESSED",
+    "NO_DUPLICATE_IDENTITIES_IN_OBSERVED_DEDICATED_STATE"
+  ],
+  "prohibited_claims": [
+    "IMMEDIATE_LOCK_DENIAL_RECONSTRUCTED",
+    "LOCK_PERSISTED_CONTINUOUSLY_UNTIL_EXPIRY",
+    "HISTORICAL_TERMINATION_PROOF_RECONSTRUCTED",
+    "RECOVERY_CONTINUATION_EXECUTED",
+    "TARGET_7_FIRST_AFTER_RESTART_PROVEN",
+    "NO_REPLAY_AFTER_CONTINUATION_PROVEN",
+    "STEP_2C_02_PASS",
+    "RESET_AUTHORIZED",
+    "STEP_2C_02_CERTIFIED",
+    "GATE_2C_COMPLETE",
+    "GATE_2_COMPLETE"
+  ],
+  "observation_mechanics": {
+    "mode": "post-expiry-partial",
+    "state_inspection": "READ_ONLY_DEDICATED_KEYVALUE_STATE",
+    "lock_probe_method": "PERSISTENT_LOCK_ACQUIRE_THEN_IMMEDIATE_RELEASE",
+    "lock_probe_lease_seconds": 1,
+    "lock_mutation_disclosure": "ACQUIRE_INSERTS_TRANSIENT_PROBE_ROW; EXPIRED_SEMAPHORE_CLEANUP_MAY_DELETE_EXPIRED_ROW; FINALLY_RELEASE_DELETES_ONLY_PROBE_OWNER_ROW",
+    "active_lock_shortening_or_bypass": false,
+    "worker_launch_count": 0,
+    "target_processing_count": 0,
+    "keyvalue_state_write_count": 0,
+    "model_generation_count": 0,
+    "provider_request_count": 0,
+    "recommendation_write_count": 0,
+    "source_mutation_count": 0
+  },
+  "execution_boundary": {
+    "maximum_observation_invocations": 1,
+    "execution_authorized_by_contract": false,
+    "separate_human_execution_authorization_required": true,
+    "evidence_root": "evidence/gates/gate-2c/drupal-post-expiry-partial-observations/gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+    "new_run_identity_permitted": false,
+    "source_epoch_at_execution_must_equal_installed_manifest_sha256": true
+  },
+  "certification_guardrails": {
+    "certifying_evidence": false,
+    "step_2c02_status": "UNCERTIFIED",
+    "reset_status": "BLOCKED_REQUIRES_FULL_PASSING_DRUPAL_REHEARSAL",
+    "gate_2c": "DEFERRED_UNCLAIMED",
+    "gate_2": "NOT_COMPLETE"
+  },
+  "no_more_workers": {
+    "worker_retry_permitted": false,
+    "additional_worker_identities_permitted": 0,
+    "replacement_slots_permitted": 0,
+    "automatic_retry_permitted": false
+  }
+}

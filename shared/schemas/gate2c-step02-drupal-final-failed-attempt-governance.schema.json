@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentic-harness.local/schemas/gate2c-step02-drupal-final-failed-attempt-governance.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_type", "status", "run_id", "admission_sha256", "installed_source_epoch_at_execution", "start_authorization", "worker_launch_count", "automatic_retry_count", "additional_worker_identities_permitted", "canonical_family_aggregate_sha256", "immutable_inventory", "signal_boundary", "historical_provenance_conflict", "missed_immediate_observation", "post_expiry_policy", "step_2c02_certification", "gate_2c", "gate_2"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "record_type": {"const": "DRUPAL_FINAL_FAILED_ATTEMPT_GOVERNANCE"},
+    "status": {"const": "FINAL_FURTHER_REPLACEMENT_POST_SIGKILL_TERMINATION_PROOF_FAILED_PRESERVED"},
+    "run_id": {"const": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a"},
+    "admission_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "installed_source_epoch_at_execution": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "start_authorization": {"const": "CONSUMED"},
+    "worker_launch_count": {"const": 1},
+    "automatic_retry_count": {"const": 0},
+    "additional_worker_identities_permitted": {"const": 0},
+    "canonical_family_aggregate_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "immutable_inventory": {"type": "object", "minProperties": 9, "maxProperties": 9, "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "signal_boundary": {"type": "object"},
+    "historical_provenance_conflict": {"type": "object"},
+    "missed_immediate_observation": {"type": "object"},
+    "post_expiry_policy": {"type": "object"},
+    "step_2c02_certification": {"const": "BLOCKED_MISSING_IMMEDIATE_LOCK_DENIAL_AND_TERMINATION_PROOF"},
+    "gate_2c": {"const": "DEFERRED_UNCLAIMED"},
+    "gate_2": {"const": "NOT_COMPLETE"}
+  }
+}

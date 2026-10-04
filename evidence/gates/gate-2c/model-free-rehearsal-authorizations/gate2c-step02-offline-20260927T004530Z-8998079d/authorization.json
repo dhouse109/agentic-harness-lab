@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../../shared/schemas/gate2c-step02-offline-rehearsal-replacement-admission.schema.json",
+  "additional_replacement_identities_authorized": 0,
+  "authorization_boundary": "separate_explicit_human_replacement_authorization_before_identity_creation",
+  "authorized_at": "2026-09-27T00:45:37.473778+00:00",
+  "automatic_replacement_or_retry_authorized": false,
+  "consumed_admission_reopened": false,
+  "consumed_authorization_sha256": "c5827b91aae862dca52ecfc7b6618e0ef1e007404cc68c029da5929a7a8ecfb3",
+  "consumed_run_id": "gate2c-step02-offline-20260925T154513Z-5420da48",
+  "historical_fail_finalization_sha256": "e5a90548589e1ca94acd9df75394e6265738a61f0783bb262aedcfc948c5042e",
+  "historical_identity_reuse_authorized": false,
+  "maximum_new_identities": 1,
+  "record_type": "ONE_RUN_REPLACEMENT_AUTHORIZATION",
+  "replacement_admission_anchor_sha256": "c64b8b2a87e26f402d3077bdb9e2746120ff3bd1aca68f5af716b053a9eca3bd",
+  "retained_baseline_inventory_sha256": "8fb60b7f6c7e29f57b04384d2a974ebe0c8a9379d681a3853b0a664223b5c6d4",
+  "run_id": "gate2c-step02-offline-20260927T004530Z-8998079d",
+  "schema_version": 1,
+  "scope": "one_fresh_model_free_offline_rehearsal_identity_only",
+  "v1_0_14_source_manifest_sha256": "31d9b9e652276598163b1c43b37f5bffa51ec46cf7f531e280892115115ea096"
+}

@@ -1,0 +1,219 @@
+{
+  "$schema": "../schemas/gate2c-closure-and-disposition.schema.json",
+  "schema_version": 1,
+  "record_type": "GATE_2C_FINAL_CLOSURE_AND_DISPOSITION",
+  "status": "CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE",
+  "source_epoch": {
+    "branch": "main",
+    "head": "03816e141f77820e42486fcbad9db244939cd7a8",
+    "origin_main": "03816e141f77820e42486fcbad9db244939cd7a8",
+    "gate2c_contract_sha256": "3c4801e6eb35d40d94e066c70017d3acebca95183e7e544646be6e2b40aa5ec6",
+    "step2c02_installed_source_manifest_sha256": "c6427eb6f1f78e102a56a117da02e903cf719214d2a2506a08fe3cbabec7ae1b",
+    "step2c02_permanent_audit_sha256": "36404648cccb434c7d56ce6e575db1ec92fee17ec45e358c74a5dd8efe861dd9"
+  },
+  "predecessor_freezes": {
+    "drupal_ai_sha256": "2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd",
+    "langgraph_sha256": "a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0",
+    "crewai_sha256": "74e2baad0cbe612dcd7e72ccdc264b01960ee12e09cfb0ae3154969b6055c206"
+  },
+  "retained_evidence_inventory": {
+    "root": "evidence/gates/gate-2c",
+    "file_count": 84,
+    "canonical_path_size_sha256_inventory_digest": "a6f20ab3e45105d74bba13c21fdd51878435e4bc803febe98df7e55a2648c28c",
+    "category_file_counts": {
+      "contract": 7,
+      "crewai-recovery-decisions": 1,
+      "drupal-further-replacement-authorizations": 1,
+      "drupal-post-expiry-partial-observations": 1,
+      "drupal-replacement-authorizations": 1,
+      "model-free-rehearsal-authorizations": 3,
+      "model-free-rehearsal-preservation": 3,
+      "model-free-rehearsals": 67
+    }
+  },
+  "step2c01": {
+    "status": "COMPLETE_CERTIFIED_MODEL_FREE_CONTRACT_BOUNDARY",
+    "run_id": "gate2c-step01-20260922T113303Z-fd9cdb75",
+    "evidence_manifest_sha256": "ed4444d95412b1450784c09eba80817d532cf7ed6a8ad96cd1bbbef179dd6190"
+  },
+  "corrected_environment_model_free_rehearsal": {
+    "run_id": "gate2c-step02-offline-20260930T222029Z-24c7b158",
+    "outcome": "PASS",
+    "scope": "MODEL_FREE_ARCHITECTURE_MECHANICS_NOT_AUTHORITATIVE_GATE_2C_RECOVERY",
+    "evidence_manifest_sha256": "730b892d232a3dea7e77e4391b7beec5d40e807b76f99b13bb0036ae00cf74ca",
+    "finalization_sha256": "d882c8339025c1ba7e510abb19984fc4724e2a594a190760c07f95db034fd8d8"
+  },
+  "framework_outcomes": {
+    "langgraph": {
+      "implementation_gate": "GATE_2A_CERTIFIED_AND_FROZEN",
+      "gate2c_status": "MODEL_FREE_RECOVERY_REHEARSAL_PASS_NOT_AUTHORITATIVE",
+      "termination_sha256": "e84425a8b86cca7ff2d78415cd5ddd63caa7140cc374ff4eb7dce41579953586",
+      "recovery_sha256": "071b4706c9ee1e24ed84734b94ada1dde1dfbcc743ec022cfb23aca0de184e9a",
+      "first_post_restart_target": 7,
+      "completed_sequences": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "replay_count": 0,
+      "duplicate_count": 0,
+      "model_generations": 0,
+      "provider_requests": 0
+    },
+    "crewai": {
+      "implementation_gate": "GATE_2B_CERTIFIED_AND_FROZEN",
+      "gate2c_status": "MODEL_FREE_RECOVERY_REHEARSAL_PASS_HUMAN_APPROVED_ARCHITECTURE_NOT_AUTHORITATIVE",
+      "termination_sha256": "bc50b5c582f72b2133f6186ee0eb39488d452e509490c2a68f6e0e7406f84f14",
+      "recovery_sha256": "feb2c31832e43027f58f5d772710e2768591436fd8b393e89e02e63299ae2236",
+      "human_decision_sha256": "9b46330e3f9dd47bd4c8b7835db928335bde2447ca8825673cef77b9df6e7d1e",
+      "human_decision": "APPROVED_FOR_MODEL_FREE_ARCHITECTURE_PROOF_ONLY",
+      "public_load_state_used": true,
+      "public_same_id_kickoff_used": true,
+      "first_post_restart_target": 7,
+      "completed_sequences": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "replay_count": 0,
+      "duplicate_count": 0,
+      "model_generations": 0,
+      "provider_requests": 0
+    },
+    "drupal_ai": {
+      "implementation_gate": "GATE_1_CERTIFIED_AND_FROZEN",
+      "gate2c_status": "PARTIAL_NON_CERTIFYING_EVIDENCE_NO_RECOVERY_CONTINUATION",
+      "historical_families": [
+        {
+          "run_id": "gate2c-step02-drupal-20261001T173201Z-545a1ba2",
+          "aggregate_sha256": "1014dacee5194fed8a2c696145d792898d5c9b9399f20c548bdd6e6cd4137714",
+          "status": "FAILED_PRESERVED"
+        },
+        {
+          "run_id": "gate2c-step02-drupal-20261001T225458Z-c5d0e6b2",
+          "aggregate_sha256": "6ec105136d47f8b25a271c0950ff11984709b7e876e207b45dad7805ccde33c0",
+          "status": "FAILED_PRESERVED"
+        },
+        {
+          "run_id": "gate2c-step02-drupal-20261002T132121Z-a54c7a7a",
+          "aggregate_sha256": "cdd180a1c88de2fab50766e7bb82644dfd47fd51b57cca9a412985f15a67b08e",
+          "status": "FAILED_PRESERVED"
+        }
+      ],
+      "supported_observations": [
+        "DURABLE_SEQUENCES_1_THROUGH_6",
+        "NEXT_TARGET_7_NOT_STARTED",
+        "EXACT_SINGLETON_WORKER_IDENTITY_VERIFIED",
+        "EXACT_PID_SIGKILL_COMMAND_RETURNED_SUCCESS",
+        "WORKER_SUBSEQUENTLY_ABSENT",
+        "NO_RETRY_OR_REPLACEMENT",
+        "STATE_PERSISTED_UNCHANGED",
+        "PROCESSED_IDENTITIES_UNIQUE",
+        "POST_EXPIRY_NAMED_LOCK_ACQUIRABLE"
+      ],
+      "not_demonstrated": [
+        "HISTORICAL_DURABLE_TERMINATION_PASS",
+        "IMMEDIATE_PRE_EXPIRY_LOCK_DENIAL",
+        "CONTINUOUS_LOCK_RETENTION_UNTIL_EXPIRY",
+        "POST_KILL_WORKER_RECOVERY",
+        "TARGET_7_FIRST_AFTER_ACTUAL_RESTART",
+        "REPLAY_FREE_CONTINUATION_THROUGH_TARGET_12",
+        "STEP_2C_02_CERTIFICATION"
+      ],
+      "partial_observation": {
+        "path": "evidence/gates/gate-2c/drupal-post-expiry-partial-observations/gate2c-step02-drupal-20261002T132121Z-a54c7a7a/observation.json",
+        "sha256": "2aab5b97540ed8efd79eb11e487ad8011977c758c54977b9dfcc8cdf49eae3f8",
+        "status": "PASS_PARTIAL_POST_NATURAL_EXPIRY_NON_CERTIFYING",
+        "certifying_evidence": false,
+        "observation_timestamp": "2026-10-03T15:41:01Z",
+        "recorded_natural_expiry": "2026-10-02T14:19:31.691621Z",
+        "lock_result": "ACQUIRED_AFTER_RECORDED_EXPIRY",
+        "completed_sequences_before": [1, 2, 3, 4, 5, 6],
+        "completed_sequences_after": [1, 2, 3, 4, 5, 6],
+        "next_target_before": 7,
+        "next_target_after": 7,
+        "target_7_started": false,
+        "target_7_processed": false,
+        "processed_identities_unique": true,
+        "state_sha256_before": "3221a191c4be27649c9990ecbec18f12797db74616e59e8c7e47c0dd29a17e8c",
+        "state_sha256_after": "3221a191c4be27649c9990ecbec18f12797db74616e59e8c7e47c0dd29a17e8c",
+        "worker_launch_count": 0,
+        "target_processing_count": 0,
+        "immediate_lock_denial_reconstructed": false,
+        "historical_termination_proof_reconstructed": false
+      }
+    }
+  },
+  "lifecycle": {
+    "step_2c02": "TERMINAL_UNCERTIFIED",
+    "step_2c02_pass": false,
+    "step_2c02_certified": false,
+    "gate_2c": "CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE",
+    "gate_2c_pass": false,
+    "gate_2c_certified": false,
+    "gate_2": "NOT_COMPLETE",
+    "gate_2_pass": false,
+    "gate_2_exit_criteria_satisfied": false,
+    "authoritative_three_framework_comparison_completed": false,
+    "step_2c03_performed": false
+  },
+  "reset_disposition": {
+    "status": "RESET_NOT_PERFORMED",
+    "eligibility": "BLOCKED_MISSING_FULL_PASSING_DRUPAL_REHEARSAL",
+    "closure_grants_reset_authority": false
+  },
+  "no_more_runtime": {
+    "additional_worker_identities_permitted": 0,
+    "replacement_slots_permitted": 0,
+    "worker_retry_permitted": false,
+    "automatic_retry_permitted": false,
+    "partial_observation_invocation_count": 1,
+    "maximum_partial_observation_invocations": 1,
+    "additional_observation_permitted": false,
+    "immediate_observation_replay_permitted": false,
+    "failed_final_start_retry_permitted": false,
+    "step_2c03_activity_permitted": false,
+    "step_2c02_certification_permitted": false,
+    "pointer_update_permitted": false,
+    "identity_allocation_permitted": false,
+    "drupal_reset_permitted": false
+  },
+  "claim_guards": {
+    "permitted_claim_ids": [
+      "CLM-G2C-001",
+      "CLM-G2C-002",
+      "CLM-G2C-003",
+      "CLM-G2C-004",
+      "CLM-G2C-008"
+    ],
+    "prohibited_claim_ids": [
+      "CLM-G2C-005",
+      "CLM-G2C-006",
+      "CLM-G2C-007"
+    ],
+    "prohibited_meanings": [
+      "ALL_THREE_HARNESSES_RECOVERED_AFTER_SIGKILL",
+      "DRUPAL_RECOVERED_AT_TARGET_7_WITHOUT_REPLAY",
+      "DRUPAL_IMMEDIATE_LOCK_DENIAL_OBSERVED",
+      "STEP_2C_02_PASS_OR_CERTIFIED",
+      "GATE_2C_PASS_COMPLETE_OR_CERTIFIED",
+      "GATE_2_COMPLETE_OR_PASS",
+      "RECOVERY_WINNER_FRAMEWORK_SUPERIORITY_OR_PRODUCTION_READINESS"
+    ]
+  },
+  "documentation_bindings": {
+    "AGENTS.md": "0aa359658b77ce95b91622cc3581268a7c7b8153ab016ee1479630758d27712e",
+    "PLAN.md": "b888a2d6a4670b06181c03e6b5b2b8e390ff914ffd21abda8bb689d14d569a0b",
+    "README.md": "c1bef8eb263f5b46f59d470cfc413625dca3833b7520d5310380df0ee5058981",
+    "CLAIMS_REGISTER.md": "aaa3dd1373d6b6866604813805c457b51f977de979cc36c35c1a8f968cb7ec4b",
+    "COMPARISON_MATRIX.md": "fedc53afc69ccc7b0a4e3c44492823c631044eb383fd4c4525cb40e5a6eee6b3",
+    "docs/CURRENT-STATUS.md": "51cdba8e72bd1eb22bcd3918152de01892c9aaca683e2a3c1f9cb04eea3bdb4e",
+    "docs/gates/GATE-2-STRUCTURE.md": "b14e9453d505f5f373f2ec5e3bcc4f632b8973c8df9c33b3ae0e738acb935a27",
+    "docs/gates/GATE-2C-CLOSURE-AND-DISPOSITION.md": "49c8cd7071c28eb26fe94213332966884bd46879a24d1dcf052bf22f890dab41"
+  },
+  "closure_activity": {
+    "model_generations": 0,
+    "provider_requests": 0,
+    "drupal_commands": 0,
+    "worker_launches": 0,
+    "signals_sent": 0,
+    "lock_operations": 0,
+    "lifecycle_observations": 0,
+    "reset_operations": 0,
+    "certifications": 0,
+    "pointer_updates": 0,
+    "identity_allocations": 0
+  }
+}

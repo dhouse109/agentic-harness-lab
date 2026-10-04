@@ -1,0 +1,18 @@
+{
+  "diagnostic": {
+    "cleanup_is_not_experimental_sigkill": false,
+    "cleanup_signal": null,
+    "executable": "python",
+    "experimental_sigkill_delivered": false,
+    "returncode": 1,
+    "sanitized_stderr": "Traceback (most recent call last):\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 768, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 764, in main\n    return run(parser.parse_args())\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 645, in run\n    wait_for(seam_path, process, args.timeout, captured)\n  File \"[HOME]/projects/agentic-harness-lab/scripts/gate2c_step02_supervisor.py\", line 608, in wait_for\n    raise RuntimeError(f\"worker exited before seam-ready: {code}\")\nRuntimeError: worker exited before seam-ready: 1\n",
+    "stage": "drupal_termination",
+    "stderr_truncated": false,
+    "timed_out": false
+  },
+  "phase": "dedicated_worker_and_SIGKILL",
+  "replacement_automatic": false,
+  "run_id": "gate2c-step02-drupal-20261001T173201Z-545a1ba2",
+  "schema_version": 1,
+  "status": "FAILED_PRESERVED"
+}

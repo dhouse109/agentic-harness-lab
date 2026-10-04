@@ -1,0 +1,50 @@
+{
+  "files": [
+    {
+      "path": "authorization-ledger.json",
+      "sha256": "8a795276e693d9f73ad6cf4a1f6d95a47010e8dbed6801168f884cb961325db2",
+      "size": 377
+    },
+    {
+      "path": "crewai-recovery.json",
+      "sha256": "feb2c31832e43027f58f5d772710e2768591436fd8b393e89e02e63299ae2236",
+      "size": 1250
+    },
+    {
+      "path": "crewai-termination.json",
+      "sha256": "bc50b5c582f72b2133f6186ee0eb39488d452e509490c2a68f6e0e7406f84f14",
+      "size": 659
+    },
+    {
+      "path": "langgraph-recovery.json",
+      "sha256": "071b4706c9ee1e24ed84734b94ada1dde1dfbcc743ec022cfb23aca0de184e9a",
+      "size": 602
+    },
+    {
+      "path": "langgraph-termination.json",
+      "sha256": "e84425a8b86cca7ff2d78415cd5ddd63caa7140cc374ff4eb7dce41579953586",
+      "size": 878
+    },
+    {
+      "path": "negative-controls.json",
+      "sha256": "7d2fa49f3f43ae0e47fa863459c29db249ef04e10a6c8ca5c365c21bee19a2fd",
+      "size": 320
+    },
+    {
+      "path": "privacy-scan.json",
+      "sha256": "f8ea3848d20299f8b1d6119c36919604414417f3355396f448349fc51b76b7c6",
+      "size": 344
+    },
+    {
+      "path": "public-api-provenance.json",
+      "sha256": "d7ca6b354976100be20f68e1c2ec265405350dd4d7e5bb6959062a6d9ab2ca04",
+      "size": 768
+    },
+    {
+      "path": "summary.md",
+      "sha256": "ea4d107b1d6cfd9479916f07ccd8efdedffb7f07345315a44f581bb4cef6575f",
+      "size": 431
+    }
+  ],
+  "schema_version": 1
+}
