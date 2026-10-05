@@ -1,171 +1,194 @@
 # Agentic Harness Lab
 
-> Gate 2C is terminally `CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE`. Step 2C.02 remains `UNCERTIFIED`; no authoritative three-framework recovery result exists, and Gate 2 remains `NOT_COMPLETE`.
+A reproducible comparative engineering lab built for the Drupal GovCon 2026 session:
 
-A reproducible Drupal GovCon 2026 laboratory for building the same governance-sensitive alt-text
-recommendation task in three harnesses:
+**Anatomy of an Agentic Harness: Building the Same Agent in Drupal AI, LangChain, and CrewAI**
 
-- Drupal AI
-- LangChain / LangGraph
-- CrewAI
+The lab implements the same governance-sensitive Drupal task three ways and compares the
+infrastructure around the model—the **agentic harness**—rather than treating the model as the
+whole system.
 
-The purpose is not to prove a predetermined winner. The lab collects version-pinned, repeatable
-evidence about six harness organs: context, tools, state and memory, verification, human review,
-and lifecycle and recovery.
+## Project state
 
-## Current status
+**Engineering and evidence collection are finished.**
 
-- **Phase 0:** complete.
-- **Gate 0.5:** complete and certified.
-- **Gate 1:** complete and certified.
-- **Step 1.01:** complete.
-- **Step 1.02:** complete.
-- **Step 1.03:** complete.
-- **Step 1.04:** complete.
-- **Step 1.05:** complete.
-- **Step 1.06:** complete.
-- **Step 1.07:** complete; Gate 1 Drupal AI is certified and frozen.
-- **Gate 2:** `NOT_COMPLETE`; Gate 2A LangGraph and Gate 2B CrewAI are certified and frozen, but the shared three-framework recovery exit criterion was not satisfied.
-- **Gate 2C:** `CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE`; the evidence record is final, not successful or certified.
-- **Step 2C.02:** `TERMINAL_UNCERTIFIED`. LangGraph and CrewAI passed the corrected-environment model-free recovery rehearsal; CrewAI's public recovery architecture is human-approved for that proof only. Drupal retained the target-6 seam and a non-certifying post-expiry observation, but full termination, immediate lock denial, and continuation through targets 7–12 were not demonstrated.
-- **Runtime boundary:** no additional worker, replacement, observation, reset, certification, pointer, or identity activity is permitted.
-- **Step 2A.01:** complete.
-- **Step 2A.02:** complete.
-- **Step 2A.03:** complete.
-- **Step 2A.04:** complete.
-- **Step 2A.05:** complete.
-- **Step 2A.06:** complete.
-- **Step 2A.07:** complete.
-- **Step 2A.08:** complete.
-- **Step 2A.09:** complete.
-- **Step 2A.10:** complete; Gate 2A LangGraph is certified and frozen.
-- **Completed package:** `gate-2a-step10-langgraph-certification-freeze-and-crewai-handoff-v1.0.1`.
-- **Gate 2A handoff package (historical next package):** `gate-2b-step01-crewai-contract-and-evidence-plan-v1.0.0`.
-- **Gate 2A freeze:** `shared/contracts/GATE2A-LANGGRAPH-FREEZE.json` (`a28361c34b9d1c2089eee786324ad34cffbf54e3495f59a276c489865e5630f0`).
-- **Step 2B.01:** complete, merged, and post-merge audited.
-- **Completed Step 2B.02 package:** `gate-2b-step02-crewai-architecture-adr-and-closure-v1.0.0`.
-- **Step 2B.02:** complete, merged, resynchronized, and post-merge audited with retained model-free evidence, permanent architecture audit, and explicit human architecture approval.
-- **Completed Step 2B.03 package:** `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0`.
-- **Step 2B.03:** Package `gate-2b-step03-crewai-shared-operation-adapters-v1.0.0` is complete, committed, normally merged at `7629434b04d04154b9f219e1d93ed772401a1288`, resynchronized, and post-merge audited with accepted model-free evidence `gate2b-step03-20260818T163812Z-7a58ef58`.
-- **Completed Step 2B.04 packages:** `gate-2b-step04-crewai-canonical-vertical-slice-v1.0.0` and repair `v1.0.1` are committed, normally merged at `c61d0b0213d754fcc40f18065836de6e0da70d2c`, resynchronized, and post-merge audited. Their accepted recommendation was the pending input to Step 2B.05 and is now approved.
-- **Step 2B.05:** complete, normally merged at `2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148`, and post-merge audited under final v1.0.2 semantics. The same CrewAI Flow was reconstructed and resumed exactly once after an external approve-as-is Drupal review by `editor_dana` at revision 22; pending rows reached zero without replaying model-owning work or submitting a duplicate recommendation. The 15-file evidence family is `gate2b-step05-20260825T192434Z-ff4f89dd`.
-- **Step 2B.06:** complete, normally merged at `78ba79165378ac2905801d994682aa385cdfb607`, and post-merge audited. The accepted CrewAI batch completed 12/12 with exact one-request accounting and zero retry/correction/repair/fallback/learning/feedback-collapse/source-mutation counts. Its retained failure/disposition, readiness repair, supplement, exactly-once restoration, 19-file closure, and final-governance bridge remain immutable; the recovery snapshot remains local-only and retained.
-- **Step 2B.07:** complete, normally merged at `50e7296406a39de23b20bdfb1b45960dca13d3a1`, and post-merge audited. Its accepted model-free synthesis is immutable and was not rerun by Step 2B.08.
-- **Step 2B.08:** complete; permanent audit binds its exactly-once certification family, Gate 2B freeze, freeze-bound handoff, and exact pointer. Gate 2B is certified and frozen without rerunning CrewAI behavior.
-- **Retained Step 2B.02 diagnostic:** `gate2b-step02-20260812T010531Z-00000001` is byte-valid and retained, but superseded/unaccepted as conclusive architecture evidence after integrity review. At that capture boundary, Step 2B.02 remained open.
-- **Retained Step 2B.02 v2 capture:** `gate2b-step02-20260812T015108Z-00000001` passed its capture boundary with architecture unresolved.
-- **Retained Step 2B.02 supplemental capture:** `gate2b-step02-followup-20260812T022947Z-00000001` corrected native fallback and checkpoint semantics while immutably retaining four observed version-check call paths as `unresolved_path`.
-- **Accepted Step 2B.02 governed disposition:** `gate2b-step02-disposition-20260812T024610Z-00000001` preserves those raw classifications, binds the call stacks to pinned-source version-check provenance, verifies `CREWAI_DISABLE_VERSION_CHECK=true`, and passes all 25 permanent predicates with machine status `recommendation_ready`.
-- **Accepted CrewAI architecture:** [ADR-0012](docs/decisions/ADR-0012-crewai-flow-persistence-and-human-review-continuation.md) records the distinct human approval of supported Flow, public `set_memory_storage_factory(...)`, `SQLiteFlowPersistence`, and `HumanFeedbackPending` / `from_pending()` / `resume()` with Drupal authority preserved; runtime `CheckpointConfig` and private `_skip_auto_memory` are nonselected.
-Accepted Step 2B.01 evidence run: `gate2b-step01-20260811T231020Z-00000002`
-Accepted Gate 2B contract digest: `c734ad98f23c311e2141e6a50a876a6f5c9abf343e45884843848af1ef40ac77`
-Accepted Step 2A.10 certification evidence: `evidence/gates/gate-2a/certification/gate2a-step10-20260811T034835Z-03f93652`
-Accepted Step 2A.09 evidence synthesis: `evidence/gates/gate-2a/evidence-claims/gate2a-step09-20260811T025248Z-7e9c1f5f`
-Accepted Step 2A.08 batch evidence run: `evidence/results/langgraph/langgraph-20260810T231915Z-0027cd3e`
-Accepted Step 2A.07 construction evidence run: `evidence/gates/gate-2a/batch-runner/gate2a-step07-20260810T185629Z-00272cd1`
-Accepted Step 2A.06 evidence run: `evidence/gates/gate-2a/human-interrupt/gate2a-step06-20260810T162448Z-002692eb`
-Accepted Step 2A.05 evidence run: `evidence/gates/gate-2a/canonical-slice/gate2a-step05-20260810T140133Z-0025b888`
-Accepted Step 2A.04 evidence run: `evidence/gates/gate-2a/checkpoint-proof/gate2a-step04-20260810T034027Z-00250b07`
-Accepted Step 2A.03 evidence run: `gate2a-step03-20260809T233127Z-2375581`
-Accepted Step 2A.03 compliance verification: `gate2a-step03-verification-20260810T020210Z-2410520`
-Accepted Step 2A.02 evidence run: `gate2a-step02-20260809T224238Z-2361786`
-Accepted runtime ADR: `docs/decisions/ADR-0010-langgraph-runtime-and-checkpoint-path.md`
-Accepted Step 2A.01 evidence run: `gate2a-step01-20260809T202418Z-2334327`
-Accepted Gate 2A contract digest: `1ccd44e7b42f0001a134f83e4b368856bd2504a80b89735ac1296404776e289b`
+The immutable engineering checkpoint is commit
+`15e50615f5c525d9c6ed937fe607b3f009898f10`.
 
-Accepted Gate 0.5 certification evidence is
-`evidence/gates/gate-0.5/substrate-certification/gate05-step05-20260805T184155Z-50124/`.
-The frozen substrate digest is
-`99c9fdcbec87476e3dc61c3f9d81532b6b9629f6222f5ac262e62f56e984a87a`.
+The framework-specific implementation gates are complete:
 
-Accepted Step 1.01 evidence run: `gate1-step01-20260805T205448Z-103220`
-Accepted Gate 1 contract digest: `360aa46f5b0f0e1df9f09a70ff790add36c6acedccccbe6880b8021ae44e07e6`
-Accepted Step 1.02 evidence run: `gate1-step02-20260806T010227Z-189538`
-Accepted ADR-0006 SHA-256: `223f6d6f4276d3861cf5668f08e0446479d815a07fed18402b1e6a7722d18c4b`
-Accepted Step 1.03 evidence run: `gate1-step03-20260806T050827Z-494925`
-Accepted Step 1.04 evidence run: `gate1-step04-20260806T213954Z-156475`
-Accepted Step 1.05 evidence run: `gate1-step05-20260808T020222Z-2121689`
-Accepted Drupal AI batch run: `drupal_ai-20260808T020222Z-205fd9`
-Accepted Step 1.06 evidence run: `gate1-step06-20260808T231216Z-2188911`
-Accepted Step 1.06 implementation package: `gate-1-step06-drupal-ai-batch-evidence-and-human-review-v1.0.3`
-Step 1.06 reviewer-lineage recovery patch: `gate-1-step06-drupal-ai-batch-evidence-and-human-review-v1.0.4`
-Accepted Step 1.07 certification evidence: `evidence/gates/gate-1/certification/gate1-step07-20260809T012559Z-2229836`
-Accepted Drupal AI certification batch: `drupal_ai-20260809T012559Z-22064c`
-Accepted Gate 1 freeze digest: `2af9870aed1ea2ce15cf16f848cc1eb41573e9f9f8cc21bcaa9d80bd9c9a8cdd`
+| Implementation | Status |
+|---|---|
+| Drupal AI | Gate 1 certified and frozen |
+| LangChain / LangGraph | Gate 2A certified and frozen |
+| CrewAI | Gate 2B certified and frozen |
 
+The shared recovery experiment reached a terminal evidence disposition:
 
-Step 1.03 directly exercises exactly four model-free Drupal AI FunctionCall adapters: `discover_targets`, `get_image_context`, `submit_recommendation`, and `get_recommendation_status`. It does not execute an AI Agent and makes no model or provider call. Its predecessor-compatible Article-source SHA-256 is `f26227dfd17df97fe51d4e4c1c4c612032d0701fcbeaffc8aa816e1efc221c17`; the original Step 1.03 hash discrepancy was definition drift only, with no Drupal source drift.
+- **Gate 2C:** `CLOSED_NON_CERTIFYING_WITH_INCOMPLETE_EVIDENCE`
+- **Step 2C.02:** `TERMINAL_UNCERTIFIED`
+- **Gate 2 umbrella:** `NOT_COMPLETE`
 
-The v1.0.0 evidence run `gate1-step01-20260805T200619Z-87483` is preserved unchanged and superseded
-for publication only because later checks exposed terminal schema blank lines and a main-only audit
-restriction. Contract semantics remain unchanged.
+That wording is deliberate. LangGraph and CrewAI demonstrated qualified model-free recovery
+mechanics. Drupal preserved useful evidence through the target-6/7 failure seam, but the experiment
+did not establish the certifying termination and recovery-continuation evidence required for a valid
+three-framework recovery comparison.
 
-For a new planning or implementation session, read `docs/CURRENT-STATUS.md` first. It is the
-authoritative status snapshot and explains the boundary between the completed shared-substrate gate
-and the framework-owned work that follows.
+So the project is best described as **engineering complete / experiment concluded**, not as
+"Gate 2 passed."
 
-## Gate 1 contract
+For the exact terminal disposition, see
+[Gate 2C Final Closure and Disposition](docs/gates/GATE-2C-CLOSURE-AND-DISPOSITION.md).
 
-Step 1.01 freezes the Drupal AI batch boundary in:
+For the boundary between the immutable engineering checkpoint and later documentation/presentation
+work, see
+[Post-Closure Documentation and Publication Boundary](docs/POST-CLOSURE-PUBLICATION-BOUNDARY.md).
 
-```text
-shared/contracts/GATE1-DRUPAL-AI-BATCH-CONTRACT.json
-shared/schemas/drupal-ai-run-state.schema.json
-shared/schemas/drupal-ai-model-output.schema.json
-```
+## The shared task
 
-The shared run-state schema is a comparison contract only. The Drupal AI implementation owns its
-runtime state and persistence location; shared runtime storage is prohibited. Raw structured model
-output remains distinct from recommendation assembly, deterministic validation, submission,
-status observation, and human review evidence.
+Each implementation processes the same deterministic set of Drupal image-field usages:
 
-The repository-native Gate 1 package sequence is:
+> Find Drupal pages with missing or inadequate image alt text, assemble permitted image and page
+> context, draft remediation recommendations, validate them, and send them to an editor for review.
 
-1. Step 1.01 — batch contract
-2. Step 1.02 — pinned Drupal AI runtime probe
-3. Step 1.03 — thin Drupal AI tool adapters
-4. Step 1.04 — canonical vertical slice
-5. Step 1.05 — 12-target batch runner
-6. Step 1.06 — batch evidence and human review
-7. Step 1.07 — certification, freeze, and handoff
+The agent creates **recommendation records only**. It never directly changes the source image alt
+text and never auto-publishes content.
 
-This sequence and the machine-readable Gate 1 contract govern later package generation. The Step 1.02 runtime-path decision is recorded in `ADR-0006`.
+The frozen experiment uses:
 
-## Local Codex execution
+- 20 deterministic Drupal Articles;
+- 12 frozen image-field targets;
+- the same OpenAI model snapshot;
+- temperature `0.0`;
+- the same output schema;
+- the same deterministic validator;
+- the same Drupal review destination;
+- the same target-6/7 lifecycle seam.
 
-Gate 2B continues the package-driven local workflow inside WSL2. Read:
+See [EXPERIMENT_SPEC.md](EXPERIMENT_SPEC.md) for the full contract.
 
-```text
-AGENTS.md
-docs/CODEX-GATE-2B-RUNBOOK.md
-docs/gates/GATE-2B-STEP01-CREWAI-CONTRACT-AND-EVIDENCE-PLAN.md
-docs/gates/GATE-2B-STEP02-CREWAI-RUNTIME-PERSISTENCE-AND-CONTINUATION-PROBE.md
-docs/handoffs/GATE-2A-TO-CREWAI-HANDOFF.md
-```
+## The six harness organs
 
-Delivery packages remain outside Git under `~/projects/agentic-harness-package-staging/`. Step 2B.04 is frozen at merge `c61d0b0213d754fcc40f18065836de6e0da70d2c`; Step 2B.05 at `2ad5fc9faf29bf54983ae2c61f3f7cb0f9b28148`; Step 2B.06 at `78ba79165378ac2905801d994682aa385cdfb607`; and Step 2B.07 at `50e7296406a39de23b20bdfb1b45960dca13d3a1`. Step 2B.08 certified only those accepted records and did not rewrite them or claim Gate 2C recovery, production readiness, or framework superiority.
+The talk and repository organize the comparison around six capabilities every serious agentic system
+has to solve:
 
-## Shared task
+1. **Context control** — what the model is allowed to see.
+2. **Tools and integrations** — which actions the system can invoke and under what boundary.
+3. **State and memory** — what persists across steps and process boundaries.
+4. **Verification and guardrails** — how outputs and actions are checked before acceptance.
+5. **Human review and approval** — where accountable people remain in the workflow.
+6. **Lifecycle and recovery** — what happens when work is interrupted or the process fails.
 
-Find Drupal image-field usages with missing or inadequate alt text, assemble permitted image and
-page context, draft a remediation recommendation, validate it, and submit it to a common Drupal
-review queue. Agents create recommendation records; they do not mutate production image fields.
+The point is not to crown a framework winner. It is to make those responsibilities visible so
+framework choices can be evaluated against the needs of a real system.
+
+## Three implementations
+
+### Drupal AI
+
+Drupal AI uses Drupal itself as much of the harness substrate:
+
+- Drupal content and permission boundaries provide governed source context;
+- framework-native FunctionCall adapters delegate to the certified shared operations;
+- Drupal key/value state tracks run progress;
+- structured output and deterministic validation gate recommendation creation;
+- a revision-enabled Drupal queue provides human review and audit lineage.
+
+Gate 1 is independently certified and frozen.
+
+### LangChain / LangGraph
+
+The LangGraph specimen is deliberately code-first:
+
+- LangChain `@tool` wrappers expose the same four shared semantic operations;
+- `StateGraph` and `SqliteSaver` own workflow state/checkpointing;
+- a persisted `interrupt()` bridges the graph to the authoritative Drupal review queue;
+- `Command(resume=...)` continues the same run/thread after a real editor decision.
+
+Gate 2A is independently certified and frozen.
+
+### CrewAI
+
+The CrewAI specimen uses a supported Flow-based architecture:
+
+- CrewAI `BaseTool` adapters wrap the same shared semantic operations;
+- Flow state plus `SQLiteFlowPersistence` provide framework-owned persistence;
+- the selected human-review path uses persisted `HumanFeedbackPending`,
+  `from_pending(...)`, and `resume(...)`;
+- Drupal remains the sole authoritative human-review system.
+
+Gate 2B is independently certified and frozen.
+
+## What the comparison actually demonstrated
+
+The evidence is intentionally asymmetric because the implementations are different.
+
+Across the accepted framework runs, all three specimens:
+
+- operated on the same frozen task and target order;
+- used the same model/settings and deterministic validation boundary;
+- created recommendations in the same Drupal review destination;
+- preserved source non-mutation;
+- maintained framework-owned state;
+- connected to a real human-review path.
+
+For lifecycle/recovery specifically:
+
+- **LangGraph:** the corrected-environment model-free rehearsal terminated the worker at the common
+  seam and recovered first at target 7 through target 12 without synthetic replay or duplicate
+  identities.
+- **CrewAI:** the corrected-environment model-free rehearsal used public Flow persistence/re-entry
+  mechanics and recovered first at target 7 through target 12 without synthetic replay or duplicate
+  identities; that architecture was explicitly human-approved for the proof.
+- **Drupal AI:** the experiment durably reached sequences 1–6, preserved the target-6/7 seam,
+  verified the worker identity and SIGKILL command boundary, and later observed unchanged state.
+  It did **not** establish the certifying termination/immediate-lock evidence or recovery
+  continuation needed to claim Drupal resumed at target 7.
+
+That incomplete result is part of the experiment, not something the repository hides or repairs
+after the fact.
 
 ## Evidence discipline
 
-A framework claim begins as a **hypothesis**. It becomes **observed** after a repeatable local run
-and **verified** only when the observation is paired with an official source and retained evidence.
-See `CLAIMS_REGISTER.md`, `SOURCES.md`, and `evidence/README.md`.
+Claims are separated by strength:
 
-## Repository boundaries
+- **hypothesis** — proposed or expected;
+- **observed** — reproduced locally with retained evidence;
+- **verified** — paired with the relevant source/runtime support and retained evidence;
+- **supported-qualified / partial-evidence** — only the stated narrow conclusion is supported;
+- **not-demonstrated / prohibited** — do not present the broader claim.
 
-`shared/` contains contracts and deterministic substrate only. Framework-owned context assembly,
-model calls, orchestration, persistence, interruption, recovery, and sequencing remain inside the
-three implementation directories. See `shared/README.md`.
+Start with:
 
-## Certified shared tool surface
+- [CLAIMS_REGISTER.md](CLAIMS_REGISTER.md)
+- [COMPARISON_MATRIX.md](COMPARISON_MATRIX.md)
+- [docs/CURRENT-STATUS.md](docs/CURRENT-STATUS.md)
 
-Gate 0.5 certified these four deterministic shared operations:
+The repository does **not** support claims that all three frameworks recovered successfully, that
+one framework is inherently more reliable, or that these experiments establish production
+readiness.
+
+## Repository map
+
+```text
+drupal/                 Drupal project and Drupal AI implementation
+langchain/              LangChain / LangGraph implementation
+crewai/                 CrewAI implementation
+shared/                 Frozen cross-framework contracts, schemas, fixtures, validators
+evidence/               Sanitized retained experiment evidence
+docs/decisions/         Architecture Decision Records
+docs/gates/             Gate contracts, certification, and closure documents
+docs/handoffs/          Gate-to-gate engineering handoffs
+scripts/                Setup, execution, evidence, and audit tooling
+EXPERIMENT_SPEC.md      Frozen comparative experiment contract
+CLAIMS_REGISTER.md      Claim status and safe wording
+COMPARISON_MATRIX.md    Six-organ evidence comparison
+PLAN.md                 Historical implementation plan and current production phase
+```
+
+## Shared semantic operations
+
+Every framework works through the same certified Drupal substrate:
 
 ```text
 find_images_needing_review()
@@ -174,47 +197,36 @@ submit_recommendation(recommendation)
 get_recommendation_status(recommendation_id)
 ```
 
-The substrate proved exact target identity, permission-scoped context retrieval, deterministic
-validation, recommendation-only mutation, idempotent submission, a real revisioned human decision,
-read-only status observation, and seeded-clean restoration.
+Framework adapters may differ. The business semantics do not.
 
-The hash-addressed handoff is stored at:
+## Reproducing the historical closure
 
-```text
-shared/contracts/GATE05-SUBSTRATE-FREEZE.json
-shared/contracts/GATE05-SUBSTRATE-FREEZE.sha256
-```
+The final Gate 2C closure audit is hash-bound to the immutable engineering checkpoint. Current
+publication-oriented documentation intentionally differs from those historical hashes.
 
-Material changes to the frozen substrate require an ADR and a new Step 05 certification run.
+To reproduce the final closure audit, use commit
+`15e50615f5c525d9c6ed937fe607b3f009898f10` as described in
+[docs/POST-CLOSURE-PUBLICATION-BOUNDARY.md](docs/POST-CLOSURE-PUBLICATION-BOUNDARY.md).
 
-The freeze manifest correctly records that Drupal AI, LangGraph, and CrewAI were not certified by
-the controlled substrate preflight. That statement defines the proof boundary; it does not leave
-Gate 0.5 open. Framework-owned execution starts after the handoff, beginning with Drupal AI in Gate
-1.
+Do not regenerate the historical closure manifest merely to make later documentation pass it.
 
-## Private and public reproduction paths
+## Current phase
 
-Private local material includes database exports, DDEV snapshots, credentials, and raw recordings.
-The intended public reproduction path is source code, Composer and uv lockfiles, Drupal config
-export, schemas, fixtures, seed/reset scripts, test scripts, and sanitized evidence.
+Runtime experimentation is over. The project is now in **conference-production and publication
+mode**:
 
-## Audit the completed Gate 0.5 substrate
+- map retained evidence to the six organs;
+- extract presentation-safe code, diagrams, screenshots, terminal excerpts, and clips;
+- build the final talk narrative and slides;
+- prepare speaker notes, backup slides, Q&A, and no-demo fallbacks.
 
-```bash
-bash scripts/run-gate05-step05.sh audit
-```
+If presentation material cannot be supported by retained evidence, change the presentation rather
+than reopen the experiment.
 
-Certification baseline:
+## Why this repository exists
 
-```text
-fb23e41f6fc8f8e070babbf9a0f593edb94f8c5c
-Certify Gate 0.5 shared substrate
-```
+AI agent demos tend to emphasize prompts and model output. Production systems live or die on the
+less glamorous layers around them: permissions, context assembly, tools, durable state,
+verification, human accountability, and recovery.
 
-## Gate 2B Step 2B.06 final governance
-
-The CrewAI 12-target batch and its one authorized restoration are complete. The finalized 19-file
-closure and the v1.0.3 two-file governance supplement are immutable. v1.0.4 adds only a separate,
-model-free final-governance attestation that binds those roots and a lifecycle-aware permanent
-composite audit. It cannot rerun the experiment or restoration. The retained snapshot must not be
-deleted, and repository changes must not be staged, until separately authorized.
+This lab makes those layers inspectable by holding the task constant and changing the harness.
